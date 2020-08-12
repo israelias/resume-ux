@@ -113,6 +113,21 @@ p {
     background-size: 100% 100%;
 }
 
+/* Parallax from W3 Schools */
+[class*="fg"] {
+    /* The image used */
+    /*background-image: url("../images/grey_med_xl.png");*/
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 [class$="grey"]{
     background-image: url("../images/grey_lte_sm.png");
 }
@@ -133,10 +148,25 @@ p {
     background-image: url("../images/yellow_drk_sm.png");
 }
 
+
 .container, .container-fluid {
-    margin-top: 50px;
+    /*margin-top: 50px;*/
+    padding-top: 50px;
     padding-left: 0;
     padding-right: 0;
+}
+
+.container {
+    /*margin-right: 0;*/
+    /*margin-left: 0;*/
+}
+
+.container-fluid.main {
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    /*Change to vh for parallax*/
+    height: 100%;
 }
 
 .row {
