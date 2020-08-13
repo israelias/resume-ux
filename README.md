@@ -4,6 +4,8 @@ One or two paragraphs providing an overview of your project.
 
 Essentially, this part is your sales pitch.
 
+[View the live website here.](https://israelias.github.io/resume-redux/)
+
 [TOC levels=1-3 bullet formatted hierarchy]
 
 ## Contents
@@ -150,6 +152,14 @@ UX design is done by designers and product managers. Developer just implemented 
 - How do I learn more?
 - How do I contact someone?
 
+#### Key Takeaways From Research
+
+- Increase "activity" or evidence of activity
+- Progress bars do not give the user anything. Instead, show evidence of experience. Show integrity.
+- Give clear understanding of owner's nuanced stack expertise
+- Evidence of dev community activity in social media (dev.to, Twitter, etc.)
+- Reduce number clicks to arrive at goal
+
 #### Why is this website special? Why would a visitor desire this (experience)?
 
 - User Stories
@@ -193,6 +203,10 @@ When using the strategy table there is always a trade-off between importance and
 | G     | Showcase owner's awards and recognitions    |            |           |
 | H     | Dashboard functionality                     |            |           |
 | I     | Custom landing page cover letter            |            |           |
+| J     | Tech stack represented as data from Github  |            |           |
+| K     | GitHub activity represented as live stats   |            |           |
+| L     | Project activity represented as "last commit message"  |            |           |
+| M     | Experience shown as direct data from owner's OS footprint (No fooling anyone)   |            |           |
 | Total |                                             |            |           |
 
 If importance and viability are equal, then we are in a position to do it all. Draw out your own version of the graph below to work out what features you should drop.
