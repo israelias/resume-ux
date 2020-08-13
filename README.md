@@ -1,46 +1,105 @@
-# 0.0 UCFD - Web CV & Work Samples Application Package
+# Resume RedUX
 
-Project Process and Development Guidelines following 
+One or two paragraphs providing an overview of your project.
 
-## 0.1 The Five Planes of UX
+Essentially, this part is your sales pitch.
+
+[TOC levels=1-3 bullet formatted hierarchy]
+
+## Contents
+- [Resume RedUX](#resume-redux)
+  - [Contents](#contents)
+  - [UX](#ux)
+    - [The Five Planes of UX](#the-five-planes-of-ux)
+      - [1.0 Strategy Plane](#10-strategy-plane)
+        - [1.1 Research](#11-research)
+        - [1.2 Planning](#12-planning)
+        - [1.3 User Expectations](#13-user-expectations)
+        - [1.4 Strategy table](#14-strategy-table)
+      - [2.0 Scope Plane](#20-scope-plane)
+        - [2.1 Requirements and functional specifications](#21-requirements-and-functional-specifications)
+        - [2.2 Content requirements](#22-content-requirements)
+        - [2.3 Releases](#23-releases)
+      - [3.0 Structure Plane](#30-structure-plane)
+        - [3.1 Organisation of Functionality and Content](#31-organisation-of-functionality-and-content)
+        - [3.2 Interaction Design (IXD)](#32-interaction-design-ixd)
+        - [3.3 Information Architecture (IA)](#33-information-architecture-ia)
+        - [3.4 Principles of Organisation](#34-principles-of-organisation)
+      - [4.0 Skeleton Plane](#40-skeleton-plane)
+        - [4.1 Features and Usefulness](#41-features-and-usefulness)
+        - [4.2 Navigation Design](#42-navigation-design)
+        - [4.3 Information Design](#43-information-design)
+        - [4.4 Interface Design](#44-interface-design)
+      - [5.0 Surface Plane](#50-surface-plane)
+        - [Visual Language](#visual-language)
+        - [Good UX smells like value.](#good-ux-smells-like-value)
+    - [Design](#design)
+  - [Badges](#badges)
+  - [Features](#features)
+    - [Existing Features](#existing-features)
+    - [Features Left to Implement](#features-left-to-implement)
+  - [Technologies Used](#technologies-used)
+  - [Frameworks and Libraries](#frameworks-and-libraries)
+  - [Testing](#testing)
+    - [Miscellaneous](#miscellaneous)
+    - [Known Bugs](#known-bugs)
+  - [Deployment](#deployment)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Media](#media)
+    - [Acknowledgements](#acknowledgements)
+
+## UX
+
+Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+
+In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
+- As a user type, I want to perform an action, so that I can achieve a goal.
+
+This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+
+
+Project Process and Development Guidelines following
+
+### The Five Planes of UX
 
 > ###### Distribute content and feature development across five activity planes
-> 
+>
 > ###### Methodology for taking product from conception to release
 
-# 0.1 Contents
+<details>
+  <summary>Strategy</summary>
 
-
-# 1.0 Strategy Plane
+## 1.0 Strategy Plane
 
 > ###### What we are trying to achieve
-> 
+>
 > ###### For whom we are trying to achieve it
 
 - The main goals of the site are:
   - To establish a personal brand for the owner and avatar for the owner's online presence
   - Attract and retain a following in the developer community
   - Attract recruiter reader software and analytics
-  - Be up to a standard that is competitve with UX designed responsive web resumes 
+  - Be up to a standard that is competitve with UX designed responsive web resumes
   - Stand out to [Code Institute](https://codeinstitute.org/)'s qualification partners and potential employers
 - The website is built for:
-  - A young professional designer and architect (buildings) presently breaking into the tech industry 
+  - A young professional designer and architect (buildings) presently breaking into the tech industry
 
 - Their goals and needs are:
   - In addition to above (as the site is the owner is the business is the consumer), the ultimate goal is to transform a CV into an interactive, attractive and customisable experience that reflects the candidate's proficiency in the manner in which the content itself is presented.
 
-## 1.1 Research
+### 1.1 Research
 
 - Who else is building this?
 
-  - Not all Software Developers care about UX. Equally, not all UX designers care about developers. They are more like consultants to each other, wher one "hands off" the design prototype to the developer for "developing." I learned this after using much of the software for UX designers. Wireframing for UX Designers does not start at low-resolution. Components designed on Adobe UX are directly exported as local _.svg_ files, ready to be animated. In the realm of UXD, points go to customization. Developers, on the other hand, just need bare bones of function when establishing wireframes. 
+  - Not all Software Developers care about UX. Equally, not all UX designers care about developers. They are more like consultants to each other, wher one "hands off" the design prototype to the developer for "developing." I learned this after using much of the software for UX designers. Wireframing for UX Designers does not start at low-resolution. Components designed on Adobe UX are directly exported as local _.svg_ files, ready to be animated. In the realm of UXD, points go to customization. Developers, on the other hand, just need bare bones of function when establishing wireframes.
   - Nonetheless, everyone who knows how to write code has built some form of a custom resume.
   - The key difference is the degree to which one is branded or specific as opposed to *not* branded or generic.
 
 - How are they doing it?
 
-  - Most of them are generic (if the content is thorough) *or* designed (if the content is minimal). 
-  - Some are templates purchased from web designers. And those are the most impressive ones. 
+  - Most of them are generic (if the content is thorough) *or* designed (if the content is minimal).
+  - Some are templates purchased from web designers. And those are the most impressive ones.
 
 - What are the pros and cons of what they are doing?
 
@@ -58,8 +117,8 @@ Project Process and Development Guidelines following
 
 - What could they do better?
 
-  - "Designed" resumes for web developers can benefit from using principles of UX and using the language speak for the content. Having the content be fold back in the way it is being told. So that it demonstrates thinking that is algorithmic, parametric. So that the the website itself showcases the very skill highligted in list of skills. 
-  - They can also benefit from demonstrating interpersonal artistry. Activity in the feed, so to speak. 
+  - "Designed" resumes for web developers can benefit from using principles of UX and using the language speak for the content. Having the content be fold back in the way it is being told. So that it demonstrates thinking that is algorithmic, parametric. So that the the website itself showcases the very skill highligted in list of skills.
+  - They can also benefit from demonstrating interpersonal artistry. Activity in the feed, so to speak.
   - A lot of them are missing skills that others don't already have. They are not capitalizing on what it is about them that stands out: *narrative*. And capitalizing on how their non-dev background  might  position them uniquely by virtue of being *different*.
   - In terms of providing an "application package," none of them have a page template for a cover letter. This would be for the event that the owner send the website link directly as an application.
 
@@ -73,13 +132,13 @@ FOSS is just ... a bad deal for them. They want someone they can call and yell a
 
 UX design is done by designers and product managers. Developer just implemented ability to assign hot key X to function Y. How this ability used was not his/her concern.
 
-## 1.2 Planning
+### 1.2 Planning
 
 - What relevant content should we deliver that fits our demographic?
 - How can we make the content easily tracked and catalogued in an intuitive way?
 - Is the technology appropriate? What are the tech considerations?
 
-## 1.3 User Expectations
+### 1.3 User Expectations
 
 > #### What does the visitor expect? Consider that the visitor is asking themselves these questions when they come to the site for the first time:
 
@@ -91,11 +150,11 @@ UX design is done by designers and product managers. Developer just implemented 
 - How do I learn more?
 - How do I contact someone?
 
-### Why is this website special? Why would a visitor desire this (experience)?
+#### Why is this website special? Why would a visitor desire this (experience)?
 
 - User Stories
   - Senior Developer (Back End)
-    - As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others? 
+    - As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?
       1. I want to *see* that without having to *find* that. Whatever that is.
       2. Now I recognize the need for someone with your background, which migt have been a problem I didn't even know I had.
   - Recruiter (External)
@@ -103,17 +162,25 @@ UX design is done by designers and product managers. Developer just implemented 
       1. I'd like to know where you are and give you a call.
       2. My goal is to schedule you at your convenience, learn enough about you to engage you and share you with my team.
   - Owner
-    - As an evolving candidate in an evolving industry, I want to be be able to control and customize features and pages. 
+    - As an evolving candidate in an evolving industry, I want to be be able to control and customize features and pages.
       1. I want to be able to customize the website for a specific company when I send an application.
       2. The goal is to further expand my candidacy in the form of a cover letter page -- a custom link -- that reroutes to the main page after being read.
 
+| Tables        | Are           | Cool  | Cool  |
+|:------------- |:-------------:|:-----:|:-----:|
+| Name          | right-aligned | $1600 |       |
+| Job Title     | centered      |   $12 |       |
+| Background    | are neat      |    $1 |       |
+| Quote         | are neat      |    $1 |       |
+| Goals         | are neat      |    $1 |       |
+
 ###### Note: All additions and improvements to the plan should always count towards the goals of the user and/or the business.
 
-## 1.4 Strategy table
+### 1.4 Strategy table
 
 When using the strategy table there is always a trade-off between importance and viability. Can we build a solution given the limited time and resources available?
 
-### Importance is driven by business goals and user needs.
+#### Importance is driven by business goals and user needs.
 
 | id    | Opportunity / Problem / Feature             | Importance | Viability |
 | ----- | ------------------------------------------- | ---------- | --------- |
@@ -130,9 +197,14 @@ When using the strategy table there is always a trade-off between importance and
 
 If importance and viability are equal, then we are in a position to do it all. Draw out your own version of the graph below to work out what features you should drop.
 
-## ![](RackMultipart20200720-4-1ia7tvm_html_50562dc698e130a6.gif)
+### ![](RackMultipart20200720-4-1ia7tvm_html_50562dc698e130a6.gif)
 
-# 2.0 Scope Plane
+</details>
+
+<details>
+  <summary>Scope</summary>
+
+## 2.0 Scope Plane
 
 > ###### Features based on information gathered from Strategy to include in design
 > 
@@ -148,7 +220,7 @@ If importance and viability are equal, then we are in a position to do it all. D
 
 - Pack in MVP features up front, unfold new experiences over time.
 
-## 2.1 Requirements and functional specifications
+### 2.1 Requirements and functional specifications
 
 - What users say they need.
 - What they actually need.
@@ -160,18 +232,18 @@ There is a difference between how you imagine something will be used and how it 
 
 - [ ] Research and discussion on needs of the demographic.
 
-## 2.2 Content requirements
+### 2.2 Content requirements
 
 - What mixed content/media do we need to meet the needs of the user?
 
-### Requirement types:
+#### Requirement types:
 
 - Objective – what does the user want to accomplish?
 - Functional – What does the user need to reach their objective?
 - Non-functional – What constrains does the site or app have to perform within?
 - Business Rules – What dynamic constrains do we have to meet? (calculations, definitions, legal etc)
 
-## 2.3 Releases
+### 2.3 Releases
 
 What will be included in each release?
 
@@ -181,7 +253,12 @@ What will be included in each release?
 
 #### Release 3
 
-# 3.0 Structure Plane
+</details>
+
+<details>
+  <summary>Structure</summary>
+
+## 3.0 Structure Plane
 
 > ###### How the information is structured
 > 
@@ -197,7 +274,7 @@ What will be included in each release?
 
 - Can the user understand and easily navigate through the system when using it for the first time?
 
-## 3.1 Organisation of Functionality and Content
+### 3.1 Organisation of Functionality and Content
 
 How will the user navigate in an intuitive way through content and features?
 
@@ -222,7 +299,7 @@ How will the user navigate in an intuitive way through content and features?
   
   > ##### Which fits the demographic and goals best?
 
-## 3.2 Interaction Design (IXD)
+### 3.2 Interaction Design (IXD)
 
 ###### The Visual Vocabulary
 
@@ -238,7 +315,7 @@ How will the user navigate in an intuitive way through content and features?
 
 - How can we make users aware of state changes in the system?
 
-### Consistent
+#### Consistent
 
 > People develop an expectation of conventions
 
@@ -254,12 +331,12 @@ How will the user navigate in an intuitive way through content and features?
 
 > Only be different when it makes something better
 
-### Predictable
+#### Predictable
 
 - All elements should be easy to find and use.
 - Include things like content hinting.
 
-### Visible/Discoverable
+#### Visible/Discoverable
 
 - No luck involved
 - All elements should be easy to find and use.
@@ -268,7 +345,7 @@ How will the user navigate in an intuitive way through content and features?
 
 > Make sure content is visible wherever possible
 
-### Learnable
+#### Learnable
 
 > Intuitivie = Single-trial learning
 
@@ -276,7 +353,7 @@ How will the user navigate in an intuitive way through content and features?
 - Set correct expectations (sub-menus, sub-navigation)
 - Make it possible for people to accurately predict the outcome of their interactions
 
-### Feedback
+#### Feedback
 
 ```mermaid
 graph LR
@@ -292,9 +369,7 @@ graph LR
   - i.e. 404 Error
 - Provide link that will take them back to safety
 
-## 3.3 Information Architecture (IA)
-
-----
+### 3.3 Information Architecture (IA)
 
 ###### Information Architecture
 
@@ -312,7 +387,7 @@ graph LR
 
 __*Which IA  type suits our users needs?*__
 
-### Hierarchical Tree Structure
+#### Hierarchical Tree Structure
 
 > Home
 > 
@@ -340,7 +415,7 @@ __*Which IA  type suits our users needs?*__
 
 > Anything over three clicks is cognitive overload
 
-### Nested List (Linked List)
+#### Nested List (Linked List)
 
 ```mermaid
 flowchart LR
@@ -351,7 +426,7 @@ flowchart LR
 - Good for mobiles
 - Prevents exploring
 
-### Hub and Spoke
+#### Hub and Spoke
 
 | Spoke     |             | Spoke     |
 |:---------:|:-----------:|:---------:|
@@ -363,7 +438,7 @@ flowchart LR
 - Works for multi-feature apps
 - Cant navigate between spokes
 
-### Dashboard
+#### Dashboard
 
 | Detail1     |                                                                                                  | Detail2     |
 | ----------- | ------------------------------------------------------------------------------------------------ | ----------- |
@@ -374,9 +449,7 @@ flowchart LR
 - Detail views of related content
 - More suited to <u>desktops</u>
 
-## 3.4 Principles of Organisation
-
-----
+### 3.4 Principles of Organisation
 
 ```mermaid
 graph TD
@@ -406,11 +479,12 @@ graph TD
 
 - <mark>Find the right structure for the objectives and user needs</mark>
 
-# 4.0 Skeleton Plane
+</details>
 
-----
+<details>
+  <summary>Skeleton</summary>
 
-----
+## 4.0 Skeleton Plane
 
 > ###### How information is represented
 > 
@@ -440,9 +514,7 @@ Good UI Design:
 
 - Perfectly meets the needs of its intended audience
 
-## 4.1 Features and Usefulness
-
-----
+### 4.1 Features and Usefulness
 
 > Give people what they need when and where they need it 
 > 
@@ -451,11 +523,11 @@ Good UI Design:
 - Usability improves when similar parts are expressed in similar ways
 - No surprises for user. Content may differ, but general shape and perception remains consistent
 
-### Progressive Disclosure
+#### Progressive Disclosure
 
 - Reveal information over time and across space
 
-### Grouping, Order and Hierarchy
+#### Grouping, Order and Hierarchy
 
 - Visually group elements in order of importance
 
@@ -475,9 +547,7 @@ Good UI Design:
 > 
 > -Hick-Hyman Law
 
-## 4.2 Navigation Design
-
----
+### 4.2 Navigation Design
 
 Intuitive Navigation and Completion of Tasks
 
@@ -506,13 +576,13 @@ Intuitive Navigation and Completion of Tasks
       Use progress bars with pagination
 - Keep ordering of navigation simple
 
-### Representational Icons
+#### Representational Icons
 
 - Clear meaning
 
 - Familiar objects
 
-### Reduce Cognitive Friction
+#### Reduce Cognitive Friction
 
 - Ensure avigation elements are visible and easily findable
 
@@ -520,7 +590,7 @@ Intuitive Navigation and Completion of Tasks
 
 - Differentiate between navigational elements with **colour, icons and text**
 
-### Consistent
+#### Consistent
 
 - Same interactions and behaviors
 
@@ -528,7 +598,7 @@ Intuitive Navigation and Completion of Tasks
 
 - Don't move expected elements to a different location
 
-### Metaphors
+#### Metaphors
 
 Good Design is:
 
@@ -545,7 +615,7 @@ Good Design is:
 | Environmentally Friendly       | earth          |
 | As little design as possible   | dot            |
 
-### Visual Metaphors
+#### Visual Metaphors
 
 - Provide shortcuts for use
 
@@ -553,9 +623,7 @@ Good Design is:
 
 - Are taken from everyday life
 
-## 4.3 Information Design
-
-----
+### 4.3 Information Design
 
 Arrangement of the elements that contain the information
 
@@ -575,7 +643,7 @@ Arrangement of the elements that contain the information
 
 > Too much information is worse than no information at all.
 
-### Context and Order Matter
+#### Context and Order Matter
 
 - Use **categorical ordering** when information is similar and clustered
   
@@ -601,9 +669,7 @@ Arrangement of the elements that contain the information
 
 Which icons will we use? Which are best to represent our needs?
 
-## 4.4 Interface Design
-
-----
+### 4.4 Interface Design
 
 The best arrangement and visual presentation of the elements
 
@@ -611,7 +677,7 @@ The best arrangement and visual presentation of the elements
 
 - Mockups using Balsamic
 
-### Wireframes
+#### Wireframes
 
 2D model of the product that provides 
 
@@ -647,11 +713,12 @@ Just a starting point (no colours, images or effects referred to).
 
 - Paper first, then Balsamic or Marvel app.
 
-# 5.0 Surface Plane
+</details>
 
-----
+<details>
+  <summary>Surface</summary>
 
-----
+## 5.0 Surface Plane
 
 > ###### What the product will look like
 > 
@@ -664,9 +731,7 @@ Just a starting point (no colours, images or effects referred to).
 - Where can the user go?
 - What is the final version of the info appearing on the screen?
 
-## Visual Language
-
-----
+### Visual Language
 
 Provides information and context
 
@@ -682,11 +747,11 @@ Provides information and context
 
 - identity
 
-### Economy
+#### Economy
 
 The most important elements are easily recognized
 
-### Readability
+#### Readability
 
 > Legible
 > 
@@ -694,7 +759,7 @@ The most important elements are easily recognized
 > 
 > Consistent patterns
 
-### Fonts and Typography
+#### Fonts and Typography
 
 - Should be visually distinct
 
@@ -704,3 +769,103 @@ The most important elements are easily recognized
 
 > ### Good UX smells like value.
 
+</details>
+
+### Design
+
+- Color Scheme
+
+- Typography
+
+- Imagery
+
+## Badges
+
+Current Status etc.
+
+## Features
+
+In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+
+### Existing Features
+- Feature 1 - allows users X to achieve Y, by having them fill out Z
+- ...
+
+For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+
+In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+
+### Features Left to Implement
+- Another feature idea
+
+## Technologies Used
+
+In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+
+- [JQuery](https://jquery.com)
+    - The project uses **JQuery** to simplify DOM manipulation.
+
+## Frameworks and Libraries
+
+1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+    - xxx
+1. [Hover.css:](https://ianlunn.github.io/Hover/)
+    - xx
+1. [Google Fonts:](https://fonts.google.com/)
+    - xx
+
+## Testing
+
+In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+
+Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+
+For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+
+1. Contact form:
+    1. Go to the "Contact Us" page
+    2. Try to submit the empty form and verify that an error message about the required fields appears
+    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
+    4. Try to submit the form with all inputs valid and verify that a success message appears.
+
+In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+
+You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+
+If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
+### Miscellaneous
+
+- Tested of x Browser
+- Viewed on x Devices
+- User Testing
+
+### Known Bugs
+
+- xxx
+- xxx
+- xxx
+
+## Deployment
+
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+
+In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
+- Different values for environment variables (Heroku Config Vars)?
+- Different configuration files?
+- Separate git branch?
+
+In addition, if it is not obvious, you should also describe how to run your code locally.
+
+
+## Credits
+
+### Content
+- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+
+### Media
+- The photos used in this site were obtained from ...
+
+### Acknowledgements
+
+- I received inspiration for this project from X
