@@ -2,11 +2,22 @@
 
 One or two paragraphs providing an overview of your project.
 
-Essentially, this part is your sales pitch.
+This is a resume website inspired by **(forked from?)** this mini project as part of my coursework at Code Institute. Taking it a step further through extensive developer research. Synergistically, I approached the design challenge as both owner and user to fundamentally capitalize on the owner's (my) unique candidacy in the dev community.
 
-[View the live website here.](https://israelias.github.io/resume-redux/)
+The result is a web resume that is:
+1. Custom designed and built by the owner, contrary to the trend in the industry of using static dashboard templates for stats/efficiency
+2. Isn't supplying content that overplays the owner's limited experience in the industry; but instead allows data to speak for itself by showcasing the owner's "activity" in opportune moments
+   - "Add styling to revised navbar for home.html" -Joem. Last commit 29 hours ago. See this project in progess" (GitHub actions)
+   - "Soon to come" (Placeholder for forthcoming milestone project)
+3. Integrates the owner's nuanced stack as a designer and the nuanced workflow that this comes with. (Software/prototype integration UX to dev hand off; owner as developer's "super user")
+4. Still meets the criteria for what constitutes a modern web resume as seen in these examples
+5. Simple and responsive (learning from previous) creating a "card" template for more interactive features in later releases; with a clear idea of its moonshot design and realistic feasibility through high-fi UX prototypes (playing up to owner's strengths)
+6. A website that is an honest snapshot of the owner's progress; new "feed" for returning visitors
+7. A clear indicator of the owner's online reach and footprint along with links/clouds of owner's frontier.
 
-[TOC levels=1-3 bullet formatted hierarchy]
+[View the live website here.](https://israelias.github.io/resume-redux/) A work in progress.
+
+<!--[TOC levels=1-3 bullet formatted hierarchy]-->
 
 ## Contents
 - [Resume RedUX](#resume-redux)
