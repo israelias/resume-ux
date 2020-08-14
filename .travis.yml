@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "stable"
 script:
-  - make test
+  - npm run build
 deploy:
   provider: pages
   skip_cleanup: true
