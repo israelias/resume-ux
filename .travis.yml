@@ -1,7 +1,3 @@
-language: ruby
-rvm:
-- 2.2
-- jruby
 deploy:
   provider: pages
   skip_cleanup: true
@@ -12,3 +8,6 @@ deploy:
 env:
   global:
     secure: x+Wco+gF14wM5s70pTUUcv1Xhy8Qp91KGLfGk1vsMk5HSk8YKDqXvYhU+gfDyTHos0Sp/GxPZJ6Eueak4cuvyV1OjOBx7ZPDo9Q0lVV2TmI671t7B+MRZ3HJc+JMuT7ISFjslu9BozIMmEmArCNLG18B+AajDpWoKja716Q1S+sgtF5eLtqEFgdDd7yam4s7p3bmxAAR+CBuKDs9Pk7OLV7haUvF0RB/b5CqcjLKZqbdgdFBs6ZBCyYHQ4Hvmwor0CIJohuOQ9fOktAnIa/gRMORgRO94wHrBX/P3JOCXugfmYlhFH774YbcxPNBTfmFd+VG1HxVlyTrhQPQR5wUEbHxBiPj6NZUN7sOoqv+2BvTmBak1oIwHLz5GcTEMNWix3tkExH7Fz4KYdES6cQ1PFWYEFONdAhIrDQk+9Y9AI1idzllMBmISbGh+bWVamvnYJ7oAlpCJVdsH5mVKdeWGkzzxzCIY/LUBU0PkFrjNOQCzHgo7VxKjD3yKsWQnq1VcakcgQiZmKW+DShVdX9a2mwwzmL4wa3Hh9jDMJUUzNhQJXODKkl8wnkop373QEBQWFZ3aUH0GTXmsG/FiB7G5cASzujRL9OGwv6JLREvGsw8RxusOMqS4CZkaEuBtLmjqOq5mq8UHY5dQnETJnmMZLYygH0qo5DLWYb12KW5pDc=
+  jobs:
+      - USE_NETWORK=true
+      - USE_NETWORK=false
