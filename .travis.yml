@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "stable"
 before script:
-  - npm install coverage
+  - npm run build
 deploy:
   provider: pages
   skip_cleanup: true
@@ -11,5 +11,7 @@ deploy:
   local_dir: build
   on:
     branch: master
+install:
+  npm install coverage
 script:
   coverage run -m unittest discover
