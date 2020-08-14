@@ -1,8 +1,10 @@
 # Resume RedUX
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/israelias/resume-redux?style=flat)
+![GitHub last commit](https://img.shields.io/github/last-commit/israelias/resume-redux?syle=flat)
 
 One or two paragraphs providing an overview of your project.
 
-This is a resume website inspired by **(forked from?)** this mini project as part of my coursework at Code Institute. Taking it a step further through extensive developer research. Synergistically, I approached the design challenge as both owner and user to fundamentally capitalize on the owner's (my) unique candidacy in the dev community.
+This is a resume website inspired by **(forked from?)** [this mini project](https://github.com/israelias/ci-uc-resume) as part of my coursework at [Code Institute](https://codeinstitute.net). Taking it a step further through extensive developer research. Synergistically, I approached the design challenge as both owner and user to fundamentally capitalize on the owner's (my) unique candidacy in the dev community.
 
 The result is a web resume that is:
 1. Custom designed and built by the owner, contrary to the trend in the industry of using static dashboard templates for stats/efficiency
