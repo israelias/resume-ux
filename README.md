@@ -1,6 +1,7 @@
 # Resume RedUX
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/israelias/resume-redux?style=flat)
 ![GitHub last commit](https://img.shields.io/github/last-commit/israelias/resume-redux?syle=flat)
+[![Documentation Status](https://readthedocs.org/projects/resume-redux/badge/?version=latest)](https://resume-redux.readthedocs.io/en/latest/?badge=latest)
 
 One or two paragraphs providing an overview of your project.
 
