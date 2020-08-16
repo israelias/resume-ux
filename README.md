@@ -834,11 +834,13 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ## Frameworks and Libraries
 
-1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-    - xxx
-1. [Hover.css:](https://ianlunn.github.io/Hover/)
+1. [Bootstrap 4.5.2:](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+    - Bootstrap 4.5.2 Starter Template
+2. [Hover.css:](https://ianlunn.github.io/Hover/)
     - xx
-1. [Google Fonts:](https://fonts.google.com/)
+3. [jQuery:](https://jquery.com/)
+   - xx
+4. [Adobe Fonts:](https://fonts.adobe.com/)
     - xx
 
 ## Testing
