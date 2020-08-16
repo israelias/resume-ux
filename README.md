@@ -4,8 +4,6 @@
 [![Documentation Status](https://readthedocs.org/projects/resume-redux/badge/?version=latest)](https://resume-redux.readthedocs.io/en/latest/?badge=latest)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4204/badge)](https://bestpractices.coreinfrastructure.org/projects/4204)
 
-One or two paragraphs providing an overview of your project.
-
 This is a resume website inspired by **(forked from?)** [this mini project](https://github.com/israelias/ci-uc-resume) as part of my coursework at [Code Institute](https://codeinstitute.net). Taking it a step further through extensive developer research. Synergistically, I approached the design challenge as both owner and user to fundamentally capitalize on the owner's (my) unique candidacy in the dev community.
 
 The result is a web resume that is:
