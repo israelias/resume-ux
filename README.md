@@ -193,11 +193,14 @@ UX design is done by designers and product managers. Developer just implemented 
 | --- | --- | --- | --- |
 | <sub>Name</sub> | **Jacob Grobin** | **Tracy Letts** | **Joem Sanez** |
 | <sub>Job Title</sub> | **Senior Developer** | **Recruiter** | **Owner** |
-| <sub>Background</sub> |     |     |     |
+| <sub>Background</sub> |   VP of Engineering at Fulcram, New York, NY  |  Senior Talent Acquisition Lead at Enigma Consultancy, Sydney NSW   |  Design Architect to Full Stack Developer, Manila, PH   |
+| <sub>Loves</sub> | Seeing a polyglot, seeing code that is readable, well-formatted, well-tested, well-documented and that displays a pragmatic approach via your repo/commit history; Seeing experimentation at different scales shows me you're making a conscious effort to stay up to speed with new tech.<sup>1<sup> | Seeing a lot of activity on your profile shows me how involved you are as a developer, seeing how many followers you have because a surplus is often a good indication of your role as a thought leader. Contribute to open source projects shows me that you want to give back and can play well with others.<sup>1<sup> |
+| <sub>Loathes</sub> | Seeing other companies' coding challenges in your repo and commits with environment variables included.<sup>1<sup> | Seeing inappropriate content or things that are too personal. | I want to *see* that without having to *find* that. Whatever that is. |
 | <sub>Quote</sub> | As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?I want to *see* that without having to *find* that. Whatever that is. | As a stakeholder in the hiring process, if you win, I win. I've already seen your LinkedIn. I landed here from the job-hunt database in our server which means you were already recommended by someone. Why would you choose us? I'd like to know where you are and give you a call. | As an evolving candidate in an evolving industry, I want to be be able to control and customize features and pages. I want to be able to customize the website for a specific company when I send an application. |
 | <sub>Goals</sub> | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. |
 
-###### Note: All additions and improvements to the plan should always count towards the goals of the user and/or the business.
+###### 1: [Source](https://www.builtinchicago.org/2018/05/08/what-companies-look-for-on-github)
+All additions and improvements to the plan should always count towards the goals of the user and/or the business.
 
 ### 1.4 Strategy table
 
