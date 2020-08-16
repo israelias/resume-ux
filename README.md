@@ -189,13 +189,13 @@ UX design is done by designers and product managers. Developer just implemented 
       1. I want to be able to customize the website for a specific company when I send an application.
       2. The goal is to further expand my candidacy in the form of a cover letter page -- a custom link -- that reroutes to the main page after being read.
 
-| Tables        | Are           | Cool  | Cool  |
-|:------------- |:-------------:|:-----:|:-----:|
-| Name          | right-aligned | $1600 |       |
-| Job Title     | centered      |   $12 |       |
-| Background    | are neat      |    $1 |       |
-| Quote         | are neat      |    $1 |       |
-| Goals         | are neat      |    $1 |       |
+|     |     |     |     |
+| --- | --- | --- | --- |
+| <sub>Name</sub> | **Jacob Grobin** | **Tracy Letts** | **Joem Sanez** |
+| <sub>Job Title</sub> | **Senior Developer** | **Recruiter** | **Owner** |
+| <sub>Background</sub> |     |     |     |
+| <sub>Quote</sub> | As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?I want to *see* that without having to *find* that. Whatever that is. | As a stakeholder in the hiring process, if you win, I win. I've already seen your LinkedIn. I landed here from the job-hunt database in our server which means you were already recommended by someone. Why would you choose us? I'd like to know where you are and give you a call. | As an evolving candidate in an evolving industry, I want to be be able to control and customize features and pages. I want to be able to customize the website for a specific company when I send an application. |
+| <sub>Goals</sub> | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. |
 
 ###### Note: All additions and improvements to the plan should always count towards the goals of the user and/or the business.
 
