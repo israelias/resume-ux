@@ -189,7 +189,7 @@ UX design is done by designers and product managers. Developer just implemented 
       1. I want to be able to customize the website for a specific company when I send an application.
       2. The goal is to further expand my candidacy in the form of a cover letter page -- a custom link -- that reroutes to the main page after being read.
 
-|     |![RedUX_200817_Jacob_01.png](documentation/RedUX_200817_Jacob_01.png)|![RedUX_200817_Tracy_01.png](documentation/RedUX_200817_Tracy_01.png)|![RedUX_200817_Joem_01.png](documentation/RedUX_200817_Joem_01.png)|
+|     |![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Jacob_01.jpg)|![RedUX_200817_Tracy_01.jpg](documentation/RedUX_200817_Tracy_01.jpg)|![RedUX_200817_Joem_01.jpg](documentation/RedUX_200817_Joem_01.jpg)|
 | --- | --- | --- | --- |
 | <sub>Name</sub> | **Jacob Grobin** | **Tracy Letts** | **Joem Sanez** |
 | <sub>Job Title</sub> | **Senior Developer** | **Recruiter** | **Owner** |
