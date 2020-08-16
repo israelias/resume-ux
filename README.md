@@ -832,7 +832,12 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
 
-## Frameworks and Libraries
+### Languages
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+### Frameworks and Libraries
 
 1. [Bootstrap 4.5.2:](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
     - Bootstrap 4.5.2 Starter Template
@@ -842,6 +847,29 @@ In this section, you should mention all of the languages, frameworks, libraries,
    - xx
 4. [Adobe Fonts:](https://fonts.adobe.com/)
     - xx
+
+### Programs, Software and Plugins
+
+1. [WebStorm:](https://www.jetbrains.com/webstorm/)
+    - WebStorm 2020.2 by [JetBrains](https://www.jetbrains.com/) was the local IDE used to develop the project.
+   1. [Performance Testing]
+   2. [Machine Learning Code Completion]
+   3. Copyright
+   4. [HTTP Client](https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html)
+   5. ChangeReminder
+   6. [Bootstrap 4,​ Font awesome 4,​ Font Awesome 5 Free & Pro live templates/snippets](https://plugins.jetbrains.com/plugin/9341-bootstrap-4-font-awesome-4-font-awesome-5-free--pro-live-templates-snippets/)
+   7. [Emmet Everywhere](https://plugins.jetbrains.com/plugin/7450-emmet-everywhere/)
+   8. GitHub
+   9. Git
+   10. Grazie
+   11. [Markdown Navigator Enhanced](https://plugins.jetbrains.com/plugin/7896-markdown-navigator-enhanced/)
+   12. [Prettier](https://prettier.io/)
+   13. W3C Validators
+   14. [Yet another emoji support](https://plugins.jetbrains.com/plugin/12512-yet-another-emoji-support/)
+
+
+3. [Adobe XD:](https://www.adobe.com/sea/products/xd.html)
+   - XD
 
 ## Testing
 
