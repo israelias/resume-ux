@@ -66,21 +66,30 @@ The result is a web resume that is:
 
 ## UX
 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+<!--Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.-->
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+<!--In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:-->
+<!--- As a user type, I want to perform an action, so that I can achieve a goal.-->
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+<!--This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.-->
 
+### User Stories
 
-Project Process and Development Guidelines following
+|     |![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Jacob_01.jpg)|![RedUX_200817_Tracy_01.jpg](documentation/RedUX_200817_Tracy_01.jpg)|![RedUX_200817_Joem_01.jpg](documentation/RedUX_200817_Joem_01.jpg)|
+| --- | --- | --- | --- |
+| <sub>Name</sub> | **Jacob Grobin** | **Tracy Letts** | **Joem Sanez** |
+| <sub>Job Title</sub> | **Senior Developer** | **Recruiter** | **Owner** |
+| <sub>Background</sub> |   VP of Engineering at Fulcram, New York, NY  |  Senior Talent Acquisition Lead at Enigma Consultancy, Sydney NSW   |  Design Architect to Full Stack Developer, Manila, PH   |
+| <sub>Loves</sub> | Seeing a polyglot, seeing code that is readable, well-formatted, well-tested, well-documented and that displays a pragmatic approach via your repo/commit history; Seeing experimentation at different scales shows me you're making a conscious effort to stay up to speed with new tech.<sup>1<sup> | Seeing a lot of activity on your profile shows me how involved you are as a developer, seeing how many followers you have because a surplus is often a good indication of your role as a thought leader. Contribute to open source projects shows me that you want to give back and can play well with others.<sup>1<sup> |
+| <sub>Loathes</sub> | Seeing other companies' coding challenges in your repo and commits with environment variables included.<sup>1<sup> | Seeing inappropriate content or things that are too personal. | I want to *see* that without having to *find* that. Whatever that is. |
+| <sub>Quote</sub> | As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?I want to *see* that without having to *find* that. Whatever that is. | As a stakeholder in the hiring process, if you win, I win. I've already seen your LinkedIn. I landed here from the job-hunt database in our server which means you were already recommended by someone. Why would you choose us? I'd like to know where you are and give you a call. | As an evolving candidate in an evolving industry, I want to be be able to control and customize features and pages. I want to be able to customize the website for a specific company when I send an application. |
+| <sub>Goals</sub> | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. |
 
-### The Five Planes of UX
+###### 1: [Source](https://www.builtinchicago.org/2018/05/08/what-companies-look-for-on-github)
 
-> ###### Distribute content and feature development across five activity planes
->
-> ###### Methodology for taking product from conception to release
+> **Note:** This project's process and development follows *The Five Planes of UX* to distribute content and feature development across five activity planes, and to document a methodology for taking a product from conception to release.
+
+Click the following dropdown to see the complete research at the Strategy Plane
 
 <details>
   <summary>Strategy</summary>
@@ -189,17 +198,6 @@ UX design is done by designers and product managers. Developer just implemented 
       1. I want to be able to customize the website for a specific company when I send an application.
       2. The goal is to further expand my candidacy in the form of a cover letter page -- a custom link -- that reroutes to the main page after being read.
 
-|     |![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Jacob_01.jpg)|![RedUX_200817_Tracy_01.jpg](documentation/RedUX_200817_Tracy_01.jpg)|![RedUX_200817_Joem_01.jpg](documentation/RedUX_200817_Joem_01.jpg)|
-| --- | --- | --- | --- |
-| <sub>Name</sub> | **Jacob Grobin** | **Tracy Letts** | **Joem Sanez** |
-| <sub>Job Title</sub> | **Senior Developer** | **Recruiter** | **Owner** |
-| <sub>Background</sub> |   VP of Engineering at Fulcram, New York, NY  |  Senior Talent Acquisition Lead at Enigma Consultancy, Sydney NSW   |  Design Architect to Full Stack Developer, Manila, PH   |
-| <sub>Loves</sub> | Seeing a polyglot, seeing code that is readable, well-formatted, well-tested, well-documented and that displays a pragmatic approach via your repo/commit history; Seeing experimentation at different scales shows me you're making a conscious effort to stay up to speed with new tech.<sup>1<sup> | Seeing a lot of activity on your profile shows me how involved you are as a developer, seeing how many followers you have because a surplus is often a good indication of your role as a thought leader. Contribute to open source projects shows me that you want to give back and can play well with others.<sup>1<sup> |
-| <sub>Loathes</sub> | Seeing other companies' coding challenges in your repo and commits with environment variables included.<sup>1<sup> | Seeing inappropriate content or things that are too personal. | I want to *see* that without having to *find* that. Whatever that is. |
-| <sub>Quote</sub> | As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?I want to *see* that without having to *find* that. Whatever that is. | As a stakeholder in the hiring process, if you win, I win. I've already seen your LinkedIn. I landed here from the job-hunt database in our server which means you were already recommended by someone. Why would you choose us? I'd like to know where you are and give you a call. | As an evolving candidate in an evolving industry, I want to be be able to control and customize features and pages. I want to be able to customize the website for a specific company when I send an application. |
-| <sub>Goals</sub> | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. |
-
-###### 1: [Source](https://www.builtinchicago.org/2018/05/08/what-companies-look-for-on-github)
 All additions and improvements to the plan should always count towards the goals of the user and/or the business.
 
 ### 1.4 Strategy table
