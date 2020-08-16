@@ -832,12 +832,12 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
 
-### Languages
+### Languages Used
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
-### Frameworks and Libraries
+### Frameworks and Libraries Used
 
 1. [Bootstrap 4.5.2:](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
     - Bootstrap 4.5.2 Starter Template
@@ -848,30 +848,25 @@ In this section, you should mention all of the languages, frameworks, libraries,
 4. [Adobe Fonts:](https://fonts.adobe.com/)
     - xx
 
-### Programs, Software and Plugins
+### Programs, Software and Plugins Used
 
 1. [WebStorm:](https://www.jetbrains.com/webstorm/)
-    - WebStorm 2020.2 by [JetBrains](https://www.jetbrains.com/) was the local IDE used to develop the project.
-   1. [Performance Testing]
-   2. [Machine Learning Code Completion]
-   3. Copyright
-   4. [HTTP Client](https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html)
-   5. ChangeReminder
-   6. [Bootstrap 4,​ Font awesome 4,​ Font Awesome 5 Free & Pro live templates/snippets](https://plugins.jetbrains.com/plugin/9341-bootstrap-4-font-awesome-4-font-awesome-5-free--pro-live-templates-snippets/)
-   7. [Emmet Everywhere](https://plugins.jetbrains.com/plugin/7450-emmet-everywhere/)
-   8. GitHub
-   9. Git
-   10. Grazie
-   11. [Markdown Navigator Enhanced](https://plugins.jetbrains.com/plugin/7896-markdown-navigator-enhanced/)
-   12. [Prettier](https://prettier.io/)
-   13. W3C Validators
-   14. [Yet another emoji support](https://plugins.jetbrains.com/plugin/12512-yet-another-emoji-support/)
-
+    - WebStorm 2020.2 by [JetBrains](https://www.jetbrains.com/) is the web development IDE used to locally construct the project -- helpful for its seamless tool integration, coding assistance, and ecosystem of plugins; namely: [Bootstrap 4,​ Font awesome 4,​ Font Awesome 5 Free & Pro live templates/snippets](https://github.com/1tontech/bootstrap4-snippets/tree/master/intellij) for snippet library and live template assistance; [Emmet Everywhere](https://plugins.jetbrains.com/plugin/7450-emmet-everywhere/) for enhanced HTML/CSS workflow via syntax abbreviation; [Grazie](https://www.jetbrains.com/help/idea/proofreading.html?_ga=2.76862805.1956684954.1597564176-1624949513.1586079173) as an all-in-one grammar and spell checker; [Prettier](https://prettier.io/) for reliable code formatting and styling; [JetBrains W3C Validators](https://plugins.jetbrains.com/plugin/11541-w3c-validators) built in as code quality tools; [Yet another emoji support](https://plugins.jetbrains.com/plugin/12512-yet-another-emoji-support/) for (the obvious) and; [Markdown Navigator Enhanced](https://plugins.jetbrains.com/plugin/7896-markdown-navigator-enhanced/) for its advanced support of [GFM](https://github.github.com/gfm/) in local editors.
 
 3. [Adobe XD:](https://www.adobe.com/sea/products/xd.html)
-   - XD
+   - Adobe XD is the user experience design tool and workspace used to mock up the project from low fidelity wireframes to high fidelity prototypes. XD's templates along with its plugin [Whiteboard](https://xd.adobe.com/ideas/perspectives/leadership-insights/new-whiteboard-plugin-adobe-xd/) were used for diagramming mind maps, user journeys and site maps.
 
 ## Testing
+
+### Code Testing
+
+The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services continue to be used to validate the single html page (index.html) and the css URI of the project (/assets/style.css) to ensure no errors, alerts or flags pertaining to html and css syntax.
+
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Findex.html)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=)
+
+
+### User Testing
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
