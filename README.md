@@ -189,7 +189,7 @@ UX design is done by designers and product managers. Developer just implemented 
       1. I want to be able to customize the website for a specific company when I send an application.
       2. The goal is to further expand my candidacy in the form of a cover letter page -- a custom link -- that reroutes to the main page after being read.
 
-|     |     |     |     |
+|     |![RedUX_200817_Jacob_01.png](documentation/RedUX_200817_Jacob_01.png)|![RedUX_200817_Tracy_01.png](documentation/RedUX_200817_Tracy_01.png)|![RedUX_200817_Joem_01.png](documentation/RedUX_200817_Joem_01.png)|
 | --- | --- | --- | --- |
 | <sub>Name</sub> | **Jacob Grobin** | **Tracy Letts** | **Joem Sanez** |
 | <sub>Job Title</sub> | **Senior Developer** | **Recruiter** | **Owner** |
@@ -825,35 +825,33 @@ In addition, you may also use this section to discuss plans for additional featu
 ### Features Left to Implement
 - Another feature idea
 
-## Technologies Used
+## Technologies
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+### Languages
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+1.   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+1.   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
-### Languages Used
-
--   [HTML5](https://en.wikipedia.org/wiki/HTML5)
--   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-
-### Frameworks and Libraries Used
+### Frameworks and Libraries
 
 1. [Bootstrap 4.5.2:](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
     - Bootstrap 4.5.2 Starter Template
 2. [Hover.css:](https://ianlunn.github.io/Hover/)
-    - xx
+    - Forthcoming
 3. [jQuery:](https://jquery.com/)
-   - xx
+   - Forthcoming
 4. [Adobe Fonts:](https://fonts.adobe.com/)
-    - xx
+    - Forthcoming
 
-### Programs, Software and Plugins Used
+### Programs, Software and Plugins
 
 1. [WebStorm:](https://www.jetbrains.com/webstorm/)
     - WebStorm 2020.2 by [JetBrains](https://www.jetbrains.com/) is the web development IDE used to locally construct the project -- helpful for its seamless tool integration, coding assistance, and ecosystem of plugins; namely: [Bootstrap 4,​ Font awesome 4,​ Font Awesome 5 Free & Pro live templates/snippets](https://github.com/1tontech/bootstrap4-snippets/tree/master/intellij) for snippet library and live template assistance; [Emmet Everywhere](https://plugins.jetbrains.com/plugin/7450-emmet-everywhere/) for enhanced HTML/CSS workflow via syntax abbreviation; [Grazie](https://www.jetbrains.com/help/idea/proofreading.html?_ga=2.76862805.1956684954.1597564176-1624949513.1586079173) as an all-in-one grammar and spell checker; [Prettier](https://prettier.io/) for reliable code formatting and styling; [JetBrains W3C Validators](https://plugins.jetbrains.com/plugin/11541-w3c-validators) built in as code quality tools; [Yet another emoji support](https://plugins.jetbrains.com/plugin/12512-yet-another-emoji-support/) for (the obvious) and; [Markdown Navigator Enhanced](https://plugins.jetbrains.com/plugin/7896-markdown-navigator-enhanced/) for its advanced support of [GFM](https://github.github.com/gfm/) in local editors.
-
-3. [Adobe XD:](https://www.adobe.com/sea/products/xd.html)
+2. [Git:](https://git-scm.com/)
+    - Git is used as the version control system and is utilized via the WebStorm terminal to `commit` to Git and `push` to GitHub.
+4. [GitHub:](https://github.com/)
+    - GitHub is used to store the project's code and directory upon concurrent `push`es via Git.
+5. [Adobe XD:](https://www.adobe.com/sea/products/xd.html)
    - Adobe XD is the user experience design tool and workspace used to mock up the project from low fidelity wireframes to high fidelity prototypes. XD's templates along with its plugin [Whiteboard](https://xd.adobe.com/ideas/perspectives/leadership-insights/new-whiteboard-plugin-adobe-xd/) were used for diagramming mind maps, user journeys and site maps.
 
 ## Testing
