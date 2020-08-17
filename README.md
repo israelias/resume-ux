@@ -264,24 +264,24 @@ In order to achieve the goal of standing out to the three target users, the foll
 > ##### Importance is driven by owner's goals and user needs/triggers.
 
 | id    | Specific Features             | Importance | Viability |
-| ----- | ------------------------------------------- | ---------- | --------- |
-| A     | Create a descriptive landing page about the owner to establish his online presence            |            |           |
-| B     | Feature owner's scope of expertise in the tech stack and the design stack (specialization)          |            |           |
-| B     | Represent breadth of owner's proficiency in tools and technologies (asset coverage)         |            |           |
-| B     | Represent depth of owner's current use of and experience with tools and technologies (verifiable badges)         |            |           |
-| B     | Showcase samples of owner's projects with links to its repo (tech) and its complete portfolio (design)         |            |           |
-| B     | Represent owner's work history (career timeline)          |            |           |
-| B     | Represent owner's educational background (timeline)         |            |           |
-| B     | Showcase owner's existing awards and recognitions          |            |           |
-| B     | Showcase recommendations received by owner from professionals in previous experience         |            |           |
-| B     | Provide downloadable CV.pdf that is consistent with the web resume/owner's brand         |            |           |
-| F     | Provide a contact/message form for users to directly collaborate or message/email     |            |           |
-| G     | Provide ability to directly call owner's mobile/Skype    |            |           |
-| H     | Create dashboard functionality for owner                    |            |           |
-| I     | Create custom "hidden" cover letter page for owner to silently fill and distribute when applying to jobs           |            |           |
-| J     | Show owner's tech stack represented as data from GitHub  |            |           |
-| K     | Bookend each section with corresponding "last" activity and "next" action: "Last seen 2 hours ago" -> "Drop me a line"   |            |           |
-| L     | Provide a stream of project activity retrieved from log of commit messages  |            |           |
+| ----- | ------------------------------------------- |:----------:|:---------:|
+| A     | Create a descriptive landing page about the owner to establish his online presence            |      5      |     5      |
+| B     | Feature owner's scope of expertise in the tech stack and the design stack (specialization)          |      4      |     5      |
+| C     | Represent breadth of owner's proficiency in tools and technologies (asset coverage)         |      5      |      5     |
+| D     | Represent depth of owner's current use of and experience with tools and technologies (verifiable badges)         |      5      |     4      |
+| E     | Showcase samples of owner's projects with links to its repo (tech) and its complete portfolio (design)         |      5      |      3     |
+| F     | Represent owner's work history (career timeline)          |      5      |      5     |
+| G     | Represent owner's educational background (timeline)         |      5      |     5      |
+| H     | Showcase owner's existing awards and recognitions          |      3      |      4     |
+| I     | Showcase recommendations received by owner from professionals in previous experience         |      3      |      4     |
+| J     | Provide downloadable CV.pdf that is consistent with the web resume/owner's brand         |      4      |      3     |
+| K     | Provide a contact/message form for users to directly collaborate or message/email     |      3      |      3     |
+| L     | Provide ability to directly call owner's mobile/Skype    |      4      |      4     |
+| M     | Create dashboard functionality for owner                    |      2      |      1     |
+| N     | Create custom "hidden" cover letter page for owner to silently fill and distribute when applying to jobs           |      1      |      1     |
+| O     | Show owner's tech stack represented as data from GitHub  |      5      |     3      |
+| P     | Bookend each section with corresponding "last" activity and "next" action: "Last seen 2 hours ago" -> "Drop me a line"   |      5      |      3     |
+| Q     | Provide a stream of project activity retrieved from log of commit messages  |     4       |     3      |
 | Total |                                             |            |           |
 
 <!--If importance and viability are equal, then we are in a position to do it all. Draw out your own version of the graph below to work out what features you should drop.-->
@@ -298,6 +298,7 @@ In order to achieve the goal of standing out to the three target users, the foll
 > ###### Features based on information gathered from Strategy to include in design
 > 
 > ###### Itemizes what's on the table for a production release and what isn't
+> ###### What's on the table for initial release?
 
 - Which features, based on info from strategy plane, do we want to include in the site?
 
@@ -305,42 +306,83 @@ In order to achieve the goal of standing out to the three target users, the foll
 
 - Keep goals in line with strategy goals.
 
-- User **SPRINT** goals to keep on track. Don't allow scope-creep to happen (additional features not agreed on in strategy)
+- Use **SPRINT** goals to keep on track. Don't allow scope-creep to happen (additional features not agreed on in strategy)
 
 - Pack in MVP features up front, unfold new experiences over time.
 
-### 2.1 Requirements and functional specifications
+### 2.1 Requirements and Functional Specifications
 
-- What users say they need.
-- What they actually need.
-- What they don't know they need.
+<!--- What users say they need.-->
+<!--- What they actually need.-->
+<!--- What they don't know they need.-->
 
-There is a difference between how you imagine something will be used and how it is actually used.
+There is a difference between how one imagines something will be used and how it is actually used. Putting fresh perspectives aside for a moment, **the core problem to address is how to get more work opportunities** for the owner. To approach the scope itemization in a diligent manner, let's be realistic:
 
-- [ ] Brainstorm and mind map on what things people might not know they need. 
+- Activity > Portfolio
 
-- [ ] Research and discussion on needs of the demographic.
+  - [ ] An honest representation of how the owner is currently and actively building new skill-sets and real-world projects is equally valuable to the portfolio itself.
+  - [ ] In favor of activity and in lieu of project experience content, establish a manner of "placeholding" that is "live" and measurable so as to attract return visitors.
+  - [ ] For example:
+    - Showing a timer for when the project will begin, or when the repository will drop.
+    - Showing a custom in-progress "badge" that updates as a repository grows in size. See [shields.io](https://shields.io)
 
-### 2.2 Content requirements
+- Contribution Footprint == Content
 
-- What mixed content/media do we need to meet the needs of the user?
+  - [ ] Whenever there is a dearth of content, show stats.
+  - [ ] As gathered from User Research, it's all about activity; so show it.
+  - [ ] We all know the owner is always 'committing', posting on Slack, working towards a Milestone project, or deep in a module.
+    - Find a way to represent this in the website!
+  - [ ] The website should never "go to sleep" or get buried under no activity
+  - [ ] Take advantage of leaving easter eggs to attract return visits.
+    - Think of them like designed error messages.
 
-#### Requirement types:
+<!--- [ ] Brainstorm and mind map on what things people might not know they need. -->
 
-- Objective – what does the user want to accomplish?
-- Functional – What does the user need to reach their objective?
-- Non-functional – What constrains does the site or app have to perform within?
-- Business Rules – What dynamic constrains do we have to meet? (calculations, definitions, legal etc)
+<!--- [ ] Research and discussion on needs of the demographic.-->
 
-### 2.3 Releases
+<!--### 2.2 Content requirements-->
 
-What will be included in each release?
+<!--- What mixed content/media do we need to meet the needs of the user?-->
 
-#### Release 1
+<!--#### Requirement types:-->
 
-#### Release 2
+<!--- Objective – what does the user want to accomplish?-->
+<!--- Functional – What does the user need to reach their objective?-->
+<!--- Non-functional – What constrains does the site or app have to perform within?-->
+<!--- Business Rules – What dynamic constrains do we have to meet? (calculations, definitions, legal etc)-->
 
-#### Release 3
+### 2.2 What's On The Table?
+
+- [ ] Landing Page (Voice)
+- [ ] 
+- [ ] About Section
+- [ ] 
+- [ ] Specialization Section (Services)
+- [ ] 
+- [ ] Technologies Section (Proficiency)
+  - [ ] Asset Coverage (breadth)
+  - [ ] Badge Measure (depth)
+- [ ]
+- [ ] Work Samples
+  - [ ] Tech Repo --> CTA(Fork My Repo)
+  - [ ] Architecture/Design Folio --> A(Link To Folio)
+- [ ]
+- [ ] Timeline Section
+  - [ ] Career Timeline
+  - [ ] Educational Timeline
+- [ ]
+- [ ] Recommendations Section (four from LinkedIn)
+- [ ] 
+- [ ] Drop Me A Line Section
+- [ ] 
+- [ ] Download My CV Section
+- [ ] 
+- [ ] Error Page?
+<!--#### Release 1-->
+
+<!--#### Release 2-->
+
+<!--#### Release 3-->
 
 <!--</details>-->
 
