@@ -81,11 +81,10 @@ Click the following dropdown to see the complete research at the Strategy Plane
 <!--<details>-->
 <!--  <summary>Strategy</summary>-->
 
-## 1.0 Strategy Plane
+## 1.0 Strategy
 
-> ###### What we are trying to achieve
->
-> ###### For whom we are trying to achieve it
+> ###### What I am trying to achieve.
+> ###### For whom I am trying to achieve it.
 
 - The main goals of the site are:
   - To establish a personal brand for the owner and avatar for the owner's online presence
@@ -101,20 +100,11 @@ Click the following dropdown to see the complete research at the Strategy Plane
 
 ### 1.1 Research
 
-#### Stakeholder Research/Interview (self)
+#### Stakeholder Research (Self)
 
-- What do I want the will give me value for having an online resume?
-
-|     |![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Jacob_01.jpg)|![RedUX_200817_Tracy_01.jpg](documentation/RedUX_200817_Tracy_01.jpg)|![RedUX_200817_Joem_01.jpg](documentation/RedUX_200817_Joem_01.jpg)|
-| --- | --- | --- | --- |
-| <sub>Name</sub> | **Jacob Grobin** | **Tracy Letts** | **Joem Sanez** |
-| <sub>Job Title</sub> | **Senior Developer** | **Recruiter** | **Owner** |
-| <sub>Background</sub> |   VP of Engineering at Fulcram, New York, NY  |  Senior Talent Acquisition Lead at Enigma Consultancy, Sydney NSW   |  Design Architect to Full Stack Developer, Manila, PH   |
-| <sub>Loves</sub> | Seeing a polyglot, seeing code that is readable, well-formatted, well-tested, well-documented and that displays a pragmatic approach via your repo/commit history; Seeing experimentation at different scales shows me you're making a conscious effort to stay up to speed with new tech.<sup>1<sup> | Seeing a lot of activity on your profile shows me how involved you are as a developer, seeing how many followers you have because a surplus is often a good indication of your role as a thought leader. Contribute to open source projects shows me that you want to give back and can play well with others.<sup>1<sup> |
-| <sub>Loathes</sub> | Seeing other companies' coding challenges in your repo and commits with environment variables included.<sup>1<sup> | Seeing inappropriate content or things that are too personal. | I want to *see* that without having to *find* that. Whatever that is. |
-| <sub>Quote</sub> | As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?I want to *see* that without having to *find* that. Whatever that is. | As a stakeholder in the hiring process, if you win, I win. I've already seen your LinkedIn. I landed here from the job-hunt database in our server which means you were already recommended by someone. Why would you choose us? I'd like to know where you are and give you a call. | As an evolving candidate in an evolving industry, I want to be be able to control and customize features and pages. I want to be able to customize the website for a specific company when I send an application. |
-| <sub>Goals</sub> | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. |
-
+- Business objectives
+- What do I want that will give me value for having this out in the world?
+- 
 
 #### Competitor Review
 
@@ -150,74 +140,38 @@ Click the following dropdown to see the complete research at the Strategy Plane
   - A lot of them are missing skills that others don't already have. They are not capitalizing on what it is about them that stands out: *narrative*. And capitalizing on how their non-dev background  might  position them uniquely by virtue of being *different*.
   - In terms of providing an "application package," none of them have a page template for a cover letter. This would be for the event that the owner send the website link directly as an application.
 
-a programmer should understand better than most how important muscle memory and shortcuts are to productivit
+<!--a programmer should understand better than most how important muscle memory and shortcuts are to productivit-->
 
-MO it's not just about "values of architects". They're a population that does cognitively demanding work (so polished UX is of fundamental importance) that tends to have more of a fine arts background than a software background (so right-to-modify does nothing for them).
+<!--MO it's not just about "values of architects". They're a population that does cognitively demanding work (so polished UX is of fundamental importance) that tends to have more of a fine arts background than a software background (so right-to-modify does nothing for them).-->
 
-FOSS is just ... a bad deal for them. They want someone they can call and yell at when they're on a deadline and the software isn't working, and they want tools that get out of their way.
+<!--FOSS is just ... a bad deal for them. They want someone they can call and yell at when they're on a deadline and the software isn't working, and they want tools that get out of their way.-->
 
+<!--UX design is done by designers and product managers. Developer just implemented ability to assign hot key X to function Y. How this ability used was not his/her concern.-->
 
+#### User Persona Overview
 
-UX design is done by designers and product managers. Developer just implemented ability to assign hot key X to function Y. How this ability used was not his/her concern.
+Three target user profiles were assembled from user research. Each profile represents a collection of expectations, objectives, compelling experiences, peeves and emotional triggers of a curated user group. Key attributes of each persona are sourced from articles, social media, news and comments, developer feeds and LinkedIn on the outset subject of what x user group looks for in a candidate's resume/portfolio. Further documentation on the subject data is loosely footnoted where quotations are paraphrased or directly cited. For the purpose of conducting use cases and journey maps, these personas -- following an analysis of theirs and the owner's motives -- will serve as the narratives reviewed for establishing scope upon which further development of the project is defined.
 
-#### User Profiles
-
-##### Senior Developer
-
-| ![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Jacob_01.jpg) | Senior Developer <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <sub>Name</sub>                                                                                                  | **Jacob Grobin**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| <sub>Job Title</sub>                                                                                             | **Senior Developer, VP of Engineering at Fulcram3D** <br/>New York, NY                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| <sub>Background</sub>                                                                                            | Engineering Doctorate,  Master of Computer Science in Machine Learning, Bachelor of Science in Actuarial Mathematics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| <sub>Loves</sub>                                                                                                 | <br/>Seeing a polyglot who shows interest in different languages.<br/><br/>Seeing code that is readable, well-formatted, well-tested, well-documented and that displays a pragmatic approach via your repo/commit history.<br/><br/>Seeing experimentation at different scales shows me you're making a conscious effort to stay up to speed with new tech.<sup>[1](#note-1)<sup><br/><br/>                                                                                                                                                                                                                                                         |
-| <sub>Loathes</sub>                                                                                               | <br/>Seeing other companies' coding challenges in your repo.<br/><br/>Seeing commits with environment variables included.<sup>[1](#note-1)<sup><br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| <sub>Quote</sub>                                                                                                 | <br/>As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?I want to *see* that without having to *find* that. Whatever that is.<br/><br/>                                                                                                                                                                                                                                                                                                                                                                                           |
-| <sub>Goals</sub>                                                                                                 | <br/>1. As a leader in the industry, I want to have a good understanding of who you are and what you are all about within a few seconds.<br/><br/>2. As a leader in the industry, I want to be led seamlessly through the site to arrive at valuable content with the minimum amount of clicks.<br/><br/>3. As a leader in the industry, I want to see evidence of your credibility and capability as a professional. I want to see what others have said about you or how they have reacted to you. I also want to locate sources of your credibility to see that they are legitimate and to have an idea of your influence on the industry. <br/> |
-
-##### Recruiter
-
-| ![RedUX_200817_Tracy_01.jpg](documentation/RedUX_200817_Tracy_01.jpg) | Recruiter                                                                                                                                                                                                                                                                                                                                     |
-| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <sub>Name</sub>                                                                                                  | **Tracy Letts**                                                                                                                                                                                                                                                                                                                               |
-| <sub>Job Title</sub>                                                                                             | **Senior Talent Acquisition Lead at Enigma Recruitment**<br/> Sydney NSW                                                                                                                                                                                                                                                                      |
-| <sub>Background</sub>                                                                                            | Strategic Hiring for Tech Companies, Bachelor of Science in Psychology, Masters in Business Administration                                                                                                                                                                                                                                    |
-| <sub>Loves</sub>                                                                                                 | <br/>Seeing a lot of activity on your profile shows me how involved you are as a developer.<br/><br/>Seeing how many followers you have because a surplus is often a good indication of your role as a thought leader. <sup>[1](#note-1)<sup><br/><br/>                                                                                       |
-| <sub>Loathes</sub>                                                                                               | <br/>Seeing inappropriate content or things that are too personal.<sup>[1](#note-1)<sup><br/>                                                                                                                                                                                                                                                 |
-| <sub>Quote</sub>                                                                                                 | <br/>As a stakeholder in the hiring process, if you win, I win. I've already seen your LinkedIn. I landed here from the job-hunt database in our server which means you were already recommended by someone. Why would you choose us? I'd like to know where you are and give you a call.<sup>[4](#note-4)<sup><br/><br/>                     |
-| <sub>Goals</sub>                                                                                                 | <br/>1. As a Recruiter, I want to find information on your skills and projects ASAP.<br/><br/>2. As a Recruiter, I want to understand the easiest and most reliable method of saving and sharing your profile to my team. <br/><br/>3. As a Recruiter, I want to find the best way to get in contact with you in case I want to connect.<br/> |
-
-##### Collaborator
-
-| ![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Joem_01.jpg) | Collaborator                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <sub>Name</sub>                                                                                                 | **Peter Venti**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| <sub>Job Title</sub>                                                                                            | **Asociate Lead in Design Computation \| Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA                                                                                                                                                                                                                                                                                                                                                                                             |
-| <sub>Background</sub>                                                                                           | New Venture Development, Master of Research in Virtual Environments                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| <sub>Loves</sub>                                                                                                | <br/>Seeing experiments and small projects that demonstrate the range of interests you have.<br/><br/>Seeing that you contribute to open source projects shows me that you want to give back and can play well with others.<sup>[1](#note-1)<sup><br/><br/>                                                                                                                                                                                                                                              |
-| <sub>Loathes</sub>                                                                                              | <br/>Seeing the ubiquitous percentage bars and other elements and animations on your page that don't add any value; If you do want to add some numerical value to your skills, use the number of years or projects -- at least these metrics are universally understandable. <sup>[2](#note-2)<sup><br/>                                                                                                                                                                                                 |
-| <sub>Quote</sub>                                                                                                | <br/>As a potential collaborator and experienced programmer with a background in design, cognitive diversity on your endeavours found through the exploration of other interests is just as important as a myriad of code repositories.<sup>[1](#note-1)<sup> I found you here as I was impressed by your LinkedIn. I believe if you have to wonder how to make an impression, then you aren't. So before I even say hello, I want fork your repository and impress you with my contribution. <br/><br/> |
-| <sub>Goals</sub>                                                                                                | <br/>1. As a potential collaborator, I want to find your project(s) and quickly fork a repository.<br/><br/>2. As a potential collaborator, I want to find stats of your contribution footprint.<br/><br/>3. As a potential collaborator, I want to find the best way to get in contact with the organisation with any questions I may have.<br/>                                                                                                                                                        |
+>###### Note: Names and entities have been modified/fabricated for this exercise.
 
 
-> ###### [Note 1](https://www.builtinchicago.org/2018/05/08/what-companies-look-for-on-github)  What developers look for in your public profiles
->
-> ###### [Note 2](https://dev.to/kethmars/what-i-learned-after-reviewing-over-40-developer-portfolios-9-tips-for-a-better-portfolio-4me7) What developers look for in your web portfolio
->
-> ###### [Note 3](https://news.ycombinator.com/item?id=24034211) Discussion on the role of software in architecture (design)
->
-> ###### Note 4 Various LinkedIn
+|                        | ![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Jacob_01.jpg)                                                                                                                                           | ![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Tracy_01.jpg)                                                             | ![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Joem_01.jpg)                                                                                                                     |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <sub>Name</sub>        | **Jacob Grobin**                                                                                                                                                                                                                                           | **Tracy Letts**                                                                                                                                                              | **Peter Venti**                                                                                                                                                                                                                     |
+| <sub>Designation</sub> | **Senior Developer**                                                                                                                                                                                                                                       | **Recruiter**                                                                                                                                                                | **Collaborator**                                                                                                                                                                                                                    |
+| <sub>Headline</sub>    | VP of Engineering at Fulcram3D <br/>New York, NY                                                                                                                                                                                                           | Talent Acquisition Lead at Enigma Recruitment<br/> Sydney NSW                                                                                                                | Design Computation at Lamb Space Design<br/>San Francisco, CA                                                                                                                                                                       |
+| <sub>Loves</sub>       | <br/>Seeing a polyglot who shows interest in different languages.<br/>                                                                                                                                                                                | <br/>Seeing a lot of activity on your profile shows me how involved you are as a developer.<br/>                                                                        | <br/>Seeing that you contribute to open source projects shows me that you want to give back and can play well with others.<sup>[1](#note-1)<sup><br/>                                                                          |
+| <sub>Loathes</sub>     | <br/>Seeing other companies' coding challenges in your repo.<sup>[1](#note-1)<sup><br/>                                                                                                                                                                    | <br/>Seeing inappropriate content or things that are too personal.<sup>[1](#note-1)<sup><br/>                                                                                | <br/>Seeing ubiquitous progress bars that don't add real value.<sup>[2](#note-2)<sup><br/>                                                                                                                                          |
+| <sub>Quote</sub>       | <br/>As a leader in the industry, I won't spend much time here. What is it about you that stands out and that I haven't already seen in others? I want to *see* that without having to *find* that. Whatever that is.<br/><br/> | <br/>As a stakeholder in the hiring process, if you win, I win. Why would you choose us? I'd like to know where you are and give you a call.<sup>[4](#note-4)<sup><br/><br/> | <br/>As a collaborator with a background in design, cognitive diversity on your endeavours found through the exploration of other interests is just as important as a myriad of code repositories.<sup>[1](#note-1)<sup> <br/><br/> |
 
+###### 1: [Source](https://www.builtinchicago.org/2018/05/08/what-companies-look-for-on-github)
 
-### 1.2 Planning
-
-- What relevant content should we deliver that fits our demographic?
-- How can we make the content easily tracked and catalogued in an intuitive way?
-- Is the technology appropriate? What are the tech considerations?
 
 ### 1.3 User Expectations
 
-> #### What does the visitor expect? Consider that the visitor is asking themselves these questions when they come to the site for the first time:
-
+> ###### What the visitor expects.
+> ###### These apply to all user profiles and personas.
+> ###### Given considerations to the novelty of the first encounter.
 - What is this? Is it what I expected to see?
 - Does it look credible and trustworthy?
 - Does it offer what I want?
@@ -225,6 +179,11 @@ UX design is done by designers and product managers. Developer just implemented 
 - What actions can I take now?
 - How do I learn more?
 - How do I contact someone?
+
+#### Why is this website special? Why would a visitor desire this (experience)?
+
+
+All additions and improvements to the plan should always count towards the goals of the user and/or the business.
 
 #### Key Takeaways From Research
 
@@ -234,37 +193,53 @@ UX design is done by designers and product managers. Developer just implemented 
 - Evidence of dev community activity in social media (dev.to, Twitter, etc.)
 - Reduce number clicks to arrive at goal
 
-#### Why is this website special? Why would a visitor desire this (experience)?
-
-- User Stories
-  - Senior Developer (Back End)
-    - As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?
-      1. I want to *see* that without having to *find* that. Whatever that is.
-      2. Now I recognize the need for someone with your background, which migt have been a problem I didn't even know I had.
-  - Recruiter (External)
-    - As a stakeholder in the hiring process, if you win, I win. I've already seen your LinkedIn. I landed here from the job-hunt database in our server which means you were already recommended by someone. Why would you choose us?
-      1. I'd like to know where you are and give you a call.
-      2. My goal is to schedule you at your convenience, learn enough about you to engage you and share you with my team.
-  - Owner
-    - As an evolving candidate in an evolving industry, I want to be be able to control and customize features and pages.
-      1. I want to be able to customize the website for a specific company when I send an application.
-      2. The goal is to further expand my candidacy in the form of a cover letter page -- a custom link -- that reroutes to the main page after being read.
-
-All additions and improvements to the plan should always count towards the goals of the user and/or the business.
-
 ### User Stories
 
-|     |![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Jacob_01.jpg)|![RedUX_200817_Tracy_01.jpg](documentation/RedUX_200817_Tracy_01.jpg)|![RedUX_200817_Joem_01.jpg](documentation/RedUX_200817_Joem_01.jpg)|
-| --- | --- | --- | --- |
-| <sub>Name</sub> | **Jacob Grobin** | **Tracy Letts** | **Joem Sanez** |
-| <sub>Job Title</sub> | **Senior Developer** | **Recruiter** | **Owner** |
-| <sub>Background</sub> |   VP of Engineering at Fulcram, New York, NY  |  Senior Talent Acquisition Lead at Enigma Consultancy, Sydney NSW   |  Design Architect to Full Stack Developer, Manila, PH   |
-| <sub>Loves</sub> | Seeing a polyglot, seeing code that is readable, well-formatted, well-tested, well-documented and that displays a pragmatic approach via your repo/commit history; Seeing experimentation at different scales shows me you're making a conscious effort to stay up to speed with new tech.<sup>1<sup> | Seeing a lot of activity on your profile shows me how involved you are as a developer, seeing how many followers you have because a surplus is often a good indication of your role as a thought leader. Contribute to open source projects shows me that you want to give back and can play well with others.<sup>1<sup> |
-| <sub>Loathes</sub> | Seeing other companies' coding challenges in your repo and commits with environment variables included.<sup>1<sup> | Seeing inappropriate content or things that are too personal. | I want to *see* that without having to *find* that. Whatever that is. |
-| <sub>Quote</sub> | As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?I want to *see* that without having to *find* that. Whatever that is. | As a stakeholder in the hiring process, if you win, I win. I've already seen your LinkedIn. I landed here from the job-hunt database in our server which means you were already recommended by someone. Why would you choose us? I'd like to know where you are and give you a call. | As an evolving candidate in an evolving industry, I want to be be able to control and customize features and pages. I want to be able to customize the website for a specific company when I send an application. |
-| <sub>Goals</sub> | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. |
+##### User Persona 1: Senior Developer
 
-###### 1: [Source](https://www.builtinchicago.org/2018/05/08/what-companies-look-for-on-github)
+| ![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Jacob_01.jpg) | Senior Developer <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <sub>Name</sub>                                                                                                  | **Jacob Grobin**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| <sub>Job Title</sub>                                                                                             | **Senior Developer, VP of Engineering at Fulcram3D** <br/>New York, NY                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| <sub>Background</sub>                                                                                            | Engineering Doctorate,  Master of Computer Science in Machine Learning, Bachelor of Science in Actuarial Mathematics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <sub>Loves</sub>                                                                                                 | <br/>Seeing a polyglot who shows interest in different languages.<br/><br/>Seeing code that is readable, well-formatted, well-tested, well-documented and that displays a pragmatic approach via your repo/commit history.<br/><br/>Seeing experimentation at different scales shows me you're making a conscious effort to stay up to speed with new tech.<sup>[1](#note-1)<sup><br/><br/>                                                                                                                                                                                                                                                         |
+| <sub>Loathes</sub>                                                                                               | <br/>Seeing other companies' coding challenges in your repo.<br/><br/>Seeing commits with environment variables included.<sup>[1](#note-1)<sup><br/><br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <sub>Quote</sub>                                                                                                 | <br/>As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?I want to *see* that without having to *find* that. Whatever that is.<br/><br/>                                                                                                                                                                                                                                                                                                                                                                                           |
+| <sub>Goals</sub>                                                                                                 | <br/>1. As a leader in the industry, I want to have a good understanding of who you are and what you are all about within a few seconds.<br/><br/>2. As a leader in the industry, I want to be led seamlessly through the site to arrive at valuable content with the minimum amount of clicks.<br/><br/>3. As a leader in the industry, I want to see evidence of your credibility and capability as a professional. I want to see what others have said about you or how they have reacted to you. I also want to locate sources of your credibility to see that they are legitimate and to have an idea of your influence on the industry. <br/><br/> |
+
+##### User Persona 2: Recruiter
+
+| ![RedUX_200817_Tracy_01.jpg](documentation/RedUX_200817_Tracy_01.jpg) | Recruiter                                                                                                                                                                                                                                                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <sub>Name</sub>                                                                                                  | **Tracy Letts**                                                                                                                                                                                                                                                                                                                               |
+| <sub>Job Title</sub>                                                                                             | **Senior Talent Acquisition Lead at Enigma Recruitment**<br/> Sydney NSW                                                                                                                                                                                                                                                                      |
+| <sub>Background</sub>                                                                                            | Strategic Hiring for Tech Companies, Bachelor of Science in Psychology, Masters in Business Administration                                                                                                                                                                                                                                    |
+| <sub>Loves</sub>                                                                                                 | <br/>Seeing a lot of activity on your profile shows me how involved you are as a developer.<br/><br/>Seeing how many followers you have because a surplus is often a good indication of your role as a thought leader. <sup>[1](#note-1)<sup><br/><br/>                                                                                       |
+| <sub>Loathes</sub>                                                                                               | <br/>Seeing inappropriate content or things that are too personal.<sup>[1](#note-1)<sup><br/><br/>                                                                                                                                                                                                                                                 |
+| <sub>Quote</sub>                                                                                                 | <br/>As a stakeholder in the hiring process, if you win, I win. I've already seen your LinkedIn. I landed here from the job-hunt database in our server which means you were already recommended by someone. Why would you choose us? I'd like to know where you are and give you a call.<sup>[4](#note-4)<sup><br/><br/>                     |
+| <sub>Goals</sub>                                                                                                 | <br/>1. As a Recruiter, I want to find information on your skills and projects ASAP.<br/><br/>2. As a Recruiter, I want to understand the easiest and most reliable method of saving and sharing your profile to my team. <br/><br/>3. As a Recruiter, I want to find the best way to get in contact with you in case I want to connect.<br/><br/> |
+
+##### User Persona 3: Collaborator
+
+| ![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Joem_01.jpg) | Collaborator                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <sub>Name</sub>                                                                                                 | **Peter Venti**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| <sub>Job Title</sub>                                                                                            | **Asociate Lead in Design Computation \| Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA                                                                                                                                                                                                                                                                                                                                                                                             |
+| <sub>Background</sub>                                                                                           | New Venture Development, Master of Research in Virtual Environments                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| <sub>Loves</sub>                                                                                                | <br/>Seeing experiments and small projects that demonstrate the range of interests you have.<br/><br/>Seeing that you contribute to open source projects shows me that you want to give back and can play well with others.<sup>[1](#note-1)<sup><br/><br/>                                                                                                                                                                                                                                              |
+| <sub>Loathes</sub>                                                                                              | <br/>Seeing the ubiquitous percentage bars and other elements and animations on your page that don't add any value; If you do want to add some numerical value to your skills, use the number of years or projects -- at least these metrics are universally understandable. <sup>[2](#note-2)<sup><br/><br/>                                                                                                                                                                                                 |
+| <sub>Quote</sub>                                                                                                | <br/>As a potential collaborator and experienced programmer with a background in design, cognitive diversity on your endeavours found through the exploration of other interests is just as important as a myriad of code repositories. I found you here as I was impressed by your LinkedIn. I believe if you have to wonder how to make an impression, then you aren't. So before I even say hello, I want fork your repository and impress you with my contribution.<sup>[1](#note-1)<sup> <br/><br/> |
+| <sub>Goals</sub>                                                                                                | <br/>1. As a potential collaborator, I want to find your project(s) and quickly fork a repository.<br/><br/>2. As a potential collaborator, I want to find stats of your contribution footprint.<br/><br/>3. As a potential collaborator, I want to find the best way to get in contact with the organisation with any questions I may have.<br/><br/>                                                                                                                                                        |
+
+
+> ###### [<sub>Note</sub> 1](https://www.builtinchicago.org/2018/05/08/what-companies-look-for-on-github)  Article. GitHub profile realities.
+>
+> ###### [<sub>Note</sub> 2](https://dev.to/kethmars/what-i-learned-after-reviewing-over-40-developer-portfolios-9-tips-for-a-better-portfolio-4me7) Post. Portfolio review feedback on dev.to
+>
+> ###### [<sub>Note</sub> 3](https://news.ycombinator.com/item?id=24034211) Forum. Role of software in architecture on ycombinator
+>
+> ###### <sub>Note</sub> 4 Varies. Profile summaries and headlines on LinkedIn
+
 
 ### 1.4 Strategy table
 
@@ -317,7 +292,7 @@ If importance and viability are equal, then we are in a position to do it all. D
 <!--<details>-->
 <!--  <summary>Scope</summary>-->
 
-## 2.0 Scope Plane
+## 2.0 Scope
 
 > ###### Features based on information gathered from Strategy to include in design
 > 
@@ -371,7 +346,7 @@ What will be included in each release?
 <!--<details>-->
 <!--  <summary>Structure</summary>-->
 
-## 3.0 Structure Plane
+## 3.0 Structure
 
 > ###### How the information is structured
 > 
@@ -597,7 +572,7 @@ graph TD
 <!--<details>-->
 <!--  <summary>Skeleton</summary>-->
 
-## 4.0 Skeleton Plane
+## 4.0 Skeleton
 
 > ###### How information is represented
 > 
@@ -831,7 +806,7 @@ Just a starting point (no colours, images or effects referred to).
 <!--<details>-->
 <!--  <summary>Surface</summary>-->
 
-## 5.0 Surface Plane
+## 5.0 Surface
 
 > ###### What the product will look like
 > 
