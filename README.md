@@ -21,7 +21,7 @@ The result is a web resume that is:
 
 <!--[TOC levels=1-3 bullet formatted hierarchy]-->
 
-## Contents
+# Contents
 - [Resume RedUX](#resume-redux)
   - [Contents](#contents)
   - [UX](#ux)
@@ -64,7 +64,7 @@ The result is a web resume that is:
     - [Media](#media)
     - [Acknowledgements](#acknowledgements)
 
-## UX
+# UX
 
 <!--Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.-->
 
@@ -207,7 +207,22 @@ When using the strategy table there is always a trade-off between importance and
 
 #### Importance is driven by business goals and user needs.
 
-| id    | Opportunity / Problem / Feature             | Importance | Viability |
+####  Portraying Honesty and Integrity
+
+In order to achieve the goal of standing out to the three target users, the following high-level milestones must be covered:
+
+### High-Level Paradigms
+
+1. Feature owner's experience/skill in the form of his tech/community contribution footprint
+2. Provide opportunistic actions to increase GitHub following (collaborate) and recruiter interaction (hire)
+3. Capitalize on owner's nuanced position in the tech stack as primary unique selling point
+4. In every way achievable, portray all measurable 'static' information as 'live' statistics
+
+####  Showing Activity at every possible opportunity
+
+No fooling anyone. In order to achieve the goal of standing out to the three target users, the following high-level milestones must be covered:
+
+| id    | Specific Features             | Importance | Viability |
 | ----- | ------------------------------------------- | ---------- | --------- |
 | A     | Create a descriptive landing page about the owner to establish his online presence            |            |           |
 | B     | Feature owner's scope of expertise in the tech stack and the design stack (specialization)          |            |           |
@@ -218,18 +233,14 @@ When using the strategy table there is always a trade-off between importance and
 | B     | Represent owner's educational background (timeline)         |            |           |
 | B     | Showcase owner's existing awards and recognitions          |            |           |
 | B     | Showcase recommendations received by owner from professionals in previous experience         |            |           |
-| B     | Increase GitHub followers for owner         |            |           |
-| C     | Showcase samples of owner's work            |            |           |
-| D     | Feature recommendations written about owner |            |           |
-| E     | Increase recruiter interaction              |            |           |
-| F     | Showcase owner's contribution footprint     |            |           |
-| G     | Showcase owner's awards and recognitions    |            |           |
-| H     | Dashboard functionality                     |            |           |
-| I     | Custom landing page cover letter            |            |           |
-| J     | Tech stack represented as data from Github  |            |           |
-| K     | GitHub activity represented as live stats   |            |           |
-| L     | Project activity represented as "last commit message"  |            |           |
-| M     | Experience shown as direct data from owner's OS footprint (No fooling anyone)   |            |           |
+| B     | Provide downloadable CV.pdf that is consistent with the web resume/owner's brand         |            |           |
+| F     | Provide a contact/message form for users to directly collaborate or message/email     |            |           |
+| G     | Provide ability to directly call owner's mobile/Skype    |            |           |
+| H     | Create dashboard functionality for owner                    |            |           |
+| I     | Create custom "hidden" cover letter page for owner to silently fill and distribute when applying to jobs           |            |           |
+| J     | Show owner's tech stack represented as data from GitHub  |            |           |
+| K     | Bookend each section with corresponding "last" activity and "next" action: "Last seen 2 hours ago" -> "Drop me a line"   |            |           |
+| L     | Provide a stream of project activity retrieved from log of commit messages  |            |           |
 | Total |                                             |            |           |
 
 If importance and viability are equal, then we are in a position to do it all. Draw out your own version of the graph below to work out what features you should drop.
@@ -238,8 +249,8 @@ If importance and viability are equal, then we are in a position to do it all. D
 
 <!--</details>-->
 
-<details>
-  <summary>Scope</summary>
+<!--<details>-->
+<!--  <summary>Scope</summary>-->
 
 ## 2.0 Scope Plane
 
@@ -290,10 +301,10 @@ What will be included in each release?
 
 #### Release 3
 
-</details>
+<!--</details>-->
 
-<details>
-  <summary>Structure</summary>
+<!--<details>-->
+<!--  <summary>Structure</summary>-->
 
 ## 3.0 Structure Plane
 
@@ -516,10 +527,10 @@ graph TD
 
 - <mark>Find the right structure for the objectives and user needs</mark>
 
-</details>
+<!--</details>-->
 
-<details>
-  <summary>Skeleton</summary>
+<!--<details>-->
+<!--  <summary>Skeleton</summary>-->
 
 ## 4.0 Skeleton Plane
 
@@ -750,10 +761,10 @@ Just a starting point (no colours, images or effects referred to).
 
 - Paper first, then Balsamic or Marvel app.
 
-</details>
+<!--</details>-->
 
-<details>
-  <summary>Surface</summary>
+<!--<details>-->
+<!--  <summary>Surface</summary>-->
 
 ## 5.0 Surface Plane
 
@@ -806,7 +817,7 @@ The most important elements are easily recognized
 
 > ### Good UX smells like value.
 
-</details>
+<!--</details>-->
 
 ### Design
 
@@ -816,15 +827,11 @@ The most important elements are easily recognized
 
 - Imagery
 
-## Badges
-
-Current Status etc.
-
-## Features
+# Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
-### Existing Features
+## Existing Features
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
 - ...
 
@@ -832,17 +839,17 @@ For some/all of your features, you may choose to reference the specific project 
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
-### Features Left to Implement
+## Features Left to Implement
 - Another feature idea
 
-## Technologies
+# Technologies
 
-### Languages
+## Languages
 
 1.   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 1.   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
-### Frameworks and Libraries
+## Frameworks and Libraries
 
 1. [Bootstrap 4.5.2:](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
     - Bootstrap 4.5.2 Starter Template
@@ -853,7 +860,7 @@ In addition, you may also use this section to discuss plans for additional featu
 4. [Adobe Fonts:](https://fonts.adobe.com/)
     - Forthcoming
 
-### Programs, Software and Plugins
+## Programs, Software and Plugins
 
 1. [WebStorm:](https://www.jetbrains.com/webstorm/)
     - WebStorm 2020.2 by [JetBrains](https://www.jetbrains.com/) is the web development IDE used to locally construct the project -- helpful for its seamless tool integration, coding assistance, and ecosystem of plugins; namely: [Bootstrap 4,​ Font awesome 4,​ Font Awesome 5 Free & Pro live templates/snippets](https://github.com/1tontech/bootstrap4-snippets/tree/master/intellij) for snippet library and live template assistance; [Emmet Everywhere](https://plugins.jetbrains.com/plugin/7450-emmet-everywhere/) for enhanced HTML/CSS workflow via syntax abbreviation; [Grazie](https://www.jetbrains.com/help/idea/proofreading.html?_ga=2.76862805.1956684954.1597564176-1624949513.1586079173) as an all-in-one grammar and spell checker; [Prettier](https://prettier.io/) for reliable code formatting and styling; [JetBrains W3C Validators](https://plugins.jetbrains.com/plugin/11541-w3c-validators) built in as code quality tools; [Yet another emoji support](https://plugins.jetbrains.com/plugin/12512-yet-another-emoji-support/) for (the obvious) and; [Markdown Navigator Enhanced](https://plugins.jetbrains.com/plugin/7896-markdown-navigator-enhanced/) for its advanced support of [GFM](https://github.github.com/gfm/) in local editors.
@@ -864,9 +871,9 @@ In addition, you may also use this section to discuss plans for additional featu
 5. [Adobe XD:](https://www.adobe.com/sea/products/xd.html)
    - Adobe XD is the user experience design tool and workspace used to mock up the project from low fidelity wireframes to high fidelity prototypes. XD's templates along with its plugin [Whiteboard](https://xd.adobe.com/ideas/perspectives/leadership-insights/new-whiteboard-plugin-adobe-xd/) were used for diagramming mind maps, user journeys and site maps.
 
-## Testing
+# Testing
 
-### Code Testing
+## Code Testing
 
 The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services continue to be used to validate the single html page (index.html) and the css URI of the project (/assets/style.css) to ensure no errors, alerts or flags pertaining to html and css syntax.
 
@@ -874,7 +881,7 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=)
 
 
-### User Testing
+## User Testing
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -894,19 +901,19 @@ You should also mention in this section any interesting bugs or problems you dis
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
-### Miscellaneous
+## Miscellaneous
 
 - Tested of x Browser
 - Viewed on x Devices
 - User Testing
 
-### Known Bugs
+## Known Bugs
 
 - xxx
 - xxx
 - xxx
 
-## Deployment
+# Deployment
 
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 
@@ -918,14 +925,14 @@ In particular, you should provide all details of the differences between the dep
 In addition, if it is not obvious, you should also describe how to run your code locally.
 
 
-## Credits
+# Credits
 
-### Content
+## Content
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
-### Media
+## Media
 - The photos used in this site were obtained from ...
 
-### Acknowledgements
+## Acknowledgements
 
 - I received inspiration for this project from X
