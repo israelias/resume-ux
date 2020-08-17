@@ -73,26 +73,13 @@ The result is a web resume that is:
 
 <!--This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.-->
 
-### User Stories
-
-|     |![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Jacob_01.jpg)|![RedUX_200817_Tracy_01.jpg](documentation/RedUX_200817_Tracy_01.jpg)|![RedUX_200817_Joem_01.jpg](documentation/RedUX_200817_Joem_01.jpg)|
-| --- | --- | --- | --- |
-| <sub>Name</sub> | **Jacob Grobin** | **Tracy Letts** | **Joem Sanez** |
-| <sub>Job Title</sub> | **Senior Developer** | **Recruiter** | **Owner** |
-| <sub>Background</sub> |   VP of Engineering at Fulcram, New York, NY  |  Senior Talent Acquisition Lead at Enigma Consultancy, Sydney NSW   |  Design Architect to Full Stack Developer, Manila, PH   |
-| <sub>Loves</sub> | Seeing a polyglot, seeing code that is readable, well-formatted, well-tested, well-documented and that displays a pragmatic approach via your repo/commit history; Seeing experimentation at different scales shows me you're making a conscious effort to stay up to speed with new tech.<sup>1<sup> | Seeing a lot of activity on your profile shows me how involved you are as a developer, seeing how many followers you have because a surplus is often a good indication of your role as a thought leader. Contribute to open source projects shows me that you want to give back and can play well with others.<sup>1<sup> |
-| <sub>Loathes</sub> | Seeing other companies' coding challenges in your repo and commits with environment variables included.<sup>1<sup> | Seeing inappropriate content or things that are too personal. | I want to *see* that without having to *find* that. Whatever that is. |
-| <sub>Quote</sub> | As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?I want to *see* that without having to *find* that. Whatever that is. | As a stakeholder in the hiring process, if you win, I win. I've already seen your LinkedIn. I landed here from the job-hunt database in our server which means you were already recommended by someone. Why would you choose us? I'd like to know where you are and give you a call. | As an evolving candidate in an evolving industry, I want to be be able to control and customize features and pages. I want to be able to customize the website for a specific company when I send an application. |
-| <sub>Goals</sub> | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. |
-
-###### 1: [Source](https://www.builtinchicago.org/2018/05/08/what-companies-look-for-on-github)
-
-> **Note:** This project's process and development follows *The Five Planes of UX* to distribute content and feature development across five activity planes, and to document a methodology for taking a product from conception to release.
+> **Note:** This project's process and development carefully follows Jesse James Garrett's *Five Planes of UX* to distribute content and feature development across five activity planes, and to document a methodology for taking a product from conception to release.
+> Here we go!
 
 Click the following dropdown to see the complete research at the Strategy Plane
 
-<details>
-  <summary>Strategy</summary>
+<!--<details>-->
+<!--  <summary>Strategy</summary>-->
 
 ## 1.0 Strategy Plane
 
@@ -116,7 +103,7 @@ Click the following dropdown to see the complete research at the Strategy Plane
 
 - Who else is building this?
 
-  - Not all Software Developers care about UX. Equally, not all UX designers care about developers. They are more like consultants to each other, wher one "hands off" the design prototype to the developer for "developing." I learned this after using much of the software for UX designers. Wireframing for UX Designers does not start at low-resolution. Components designed on Adobe UX are directly exported as local _.svg_ files, ready to be animated. In the realm of UXD, points go to customization. Developers, on the other hand, just need bare bones of function when establishing wireframes.
+  - Not all Software Developers invest time in UX. Equally, not all UX designers spend their time developing. They are more like consultants to each other, where one "hands off" the design prototype to the developer for "developing." I learned this after using much of the software for UX designers. Wireframing for UX Designers does not start at low-resolution. Components designed on Adobe UX are directly exported as local _.svg_ files, ready to be animated. In the realm of UXD, points go to customization. Developers, on the other hand, just need bare bones of function when establishing wireframes.
   - Nonetheless, everyone who knows how to write code has built some form of a custom resume.
   - The key difference is the degree to which one is branded or specific as opposed to *not* branded or generic.
 
@@ -200,6 +187,20 @@ UX design is done by designers and product managers. Developer just implemented 
 
 All additions and improvements to the plan should always count towards the goals of the user and/or the business.
 
+### User Stories
+
+|     |![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Jacob_01.jpg)|![RedUX_200817_Tracy_01.jpg](documentation/RedUX_200817_Tracy_01.jpg)|![RedUX_200817_Joem_01.jpg](documentation/RedUX_200817_Joem_01.jpg)|
+| --- | --- | --- | --- |
+| <sub>Name</sub> | **Jacob Grobin** | **Tracy Letts** | **Joem Sanez** |
+| <sub>Job Title</sub> | **Senior Developer** | **Recruiter** | **Owner** |
+| <sub>Background</sub> |   VP of Engineering at Fulcram, New York, NY  |  Senior Talent Acquisition Lead at Enigma Consultancy, Sydney NSW   |  Design Architect to Full Stack Developer, Manila, PH   |
+| <sub>Loves</sub> | Seeing a polyglot, seeing code that is readable, well-formatted, well-tested, well-documented and that displays a pragmatic approach via your repo/commit history; Seeing experimentation at different scales shows me you're making a conscious effort to stay up to speed with new tech.<sup>1<sup> | Seeing a lot of activity on your profile shows me how involved you are as a developer, seeing how many followers you have because a surplus is often a good indication of your role as a thought leader. Contribute to open source projects shows me that you want to give back and can play well with others.<sup>1<sup> |
+| <sub>Loathes</sub> | Seeing other companies' coding challenges in your repo and commits with environment variables included.<sup>1<sup> | Seeing inappropriate content or things that are too personal. | I want to *see* that without having to *find* that. Whatever that is. |
+| <sub>Quote</sub> | As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?I want to *see* that without having to *find* that. Whatever that is. | As a stakeholder in the hiring process, if you win, I win. I've already seen your LinkedIn. I landed here from the job-hunt database in our server which means you were already recommended by someone. Why would you choose us? I'd like to know where you are and give you a call. | As an evolving candidate in an evolving industry, I want to be be able to control and customize features and pages. I want to be able to customize the website for a specific company when I send an application. |
+| <sub>Goals</sub> | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. | I want to *see* that without having to *find* that. Whatever that is. |
+
+###### 1: [Source](https://www.builtinchicago.org/2018/05/08/what-companies-look-for-on-github)
+
 ### 1.4 Strategy table
 
 When using the strategy table there is always a trade-off between importance and viability. Can we build a solution given the limited time and resources available?
@@ -208,7 +209,15 @@ When using the strategy table there is always a trade-off between importance and
 
 | id    | Opportunity / Problem / Feature             | Importance | Viability |
 | ----- | ------------------------------------------- | ---------- | --------- |
-| A     | Create online presence for owner            |            |           |
+| A     | Create a descriptive landing page about the owner to establish his online presence            |            |           |
+| B     | Feature owner's scope of expertise in the tech stack and the design stack (specialization)          |            |           |
+| B     | Represent breadth of owner's proficiency in tools and technologies (asset coverage)         |            |           |
+| B     | Represent depth of owner's current use of and experience with tools and technologies (verifiable badges)         |            |           |
+| B     | Showcase samples of owner's projects with links to its repo (tech) and its complete portfolio (design)         |            |           |
+| B     | Represent owner's work history (career timeline)          |            |           |
+| B     | Represent owner's educational background (timeline)         |            |           |
+| B     | Showcase owner's existing awards and recognitions          |            |           |
+| B     | Showcase recommendations received by owner from professionals in previous experience         |            |           |
 | B     | Increase GitHub followers for owner         |            |           |
 | C     | Showcase samples of owner's work            |            |           |
 | D     | Feature recommendations written about owner |            |           |
@@ -227,7 +236,7 @@ If importance and viability are equal, then we are in a position to do it all. D
 
 ### ![](RackMultipart20200720-4-1ia7tvm_html_50562dc698e130a6.gif)
 
-</details>
+<!--</details>-->
 
 <details>
   <summary>Scope</summary>
