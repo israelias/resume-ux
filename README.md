@@ -73,10 +73,9 @@ The result is a web resume that is:
 
 <!--This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.-->
 
-> **Note:** This project's process and development carefully follows Jesse James Garrett's *Five Planes of UX* to distribute content and feature development across five activity planes, and to document a methodology for taking a product from conception to release.
-> Here we go!
+ This project's process and development carefully follows Jesse James Garrett's *Five Planes of UX* to distribute content and feature development across five activity planes, and to document a methodology for taking a product from conception to release.
 
-Click the following dropdown to see the complete research at the Strategy Plane
+ Here we go!
 
 <!--<details>-->
 <!--  <summary>Strategy</summary>-->
@@ -164,10 +163,8 @@ Three target user profiles were assembled from user research. Each profile repre
 | <sub>Loathes</sub>     | <br/>Seeing other companies' coding challenges in your repo.<sup>[1](#note-1)<sup><br/>                                                                                                                                                                    | <br/>Seeing inappropriate content or things that are too personal.<sup>[1](#note-1)<sup><br/>                                                                                | <br/>Seeing ubiquitous progress bars that don't add real value.<sup>[2](#note-2)<sup><br/>                                                                                                                                          |
 | <sub>Quote</sub>       | <br/>As a leader in the industry, I won't spend much time here. What is it about you that stands out and that I haven't already seen in others? I want to *see* that without having to *find* that. Whatever that is.<br/><br/> | <br/>As a stakeholder in the hiring process, if you win, I win. Why would you choose us? I'd like to know where you are and give you a call.<sup>[4](#note-4)<sup><br/><br/> | <br/>As a collaborator with a background in design, cognitive diversity on your endeavours found through the exploration of other interests is just as important as a myriad of code repositories.<sup>[1](#note-1)<sup> <br/><br/> |
 
-###### 1: [Source](https://www.builtinchicago.org/2018/05/08/what-companies-look-for-on-github)
 
-
-### 1.3 User Expectations
+### 1.2 User Expectations
 
 > ###### What the visitor expects.
 > ###### These apply to all user profiles and personas.
@@ -193,7 +190,7 @@ All additions and improvements to the plan should always count towards the goals
 - Evidence of dev community activity in social media (dev.to, Twitter, etc.)
 - Reduce number clicks to arrive at goal
 
-### User Stories
+### 1.3 User Stories
 
 ##### User Persona 1: Senior Developer
 
@@ -241,26 +238,30 @@ All additions and improvements to the plan should always count towards the goals
 > ###### <sub>Note</sub> 4 Varies. Profile summaries and headlines on LinkedIn
 
 
-### 1.4 Strategy table
+### 1.4 High-Level Paradigms
 
-When using the strategy table there is always a trade-off between importance and viability. Can we build a solution given the limited time and resources available?
+#### The Owner's Key Principles
 
-#### Importance is driven by business goals and user needs.
+- Portraying Honesty and Integrity
 
-####  Portraying Honesty and Integrity
+#### The Users' Triggers
+
+- Showing Activity at Every Possible Opportunity
+
+#### Standing Out
 
 In order to achieve the goal of standing out to the three target users, the following high-level milestones must be covered:
-
-### High-Level Paradigms
 
 1. Feature owner's experience/skill in the form of his tech/community contribution footprint
 2. Provide opportunistic actions to increase GitHub following (collaborate) and recruiter interaction (hire)
 3. Capitalize on owner's nuanced position in the tech stack as primary unique selling point
 4. In every way achievable, portray all measurable 'static' information as 'live' statistics
 
-####  Showing Activity at every possible opportunity
+### 1.5 Strategy table
 
-No fooling anyone. In order to achieve the goal of standing out to the three target users, the following high-level milestones must be covered:
+> ##### The trade-off between importance and viability.
+> ##### Can we build a solution given the limited time and resources available?
+> ##### Importance is driven by owner's goals and user needs/triggers.
 
 | id    | Specific Features             | Importance | Viability |
 | ----- | ------------------------------------------- | ---------- | --------- |
@@ -283,7 +284,7 @@ No fooling anyone. In order to achieve the goal of standing out to the three tar
 | L     | Provide a stream of project activity retrieved from log of commit messages  |            |           |
 | Total |                                             |            |           |
 
-If importance and viability are equal, then we are in a position to do it all. Draw out your own version of the graph below to work out what features you should drop.
+<!--If importance and viability are equal, then we are in a position to do it all. Draw out your own version of the graph below to work out what features you should drop.-->
 
 ### ![](RackMultipart20200720-4-1ia7tvm_html_50562dc698e130a6.gif)
 
