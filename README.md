@@ -354,29 +354,29 @@ There is a difference between how one imagines something will be used and how it
 ### 2.2 What's On The Table?
 
 - [ ] Landing Page (Voice)
-- [ ] 
+- [ ] <sup>________________________________________________(*cta*)</sup>
 - [ ] About Section
-- [ ] 
+- [ ] <sup>________________________________________________(*cta*)</sup>
 - [ ] Specialization Section (Services)
-- [ ] 
+- [ ] <sup>________________________________________________(*cta*)</sup>
 - [ ] Technologies Section (Proficiency)
   - [ ] Asset Coverage (breadth)
   - [ ] Badge Measure (depth)
-- [ ]
+- [ ] <sup>________________________________________________(*cta*)</sup>
 - [ ] Work Samples
   - [ ] Tech Repo --> CTA(Fork My Repo)
   - [ ] Architecture/Design Folio --> A(Link To Folio)
-- [ ]
+- [ ] <sup>________________________________________________(*cta*)</sup>
 - [ ] Timeline Section
   - [ ] Career Timeline
   - [ ] Educational Timeline
-- [ ]
+- [ ] <sup>________________________________________________(*cta*)</sup>
 - [ ] Recommendations Section (four from LinkedIn)
-- [ ] 
+- [ ] <sup>________________________________________________(*cta*)</sup>
 - [ ] Drop Me A Line Section
-- [ ] 
+- [ ] <sup>________________________________________________(*cta*)</sup>
 - [ ] Download My CV Section
-- [ ] 
+- [ ] <sup>________________________________________________(*cta*)</sup>
 - [ ] Error Page?
 <!--#### Release 1-->
 
