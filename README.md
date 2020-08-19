@@ -352,74 +352,90 @@ There is a difference between how one imagines something will be used and how it
     - Think of them like designed error messages.
 
 ### 2.2 Functional Requirements
+> ###### Requirements are needs; not features.
 
-- Useful
-- Sellable
-- Buildable
+The __bare minimum__ requirements to accommodate the needs of the owner and the target users and to release a minimal viable product (MVP).
+<!--- Useful-->
+<!--- Sellable-->
+<!--- Buildable-->
 
-- Objective – what does the user want to accomplish?
-- Functional – What does the user need to reach their objective?
-- Non-functional – What constrains does the site or app have to perform within?
-- Business Rules – What dynamic constrains do we have to meet? (calculations, definitions, legal etc)
+<!--User Experience `=` Organization Goals `+` User Goals `+` User Interface `+` Interaction with Backend System-->
+<!--- Objective – what does the user want to accomplish?-->
+<!--- Functional – What does the user need to reach their objective?-->
+<!--- Non-functional – What constrains does the site or app have to perform within?-->
+<!--- Business Rules – What dynamic constrains do we have to meet? (calculations, definitions, legal etc)-->
 
 
 |                                                                                                                                  | Scenario <br/>                              | Minimal Functions Required <br/>                                                                                                                                                     |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <img src="documentation/RedUX_200817_Joem_01.jpg" width="200px"></br><sub>**Owner:** Joem</sub> | **Owner accepts company offer**  | <ol><br/>    <li>Ability to easily share application materials for employers to evaluate candidacy   <li>Ability to receive immediate notification  <br/></ol> |
 | <img src="documentation/RedUX_200817_Jacob_01.jpg" width="200px"></br><sub>**Developer:** Jacob</sub> | **Senior Developer chooses to hire owner**  | <ol><br/>    <li>Ability to view skills   <li>Ability to measure standing against others <li>Ability to view accomplishments <li>Ability to view employment status <li>Ability to view contact info<br/></ol>   |
-| <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px"></br><sub>**Recruiter:** Tracy</sub> | **Recruiter chooses to interview owner**    | <ol><br/>    <li>Ability to view skills    <li>Ability to measure candidacy against others    <li>Ability to view employment status  <li>Ability to view contact info and timezone/location<br/></ul> |
+| <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px"></br><sub>**Recruiter:** Tracy</sub> | **Recruiter chooses to interview owner**    | <ol><br/>    <li>Ability to view skills    <li>Ability to measure candidacy against others    <li>Ability to view employment status <li>Ability to download CV  <li>Ability to view contact info and timezone/location<br/></ul> |
 | <img src="documentation/RedUX_200817_Peter_01.jpg" width="200px"></br><sub>**Collaborator:** Peter</sub>  | **Collaborator chooses to work with owner** | <ol><br/>    <li>Ability to view skills    <li>Ability to view project experience    <li>Ability to submit project request   <li>Ability to view contact info<br/></ul> |
 
-[https://mermaidjs.github.io/mermaid-live-editor/#/view/Z3JhcGggVEQKQVtJc3N1ZV0gLS0+fHRyaWFnZXwgQihpbnZlc3RpZ2F0ZSkKQiAtLT4gQ3tMZXQgbWUgdGhpbmt9CkMgLS0+fEF8IERbc2V2ZXJpdHkgMV0KQyAtLT58QnwgRVtzZXZlcml0eSAyXQpDIC0tPnxDfCBGW3NldmVyaXR5IDNd
-](https://mermaidjs.github.io/mermaid-live-editor/#/view/Z3JhcGggVEQKQVtJc3N1ZV0gLS0+fHRyaWFnZXwgQihpbnZlc3RpZ2F0ZSkKQiAtLT4gQ3tMZXQgbWUgdGhpbmt9CkMgLS0+fEF8IERbc2V2ZXJpdHkgMV0KQyAtLT58QnwgRVtzZXZlcml0eSAyXQpDIC0tPnxDfCBGW3NldmVyaXR5IDNd)
-
-
+<!--[https://mermaidjs.github.io/mermaid-live-editor/#/view/Z3JhcGggVEQKQVtJc3N1ZV0gLS0+fHRyaWFnZXwgQihpbnZlc3RpZ2F0ZSkKQiAtLT4gQ3tMZXQgbWUgdGhpbmt9CkMgLS0+fEF8IERbc2V2ZXJpdHkgMV0KQyAtLT58QnwgRVtzZXZlcml0eSAyXQpDIC0tPnxDfCBGW3NldmVyaXR5IDNd-->
+<!--](https://mermaidjs.github.io/mermaid-live-editor/#/view/Z3JhcGggVEQKQVtJc3N1ZV0gLS0+fHRyaWFnZXwgQihpbnZlc3RpZ2F0ZSkKQiAtLT4gQ3tMZXQgbWUgdGhpbmt9CkMgLS0+fEF8IERbc2V2ZXJpdHkgMV0KQyAtLT58QnwgRVtzZXZlcml0eSAyXQpDIC0tPnxDfCBGW3NldmVyaXR5IDNd)-->
 
 <!--Requirements are needs not features.-->
 <!--it's employers evaluating my skills over needing a website-->
 
 <!--- [ ] Brainstorm and mind map on what things people might not know they need. -->
-
 <!--- [ ] Research and discussion on needs of the demographic.-->
 
-<!--### 2.2 Content requirements-->
+### 2.3 Content Requirements
 
 <!--- What mixed content/media do we need to meet the needs of the user?-->
-
-<!--#### Requirement types:-->
 
 <!--- Objective – what does the user want to accomplish?-->
 <!--- Functional – What does the user need to reach their objective?-->
 <!--- Non-functional – What constrains does the site or app have to perform within?-->
 <!--- Business Rules – What dynamic constrains do we have to meet? (calculations, definitions, legal etc)-->
 
+| Section                             | Content                                                                                                                                               | Type                    | Note |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ---- |
+| Landing                             | Introduction pitch                                                                                                                                    | text                    |      |
+| About                               | Bio Summary Paragraph                                                                                                                                 | text                    |      |
+| Specialization                      | <ol><li>Description of Tech Stack</li><br/><li>Description of Design Stack</li><br/><li>List of Industry Services</li></ol>                           | text, icon              |      |
+| Technology <br/>Asset Coverage      | <ol><li>List of software</li><br/><li>List of languages</li><br/><li>List of soft skills</li></ol>                                                    | text, icon              |      |
+| Technology<br/>Measurable Badges    | <ol><li>Percentage icon/bars of language(s) currently used</li><br/><li>Percentage icon/bars of commits in the last week</li></ol>                    | text, icon, badge, bars |      |
+| Work Samples<br/>Tech               | <ol><li>Preview of repo with:<ol><li> image</li><li>size</li><li>date</li><li>languages used</li><li> status</li></ol></li></ol>                     | text, image, badge      |      |
+| Work Samples <br/>Arch/Design Folio | <ol><li>Preview of design work with:<ol><li> image</li><li>description</li> <li>date</li><li>tech used</li><li> link</li></ol></li></ol>              | text, image             |      |
+| Timeline<br/>Career                 | <ol><li>List of work experience with:<ol><li> position</li><li>company</li> <li>dates</li><li>description</li><li> link</li></ol></li></ol>           | text                    |      |
+| Timeline<br/>Education              | <ol><li>List of education with:<ol><li> degree</li><li>school</li> <li>dates</li><li>description</li><li> link</li></ol></li></ol>                    | text                    |      |
+| Awards and Recognitions             | <ol><li>List of awards with:<ol><li> name</li><li>image/icon of lnstitution</li> <li>link</li></ol></li></ol>                                         | text, icon, image       |      |
+| Recommendations                     | <ol><li>Excerpts from recommendations with:<ol><li> recommender</li><li>relationship</li> <li>Excerpt</li><li>image</li><li> link</li></ol></li></ol> | text, image             |      |
+| Download CV                         | PDF version of the above                                                                                                                              | text                    |      |
+
+
 ### 2.2 What's On The Table?
 
 - [x] Landing Page (Voice)
-- [ ] <sup>________________________________________________(*cta*)</sup>
+<!--- [ ] <sup>________________________________________________(*cta*)</sup>-->
 - [x] About Section
-- [ ] <sup>________________________________________________(*cta*)</sup>
+<!--- [ ] <sup>________________________________________________(*cta*)</sup>-->
 - [x] Specialization Section (Services)
-- [ ] <sup>________________________________________________(*cta*)</sup>
-- [ ] Technologies Section (Proficiency)
-  - [ ] Asset Coverage (breadth)
+<!--- [ ] <sup>________________________________________________(*cta*)</sup>-->
+- [x] Technologies Section (Proficiency)
+  - [x] Asset Coverage (breadth)
   - [ ] Badge Measure (depth)
-- [ ] <sup>________________________________________________(*cta*)</sup>
-- [ ] Work Samples
-  - [ ] Tech Repo --> CTA(Fork My Repo)
+<!--- [ ] <sup>________________________________________________(*cta*)</sup>-->
+- [x] Work Samples
+  - [x] Tech Repo --> CTA(Fork My Repo)
   - [ ] Architecture/Design Folio --> A(Link To Folio)
-- [ ] <sup>________________________________________________(*cta*)</sup>
-- [ ] Timeline Section
-  - [ ] Career Timeline
-  - [ ] Educational Timeline
-- [ ] <sup>________________________________________________(*cta*)</sup>
+<!--- [ ] <sup>________________________________________________(*cta*)</sup>-->
+- [x] Timeline Section
+  - [x] Career Timeline
+  - [x] Educational Timeline
+<!--- [ ] <sup>________________________________________________(*cta*)</sup>-->
+- [ ] Awards Section (thirteen relevant)
+<!--- [ ] <sup>________________________________________________(*cta*)</sup>-->
 - [ ] Recommendations Section (four from LinkedIn)
-- [ ] <sup>________________________________________________(*cta*)</sup>
-- [ ] Drop Me A Line Section
-- [ ] <sup>________________________________________________(*cta*)</sup>
-- [ ] Download My CV Section
-- [ ] <sup>________________________________________________(*cta*)</sup>
-- [ ] Error Page?
+<!--- [ ] <sup>________________________________________________(*cta*)</sup>-->
+- [x] Drop Me A Line Section
+<!--- [ ] <sup>________________________________________________(*cta*)</sup>-->
+- [x] Download My CV Section
+<!--- [ ] <sup>________________________________________________(*cta*)</sup>-->
+
 <!--#### Release 1-->
 
 <!--#### Release 2-->
