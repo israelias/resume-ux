@@ -1,0 +1,18 @@
+id,Specific Features,Importance,Viability
+A,Create a descriptive landing page about the owner to establish his online presence,5,5
+B,Feature owner's scope of expertise in the tech stack and the design stack (specialization),4,5
+C,Represent breadth of owner's proficiency in tools and technologies (asset coverage),5,5
+D,Represent depth of owner's current use of and experience with tools and technologies (verifiable badges),5,4
+E,Showcase samples of owner's projects with links to its repo (tech) and its complete portfolio (design),5,3
+F,Represent owner's work history (career timeline),5,5
+G,Represent owner's educational background (timeline),5,5
+H,Showcase owner's existing awards and recognitions,3,4
+id,Showcase recommendations received by owner from professionals in previous experience,3,4
+J,Provide downloadable CV.pdf that is consistent with the web resume/owner's brand,4,3
+K,Provide a contact/message form for users to directly collaborate or message/email,3,3
+L,Provide ability to directly call owner's mobile/Skype,4,4
+M,Create dashboard functionality for owner,2,1
+N,"Create custom ""hidden"" cover letter page for owner to silently fill and distribute when applying to jobs",1,1
+O,Show owner's tech stack represented as data from GitHub,5,3
+P,"Bookend each section with corresponding ""last"" activity and ""next"" action: ""Last seen 2 hours ago"" -> ""Drop me a line""",5,3
+Q,Provide a stream of project activity retrieved from log of commit messages,4,3

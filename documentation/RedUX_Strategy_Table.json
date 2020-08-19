@@ -1,0 +1,104 @@
+[
+ {
+   "id": "A",
+   "Specific Features": "Create a descriptive landing page about the owner to establish his online presence",
+   "Importance": 5,
+   "Viability": 5
+ },
+ {
+   "id": "B",
+   "Specific Features": "Feature owner's scope of expertise in the tech stack and the design stack (specialization)",
+   "Importance": 4,
+   "Viability": 5
+ },
+ {
+   "id": "C",
+   "Specific Features": "Represent breadth of owner's proficiency in tools and technologies (asset coverage)",
+   "Importance": 5,
+   "Viability": 5
+ },
+ {
+   "id": "D",
+   "Specific Features": "Represent depth of owner's current use of and experience with tools and technologies (verifiable badges)",
+   "Importance": 5,
+   "Viability": 4
+ },
+ {
+   "id": "E",
+   "Specific Features": "Showcase samples of owner's projects with links to its repo (tech) and its complete portfolio (design)",
+   "Importance": 5,
+   "Viability": 3
+ },
+ {
+   "id": "F",
+   "Specific Features": "Represent owner's work history (career timeline)",
+   "Importance": 5,
+   "Viability": 5
+ },
+ {
+   "id": "G",
+   "Specific Features": "Represent owner's educational background (timeline)",
+   "Importance": 5,
+   "Viability": 5
+ },
+ {
+   "id": "H",
+   "Specific Features": "Showcase owner's existing awards and recognitions",
+   "Importance": 3,
+   "Viability": 4
+ },
+ {
+   "id": "id",
+   "Specific Features": "Showcase recommendations received by owner from professionals in previous experience",
+   "Importance": 3,
+   "Viability": 4
+ },
+ {
+   "id": "J",
+   "Specific Features": "Provide downloadable CV.pdf that is consistent with the web resume/owner's brand",
+   "Importance": 4,
+   "Viability": 3
+ },
+ {
+   "id": "K",
+   "Specific Features": "Provide a contact/message form for users to directly collaborate or message/email",
+   "Importance": 3,
+   "Viability": 3
+ },
+ {
+   "id": "L",
+   "Specific Features": "Provide ability to directly call owner's mobile/Skype",
+   "Importance": 4,
+   "Viability": 4
+ },
+ {
+   "id": "M",
+   "Specific Features": "Create dashboard functionality for owner",
+   "Importance": 2,
+   "Viability": 1
+ },
+ {
+   "id": "N",
+   "Specific Features": "Create custom \"hidden\" cover letter page for owner to silently fill and distribute when applying to jobs",
+   "Importance": 1,
+   "Viability": 1
+ },
+ {
+   "id": "O",
+   "Specific Features": "Show owner's tech stack represented as data from GitHub",
+   "Importance": 5,
+   "Viability": 3
+ },
+ {
+   "id": "P",
+   "Specific Features": "Bookend each section with corresponding \"last\" activity and \"next\" action: \"Last seen 2 hours ago\" -> \"Drop me a line\"",
+   "Importance": 5,
+   "Viability": 3
+ },
+ {
+   "id": "Q",
+   "Specific Features": "Provide a stream of project activity retrieved from log of commit messages",
+   "Importance": 4,
+   "Viability": 3
+ }
+]
