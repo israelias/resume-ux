@@ -103,7 +103,17 @@ The result is a web resume that is:
 
 - Business objectives
 - What do I want that will give me value for having this out in the world?
-- 
+
+| ![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Joem_01.jpg) | Owner <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <sub>Name</sub>                                                                                                  | **Joem Elias Sanez**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| <sub>Job Title</sub>                                                                                             | **Full Stack Developer, Diploma Candidate at Code Institute** <br/>Manila, Philippines                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| <sub>Background</sub>                                                                                            | Master of Architecture, Bachelor of Fine Arts in Environmental Design                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <sub>Loves</sub>                                                                                                 | <br/>Seeing a polyglot who shows interest in different languages.<br/><br/>Seeing code that is readable, well-formatted, well-tested, well-documented and that displays a pragmatic approach via your repo/commit history.<br/><br/>Seeing experimentation at different scales shows me you're making a conscious effort to stay up to speed with new tech.<sup>[1](#note-1)<sup><br/><br/>                                                                                                                                                                                                                                                         |
+| <sub>Loathes</sub>                                                                                               | <br/>Seeing other companies' coding challenges in your repo.<br/><br/>Seeing commits with environment variables included.<sup>[1](#note-1)<sup><br/><br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <sub>Quote</sub>                                                                                                 | <br/>As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?I want to *see* that without having to *find* that. Whatever that is.<br/><br/>                                                                                                                                                                                                                                                                                                                                                                                           |
+| <sub>Goals</sub>                                                                                                 | <br/>1. As a leader in the industry, I want to have a good understanding of who you are and what you are all about within a few seconds.<br/><br/>2. As a leader in the industry, I want to be led seamlessly through the site to arrive at valuable content with the minimum amount of clicks.<br/><br/>3. As a leader in the industry, I want to see evidence of your credibility and capability as a professional. I want to see what others have said about you or how they have reacted to you. I also want to locate sources of your credibility to see that they are legitimate and to have an idea of your influence on the industry. <br/><br/> |
+
 
 #### Competitor Review
 
@@ -154,14 +164,14 @@ Three target user profiles were assembled from user research. Each profile repre
 >###### Note: Names and entities have been modified/fabricated for this exercise.
 
 
-|                        | ![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Jacob_01.jpg)                                                                                                                                           | ![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Tracy_01.jpg)                                                             | ![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Joem_01.jpg)                                                                                                                     |
+|                        | <img src="documentation/RedUX_200817_Jacob_01.jpg" width="200px">                                                                                                                                                                                          | <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px">                                                                                                            | <img src="documentation/RedUX_200817_Peter_01.jpg" width="200px">                                                                                                                                                                   |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <sub>Name</sub>        | **Jacob Grobin**                                                                                                                                                                                                                                           | **Tracy Letts**                                                                                                                                                              | **Peter Venti**                                                                                                                                                                                                                     |
 | <sub>Designation</sub> | **Senior Developer**                                                                                                                                                                                                                                       | **Recruiter**                                                                                                                                                                | **Collaborator**                                                                                                                                                                                                                    |
 | <sub>Headline</sub>    | VP of Engineering at Fulcram3D <br/>New York, NY                                                                                                                                                                                                           | Talent Acquisition Lead at Enigma Recruitment<br/> Sydney NSW                                                                                                                | Design Computation at Lamb Space Design<br/>San Francisco, CA                                                                                                                                                                       |
-| <sub>Loves</sub>       | <br/>Seeing a polyglot who shows interest in different languages.<br/>                                                                                                                                                                                | <br/>Seeing a lot of activity on your profile shows me how involved you are as a developer.<br/>                                                                        | <br/>Seeing that you contribute to open source projects shows me that you want to give back and can play well with others.<sup>[1](#note-1)<sup><br/>                                                                          |
+| <sub>Loves</sub>       | <br/>Seeing a polyglot who shows interest in different languages.<br/>                                                                                                                                                                                     | <br/>Seeing a lot of activity on your profile shows me how involved you are as a developer.<br/>                                                                             | <br/>Seeing that you contribute to open source projects shows me that you want to give back and can play well with others.<sup>[1](#note-1)<sup><br/>                                                                               |
 | <sub>Loathes</sub>     | <br/>Seeing other companies' coding challenges in your repo.<sup>[1](#note-1)<sup><br/>                                                                                                                                                                    | <br/>Seeing inappropriate content or things that are too personal.<sup>[1](#note-1)<sup><br/>                                                                                | <br/>Seeing ubiquitous progress bars that don't add real value.<sup>[2](#note-2)<sup><br/>                                                                                                                                          |
-| <sub>Quote</sub>       | <br/>As a leader in the industry, I won't spend much time here. What is it about you that stands out and that I haven't already seen in others? I want to *see* that without having to *find* that. Whatever that is.<br/><br/> | <br/>As a stakeholder in the hiring process, if you win, I win. Why would you choose us? I'd like to know where you are and give you a call.<sup>[4](#note-4)<sup><br/><br/> | <br/>As a collaborator with a background in design, cognitive diversity on your endeavours found through the exploration of other interests is just as important as a myriad of code repositories.<sup>[1](#note-1)<sup> <br/><br/> |
+| <sub>Quote</sub>       | <br/>As a leader in the industry, I won't spend much time here. What is it about you that stands out and that I haven't already seen in others? I want to *see* that without having to *find* that. Whatever that is.<br/><br/>                            | <br/>As a stakeholder in the hiring process, if you win, I win. Why would you choose us? I'd like to know where you are and give you a call.<sup>[4](#note-4)<sup><br/><br/> | <br/>As a collaborator with a background in design, cognitive diversity on your endeavours found through the exploration of other interests is just as important as a myriad of code repositories.<sup>[1](#note-1)<sup> <br/><br/> |
 
 
 ### 1.2 User Expectations
@@ -218,7 +228,7 @@ All additions and improvements to the plan should always count towards the goals
 
 ##### User Persona 3: Collaborator
 
-| ![RedUX_200817_Jacob_01.jpg](documentation/RedUX_200817_Joem_01.jpg) | Collaborator                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| <img src="documentation/RedUX_200817_Peter_01.jpg" width="200px"> | Collaborator                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <sub>Name</sub>                                                                                                 | **Peter Venti**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | <sub>Job Title</sub>                                                                                            | **Asociate Lead in Design Computation \| Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -263,30 +273,35 @@ In order to achieve the goal of standing out to the three target users, the foll
 > ##### Can we build a solution given the limited time and resources available?
 > ##### Importance is driven by owner's goals and user needs/triggers.
 
-| id    | Specific Features             | Importance | Viability |
-| ----- | ------------------------------------------- |:----------:|:---------:|
-| A     | Create a descriptive landing page about the owner to establish his online presence            |      5      |     5      |
-| B     | Feature owner's scope of expertise in the tech stack and the design stack (specialization)          |      4      |     5      |
-| C     | Represent breadth of owner's proficiency in tools and technologies (asset coverage)         |      5      |      5     |
-| D     | Represent depth of owner's current use of and experience with tools and technologies (verifiable badges)         |      5      |     4      |
-| E     | Showcase samples of owner's projects with links to its repo (tech) and its complete portfolio (design)         |      5      |      3     |
-| F     | Represent owner's work history (career timeline)          |      5      |      5     |
-| G     | Represent owner's educational background (timeline)         |      5      |     5      |
-| H     | Showcase owner's existing awards and recognitions          |      3      |      4     |
-| I     | Showcase recommendations received by owner from professionals in previous experience         |      3      |      4     |
-| J     | Provide downloadable CV.pdf that is consistent with the web resume/owner's brand         |      4      |      3     |
-| K     | Provide a contact/message form for users to directly collaborate or message/email     |      3      |      3     |
-| L     | Provide ability to directly call owner's mobile/Skype    |      4      |      4     |
-| M     | Create dashboard functionality for owner                    |      2      |      1     |
-| N     | Create custom "hidden" cover letter page for owner to silently fill and distribute when applying to jobs           |      1      |      1     |
-| O     | Show owner's tech stack represented as data from GitHub  |      5      |     3      |
-| P     | Bookend each section with corresponding "last" activity and "next" action: "Last seen 2 hours ago" -> "Drop me a line"   |      5      |      3     |
-| Q     | Provide a stream of project activity retrieved from log of commit messages  |     4       |     3      |
-| Total |                                             |            |           |
+| id    | Specific Features             | Importance | Viability | Score |
+| ----- | ------------------------------------------- |:----------:|:---------:|:---------:|
+| A     | Create a descriptive landing page about the owner to establish his online presence            |      5      |     5      |     ▶️      |
+| B     | Feature owner's scop Feature owner's scope of expertise in the tech stack and the design stack (specialization)e of expertise in the tech stack and the design stack (specialization)          |      4      |     5      |     ▶️      |
+| C     | Represent breadth of owner's proficiency in tools and technologies (asset coverage)         |      5      |      5     |     ▶️      |
+| D     | Represent depth of owner's current use of and experience with tools and technologies (verifiable badges)         |      5      |     4      |     ▶️      |
+| E     | Showcase samples of owner's projects with links to its repo (tech) and its complete portfolio (design)         |      5      |      3     |     ⬆️      |
+| F     | Represent owner's work history (career timeline)          |      5      |      5     |     ▶️      |
+| G     | Represent owner's educational background (timeline)         |      5      |     5      |     ▶️      |
+| H     | Showcase owner's existing awards and recognitions          |      3      |      4     |     ⬆️      |
+| I     | Showcase recommendations received by owner from professionals in previous experience         |      3      |      4     |     ⬆️      |
+| J     | Provide downloadable CV.pdf that is consistent with the web resume/owner's brand         |      4      |      3     |     ⬆️️      |
+| K     | Provide a contact/message form for users to directly collaborate or message/email     |      3      |      3     |     ⬆️      |
+| L     | Provide ability to directly call owner's mobile/Skype    |      4      |      4     |     ▶️      |
+| M     | Create dashboard functionality for owner                    |      2      |      1     |     ⬇️      |
+| N     | Create custom "hidden" cover letter page for owner to silently fill and distribute when applying to jobs           |      1      |      1     |     ⬇️      |
+| O     | Show owner's tech stack represented as data from GitHub  |      5      |     3      |     ⬆️      |
+| P     | Bookend each section with corresponding "last" activity and "next" action: "Last seen 2 hours ago" -> "Drop me a line"   |      5      |      3     |     ⬆️      |
+| Q     | Provide a stream of project activity retrieved from log of commit messages  |     4       |     3      |     ⬆️      |
+| Total |                                             |      68<sup> [a](#note-a) </sup>      |     61<sup> [b](#note-b) </sup>      |
+
+###### <sub>Note</sub> a: sum of importance
+###### <sub>Note</sub> b: Average viability `x` number of items
+###### ▶️ UX efforts must address this
+###### ⬆️ UX efforts should accommodate this
+###### ⬇️ Unwise use of time to address this
+
 
 <!--If importance and viability are equal, then we are in a position to do it all. Draw out your own version of the graph below to work out what features you should drop.-->
-
-### ![](RackMultipart20200720-4-1ia7tvm_html_50562dc698e130a6.gif)
 
 <!--</details>-->
 
@@ -318,7 +333,7 @@ In order to achieve the goal of standing out to the three target users, the foll
 
 There is a difference between how one imagines something will be used and how it is actually used. Putting fresh perspectives aside for a moment, **the core problem to address is how to get more work opportunities** for the owner. To approach the scope itemization in a diligent manner, let's be realistic:
 
-- Activity > Portfolio
+- Activity `>` Portfolio
 
   - [ ] An honest representation of how the owner is currently and actively building new skill-sets and real-world projects is equally valuable to the portfolio itself.
   - [ ] In favor of activity and in lieu of project experience content, establish a manner of "placeholding" that is "live" and measurable so as to attract return visitors.
@@ -326,7 +341,7 @@ There is a difference between how one imagines something will be used and how it
     - Showing a timer for when the project will begin, or when the repository will drop.
     - Showing a custom in-progress "badge" that updates as a repository grows in size. See [shields.io](https://shields.io)
 
-- Contribution Footprint == Content
+- Contribution Footprint `==` Content
 
   - [ ] Whenever there is a dearth of content, show stats.
   - [ ] As gathered from User Research, it's all about activity; so show it.
@@ -335,6 +350,33 @@ There is a difference between how one imagines something will be used and how it
   - [ ] The website should never "go to sleep" or get buried under no activity
   - [ ] Take advantage of leaving easter eggs to attract return visits.
     - Think of them like designed error messages.
+
+### 2.2 Functional Requirements
+
+- Useful
+- Sellable
+- Buildable
+
+- Objective – what does the user want to accomplish?
+- Functional – What does the user need to reach their objective?
+- Non-functional – What constrains does the site or app have to perform within?
+- Business Rules – What dynamic constrains do we have to meet? (calculations, definitions, legal etc)
+
+
+|                                                                                                                                  | Scenario <br/>                              | Minimal Functions Required <br/>                                                                                                                                                     |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="documentation/RedUX_200817_Joem_01.jpg" width="200px"></br><sub>**Owner:** Joem</sub> | **Owner accepts company offer**  | <ol><br/>    <li>Ability to easily share application materials for employers to evaluate candidacy   <li>Ability to receive immediate notification  <br/></ol> |
+| <img src="documentation/RedUX_200817_Jacob_01.jpg" width="200px"></br><sub>**Developer:** Jacob</sub> | **Senior Developer chooses to hire owner**  | <ol><br/>    <li>Ability to view skills   <li>Ability to measure standing against others <li>Ability to view accomplishments <li>Ability to view employment status <li>Ability to view contact info<br/></ol>   |
+| <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px"></br><sub>**Recruiter:** Tracy</sub> | **Recruiter chooses to interview owner**    | <ol><br/>    <li>Ability to view skills    <li>Ability to measure candidacy against others    <li>Ability to view employment status  <li>Ability to view contact info and timezone/location<br/></ul> |
+| <img src="documentation/RedUX_200817_Peter_01.jpg" width="200px"></br><sub>**Collaborator:** Peter</sub>  | **Collaborator chooses to work with owner** | <ol><br/>    <li>Ability to view skills    <li>Ability to view project experience    <li>Ability to submit project request   <li>Ability to view contact info<br/></ul> |
+
+[https://mermaidjs.github.io/mermaid-live-editor/#/view/Z3JhcGggVEQKQVtJc3N1ZV0gLS0+fHRyaWFnZXwgQihpbnZlc3RpZ2F0ZSkKQiAtLT4gQ3tMZXQgbWUgdGhpbmt9CkMgLS0+fEF8IERbc2V2ZXJpdHkgMV0KQyAtLT58QnwgRVtzZXZlcml0eSAyXQpDIC0tPnxDfCBGW3NldmVyaXR5IDNd
+](https://mermaidjs.github.io/mermaid-live-editor/#/view/Z3JhcGggVEQKQVtJc3N1ZV0gLS0+fHRyaWFnZXwgQihpbnZlc3RpZ2F0ZSkKQiAtLT4gQ3tMZXQgbWUgdGhpbmt9CkMgLS0+fEF8IERbc2V2ZXJpdHkgMV0KQyAtLT58QnwgRVtzZXZlcml0eSAyXQpDIC0tPnxDfCBGW3NldmVyaXR5IDNd)
+
+
+
+<!--Requirements are needs not features.-->
+<!--it's employers evaluating my skills over needing a website-->
 
 <!--- [ ] Brainstorm and mind map on what things people might not know they need. -->
 
@@ -353,11 +395,11 @@ There is a difference between how one imagines something will be used and how it
 
 ### 2.2 What's On The Table?
 
-- [ ] Landing Page (Voice)
+- [x] Landing Page (Voice)
 - [ ] <sup>________________________________________________(*cta*)</sup>
-- [ ] About Section
+- [x] About Section
 - [ ] <sup>________________________________________________(*cta*)</sup>
-- [ ] Specialization Section (Services)
+- [x] Specialization Section (Services)
 - [ ] <sup>________________________________________________(*cta*)</sup>
 - [ ] Technologies Section (Proficiency)
   - [ ] Asset Coverage (breadth)
