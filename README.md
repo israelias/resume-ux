@@ -4,6 +4,10 @@
 [![Documentation Status](https://readthedocs.org/projects/resume-redux/badge/?version=latest)](https://resume-redux.readthedocs.io/en/latest/?badge=latest)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4204/badge)](https://bestpractices.coreinfrastructure.org/projects/4204)
 
+<sub>The project is in early stages of UX design; currently wrapping up user research; developing high-fidelity wireframes using Adobe XD.</sub>
+
+![](documentation/RedUX_200807_2300.png)
+
 This is a resume website inspired by **(forked from?)** [this mini project](https://github.com/israelias/ci-uc-resume) as part of my coursework at [Code Institute](https://codeinstitute.net). Taking it a step further through extensive developer research. Synergistically, I approached the design challenge as both owner and user to fundamentally capitalize on the owner's (my) unique candidacy in the dev community.
 
 The result is a web resume that is:
@@ -19,50 +23,53 @@ The result is a web resume that is:
 
 [View the live website here.](https://israelias.github.io/resume-redux/) A work in progress.
 
-<!--[TOC levels=1-3 bullet formatted hierarchy]-->
+[TOC levels=1-3]: # "# Table of Contents"
 
 # Contents
 - [Resume RedUX](#resume-redux)
-  - [Contents](#contents)
-  - [UX](#ux)
-    - [The Five Planes of UX](#the-five-planes-of-ux)
-      - [1.0 Strategy Plane](#10-strategy-plane)
-        - [1.1 Research](#11-research)
-        - [1.2 Planning](#12-planning)
-        - [1.3 User Expectations](#13-user-expectations)
-        - [1.4 Strategy table](#14-strategy-table)
-      - [2.0 Scope Plane](#20-scope-plane)
-        - [2.1 Requirements and functional specifications](#21-requirements-and-functional-specifications)
-        - [2.2 Content requirements](#22-content-requirements)
-        - [2.3 Releases](#23-releases)
-      - [3.0 Structure Plane](#30-structure-plane)
-        - [3.1 Organisation of Functionality and Content](#31-organisation-of-functionality-and-content)
-        - [3.2 Interaction Design (IXD)](#32-interaction-design-ixd)
-        - [3.3 Information Architecture (IA)](#33-information-architecture-ia)
-        - [3.4 Principles of Organisation](#34-principles-of-organisation)
-      - [4.0 Skeleton Plane](#40-skeleton-plane)
-        - [4.1 Features and Usefulness](#41-features-and-usefulness)
-        - [4.2 Navigation Design](#42-navigation-design)
-        - [4.3 Information Design](#43-information-design)
-        - [4.4 Interface Design](#44-interface-design)
-      - [5.0 Surface Plane](#50-surface-plane)
-        - [Visual Language](#visual-language)
-        - [Good UX smells like value.](#good-ux-smells-like-value)
+- [UX](#ux)
+  - [1.0 Strategy](#10-strategy)
+    - [1.1 Research](#11-research)
+    - [1.2 User Expectations](#12-user-expectations)
+    - [1.3 User Stories](#13-user-stories)
+    - [1.4 High-Level Paradigms](#14-high-level-paradigms)
+    - [1.5 Strategy table](#15-strategy-table)
+  - [2.0 Scope](#20-scope)
+    - [2.1 Requirements and Functional Specifications](#21-requirements-and-functional-specifications)
+    - [2.2 Functional Requirements](#22-functional-requirements)
+    - [2.3 Content Requirements](#23-content-requirements)
+    - [2.2 What's On The Table?](#22-whats-on-the-table)
+  - [3.0 Structure](#30-structure)
+    - [3.1 Organisation of Functionality and Content](#31-organisation-of-functionality-and-content)
+    - [3.2 Interaction Design (IXD)](#32-interaction-design-ixd)
+    - [3.3 Information Architecture (IA)](#33-information-architecture-ia)
+    - [3.4 Principles of Organisation](#34-principles-of-organisation)
+  - [4.0 Skeleton](#40-skeleton)
+    - [4.1 Features and Usefulness](#41-features-and-usefulness)
+    - [4.2 Navigation Design](#42-navigation-design)
+    - [4.3 Information Design](#43-information-design)
+    - [4.4 Interface Design](#44-interface-design)
+  - [5.0 Surface](#50-surface)
+    - [Visual Language](#visual-language)
+    - [Good UX smells like value.](#good-ux-smells-like-value)
     - [Design](#design)
-  - [Badges](#badges)
-  - [Features](#features)
-    - [Existing Features](#existing-features)
-    - [Features Left to Implement](#features-left-to-implement)
-  - [Technologies Used](#technologies-used)
+- [Features](#features)
+  - [Existing Features](#existing-features)
+  - [Features Left to Implement](#features-left-to-implement)
+- [Technologies](#technologies)
+  - [Languages](#languages)
   - [Frameworks and Libraries](#frameworks-and-libraries)
-  - [Testing](#testing)
-    - [Miscellaneous](#miscellaneous)
-    - [Known Bugs](#known-bugs)
-  - [Deployment](#deployment)
-  - [Credits](#credits)
-    - [Content](#content)
-    - [Media](#media)
-    - [Acknowledgements](#acknowledgements)
+  - [Programs, Software and Plugins](#programs-software-and-plugins)
+- [Testing](#testing)
+  - [Code Testing](#code-testing)
+  - [User Testing](#user-testing)
+  - [Miscellaneous](#miscellaneous)
+  - [Known Bugs](#known-bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+  - [Content](#content)
+  - [Media](#media)
+  - [Acknowledgements](#acknowledgements)
 
 # UX
 
@@ -164,7 +171,7 @@ Three target user profiles were assembled from user research. Each profile repre
 >###### Note: Names and entities have been modified/fabricated for this exercise.
 
 
-|                        | <img src="documentation/RedUX_200817_Jacob_01.jpg" width="200px">                                                                                                                                                                                          | <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px">                                                                                                            | <img src="documentation/RedUX_200817_Peter_01.jpg" width="200px">                                                                                                                                                                   |
+|                        | <img src="documentation/RedUX_200817_Jacob_01.jpg" width="200px">                                                                                                                                                                                          | <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px">                                                                                                            | <img src="documentation/RedUX_200821_Peter_01.jpg" width="200px">                                                                                                                                                                   |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <sub>Name</sub>        | **Jacob Grobin**                                                                                                                                                                                                                                           | **Tracy Letts**                                                                                                                                                              | **Peter Venti**                                                                                                                                                                                                                     |
 | <sub>Designation</sub> | **Senior Developer**                                                                                                                                                                                                                                       | **Recruiter**                                                                                                                                                                | **Collaborator**                                                                                                                                                                                                                    |
@@ -228,7 +235,7 @@ All additions and improvements to the plan should always count towards the goals
 
 ##### User Persona 3: Collaborator
 
-| <img src="documentation/RedUX_200817_Peter_01.jpg" width="200px"> | Collaborator                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| <img src="documentation/RedUX_200821_Peter_01.jpg" width="200px"> | Collaborator                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <sub>Name</sub>                                                                                                 | **Peter Venti**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | <sub>Job Title</sub>                                                                                            | **Asociate Lead in Design Computation \| Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -311,7 +318,7 @@ In order to achieve the goal of standing out to the three target users, the foll
 ## 2.0 Scope
 
 > ###### Features based on information gathered from Strategy to include in design
-> 
+>
 > ###### Itemizes what's on the table for a production release and what isn't
 > ###### What's on the table for initial release?
 
@@ -371,7 +378,7 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
 | <img src="documentation/RedUX_200817_Joem_01.jpg" width="200px"></br><sub>**Owner:** Joem</sub> | **Owner accepts company offer**  | <ol><br/>    <li>Ability to easily share application materials for employers to evaluate candidacy   <li>Ability to receive immediate notification  <br/></ol> |
 | <img src="documentation/RedUX_200817_Jacob_01.jpg" width="200px"></br><sub>**Developer:** Jacob</sub> | **Senior Developer chooses to hire owner**  | <ol><br/>    <li>Ability to view skills   <li>Ability to measure standing against others <li>Ability to view accomplishments <li>Ability to view employment status <li>Ability to view contact info<br/></ol>   |
 | <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px"></br><sub>**Recruiter:** Tracy</sub> | **Recruiter chooses to interview owner**    | <ol><br/>    <li>Ability to view skills    <li>Ability to measure candidacy against others    <li>Ability to view employment status <li>Ability to download CV  <li>Ability to view contact info and timezone/location<br/></ul> |
-| <img src="documentation/RedUX_200817_Peter_01.jpg" width="200px"></br><sub>**Collaborator:** Peter</sub>  | **Collaborator chooses to work with owner** | <ol><br/>    <li>Ability to view skills    <li>Ability to view project experience    <li>Ability to submit project request   <li>Ability to view contact info<br/></ul> |
+| <img src="documentation/RedUX_200821_Peter_01.jpg" width="200px"></br><sub>**Collaborator:** Peter</sub>  | **Collaborator chooses to work with owner** | <ol><br/>    <li>Ability to view skills    <li>Ability to view project experience    <li>Ability to submit project request   <li>Ability to view contact info<br/></ul> |
 
 <!--[https://mermaidjs.github.io/mermaid-live-editor/#/view/Z3JhcGggVEQKQVtJc3N1ZV0gLS0+fHRyaWFnZXwgQihpbnZlc3RpZ2F0ZSkKQiAtLT4gQ3tMZXQgbWUgdGhpbmt9CkMgLS0+fEF8IERbc2V2ZXJpdHkgMV0KQyAtLT58QnwgRVtzZXZlcml0eSAyXQpDIC0tPnxDfCBGW3NldmVyaXR5IDNd-->
 <!--](https://mermaidjs.github.io/mermaid-live-editor/#/view/Z3JhcGggVEQKQVtJc3N1ZV0gLS0+fHRyaWFnZXwgQihpbnZlc3RpZ2F0ZSkKQiAtLT4gQ3tMZXQgbWUgdGhpbmt9CkMgLS0+fEF8IERbc2V2ZXJpdHkgMV0KQyAtLT58QnwgRVtzZXZlcml0eSAyXQpDIC0tPnxDfCBGW3NldmVyaXR5IDNd)-->
@@ -450,7 +457,7 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
 ## 3.0 Structure
 
 > ###### How the information is structured
-> 
+>
 > ###### How information is logically grouped
 
 - How is the information on the site structured?
@@ -479,14 +486,9 @@ How will the user navigate in an intuitive way through content and features?
 
 - How is the information organised?
 
-- What kind of structure will we use? 
-  
-  - Complex
-  - Simple
-  - Linear narrative - Discernible but restrictive
-  - Non-linear/Hyperlinked - Flexible but possibly confusing
-  
-  > ##### Which fits the demographic and goals best?
+- What kind of structure will we use?
+
+  - [x] Linear narrative - Discernible but restrictive
 
 ### 3.2 Interaction Design (IXD)
 
@@ -544,14 +546,7 @@ How will the user navigate in an intuitive way through content and features?
 
 #### Feedback
 
-```mermaid
-graph LR
-    id1(Start)-->id2(Stop)
-    style id1 fill:#f9f,stroke:#333,stroke-width:4px
-    style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5, 5
-```
-
-- System provides feedback to let users know something is happening (change of state) 
+- System provides feedback to let users know something is happening (change of state)
   - Color change after button is clicked
   - Makes them feel assured
 - Provides feedback in case of an error
@@ -563,15 +558,15 @@ graph LR
 ###### Information Architecture
 
 > **Creation and organisation of navigational schemas**
-> 
+>
 > __Allows users to:__
-> 
+>
 > > Efficiently move through content
-> > 
+> >
 > > Be easily educated and informed
-> 
+>
 > __Allows oweners to:__
-> 
+>
 > > Accommodate growth and change
 
 __*Which IA  type suits our users needs?*__
@@ -579,28 +574,28 @@ __*Which IA  type suits our users needs?*__
 #### Hierarchical Tree Structure
 
 > Home
-> 
+>
 > > About
-> > 
+> >
 > > > Feature 1
-> > > 
+> > >
 > > > Feature  2
-> > 
+> >
 > > Portfolio
-> > 
+> >
 > > > CV
-> > > 
+> > >
 > > > Download
-> > 
+> >
 > > Contact
-> > 
+> >
 > > > Form
 
 - Standard structure, not complex.
 
 - Problematic on mobiles (navbars helpful here)
 
-- Navigation collapsed into a single "Burger icon" 
+- Navigation collapsed into a single "Burger icon"
 
 > Anything over three clicks is cognitive overload
 
@@ -676,9 +671,9 @@ graph TD
 ## 4.0 Skeleton
 
 > ###### How information is represented
-> 
+>
 > ###### How user navigates information and features
-> 
+>
 > ###### Skeleton gives form to the functions established in Structure plane
 
 What form will the application take? How will the information be represented? How will the user navigate to the information and features?
@@ -705,8 +700,8 @@ Good UI Design:
 
 ### 4.1 Features and Usefulness
 
-> Give people what they need when and where they need it 
-> 
+> Give people what they need when and where they need it
+>
 > Provide it in a visual format that they can and what to access
 
 - Usability improves when similar parts are expressed in similar ways
@@ -725,15 +720,15 @@ Good UI Design:
 - Navigation elements and menu items *move from left to right in order of priority* of information and features
 
 > The more features on the screen, the less user-friendly the screen is.
-> 
+>
 > As features inrease in number and complexity, usability decreases.
-> 
+>
 > As features decrease, usability increases.
 
 - Give the user easy decisions, do not overcomplicate things
 
 > The more choices you present you users with, the longer it will take them to reach a decision
-> 
+>
 > -Hick-Hyman Law
 
 ### 4.2 Navigation Design
@@ -745,23 +740,23 @@ Intuitive Navigation and Completion of Tasks
 ###### How do you find what you want?
 
 1. **Browsing** via a navigation system
-   
+
    1. Clear categories
 
 2. **Searching** via keywords and phrases
-   
+
    1. Keywords in search
 
 3. Using **filters** to narrow large lists and sets of information
 
 4. Using **pagination** controls to provide:
-   
+
    1. Information architecture
-   
+
    2. Sense of depth/breadth
-      
+
       Breaks info into smaller chunks so user is not overwhelmed
-      
+
       Use progress bars with pagination
 - Keep ordering of navigation simple
 
@@ -835,25 +830,25 @@ Arrangement of the elements that contain the information
 #### Context and Order Matter
 
 - Use **categorical ordering** when information is similar and clustered
-  
+
   - Courses
-  
+
   - Blog
 
 - Usee **alphabetical ordering** when information is referential
-  
+
   - Contacts List
-  
+
   - Dictionary
 
 - Use **location ordering** when waydinding and orientation is needed
-  
+
   - Sports, Geography site
 
 - Use **time ordering** when comparing fixed duration events
-  
+
   - Timeline
-  
+
   - Work History
 
 Which icons will we use? Which are best to represent our needs?
@@ -868,9 +863,9 @@ The best arrangement and visual presentation of the elements
 
 #### Wireframes
 
-2D model of the product that provides 
+2D model of the product that provides
 
-- form 
+- form
 
 - information
 
@@ -910,7 +905,7 @@ Just a starting point (no colours, images or effects referred to).
 ## 5.0 Surface
 
 > ###### What the product will look like
-> 
+>
 > ###### What colors, typography, and design elements are used
 
 - What can the user do?
@@ -943,9 +938,9 @@ The most important elements are easily recognized
 #### Readability
 
 > Legible
-> 
+>
 > Font contrast
-> 
+>
 > Consistent patterns
 
 #### Fonts and Typography
