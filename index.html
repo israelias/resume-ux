@@ -4,68 +4,75 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+<!--    Bootstrap Material Design-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">-->
+    <!-- Bootstrap CSS 4.5 -->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
+    <!-- Bootstrap CSS 5.0 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 <!--    MDB-->
     <!-- Font Awesome -->
-    <link
-            href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-            rel="stylesheet"
-    />
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-            rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <!-- MDB -->
-    <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0-alpha4/mdb.min.css"
-            rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0-alpha4/mdb.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <title>Joem Elias Sanez CV</title>
 </head>
 <body>
 <header>
-
-</header>
-
-<div class="container">
-    <!--    Landing Section -->
-    <div class="row justify-content-center">
-        <div class="col-11 col-md-11 col-lg-11">
-            <div class="row">
-                <div class="col-12 col-md-7 col-xl-7">
-
-                </div>
+<!--    MDB Template Header (https://mdbootstrap.com/docs/standard/navigation/headers/)-->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarExample01"
+                    aria-controls="navbarExample01"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarExample01">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
             </div>
-
-<!--            Standard Jumbotron Template from MDB {https://mdbootstrap.com/docs/jquery/components/panels/)-->
-            <div class="jumbotron">
-                <h2 class="h1-responsive">Hello, world!</h2>
-                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
-                    to featured content or information.</p>
-                <hr class="my-2">
-                <p>It uses utility classes for typography and spacing to space content out within the larger
-                    container.
-                </p>
-                <a class="btn btn-primary btn-lg" role="button">Learn more</a>
-            </div>
-<!--            End of Jumbotron-->
-
         </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Jumbotron -->
+    <div class="p-5 text-center bg-light" style="margin-top: 58px;">
+        <h1 class="mb-3">Heading</h1>
+        <h4 class="mb-3">Subheading</h4>
+        <a class="btn btn-primary" href="" role="button">Call to action</a>
     </div>
-</div>
+    <!-- Jumbotron -->
+</header>
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-11 col-md-11 col-lg-11">
 <!--            Collapsible accordion template from MDB (https://mdbootstrap.com/docs/standard/components/collapse/)-->
             <!-- Accordion wrapper -->
-            <div class="accordion-container" id="resumeStack">
+            <div class="" id="resumeStack">
                 <!-- Single collapse 1 -->
                 <div class="row">
                     <div class="col-12 col-md-7 col-xl-7 main-tab ag-black" id="headingOne">
@@ -78,7 +85,7 @@
                                     aria-expanded="true"
                                     aria-controls="collapseOne"
                             >
-                                Collapsible Group Item #1
+                                About
                             </button>
                         </h2>
                     </div>
@@ -177,7 +184,7 @@
                                     aria-expanded="false"
                                     aria-controls="collapseTwo"
                             >
-                                Collapsible Group Item #2
+                                Technologies
                             </button>
                         </h2>
                     </div>
@@ -273,7 +280,7 @@
                                     aria-expanded="false"
                                     aria-controls="collapseThree"
                             >
-                                Collapsible Group Item #2
+                                Work Samples
                             </button>
                         </h2>
                     </div>
@@ -369,7 +376,7 @@
                                     aria-expanded="false"
                                     aria-controls="collapseFour"
                             >
-                                Collapsible Group Item #2
+                                Experience
                             </button>
                         </h2>
                     </div>
@@ -465,7 +472,7 @@
                                     aria-expanded="false"
                                     aria-controls="collapseFive"
                             >
-                                Collapsible Group Item #2
+                                References
                             </button>
                         </h2>
                     </div>
@@ -555,12 +562,11 @@
 
 
 
-
 <!--ACCORDION TEST 1-->
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div id="accordion">
-            <div class="card">
+        <div class="col" id="accordion">
+            <div class="row card">
                 <div class="card-header" id="headingOne">
                     <h5 class="mb-0">
                         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -570,7 +576,7 @@
                 </div>
 
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="row card-body">
 
                         <div class="col-11 col-md-11 col-lg-11">
                             <div class="row">
@@ -578,10 +584,10 @@
                                     <h3 class="text-right">Sec Type 1B</h3>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row justify-content-between">
                                 <!--                Standard Bootstrap Card and Card-Body-->
 
-                                <div class="col-12 col-md-5 col-xl-5 card card-right">
+                                <div class="col-12 col-md-7 col-xl-7 card card-left">
                                     <div class="card-header pt-5 bg-light">
                                         <h4 class="pt-5">This headline sentence is an excerpt from the
                                             owner's
@@ -591,12 +597,9 @@
                                             section in first person narrative.</h4>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                        <h5 class="card-title">1A Left Title</h5>
                                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                        <a class="card-link">Card link</a>
-                                        <a class="card-link">Another link</a>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     </div>
                                     <div class="card-footer">
@@ -604,9 +607,9 @@
                                     </div>
                                 </div>
 
-                                <div class="col-12 col-md-7 col-xl-7 card card-left bg-transparent">
+                                <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent">
                                     <div class="card-header border-0 text-muted">
-                                        <h4 class="text-right">Left Sub Sec-1B</h4>
+                                        <h4 class="text-right">Right Sub Sec-1A</h4>
                                     </div>
                                     <div class="card-body border-0">
 
@@ -641,7 +644,8 @@
                                                 <small class="text-muted">Donec id elit non mi porta.</small>
                                             </a>
                                         </div>
-
+                                        <!--                        End of List Group Template-->
+                                        <!--                        End of List/Media section-->
                                     </div>
                                     <div class="card-footer bg-transparent border-0 text-muted">
                                         <h6 class="text-center">Links and CTA</h6>
@@ -651,7 +655,6 @@
                             </div>
 
                         </div>
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                     </div>
                 </div>
             </div>
@@ -1454,153 +1457,56 @@
     </div>
 </div>
 
-<!--CONTAINER BLUE TEST-->
+<!--MDB Footer Template (https://mdbootstrap.com/docs/standard/navigation/footer/)-->
+<footer class="bg-light text-center text-lg-left">
+    <!-- Grid container -->
+    <div class="container-fluid p-4">
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Footer text</h5>
 
-<div class="container">
-    <!--    Section F bg blue-->
-    <div class="row justify-content-center">
-        <div class="col-11 col-md-11 col-lg-11 card bg-blue">
-            <div class="row">
-                <div class="col card-header">
-                    <h3>Card Main</h3>
-                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                    aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                </p>
             </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-12 col-md-5 col-xl-5 card card-left">
-                        <div class="card-header">
-                            <h4>Sub Left</h4>
-                        </div>
-                        <div class="card-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-7 col-xl-7 card card-right">
-                        <div class="card-header">
-                            <h4>Sub Right</h4>
-                        </div>
-                        <div class="card-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
+            <!--Grid column-->
 
-                </div>
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Footer text</h5>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                    aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                </p>
             </div>
-            <div class="row">
-                <div class="col card-footer">
-                    <p>
-                        footer
-                    </p>
-                </div>
-            </div>
+            <!--Grid column-->
         </div>
+        <!--Grid row-->
     </div>
-    <!--    End of Section E-->
+    <!-- Grid container -->
 
-</div>
-
-<!--CONTINUOUS FLUID TEST YELLOW AND GREEN-->
-
-<div class="container-fluid main">
-    <div class="container-fluid fg-yellow">
-        <!--    Section H bg yellow-->
-        <div class="row justify-content-center">
-            <div class="col-11 col-md-11 col-lg-11 card bg-yellow">
-                <div class="row">
-                    <div class="col card-header">
-                        <h3>Card Main</h3>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-12 col-md-5 col-xl-5 card card-left">
-                            <div class="card-header">
-                                <h4>Sub Left</h4>
-                            </div>
-                            <div class="card-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-7 col-xl-7 card card-right">
-                            <div class="card-header">
-                                <h4>Sub Right</h4>
-                            </div>
-                            <div class="card-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col card-footer">
-                        <p>
-                            footer
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--    End of Section E-->
-
-    </div>
-
-    <div class="container-fluid fg-green">
-        <!--    Section G bg green-->
-        <div class="row justify-content-center">
-            <div class="col-11 col-md-11 col-lg-11 card bg-green">
-                <div class="row">
-                    <div class="col card-header">
-                        <h3>Card Main</h3>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-12 col-md-5 col-xl-5 card card-left">
-                            <div class="card-header">
-                                <h4>Sub Left</h4>
-                            </div>
-                            <div class="card-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-7 col-xl-7 card card-right">
-                            <div class="card-header">
-                                <h4>Sub Right</h4>
-                            </div>
-                            <div class="card-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col card-footer">
-                        <p>
-                            footer
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--    End of Section E-->
-
-    </div>
-</div>
-<footer>
-
+    <!-- Copyright -->
+<!--    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">-->
+<!--        © 2020 Copyright:-->
+<!--        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>-->
+<!--    </div>-->
+    <!-- Copyright -->
 </footer>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>-->
 <!-- MDB -->
-<script
-        type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0-alpha4/mdb.min.js"
-></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0-alpha4/mdb.min.js"></script>
 </body>
 </html>
