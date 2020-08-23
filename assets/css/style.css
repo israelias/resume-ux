@@ -1,96 +1,9 @@
 
-/*------------------------------------------------------CONTAINER TESTING*/
-
-/*body {*/
-/*    background-color: #27274d;*/
-/*}*/
-
-/*.container, .container-fluid {*/
-/*    background-color: #27274d;*/
-/*    border: black solid 15px;*/
-/*    color: rgb(0, 0, 0);*/
-/*}*/
-
-/*.row {*/
-/*    background-color: rgb(236, 93, 23);*/
-/*    border: rgb(255, 199, 64) solid 10px;*/
-/*}*/
-
-/*[class*="col"]{*/
-/*    border: black solid 5px;*/
-/*    background-color: rgb(100, 0, 228);*/
-/*    color: rgb(255, 255, 255);*/
-/*}*/
-
-/*------------------------------------------------------CARD TYPE*/
-
-/*body {*/
-/*    background-color: #27274d;*/
-/*}*/
-
-/*.container, .container-fluid {*/
-/*    margin-top: 50px;*/
-/*}*/
-
-/*.row {*/
-/*    margin-left: 0;*/
-/*    margin-right: 0;*/
-/*}*/
-
-/*[class*="col"]{*/
-/*    !*border: 1px solid #707070;*!*/
-/*    !*background-color: rgb(100, 0, 228);*!*/
-/*    color: rgb(255, 255, 255);*/
-/*    padding-left: 0;*/
-/*    padding-right: 0;*/
-/*}*/
-
-/*.card {*/
-/*    box-shadow: 0 16px 24px 0 rgba(0, 0, 0, .2);*/
-/*    border: none;*/
-/*}*/
-
-/*.card-header,*/
-/*.card-body {*/
-/*    border: 1px solid rgba(112, 112, 112, 0.125);*/
-/*    box-shadow: 0 16px 24px 0 rgba(0, 0, 0, .2);*/
-/*}*/
-
-/*.main-tab,*/
-/*.main-body {*/
-/*    box-shadow: -10px -10px 0 0 #B84A30;*/
-/*}*/
-
-/*.main-tab {*/
-/*    padding-right: 16px;*/
-/*    padding-left: 16px;*/
-/*    border-radius: 30px 30px 0 0;*/
-/*    height: 60px;*/
-/*}*/
-
-/*.main-body {*/
-/*    border-right: 10px solid #27274d;*/
-/*}*/
-
-/*.bg-body {*/
-/*    background-color: #27274d;*/
-/*}*/
-
-/*.about-section .card-header {*/
-/*    background-color: #27274d;*/
-/*}*/
-
-/*.about-section .card-body {*/
-/*    background-color: #B84A30;*/
-/*}*/
-
-
 /*------------------------------------------------------CARD TYPE all white*/
-
-
 
 body {
     /*background-color: #27274d;*/
+    background-color: #F2F1EF;
 }
 
 p {
@@ -269,6 +182,41 @@ p {
     background-image: url("../images/yellow_drk_sm.png");
 }
 
+[class$="obsidian"]{
+    background-color: #2E2C2E;
+}
+
+[class$="ruby"]{
+    background-color: #89413D;
+}
+
+[class$="slate"] {
+    background-color: #37455C;
+}
+
+[class$="eggplant"] {
+    background-color: #3E223D;
+}
+
+[class$="forest"] {
+    background-color: #213128;
+}
+
+[class$="w0"] {
+    background-color: #F4F4F4;
+}
+
+[class$="w1"] {
+    background-color: #FAFAFA;
+}
+
+[class$="w2"] {
+    background-color: #F5F4F2;
+}
+
+[class$="w3"] {
+    background-color: #F2F1EF;
+}
 
 .container, .container-fluid {
     /*margin-top: 50px;*/
