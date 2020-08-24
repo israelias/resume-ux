@@ -14,7 +14,7 @@
     <!-- Font Awesome -->
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">-->
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0-alpha4/mdb.min.css" rel="stylesheet">
 
@@ -70,491 +70,477 @@
 <div class="container" style="margin-top: 116px;">
     <div class="row justify-content-center">
         <div class="col-11 col-md-11 col-lg-11">
-<!--            Collapsible accordion template from MDB (https://mdbootstrap.com/docs/standard/components/collapse/)-->
+
             <!-- Accordion wrapper -->
-            <div class="" id="resumeStack">
-                <!-- Single collapse 1 -->
+            <div class="accordion" id="resumeStack">
+
+                <!-- Collapse 1 Tab-->
                 <div class="row">
                     <div class="col-12 col-md-7 col-xl-7 main-tab ag-black" id="headingOne">
-                        <h2>
-                            <button
-                                    class="btn btn-link btn-block text-left"
-                                    type="button"
-                                    data-toggle="collapse"
-                                    data-target="#collapseOne"
-                                    aria-expanded="true"
-                                    aria-controls="collapseOne"
-                            >
-                                INTRODUCTION
-                            </button>
-                        </h2>
+                        <a class="show" role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true"
+                           aria-controls="collapseOne">
+                            <h3>
+                                INTRODUCTION <i class="fas fa-angle-down rotate-icon"></i>
+                            </h3>
+                        </a>
                     </div>
                 </div>
+                <!-- /Collapse 1 Tab-->
 
-                <div
-                        id="collapseOne"
-                        class="row collapse show"
-                        aria-labelledby="headingOne"
-                        data-parent="#resumeStack"
-                >
+                <!-- Collapse 1 Content-->
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                     data-parent="#resumeStack">
+                    <div class="row">
 
-<!--                    Collapse 1 Content-->
-
-                    <!--                Standard Bootstrap Card and Card-Body-->
-                    <div class="col-12 col-md-7 col-xl-7 card card-left">
-                        <div class="card-header pt-5 hg-black">
-                            <h4 class="pt-5">This headline sentence is an excerpt from the
-                                owner's
-                                bio that
-                                summarizes and
-                                sells this particular
-                                section in first person narrative.</h4>
-                        </div>
-                        <div class="card-body bg-white">
-                            <h5 class="card-title">1A Left Title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class="card-footer">
-                            Links and CTA
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent">
-                        <div class="card-header border-0 text-muted">
-                            <h4 class="text-right">Right Sub Sec-1A</h4>
-                        </div>
-                        <div class="card-body border-0">
-
-                            <!--                        List/Media section-->
-                            <!--                        Bootstrap List Group Template (https://getbootstrap.com/docs/4.0/components/list-group/)-->
-                            <div class="list-group">
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small>3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small>Donec id elit non mi porta.</small>
-                                </a>
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small class="text-muted">3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small class="text-muted">Donec id elit non mi porta.</small>
-                                </a>
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small class="text-muted">3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small class="text-muted">Donec id elit non mi porta.</small>
-                                </a>
+                        <!-- Card Left -->
+                        <div class="col-12 col-md-7 col-xl-7 card card-left">
+                            <div class="card-header pt-5 hg-black">
+                                <h4 class="pt-5">
+                                    This headline sentence is an excerpt from the
+                                    owner's
+                                    bio that
+                                    summarizes and
+                                    sells this particular
+                                    section in first person narrative.
+                                </h4>
                             </div>
-                            <!--                        End of List Group Template-->
-                            <!--                        End of List/Media section-->
+                            <div class="card-body bg-white">
+                                <h5 class="card-title">
+                                    1A Left Title
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                                </p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="card-footer">
+                                Links and CTA
+                            </div>
+                        </div>
+                        <!-- /Card Left -->
 
+                        <!-- Card Right -->
+                        <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent">
+                            <div class="card-header border-0 text-muted">
+                                <h4 class="text-right">
+                                    Right Sub Sec-1A
+                                </h4>
+                            </div>
+                            <div class="card-body border-0">
+                                <div class="list-group">
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small>Donec id elit non mi porta.</small>
+                                    </a>
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                    </a>
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 text-muted">
+                                <h6 class="text-center">Links and CTA</h6>
+                            </div>
                         </div>
-                        <div class="card-footer bg-transparent border-0 text-muted">
-                            <h6 class="text-center">Links and CTA</h6>
-                        </div>
+                        <!-- /Card Right -->
+
                     </div>
-
-<!--                    Collapse 1 Content-->
-
                 </div>
+                <!-- /Collapse 1 Content -->
 
-                <!-- Single collapse 1 -->
-
-                <!-- Single collapse 2 -->
+                <!-- Collapse 2 Tab -->
                 <div class="row">
                     <div class="col-12 col-md-7 col-xl-7 main-tab ag-red" id="headingTwo">
-                        <h2>
-                            <button
-                                    class="btn btn-link btn-block text-left collapsed"
-                                    type="button"
-                                    data-toggle="collapse"
-                                    data-target="#collapseTwo"
-                                    aria-expanded="false"
-                                    aria-controls="collapseTwo"
-                            >
-                                PROFICIENCY
-                            </button>
-                        </h2>
+                        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo"
+                           aria-expanded="false" aria-controls="collapseTwo">
+                            <h3>
+                                PROFICIENCY <i class="fas fa-angle-down rotate-icon"></i>
+                            </h3>
+                        </a>
                     </div>
                 </div>
+                <!-- /Collapse 2 Tab -->
 
-                <div
-                        id="collapseTwo"
-                        class="row collapse"
-                        aria-labelledby="headingTwo"
-                        data-parent="#resumeStack"
-                >
+                <!-- Collapse 2 Content-->
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#resumeStack">
+                    <div class="row">
 
-                    <!--                    Collapse 2 Content-->
-
-                    <!--                Standard Bootstrap Card and Card-Body-->
-                    <div class="col-12 col-md-7 col-xl-7 card card-left">
-                        <div class="card-header pt-5 hg-red">
-                            <h4 class="pt-5">This headline sentence is an excerpt from the
-                                owner's
-                                bio that
-                                summarizes and
-                                sells this particular
-                                section in first person narrative.</h4>
-                        </div>
-                        <div class="card-body bg-white">
-                            <h5 class="card-title">1A Left Title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class="card-footer">
-                            Links and CTA
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent">
-                        <div class="card-header border-0 text-muted">
-                            <h4 class="text-right">Right Sub Sec-1A</h4>
-                        </div>
-                        <div class="card-body border-0">
-
-                            <!--                        List/Media section-->
-                            <!--                        Bootstrap List Group Template (https://getbootstrap.com/docs/4.0/components/list-group/)-->
-                            <div class="list-group">
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small>3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small>Donec id elit non mi porta.</small>
-                                </a>
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small class="text-muted">3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small class="text-muted">Donec id elit non mi porta.</small>
-                                </a>
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small class="text-muted">3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small class="text-muted">Donec id elit non mi porta.</small>
-                                </a>
+                        <!-- Card Left -->
+                        <div class="col-12 col-md-7 col-xl-7 card card-left">
+                            <div class="card-header pt-5 hg-red">
+                                <h4 class="pt-5">
+                                    This headline sentence is an excerpt from the
+                                    owner's
+                                    bio that
+                                    summarizes and
+                                    sells this particular
+                                    section in first person narrative.
+                                </h4>
                             </div>
-                            <!--                        End of List Group Template-->
-                            <!--                        End of List/Media section-->
+                            <div class="card-body bg-white">
+                                <h5 class="card-title">
+                                    1A Left Title
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                                </p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="card-footer">
+                                Links and CTA
+                            </div>
+                        </div>
+                        <!-- /Card Left -->
 
+                        <!-- Card Right -->
+                        <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent">
+                            <div class="card-header border-0 text-muted">
+                                <h4 class="text-right">
+                                    Right Sub Sec-1A
+                                </h4>
+                            </div>
+                            <div class="card-body border-0">
+                                <div class="list-group">
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small>Donec id elit non mi porta.</small>
+                                    </a>
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                    </a>
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 text-muted">
+                                <h6 class="text-center">Links and CTA</h6>
+                            </div>
                         </div>
-                        <div class="card-footer bg-transparent border-0 text-muted">
-                            <h6 class="text-center">Links and CTA</h6>
-                        </div>
+                        <!-- /Card Right -->
+
                     </div>
-                <!--                    Collapse 2 Content-->
                 </div>
-                <!-- Single collapse 2 -->
+                <!-- Collapse 2 content -->
 
-                <!-- Single collapse 3 -->
+                <!-- Collapse 3 Tab -->
                 <div class="row">
                     <div class="col-12 col-md-7 col-xl-7 main-tab ag-blue" id="headingThree">
-                        <h2>
-                            <button
-                                    class="btn btn-link btn-block text-left collapsed"
-                                    type="button"
-                                    data-toggle="collapse"
-                                    data-target="#collapseThree"
-                                    aria-expanded="false"
-                                    aria-controls="collapseThree"
-                            >
-                                EXAMPLES
-                            </button>
-                        </h2>
+                        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree"
+                           aria-expanded="false" aria-controls="collapseThree">
+                            <h3>
+                                EXAMPLES <i class="fas fa-angle-down rotate-icon"></i>
+                            </h3>
+                        </a>
                     </div>
                 </div>
+                <!-- /Collapse 3 Tab -->
 
-                <div
-                        id="collapseThree"
-                        class="row collapse"
-                        aria-labelledby="headingThree"
-                        data-parent="#resumeStack"
-                >
+                <!-- Collapse 3 Content-->
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#resumeStack">
+                    <div class="row">
 
-                    <!--                    Collapse 3 Content-->
-
-                    <!--                Standard Bootstrap Card and Card-Body-->
-                    <div class="col-12 col-md-7 col-xl-7 card card-left">
-                        <div class="card-header pt-5 hg-blue">
-                            <h4 class="pt-5">This headline sentence is an excerpt from the
-                                owner's
-                                bio that
-                                summarizes and
-                                sells this particular
-                                section in first person narrative.</h4>
-                        </div>
-                        <div class="card-body bg-white">
-                            <h5 class="card-title">1A Left Title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class="card-footer">
-                            Links and CTA
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent">
-                        <div class="card-header border-0 text-muted">
-                            <h4 class="text-right">Right Sub Sec-1A</h4>
-                        </div>
-                        <div class="card-body border-0">
-
-                            <!--                        List/Media section-->
-                            <!--                        Bootstrap List Group Template (https://getbootstrap.com/docs/4.0/components/list-group/)-->
-                            <div class="list-group">
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small>3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small>Donec id elit non mi porta.</small>
-                                </a>
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small class="text-muted">3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small class="text-muted">Donec id elit non mi porta.</small>
-                                </a>
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small class="text-muted">3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small class="text-muted">Donec id elit non mi porta.</small>
-                                </a>
+                        <!-- Card Left -->
+                        <div class="col-12 col-md-7 col-xl-7 card card-left">
+                            <div class="card-header pt-5 hg-blue">
+                                <h4 class="pt-5">
+                                    This headline sentence is an excerpt from the
+                                    owner's
+                                    bio that
+                                    summarizes and
+                                    sells this particular
+                                    section in first person narrative.
+                                </h4>
                             </div>
-                            <!--                        End of List Group Template-->
-                            <!--                        End of List/Media section-->
+                            <div class="card-body bg-white">
+                                <h5 class="card-title">
+                                    1A Left Title
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                                </p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="card-footer">
+                                Links and CTA
+                            </div>
+                        </div>
+                        <!-- /Card Left -->
 
+                        <!-- Card Right -->
+                        <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent">
+                            <div class="card-header border-0 text-muted">
+                                <h4 class="text-right">
+                                    Right Sub Sec-1A
+                                </h4>
+                            </div>
+                            <div class="card-body border-0">
+                                <div class="list-group">
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small>Donec id elit non mi porta.</small>
+                                    </a>
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                    </a>
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 text-muted">
+                                <h6 class="text-center">Links and CTA</h6>
+                            </div>
                         </div>
-                        <div class="card-footer bg-transparent border-0 text-muted">
-                            <h6 class="text-center">Links and CTA</h6>
-                        </div>
+                        <!-- /Card Right -->
+
                     </div>
-                    <!--                    Collapse 3 Content-->
                 </div>
-                <!-- Single collapse 3 -->
+                <!-- Collapse 3 content -->
 
-                <!-- Single collapse 4 -->
+                <!-- Collapse 4 Tab -->
                 <div class="row">
                     <div class="col-12 col-md-7 col-xl-7 main-tab ag-yellow" id="headingFour">
-                        <h2>
-                            <button
-                                    class="btn btn-link btn-block text-left collapsed"
-                                    type="button"
-                                    data-toggle="collapse"
-                                    data-target="#collapseFour"
-                                    aria-expanded="false"
-                                    aria-controls="collapseFour"
-                            >
-                                Experience
-                            </button>
-                        </h2>
+                        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFour"
+                           aria-expanded="false" aria-controls="collapseFour">
+                            <h3>
+                                EXPERIENCE <i class="fas fa-angle-down rotate-icon"></i>
+                            </h3>
+                        </a>
                     </div>
                 </div>
+                <!-- /Collapse 4 Tab -->
 
-                <div
-                        id="collapseFour"
-                        class="row collapse"
-                        aria-labelledby="headingFour"
-                        data-parent="#resumeStack"
-                >
+                <!-- Collapse 4 Content-->
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#resumeStack">
+                    <div class="row">
 
-                    <!--                    Collapse 4 Content-->
-
-                    <!--                Standard Bootstrap Card and Card-Body-->
-                    <div class="col-12 col-md-7 col-xl-7 card card-left">
-                        <div class="card-header pt-5 hg-yellow">
-                            <h4 class="pt-5">This headline sentence is an excerpt from the
-                                owner's
-                                bio that
-                                summarizes and
-                                sells this particular
-                                section in first person narrative.</h4>
-                        </div>
-                        <div class="card-body bg-white">
-                            <h5 class="card-title">1A Left Title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class="card-footer">
-                            Links and CTA
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent">
-                        <div class="card-header border-0 text-muted">
-                            <h4 class="text-right">Right Sub Sec-1A</h4>
-                        </div>
-                        <div class="card-body border-0">
-
-                            <!--                        List/Media section-->
-                            <!--                        Bootstrap List Group Template (https://getbootstrap.com/docs/4.0/components/list-group/)-->
-                            <div class="list-group">
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small>3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small>Donec id elit non mi porta.</small>
-                                </a>
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small class="text-muted">3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small class="text-muted">Donec id elit non mi porta.</small>
-                                </a>
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small class="text-muted">3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small class="text-muted">Donec id elit non mi porta.</small>
-                                </a>
+                        <!-- Card Left -->
+                        <div class="col-12 col-md-7 col-xl-7 card card-left">
+                            <div class="card-header pt-5 hg-yellow">
+                                <h4 class="pt-5">
+                                    This headline sentence is an excerpt from the
+                                    owner's
+                                    bio that
+                                    summarizes and
+                                    sells this particular
+                                    section in first person narrative.
+                                </h4>
                             </div>
-                            <!--                        End of List Group Template-->
-                            <!--                        End of List/Media section-->
+                            <div class="card-body bg-white">
+                                <h5 class="card-title">
+                                    1A Left Title
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                                </p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="card-footer">
+                                Links and CTA
+                            </div>
+                        </div>
+                        <!-- /Card Left -->
 
+                        <!-- Card Right -->
+                        <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent">
+                            <div class="card-header border-0 text-muted">
+                                <h4 class="text-right">
+                                    Right Sub Sec-1A
+                                </h4>
+                            </div>
+                            <div class="card-body border-0">
+                                <div class="list-group">
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small>Donec id elit non mi porta.</small>
+                                    </a>
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                    </a>
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 text-muted">
+                                <h6 class="text-center">Links and CTA</h6>
+                            </div>
                         </div>
-                        <div class="card-footer bg-transparent border-0 text-muted">
-                            <h6 class="text-center">Links and CTA</h6>
-                        </div>
+                        <!-- /Card Right -->
+
                     </div>
-                    <!--                    Collapse 4 Content-->
                 </div>
-                <!-- Single collapse 4 -->
+                <!-- Collapse 4 content -->
 
-                <!-- Single collapse 5 -->
+                <!-- Collapse 5 Tab -->
                 <div class="row">
                     <div class="col-12 col-md-7 col-xl-7 main-tab ag-green" id="headingFive">
-                        <h2>
-                            <button
-                                    class="btn btn-link btn-block text-left collapsed"
-                                    type="button"
-                                    data-toggle="collapse"
-                                    data-target="#collapseFive"
-                                    aria-expanded="false"
-                                    aria-controls="collapseFive"
-                            >
-                                References
-                            </button>
-                        </h2>
+                        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFive"
+                           aria-expanded="false" aria-controls="collapseFive">
+                            <h3>
+                                REFERENCES <i class="fas fa-angle-down rotate-icon"></i>
+                            </h3>
+                        </a>
                     </div>
                 </div>
+                <!-- /Collapse 5 Tab -->
 
-                <div
-                        id="collapseFive"
-                        class="row collapse"
-                        aria-labelledby="headingFive"
-                        data-parent="#resumeStack"
-                >
+                <!-- Collapse 5 Content-->
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#resumeStack">
+                    <div class="row">
 
-                    <!--                    Collapse 5 Content-->
-
-                    <!--                Standard Bootstrap Card and Card-Body-->
-                    <div class="col-12 col-md-7 col-xl-7 card card-left">
-                        <div class="card-header pt-5 hg-green">
-                            <h4 class="pt-5">This headline sentence is an excerpt from the
-                                owner's
-                                bio that
-                                summarizes and
-                                sells this particular
-                                section in first person narrative.</h4>
-                        </div>
-                        <div class="card-body bg-white">
-                            <h5 class="card-title">1A Left Title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class="card-footer">
-                            Links and CTA
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent">
-                        <div class="card-header border-0 text-muted">
-                            <h4 class="text-right">Right Sub Sec-1A</h4>
-                        </div>
-                        <div class="card-body border-0">
-
-                            <!--                        List/Media section-->
-                            <!--                        Bootstrap List Group Template (https://getbootstrap.com/docs/4.0/components/list-group/)-->
-                            <div class="list-group">
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small>3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small>Donec id elit non mi porta.</small>
-                                </a>
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small class="text-muted">3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small class="text-muted">Donec id elit non mi porta.</small>
-                                </a>
-                                <a href="#"
-                                   class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">List group item heading</h5>
-                                        <small class="text-muted">3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                    <small class="text-muted">Donec id elit non mi porta.</small>
-                                </a>
+                        <!-- Card Left -->
+                        <div class="col-12 col-md-7 col-xl-7 card card-left">
+                            <div class="card-header pt-5 hg-green">
+                                <h4 class="pt-5">
+                                    This headline sentence is an excerpt from the
+                                    owner's
+                                    bio that
+                                    summarizes and
+                                    sells this particular
+                                    section in first person narrative.
+                                </h4>
                             </div>
-                            <!--                        End of List Group Template-->
-                            <!--                        End of List/Media section-->
+                            <div class="card-body bg-white">
+                                <h5 class="card-title">
+                                    1A Left Title
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                                </p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="card-footer">
+                                Links and CTA
+                            </div>
+                        </div>
+                        <!-- /Card Left -->
 
+                        <!-- Card Right -->
+                        <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent">
+                            <div class="card-header border-0 text-muted">
+                                <h4 class="text-right">
+                                    Right Sub Sec-1A
+                                </h4>
+                            </div>
+                            <div class="card-body border-0">
+                                <div class="list-group">
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small>Donec id elit non mi porta.</small>
+                                    </a>
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                    </a>
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        <small class="text-muted">Donec id elit non mi porta.</small>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 text-muted">
+                                <h6 class="text-center">Links and CTA</h6>
+                            </div>
                         </div>
-                        <div class="card-footer bg-transparent border-0 text-muted">
-                            <h6 class="text-center">Links and CTA</h6>
-                        </div>
+                        <!-- /Card Right -->
+
                     </div>
-                    <!--                    Collapse 5 Content-->
+                </div>
+                <!-- Collapse 5 content -->
             </div>
-<!--                Single collapse 5-->
+
             <!-- Accordion wrapper -->
         </div>
     </div>
@@ -987,12 +973,6 @@
     </div>
 </div>
 
-
-<div class="container">
-    <div class="parallax-group">
-
-    </div>
-</div>
 
 <div class="container">
     <!--    Section Type 1A-->
