@@ -27,45 +27,56 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-w2 fixed-top">
         <div class="container">
+            <div class="position-fixed" style="left: 3px;">
+                <a class="navbar-brand ml-3" href="#">JS</a>
+            </div>
             <div class="row justify-content-center">
                 <div class="col-11 col-md-11 col-lg-11">
                     <div class="row align-items-center">
                         <div class="col-12 col-md-7 col-xl-7 card" style="background-color: rgba(0, 0, 0, 0.2);">
-                            <button
-                                    class="navbar-toggler"
-                                    type="button"
-                                    data-toggle="collapse"
-                                    data-target="#navbarExample01"
-                                    aria-controls="navbarExample01"
-                                    aria-expanded="false"
-                                    aria-label="Toggle navigation"
-                            >
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarExample01">
-                                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-                                    <li class="nav-item active">
-                                        <a class="nav-link" aria-current="page" href="#">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Features</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Pricing</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">About</a>
-                                    </li>
-                                </ul>
+                            <span class="muted">Stacks</span>
+                        </div>
+                        <div class="col-12 col-md-5 col-xl-5">
+                            <div class="row justify-content-end">
+
                             </div>
                         </div>
                     </div>
+
                 </div>
+            <div class="position-fixed" style="right:3px;">
+                <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
+                        data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <!--                                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">-->
+                    <!--                                        <li class="nav-item">-->
+                    <!--                                            <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+                    <!--                                        </li>-->
+                    <!--                                        <li class="nav-item">-->
+                    <!--                                            <a class="nav-link" href="#">Link</a>-->
+                    <!--                                        </li>-->
+                    <!--                                        <li class="nav-item">-->
+                    <!--                                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+                    <!--                                        </li>-->
+                    <!--                                    </ul>-->
+                    <form class="d-flex input-group w-auto ml-auto">
+                        <input class="form-control mr-2" type="search" placeholder="Find something"
+                               aria-label="Search">
+                        <button class="btn btn-outline-dark" type="button"
+                                data-ripple-color="dark">Search
+                        </button>
+                    </form>
+                </div>
+            </div>
             </div>
         </div>
     </nav>
+
 </header>
 
+<!-- Float-left icons -->
 <div class="position-fixed" style="bottom: 50%;">
     <div class="btn-group-vertical  ml-3" role="group" aria-label="Vertical button group">
 
@@ -89,7 +100,9 @@
 
     </div>
 </div>
+<!-- /Float left icons -->
 
+<!-- Main container -->
 <div class="container" style="margin-top: 116px;">
     <div class="row justify-content-center">
         <div class="col-11 col-md-11 col-lg-11">
@@ -97,7 +110,7 @@
             <!-- Accordion wrapper -->
             <div class="accordion" id="resumeStack">
 
-                <!-- Collapse 1 Tab-->
+                <!-- Collapse 1 Tab -->
                 <div class="row">
                     <div class="col-12 col-md-7 col-xl-7 main-tab ag-black" id="headingOne">
                         <a class="show" role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true"
@@ -569,10 +582,10 @@
         </div>
     </div>
 </div>
+<!-- /Main container -->
 
-
-
-<footer class="footer bg-light mt-auto bg-w1 text-center text-lg-left">
+<!-- Footer container -->
+<footer class="footer mt-auto bg-w2 text-center text-lg-left">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-11 col-md-11 col-lg-11">
@@ -610,18 +623,7 @@
         </div>
     </div>
 </footer>
-<!--<footer class="bg-light text-center text-lg-left">-->
-<!--    &lt;!&ndash; Grid container &ndash;&gt;-->
-
-
-<!--    &lt;!&ndash; Copyright &ndash;&gt;-->
-<!--    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">-->
-<!--        © 2020 Copyright:-->
-<!--        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>-->
-<!--    </div>-->
-<!--    &lt;!&ndash; Copyright &ndash;&gt;-->
-<!--</footer>-->
-<!--MDB Footer Template (https://mdbootstrap.com/docs/standard/navigation/footer/)-->
+<!-- /Footer container -->
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
