@@ -1,4 +1,4 @@
-
+@import url("https://use.typekit.net/qyv7gbn.css");
 /*------------------------------------------------------CARD TYPE all white*/
 
 body {
@@ -10,111 +10,6 @@ p {
     font-size: 0.875rem;
     font-weight: 300;
 }
-
-/*.parallax {*/
-/*    position: relative;*/
-/*    display: flex;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    width: 100%;*/
-/*    height: 100vh;*/
-/*    margin: 0 auto;*/
-/*    padding: 0 0.75rem;*/
-/*    z-index: 0;*/
-/*}*/
-
-/*.body-parallax {*/
-/*    position: fixed;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    bottom: 0;*/
-/*    width: 100%;*/
-/*    height: 100vh;*/
-/*    z-index: 0;*/
-/*}*/
-
-/*.parallax-group {*/
-/*    position: relative;*/
-/*    display: block;*/
-/*    height: 100vh;*/
-/*    border-right: 1px solid #687789;*/
-/*}*/
-
-/*.parallax-group:nth-child(1) {*/
-/*    border-left: 1px solid #687789;*/
-/*    animation: expand 200ms normal ease-out;*/
-/*}*/
-
-/*.parallax-group:nth-child(2) {*/
-/*    animation: expand 400ms normal ease-out;*/
-/*}*/
-
-/*.parallax-group:nth-child(3) {*/
-/*    animation: expand 600ms normal ease-out;*/
-/*}*/
-
-/*.parallax-group:nth-child(4) {*/
-/*    display: none;*/
-/*    animation: expand 800ms normal ease-out;*/
-/*}*/
-
-/*@media only screen and (min-width: 1360px) {*/
-/*    .parallax {*/
-/*        max-width: 1488px;*/
-/*        padding: 0 2em;*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (min-width: 1280px) {*/
-/*    .parallax {*/
-/*        padding: 0 calc(50% - 40em);*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (min-width: 60em) {*/
-/*    .parallax {*/
-/*        padding: 0 2rem;*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (min-width: 40em) {*/
-
-/*    .parallax {*/
-/*        padding: 0 2rem;*/
-/*    }*/
-/*    .parallax-group {*/
-/*        width: 25%;*/
-/*    }*/
-
-/*    .parallax-group:nth-child(4) {*/
-/*        display: block;*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (min-width: 20em) {*/
-/*    .parallax {*/
-/*        padding: 0 0.75rem;*/
-/*    }*/
-/*}*/
-
-.gr-1 {
-    border-left: 3px solid #DDE0E5;
-    height: 100vh;
-    position: absolute;
-}
-
-.vd-1 {
-    background: red;
-    width: 1px;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    /*right: -15px;*/
-}
-
 [class*="bg"] {
     background: transparent no-repeat left top;
     background-size: 100% 100%;
@@ -135,28 +30,30 @@ p {
 
 [class*="ag"] {
     /*height: 100%;*/
-    background-attachment: scroll;
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    top: 5px;
+    /*background-attachment: scroll;*/
+    /*background-position: left top;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100% 100%;*/
+    /*top: 5px;*/
+    background-color: #fafafa;
+    background-attachment: unset;
 }
 
 
 /* Parallax from W3 Schools */
-[class*="fg"] {
-    /* The image used */
-    /*background-image: url("../images/grey_med_xl.png");*/
+/*[class*="fg"] {*/
+/*    !* The image used *!*/
+/*    !*background-image: url("../images/grey_med_xl.png");*!*/
 
-    /* Set a specific height */
-    height: 100%;
+/*    !* Set a specific height *!*/
+/*    height: 100%;*/
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
+/*    !* Create the parallax scrolling effect *!*/
+/*    background-attachment: fixed;*/
+/*    background-position: left top;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 100% 100%;*/
+/*}*/
 
 [class$="black"]{
     background-image: url("../images/black_med_sm.png");
@@ -230,13 +127,6 @@ p {
     /*margin-left: 0;*/
 }
 
-.container-fluid.main {
-    padding-top: 0;
-    margin-bottom: 0;
-    margin-top: 0;
-    /*Change to vh for parallax*/
-    height: 100%;
-}
 
 .row {
     margin-left: 0;
@@ -250,52 +140,6 @@ p {
     padding-left: 0;
     padding-right: 0;
 }
-
-.accordion {
-    z-index: 3;
-    border-radius: 10px;
-    width: 540px;
-    margin: 0 auto;
-    height: 414px;
-    /*position: absolute;*/
-    left: 0;
-    top: 40%;
-    box-shadow: 4px 5px 0px rgba(0, 0, 0, 0.11);
-    -webkit-animation: intro 0.34s 0.4s cubic-bezier(1, 1.4, 0.41, 1.01) forwards;
-    animation: intro 0.34s 0.4s cubic-bezier(1, 1.4, 0.41, 1.01) forwards;
-    -webkit-transform: translateY(-50%) scale(0) rotateX(10deg) rotateY(10deg) rotateZ(10deg);
-    transform: translateY(-50%) scale(0) rotateX(10deg) rotateY(10deg) rotateZ(10deg);
-    margin: auto;
-    overflow: hidden;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-
-.accordion {
-    /*height: 70vh;*/
-}
-
-/*.panel-group {*/
-/*    margin-bottom: 0;*/
-
-/*.panel {*/
-/*    border-radius: 0;*/
-
-/*&+.panel {*/
-/*     margin-top: 0;*/
-/* }*/
-
-/*&-body {*/
-/*     height: calc(100vh - 90px);*/
-/* }*/
-/*}*/
-/*}*/
-
-/*.panel-default {*/
-/*& > .panel-heading {*/
-/*      height: 36px;*/
-/*  }*/
-/*}*/
 
 .card {
     box-shadow: 0 16px 24px 0 rgba(0, 0, 0, .2);
@@ -313,18 +157,22 @@ p {
 
 .card-header {
     box-shadow: 0 16px 24px 0 rgba(0, 0, 0, .2);
-    padding: .25rem .75rem;
+    /*padding: .25rem .75rem;*/
 }
 
 .card-footer {
-    padding: .25rem .75rem;
+    /*padding: .25rem .75rem;*/
 }
 
 .card.card-left,
 .card-left > .card-header,
 .card-left > .card-body {
-    box-shadow: none;
+    /*box-shadow: none;*/
     background-color: inherit;
+}
+
+.card-left > .card-footer {
+    box-shadow: 0 16px 24px 0 rgba(0, 0, 0, .2);
 }
 
 .card.card-right,
@@ -334,16 +182,54 @@ p {
     background-color: inherit;
 }
 
-.main-tab,
-.main-body {
-    /*box-shadow: -10px -10px 0 0 #B84A30;*/
+#headingOne,
+[aria-labelledby="headingOne"] .card-left {
+    box-shadow: -10px -10px 0 0 #2E2C2E;
 }
+
+#headingTwo,
+[aria-labelledby="headingTwo"] .card-left {
+    box-shadow: -10px -10px 0 0 #89413D;
+}
+
+#headingThree,
+[aria-labelledby="headingThree"] .card-left {
+    box-shadow: -10px -10px 0 0 #37455C;
+}
+
+#headingFour,
+[aria-labelledby="headingFour"] .card-left {
+    box-shadow: -10px -10px 0 0 #D66C12;
+}
+
+#headingFive,
+[aria-labelledby="headingFive"] .card-left {
+    box-shadow: -10px -10px 0 0 #213128;
+}
+
+[class*="ag"] {
+    /*height: 100%;*/
+    /*background-attachment: scroll;*/
+    /*background-position: left top;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100% 100%;*/
+    /*top: 5px;*/
+    background-color: #fafafa;
+    background-image: unset;
+}
+
 
 .main-tab {
     padding-right: 16px;
     padding-left: 16px;
-    /*border-radius: 30px 30px 0 0;*/
+    border-radius: 30px 30px 0 0;
     height: 60px;
+    width: 225px;
+}
+
+.main-tab:after {
+    height: 60px;
+    width: 225px;
 }
 
 .main-body {
@@ -363,3 +249,51 @@ p {
 }
 
 
+/*.collapse.width {*/
+/*    height: auto;*/
+/*    width:0;*/
+/*    -webkit-transition: width 0.35s ease;*/
+/*    -moz-transition: width 0.35s ease;*/
+/*    -o-transition: width 0.35s ease;*/
+/*    transition: width 0.35s ease;*/
+/*}*/
+
+/*$('a[data-toggle="collapse"]').on('click', function () {*/
+/*    var $target,*/
+/*    offset;*/
+
+/*    if ($(this).closest('.panel').prev().find('.panel-collapse').hasClass('in')) {*/
+/*        $target = $(this).closest('.panel').prev().find('a[data-toggle="collapse"]');*/
+/*        offset = 0;*/
+/*    } else {*/
+/*        $target = $(this);*/
+/*        offset = 36;*/
+/*    }*/
+
+/*    $('html, body').animate({*/
+/*    scrollTop: $target.position().top - offset*/
+/*    });*/
+/*});*/
+
+/*.collapsing {*/
+/*    position: relative;*/
+/*    height: 0;*/
+/*    overflow: hidden;*/
+/*    transition-timing-function: ease;*/
+/*    transition-duration: .35s;*/
+/*    transition-property: height;*/
+
+/*    &.width {*/
+/*         width: 0;*/
+/*         height: auto;*/
+/*         transition-property: width;*/
+/*     }*/
+/*}*/
+
+/*.navbar-collapse.width {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*> ul { width: 200px; }*/
+/*}*/
