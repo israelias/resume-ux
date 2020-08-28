@@ -589,7 +589,7 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
     ```
 
 
-##### Combined Top-Down Hub List and Left-Right Nested Path To Spoke
+- Combined Top-Down Hub List and Left-Right Nested Path To Spoke
   - Complete pseudo boiler plate of static content
 
     ```mermaid
@@ -611,7 +611,7 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
     ```
 
 
-- Desktop Hub & Spoke Experience
+- Desktop: Hub & Spoke Experience
    - Toggling collapsible content at main hub
 
       ```mermaid
@@ -632,78 +632,64 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
       COLLAPSE        stack[tab_0]
       ```
 
+- Mobile: Nested Spokes Expanded
+   - Tabs rendered as variable `sticky` elements at a micro scale that stick to (and stack at) the top and bottom of screen while contend moves fluidly beyond, functioning as pagination and wayfinding
+  - Card-left and -right content fully expanded
 
-<!--- Top-Down Main Section Linked List -->
+      ```mermaid
+                      stack     
+                          |
+      STICKY T/B      stack[tab_0] 
+                          |
+                      stack[tab_0[card_left]
+                          |
+                      stack[tab_0[card_right]
+                          |      
+      STICKY T/B      stack[tab_1] 
+                          |
+                      stack[tab_1[card_left]
+                          |
+                      stack[tab_1[card_right]
+                          |
+      STICKY T/B      stack[tab_2] 
+                          |
+                      stack[tab_2[card_left]
+                          |
+                      stack[tab_2[card_right]
+                          |      
+      STICKY T/B      stack[tab_3] 
+                          |
+                      stack[tab_3[card_left]
+                          |
+                      stack[tab_3[card_right]
+                          |      
+      STICKY T/B      stack[tab_4] 
+                          |
+                      stack[tab_4[card_left]
+                          |
+                      stack[tab_4[card_right]
+                          |      
+      STICKY T/B      stack[tab_5] 
+                          |
+                      stack[tab_5[card_left]
+                          |
+                      stack[tab_5[card_right]
+                          |
+      STICKY T/B      stack[tab_6] 
+                          |
+                      stack[tab_6[card_left]
+                          |
+                      stack[tab_6[card_right]
+      
+      ```
 
-<!--    ```mermaid-->
-<!--    flowchart TD-->
-<!--        tab_0(head) --> tab_1 --> tab_2 --> tab_3 --> tab_4 --> tab_5 --> tab_6(tail)-->
-<!--    ```-->
-
-<!--- Left-Right Section Content Nested List -->
-<!--    ```mermaid-->
-<!--    flowchart LR-->
-<!--        stack --> stack[tab_0] --> stack[tab_0[card_left]-->
-<!--                               --> stack[tab_0[card_right]-->
-<!--    ```-->
-
-
-- Linear path to detail
-- Good for mobiles
-- Prevents exploring
-
-Linked List (ordered, get by index]
-```python
-stack = [
-	[0, [0, 1]],
-	[1, [0, 1]],
-	[2, [0, 1]],
-	[3, [0, 1]],
-	[4, [0, 1]],
-	[5, [0, 1]],
-	[6, [0, 1]]
-]
-```
-
-```python
-stack = [
-	["tab", ["card_left", "card_right"]], #head of stack
-	["tab", ["card_left", "card_right"]],
-	["tab", ["card_left", "card_right"]],
-	["tab", ["card_left", "card_right"]],
-	["tab", ["card_left", "card_right"]],
-	["tab", ["card_left", "card_right"]],
-	["tab", ["card_left", "card_right"]] #tail of stack
-]
-```
-
-```python
-stack[0] = ["tab", 
-	["card_left", "card_right"]
-
-current_tab = stack[0]
-```
-
-
-
-#### Hub and Spoke
-
-| Spoke     |             | Spoke     |
-|:---------:|:-----------:|:---------:|
-|           | ****Hub**** |           |
-| **Spoke** |             | **Spoke** |
-
-- Popular on mobiles
-- Central home with links to spokes containing sub-sections of information
-- Works for multi-feature apps
-- Cant navigate between spokes
 
 ### 3.4 Principles of Organisation
 
-- Organisational principles used at the **highest levels** of the site should be the most closely tied to **user needs** and **business objectives**.
-- Those used at lower levels are usually influenced by **feature specifications** and **content requirements**.
-- Every collection of information has a **built-in conceptual structure**. In most cases more than one.
-- <mark>Find the right structure for the objectives and user needs</mark>
+<!--- Organisational principles used at the **highest levels** of the site should be the most closely tied to **user needs** and **business objectives**.-->
+<!--- Those used at lower levels are usually influenced by **feature specifications** and **content requirements**.-->
+<!--- Every collection of information has a **built-in conceptual structure**. In most cases more than one.-->
+<!--- <mark>Find the right structure for the objectives and user needs</mark>-->
 
 #### Reciprocity
 
@@ -726,8 +712,12 @@ Dictionary list (unordered, get by key name)
             card_left, 
             card_right
         ],
-        tab_4: [
+        tab_3: [
             card_left,
+            card_right
+        ],
+        tab_4: [
+            card_left, 
             card_right
         ],
         tab_5: [
@@ -735,10 +725,6 @@ Dictionary list (unordered, get by key name)
             card_right
         ],
         tab_6: [
-            card_left, 
-            card_right
-        ],
-        tab_7: [
             card_left, 
             card_right
         ]
@@ -776,9 +762,9 @@ Dictionary list (unordered, get by key name)
 
     ```python
     stack[tab_0[card_left]] = {
-        header,				# Main Section Blurb
-        title, 				# Sub Section Title 
-        content 			# Sub Section Content
+        header,             # Main Section Blurb
+        title,              # Sub Section Title 
+        content             # Sub Section Content
     }
     ```
 
@@ -786,13 +772,13 @@ Dictionary list (unordered, get by key name)
 
     ```python
     stack[tab_0[card_right]] = {
-        title, 				# Sub Section Title
-        content 			# Sub Section Content
+        title,              # Sub Section Title
+        content             # Sub Section Content
     }
     ```
 
 
-- Full stack Pseudo
+- Full Pseudo Stack
 
     ```python
     stack = {			
