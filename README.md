@@ -506,58 +506,60 @@ How will the user navigate in an intuitive way through content and features?
 
 - How can we make users aware of state changes in the system?
 
-#### Consistent
-
+#### Consistency and Predictability
 > People develop an expectation of conventions
 
-- Follow conventions – navbar, buttons etc located and behave the way users expect.
-- Colouring and themes consistent.
-- Scenario
-  - Any transitions, rollovers, tooltips act consistently
-  - Leverage the visitor's prior experience here and elsewhere
-- Voice
-  - Labels and terms used should match throughout
-  - Imagery consistent style
-- 
 
-> Only be different when it makes something better
+- Conventions
+  - The site follows the navbar/header conventions and its collapsible hamburger icon for screens less than 700px .
+  - Floating social links acting as a side navbar are conventionally positioned to accommodate user behavior as well.
+- Colors and Themes
+	- Colors are carefully selected to be low saturated primary colors in rotation around the accordion stack.
+	- The flat candle wax matte filter was achieved by mimicing the minimal spectrum of hues found in the owner’s design work
+- Transitions
+	- The primary transitional element is the collapsible accordion functioning as both a main navigation, pagination, and content display container
+- Labels and Terminology
+	- Nomenclature and terminology are hierarchically built and defined to reflect the content of each (2) child sections under each (1) parent node tab.
+- Imagery consistent.
+	- Variable imagery exists in the portfolio section where consistency is achieved by size and position of the media container. This is the same method used throughout the “fluid” right-card sub section of the website
+- Non-Conventional `==` High Value
+	- The key difference in the website is the use of the accordion as a main content container as opposed to a side navigational/supplemental information addendum.
+	- This stray from convention added value to the website by offering an interactivity that is at once learnable, familiar, and unique.
+	- The main index.html is structured so content can be easily toggled to display as a static version of the website with all subsections shown (not collapsed), relinquishing the non-conventional use of the collapsible accordion.
+	- The design of each parent section and child sections have been carefully formatted to look equally “ready” for a “static” rendering
 
-#### Predictable
-
-- All elements should be easy to find and use.
-- Include things like content hinting.
-
-#### Visible/Discoverable
-
-- No luck involved
-- All elements should be easy to find and use.
-- Include things like content hinting
-  - Partially reveal elements of your page just above the fold
-
+#### Visibility
 > Make sure content is visible wherever possible
 
-#### Learnable
+- Wayfinding
+	- The use of the accordion offered a unique opportunity to achieve the rule of proximity: having elements easy to find and use as all parent node tabs are visible at any given time.
+	- Further, content hinting is implemented by `href`ing key words, noting sources, arrowing to the appropriate CTA and/or link to existing content within the page
 
+#### Learnability
 > Intuitivie = Single-trial learning
 
-- Provide a strong sense of place (pageation, indication of which page you are on in the navbar)
-- Set correct expectations (sub-menus, sub-navigation)
-- Make it possible for people to accurately predict the outcome of their interactions
+- A Strong Sense of Place
+	- The main accordion functions as a high-level pagination that indicates the current live page the website is showing. At the same time, the ability to see all other head sections at once makes the use of the accordion more intuitive (once you open one, you know how to open the rest)
+- Setting Correct Expectations
+	- As the landing page is an open (non collapsed) head section, the expectation that immediate sections beneath  functions in the same manner. The site does not waver from this presentation format; thus cementing a unified expectation
+	- As such, the outcome of a user’s interactions are not just easy for them to predict; the design enforces accuracy of their prediction.
+	- The accordion enforces users to accurately predict the outcome of their interaction by nature of the design
 
 #### Feedback
 
-- System provides feedback to let users know something is happening (change of state)
-  - Color change after button is clicked
-  - Makes them feel assured
-- Provides feedback in case of an error
-  - i.e. 404 Error
-- Provide link that will take them back to safety
+- Users Know Exactly What Has Happened, Is Happening and Will Happen
+	- Feedback is achieved by animation at both hover and click for appropriate CTAs.
+	- Feedback is also achieved in the accordion stack but always fading out or fading in the head section currently on display.
+	- The nature of the accordion stack itself is a large scale version of the system providing feedback to let users know exactly what is happening
+- Designed Errors
+	- A disclaimer about the back button?
+	- The accordion stack is designed so that additional stacks can be added in the future, with a possible infinite scroll feature.
+	- In this scenario, a “blank” section could offer a “404 Error” page that is designed in the same way as all sections
+- Home == Safety
 
 ### 3.3 Information Architecture (IA)
 
-###### Information Architecture
-
-> **Creation and organisation of navigational schemas**
+> Creation and organisation of navigational schemas
 >
 > __Allows users to:__
 >
@@ -565,39 +567,14 @@ How will the user navigate in an intuitive way through content and features?
 > >
 > > Be easily educated and informed
 >
-> __Allows oweners to:__
+> __Allows owners to:__
 >
 > > Accommodate growth and change
 
 __*Which IA  type suits our users needs?*__
 
-#### Hierarchical Tree Structure
-
-> Home
->
-> > About
-> >
-> > > Feature 1
-> > >
-> > > Feature  2
-> >
-> > Portfolio
-> >
-> > > CV
-> > >
-> > > Download
-> >
-> > Contact
-> >
-> > > Form
-
-- Standard structure, not complex.
-
-- Problematic on mobiles (navbars helpful here)
-
-- Navigation collapsed into a single "Burger icon"
-
-> Anything over three clicks is cognitive overload
+- The site visually functions on the front end as a dashboard/hub-and-spoke on a desktop and a nested-list on mobile.
+- The site internally functions on the back end as a linked list, with two nested data values (sub sections) at each head node (current section). The linked list currently has six nodes: the landing page at head, the contact section at tail.
 
 #### Nested List (Linked List)
 
@@ -609,6 +586,40 @@ flowchart LR
 - Linear path to detail
 - Good for mobiles
 - Prevents exploring
+
+Linked List (ordered, get by index]
+```python
+stack = [
+	[0, [0, 1]],
+	[1, [0, 1]],
+	[2, [0, 1]],
+	[3, [0, 1]],
+	[4, [0, 1]],
+	[5, [0, 1]],
+	[6, [0, 1]]
+]
+```
+
+```python
+stack = [
+	["tab", ["card_left", "card_right"]], #head of stack
+	["tab", ["card_left", "card_right"]],
+	["tab", ["card_left", "card_right"]],
+	["tab", ["card_left", "card_right"]],
+	["tab", ["card_left", "card_right"]],
+	["tab", ["card_left", "card_right"]],
+	["tab", ["card_left", "card_right"]] #tail of stack
+]
+```
+
+```python
+stack[0] = ["tab", 
+	["card_left", "card_right"]
+
+current_tab = stack[0]
+```
+
+
 
 #### Hub and Spoke
 
@@ -622,46 +633,184 @@ flowchart LR
 - Works for multi-feature apps
 - Cant navigate between spokes
 
-#### Dashboard
-
-| Detail1     |                                                                                                  | Detail2     |
-| ----------- | ------------------------------------------------------------------------------------------------ | ----------- |
-|             | <u>**Dashboard**</u> <br/> <u>Summary1</u> <u>Summary2</u> <br/> <u>Summary3</u> <u>Summary4</u> |             |
-| **Detail3** |                                                                                                  | **Detail4** |
-
-- Great for at-a-glance key info
-- Detail views of related content
-- More suited to <u>desktops</u>
-
 ### 3.4 Principles of Organisation
 
-```mermaid
-graph TD
-    B(Corporate Website);
-    B--xC(Consumer);
-    B-->D(Business);
-    B-->E(Investor);
-```
-
-> Audience is the organizing principle
-
-```mermaid
-graph TD
-    B(Travel Website);
-    B--xC(N. America);
-    B-->D(Europe);
-    B-->E(Asia);
-```
-
-> Geography is the organizing principle
-
 - Organisational principles used at the **highest levels** of the site should be the most closely tied to **user needs** and **business objectives**.
-
 - Those used at lower levels are usually influenced by **feature specifications** and **content requirements**.
-
 - Every collection of information has a **built-in conceptual structure**. In most cases more than one.
-
 - <mark>Find the right structure for the objectives and user needs</mark>
+
+#### Reciprocity
+
+- Content Reciprocity as an Organizing Principle
+- Card Duality
+Dictionary list (unordered, get by key name)
+
+- Stacking Pairs
+    ```python
+    stack = {
+        tab_0: [
+            card_left, 
+            card_right
+        ],
+        tab_1: [
+            card_left, 
+            card_right
+        ],
+        tab_2: [
+            card_left, 
+            card_right
+        ],
+        tab_4: [
+            card_left,
+            card_right
+        ],
+        tab_5: [
+            card_left, 
+            card_right
+        ],
+        tab_6: [
+            card_left, 
+            card_right
+        ],
+        tab_7: [
+            card_left, 
+            card_right
+        ]
+    }
+    ```
+
+- Single Stack Format
+
+    ```python
+    stack = {
+        tab_0: [			# Single Collapse Section
+            card_left, 			
+            card_right
+        ]
+    }
+    ```
+
+- Typical Tab
+
+    ```python
+    stack[tab_0] = {
+        card_left: [		# Left Sub Section
+            header,
+            title,
+            content
+        ],
+        card_right: [		# Right Sub Section
+            title,
+            content
+        ]
+    }
+    ```
+
+- Typical Card Left
+
+    ```python
+    stack[tab_0[card_left]] = {
+        header,				# Main Section Blurb
+        title, 				# Sub Section Title 
+        content 			# Sub Section Content
+    }
+    ```
+
+- Typical Card Right
+
+    ```python
+    stack[tab_0[card_right]] = {
+        title, 				# Sub Section Title
+        content 			# Sub Section Content
+    }
+    ```
+
+
+- Full stack Pseudo
+
+    ```python
+    stack = {			
+        tab_0: {			# Landing Tab
+            card_left: [			# Landing Left
+                header,					# Blurb Header
+                title,					# Blurb Text
+                content					# Social Links
+            ],
+            card_right: [			# Landing Right
+                title,					# Profile Image
+                content					# Recent Activity
+            ]
+        },
+        tab_1: {			# Introduction Tab (Main Section)
+            card_left: [			# Introduction Left
+                header,					# Introduction Blurb
+                title,					# About (Sub Section)
+                content					# About text
+            ],
+            card_right: [			# Inroduction Right
+                title,					# Specialization
+                content					# Specialization Content
+            ]
+        },
+        tab_2: {			# Technologies Tab (Main Section)
+            card_left: [			# Technologies Left
+                header,					# Technologies Blurb
+                title,					# Skills (Sub Section)
+                content					# Skills Content
+            ],
+            card_right: [			# Technologies Right
+                title,					# Proficiency (Sub Section)
+                content					# Proficiency Content
+            ]
+        },
+        tab_3: {			# Examples Tab (Main Section)
+            card_left: [			# Examples Left
+                header,					# Examples Blurb
+                title,					# Design Folio (Sub Section)
+                content					# Design Folio Content
+            ],
+            card_right: [			# Examples Right
+                title,					# Tech Repo (Sub Section)
+                content					# Tech Repo Content
+            ]
+        },
+        tab_4: {			# Experience Tab (Main Section)
+            card_left: [			# Experience Left
+                header,					# Experience Blurb
+                title,					# Education (Sub Section)
+                content					# Education Timeline
+            ],
+            card_right: [			# Experience Right
+                title,					# Employment (Sub Section)
+                content					# Employment Timeline
+            ]
+        },
+        tab_5: {			# References Tab (Main Section)
+            card_left: [			# References Left
+                header,					# References Blurb
+                title,					# Recommendations (Sub Section)
+                content					# Recommendations Content
+            ],
+            card_right: [			# References Right
+                title,					# Awards and Rec. (Sub Section)
+                content					# Awards and Rec. Content
+            ]
+        },
+        tab_6: {			# Contact Tab (Main Section)
+            card_left: [			# Contact Left
+                header,					# Contact Blurb
+                title,					# Message Me (Sub Section)
+                content					# Message Me Form
+            ],
+            card_right: [			# Contact Right
+                title,					# Information (Sub Section)
+                content					# Information Content
+            ]
+        },
+    }
+    ```
+
 
 <!--</details>-->
 
