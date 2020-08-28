@@ -457,58 +457,38 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
 ## 3.0 Structure
 
 > ###### How the information is structured
->
 > ###### How information is logically grouped
+> ###### Provide structure to the scope
 
-- How is the information on the site structured?
-
-- How the information is logically grouped?
-
-- Consistency of elements and relationships
-
-- Is it learnable and intuitive?
-
-- Can the user understand and easily navigate through the system when using it for the first time?
+<!--- How is the information on the site structured?-->
+<!--- How the information is logically grouped?-->
+<!--- Consistency of elements and relationships-->
+<!--- Is it learnable and intuitive?-->
+<!--- Can the user understand and easily navigate through the system when using it for the first time?-->
 
 ### 3.1 Organisation of Functionality and Content
 
-How will the user navigate in an intuitive way through content and features?
+#### Defining Structure and Behavior
 
-- How do we get to a location?
+- A user will navigate the content and features intuitively via a visible accordion "hub" with collapsible "spokes" containing sub-sections of information.
+- A user finds a location from a central home where all sections are visible "stacked"
+- A user goes to the next section upon arrival at the "tail" of a current section.
 
-- Where do we go from there?
+#### Creating Meaningful Relationships Between Elements, Content and Information
 
-- Categories of information
+- Sub-sections are paired and nested within a parent category
+- Parent categories are presented as individual tabs stacked within a central hub
+- Dual sub-sections are presented as collapsible content between stacks from the central hub's parent tabs
 
-- Way the information is presented
+#### Communicating Functionality and Interactivity
 
-- Intuitive interaction
-
-- How is the information organised?
-
-- What kind of structure will we use?
-
-  - [x] Linear narrative - Discernible but restrictive
+- Information is organized in a linear sequence at the hub stack
+- The order sequence is a direct response to the user research implemented at strategy plane
 
 ### 3.2 Interaction Design (IXD)
 
-###### The Visual Vocabulary
-
-- How will we __define structure and behaviour of interactive elements__?
-
-- How will we __create meaningful relationships between elements, content and information__?
-
-- How will we __communicate functionality and interactivity__?
-
-- How will we reveal workflows?
-
-- How to reduce risk of user error?
-
-- How can we make users aware of state changes in the system?
-
 #### Consistency and Predictability
-> People develop an expectation of conventions
-
+> Capitalize on a user's expectation of conventions
 
 - Conventions
   - The site follows the navbar/header conventions and its collapsible hamburger icon for screens less than 700px .
@@ -546,6 +526,7 @@ How will the user navigate in an intuitive way through content and features?
 	- The accordion enforces users to accurately predict the outcome of their interaction by nature of the design
 
 #### Feedback
+> Making users aware of state changes in the system
 
 - Users Know Exactly What Has Happened, Is Happening and Will Happen
 	- Feedback is achieved by animation at both hover and click for appropriate CTAs.
@@ -559,29 +540,113 @@ How will the user navigate in an intuitive way through content and features?
 
 ### 3.3 Information Architecture (IA)
 
-> Creation and organisation of navigational schemas
->
-> __Allows users to:__
->
-> > Efficiently move through content
-> >
-> > Be easily educated and informed
->
-> __Allows owners to:__
->
-> > Accommodate growth and change
+#### Navigational Schemas
 
-__*Which IA  type suits our users needs?*__
+- Desktop: The Hub and Spoke Experience
+  - The site visually functions on the front end desktop as hub-and-spoke model, with the accordion stack being the hub, and its immediate co-dependent child cards (card left, card right) being direct spokes.
+- Mobile: The Nested List Expanded
+  - The spokes are rendered in expanded mode on a mobile, visually un-nesting content in favor of a linear path with a logical conclusion
 
-- The site visually functions on the front end as a dashboard/hub-and-spoke on a desktop and a nested-list on mobile.
-- The site internally functions on the back end as a linked list, with two nested data values (sub sections) at each head node (current section). The linked list currently has six nodes: the landing page at head, the contact section at tail.
+#### Efficiently Moving Through Content
 
-#### Nested List (Linked List)
+- The
 
-```mermaid
-flowchart LR
-    List --> Sub-list --> Nested-List --> Content
-```
+#### Be Easily Educated and Informed
+
+- The
+
+#### Accommodating Growth and Change
+
+- Nodes, Conceptually
+  - I began to think of the hub (stack) as a linked list of nodes, where each node-section stores the data value of two nested sub-sections and has a link or pointer to the next node-section.
+  - The linked list currently has six nodes: the landing page at head, the contact section at tail.
+- Linked List Data Structure
+  - The notion of traversing a linear data structure with stored values helped me section both the front and back end of the website with a high-level structure to follow.
+  - Keenly aware that while I might understand and visualize the site as such, it does not actually function as linked nodes.
+  - In accomodating growth and change, the site can conceivably evolve to truly adopt a nodal data structure.
+  - As such, I have given myself an opportunity to revisit this project with a larger arsenal of tools and knowledge of complex data structure in the foreseeable future
+  - At the very least, the stack is designed to accommodate additional section "nodes" which offer the immediate opportunity to grow and modify the stack to the extent that I understand this structure
+
+#### Hub & Spoke + Nested List (Linked List)
+
+- Top-Down Main Section Linked List
+  - Linear Narrative to Site Conclusion
+  - Top-down stack rendered as central **"hub"**
+
+    ```mermaid
+    TD
+        tab_0(head) --> tab_1 --> tab_2 --> tab_3 --> tab_4 --> tab_5 --> tab_6(tail)
+    ```
+
+
+- Left-Right Section Content Nested List
+  - Linear Path to Detail
+  - Right of stack rendered as **"spoke"**
+
+    ```mermaid
+    LR
+        stack --> stack[tab_0] --> stack[tab_0[card_left] --> stack[tab_0[card_right]
+    ```
+
+
+##### Combined Top-Down Hub List and Left-Right Nested Path To Spoke
+  - Complete pseudo boiler plate of static content
+
+    ```mermaid
+                       TD 
+                     HUB STACK
+    LR    stack --> stack[tab_0] --> stack[tab_0[card_left] --> stack[tab_0[card_right]
+    HUB TO SPOKE        |      
+                    stack[tab_1] --> stack[tab_0[card_left] --> stack[tab_0[card_right]
+                        |
+                    stack[tab_2] --> stack[tab_0[card_left] --> stack[tab_0[card_right]
+                        |      
+                    stack[tab_3] --> stack[tab_0[card_left] --> stack[tab_0[card_right]
+                        |
+                    stack[tab_4] --> stack[tab_0[card_left] --> stack[tab_0[card_right]
+                        |
+                    stack[tab_5] --> stack[tab_0[card_left] --> stack[tab_0[card_right]
+                        |      
+                    stack[tab_6] --> stack[tab_0[card_left] --> stack[tab_0[card_right]
+    ```
+
+
+- Desktop Hub & Spoke Experience
+   - Toggling collapsible content at main hub
+
+      ```mermaid
+       TOGGLE              
+                     
+      COLLAPSE        stack[tab_0] 
+                          |
+      COLLAPSE        stack[tab_0]
+                          |
+      COLLAPSE        stack[tab_0]
+                          |      
+      SHOW!           stack[tab_3] --> stack[tab_0[card_left] --> stack[tab_0[card_right]
+                          |
+      COLLAPSE        stack[tab_0]
+                          |
+      COLLAPSE        stack[tab_0]
+                          |      
+      COLLAPSE        stack[tab_0]
+      ```
+
+
+<!--- Top-Down Main Section Linked List -->
+
+<!--    ```mermaid-->
+<!--    flowchart TD-->
+<!--        tab_0(head) --> tab_1 --> tab_2 --> tab_3 --> tab_4 --> tab_5 --> tab_6(tail)-->
+<!--    ```-->
+
+<!--- Left-Right Section Content Nested List -->
+<!--    ```mermaid-->
+<!--    flowchart LR-->
+<!--        stack --> stack[tab_0] --> stack[tab_0[card_left]-->
+<!--                               --> stack[tab_0[card_right]-->
+<!--    ```-->
+
 
 - Linear path to detail
 - Good for mobiles
