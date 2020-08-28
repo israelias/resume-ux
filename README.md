@@ -318,19 +318,18 @@ In order to achieve the goal of standing out to the three target users, the foll
 ## 2.0 Scope
 
 > ###### Features based on information gathered from Strategy to include in design
->
 > ###### Itemizes what's on the table for a production release and what isn't
 > ###### What's on the table for initial release?
 
-- Which features, based on info from strategy plane, do we want to include in the site?
+<!--- Which features, based on info from strategy plane, do we want to include in the site?-->
 
-- What is included in production release and what is not (for now)?
+<!--- What is included in production release and what is not (for now)?-->
 
-- Keep goals in line with strategy goals.
+<!--- Keep goals in line with strategy goals.-->
 
-- Use **SPRINT** goals to keep on track. Don't allow scope-creep to happen (additional features not agreed on in strategy)
+<!--- Use **SPRINT** goals to keep on track. Don't allow scope-creep to happen (additional features not agreed on in strategy)-->
 
-- Pack in MVP features up front, unfold new experiences over time.
+<!--- Pack in MVP features up front, unfold new experiences over time.-->
 
 ### 2.1 Requirements and Functional Specifications
 
@@ -498,11 +497,12 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
 	- The flat candle wax matte filter was achieved by mimicing the minimal spectrum of hues found in the owner’s design work
 - Transitions
 	- The primary transitional element is the collapsible accordion functioning as both a main navigation, pagination, and content display container
+    - Scenario rollovers play out invariably by virtue of the the hub & spoke model
 - Labels and Terminology
 	- Nomenclature and terminology are hierarchically built and defined to reflect the content of each (2) child sections under each (1) parent node tab.
-- Imagery consistent.
+- Consistent Imagery
 	- Variable imagery exists in the portfolio section where consistency is achieved by size and position of the media container. This is the same method used throughout the “fluid” right-card sub section of the website
-- Non-Conventional `==` High Value
+- Non-Conventional `==` High Value (The Experiment)
 	- The key difference in the website is the use of the accordion as a main content container as opposed to a side navigational/supplemental information addendum.
 	- This stray from convention added value to the website by offering an interactivity that is at once learnable, familiar, and unique.
 	- The main index.html is structured so content can be easily toggled to display as a static version of the website with all subsections shown (not collapsed), relinquishing the non-conventional use of the collapsible accordion.
@@ -513,10 +513,12 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
 
 - Wayfinding
 	- The use of the accordion offered a unique opportunity to achieve the rule of proximity: having elements easy to find and use as all parent node tabs are visible at any given time.
-	- Further, content hinting is implemented by `href`ing key words, noting sources, arrowing to the appropriate CTA and/or link to existing content within the page
+	- Linking or `href`ing key words, noting sources, arrowing to the appropriate CTA and/or link to existing content within the page
+- Discoverability
+    - When necessary at `overflow` of material, content hinting is implemented by always having either a scroll bar visible, or having a previous content end to include a glimpse of the next content.
 
 #### Learnability
-> Intuitivie = Single-trial learning
+> Intuitive = Single-trial learning
 
 - A Strong Sense of Place
 	- The main accordion functions as a high-level pagination that indicates the current live page the website is showing. At the same time, the ability to see all other head sections at once makes the use of the accordion more intuitive (once you open one, you know how to open the rest)
@@ -566,6 +568,7 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
   - In accomodating growth and change, the site can conceivably evolve to truly adopt a nodal data structure.
   - As such, I have given myself an opportunity to revisit this project with a larger arsenal of tools and knowledge of complex data structure in the foreseeable future
   - At the very least, the stack is designed to accommodate additional section "nodes" which offer the immediate opportunity to grow and modify the stack to the extent that I understand this structure
+  - Thus the architecture not only accommodates change; it encourages a didactic approach to the notion of refactoring for a smarter data structure.
 
 #### Hub & Spoke + Nested List (Linked List)
 
@@ -871,231 +874,188 @@ Dictionary list (unordered, get by key name)
 ## 4.0 Skeleton
 
 > ###### How information is represented
->
 > ###### How user navigates information and features
->
 > ###### Skeleton gives form to the functions established in Structure plane
 
 What form will the application take? How will the information be represented? How will the user navigate to the information and features?
 
 - Rapidly establish value in the users mind
-
 - Lead user towards continuing the experience
-
 - Introduce specific content at the most relevant and appropriate points in the experience
-
 - Add immediate value with each click
-
 - Add positivity to the overall experience
 
-> ###### For most users, the UI is the system
+<!--Good UI Design:-->
 
-Good UI Design:
-
-- Allows *immediate* interaction -- first-time learning
-
-- Audience appropriate
-
-- Perfectly meets the needs of its intended audience
+<!--- Allows *immediate* interaction -- first-time learning-->
+<!--- Audience appropriate-->
+<!--- Perfectly meets the needs of its intended audience-->
 
 ### 4.1 Features and Usefulness
 
-> Give people what they need when and where they need it
->
-> Provide it in a visual format that they can and what to access
+#### Form Follows Function
 
+- The tabs as literal tabs and the stack as a literal stack
+- This gives people what they want and where they want it
+- It is offered in a visual format that users can (and want to) access)
 - Usability improves when similar parts are expressed in similar ways
 - No surprises for user. Content may differ, but general shape and perception remains consistent
 
 #### Progressive Disclosure
 
-- Reveal information over time and across space
+- Information is revealed over time and across space within the delimited region of a consistent page type
 
 #### Grouping, Order and Hierarchy
 
-- Visually group elements in order of importance
+- Section tabs and sub-section contents are grouped in order of importance and in order of adjacency elements
+- Priority one established at Stategy level is the first information to appear
+- Navigation elements *move from top to bottom in order of priority* while content moves from left to right in order of information and features
 
-- Priority one established at Stategy level becomes the first information to appear
+#### Less Features `==` User Friendly
 
-- Navigation elements and menu items *move from left to right in order of priority* of information and features
-
-> The more features on the screen, the less user-friendly the screen is.
->
-> As features inrease in number and complexity, usability decreases.
->
-> As features decrease, usability increases.
-
-- Give the user easy decisions, do not overcomplicate things
-
-> The more choices you present you users with, the longer it will take them to reach a decision
->
-> -Hick-Hyman Law
+- The singular feature that makes it user friendly
+- simple in it complexity
+- Usability increases as it is a repetitive motion
+- Gives the user easy decisions that do not over-complicate things
+- Choices are reduced to what is available on the stack
 
 ### 4.2 Navigation Design
 
-Intuitive Navigation and Completion of Tasks
+#### The Accordion Stack
 
+- Intuitive Navigation and Completion of Tasks
+  - x
 - Placement, Order, Hierarchy, Priorities
-
-###### How do you find what you want?
-
-1. **Browsing** via a navigation system
-
-   1. Clear categories
-
-2. **Searching** via keywords and phrases
-
-   1. Keywords in search
-
-3. Using **filters** to narrow large lists and sets of information
-
-4. Using **pagination** controls to provide:
-
-   1. Information architecture
-
-   2. Sense of depth/breadth
-
-      Breaks info into smaller chunks so user is not overwhelmed
-
-      Use progress bars with pagination
-- Keep ordering of navigation simple
+  - x
+- Navigational Benefits
+  - The rendering of the accordion hub as **pagination** controls offers clear visibility of the Information Architecture
+  - It also offers a thorough sense of depth and breadth without ever losing sight of the start, middle and end.
 
 #### Representational Icons
 
 - Clear meaning
-
 - Familiar objects
 
 #### Reduce Cognitive Friction
 
-- Ensure avigation elements are visible and easily findable
-
+- Ensure navigation elements are visible and easily findable
 - Ensure they don't require time to decode
-
 - Differentiate between navigational elements with **colour, icons and text**
 
 #### Consistent
 
 - Same interactions and behaviors
-
 - Don't rearrange the order
-
 - Don't move expected elements to a different location
 
-#### Metaphors
+<!--#### Metaphors-->
 
-Good Design is:
+<!--Good Design is:-->
 
-| Literal                        | Metaphor       |
-| ------------------------------ | -------------- |
-| Innovative                     | light bulb     |
-| Make a Product Useful          | wrench         |
-| Aesthetic                      | paint brush    |
-| Makes a product understandable | speech bubbles |
-| Unobtrusive                    | sun            |
-| Honest                         | book           |
-| Long Lasting                   | house          |
-| Thorough                       | list           |
-| Environmentally Friendly       | earth          |
-| As little design as possible   | dot            |
+<!--| Literal                        | Metaphor       |-->
+<!--| ------------------------------ | -------------- |-->
+<!--| Innovative                     | light bulb     |-->
+<!--| Make a Product Useful          | wrench         |-->
+<!--| Aesthetic                      | paint brush    |-->
+<!--| Makes a product understandable | speech bubbles |-->
+<!--| Unobtrusive                    | sun            |-->
+<!--| Honest                         | book           |-->
+<!--| Long Lasting                   | house          |-->
+<!--| Thorough                       | list           |-->
+<!--| Environmentally Friendly       | earth          |-->
+<!--| As little design as possible   | dot            |-->
 
 #### Visual Metaphors
 
 - Provide shortcuts for use
-
 - Are intuitive and obvious
-
 - Are taken from everyday life
 
 ### 4.3 Information Design
 
-Arrangement of the elements that contain the information
-
-> Information deisng should be invisible
-
+>###### Arrangement of the elements that contain the information
+Good Info design should be invisible...
 - Easy to complete **forms**
-
 - Strong **instructions**
-
 - Strong **educational materials**
-
 - Strongly represented **scientific data**
-
 - No dangerous manufacturing Uis
-
 - Everything is **relevant**
 
 > Too much information is worse than no information at all.
 
-#### Context and Order Matter
+<!--#### Context and Order Matter-->
 
-- Use **categorical ordering** when information is similar and clustered
+<!--- Use **categorical ordering** when information is similar and clustered-->
+<!--  - Courses-->
+<!--  - Blog-->
 
-  - Courses
+<!--- Use **alphabetical ordering** when information is referential-->
+<!--  - Contacts List-->
+<!--  - Dictionary-->
 
-  - Blog
+<!--- Use **location ordering** when waydinding and orientation is needed-->
+<!--  - Sports, Geography site-->
 
-- Usee **alphabetical ordering** when information is referential
+<!--- Use **time ordering** when comparing fixed duration events-->
+<!--  - Timeline-->
+<!--  - Work History-->
 
-  - Contacts List
-
-  - Dictionary
-
-- Use **location ordering** when waydinding and orientation is needed
-
-  - Sports, Geography site
-
-- Use **time ordering** when comparing fixed duration events
-
-  - Timeline
-
-  - Work History
-
-Which icons will we use? Which are best to represent our needs?
+<!--Which icons will we use? Which are best to represent our needs?-->
 
 ### 4.4 Interface Design
 
-The best arrangement and visual presentation of the elements
+<!--The best arrangement and visual presentation of the elements-->
 
-- Prototyping and wireframes
+<!--- Prototyping and wireframes-->
+<!--- Mockups using Balsamic-->
 
-- Mockups using Balsamic
+#### Wireframes: Schematic
 
-#### Wireframes
+- Page Anatomy
+- Element Stack
+- Grid Set Out
+- Mobile Stack
 
-2D model of the product that provides
+___
+- Hub & Spoke Desktop
+- Expanded Nest Mobile
 
-- form
 
-- information
+#### Wireframes: Development
 
-- arrangement volume
+- Landing
+- Introduction
+- Technologies
+- Examples
+- Experience
+- References
+- Contact
 
-Just a starting point (no colours, images or effects referred to).
+___
 
-- See how each screen fits into the whole site
+- Alternates
 
-- Determine which links and content is required to meet the needs of the user
+<!--2D model of the product that provides-->
 
-- See how balanced elements are & how they relate to each other
+<!--- form-->
+<!--- information-->
+<!--- arrangement volume-->
 
-- What gets included
+<!--Just a starting point (no colours, images or effects referred to).-->
 
-- How it is organised
-
-- What gets priority
-
-- Where are elements located?
-
-- Has anything been left out?
-
-- Is the top priority content noticed first?
-
-- Revisit strategy and goals – are we on track?
-
-- Do the relationships work?
-
-- Paper first, then Balsamic or Marvel app.
+<!--- See how each screen fits into the whole site-->
+<!--- Determine which links and content is required to meet the needs of the user-->
+<!--- See how balanced elements are & how they relate to each other-->
+<!--- What gets included-->
+<!--- How it is organised-->
+<!--- What gets priority-->
+<!--- Where are elements located?-->
+<!--- Has anything been left out?-->
+<!--- Is the top priority content noticed first?-->
+<!--- Revisit strategy and goals – are we on track?-->
+<!--- Do the relationships work?-->
+<!--- Paper first, then Balsamic or Marvel app.-->
 
 <!--</details>-->
 
@@ -1120,15 +1080,10 @@ Just a starting point (no colours, images or effects referred to).
 Provides information and context
 
 - color
-
 - layout
-
 - fonts
-
 - images
-
 - order/sequence
-
 - identity
 
 #### Economy
@@ -1146,9 +1101,7 @@ The most important elements are easily recognized
 #### Fonts and Typography
 
 - Should be visually distinct
-
 - Indicate diferent information
-
 - Should be consistent
 
 > ### Good UX smells like value.
@@ -1158,9 +1111,7 @@ The most important elements are easily recognized
 ### Design
 
 - Color Scheme
-
 - Typography
-
 - Imagery
 
 # Features
