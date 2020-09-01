@@ -15,9 +15,24 @@ p {
     background-size: 100% 100%;
 }
 
+.card-left:before {
+    width: 540px;
+    height: 100%;
+    background: transparent no-repeat left top;
+    background-size: 100% 100%;
+    background-image: url("../images/black_lte_sm.png");
+
+}
+
 [class*="mg"] {
     background: transparent no-repeat left top;
-    background-size: 100%;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    /*background-position: center;*/
+    /*position: absolute;*/
+    height: 100%;
+    width: 100%;
+
 }
 
 [class*="hg"] {
@@ -26,6 +41,7 @@ p {
     background-position: left top;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    /*background-color: #27274d;*/
 }
 
 [class*="ag"] {
@@ -35,28 +51,16 @@ p {
     /*background-repeat: no-repeat;*/
     /*background-size: 100% 100%;*/
     /*top: 5px;*/
-    background-color: #fafafa;
-    background-attachment: unset;
 }
 
-
-/* Parallax from W3 Schools */
-/*[class*="fg"] {*/
-/*    !* The image used *!*/
-/*    !*background-image: url("../images/grey_med_xl.png");*!*/
-
-/*    !* Set a specific height *!*/
-/*    height: 100%;*/
-
-/*    !* Create the parallax scrolling effect *!*/
-/*    background-attachment: fixed;*/
-/*    background-position: left top;*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: 100% 100%;*/
-/*}*/
-
 [class$="black"]{
+    /*background-color: #2E2C2E;*/
     background-image: url("../images/black_med_sm.png");
+}
+
+[class$="matte"]{
+    background-image: url("../images/black_lte_sm.png");
+    /*background-image: url("../images/black_med_sm.png");*/
 }
 
 [class$="grey"]{
@@ -64,18 +68,22 @@ p {
 }
 
 [class$="red"] {
+    /*background-color: #89413D;*/
     background-image: url("../images/red_med_sm.png");
 }
 
 [class$="blue"] {
+    /*background-color: #37455C;*/
     background-image: url("../images/blue_med_sm.png");
 }
 
 [class$="green"] {
+    /*background-color: #213128;*/
     background-image: url("../images/green_med_sm.png");
 }
 
 [class$="yellow"] {
+    /*background-color: #D27511;*/
     background-image: url("../images/yellow_drk_sm.png");
 }
 
@@ -167,12 +175,21 @@ p {
 .card.card-left,
 .card-left > .card-header,
 .card-left > .card-body {
-    /*box-shadow: none;*/
-    background-color: inherit;
+    box-shadow: none;
 }
 
 .card-left > .card-footer {
-    box-shadow: 0 16px 24px 0 rgba(0, 0, 0, .2);
+    /*box-shadow: 0 16px 24px 0 rgba(0, 0, 0, .2);*/
+}
+
+.card-left > .card-header {
+    color: #fafafa;
+}
+
+.card-left > .card-header,
+.card-left > .card-body,
+.main-tab {
+    /*border: 1px solid #707070;*/
 }
 
 .card.card-right,
@@ -182,54 +199,49 @@ p {
     background-color: inherit;
 }
 
+.accordion {
+    /*box-shadow: -10px 0 0 0 #000;*/
+}
+
 #headingOne,
 [aria-labelledby="headingOne"] .card-left {
-    box-shadow: -10px -10px 0 0 #2E2C2E;
+    box-shadow: 0 -10px 0 0 #000;
 }
 
 #headingTwo,
 [aria-labelledby="headingTwo"] .card-left {
-    box-shadow: -10px -10px 0 0 #89413D;
+    box-shadow: 0 -10px 0 0 #B84A30;
 }
 
 #headingThree,
 [aria-labelledby="headingThree"] .card-left {
-    box-shadow: -10px -10px 0 0 #37455C;
+    box-shadow: 0 -10px 0 0 #1D49B8;
 }
 
 #headingFour,
 [aria-labelledby="headingFour"] .card-left {
-    box-shadow: -10px -10px 0 0 #D66C12;
+    box-shadow: 0 -10px 0 0 #B8A922;
 }
 
 #headingFive,
 [aria-labelledby="headingFive"] .card-left {
-    box-shadow: -10px -10px 0 0 #213128;
+    box-shadow: 0 -10px 0 0 #234D3E;
 }
 
-[class*="ag"] {
-    /*height: 100%;*/
-    /*background-attachment: scroll;*/
-    /*background-position: left top;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: 100% 100%;*/
-    /*top: 5px;*/
-    background-color: #fafafa;
-    background-image: unset;
+#headingSix,
+[aria-labelledby="headingFive"] .card-left {
+    box-shadow: 0 -10px 0 0 #3E223D;
 }
-
 
 .main-tab {
+    z-index: 5;
     padding-right: 16px;
     padding-left: 16px;
     border-radius: 30px 30px 0 0;
     height: 60px;
-    width: 225px;
-}
-
-.main-tab:after {
-    height: 60px;
-    width: 225px;
+    /*width: 250px;*/
+    /*background-color: #fbfbfb;*/
+    /*border: 1px solid rgba(112, 112, 112, 0.125);*/
 }
 
 .main-body {
@@ -248,6 +260,9 @@ p {
     background-color: #B84A30;
 }
 
+a > h3 {
+    color: #fafafa;
+}
 
 /*.collapse.width {*/
 /*    height: auto;*/
