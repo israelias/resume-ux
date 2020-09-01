@@ -1,3 +1,10 @@
 
 .idea/workspace.xml
 *.xml
+!/test.html
+.DS_Store
+.idea/shelf/Uncommitted_changes_before_Update_at_8_19_20,_7_44_PM_[Default_Changelist]/
+assets/.DS_Store
+documentation/.DS_Store
+.idea
+assets/images/.DS_Store
