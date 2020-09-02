@@ -126,13 +126,12 @@
                 <!-- /Pseudo 1 Tab-->
 
                 <!-- Pseudo 1 Content-->
-                <div class="row d-none"
-                     data-parent="#resumeStack">
+                <div class="row d-none">
                     <div class="row">
 
                         <!-- Card Left -->
-                        <div class="col-12 col-md-7 col-xl-7 card card-left">
-                            <div class="card-header pt-5 hg-black">
+                        <div class="col-12 col-md-7 col-xl-7 card card-left d-none">
+                            <div class="card-header pt-5 bg-obsidian">
                                 <h4 class="pt-5">
                                     This headline sentence is an excerpt from the
                                     owner's
@@ -159,7 +158,7 @@
                         <!-- /Card Left -->
 
                         <!-- Card Right -->
-                        <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent">
+                        <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent d-none">
                             <div class="card-header border-0 text-muted">
                                 <h4 class="text-right">
                                     Right Sub Sec-1A
@@ -209,18 +208,20 @@
                 <!-- Collapse 1 Tab -->
                 <div class="row">
                     <div class="col-12 col-md-7 col-xl-7 main-tab ag-black" id="headingOne">
-                        <a class="show" role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true"
-                           aria-controls="collapseOne">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseOne"
+                                aria-expanded="false"
+                                aria-controls="collapseOne">
                             <h3>
-                                INTRODUCTION <i class="fas fa-angle-down rotate-icon"></i>
+                                SPECIALIZATION <i class="fas fa-angle-down rotate-icon"></i>
                             </h3>
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <!-- /Collapse 1 Tab-->
 
                 <!-- Collapse 1 Content-->
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
                      data-parent="#resumeStack">
                     <div class="row">
 
@@ -254,41 +255,133 @@
 
                         <!-- Card Right -->
                         <div class="col-12 col-md-5 col-xl-5 card card-right bg-transparent">
-                            <div class="card-header border-0 text-muted">
-                                <h4 class="text-right">
-                                    Right Sub Sec-1A
-                                </h4>
+                            <div class="card-header pt-5 border-0 text-center">
+                                <div class="spinner-grow" style="width: 8rem; height: 8rem;" role="status">
+                                    <span class="sr-only">image of owner</span>
+                                </div>
                             </div>
                             <div class="card-body border-0">
+                                <h5 class="card-title text-right">Recent Activity</h5>
+                                <!--                        List/Media section-->
+                                <!--                        Bootstrap List Group Template (https://getbootstrap.com/docs/4.0/components/list-group/)-->
                                 <div class="list-group">
-                                    <a href="#"
-                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                        <div class="d-flex w-100 justify-content-between">
-                                            <h5 class="mb-1">List group item heading</h5>
-                                            <small>3 days ago</small>
+                                    <div class="commit-activity">
+                                        <div class="list-group-item flex-column align-items-start pl-4 pr-4">
+                                            <div class="d-flex w-100 pt-1 justify-content-between">
+                                                <h6 class="mb-1">Add content requirements to README.md</h6>
+                                            </div>
+                                            <div class="d-flex w-100 pt-1 justify-content-between">
+                                                <p class="mb-1">israelias</p>
+                                                <small class="text-muted">committed 20 hours ago</small>
+                                            </div>
                                         </div>
-                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                        <small>Donec id elit non mi porta.</small>
-                                    </a>
-                                    <a href="#"
-                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                        <div class="d-flex w-100 justify-content-between">
-                                            <h5 class="mb-1">List group item heading</h5>
-                                            <small class="text-muted">3 days ago</small>
+                                        <div class="list-group-item border-0 text-right pr-0">
+                                            <div class="d-flex w-100 pt-1 justify-content-end align-items-center">
+                                                <small class="mr-3">Follow me on GitHub</small>
+                                                <button type="button" href="#" class="btn btn-floating">
+                                                    <i class="fab fa-github"></i>
+                                                </button>
+                                            </div>
                                         </div>
-                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                        <small class="text-muted">Donec id elit non mi porta.</small>
-                                    </a>
-                                    <a href="#"
-                                       class="list-group-item list-group-item-action flex-column align-items-start pl-4 pr-4">
-                                        <div class="d-flex w-100 justify-content-between">
-                                            <h5 class="mb-1">List group item heading</h5>
-                                            <small class="text-muted">3 days ago</small>
+                                    </div>
+                                    <div class="recommendation-activity">
+                                        <div class="list-group-item flex-column align-items-start pl-4 pr-4">
+                                            <div class="d-flex w-100 pt-1 justify-content-between">
+                                                <p class="font-italic mb-1">
+                                                    What sets Joem apart are his values, energy and mobility. He has the unique ability to get people excited about an objective and thus making them eager to carry it out with him.
+                                                </p>
+                                            </div>
+                                            <div class="d-flex w-100 mt-1 justify-content-between">
+                                                <p class="mb-1">Michael Zhang</p>
+                                                <small class="text-muted">worked with Joem directly</small>
+                                            </div>
                                         </div>
-                                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                        <small class="text-muted">Donec id elit non mi porta.</small>
-                                    </a>
+                                        <div class="list-group-item border-0 text-right pr-0">
+                                            <div class="d-flex w-100 pt-1 justify-content-end align-items-center">
+                                                <small class="mr-3">Read Joem's recommendations</small>
+                                                <button type="button" href="#" class="btn btn-floating">
+                                                    <i class="fas fa-download"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-activity">
+                                        <div class="list-group-item flex-column align-items-start pl-4 pr-4">
+                                            <div class="d-flex w-100 pt-1 row justify-content-between">
+                                                <div
+                                                        class="d-flex w-100 pt-1 justify-content-between align-items-center pr-0 mb-2">
+                                                    <i class="fas fa-history">
+                                                <span class="badge bg-primary rounded-pill">
+                                                    14
+                                                </span>
+                                                    </i>
+                                                    <i class="fas fa-code-branch">
+                                                <span class="badge bg-primary rounded-pill">
+                                                    14
+                                                </span>
+                                                    </i>
+                                                    <i class="fas fa-memory">
+                                                <span class="badge bg-primary rounded-pill">
+                                                    42 kb
+                                                </span>
+                                                    </i>
+                                                    <i class="fas fa-rocket">
+                                                <span class="badge bg-success rounded-pill">
+                                                    Active
+                                                </span>
+                                                    </i>
+                                                </div>
+                                                <div class="col-4">
+                                                    <img src="#" alt="project thumbnail">
+                                                </div>
+                                                <div class="col-8 pr-0">
+                                                    <h6 class="mb-1">resume-redux</h6>
+                                                    <small>
+                                                        Description of of project
+                                                        Description of of project
+                                                        Description of of project
+                                                    </small>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex w-100 pt-1 justify-content-between">
+                                                <p class="mb-1">israelias</p>
+                                                <small class="text-muted">committed 20 hours ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item border-0 text-right pr-0">
+                                            <div class="d-flex w-100 pt-1 justify-content-end align-items-center">
+                                                <small class="mr-3">See what I'm currently working on</small>
+                                                <button type="button" href="#" class="btn btn-floating">
+                                                    <i class="fas fa-download"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="message-activity">
+                                        <div class="list-group-item flex-column align-items-start pl-4 pr-4">
+                                            <div class="d-flex w-100 pt-1 justify-content-between">
+                                                <p class="font-italic mb-1">
+                                                    I'm always keen to collaborate with good people on innovative projects.the
+                                                </p>
+                                            </div>
+                                            <div class="d-flex w-100 mt-1 justify-content-between">
+                                                <p class="mb-1">Joem Elias Sanez</p>
+                                                <small class="text-muted">updated 4 September 2020</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item border-0 text-right pr-0">
+                                            <div class="d-flex w-100 pt-1 justify-content-end align-items-center">
+                                                <small class="mr-3">Drop me line</small>
+                                                <button type="button" href="#" class="btn btn-floating">
+                                                    <i class="fas fa-download"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <!--                        End of List Group Template-->
+                                <!--                        End of List/Media section-->
+
                             </div>
                             <div class="card-footer bg-transparent border-0 text-muted">
                                 <h6 class="text-center">Links and CTA</h6>
