@@ -4,8 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!--    Bootstrap Material Design-->
-<!--    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">-->
     <!-- Bootstrap CSS 4.5 -->
 <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
     <!-- Bootstrap CSS 5.0 -->
@@ -18,30 +16,94 @@
     <!-- MDB -->
 <!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0-alpha4/mdb.min.css" rel="stylesheet">-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css" rel="stylesheet">
+    <!-- Vertical Scroll jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <title>Joem Elias Sanez CV</title>
 </head>
 <body>
-<header>
 
-    <!-- MDB Template Header (https://mdbootstrap.com/docs/standard/navigation/headers/) -->
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-w2 fixed-top">
+<!-- Header container -->
+<header>
+    <!-- Navbar Container -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-w2 fixed-top" style="height: 60px;">
         <div class="container-fluid">
-            <div class="position-fixed" style="left: 3px;">
-                <a class="navbar-brand ml-3" href="#">JS</a>
+
+            <!-- Header Logo Region  -->
+            <div class="d-none position-fixed" style="left: 3px;">
+                <a class="navbar-brand ml-3" href="#">
+                    JS
+                </a>
             </div>
+            <!-- /Header Logo Region -->
+
             <div class="row justify-content-center">
                 <div class="col-11 col-md-11 col-lg-11">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-md-7 col-xl-7 card" style="background-color: rgba(0, 0, 0, 0.2);">
-                            <span class="muted">Stacks</span>
+
+                    <!-- Header Pseudo Stack Region -->
+                    <div class="d-none row align-items-start">
+                        <div class="col-12 col-sm-12 shi-l-1" id="headingEight">
+                            <div class="row">
+                                <div class="col-12 col-sm-5 col-md-5 col-xl-4 pl-0 pr-0 tab-stack">
+                                    <div class="tab-header">
+                                        <div class="bhn text-left">
+                                            <h4 class="card-header">
+                                                JS.stack
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <!-- /Header Pseudo Stack Region -->
+
+                    <div class="row align-items-start d-flex">
+
+                        <!-- Header Region 3 -->
+                        <div class="col-12 col-md-7 col-xl-7 bg-transparent">
+                            <div class="row align-items-start justify-content-between">
+
+                                <!--Header Item-->
+                                <div class="col-lg-7 col-md-12 pl-2 sho-l-1">
+
+                                    <!--Placeholder Dot -->
+                                    <a class="btn btn-floating shin-1" href="#!"
+                                       role="button">
+                                        <i class="fas far fa-dot-circle"></i>
+                                    </a>
+                                    <!--Placeholder Dot -->
+
+                                </div>
+                                <!--/Header Item-->
+
+                                <!--Header Item-->
+                                <div class="col-lg-5 col-md-12 pl-2">
+
+                                    <!--Placeholder Dot -->
+                                    <a class="btn btn-floating shin-1" href="#!"
+                                       role="button">
+                                        <i class="fas far fa-dot-circle"></i>
+                                    </a>
+                                    <!--Placeholder Dot -->
+
+                                </div>
+                                <!--/Header Item-->
+
+                            </div>
+                        </div>
+                        <!-- /Header Region 3 -->
+
+                        <!-- Header Region 4 -->
                         <div class="col-12 col-md-5 col-xl-5">
-                            <div class="row justify-content-center align-items-center">
-                                <div class="d-sm-none d-md-block col-8" style="z-index: 5;">
-                                    <button class="btn btn-outline-dark text-left show" type="button" data-ripple-color="dark"
+                            <div class="row align-items-stretch justify-content-between d-flex">
+
+                                <!-- Header Item -->
+                                <div class="col pl-2 d-sm-none d-md-block" style="z-index: 5;">
+                                    <button class="btn btn-outline-dark text-left show shin-2" type="button"
+                                            data-ripple-color="dark"
                                             data-toggle="collapse"
                                             data-target=".collapse-all"
                                             aria-expanded="true"
@@ -49,47 +111,60 @@
                                         Expand All
                                     </button>
                                 </div>
+                                <!-- /Header Item -->
+
+                                <!-- Header Item -->
+                                <div class="col pl-2 sho-r-1">
+
+                                    <!-- Header Menu Collapse -->
+                                    <div class="" style="right:3px;">
+                                        <button class="navbar-toggler float-right shin-2" type="button"
+                                                data-toggle="collapse"
+                                                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                                            <!--                                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">-->
+                                            <!--                                        <li class="nav-item">-->
+                                            <!--                                            <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+                                            <!--                                        </li>-->
+                                            <!--                                        <li class="nav-item">-->
+                                            <!--                                            <a class="nav-link" href="#">Link</a>-->
+                                            <!--                                        </li>-->
+                                            <!--                                        <li class="nav-item">-->
+                                            <!--                                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+                                            <!--                                        </li>-->
+                                            <!--                                    </ul>-->
+                                            <form class="d-flex input-group w-auto ml-auto">
+                                                <input class="form-control mr-2" type="search" placeholder="Find something"
+                                                       aria-label="Search">
+                                                <button class="btn btn-outline-dark shin-2" type="button"
+                                                        data-ripple-color="dark">Search
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- /Header Menu Collapse -->
+
+                                </div>
+                                <!-- /Header Item -->
 
                             </div>
                         </div>
-                    </div>
+                        <!-- Header Region 4 -->
 
-                </div>
-            <div class="position-fixed" style="right:3px;">
-                <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
-                        data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <!--                                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">-->
-                    <!--                                        <li class="nav-item">-->
-                    <!--                                            <a class="nav-link active" aria-current="page" href="#">Home</a>-->
-                    <!--                                        </li>-->
-                    <!--                                        <li class="nav-item">-->
-                    <!--                                            <a class="nav-link" href="#">Link</a>-->
-                    <!--                                        </li>-->
-                    <!--                                        <li class="nav-item">-->
-                    <!--                                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
-                    <!--                                        </li>-->
-                    <!--                                    </ul>-->
-                    <form class="d-flex input-group w-auto ml-auto">
-                        <input class="form-control mr-2" type="search" placeholder="Find something"
-                               aria-label="Search">
-                        <button class="btn btn-outline-dark" type="button"
-                                data-ripple-color="dark">Search
-                        </button>
-                    </form>
+                    </div>
                 </div>
             </div>
-            </div>
+
         </div>
     </nav>
-    <!-- /Navbar -->
+    <!-- /Navbar Container -->
 
 </header>
 
 <!-- Float-left icons -->
-<div class="position-fixed" style="bottom: 50%;">
+<div class="position-fixed d-none" style="bottom: 50%;">
     <div class="btn-group-vertical ml-3 shadow-0" role="group" aria-label="Vertical button group">
 
 <!--        Info icon-->
@@ -221,7 +296,7 @@
                         <div class="row">
                             <div class="col-12 col-sm-5 col-xl-4 pl-0 pr-0 tab-stack">
                                 <div class="tab-button">
-                                    <button class="btn btn-block text-left show bg-matte" type="button"
+                                    <button class="btn btn-block text-left show" type="button"
                                             data-toggle="collapse"
                                             data-target="#collapseZero"
                                             aria-expanded="true"
@@ -244,8 +319,8 @@
                     <div class="row">
 
                         <!-- Card Left -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 card card-left">
-                            <div class="card-header pt-5 hg-matte">
+                        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 card card-left">
+                            <div class="card-header pt-5">
                                 <h1 class="pt-5">
                                     Joem Elias Sanez is an architect and full stack developer based in Manila.
                                 </h1>
@@ -255,10 +330,9 @@
                                     1A Left Title
                                 </h5>
                                 <p class="card-text">
-                                    This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                                    I’m currently focusing on BIM and the future of design from the backend of software development and open for collaboration.
                                 </p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
                             <div class="card-footer">
                                 Links and CTA
@@ -267,163 +341,171 @@
                         <!-- /Card Left -->
 
                         <!-- Card Right -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 bg-transparent">
+                        <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 bg-transparent">
                             <div class="card-header pt-5 border-0 text-center shadow-0">
                                 <div class="spinner-grow" style="width: 8rem; height: 8rem;" role="status">
                                     <span class="sr-only">image of owner</span>
                                 </div>
                             </div>
-                            <div class="card-body border-0 shadow-0">
-                                <h5 class="card-title text-right">Recent Activity</h5>
+                            <div class="card-body border-0 shadow-0 d-none d-md-flex">
+                                <h5 class="card-title text-right">
+                                    Recent Activity
+                                </h5>
 
-                                <!--                        List/Media section-->
-                                <!--                        Bootstrap List Group Template (https://getbootstrap.com/docs/4.0/components/list-group/)-->
-                                <div class="list-group">
+                                <!-- Recent Activity Carousel -->
+                                <div class="row justify-content-center">
+                                    <div class="col text-right align-content-center">
+                                        <div class="d-none d-md-flex" id="verticalScroller">
 
-                                    <!-- Commit Item -->
-                                    <div class="commit-activity">
-                                        <div class="list-group-item flex-column align-items-start pl-4 pr-4 bg-w2">
-                                            <div class="d-flex w-100 pt-1 justify-content-between">
-                                                <h6 class="mb-1">Add content requirements to README.md</h6>
-                                            </div>
-                                            <div class="d-flex w-100 pt-1 justify-content-between">
-                                                <p class="mb-1">israelias</p>
-                                                <small class="text-muted">committed 20 hours ago</small>
-                                            </div>
-                                        </div>
-
-                                        <!-- Commit CTA -->
-                                        <div class="list-group-item border-0 text-right pr-0 bg-transparent">
-                                            <div class="d-flex w-100 pt-1 justify-content-end align-items-center">
-                                                <small class="mr-3">Follow me on GitHub</small>
-                                                <button type="button" href="#" class="btn btn-floating">
-                                                    <i class="fab fa-github"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <!-- /Commit CTA -->
-
-                                    </div>
-                                    <!-- /Commit Item -->
-
-                                    <!-- Recommendation Item -->
-                                    <div class="recommendation-activity">
-                                        <div class="list-group-item flex-column align-items-start pl-4 pr-4 bg-w2">
-                                            <div class="d-flex w-100 pt-1 justify-content-between">
-                                                <p class="font-italic mb-1">
-                                                    What sets Joem apart are his values, energy and mobility. He has the unique ability to get people excited about an objective and thus making them eager to carry it out with him.
-                                                </p>
-                                            </div>
-                                            <div class="d-flex w-100 mt-1 justify-content-between">
-                                                <p class="mb-1">Michael Zhang</p>
-                                                <small class="text-muted">worked with Joem directly</small>
-                                            </div>
-                                        </div>
-
-                                        <!-- Recommendation CTA -->
-                                        <div class="list-group-item border-0 text-right pr-0 bg-transparent">
-                                            <div class="d-flex w-100 pt-1 justify-content-end align-items-center">
-                                                <small class="mr-3">Read Joem's recommendations</small>
-                                                <button type="button" href="#" class="btn btn-floating">
-                                                    <i class="fas fa-download"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <!-- /Recommendation CTA -->
-
-                                    </div>
-                                    <!-- /Recommendation Item -->
-
-                                    <!-- Project Item -->
-                                    <div class="project-activity">
-                                        <div class="list-group-item flex-column align-items-start pl-4 pr-4 bg-w2">
-                                            <div class="d-flex w-100 pt-1 row justify-content-between">
+                                            <!-- Commit Item -->
+                                            <div class="commit-activity">
                                                 <div
-                                                        class="d-flex w-100 pt-1 justify-content-between align-items-center pr-0 mb-2">
-                                                    <i class="fas fa-history">
+                                                        class="list-group-item flex-column align-items-start pl-4 pr-4" style="height:100px; border-width: 1px; border-radius: 3px; border-color: #B6B6B6; background-color: #F7F6F4">
+                                                    <div class="d-flex w-100 pt-1 justify-content-between">
+                                                        <p class="mb-1">Add content requirements to README.md</p>
+                                                    </div>
+                                                    <div
+                                                            class="d-flex w-100 pt-1 pr-3 justify-content-between align-items-center">
+                                                        <img src="assets/images/joem_elias_sanez_thumbnail.png"
+                                                             style="width: 30px;"
+                                                             alt="GitHub profile photo">
+                                                        <strong class="mb-1">israelias</strong>
+                                                        <small class="text-muted pr-2">committed 20 hours ago</small>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Commit CTA -->
+                                                <div class="list-group-item border-0 text-right pr-0 bg-transparent">
+                                                    <div class="d-flex w-100 justify-content-end align-items-center">
+                                                        <small class="mr-3">
+                                                            Follow me on GitHub
+                                                        </small>
+                                                        <a
+                                                                class="btn btn-floating shadow-2 btn-outline-dark"
+                                                                href="https://github.com/israelias"
+                                                                target="_blank"
+                                                                role="button" style="background-color: #FAFBFC;
+                                                               border-color: #D4D6D6;">
+                                                            <i class="fab fa-github"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- /Commit CTA -->
+                                            </div>
+                                            <!-- /Commit Item -->
+
+                                            <!-- Recommendation Item -->
+                                            <div class="commit-activity">
+                                                <div
+                                                        class="list-group-item flex-column align-items-start pl-3 pr-3 bg-transparent" style="height:100px; border-width: 1px; border-radius: 3px; border-color: #95989A;">
+                                                    <div class="d-flex w-100 pt-1 justify-content-between">
+                                                        <p class="font-italic mb-2"
+                                                           style="font-size: 14px; font-weight: 300;">"What sets
+                                                            Joem apart are his
+                                                            values, energy and mobility."</p>
+                                                    </div>
+                                                    <div
+                                                            class="d-flex w-100 pt-1 pr-3 justify-content-between align-items-center">
+                                                        <img src="assets/images/michael_zhang_thumbnail.png"
+                                                             style="width: 30px;"
+                                                             alt="GitHub profile photo">
+                                                        <strong class="mb-1">Michael Zhang</strong>
+                                                        <small class="text-muted pr-2">worked with Joem directly</small>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Recommendation CTA -->
+                                                <div class="list-group-item border-0 text-right pr-0 bg-transparent">
+                                                    <div class="d-flex w-100 justify-content-end align-items-center">
+                                                        <small class="mr-3">
+                                                            Read more from my colleagues
+                                                        </small>
+                                                        <button
+                                                                class="btn btn-floating shadow-2 btn-outline-dark"
+                                                                type="button"
+                                                                data-toggle="collapse"
+                                                                data-target="#collapseFive"
+                                                                aria-expanded="false"
+                                                                aria-controls="collapseFive"
+                                                                style="background-color: #FAFBFC;
+                                                               border-color: #D4D6D6;">
+                                                            <i class="fas fa-arrow-circle-down"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <!-- /Recommendation CTA -->
+                                            </div>
+                                            <!-- /Recommendation Item -->
+
+                                            <!-- Project Item -->
+                                            <div class="commit-activity">
+                                                <div class="list-group-item flex-column align-items-start pl-4 pr-4" style="height:100px; border-width: 1px; border-radius: 3px; border-color: #95989A;">
+                                                    <div
+                                                            class="d-flex w-100 pt-1 justify-content-between align-items-center pr-0 mb-2">
+                                                        <i class="fas fa-history">
                                                 <span class="badge bg-primary rounded-pill">
                                                     14
                                                 </span>
-                                                    </i>
-                                                    <i class="fas fa-code-branch">
+                                                        </i>
+                                                        <i class="fas fa-code-branch">
                                                 <span class="badge bg-primary rounded-pill">
                                                     14
                                                 </span>
-                                                    </i>
-                                                    <i class="fas fa-memory">
+                                                        </i>
+                                                        <i class="fas fa-memory">
                                                 <span class="badge bg-primary rounded-pill">
                                                     42 kb
                                                 </span>
-                                                    </i>
-                                                    <i class="fas fa-rocket">
+                                                        </i>
+                                                        <i class="fas fa-rocket">
                                                 <span class="badge bg-success rounded-pill">
                                                     Active
                                                 </span>
-                                                    </i>
+                                                        </i>
+                                                    </div>
+                                                    <div class="row justify-content-between">
+                                                        <div class="col-4 align-self-start pt-1">
+                                                            <img src="assets/images/project_one_thumbnail.png"
+                                                                 style="height: 30px; width: 70px;"
+                                                                 alt="project thumbnail">
+                                                        </div>
+                                                        <div class="col-8 align-self-end pr-0">
+                                                            <h6 class="mb-1">resume-redux</h6>
+                                                            <small>
+                                                                Front end web development
+                                                            </small>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-4">
-                                                    <img src="#" alt="project thumbnail">
-                                                </div>
-                                                <div class="col-8 pr-0">
-                                                    <h6 class="mb-1">resume-redux</h6>
-                                                    <small>
-                                                        Description of of project
-                                                        Description of of project
-                                                        Description of of project
-                                                    </small>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex w-100 pt-1 justify-content-between">
-                                                <p class="mb-1">israelias</p>
-                                                <small class="text-muted">committed 20 hours ago</small>
-                                            </div>
-                                        </div>
 
-                                        <!-- Project CTA -->
-                                        <div class="list-group-item border-0 text-right pr-0 bg-transparent">
-                                            <div class="d-flex w-100 pt-1 justify-content-end align-items-center">
-                                                <small class="mr-3">See what I'm currently working on</small>
-                                                <button type="button" href="#" class="btn btn-floating">
-                                                    <i class="fas fa-download"></i>
-                                                </button>
+                                                <!-- Project CTA -->
+                                                <div class="list-group-item border-0 text-right pr-0 bg-transparent">
+                                                    <div class="d-flex w-100 justify-content-end align-items-center">
+                                                        <small class="mr-3">
+                                                            See what I'm currently working on
+                                                        </small>
+                                                        <button
+                                                                class="btn btn-floating shadow-2 btn-outline-dark"
+                                                                type="button"
+                                                                data-toggle="collapse"
+                                                                data-target="#collapseThree"
+                                                                aria-expanded="false"
+                                                                aria-controls="collapseThree"
+                                                                style="background-color: #FAFBFC;
+                                                               border-color: #D4D6D6;">
+                                                            <i class="fas fa-arrow-circle-down"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <!-- /Project CTA -->
                                             </div>
-                                        </div>
-                                        <!-- /Project CTA -->
+                                            <!-- /Project Item -->
 
+                                        </div>
                                     </div>
-                                    <!-- /Project Item -->
-
-                                    <!-- Message Item -->
-                                    <div class="message-activity">
-                                        <div class="list-group-item flex-column align-items-start pl-4 pr-4 bg-w2">
-                                            <div class="d-flex w-100 pt-1 justify-content-between">
-                                                <p class="font-italic mb-1">
-                                                    I'm always keen to collaborate with good people on innovative projects.the
-                                                </p>
-                                            </div>
-                                            <div class="d-flex w-100 mt-1 justify-content-between">
-                                                <p class="mb-1">Joem Elias Sanez</p>
-                                                <small class="text-muted">updated 4 September 2020</small>
-                                            </div>
-                                        </div>
-
-                                        <!-- Message CTA -->
-                                        <div class="list-group-item border-0 text-right pr-0 bg-transparent">
-                                            <div class="d-flex w-100 pt-1 justify-content-end align-items-center">
-                                                <small class="mr-3">Drop me line</small>
-                                                <button type="button" href="#" class="btn btn-floating">
-                                                    <i class="fas fa-download"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <!-- /Message CTA -->
-
-                                    </div>
-                                    <!-- /Message Item -->
 
                                 </div>
-                                <!--                        End of List Group Template-->
-                                <!--                        End of List/Media section-->
+                                <!-- /Recent Activity Carousel -->
 
                             </div>
                             <div class="card-footer bg-transparent border-0 text-muted">
@@ -438,7 +520,7 @@
 
                 <!-- Collapse 1 Tab -->
                 <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 main-tab ag-grey" id="headingOne">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="headingOne">
                         <div class="row">
                             <div class="col-12 col-sm-5 col-xl-4 pl-0 pr-0 tab-stack">
                                 <div class="tab-button">
@@ -637,11 +719,12 @@
 
                 <!-- Collapse 2 Tab -->
                 <div class="row">
-                    <div class="col-12 main-tab ag-red" id="headingTwo">
+                    <div class="col-12" id="headingTwo">
                         <div class="row">
                             <div class="col-12 col-sm-5 col-xl-4 pl-0 pr-0 tab-stack">
                                 <div class="tab-button">
-                                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                                    <button class="btn btn-block text-left collapsed bg-slate" type="button"
+                                            data-toggle="collapse"
                                             data-target="#collapseTwo"
                                             aria-expanded="false" aria-controls="collapseTwo">
                                         <h4 class="d-flex justify-content-between">
@@ -1101,11 +1184,11 @@
 
                 <!-- Collapse 3 Tab -->
                 <div class="row">
-                    <div class="col-12 main-tab ag-blue" id="headingThree">
+                    <div class="col-12" id="headingThree">
                         <div class="row">
                             <div class="col-12 col-sm-5 col-xl-4 pl-0 pr-0 tab-stack">
                                 <div class="tab-button">
-                                    <button class="btn btn-block text-left collapsed ag-blue" type="button"
+                                    <button class="btn btn-block text-left collapsed" type="button"
                                             data-toggle="collapse"
                                             data-target="#collapseThree"
                                             aria-expanded="false" aria-controls="collapseThree">
@@ -1126,13 +1209,16 @@
                      data-parent="#resumeStack">
                     <div class="row">
 
-                        <!-- Card Left -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 card card-left">
-                            <div class="card-header pt-5 hg-blue">
+                        <div class="col-12">
+                            <div class="card card-headline hg-blue bg-blue pt-5">
                                 <h2 class="pt-5">
                                     Building product that is useful, educational and aesthetically pleasing in its iterative deployment as well as its procedural documentation.
                                 </h2>
                             </div>
+                        </div>
+
+                        <!-- Card Left -->
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 card card-left">
                             <div class="card-body bg-white">
                                 <h5 class="card-title">
                                     Most Lauded for: Documentation Style
@@ -1586,7 +1672,7 @@
 
                 <!-- Collapse 4 Tab -->
                 <div class="row">
-                    <div class="col-12 main-tab ag-yellow" id="headingFour">
+                    <div class="col-12" id="headingFour">
                         <div class="row">
                             <div class="col-12 col-sm-5 col-xl-4 pl-0 pr-0 tab-stack">
                                 <div class="tab-button">
@@ -1683,7 +1769,7 @@
 
                 <!-- Collapse 5 Tab -->
                 <div class="row">
-                    <div class="col-12 main-tab ag-green" id="headingFive">
+                    <div class="col-12" id="headingFive">
                         <div class="row">
                             <div class="col-12 col-sm-5 col-xl-4 pl-0 pr-0 tab-stack">
                                 <div class="tab-button">
@@ -1809,7 +1895,7 @@
 
                 <!-- Collapse 6 Tab -->
                 <div class="row">
-                    <div class="col-12 main-tab ag-matte" id="headingSix">
+                    <div class="col-12" id="headingSix">
                         <div class="row">
                             <div class="col-12 col-sm-5 col-xl-4 pl-0 pr-0 tab-stack">
                                 <div class="tab-button">
@@ -1923,7 +2009,8 @@
         <div class="row justify-content-center">
             <div class="col-11 col-md-11 col-lg-11">
                 <div class="row align-items-center">
-                    <div class="col-12 col-md-7 col-xl-7 card" style="background-color: rgba(0, 0, 0, 0.2);">
+                    <div class="col-12 col-md-7 col-xl-7 card d-none d-md-block" style="background-color:
+                    rgba(0, 0, 0, 0.2);">
                         <div class="row">
                             <!--Grid column-->
                             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
@@ -1958,11 +2045,44 @@
 </footer>
 <!-- /Footer container -->
 
+<!-- Scroll JS (https://stackoverflow.com/questions/35571505/scrolling-news-feed-overlaps-divs) -->
+<script>
+    $(document).ready(function() {
+
+        var i = 0;
+        var totalHeight = 0;
+        $("#verticalScroller > div").each(function () {
+            $(this).css("top", i);
+            i += $(this).height();
+            totalHeight = totalHeight + $(this).height();
+        });
+
+        var loop = setInterval(function(){ verticalScroller() }, 6000);
+
+        var index = 0;
+        function verticalScroller() {
+            var $currentChild = $("#verticalScroller > div").eq(index);
+            var scroll = $currentChild.height();
+
+            $("#verticalScroller > div").animate({ top: "-="+scroll }, 600, function() {
+                var top = totalHeight - $currentChild.height();
+                $currentChild.css({ top : top});
+            });
+
+            if(index == $("#verticalScroller > div").length-1) index = 0;
+            else index++;
+        }
+
+    });
+</script>
+<!-- /Scroll JS -->
+
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
 <!--jquery-->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
 
 <!--popper-->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -1975,5 +2095,8 @@
 <!-- MDB -->
 <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0-alpha4/mdb.min.js"></script>-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
+
+<!--scrollbar-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/perfect-scrollbar@1.5.0/dist/perfect-scrollbar.common.min.js"></script>
 </body>
 </html>
