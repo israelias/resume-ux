@@ -181,7 +181,33 @@ a > h3, a > h1 {
     color: #fafafa;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /*color: #707070;*/
+    text-shadow: #fff 0 1px 0, #D7D7D6 0 -1px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+p,
+i {
+    text-shadow: #fff 0 1px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+i {
+
+}
 /*------------------------------------------------------------------------------- ELEMENT BEHAVIOR */
+
+/*hr {*/
+/*    border-top: 1px solid #777777;*/
+/*    width: 100%;*/
+/*    margin: 5px 0px;*/
+/*}*/
 
 
 /*----------------------------------------------------------- Tab Button Containers */
@@ -193,6 +219,7 @@ button {
 .tab-button h4 {
     /*font-weight: 300;*/
     font-size: 1rem;
+    color: #B6B6B6;
     /*z-index: 3;*/
 }
 
@@ -206,12 +233,36 @@ button {
 }
 
 .tab-button span > i {
+    color: #D4D6D6;
+    text-shadow: 0 3px 0 0 #A4A4A4, 0 -4px 0 0 #fafafa;
+
     /*font-family: "Major Mono Display", monospace;*/
     font-size: 1.25rem;
     z-index: 8;
-    text-shadow: #fff 0 1px 0;
+    /*text-shadow: #fff 0 1px 0;*/
     -webkit-font-smoothing: antialiased;
 }
+
+/*.btn--cta {*/
+/*    font-weight: bold;*/
+/*    border-radius: 23px;*/
+/*    width: 160px;*/
+
+/*}*/
+
+/*.btn--red {*/
+/*    color: white;*/
+/*    background-color: #f05f40;*/
+/*    border-color: #f05f40;*/
+/*}*/
+
+/*.btn--red:hover,*/
+/*.btn--red:active,*/
+/*.btn--red:focus,*/
+/*.btn--red:active:focus {*/
+/*    background-color: #df4929;*/
+/*    border-color: #df4929;*/
+/*}*/
 
 /* ------------------------------------------------------------------ Main Section Tab Buttons*/
 
@@ -664,22 +715,27 @@ button {
 
     [id^="heading"] > .row {
         height: 60px;
+        background: linear-gradient(#F2F1EF, #F8F7F6);
     }
 
     .tab-button .btn {
         overflow: visible;
-        box-shadow: -5px -10px 0 0 #fafafa, 200px 40px 0 0 #fafafa;
+        box-shadow: -5px -10px 0 0 #fafafa, 200px 40px 0 0 #fafafa, 8px 8px 0 0 #FAFAFA inset, -8px -8px 0 0 #D7D7D6 inset;
         margin-top: 10px;
         height: 50px;
         float: left;
         padding: 10px 10px 10px 20px;
-        border: 1px solid #707070;
+
+        /*border: 1px solid #707070;*/
         border-bottom: none;
+        /*border-left: 5px solid #D7D7D6;*/
+
         border-radius: 1.5rem 1.5rem 0 0;
         -webkit-border-radius: 1.5rem 1.5rem 0 0;
         -moz-border-radius: 1.5rem 1.5rem 0 0;
         width: 100%;
-        /*z-index: 5;*/
+        /*z-index: 12;*/
+
     }
 
     .tab-button .btn:before {
@@ -709,46 +765,50 @@ button {
         height: 25px;
         border-bottom-left-radius: 1.875rem;
 
-        border: 1px solid #A4A4A4;
+        /*border: 1px solid #A4A4A4;*/
         border-top: none;
 
         z-index: 1;
 
         background-color: transparent;
-        box-shadow: -25px 0 0 0 #F2F1EF, -2px -5px 0 0 #BFBFBF inset, -2px -10px 0 0 #D7D7D6 inset, -2px -15px 0 0 #EFEEEC inset, 8px -57px 0 0 #FAFAFA;
+        box-shadow: -25px 0 0 0 #F2F1EF, 8px -57px 0 0 #FAFAFA;
+        /*box-shadow: -25px 0 0 0 #F2F1EF, -2px -5px 0 0 #BFBFBF inset, -2px -10px 0 0 #D7D7D6 inset, -2px -15px 0 0 #EFEEEC inset, 8px -57px 0 0 #FAFAFA;*/
     }
 
     .tab-stack:after {
-        box-shadow: -25px 0 0 0 #F2F1EF, -2px -10px 0 0 #D7D7D6 inset;
+        /*box-shadow: -25px 0 0 0 #F2F1EF, -2px -10px 0 0 #D7D7D6 inset;*/
+
+        box-shadow: -5px 5px 6px 0 rgba(255, 255, 255, 0.5), 5px -5px 6px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: inset -5px 5px 6px 0 rgba(255, 255, 255, 0.5), inset 5px -5px 6px 0 rgba(0, 0, 0, 0.2);
         z-index: 1;
     }
 
     [id$="Zero"] .tab-button .btn {
-        box-shadow: -5px -10px 0 0 #B6B6B6, 200px 40px 0 0 #000;
+        box-shadow: -1px -10px 0 0 #B6B6B6, inset 2px 8px 6px 0 rgba(255, 255, 255, 0.4);
     }
 
     [id$="One"] .tab-button .btn {
-        box-shadow: -5px -10px 0 0 #423C3A, 200px 40px 0 0 #423C3A;
+        box-shadow: -1px -10px 0 0 #423C3A, inset 2px 8px 6px 0 rgba(255, 255, 255, 0.4);
     }
 
     [id$="Two"] .tab-button .btn {
-        box-shadow: -5px -10px 0 0 #B84A30, 200px 40px 0 0 #B84A30;
+        box-shadow: -1px -10px 0 0 #B84A30, inset 2px 8px 6px 0 rgba(255, 255, 255, 0.4);
     }
 
     [id$="Three"] .tab-button .btn {
-        box-shadow: -5px -10px 0 0 #1D49B8, 200px 40px 0 0 #1D49B8;
+        box-shadow: -1px -10px 0 0 #1D49B8, inset 2px 8px 6px 0 rgba(255, 255, 255, 0.4);
     }
 
     [id$="Four"] .tab-button .btn {
-        box-shadow: -5px -10px 0 0 #B8A922, 200px 40px 0 0 #B8A922;
+        box-shadow: -1px -10px 0 0 #B8A922, inset 2px 8px 6px 0 rgba(255, 255, 255, 0.4);
     }
 
     [id$="Five"] .tab-button .btn {
-        box-shadow: -5px -10px 0 0 #234D3E, 200px 40px 0 0 #234D3E;
+        box-shadow: -1px -10px 0 0 #234D3E;
     }
 
     [id$="Six"] .tab-button .btn {
-        box-shadow: -5px -10px 0 0 #3E223D, 200px 40px 0 0 #3E223D;
+        box-shadow: -1px -10px 0 0 #3E223D;
     }
 
     [id^="collapse"] .card-right .card-body,
@@ -784,10 +844,105 @@ button {
 }
 
 
+/* ------------------------------------------------------------------ Landing Section/ Image */
+
+/*.landing-headline h1 {*/
+/*    color: #707070;*/
+/*    text-shadow: #D7D7D6 0 3px 0, #fff 0 -4px 0;*/
+/*    -webkit-font-smoothing: antialiased;*/
+/*}*/
+
+.landing-heading h1 {
+    /*font-size: 3.5rem;*/
+    font-weight: 400;
+    color: #D7D7D6;
+    text-shadow: #FAFAFA 0 3px 0, #A4A4A4 0 -1px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.landing-subheading {
+    height: 130px;
+}
+
+.landing-subheading p {
+    font-family: "Halyard Micro", monospace;
+    font-size: .875rem;
+    font-weight: 300;
+    color: #707070;
+    text-shadow: #FAFAFA 0 1px 0, #D4D6D6 0 -1px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.landing-subheading p span:nth-of-type(2) {
+    color: #F26041;
+    text-shadow: #FAA490 0 1px 0;
+}
+
+.landing-subheading p span:nth-of-type(1) {
+    color: #187FE5;
+    text-shadow: #affbff 0 1px 0;
+}
+
+.landing-subheading p span:nth-of-type(3) {
+    color: #51d2bf;
+    text-shadow: #afffb3 0 1px 0;
+}
+
+.landing-subheading p span:nth-of-type(4) {
+    color: #8E0089;
+    text-shadow: #ffb3fe 0 1px 0;
+}
+
+
+
+
+.social-links li a {
+    box-shadow: 0 1px 0 0 #FAFAFA inset, 0 -2px 0 0 #D7D7D6 inset;
+    border: none;
+    background-color: #F2F1EF;
+
+}
+
+.image-container {
+    /*background-color: #E7E6E5;*/
+    box-shadow: 0 3px 0 0 #FAFAFA, 0 -4px 0 0 #A4A4A4;
+    width: 12rem;
+    height: 12rem;
+    padding: 1rem;
+    border-style: solid;
+    border-color: #F7F6F4;
+    border-width: 1px;
+    border-radius: 50%;
+    margin: 0 auto;
+
+    background: #F2F1EF;
+    /*border-radius: 100%;*/
+    box-shadow: inset -5.11px 5.11px 6px #FFFFFF, inset 5.11px -5.11px 6px #D1D0CF;
+    /*background: linear-gradient(145deg, #FFFFFF, #C5C4C2);*/
+    /*border-radius: 100%;*/
+    /*box-shadow: inset 5.11px 5.11px 6px #D1D0CF, inset -5.11px -5.11px 6px #FFFFFF;*/
+}
+
+.image-container > img {
+    height: 100%;
+}
+
+.tab-button span > i {
+    color: #D4D6D6;
+    text-shadow: 0 3px 0 0 #A4A4A4, 0 -4px 0 0 #fafafa;
+
+    /*font-family: "Major Mono Display", monospace;*/
+    font-size: 1.25rem;
+    z-index: 8;
+    /*text-shadow: #fff 0 1px 0;*/
+    -webkit-font-smoothing: antialiased;
+}
+
 /* ------------------------------------------------------------------ Vertical Scroller */
 
 #verticalScroller {
-    position: absolute;
+    margin: 0 auto;
+    position: relative;
     /*right: 0;*/
     /*padding-right: 1rem;*/
     width:400px;
@@ -804,7 +959,28 @@ button {
     height:auto;
     /*border: dotted white;*/
     /*box-shadow: 2px 2px 0 0 #FAFAFA;*/
+
 }
+
+/*Neumorphic shadow inspired by (https://css-tricks.com/neumorphism-and-css/)*/
+
+#verticalScroller .recent-activity > :first-child {
+    height: 100px;
+    border-width: 1px;
+    /*border-radius: 3px;*/
+    border-color: #F7F6F4;
+    background: #F2F1EF;
+
+    box-shadow: -5px 5px 6px 0 rgba(255, 255, 255, 0.5), 5px -5px 6px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+    box-shadow: inset -5px 5px 6px 0 rgba(255, 255, 255, 0.5), inset 5px -5px 6px 0 rgba(0, 0, 0, 0.2);
+
+
+
+    /*color: #5ab9ea;*/
+}
+
 
 /* ------------------------------------------------------------------ Shadows and Insets */
 
@@ -820,12 +996,42 @@ button {
     background-color: #F2F1EF;
 }
 
-.social-links li a {
-    box-shadow: 0 1px 0 0 #FAFAFA inset, 0 -2px 0 0 #D7D7D6 inset;
-    border: none;
-    background-color: #F2F1EF;
+/*----------------------------------------------------------- Landing and Title */
 
-}
+
+
+
+
+/*.shin-2 {*/
+/*    box-shadow: 0 3px 0 0 #D7D7D6 inset, 0 -4px 0 0 #FAFAFA inset;*/
+/*    border: none;*/
+/*}*/
+
+/*.shout-2 {*/
+/*    box-shadow: 0 3px 0 0 #FAFAFA inset, 0 -4px 0 0 #D7D7D6 inset;*/
+/*    border: none;*/
+/*}*/
+
+
+
+
+/*.landing-headline {*/
+/*    text-shadow: 0 1px 0 #fff;*/
+/*    -webkit-font-smoothing: antialiased;*/
+/*}*/
+
+
+/*.landing-headline  h1 {*/
+/*    color: #4F4F4F;*/
+/*    !*text-shadow: 3px 3px 0 0 #A4A4A4, -4px -4px 0 0 #fafafa;*!*/
+
+/*    !*font-family: "Major Mono Display", monospace;*!*/
+/*    !*font-size: 1.25rem;*!*/
+/*    !*text-shadow: #fff 0 1px 0;*!*/
+/*    -webkit-font-smoothing: antialiased;*/
+/*}*/
+
+
 
 .shin-1 {
     box-shadow: 0 1px 0 0 #D7D7D6 inset, 0 -2px 0 0 #FAFAFA inset;

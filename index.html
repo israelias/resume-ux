@@ -309,12 +309,13 @@
                         <!-- Landing 1 -->
                         <div class="col-12 col-md-12">
                             <div class="row">
-                                <div class="col-12 order-sm-2 col-sm-5">
+                                <div class="col-12 order-sm-2 col-sm-5 justify-content-between">
 
                                     <!-- Profile Picture -->
-                                    <div class="card-header pt-5 border-0 text-center">
-                                        <div class="spinner-grow" style="width: 8rem; height: 8rem;" role="status">
-                                            <span class="sr-only">image of owner</span>
+                                    <div class="landing-image card-header border-0 pt-5 text-center">
+                                        <div class="image-container">
+                                            <img src="assets/images/joem_elias_sanez_thumbnail.png"
+                                                 class="mt-1" alt="Profile photo of Joem Elias Sanez">
                                         </div>
                                     </div>
                                     <!-- /Profile Picture -->
@@ -324,8 +325,8 @@
                                 <div class="col-12 order-sm-1 col-sm-7">
 
                                     <!-- Landing Blurb -->
-                                    <div class="card-header pt-5 hg-black border-0">
-                                        <h1 class="pt-5">
+                                    <div class="card-header landing-heading pt-5 border-0">
+                                        <h1 class="pt-2 lh-1 display-5">
                                             Joem Elias Sanez is an architect and full stack developer based in Manila.
                                         </h1>
                                     </div>
@@ -338,15 +339,17 @@
                         <!-- /Landing 1 -->
 
                         <!-- Card Left -->
-                        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                        <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
                             <div class="row">
 
                                 <!-- Sub Blurb -->
-                                <div class="card-header" style="height: 130px;">
-                                    <p class="card-text mt-2 mb-3">
-                                        <small class="text-muted">
-                                            I’m currently focusing on BIM and the future of design from the backend of software development and open for collaboration.
-                                        </small>
+                                <div class="card-header landing-subheading border-0">
+                                    <p class="lh-2 mt-3 mb-3">
+                                        I’m <span>currently</span> focusing on <span>BIM</span> and the future of design
+                                        from
+                                        the
+                                        <span>backend</span> of
+                                        software development and open for <span>collaboration.</span>
                                     </p>
                                     <!-- Links -->
                                     <div class="col-12 col-sm-5 col-xl-4 pl-0 pr-0">
@@ -437,14 +440,12 @@
                                     <div class="d-none d-md-flex" id="verticalScroller">
 
                                         <!-- Commit Item -->
-                                        <div class="commit-activity">
-                                            <div
-                                                    class="list-group-item flex-column align-items-start pl-4 pr-4" style="height:100px; border-width: 1px; border-radius: 3px; border-color: #B6B6B6; background-color: #F7F6F4">
+                                        <div class="recent-activity">
+                                            <div class="list-group-item flex-column align-items-start pl-4 pr-4">
                                                 <div class="d-flex w-100 pt-1 justify-content-between">
                                                     <p class="mb-1">Add content requirements to README.md</p>
                                                 </div>
-                                                <div
-                                                        class="d-flex w-100 pt-1 pr-3 justify-content-between align-items-center">
+                                                <div class="d-flex w-100 pt-1 pr-3 justify-content-between align-items-center">
                                                     <img src="assets/images/joem_elias_sanez_thumbnail.png"
                                                          style="width: 30px;"
                                                          alt="GitHub profile photo">
@@ -459,8 +460,7 @@
                                                     <small class="mr-3">
                                                         Follow me on GitHub
                                                     </small>
-                                                    <a
-                                                            class="btn btn-floating shadow-2 btn-outline-dark"
+                                                    <a class="btn btn-floating shadow-2 btn-outline-dark"
                                                             href="https://github.com/israelias"
                                                             target="_blank"
                                                             role="button" style="background-color: #FAFBFC;
@@ -474,9 +474,9 @@
                                         <!-- /Commit Item -->
 
                                         <!-- Recommendation Item -->
-                                        <div class="commit-activity">
+                                        <div class="recent-activity">
                                             <div
-                                                    class="list-group-item flex-column align-items-start pl-3 pr-3 bg-transparent" style="height:100px; border-width: 1px; border-radius: 3px; border-color: #95989A;">
+                                                    class="list-group-item flex-column align-items-start pl-3 pr-3">
                                                 <div class="d-flex w-100 pt-1 justify-content-between">
                                                     <p class="font-italic mb-2"
                                                        style="font-size: 14px; font-weight: 300;">"What sets
@@ -517,8 +517,8 @@
                                         <!-- /Recommendation Item -->
 
                                         <!-- Project Item -->
-                                        <div class="commit-activity">
-                                            <div class="list-group-item flex-column align-items-start pl-4 pr-4" style="height:100px; border-width: 1px; border-radius: 3px; border-color: #95989A;">
+                                        <div class="recent-activity">
+                                            <div class="list-group-item flex-column align-items-start pl-4 pr-4">
                                                 <div
                                                         class="d-flex w-100 pt-1 justify-content-between align-items-center pr-0 mb-2">
                                                     <i class="fas fa-history">
@@ -812,7 +812,8 @@
                                             <h4>
                                                 PROFICIENCY
                                             </h4>
-                                            <i class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
+                                            <i
+                                                    class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
                                         </span>
                                     </button>
                                 </div>
