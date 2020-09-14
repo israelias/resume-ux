@@ -5,7 +5,6 @@
 /*----------------------------------------------------------- Color Rules */
 
 body {
-    /*background-color: #27274d;*/
     background-color: #F2F1EF;
 }
 
@@ -122,20 +121,12 @@ body {
     padding-right: 0;
 }
 
-.container {
-    /*margin-right: 0;*/
-    /*margin-left: 0;*/
-}
-
 .row {
     margin-left: 0;
     margin-right: 0;
 }
 
 [class*="col"]{
-    /*border: 1px solid #707070;*/
-    /*background-color: rgb(100, 0, 228);*/
-    /*color: rgb(255, 255, 255);*/
     padding-left: 0;
     padding-right: 0;
 }
@@ -156,16 +147,6 @@ body {
     /*border-top: none;*/
 }
 
-.card-body {
-    box-shadow: 0 16px 24px 0 rgba(0, 0, 0, .2);
-}
-
-.card-header {
-    box-shadow: 0 16px 24px 0 rgba(0, 0, 0, .2);
-    border-radius: 0;
-    /*padding: .25rem .75rem;*/
-}
-
 .card-header:first-child,
 .card-footer:last-child,
 .card-body[class*=bg-] {
@@ -176,20 +157,6 @@ body {
 .card-left > .card-header,
 .card-left > .card-body {
     box-shadow: none;
-}
-
-.card-left > .card-footer {
-    /*box-shadow: 0 16px 24px 0 rgba(0, 0, 0, .2);*/
-}
-
-.card-left > .card-header {
-    color: #fafafa;
-}
-
-.card-left > .card-header,
-.card-left > .card-body,
-.main-tab {
-    /*border: 1px solid #707070;*/
 }
 
 .card.card-right,
@@ -207,57 +174,16 @@ body {
 .card-right .card-header {
     border-bottom: none;
 }
-
-/*.card-right .card-header {*/
-/*    position: relative;*/
-/*    height: 30px;*/
-/*    left: 50%;*/
-/*    padding: 3px 20px 10px 20px;*/
-/*    border: 1px solid #707070;*/
-/*    border-bottom: none;*/
-/*    border-radius: 1rem 0 0 0;*/
-/*    -webkit-border-radius: 1rem 0 0 0;*/
-/*    -moz-border-radius: 1rem 0 0 0;*/
-/*    width: 50%;*/
-/*}*/
-
-/*.card-right .card-header:before {*/
-
-/*}*/
-
 /*----------------------------------------------------------- Font Rules */
 
-p {
-    /*font-size: 0.875rem;*/
-    /*font-weight: 300;*/
-}
-
-
-.accordion {
-    /*box-shadow: -10px 0 0 0 #000;*/
-}
-
-.main-body {
-    border-right: 10px solid #27274d;
-}
-
-.bg-body {
-    background-color: #27274d;
-}
-
-.about-section .card-header {
-    background-color: #27274d;
-}
-
-.about-section .card-body {
-    background-color: #B84A30;
-}
 
 a > h3, a > h1 {
     color: #fafafa;
 }
 
 /*------------------------------------------------------------------------------- ELEMENT BEHAVIOR */
+
+
 /*----------------------------------------------------------- Tab Button Containers */
 
 button {
@@ -274,7 +200,6 @@ button {
 
 [id^="heading"] > .row {
     overflow: hidden;
-    height: 30px;
     /*padding-left: 10px;*/
     /*margin-left: -10px;*/
     /*border-left: 10px solid #000;*/
@@ -286,308 +211,353 @@ button {
     position: relative;
 }
 
-.tab-button .btn {
-    margin-top: 5px;
-    height: 30px;
-    float: left;
-    padding: 3px 20px 10px 20px;
-    border: 1px solid #707070;
-    border-bottom: none;
-    border-radius: 1rem 1rem 0 0;
-    -webkit-border-radius: 1rem 1rem 0 0;
-    -moz-border-radius: 1rem 1rem 0 0;
-    width: 100%;
+@media (max-width: 575.98px) {
 
-    box-shadow: 0 -5px 0 0 #fafafa, 200px 40px 0 0 #fafafa;
+    [aria-labelledby^="heading"]:not([aria-labelledby$="Zero"]) {
+        /*position: relative;*/
+        height: 60vh;
+        overflow-x: scroll;
+
+    }
+
+    [id^="heading"] > .row {
+        height: 40px;
+        /*padding-left: 10px;*/
+        /*margin-left: -10px;*/
+        /*border-left: 10px solid #000;*/
+        /*box-sizing: content-box;*/
+    }
+
+    .tab-button .btn {
+        font-size: .875rem;
+        margin-top: 8px;
+        height: 32px;
+        float: left;
+        padding: 3px 40px 10px 10px;
+        border-left: 1px solid #707070;
+        /*border-bottom: none;*/
+        border-radius: 1rem 1rem 0 0;
+        -webkit-border-radius: 1rem 1rem 0 0;
+        -moz-border-radius: 1rem 1rem 0 0;
+        width: 100%;
+
+        box-shadow: -5px -10px 0 0 #fafafa, 200px 40px 0 0 #fafafa;
+    }
+
+    .tab-stack:after,
+    .tab-button:after {
+        position: absolute;
+        bottom: 0;
+        content: "";
+
+        right: -1599px;
+        width: 1600px;
+        height: 20px;
+        border-bottom-left-radius: 1rem;
+
+        /*border: 1px solid #A4A4A4;*/
+        border-top: none;
+
+        background-color: transparent;
+        box-shadow: -25px 0 0 0 #F2F1EF, -2px -5px 0 0 #BFBFBF inset, -2px -10px 0 0 #D7D7D6 inset, -2px -15px 0 0 #EFEEEC inset, 8px -57px 0 0 #FAFAFA;
+    }
+
+    [id$="Zero"] .tab-button .btn {
+        box-shadow: -5px -8px 0 0 #000;
+    }
+
+    [id$="One"] .tab-button .btn {
+        box-shadow: -5px -8px 0 0 #423C3A;
+    }
+
+    [id$="Two"] .tab-button .btn {
+        box-shadow: -5px -8px 0 0 #B84A30;
+    }
+
+    [id$="Three"] .tab-button .btn {
+        box-shadow: -5px -8px 0 0 #1D49B8;
+    }
+
+    [id$="Four"] .tab-button .btn {
+        box-shadow: -5px -8px 0 0 #B8A922;
+    }
+
+    [id$="Five"] .tab-button .btn {
+        box-shadow: -5px -8px 0 0 #234D3E;
+    }
+
+    [id$="Six"] .tab-button .btn {
+        box-shadow: -5px -8px 0 0 #3E223D, 200px 40px 0 0 #3E223D;
+    }
+
+    [id^="collapse"] .card-right .card-body,
+    [id^="collapse"] .card-right .card-header {
+        box-shadow: none;
+    }
 }
-
-.tab-button .btn:before {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: "";
-    height: 50px;
-    width: 100%;
-
-    box-shadow: -5px -10px 0 0 rgba(0,0,0,.2), 200px 40px 0 0 rgba(0,0,0,.2);
-    border-radius: 1.5rem 1.5rem 0 0;
-    -webkit-border-radius: 1.5rem 1.5rem 0 0;
-    -moz-border-radius: 1.5rem 1.5rem 0 0;
-}
-
-.tab-stack:after,
-.tab-button:after {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    content: "";
-
-    right: -499px;
-    width: 500px;
-    height: 25px;
-    border-bottom-left-radius: 1.875rem;
-
-    border: 1px solid #707070;
-    border-top: none;
-
-    background-color: transparent;
-    box-shadow: -25px 0 0 0 #2E2C2E, -2px -10px 0 0 white inset;
-}
-
-.tab-stack:after {
-    z-index: 1;
-}
-
-/*#el {*/
-/*    --box-shadow-color: palegoldenrod;*/
-/*    box-shadow: 1px 2px 3px var(--box-shadow-color);*/
-/*}*/
-
-/*#el:hover {*/
-/*    --box-shadow-color: goldenrod;*/
-/*}*/
 
 /* ------------------------------------------------------------------------------- TAB ZERO */
 
-[id$="Zero"]:not([id^="collapse"]) > .row {
-    background: #F5F4F2;
-}
+/*[id$="Zero"]:not([id^="collapse"]) > .row {*/
+/*    background: #F5F4F2;*/
+/*}*/
 
-[id$="Zero"] .btn,
-[id$="Zero"] .card-left .card-header,
-[id$="Zero"] .card-left > .card-footer {
-    background: #2E2C2E;
-}
+/*[id$="Zero"] .btn,*/
+/*[id$="Zero"] .card-left .card-header,*/
+/*[id$="Zero"] .card-left > .card-footer {*/
+/*    background: #2E2C2E;*/
+/*}*/
 
-[id$="Zero"] .tab-button .btn:before {
-    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1);
-}
+/*[id$="Zero"] .tab-button .btn:before {*/
+/*    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1);*/
+/*}*/
 
-[id$="Zero"] .tab-button:after {
-    box-shadow: -25px 0 0 0 #2E2C2E, -2px -10px 0 0 #F5F4F2 inset;
-}
+/*[id$="Zero"] .tab-button:after {*/
+/*    box-shadow: -25px 0 0 0 #2E2C2E, -2px -10px 0 0 #F5F4F2 inset;*/
+/*}*/
 
-[id$="Zero"] .tab-stack:after {
-    box-shadow: -25px 0 0 0 #2E2C2E, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;
-}
+/*[id$="Zero"] .tab-stack:after {*/
+/*    box-shadow: -25px 0 0 0 #2E2C2E, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;*/
+/*}*/
 
 /* ------------------------------------------------------------------------------- TAB ONE */
 
-[id$="One"]:not([id^="collapse"]) > .row {
-    background: #2E2C2E;
-}
+/*[id$="One"]:not([id^="collapse"]) > .row {*/
+/*    background: #2E2C2E;*/
+/*}*/
 
-[id$="One"] .btn,
-[id$="One"] .card-left .card-header,
-[id$="One"] .card-left > .card-footer,
-[id$="One"] .card-right > .card-footer {
-    background: #2E2C2E;
-}
+/*[id$="One"] .btn,*/
+/*[id$="One"] .card-left .card-header,*/
+/*[id$="One"] .card-left > .card-footer,*/
+/*[id$="One"] .card-right > .card-footer {*/
+/*    background: #2E2C2E;*/
+/*}*/
 
-[id$="One"] .btn {
-    box-shadow: 0 -5px 0 0 #423c3a, 200px 40px 0 0 #423c3a;
-}
+/*[id$="One"] .btn {*/
+/*    box-shadow: 0 -5px 0 0 #423c3a, 200px 40px 0 0 #423c3a;*/
+/*}*/
 
-[id$="One"] .tab-button .btn:before {
-    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1);
-}
+/*[id$="One"] .tab-button .btn:before {*/
+/*    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1);*/
+/*}*/
 
-[id$="One"] .tab-button:after {
-    box-shadow: -25px 0 0 0 #2E2C2E, -2px -10px 0 0 #423c3a inset;
-}
+/*[id$="One"] .tab-button:after {*/
+/*    box-shadow: -25px 0 0 0 #2E2C2E, -2px -10px 0 0 #423c3a inset;*/
+/*}*/
 
-[id$="One"] .tab-stack:after {
-    box-shadow: -25px 0 0 0 #2E2C2E, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;
-}
+/*[id$="One"] .tab-stack:after {*/
+/*    box-shadow: -25px 0 0 0 #2E2C2E, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;*/
+/*}*/
 
-[id$="One"] .card-right .card-body,
-[id$="One"] .card-right .card-header {
-    box-shadow: 5px 0 0 0 #2E2C2E inset, -5px 0 0 0 #2E2C2E inset;
-}
+/*[id$="One"] .card-right .card-body,*/
+/*[id$="One"] .card-right .card-header {*/
+/*    box-shadow: 5px 0 0 0 #2E2C2E inset, -5px 0 0 0 #2E2C2E inset;*/
+/*}*/
 
 /* ------------------------------------------------------------------------------- TAB TWO */
 
-[id$="Two"]:not([id^="collapse"]) > .row {
-    background: #2E2C2E;
-}
+/*[id$="Two"]:not([id^="collapse"]) > .row {*/
+/*    background: #2E2C2E;*/
+/*}*/
 
-[id$="Two"] .btn,
-[id$="Two"] .card-left .card-header,
-[id$="Two"] .card-left > .card-footer,
-[id$="Two"] .card-right > .card-footer {
-    background: #89413D;
-}
+/*[id$="Two"] .btn,*/
+/*[id$="Two"] .card-left .card-header,*/
+/*[id$="Two"] .card-left > .card-footer,*/
+/*[id$="Two"] .card-right > .card-footer {*/
+/*    background: #89413D;*/
+/*}*/
 
-[id$="Two"] .btn {
-    box-shadow: 0 -5px 0 0 #B84A30, 200px 40px 0 0 #B84A30;
-}
+/*[id$="Two"] .btn {*/
+/*    box-shadow: 0 -5px 0 0 #B84A30, 200px 40px 0 0 #B84A30;*/
+/*}*/
 
-[id$="Two"] .tab-button .btn:before {
-    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1), 200px 40px 0 0 rgba(184, 74, 48, .1);
-}
+/*[id$="Two"] .tab-button .btn:before {*/
+/*    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1), 200px 40px 0 0 rgba(184, 74, 48, .1);*/
+/*}*/
 
-[id$="Two"] .tab-button:after {
-    box-shadow: -25px 0 0 0 #89413D, -2px -10px 0 0 #B84A30 inset;
-}
+/*[id$="Two"] .tab-button:after {*/
+/*    box-shadow: -25px 0 0 0 #89413D, -2px -10px 0 0 #B84A30 inset;*/
+/*}*/
 
-[id$="Two"] .tab-stack:after {
-    box-shadow: -25px 0 0 0 #89413D, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;
-}
+/*[id$="Two"] .tab-stack:after {*/
+/*    box-shadow: -25px 0 0 0 #89413D, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;*/
+/*}*/
 
-[id$="Two"] .card-right .card-body,
-[id$="Two"] .card-right .card-header {
-    box-shadow: 5px 0 0 0 #89413D inset, -5px 0 0 0 #89413D inset;
+/*[id$="Two"] .card-right .card-body,*/
+/*[id$="Two"] .card-right .card-header {*/
+/*    box-shadow: 5px 0 0 0 #89413D inset, -5px 0 0 0 #89413D inset;*/
 }
 
 /* ------------------------------------------------------------------------------- TAB THREE */
 
-[id$="Three"]:not([id^="collapse"]) > .row {
-    background: #89413D;
-}
+/*[id$="Three"]:not([id^="collapse"]) > .row {*/
+/*    background: #89413D;*/
+/*}*/
 
-[id$="Three"] .btn,
-[id$="Three"] .card-left .card-header,
-[id$="Three"] .card-left > .card-footer,
-[id$="Three"] .card-right > .card-footer {
-    background: #37455C;
-}
+/*[id$="Three"] .btn,*/
+/*[id$="Three"] .card-left .card-header,*/
+/*[id$="Three"] .card-left > .card-footer,*/
+/*[id$="Three"] .card-right > .card-footer {*/
+/*    background: #37455C;*/
+/*}*/
 
-[id$="Three"] .btn {
-    box-shadow: 0 -5px 0 0 #37455C, 200px 40px 0 0 #1D49B8;
-}
+/*[id$="Three"] .card-headline {*/
+/*    color: #FAFAFA;*/
+/*    background-image: url("../images/blue_med_sm.png");*/
+/*    background-attachment: scroll;*/
+/*    background-position: left top;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 100%;*/
 
-[id$="Three"] .tab-button .btn:before {
-    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1);
-}
+/*}*/
 
-[id$="Three"] .tab-button:after {
-    box-shadow: -25px 0 0 0 #37455C, -2px -10px 0 0 #1D49B8 inset;
-}
+/*[id$="Three"] .tab-button .btn:hover,*/
+/*[id$="Three"] .tab-button .btn:current,*/
+/*[id$="Three"] .tab-button .btn:visited,*/
+/*[id$="Three"] .tab-button .btn:active {*/
+/*    background: #37455C;*/
+/*    z-index: 2;*/
+/*}*/
 
-[id$="Three"] .tab-stack:after {
-    box-shadow: -25px 0 0 0 #37455C, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;
-}
+/*[id$="Three"] .tab-button:hover::after,*/
+/*[id$="Three"] .tab-button:visited::after,*/
+/*[id$="Three"] .tab-button:active::after {*/
+/*    box-shadow: -25px 0 0 0 #37455C, -2px -5px 0 0 #89413D inset;*/
+/*}*/
 
-[id$="Three"] .card-right .card-body,
-[id$="Three"] .card-right .card-header {
-    box-shadow: 5px 0 0 0 #37455C inset, -5px 0 0 0 #37455C inset;
-}
+/*[id$="Three"] .btn {*/
+/*    box-shadow: 0 -5px 0 0 #37455C, 200px 40px 0 0 #1D49B8;*/
+/*}*/
+
+/*[id$="Three"] .tab-button .btn:before {*/
+/*    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1);*/
+/*}*/
+
+/*[id$="Three"] .tab-button:after {*/
+/*    box-shadow: -25px 0 0 0 #37455C, -2px -10px 0 0 #1D49B8 inset;*/
+/*}*/
+
+/*[id$="Three"] .tab-stack:after {*/
+/*    box-shadow: -25px 0 0 0 #37455C, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;*/
+/*}*/
+
+/*[id$="Three"] .card-right .card-body,*/
+/*[id$="Three"] .card-right .card-header {*/
+/*    box-shadow: 5px 0 0 0 #37455C inset, -5px 0 0 0 #37455C inset;*/
+/*}*/
 
 /* ------------------------------------------------------------------------------- TAB FOUR */
 
-[id$="Four"]:not([id^="collapse"]) > .row {
-    background: #37455C;
-}
+/*[id$="Four"]:not([id^="collapse"]) > .row {*/
+/*    background: #37455C;*/
+/*}*/
 
-[id$="Four"] .btn,
-[id$="Four"] .card-left .card-header,
-[id$="Four"] .card-left > .card-footer,
-[id$="Four"] .card-right > .card-footer {
-    background: #D27511;
-}
+/*[id$="Four"] .btn,*/
+/*[id$="Four"] .card-left .card-header,*/
+/*[id$="Four"] .card-left > .card-footer,*/
+/*[id$="Four"] .card-right > .card-footer {*/
+/*    background: #D27511;*/
+/*}*/
 
-[id$="Four"] .btn {
-    box-shadow: 0 -5px 0 0 #B8A922, 200px 40px 0 0 #B8A922;
-}
+/*[id$="Four"] .btn {*/
+/*    box-shadow: 0 -5px 0 0 #B8A922, 200px 40px 0 0 #B8A922;*/
+/*}*/
 
-[id$="Four"] .tab-button .btn:before {
-    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1);
-}
+/*[id$="Four"] .tab-button .btn:before {*/
+/*    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1);*/
+/*}*/
 
-[id$="Four"] .tab-button:after {
-    box-shadow: -25px 0 0 0 #D27511, -2px -10px 0 0 #B8A922 inset;
-}
+/*[id$="Four"] .tab-button:after {*/
+/*    box-shadow: -25px 0 0 0 #D27511, -2px -10px 0 0 #B8A922 inset;*/
+/*}*/
 
-[id$="Four"] .tab-stack:after {
-    box-shadow: -25px 0 0 0 #D27511, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;
-}
+/*[id$="Four"] .tab-stack:after {*/
+/*    box-shadow: -25px 0 0 0 #D27511, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;*/
+/*}*/
 
-[id$="Four"] .card-right .card-body,
-[id$="Four"] .card-right .card-header {
-    box-shadow: 5px 0 0 0 #D27511 inset, -5px 0 0 0 #D27511 inset;
-}
+/*[id$="Four"] .card-right .card-body,*/
+/*[id$="Four"] .card-right .card-header {*/
+/*    box-shadow: 5px 0 0 0 #D27511 inset, -5px 0 0 0 #D27511 inset;*/
+/*}*/
 
 /* ------------------------------------------------------------------------------- TAB FIVE */
 
-[id$="Five"]:not([id^="collapse"]) > .row {
-    background: #D27511;
-}
+/*[id$="Five"]:not([id^="collapse"]) > .row {*/
+/*    background: #D27511;*/
+/*}*/
 
-[id$="Five"] .btn,
-[id$="Five"] .card-left .card-header,
-[id$="Five"] .card-left > .card-footer,
-[id$="Five"] .card-right > .card-footer {
-    background: #213128;
-}
+/*[id$="Five"] .btn,*/
+/*[id$="Five"] .card-left .card-header,*/
+/*[id$="Five"] .card-left > .card-footer,*/
+/*[id$="Five"] .card-right > .card-footer {*/
+/*    background: #213128;*/
+/*}*/
 
-[id$="Five"] .btn {
-    box-shadow: 0 -5px 0 0 #234D3E, 200px 40px 0 0 #234D3E;
-}
+/*[id$="Five"] .btn {*/
+/*    box-shadow: 0 -5px 0 0 #234D3E, 200px 40px 0 0 #234D3E;*/
+/*}*/
 
-[id$="Five"] .tab-button .btn:before {
-    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1);
-}
+/*[id$="Five"] .tab-button .btn:before {*/
+/*    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1);*/
+/*}*/
 
-[id$="Five"] .tab-button:after {
-    box-shadow: -25px 0 0 0 #213128, -2px -10px 0 0 #234D3E inset;
-}
+/*[id$="Five"] .tab-button:after {*/
+/*    box-shadow: -25px 0 0 0 #213128, -2px -10px 0 0 #234D3E inset;*/
+/*}*/
 
-[id$="Five"] .tab-stack:after {
-    box-shadow: -25px 0 0 0 #213128, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;
-}
+/*[id$="Five"] .tab-stack:after {*/
+/*    box-shadow: -25px 0 0 0 #213128, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;*/
+/*}*/
 
-[id$="Five"] .card-right .card-body,
-[id$="Five"] .card-right .card-header {
-    box-shadow: 5px 0 0 0 #213128 inset, -5px 0 0 0 #213128 inset;
-}
+/*[id$="Five"] .card-right .card-body,*/
+/*[id$="Five"] .card-right .card-header {*/
+/*    box-shadow: 5px 0 0 0 #213128 inset, -5px 0 0 0 #213128 inset;*/
+/*}*/
 
 /* ------------------------------------------------------------------------------- TAB SIX */
 
-[id$="Six"]:not([id^="collapse"]) > .row {
-    background: #213128;
-}
+/*[id$="Six"]:not([id^="collapse"]) > .row {*/
+/*    background: #213128;*/
+/*}*/
 
-[id$="Six"] .btn,
-[id$="Six"] .card-left .card-header,
-[id$="Six"] .card-left > .card-footer,
-[id$="Six"] .card-right > .card-footer {
-    background: #2E2C2E;
-}
+/*[id$="Six"] .btn,*/
+/*[id$="Six"] .card-left .card-header,*/
+/*[id$="Six"] .card-left > .card-footer,*/
+/*[id$="Six"] .card-right > .card-footer {*/
+/*    background: #2E2C2E;*/
+/*}*/
 
-[id$="Six"] .btn {
-    box-shadow: 0 -5px 0 0 #3E223D, 200px 40px 0 0 #3E223D;
-}
+/*[id$="Six"] .btn {*/
+/*    box-shadow: 0 -5px 0 0 #3E223D, 200px 40px 0 0 #3E223D;*/
+/*}*/
 
-[id$="Six"] .tab-button .btn:before {
-    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1);
-}
+/*[id$="Six"] .tab-button .btn:before {*/
+/*    box-shadow: -5px -10px 0 0 rgba(250, 250, 250, 1);*/
+/*}*/
 
-[id$="Six"] .tab-button:after {
-    box-shadow: -25px 0 0 0 #2E2C2E, -2px -10px 0 0 #3E223D inset;
-}
+/*[id$="Six"] .tab-button:after {*/
+/*    box-shadow: -25px 0 0 0 #2E2C2E, -2px -10px 0 0 #3E223D inset;*/
+/*}*/
 
-[id$="Six"] .tab-stack:after {
-    box-shadow: -25px 0 0 0 #2E2C2E, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;
-}
+/*[id$="Six"] .tab-stack:after {*/
+/*    box-shadow: -25px 0 0 0 #2E2C2E, -2px -10px 0 0 rgba(250, 250, 250, .3) inset;*/
+/*}*/
 
-[id$="Six"] .card-right .card-body,
-[id$="Six"] .card-right .card-header {
-    box-shadow: 5px 0 0 0 #2E2C2E inset, -5px 0 0 0 #2E2C2E inset;
-}
+/*[id$="Six"] .card-right .card-body,*/
+/*[id$="Six"] .card-right .card-header {*/
+/*    box-shadow: 5px 0 0 0 #2E2C2E inset, -5px 0 0 0 #2E2C2E inset;*/
+/*}*/
 
 /* ------------------------------------------------------------------ Media Queries */
 
+@media (max-width: 575.98px) { ... }
+
 @media (min-width: 576px) {
-    [id*="heading"] .tab-stack:after {
-        display: block;
-    }
-    [id*="heading"] .tab-button:after {
-        display: block;
-    }
+
     [id^="heading"] > .row {
         height: 60px;
     }
+
     .tab-button .btn {
         box-shadow: -5px -10px 0 0 #fafafa, 200px 40px 0 0 #fafafa;
         margin-top: 10px;
@@ -601,35 +571,70 @@ button {
         -moz-border-radius: 1.5rem 1.5rem 0 0;
         width: 100%;
     }
+
     .tab-button .btn:before {
-        display: block;
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        height: 50px;
+        width: 100%;
+
+        box-shadow: -5px -10px 0 0 rgba(0,0,0,.2), 200px 40px 0 0 rgba(0,0,0,.2);
+        border-radius: 1.5rem 1.5rem 0 0;
+        -webkit-border-radius: 1.5rem 1.5rem 0 0;
+        -moz-border-radius: 1.5rem 1.5rem 0 0;
     }
 
-    [id$="Zero"] .btn {
+    .tab-stack:after,
+    .tab-button:after {
+        position: absolute;
+        bottom: 0;
+        content: "";
+
+        right: -1599px;
+        width: 1600px;
+        height: 25px;
+        border-bottom-left-radius: 1.875rem;
+
+        border: 1px solid #A4A4A4;
+        border-top: none;
+
+        background-color: transparent;
+        box-shadow: -25px 0 0 0 #F2F1EF, -2px -5px 0 0 #BFBFBF inset, -2px -10px 0 0 #D7D7D6 inset, -2px -15px 0 0 #EFEEEC inset, 8px -57px 0 0 #FAFAFA;
+    }
+
+    .tab-stack:after {
+        /*box-shadow: -25px 0 0 0 #F2F1EF, -2px -10px 0 0 #D7D7D6 inset;*/
+        z-index: 1;
+    }
+
+    [id$="Zero"] .tab-button .btn {
         box-shadow: -5px -10px 0 0 #000, 200px 40px 0 0 #000;
     }
 
-    [id$="One"] .btn {
+    [id$="One"] .tab-button .btn {
         box-shadow: -5px -10px 0 0 #423C3A, 200px 40px 0 0 #423C3A;
     }
 
-    [id$="Two"] .btn {
+    [id$="Two"] .tab-button .btn {
         box-shadow: -5px -10px 0 0 #B84A30, 200px 40px 0 0 #B84A30;
     }
 
-    [id$="Three"] .btn {
+    [id$="Three"] .tab-button .btn {
         box-shadow: -5px -10px 0 0 #1D49B8, 200px 40px 0 0 #1D49B8;
     }
 
-    [id$="Four"] .btn {
+    [id$="Four"] .tab-button .btn {
         box-shadow: -5px -10px 0 0 #B8A922, 200px 40px 0 0 #B8A922;
     }
 
-    [id$="Five"] .btn {
+    [id$="Five"] .tab-button .btn {
         box-shadow: -5px -10px 0 0 #234D3E, 200px 40px 0 0 #234D3E;
     }
 
-    [id$="Six"] .btn {
+    [id$="Six"] .tab-button .btn {
         box-shadow: -5px -10px 0 0 #3E223D, 200px 40px 0 0 #3E223D;
     }
 
@@ -663,4 +668,27 @@ button {
     -ms-transform:     rotate(180deg);
     -o-transform:      rotate(180deg);
     transform:         rotate(180deg);
+}
+
+
+/* ------------------------------------------------------------------ Vertical Scroller */
+
+#verticalScroller {
+    position: absolute;
+    /*right: 0;*/
+    /*padding-right: 1rem;*/
+    width:400px;
+    height: 150px;
+    /*border: 1px solid red;*/
+    overflow: hidden;
+    background: transparent;
+}
+
+#verticalScroller > div {
+    position:absolute;
+    width: 400px;
+    /*padding: 10px 0 10px 0;*/
+    height:auto;
+    /*border: dotted white;*/
+    /*box-shadow: 2px 2px 0 0 #FAFAFA;*/
 }
