@@ -174,6 +174,11 @@ body {
 .card-right .card-header {
     border-bottom: none;
 }
+
+.card-right .card-header h4 {
+
+}
+
 /*----------------------------------------------------------- Font Rules */
 
 
@@ -817,6 +822,36 @@ button {
     }
 }
 
+.footer-stack,
+.footer-stack-right,
+.footer-stack-left {
+    /*box-shadow: -25px 0 0 0 #F2F1EF, -2px -10px 0 0 #D7D7D6 inset;*/
+
+    bottom: 0;
+    content: "";
+
+    overflow-x: hidden;
+    background: #F2F1EF;
+    border: none;
+
+    box-shadow: -5px 5px 6px 0 rgba(255, 255, 255, 0.5), 5px -5px 6px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset -5px 5px 6px 0 rgba(255, 255, 255, 0.5), inset 5px -5px 6px 0 rgba(0, 0, 0, 0.2);
+
+    z-index: 1;
+}
+
+.footer-stack-right {
+    border-bottom-left-radius: 1.875rem;
+    /*border-top-left-radius: 1.875rem;*/
+}
+
+.footer-stack-left {
+    border-bottom-right-radius: 1.875rem;
+    /*border-top-right-radius: 1.875rem;*/
+}
+
+
+
 @media (min-width: 768px) {
     [id^="collapse"] .card-right .card-body {
         border: none;
@@ -894,14 +929,57 @@ button {
 }
 
 
-
-
 .social-links li a {
-    box-shadow: 0 1px 0 0 #FAFAFA inset, 0 -2px 0 0 #D7D7D6 inset;
-    border: none;
-    background-color: #F2F1EF;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    box-shadow: none;
+}
+
+.social-links li a i {
+    text-align: center;
+    color: #D4D6D6;
+    text-shadow: 0 3px 0 0 #A4A4A4, 0 -4px 0 0 #fafafa;
+
+    /*font-family: "Major Mono Display", monospace;*/
+    font-size: 1.25rem;
+    z-index: 8;
+    /*text-shadow: #fff 0 1px 0;*/
+    -webkit-font-smoothing: antialiased;
+
+    /*box-shadow: 0 1px 0 0 #FAFAFA inset, 0 -2px 0 0 #D7D7D6 inset;*/
+    /*border: none;*/
+    /*background-color: #F2F1EF;*/
 
 }
+
+.social-links li a:hover,
+.social-links li a:active,
+.social-links li a:focus {
+    color: #F2F1EF;
+}
+
+/*.btn--cta {*/
+/*    font-weight: bold;*/
+/*    border-radius: 23px;*/
+/*    width: 160px;*/
+
+/*}*/
+
+/*.btn--red {*/
+/*    color: white;*/
+/*    background-color: #f05f40;*/
+/*    border-color: #f05f40;*/
+/*}*/
+
+/*.btn--red:hover,*/
+/*.btn--red:active,*/
+/*.btn--red:focus,*/
+/*.btn--red:active:focus {*/
+/*    background-color: #df4929;*/
+/*    border-color: #df4929;*/
+/*}*/
 
 .image-container {
     /*background-color: #E7E6E5;*/
