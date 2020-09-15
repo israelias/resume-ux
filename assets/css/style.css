@@ -1116,6 +1116,32 @@ button {
 
 /*----------------------------------------------------------- Landing and Title */
 
+/*GitHub styles*/
+
+.repo-color {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.repo-html{
+    color: #E14C30;
+}
+
+.repo-css {
+    color: #543D76;
+}
+
+.repo-python {
+    color: #3973A3;
+}
+
+.repo-javascript {
+    color: #F1DF64;
+}
 
 .shin-1 {
     box-shadow: 0 1px 0 0 #D7D7D6 inset, 0 -2px 0 0 #FAFAFA inset;
