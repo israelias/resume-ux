@@ -961,8 +961,8 @@ button {
 .image-container {
     /*background-color: #E7E6E5;*/
     box-shadow: 0 3px 0 0 #FAFAFA, 0 -4px 0 0 #A4A4A4;
-    width: 12rem;
-    height: 12rem;
+    width: 13rem;
+    height: 13rem;
     padding: 1rem;
     border-style: solid;
     border-color: #F7F6F4;
@@ -971,11 +971,12 @@ button {
     margin: 0 auto;
 
     background: #F2F1EF;
+    /*CDCABB*/
     /*border-radius: 100%;*/
     box-shadow: inset -5.11px 5.11px 6px #FFFFFF, inset 5.11px -5.11px 6px #D1D0CF;
     /*background: linear-gradient(145deg, #FFFFFF, #C5C4C2);*/
     /*border-radius: 100%;*/
-    /*box-shadow: inset 5.11px 5.11px 6px #D1D0CF, inset -5.11px -5.11px 6px #FFFFFF;*/
+    box-shadow: inset 5.11px 5.11px 6px #D1D0CF, inset -5.11px -5.11px 6px #FFFFFF;
 }
 
 .image-container > img {
@@ -1023,12 +1024,19 @@ button {
     margin: 0 auto;
     position: relative;
     /*right: 0;*/
-    /*padding-right: 1rem;*/
-    width:400px;
+    /*padding-right: .5rem;*/
+    /*padding-left: .5rem;*/
+    /*padding-top: .5rem;*/
+    width: 400px;
     height: 150px;
     /*border: 1px solid red;*/
     overflow: hidden;
     background: transparent;
+
+    box-shadow: inset -5px 5px 6px 0 rgba(255, 255, 255, 0.5), inset 5px -5px 6px 0 rgba(0, 0, 0, 0.2);
+    /*box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 5px 8px 6px 0 rgba(0, 0, 0, 0.3);*/
+    border-radius: .75rem;
+
 }
 
 #verticalScroller > div {
@@ -1047,40 +1055,64 @@ button {
     height: 100px;
     border-width: 1px;
     /*border-radius: 3px;*/
-    border-color: #F7F6F4;
+    /*border-color: #F7F6F4;*/
+    
     background: #F2F1EF;
+    /*background: #CDCABB;*/
+    /*background: transparent;*/
 
-    box-shadow: -5px 5px 6px 0 rgba(255, 255, 255, 0.5), 5px -5px 6px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
+    z-index: 10;
+
+    /*box-shadow: -5px 5px 6px 0 rgba(255, 255, 255, 0.5), 5px -5px 6px 0 rgba(0, 0, 0, 0.2);*/
+    /*border-radius: 20px;*/
 
     box-shadow: inset -5px 5px 6px 0 rgba(255, 255, 255, 0.5), inset 5px -5px 6px 0 rgba(0, 0, 0, 0.2);
 
+    /*box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 5px 8px 6px 0 rgba(0, 0, 0, 0.3);*/
+
+
 }
+
+/*.inset-container-6 {*/
+/*    width: min-content;*/
+/*    margin-top: 5px;*/
+/*    padding-top: 5px;*/
+/*    !*overflow: hidden;*!*/
+/*    padding: .5rem;*/
+/*    box-shadow: 5px 5px 6px 0 rgba(255, 255, 255, 0.5), -5px -5px 6px 0 rgba(0, 0, 0, 0.2);*/
+/*    border-radius: .75rem;*/
+
+/*    box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 5px 8px 6px 0 rgba(0, 0, 0, 0.3);*/
+/*}*/
 
 ul {
     margin-block-end: 0;
 }
 
 .outset-outer {
+    /*overflow: hidden;*/
     width: 100%;
     height: 100%;
     clip-path: inset(-.5rem);
     padding: 0;
 }
 
+.out-z {
+    z-index: 5;
+}
+
 .outset-container {
     overflow: hidden;
-    padding: .5rem;
+    /*padding: .5rem;*/
 
-    /*box-shadow: -5px -5px 6px 0 rgba(255, 255, 255, 0.5), 5px 5px 6px 0 rgba(0, 0, 0, 0.2);*/
     border-radius: .6rem;
     border-color: #F2F1EF;
 
-    /*box-shadow: inset 5px 8px 6px 0 rgba(255, 255, 255, 0.5), inset -5px -8px 6px 0 rgba(0, 0, 0, 0.3);*/
-
-    /*FLAT*/
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
-    box-shadow: 9.91px 9.91px 15px rgba(0, 0, 0, 0.2), -9.91px -9.91px 15px rgba(255, 255, 255, 0.3);
+    box-shadow:
+            0 8px 3px rgba(0, 0, 0, 0.2),
+            /*-3px 8px 3px rgba(255, 255, 255, 0.3),*/
+            0 -6px 3px rgba(0, 0, 0, 0.3);
 
     /*OUT*/
     /*background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));*/
@@ -1089,6 +1121,21 @@ ul {
     /*IN*/
     /*background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));*/
     /*box-shadow: inset 10.21px 10.21px 15px rgba(0, 0, 0, 0.2), inset -10.21px -10.21px 15px rgba(255, 255, 255, 0.5);*/
+}
+
+.outset-container-2 {
+    overflow: hidden;
+    padding: .5rem;
+
+    border-radius: .6rem;
+    border-color: #F2F1EF;
+
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+
+    box-shadow:
+            0 -8px 3px rgba(0, 0, 0, 0.2),
+            /*4px 8px 3px rgba(255, 255, 255, 0.3),*/
+            0 6px 3px rgba(0, 0, 0, 0.4);
 }
 
 .outset-inner {
@@ -1100,25 +1147,28 @@ ul {
     box-shadow: 9.91px 9.91px 15px rgba(0, 0, 0, 0.2), -9.91px -9.91px 15px rgba(255, 255, 255, 0.3);
 }
 
-.social-links > .outset-container {
+.social-links > .outset-container-2 {
     height: 4rem;
     width: 4rem;
     /*background-color: #A8ACA6;*/
 
     padding: .5rem;
     border-style: solid;
-    border-color: #F2F1EF;
+    border-color: #B6B6B6;
     border-width: 1px;
     border-radius: .5rem;
     margin: 0 auto;
+
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+    /*box-shadow: 9.91px 9.91px 15px rgba(0, 0, 0, 0.2), -9.91px -9.91px 15px rgba(255, 255, 255, 0.3);*/
 }
 
-.social-links .outset-container a {
+.social-links .outset-container-2 a {
     width: 50px;
     height: 50px;
 
     padding: 1rem;
-    border: 1px solid #E7E6E5;
+    border: 2px solid #E7E6E5;
     border-radius: 2rem;
     margin: 0 auto;
 }
@@ -1144,8 +1194,35 @@ ul {
     box-shadow: 5px 5px 6px 0 rgba(255, 255, 255, 0.5), -5px -5px 6px 0 rgba(0, 0, 0, 0.2);
     border-radius: .75rem;
 
-    box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 5px 8px 6px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 5px 8px 6px 0 rgba(0, 0, 0, 0.2);
 }
+
+.inset-container-3 {
+    overflow: hidden;
+    padding: .3rem;
+    border-radius: 1.25rem;
+
+    box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 3px 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.inset-container-4 {
+    overflow: hidden;
+    padding: .3rem;
+    border-radius: 1.25rem;
+    width: min-content;
+
+    box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 3px 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.inset-container-5 {
+    overflow: hidden;
+    padding: .5rem;
+    /*box-shadow: 5px 5px 6px 0 rgba(255, 255, 255, 0.5), -5px -5px 6px 0 rgba(0, 0, 0, 0.2);*/
+    border-radius: .75rem;
+
+    /*box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 5px 8px 6px 0 rgba(0, 0, 0, 0.3);*/
+}
+
 
 .inset-item {
     position: relative;
