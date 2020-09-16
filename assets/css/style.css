@@ -905,7 +905,7 @@ button {
 }
 
 .landing-subheading {
-    height: 130px;
+    /*height: 130px;*/
 }
 
 .landing-subheading p {
@@ -935,38 +935,6 @@ button {
 .landing-subheading p span:nth-of-type(4) {
     color: #8E0089;
     text-shadow: #ffb3fe 0 1px 0;
-}
-
-
-.social-links li a {
-    text-align: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 16px;
-    box-shadow: none;
-}
-
-.social-links li a i {
-    text-align: center;
-    color: #D4D6D6;
-    text-shadow: 0 3px 0 0 #A4A4A4, 0 -4px 0 0 #fafafa;
-
-    /*font-family: "Major Mono Display", monospace;*/
-    font-size: 1.25rem;
-    z-index: 8;
-    /*text-shadow: #fff 0 1px 0;*/
-    -webkit-font-smoothing: antialiased;
-
-    /*box-shadow: 0 1px 0 0 #FAFAFA inset, 0 -2px 0 0 #D7D7D6 inset;*/
-    /*border: none;*/
-    /*background-color: #F2F1EF;*/
-
-}
-
-.social-links li a:hover,
-.social-links li a:active,
-.social-links li a:focus {
-    color: #F2F1EF;
 }
 
 /*.btn--cta {*/
@@ -1025,6 +993,30 @@ button {
     -webkit-font-smoothing: antialiased;
 }
 
+
+.social-links li a i {
+    text-align: center;
+    color: #D4D6D6;
+    text-shadow: 0 3px 0 0 #A4A4A4, 0 -4px 0 0 #fafafa;
+
+    /*font-family: "Major Mono Display", monospace;*/
+    font-size: 1.25rem;
+    z-index: 8;
+    /*text-shadow: #fff 0 1px 0;*/
+    -webkit-font-smoothing: antialiased;
+
+    /*box-shadow: 0 1px 0 0 #FAFAFA inset, 0 -2px 0 0 #D7D7D6 inset;*/
+    /*border: none;*/
+    /*background-color: #F2F1EF;*/
+
+}
+
+.social-links li a:hover,
+.social-links li a:active,
+.social-links li a:focus {
+    color: #F2F1EF;
+}
+
 /* ------------------------------------------------------------------ Vertical Scroller */
 
 #verticalScroller {
@@ -1065,13 +1057,94 @@ button {
 
 }
 
+ul {
+    margin-block-end: 0;
+}
+
+.outset-outer {
+    width: 100%;
+    height: 100%;
+    clip-path: inset(-.5rem);
+    padding: 0;
+}
+
+.outset-container {
+    overflow: hidden;
+    padding: .5rem;
+
+    /*box-shadow: -5px -5px 6px 0 rgba(255, 255, 255, 0.5), 5px 5px 6px 0 rgba(0, 0, 0, 0.2);*/
+    border-radius: .6rem;
+    border-color: #F2F1EF;
+
+    /*box-shadow: inset 5px 8px 6px 0 rgba(255, 255, 255, 0.5), inset -5px -8px 6px 0 rgba(0, 0, 0, 0.3);*/
+
+    /*FLAT*/
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+    box-shadow: 9.91px 9.91px 15px rgba(0, 0, 0, 0.2), -9.91px -9.91px 15px rgba(255, 255, 255, 0.3);
+
+    /*OUT*/
+    /*background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));*/
+    /*box-shadow: 9.91px 9.91px 15px rgba(0, 0, 0, 0.2), -9.91px -9.91px 15px rgba(255, 255, 255, 0.3);*/
+
+    /*IN*/
+    /*background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));*/
+    /*box-shadow: inset 10.21px 10.21px 15px rgba(0, 0, 0, 0.2), inset -10.21px -10.21px 15px rgba(255, 255, 255, 0.5);*/
+}
+
+.outset-inner {
+    overflow: hidden;
+    padding: .5rem;
+    border-radius: .6rem;
+    /*border-color: #F2F1EF;*/
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+    box-shadow: 9.91px 9.91px 15px rgba(0, 0, 0, 0.2), -9.91px -9.91px 15px rgba(255, 255, 255, 0.3);
+}
+
+.social-links > .outset-container {
+    height: 4rem;
+    width: 4rem;
+    /*background-color: #A8ACA6;*/
+
+    padding: .5rem;
+    border-style: solid;
+    border-color: #F2F1EF;
+    border-width: 1px;
+    border-radius: .5rem;
+    margin: 0 auto;
+}
+
+.social-links .outset-container a {
+    width: 50px;
+    height: 50px;
+
+    padding: 1rem;
+    border: 1px solid #E7E6E5;
+    border-radius: 2rem;
+    margin: 0 auto;
+}
+
+.inset-inner {
+    background: linear-gradient(145deg, rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0.2));
+    box-shadow: 0.3px 0.3px 1px rgba(237, 238, 243, 0.1), -0.3px -0.3px 1px rgba(239, 241, 245, 0.1);
+}
+
 .inset-container {
+    overflow: hidden;
     padding: .5rem;
     box-shadow: 5px 5px 6px 0 rgba(255, 255, 255, 0.5), -5px -5px 6px 0 rgba(0, 0, 0, 0.2);
     border-radius: .75rem;
 
     box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 5px 8px 6px 0 rgba(0, 0, 0, 0.3);
+}
 
+.inset-container-2 {
+    overflow: hidden;
+    margin: 0 -.5rem 0 -.5rem;
+    padding: .5rem .5rem .5rem .5rem;
+    box-shadow: 5px 5px 6px 0 rgba(255, 255, 255, 0.5), -5px -5px 6px 0 rgba(0, 0, 0, 0.2);
+    border-radius: .75rem;
+
+    box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 5px 8px 6px 0 rgba(0, 0, 0, 0.3);
 }
 
 .inset-item {
