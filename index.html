@@ -407,7 +407,7 @@
 
                                 </div>
                                 <!-- Sub Blurb -->
-                                <div class="outset-outer mt-2 out-z">
+                                <div class="outset-outer out-z">
                                     <div class="d-flex flex-row align-items-center justify-contents-between">
                                         <div class="shin-2-full card-header landing-subheading rounded-lg d-none"
                                              style="background-color: transparent;">
@@ -439,14 +439,15 @@
                                 <!-- /Recent Activity Section Title -->
 
                                 <!-- Recent Activity Carousel -->
-                                <div class="row justify-content-center">
-                                    <div class="col text-right align-content-center">
-                                        <div class="d-none d-md-flex inset-container-6" id="verticalScroller">
+                                <div class="row justify-content-center pt-2">
+                                    <div class="col col-md-12 col-lg-12 col-xl-10 col-xxl-7 align-content-center ">
+
+                                        <div class="d-none d-md-flex justify-content-center" id="verticalScroller">
 
                                             <!-- Commit Item -->
-                                            <div class="recent-activity">
-                                                <div
-                                                        class="list-group-item flex-column align-items-start pl-4 pr-4 inset-item">
+                                            <div class="recent-activity col-12">
+
+                                                <div class="activity-item d-flex flex-column pl-4 pr-4">
                                                     <div class="d-flex w-100 pt-1 justify-content-between">
                                                         <p class="mb-1">Add content requirements to README.md</p>
                                                     </div>
@@ -460,36 +461,35 @@
                                                 </div>
 
                                                 <!-- Commit CTA -->
-                                                <div class="list-group-item border-0 text-right pr-0 bg-transparent">
-                                                    <div class="d-flex w-100 justify-content-end align-items-center">
-                                                        <small class="mr-3">
+                                                <div class="activity-cta border-0 text-right pr-0 bg-transparent">
+                                                    <div class="d-flex flex-row align-items-center justify-content-end">
+                                                        <small class="mr-3 text-cta">
                                                             Follow me on GitHub
                                                         </small>
-                                                        <a class="btn btn-floating shadow-2 btn-outline-dark"
-                                                                href="https://github.com/israelias"
-                                                                target="_blank"
-                                                                role="button" style="background-color: #FAFBFC;
-                                                                   border-color: #D4D6D6;">
-                                                            <i class="fab fa-github"></i>
-                                                        </a>
+                                                        <span class="inset-container-6">
+                                                            <a class="btn btn-sm btn-floating" href="https://github.com/israelias"
+                                                               target="_blank"
+                                                               role="button">
+                                                                <i class="fab fa-github" aria-hidden="true" style="color: #157FFC;"></i>
+                                                            </a>
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <!-- /Commit CTA -->
+
                                             </div>
                                             <!-- /Commit Item -->
 
                                             <!-- Recommendation Item -->
-                                            <div class="recent-activity">
-                                                <div
-                                                        class="list-group-item flex-column align-items-start pl-3 pr-3 inset-item">
+                                            <div class="recent-activity col-12">
+                                                <div class="activity-item pl-3 pr-3">
                                                     <div class="d-flex w-100 pt-1 justify-content-between">
                                                         <p class="font-italic mb-2"
                                                            style="font-size: 14px; font-weight: 300;">"What sets
                                                             Joem apart are his
                                                             values, energy and mobility."</p>
                                                     </div>
-                                                    <div
-                                                            class="d-flex w-100 pt-1 pr-3 justify-content-between align-items-center">
+                                                    <div class="d-flex w-100 pt-1 pr-3 justify-content-between align-items-center">
                                                         <img src="assets/images/michael_zhang_thumbnail.png"
                                                              style="width: 30px;"
                                                              alt="GitHub profile photo">
@@ -499,22 +499,24 @@
                                                 </div>
 
                                                 <!-- Recommendation CTA -->
-                                                <div class="list-group-item border-0 text-right pr-0 bg-transparent">
+                                                <div class="activity-cta text-right pr-0 bg-transparent">
                                                     <div class="d-flex w-100 justify-content-end align-items-center">
-                                                        <small class="mr-3">
+                                                        <small class="mr-3 text-cta">
                                                             Read more from my colleagues
                                                         </small>
-                                                        <button
-                                                                class="btn btn-floating shadow-2 btn-outline-dark"
-                                                                type="button"
-                                                                data-toggle="collapse"
-                                                                data-target="#collapseFive"
-                                                                aria-expanded="false"
-                                                                aria-controls="collapseFive"
-                                                                style="background-color: #FAFBFC;
-                                                                   border-color: #D4D6D6;">
-                                                            <i class="fas fa-arrow-circle-down"></i>
-                                                        </button>
+                                                        <span class="inset-container-6">
+                                                            <button
+                                                                    class="btn btn-sm btn-floating"
+                                                                    type="button"
+                                                                    data-toggle="collapse"
+                                                                    data-target="#collapseFive"
+                                                                    aria-expanded="false"
+                                                                    aria-controls="collapseFive"
+                                                                    style="background-color: #FAFBFC;
+                                                                       border-color: #D4D6D6;">
+                                                                <i class="fas fa-chevron-circle-down"></i>
+                                                            </button>
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <!-- /Recommendation CTA -->
@@ -522,11 +524,9 @@
                                             <!-- /Recommendation Item -->
 
                                             <!-- Project Item -->
-                                            <div class="recent-activity">
-                                                <div
-                                                        class="list-group-item flex-column align-items-start pl-4 pr-4 inset-item">
-                                                    <div
-                                                            class="d-flex w-100 pt-1 justify-content-between align-items-center pr-0 mb-2">
+                                            <div class="recent-activity col-12">
+                                                <div class="activity-item pl-4 pr-4">
+                                                    <div class="d-flex w-100 pt-1 justify-content-between align-items-center pr-0 mb-2">
                                                         <i class="fas fa-history">
                                                     <span class="badge bg-primary rounded-pill">
                                                         14
@@ -564,22 +564,24 @@
                                                 </div>
 
                                                 <!-- Project CTA -->
-                                                <div class="list-group-item border-0 text-right pr-0 bg-transparent">
+                                                <div class="activity-cta text-right pr-0 bg-transparent">
                                                     <div class="d-flex w-100 justify-content-end align-items-center">
-                                                        <small class="mr-3">
+                                                        <small class="mr-3 text-cta">
                                                             See what I'm currently working on
                                                         </small>
-                                                        <button
-                                                                class="btn btn-floating shadow-2 btn-outline-dark"
-                                                                type="button"
-                                                                data-toggle="collapse"
-                                                                data-target="#collapseThree"
-                                                                aria-expanded="false"
-                                                                aria-controls="collapseThree"
-                                                                style="background-color: #FAFBFC;
-                                                                   border-color: #D4D6D6;">
-                                                            <i class="fas fa-arrow-circle-down"></i>
-                                                        </button>
+                                                        <span class="inset-container-6">
+                                                            <button
+                                                                    class="btn btn-sm btn-floating"
+                                                                    type="button"
+                                                                    data-toggle="collapse"
+                                                                    data-target="#collapseThree"
+                                                                    aria-expanded="false"
+                                                                    aria-controls="collapseThree"
+                                                                    style="background-color: #FAFBFC;
+                                                                       border-color: #D4D6D6;">
+                                                                <i class="fas fa-chevron-circle-down"></i>
+                                                            </button>
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <!-- /Project CTA -->
@@ -608,39 +610,38 @@
                     <div class=" col-12 col-sm-12 col-md-12 col-xl-12 pl-0 pr-0 pt-2 mb-5">
 
                         <!-- CV -->
-                        <div class=" d-flex flex-row align-items-center justify-contents-between">
-                                        <span
-                                                class="inset-container-3   text-left flex-fill pt-2 pb-2 pl-2 text-muted">
-                                            <i class="fa fa-file-pdf fa-lg" aria-hidden="true" style="color: #cf724d;"></i>
-                                            <span class="inset-item pl-2 font-monospace align-center">
-                                                SANEZ_CV_2020.<span class="text-lowercase">pdf</span></span>
-                                            <a class="btn btn-sm btn-floating" href="https://joemelias.com"
-                                               target="_blank"
-                                               role="button">
-                                                <i class="far fa-eye" style="color: #157FFC;"></i>
-                                                <span class="sr-only">View PDF version of resume in new tab</span>
-                                            </a>
-                                            <a class="btn btn-sm btn-floating" href="https://joemelias.com"
-                                               target="_blank"
-                                               role="button">
-                                                <i class="fa fa-download pt-2" style="color: #157FFC;"></i>
-                                                <span class="sr-only">Download PDF version of resume</span>
-                                            </a>
-                                        </span>
+                        <div class="d-flex flex-row align-items-center justify-contents-between">
+                            <span class="inset-container-3   text-left flex-fill pt-2 pb-2 pl-2 text-muted">
+                                <i class="fa fa-file-pdf fa-lg" aria-hidden="true" style="color: #cf724d;"></i>
+                                <span class="inset-item pl-2 font-monospace align-center">
+                                    SANEZ_CV_2020.<span class="text-lowercase">pdf</span></span>
+                                <a class="btn btn-sm btn-floating" href="https://joemelias.com"
+                                   target="_blank"
+                                   role="button">
+                                    <i class="far fa-eye" style="color: #157FFC;"></i>
+                                    <span class="sr-only">View PDF version of resume in new tab</span>
+                                </a>
+                                <a class="btn btn-sm btn-floating" href="https://joemelias.com"
+                                   target="_blank"
+                                   role="button">
+                                    <i class="fa fa-download pt-2" style="color: #157FFC;"></i>
+                                    <span class="sr-only">Download PDF version of resume</span>
+                                </a>
+                            </span>
                             <span class="inset-container-3">
-                                            <a class="btn btn-sm btn-floating" href="https://joemelias.com"
-                                               target="_blank"
-                                               role="button">
-                                                <i class="far fa-eye" style="color: #157FFC;"></i>
-                                                <span class="sr-only">View PDF version of resume in new tab</span>
-                                            </a>
-                                            <a class="btn btn-sm btn-floating" href="https://joemelias.com"
-                                               target="_blank"
-                                               role="button">
-                                                <i class="fa fa-download pt-2" style="color: #157FFC;"></i>
-                                                <span class="sr-only">Download PDF version of resume</span>
-                                            </a>
-                                        </span>
+                                <a class="btn btn-sm btn-floating" href="https://joemelias.com"
+                                   target="_blank"
+                                   role="button">
+                                    <i class="far fa-eye" style="color: #157FFC;"></i>
+                                    <span class="sr-only">View PDF version of resume in new tab</span>
+                                </a>
+                                <a class="btn btn-sm btn-floating" href="https://joemelias.com"
+                                   target="_blank"
+                                   role="button">
+                                    <i class="fa fa-download pt-2" style="color: #157FFC;"></i>
+                                    <span class="sr-only">Download PDF version of resume</span>
+                                </a>
+                            </span>
 
                         </div>
 
