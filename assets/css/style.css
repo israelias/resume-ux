@@ -115,13 +115,13 @@ body {
     border-radius: 0;
 }
 
-.card-header,
-.card-body,
-.card-footer {
-    border: 1px solid #707070;
-    border-radius: 0;
-    /*border-top: none;*/
-}
+/*.card-header,*/
+/*.card-body,*/
+/*.card-footer {*/
+/*    border: 1px solid #707070;*/
+/*    border-radius: 0;*/
+/*    !*border-top: none;*!*/
+/*}*/
 
 .card-header:first-child,
 .card-footer:last-child,
@@ -268,12 +268,10 @@ button {
         margin: 0;
     }
 
-    [aria-labelledby^="heading"]:not([aria-labelledby$="Zero"]) {
-        /*position: relative;*/
-        height: 60vh;
-        overflow-x: scroll;
-
-    }
+    /*[aria-labelledby^="heading"]:not([aria-labelledby$="Zero"]) {*/
+    /*    height: 60vh;*/
+    /*    overflow-x: scroll;*/
+    /*}*/
 
     [id^="heading"] > .row {
         height: 40px;
@@ -682,6 +680,18 @@ button {
 @media (min-width: 992px) {
     /*    */
 }
+
+
+/*TEMPOARY SHOW ALL*/
+
+@media (min-width: 320px) {
+
+    .collapse:not(.show) {
+        display: block;
+    }
+
+}
+
 
 /* ------------------------------------------------------------------ Tab Toggle */
 
@@ -1277,4 +1287,96 @@ ul {
     border: none;
 }
 
-/* ------------------------------------------------------------------ Contact Section/ Form */
+/* ------------------------------------------------------------------ Recommendation Section */
+
+/* CREDIT:(unmodified) Embed LinkedIn Recommendations with HTML and CSS https://www.damosdesigns.com/LinkedinRecommendationsOnWebsite/ */
+
+.pv-recommendation-entity:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+.pv-recommendation-entity {
+    margin-right: 0;
+    display: flex;
+    border-top: 1px solid #e6e9ec;
+    padding: 16px 0;
+}
+
+/* image settings */
+.pv-recommendation-entity img {
+    border-radius: 50%
+}
+
+.pv-recommendation-entity__header {
+    width: 33%;
+}
+
+.pv-recommendation-entity__highlights {
+    width: 66%;
+    padding-left: 16px;
+}
+
+.pv-profile-wrapper a:visited {
+    color: #fff;
+}
+.pv-profile-wrapper a {
+    text-decoration: none;
+}
+
+.pv-recommendation-entity__member {
+    display: block;
+    overflow: auto;
+    text-decoration: none;
+}
+
+a.pv-recommendation-entity__member {
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    border-bottom: 0px #fff;
+}
+
+/* name of recommending */
+.t-16 {
+    padding-top: 20px;
+    font-size: 1.5rem;
+    line-height: 1.33333;
+}
+
+/* title of recommending */
+.t-14 {
+    font-size: 1.0rem;
+    line-height: 1.42857;
+}
+
+/* date and relationship */
+.t-12 {
+    font-size: 1rem;
+    line-height: 1.33333;
+}
+
+/* more text styles */
+.t-black {
+    color: rgba(0,0,0,.9);
+}
+.t-bold {
+    font-weight: 600;
+}
+.t-normal {
+    font-weight: 400;
+}
+.t-black--light {
+    color: rgba(0,0,0,.6);
+}
+
+/* sizing of recommendation text */
+blockquote {
+    font-size: 1rem;
+    line-height: 1.3333;
+    font-weight: 200;
+    color: rgba(0,0,0,.75);
+}
+blockquote, q {
+    quotes: none;
+}
