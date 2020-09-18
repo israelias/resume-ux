@@ -684,13 +684,13 @@ button {
 
 /*TEMPOARY SHOW ALL*/
 
-@media (min-width: 320px) {
+/*@media (min-width: 320px) {*/
 
-    .collapse:not(.show) {
-        display: block;
-    }
+/*    .collapse:not(.show) {*/
+/*        display: block;*/
+/*    }*/
 
-}
+/*}*/
 
 
 /* ------------------------------------------------------------------ Tab Toggle */
@@ -1379,4 +1379,98 @@ blockquote {
 }
 blockquote, q {
     quotes: none;
+}
+
+.t-32 {
+    border: none!important;
+    color:var(--pink-60,#ff1b90)!important;
+}
+
+.pv-accomplishments-block {
+    position:relative;
+    display:flex;
+    padding:16px 0 0 12px
+}
+
+.pv-accomplishments-block__list {
+    list-style-type:none
+}
+
+.pv-accomplishments-block--expanded{
+    border-top:1px solid rgba(0,0,0,.15);
+    border-bottom:1px solid rgba(0,0,0,.15);
+}
+
+.pv-accomplishments-block__content {
+    position:relative;
+    flex-grow:2
+}
+
+.pv-accomplishment-entity {
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    min-height:72px;
+    animation:fade-in 334ms cubic-bezier(.4,0,1,1);
+    padding-right: 1rem;
+}
+
+.pv-accomplishment-entity--with-separator::after{
+    content:"";
+    border:0;
+    border-color:rgba(0,0,0,.15);
+    border-top:1px solid rgba(0,0,0,.15);
+    display:block;
+    height:1px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0
+}
+
+.pv-accomplishment-entity--last::after{
+    display:none
+}
+
+.pv-accomplishment-entity__description {
+    font-size: 12px;
+    line-height:1.5
+}
+.pv-accomplishment-entity__description {
+    /*margin-top:16px*/
+}
+
+.visually-hidden {
+    position: absolute!important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    white-space: nowrap
+}
+
+.pv-accomplishments-block__count,
+.awards-icon i {
+    color:var(--color-action,var(--blue-70,#0073b1));
+}
+
+.pv-accomplishments-block__count {
+    min-width:64px;
+    text-align:right;
+    line-height:36px;
+    margin-top:-3px
+}
+
+.awards-icon i {
+    width: 32px;
+    height: 32px;
+}
+
+.pv-accomplishments-block__expand {
+    position:absolute;
+    left:-64px;
+    top:12px;
+    z-index:1
 }
