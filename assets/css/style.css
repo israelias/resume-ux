@@ -297,6 +297,10 @@ button {
 
 @media (max-width: 575.98px) {
 
+    .card--body {
+        margin: 0;
+    }
+
     [aria-labelledby^="heading"]:not([aria-labelledby$="Zero"]) {
         /*position: relative;*/
         height: 60vh;
@@ -722,6 +726,10 @@ button {
 @media (max-width: 575.98px) { ... }
 
 @media (min-width: 576px) {
+
+    .card--body {
+        margin: 1rem;
+    }
 
     .tab-button h4 > i {
         z-index: 12;
@@ -1205,6 +1213,19 @@ ul {
     box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 5px 8px 6px 0 rgba(0, 0, 0, 0.3);
 }
 
+.inset-container-1 {
+    overflow: hidden;
+    padding: .5rem;
+    border-radius: .75rem;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5));
+
+    box-shadow:
+            0 3.3px 1px rgba(0, 0, 0, 0.3),
+            0 -3.3px 1px rgba(255, 255, 255, 0.5),
+            inset 0 2px 0 rgba(255, 255, 255, 1);
+}
+
 .inset-container-2 {
     overflow: hidden;
     margin: 0 -.5rem 0 -.5rem;
@@ -1261,6 +1282,32 @@ ul {
     border: none;
 }
 
+.inset-item-1 {
+    position: relative;
+    border: 2px solid #F7F7F7;
+    border-radius: .6rem;
+
+    /*background: linear-gradient(180deg, rgba(250, 250, 250, .7), rgba(0, 0, 0, .1));*/
+
+    box-shadow:
+            3px 0 0 rgba(180, 180, 180, .7),
+            -3px 0 0 rgba(250, 250, 250, .4);
+
+}
+
+.inset-item-2 {
+    position: relative;
+    border: 2px solid #F7F7F7;
+    border-radius: .6rem;
+
+    background: linear-gradient(180deg, rgba(250, 250, 250, .7), rgba(0, 0, 0, .1));
+
+    box-shadow:
+            3px 0 0 rgba(180, 180, 180, .7),
+            -3px 0 0 rgba(250, 250, 250, .4);
+
+}
+
 .inset-item:after {
     position: absolute;
     bottom: 0;
@@ -1281,8 +1328,44 @@ ul {
     );
 }
 
+.inset-item-1:after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+
+    right: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: .6rem;
+
+    background: linear-gradient(
+            180deg,
+            rgba(250, 250, 250, .7),
+            rgba(0, 0, 0, .1)
+    );
+}
 /* ------------------------------------------------------------------ Shadows and Insets */
 
+.card--body {
+    margin: 1rem;
+}
+
+.experience-item {
+    padding: .5rem 1rem;
+
+    background: linear-gradient(
+            180deg, rgba(250, 250, 250, .7),
+            rgba(0, 0, 0, .1)
+    );
+
+}
+
+.experience-item .list-group-item {
+    border: none;
+}
 
 /*----------------------------------------------------------- Landing and Title */
 
