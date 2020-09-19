@@ -224,26 +224,6 @@ button {
     -webkit-font-smoothing: antialiased;
 }
 
-/*.btn--cta {*/
-/*    font-weight: bold;*/
-/*    border-radius: 23px;*/
-/*    width: 160px;*/
-
-/*}*/
-
-/*.btn--red {*/
-/*    color: white;*/
-/*    background-color: #f05f40;*/
-/*    border-color: #f05f40;*/
-/*}*/
-
-/*.btn--red:hover,*/
-/*.btn--red:active,*/
-/*.btn--red:focus,*/
-/*.btn--red:active:focus {*/
-/*    background-color: #df4929;*/
-/*    border-color: #df4929;*/
-/*}*/
 
 /* ------------------------------------------------------------------ Main Section Tab Buttons*/
 
@@ -755,27 +735,6 @@ button {
     text-shadow: #ffb3fe 0 1px 0;
 }
 
-/*.btn--cta {*/
-/*    font-weight: bold;*/
-/*    border-radius: 23px;*/
-/*    width: 160px;*/
-
-/*}*/
-
-/*.btn--red {*/
-/*    color: white;*/
-/*    background-color: #f05f40;*/
-/*    border-color: #f05f40;*/
-/*}*/
-
-/*.btn--red:hover,*/
-/*.btn--red:active,*/
-/*.btn--red:focus,*/
-/*.btn--red:active:focus {*/
-/*    background-color: #df4929;*/
-/*    border-color: #df4929;*/
-/*}*/
-
 .image-container {
     /*background-color: #E7E6E5;*/
     box-shadow:
@@ -822,10 +781,11 @@ button {
     -webkit-font-smoothing: antialiased;
 }
 
-
+.social-links li .fa-sm,
+.social-links li .fa-lg,
 .social-links li a i {
     text-align: center;
-    color: #D4D6D6;
+    /*color: #D4D6D6;*/
     text-shadow: 0 3px 0 0 #A4A4A4, 0 -4px 0 0 #fafafa;
 
     /*font-family: "Major Mono Display", monospace;*/
@@ -834,16 +794,9 @@ button {
     /*text-shadow: #fff 0 1px 0;*/
     -webkit-font-smoothing: antialiased;
 
-    /*box-shadow: 0 1px 0 0 #FAFAFA inset, 0 -2px 0 0 #D7D7D6 inset;*/
-    /*border: none;*/
-    /*background-color: #F2F1EF;*/
+    box-shadow: 0 1px 0 0 #FAFAFA inset, 0 -2px 0 0 #D7D7D6 inset;
+    border-radius: 50%;
 
-}
-
-.social-links li a:hover,
-.social-links li a:active,
-.social-links li a:focus {
-    color: #F2F1EF;
 }
 
 /* ------------------------------------------------------------------ Vertical Scroller */
@@ -905,10 +858,6 @@ button {
 
 }
 
-.activity-cta {
-    /*border: 2px solid #FAFAFA;*/
-}
-
 ul {
     margin-block-end: 0;
 }
@@ -961,37 +910,6 @@ ul {
     /*border-color: #F2F1EF;*/
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
     box-shadow: 9.91px 9.91px 15px rgba(0, 0, 0, 0.2), -9.91px -9.91px 15px rgba(255, 255, 255, 0.3);
-}
-
-.social-links > .outset-container-2 {
-    height: 4rem;
-    width: 4rem;
-    /*background-color: #A8ACA6;*/
-
-    padding: .5rem;
-    border-style: solid;
-    border-color: #B6B6B6;
-    border-width: 1px;
-    border-radius: .5rem;
-    margin: 0 auto;
-
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
-    /*box-shadow: 9.91px 9.91px 15px rgba(0, 0, 0, 0.2), -9.91px -9.91px 15px rgba(255, 255, 255, 0.3);*/
-}
-
-.social-links .outset-container-2 a {
-    width: 50px;
-    height: 50px;
-
-    padding: 1rem;
-    border: 2px solid #E7E6E5;
-    border-radius: 2rem;
-    margin: 0 auto;
-}
-
-.inset-inner {
-    background: linear-gradient(145deg, rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0.2));
-    box-shadow: 0.3px 0.3px 1px rgba(237, 238, 243, 0.1), -0.3px -0.3px 1px rgba(239, 241, 245, 0.1);
 }
 
 .inset-container {
@@ -1062,7 +980,6 @@ ul {
             inset 0 -3.3px 1px #FFFFFF;
 }
 
-
 .inset-item {
     position: relative;
     border-radius: .6rem;
@@ -1132,7 +1049,123 @@ ul {
             rgba(0, 0, 0, .1)
     );
 }
+
+.inset-inner {
+    background: linear-gradient(145deg, rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0.2));
+    box-shadow: 0.3px 0.3px 1px rgba(237, 238, 243, 0.1), -0.3px -0.3px 1px rgba(239, 241, 245, 0.1);
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    padding: .5rem;
+    border-radius: .6rem;
+}
+
+
+.fa, .fab, .fal, .far, .fas {
+    /*color: rgba(182, 182, 182, .2);*/
+    text-shadow: #fff 0 1px 0;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+}
+
+.social-links li a:hover,
+.social-links li a:focus {
+    color: #F2F1EF;
+}
+
+.social-links li {
+    /*width: 100%;*/
+}
+
+.social-links .btn {
+    display: flex;
+    /*height: 4rem;*/
+    /*width: 4rem;*/
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+    border-style: solid;
+    border-color: #B6B6B6;
+    border-width: 1px;
+    border-radius: .5rem;
+}
+
+.social-links li a > .inset-inner {
+    padding: .2rem;
+    border-radius: 50%;
+    background: black;
+    background: linear-gradient(145deg, rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0.2));
+    box-shadow: 2px 2px 2px rgba(237, 238, 243, 0.1), -2px -2px 2px rgba(239, 241, 245, 0.1);
+}
+
+.social-links li .fa-sm,
+.social-links li a i,
+.social-links li a .fa-lg {
+    padding: .6rem;
+}
+
+.activity-cta .btn {
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+.social-links li a {
+    /*in*/
+    /*color: #EAB1A5;*/
+    /*git*/
+    /*color: #A0B6CC;*/
+    /*dev*/
+    /*color: #D6C181;*/
+    /*folio*/
+    /*color: #97A792;*/
+}
+
+.social-links .btn:hover,
+.social-links .btn:focus,
+.activity-cta .btn:hover,
+.activity-cta .btn:focus {
+    background: linear-gradient(180deg, rgba(250, 250, 250, .7), rgba(0, 0, 0, .1));
+    box-shadow:
+            0 -8px 3px rgba(0, 0, 0, 0.2),
+            0 6px 3px rgba(0, 0, 0, 0.4),
+            3px -8px 3px rgba(180, 180, 180, .7),
+            -3px 6px 3px rgba(250, 250, 250, .4);
+
+    /*background: #F2F1EF;*/
+    /*box-shadow:*/
+    /*        0 -10px 12px rgba(0, 0, 0, 0.3),*/
+    /*        !*4px 8px 3px rgba(255, 255, 255, 0.3),*!*/
+    /*        0 6px 12px rgba(0, 0, 0, 0.5);*/
+}
+
+.social-links .btn:active,
+.activity-cta .btn:active {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+    box-shadow:
+            0 -8px 3px rgba(0, 0, 0, 0.2),
+                4px 8px 3px rgba(255, 255, 255, 0.3),
+            0 6px 3px rgba(0, 0, 0, 0.4);
+}
+
+
+.activity-cta a > .inset-inner {
+    padding: .2rem;
+    border-width: 2px;
+    border-radius: 50%;
+}
+
+.activity-cta a i {
+    padding: .6rem;
+}
+
 /* ------------------------------------------------------------------ Shadows and Insets */
+
 
 .card--body {
     margin: 1rem;
