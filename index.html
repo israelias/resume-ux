@@ -28,118 +28,116 @@
 <!-- Header container -->
 <header>
     <!-- Navbar Container -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-w2 fixed-top" style="height: 60px;">
+    <nav class="navbar navbar-light bg-w2 fixed-top">
         <div class="container-fluid">
-
-            <!-- Header Logo Region  -->
-            <div class="d-none position-fixed" style="left: 3px;">
-                <a class="navbar-brand ml-3" href="#">
-                    JS
-                </a>
-            </div>
-            <!-- /Header Logo Region -->
-
             <div class="row justify-content-center">
                 <div class="col-11 col-md-11 col-lg-11">
 
-                    <div class="row align-items-start d-flex">
+                    <ul class="nav-links list-inline row row-cols-5 align-items-center justify-content-between">
 
-                        <!-- Header Left -->
-                        <div class="col-6 col-sm-7 col-md-7 col-xl-7 bg-transparent">
-                            <div class="row align-items-start justify-content-between">
+                        <!--Header Item-->
+                        <li class="list-inline-item">
+                            <!--Placeholder Dot -->
+                            <a class="navbar-brand" href="#!" role="button">
+                                JS<span class="d-none d-sm-inline">.stack</span>
+                            </a>
+                            <!--Placeholder Dot -->
+                        </li>
+                        <!--/Header Item-->
 
-                                <!--Header Item-->
-                                <div class="col-7 col-sm-7 col-md-7 col-lg-7 sho-l-1">
+                        <!--Header Item-->
+                        <li class="list-inline-item">
+                            <a class="" href="#!" role="button">
+                                <span class="d-none d-sm-inline">Call me</span>
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </li>
+                        <!--/Header Item-->
 
-                                    <!--Placeholder Dot -->
-                                    <a class="btn btn-floating shin-1" href="#!"
-                                       role="button">
-                                        <i class="fas far fa-dot-circle"></i>
-                                    </a>
-                                    <!--Placeholder Dot -->
+                        <!--Header Item-->
+                        <li class="list-inline-item text-center">
+                            <a class="" href="#!" role="button">
+                                <span class="d-none d-sm-inline">Download my CV</span>
+                                <i class="fas far fa-dot-circle"></i>
+                            </a>
+                        </li>
+                        <!--/Header Item-->
 
-                                </div>
-                                <!--/Header Item-->
+                        <!-- Header Item -->
+                        <li class="list-inline-item text-right">
 
-                                <!--Header Item-->
-                                <div class="col-5 col-sm-5 col-md-5 col-lg-5">
+                            <a class="" href="#!" role="button">
+                                <span class="d-none d-sm-inline">Save my contact</span>
+                                <i class="fas fa-save"></i>
+                            </a>
 
-                                    <!--Placeholder Dot -->
-                                    <a class="btn btn-floating shin-1" href="#!"
-                                       role="button">
-                                        <i class="fas far fa-dot-circle"></i>
-                                    </a>
-                                    <!--Placeholder Dot -->
+                        </li>
+                        <!-- /Header Item -->
 
-                                </div>
-                                <!--/Header Item-->
+                        <!-- Header Item -->
+                        <li class="list-inline-item text-right">
+                            <!-- Toggle button -->
+                            <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#navbarSupportedContent"
+                                    aria-controls="navbarSupportedContent"
+                                    aria-expanded="false"
+                                    aria-label="Toggle navigation"
+                                    style="padding: 0; margin: 0; z-index: 5;"
+                            >
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            <!-- Toggle button -->
+                        </li>
+                        <!-- /Header Item -->
 
-                            </div>
-                        </div>
-                        <!-- /Header Left -->
+                    </ul>
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left links -->
+                        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+                                >Disabled</a
+                                >
+                            </li>
+                            <li>
+                                <!-- Expand Toggle Button -->
+                                <button class="btn btn-outline-dark text-left show shin-2" type="button"
+                                        data-ripple-color="dark"
+                                        data-toggle="collapse"
+                                        data-target=".collapse-all"
+                                        aria-expanded="true"
+                                        aria-controls="collapseZero collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">
+                                    Expand All
+                                </button>
+                                <!-- /Expand Toggle Button -->
+                            </li>
+                        </ul>
+                        <!-- Left links -->
 
-                        <!-- Header Right -->
-                        <div class="col-6 col-sm-5 col-md-5 col-xl-5">
-                            <div class="row align-items-stretch justify-content-between d-flex">
-
-                                <!-- Header Item -->
-                                <div class="col-7 col-sm-7 d-none d-md-block" style="z-index: 5;">
-
-                                    <!-- Expand Toggle Button -->
-                                    <button class="btn btn-outline-dark text-left show shin-2" type="button"
-                                            data-ripple-color="dark"
-                                            data-toggle="collapse"
-                                            data-target=".collapse-all"
-                                            aria-expanded="true"
-                                            aria-controls="collapseZero collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">
-                                        Expand All
-                                    </button>
-                                    <!-- /Expand Toggle Button -->
-
-                                </div>
-                                <!-- /Header Item -->
-
-                                <!-- Header Item -->
-                                <div class="col-5 col-sm-5 sho-r-1">
-
-                                    <!-- Header Menu Collapse -->
-                                    <div class="" style="right:3px;">
-                                        <button class="navbar-toggler float-right shin-2" type="button"
-                                                data-toggle="collapse"
-                                                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                                            <span class="navbar-toggler-icon"></span>
-                                        </button>
-                                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                                            <!--                                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">-->
-                                            <!--                                        <li class="nav-item">-->
-                                            <!--                                            <a class="nav-link active" aria-current="page" href="#">Home</a>-->
-                                            <!--                                        </li>-->
-                                            <!--                                        <li class="nav-item">-->
-                                            <!--                                            <a class="nav-link" href="#">Link</a>-->
-                                            <!--                                        </li>-->
-                                            <!--                                        <li class="nav-item">-->
-                                            <!--                                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
-                                            <!--                                        </li>-->
-                                            <!--                                    </ul>-->
-                                            <form class="d-flex input-group w-auto ml-auto">
-                                                <input class="form-control mr-2" type="search" placeholder="Find something"
-                                                       aria-label="Search">
-                                                <button class="btn btn-outline-dark shin-2" type="button"
-                                                        data-ripple-color="dark">Search
-                                                </button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <!-- /Header Menu Collapse -->
-
-                                </div>
-                                <!-- /Header Item -->
-
-                            </div>
-                        </div>
-                        <!-- Header Region 4 -->
-
+                        <!-- Search form -->
+                        <form class="d-flex input-group w-auto">
+                            <input
+                                    type="search"
+                                    class="form-control"
+                                    placeholder="Type query"
+                                    aria-label="Search"
+                            />
+                            <button class="btn btn-outline-primary" type="button" data-ripple-color="dark">
+                                Search
+                            </button>
+                        </form>
                     </div>
+                    <!-- Collapsible wrapper -->
                 </div>
             </div>
 
@@ -214,7 +212,7 @@
                     <div class="row">
 
                         <!-- Card Left -->
-                        <div class="col-12 col-md-7 col-lg-7 col-xl-6 col-xxl-5 pt-5 order-2 order-sm-2 order-md-1">
+                        <div class="col-12 col-md-7 col-lg-7 col-xl-6 col-xxl-5 pt-5 order-2 order-sm-2 order-md-1 mb-5">
                             <div class="row inset-container">
 
                                 <!-- Landing Blurb -->
@@ -243,24 +241,24 @@
 
                                 <!-- Links -->
                                 <div class="outset-outer">
-                                    <ul class="outset-outer list-inline d-flex flex-row align-items-center justify-content-between social-links pt-2">
-                                        <li class="flex-fill">
+                                    <ul class="outset-outer list-inline row row-cols-5 align-items-center justify-content-between social-links pt-2">
+                                        <li class="list-inline-item">
                                             <a class="btn outset-container-2" href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank">
                                                 <span class="inset-inner">
-                                                    <span class="fab fa-linkedin-in fa-lg"></span>
+                                                    <span class="fab fa-linkedin-in"></span>
                                                     <span class="sr-only">LinkedIn</span>
                                                 </span>
                                             </a>
                                         </li>
-                                        <li class="flex-fill">
+                                        <li class="list-inline-item">
                                             <a class="btn outset-container-2" href="https://github.com/israelias" target="_blank">
                                                 <span class="inset-inner">
-                                                    <span class="fab fa-github fa-lg"></span>
+                                                    <span class="fab fa-github"></span>
                                                     <span class="sr-only">GitHub</span>
                                                 </span>
                                             </a>
                                         </li>
-                                        <li class="flex-fill">
+                                        <li class="list-inline-item">
                                             <a class="btn outset-container-2" href="https://dev.to/israelias" target="_blank">
                                                 <span class="inset-inner">
                                                     <span class="fab fa-dev fa-sm"></span>
@@ -268,27 +266,19 @@
                                                 </span>
                                             </a>
                                         </li>
-                                        <li class="flex-fill">
+                                        <li class="list-inline-item">
                                             <a class="btn outset-container-2" href="https://joemelias.com" target="_blank">
                                                 <span class="inset-inner">
-                                                    <span class="fas fa-globe fa-lg"></span>
+                                                    <span class="fas fa-globe"></span>
                                                     <span class="sr-only">Portfolio</span>
                                                 </span>
                                             </a>
                                         </li>
-                                        <li class="flex-fill">
+                                        <li class="list-inline-item">
                                             <a class="btn outset-container-2" href="https://joemelias.com" target="_blank">
                                                 <span class="inset-inner">
-                                                    <span class="fa fa-download fa-lg"></span>
+                                                    <span class="fa fa-download"></span>
                                                     <span class="sr-only">Download CV</span>
-                                                    <span class="button-text d-none">
-                                                        <i class="fa fa-file-pdf" aria-hidden="true"></i>
-                                                        SANEZ_CV_2020.pdf
-                                                        <small class="small d-none">
-                                                            <a href="#"><i class="far fa-eye" aria-hidden="true"></i></a>
-                                                            <a href="#"><i class="fa fa-download" aria-hidden="true"></i></a>
-                                                        </small>
-                                                    </span>
                                                 </span>
                                             </a>
                                         </li>
@@ -507,14 +497,10 @@
                         </div>
                         <!-- /Card Right -->
 
-                        <div class="card-footer footer-stack order-last mt-2 mb-5 d-none">
-                           text
-                        </div>
-
                     </div>
 
                     <!-- Links -->
-                    <div class=" col-12 col-sm-12 col-md-12 col-xl-12 pl-0 pr-0 pt-5 mb-5">
+                    <div class=" col-12 col-sm-12 col-md-12 col-xl-12 pl-0 pr-0 pt-5 mb-5 d-none">
 
                         <!-- CV -->
                         <div class="d-flex flex-row align-items-center justify-contents-between">
@@ -588,7 +574,7 @@
                     <div class="row">
 
                         <!-- Card Left -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 card-left pt-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 pt-5">
                             <div class="inset-container">
 
                                 <!-- Section Header -->
@@ -630,7 +616,7 @@
                         <!-- /Card Left -->
 
                         <!-- Card Right -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 card-right pb-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 pb-5">
 
                             <!-- Section Sub Heading -->
                             <div class="card-header text-muted border-0">
@@ -814,7 +800,7 @@
                     <div class="row">
 
                         <!-- Card Left -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 card-left pt-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 pt-5">
                             <div class="inset-container">
 
                                 <!-- Section Header -->
@@ -885,7 +871,7 @@
                         <!-- /Card Left -->
 
                         <!-- Card Right -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 card-right pb-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 pb-5">
 
                             <!-- Section Sub Heading -->
                             <div class="card-header text-muted border-0">
@@ -1239,16 +1225,17 @@
                                                 Recommend a language for me to learn
                                             </small>
                                          </span>
-                                        <span class="outset-container-2" style="background-color: #F2F1EF;">
-                                            <button class="btn btn-floating inset-inner"
-                                                    type="button"
-                                                    data-toggle="collapse"
-                                                    data-target="#collapseSix"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseSix">
+                                        <button class="outset-container-2 btn"
+                                                type="button"
+                                                data-toggle="collapse"
+                                                data-target="#collapseSix"
+                                                aria-expanded="false"
+                                                aria-controls="collapseSix">
+                                            <span class="inset-inner">
                                                 <i class="fas fa-arrow-circle-down"></i>
-                                            </button>
-                                        </span>
+                                                <span class="sr-only">To Connect section</span>
+                                            </span>
+                                        </button>
                                     </div>
                                 </div>
                                 <!-- /Proficiency CTA -->
@@ -1292,7 +1279,7 @@
                     <div class="row ">
 
                         <!-- Card Left -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 card-left pt-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 pt-5">
                             <div class="inset-container">
 
                                 <!-- Section Header -->
@@ -1322,7 +1309,7 @@
                         <!-- /Card Left -->
 
                         <!-- Card Right -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5 card-right pb-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5 pb-5">
 
                             <!-- Section Sub Heading -->
                             <div class="card-header text-muted border-0">
@@ -1686,13 +1673,13 @@
                                                 Fork these repos on GitHub
                                             </small>
                                          </span>
-                                        <span class="outset-container-2" style="background-color: #F2F1EF;">
-                                            <a class="btn btn-floating inset-inner"
-                                               href="https://github.com/israelias" target="_blank" role="button">
+                                        <a class="outset-container-2 btn"
+                                           href="https://github.com/israelias" target="_blank">
+                                            <span class="inset-inner">
                                                 <i class="fab fa-github hvr-pop" style="color: #A0B6CC;"></i>
                                                 <span class="sr-only">GitHub</span>
-                                            </a>
-                                        </span>
+                                            </span>
+                                        </a>
                                     </div>
                                 </div>
                                 <!-- /Project Examples CTA -->
@@ -1704,7 +1691,7 @@
                         <!-- /Card Right -->
 
                         <!-- Card Left Reverse -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5 card-right pb-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5 pb-5">
 
                             <!-- Section Sub Heading -->
                             <div class="card-header text-muted border-0">
@@ -2031,14 +2018,13 @@
                                                 See my architecture portfolio
                                             </small>
                                          </span>
-                                        <span class="outset-container-2" style="background-color: #F2F1EF;">
-                                            <a class="btn btn-floating inset-inner" href="https://joemelias.com"
-                                               target="_blank"
-                                               role="button">
+                                        <a class="outset-container-2 btn"
+                                           href="https://joemelias.com" target="_blank">
+                                            <span class="inset-inner">
                                                 <i class="fas fa-globe hvr-pop" style="color: #97A792;"></i>
                                                 <span class="sr-only">Portfolio</span>
-                                            </a>
-                                        </span>
+                                            </span>
+                                        </a>
                                     </div>
                                 </div>
                                 <!-- /Project Examples CTA -->
@@ -2049,7 +2035,7 @@
                         <!-- /Card Left -->
 
                         <!-- Card Right Reverse -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 card-left pb-5 pt-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 pb-5 pt-5">
                             <div class="inset-container">
 
                                 <!-- Section Header -->
@@ -2111,7 +2097,7 @@
                     <div class="row">
 
                         <!-- Card Left -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 card-left pt-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 pt-5">
                             <div class="inset-container">
 
                                 <!-- Section Header -->
@@ -2141,7 +2127,7 @@
                         <!-- /Card Left -->
 
                         <!-- Card Right -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 card-right pb-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 pb-5">
 
                             <!-- Section Sub Heading -->
                             <div class="card-header text-muted">
@@ -2265,47 +2251,37 @@
                                 </div>
                                 <!-- /Experience Group -->
 
-                            </div>
-                            <!-- /Section Body -->
-
-                            <!-- Education CTA -->
-                            <div class="card--body inset-container">
-                                <div class="d-flex flex-row align-items-stretch justify-content-end">
+                                <!-- Education CTA -->
+                                <div class="activity-cta mt-2 inset-container">
+                                    <div class="d-flex flex-row align-items-stretch justify-content-end">
                                         <span class="outset-container-2 flex-fill">
                                             <small class="mr-3 text-right">
                                                 See some awards received
                                             </small>
                                          </span>
-                                    <span class="outset-container-2" style="background-color: #F2F1EF;">
-                                            <button class="btn btn-floating inset-inner"
-                                                    type="button"
-                                                    data-toggle="collapse"
-                                                    data-target="#collapseFive"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseFive">
+                                        <button class="outset-container-2 btn"
+                                                type="button"
+                                                data-toggle="collapse"
+                                                data-target="#collapseFive"
+                                                aria-expanded="false"
+                                                aria-controls="collapseFive">
+                                            <span class="inset-inner">
                                                 <i class="fas fa-arrow-circle-down"></i>
-                                            </button>
-                                        </span>
-                                    <button
-                                            class="btn btn-floating shadow-2 btn-outline-dark d-none"
-                                            type="button"
-                                            data-toggle="collapse"
-                                            data-target="#collapseThree"
-                                            aria-expanded="false"
-                                            aria-controls="collapseThree"
-                                            style="background-color: #FAFBFC;
-                                                                   border-color: #D4D6D6;">
-                                        <i class="fas fa-arrow-circle-down"></i>
-                                    </button>
+                                                <span class="sr-only">To References section</span>
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
+                                <!-- /Education CTA -->
+
                             </div>
-                            <!-- /Education CTA -->
+                            <!-- /Section Body -->
 
                         </div>
                         <!-- /Card Right -->
 
                         <!-- Card Left Reverse -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 card-right">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 pb-5">
 
                             <!-- Section Sub Heading -->
                             <div class="card-header text-muted">
@@ -2425,70 +2401,39 @@
                                     </div>
                                     <!-- /Experience Item -->
 
-                                    <!-- Experience CTA -->
-                                    <div class="list-group-item border-0 text-right pr-0 bg-transparent">
-                                        <div class="d-flex w-100 justify-content-end align-items-center">
-                                            <small class="mr-3">
-                                                See what I'm currently working on
-                                            </small>
-                                            <button
-                                                    class="btn btn-floating shadow-2 btn-outline-dark"
-                                                    type="button"
-                                                    data-toggle="collapse"
-                                                    data-target="#collapseThree"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseThree"
-                                                    style="background-color: #FAFBFC;
-                                                               border-color: #D4D6D6;">
-                                                <i class="fas fa-arrow-circle-down"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- /Experience CTA -->
-
                                 </div>
                                 <!-- /Experience Group -->
 
-                            </div>
-
-                            <!-- Education CTA -->
-                            <div class="card--body inset-container">
-                                <div class="d-flex flex-row align-items-stretch justify-content-end">
+                                <!-- Experience CTA -->
+                                <div class="activity-cta mt-2 inset-container">
+                                    <div class="d-flex flex-row align-items-stretch justify-content-end">
                                         <span class="outset-container-2 flex-fill">
                                             <small class="mr-3 text-right">
-                                                See some awards received
+                                                Read what colleagues say about me
                                             </small>
-                                         </span>
-                                    <span class="outset-container-2" style="background-color: #F2F1EF;">
-                                            <button class="btn btn-floating inset-inner"
-                                                    type="button"
-                                                    data-toggle="collapse"
-                                                    data-target="#collapseFive"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseFive">
-                                                <i class="fas fa-arrow-circle-down"></i>
-                                            </button>
                                         </span>
-                                    <button
-                                            class="btn btn-floating shadow-2 btn-outline-dark d-none"
-                                            type="button"
-                                            data-toggle="collapse"
-                                            data-target="#collapseThree"
-                                            aria-expanded="false"
-                                            aria-controls="collapseThree"
-                                            style="background-color: #FAFBFC;
-                                                                   border-color: #D4D6D6;">
-                                        <i class="fas fa-arrow-circle-down"></i>
-                                    </button>
+                                        <button class="outset-container-2 btn"
+                                                type="button"
+                                                data-toggle="collapse"
+                                                data-target="#collapseFive"
+                                                aria-expanded="false"
+                                                aria-controls="collapseFive">
+                                            <span class="inset-inner">
+                                                <i class="fas fa-arrow-circle-down"></i>
+                                                <span class="sr-only">To References section</span>
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
+                                <!-- /Experience CTA -->
+
                             </div>
-                            <!-- /Education CTA -->
 
                         </div>
                         <!-- /Card Left Reverse -->
 
                         <!-- Card Right Reverse -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 card-left pb-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 pb-5">
 
                             <div class="inset-container">
 
@@ -2554,7 +2499,7 @@
                     <div class="row">
 
                         <!-- Card Left -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 card-left pt-5 pb-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 pt-5 pb-5">
                             <div class="inset-container">
 
                                 <!-- Section Header -->
@@ -2668,7 +2613,7 @@
                         <!-- /Card Left -->
 
                         <!-- Card Right -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 card-right pb-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 pb-5">
 
                             <!-- Section Sub Heading -->
                             <div class="card-header text-muted">
@@ -2949,29 +2894,17 @@
                                 <div class="activity-cta mt-2 inset-container">
                                     <div class="d-flex flex-row align-items-stretch justify-content-end">
                                         <span class="outset-container-2 flex-fill">
-                                            <small class="mr-3 text-right">
-                                                See my LinkedIn
+                                            <small class="mr-3 text-right5">
+                                                See more from LinkedIn
                                             </small>
                                          </span>
-                                        <span class="outset-container-2" style="background-color: #F2F1EF;">
-                                            <a class="btn btn-floating inset-inner"
-                                               href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank"
-                                               role="button">
+                                        <a class="outset-container-2 btn"
+                                           href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank">
+                                            <span class="inset-inner">
                                                 <i class="fab fa-linkedin-in hvr-pop" style="color: #EAB1A5;"></i>
                                                 <span class="sr-only">LinkedIn</span>
-                                            </a>
-                                        </span>
-                                        <button
-                                                class="btn btn-floating shadow-2 btn-outline-dark d-none"
-                                                type="button"
-                                                data-toggle="collapse"
-                                                data-target="#collapseThree"
-                                                aria-expanded="false"
-                                                aria-controls="collapseThree"
-                                                style="background-color: #FAFBFC;
-                                                                   border-color: #D4D6D6;">
-                                            <i class="fas fa-arrow-circle-down"></i>
-                                        </button>
+                                            </span>
+                                        </a>
                                     </div>
                                 </div>
                                 <!-- /Awards CTA -->
@@ -3014,7 +2947,7 @@
                     <div class="row">
 
                         <!-- Card Left -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 card-left pt-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pt-5">
                             <div class="inset-container">
 
                                 <!-- Section Header -->
@@ -3044,7 +2977,7 @@
                         <!-- /Card Left -->
 
                         <!-- Card Right -->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 card-right">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
 
                             <!-- Section Sub Heading -->
                             <div class="card-header text-muted">
@@ -3063,7 +2996,7 @@
                                           action="#" onsubmit="return false">
 
                                         <!-- Form Input Container -->
-                                        <div class="form-group inset-container">
+                                        <div class="form-group connect-cta inset-container">
 
                                             <!-- Form Name -->
                                             <div class="d-flex">
@@ -3100,17 +3033,37 @@
                                                 <!-- /Form Text Area -->
 
                                                 <!-- Form Button -->
-                                                <div
-                                                        class="d-flex form-group-button outset-container-2 align-items-center justify-content-center"
-                                                     style="background-color: #F2F1EF; width: 75px;">
-                                                    <button type="submit" value="submit" id="btn-submit"
-                                                            style="background-color: #F2F1EF;"
-                                                            class="btn btn-floating inset-inner"
-                                                            onclick="proceed();"><i class="fas fa-paper-plane fa-lg"
-                                                                                    style="color: #A0B6CC;"></i>
-                                                        <span class="sr-only">Send</span></button>
-                                                </div>
+
+                                                <button type="submit" value="submit" id="btn-submit"
+                                                        class="d-flex form-group-button btn outset-container-2 align-items-center justify-content-center"
+                                                        style="background-color: #F2F1EF; width: 75px;"
+                                                        onclick="proceed();">
+                                                    <span class="inset-inner">
+                                                        <i class="fas fa-paper-plane fa-lg" style="color: #A0B6CC;"></i>
+                                                        <span class="sr-only">Send</span>
+                                                    </span>
+                                                </button>
+
                                                 <!-- /Form Button -->
+
+                                                <!-- Awards CTA -->
+                                                <div class="activity-cta mt-2 inset-container d-none">
+                                                    <div class="d-flex flex-row align-items-stretch justify-content-end">
+                                                        <span class="outset-container-2 flex-fill">
+                                                            <small class="mr-3 text-right5">
+                                                                See more from LinkedIn
+                                                            </small>
+                                                         </span>
+                                                        <button class="outset-container-2 btn"
+                                                           href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank">
+                                                            <span class="inset-inner">
+                                                                <i class="fab fa-linkedin-in hvr-pop" style="color: #EAB1A5;"></i>
+                                                                <span class="sr-only">LinkedIn</span>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <!-- /Awards CTA -->
 
                                             </div>
                                             <!-- Form Text/Send -->

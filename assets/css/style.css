@@ -661,15 +661,30 @@ button {
     /*    */
 }
 
+/*[id="collapseZero"].collapse:not(.show) {*/
+/*    display: block;*/
+
+/*}*/
+/*[data-parent="#resumeStack"].collapse:not(.show) {*/
+/*    display: block;*/
+/*}*/
 
 /*TEMPOARY SHOW ALL*/
 
 /*@media (min-width: 320px) {*/
 
-/*    .collapse:not(.show) {*/
+/*    [data-parent="#resumeStack"].collapse:not(.show) {*/
 /*        display: block;*/
 /*    }*/
 
+/*}*/
+
+/*[id^="collapse"] {*/
+/*    data-parent: dispose;*/
+
+/*}*/
+/*[data-parent="resumeStack"] {*/
+/*    mso-field-change-value: ;*/
 /*}*/
 
 
@@ -781,6 +796,10 @@ button {
     -webkit-font-smoothing: antialiased;
 }
 
+.social-links li .fas,
+.social-links li .fab,
+.social-links li .far,
+.social-links li .fa,
 .social-links li .fa-sm,
 .social-links li .fa-lg,
 .social-links li a i {
@@ -1070,13 +1089,20 @@ ul {
     line-height: 1;
 }
 
+.social-links {
+    width: 100%;
+}
+
+.nav-links .list-inline-item,
+.social-links .list-inline-item {
+    width: 20%;
+    padding: 0;
+    margin: 0;
+}
+
 .social-links li a:hover,
 .social-links li a:focus {
     color: #F2F1EF;
-}
-
-.social-links li {
-    /*width: 100%;*/
 }
 
 .social-links .btn {
@@ -1095,17 +1121,46 @@ ul {
 }
 
 .social-links li a > .inset-inner {
-    padding: .2rem;
+    padding: .4rem;
     border-radius: 50%;
     background: black;
     background: linear-gradient(145deg, rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0.2));
     box-shadow: 2px 2px 2px rgba(237, 238, 243, 0.1), -2px -2px 2px rgba(239, 241, 245, 0.1);
 }
 
-.social-links li .fa-sm,
-.social-links li a i,
-.social-links li a .fa-lg {
+.social-links li .fa,
+.social-links li .fab,
+.social-links li .fal,
+.social-links li .far,
+.social-links li .fas {
     padding: .6rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 575.98px) {
+
+    .social-links {
+        justify-content: start;
+    }
+
+    .social-links .btn {
+        height: 3.5rem;
+        padding: 1rem;
+    }
+
+    .social-links li a > .inset-inner {
+        padding: .2rem;
+    }
+
+
+    .social-links .fa,
+    .social-links .fab,
+    .social-links .fal,
+    .social-links .far,
+    .social-links .fas {
+        font-size: .5rem;
+    }
+
 }
 
 .activity-cta .btn {
@@ -1115,17 +1170,9 @@ ul {
     justify-content: center;
     align-items: center;
 }
-.social-links li a {
-    /*in*/
-    /*color: #EAB1A5;*/
-    /*git*/
-    /*color: #A0B6CC;*/
-    /*dev*/
-    /*color: #D6C181;*/
-    /*folio*/
-    /*color: #97A792;*/
-}
 
+.connect-cta .btn:hover,
+.connect-cta .btn:focus,
 .social-links .btn:hover,
 .social-links .btn:focus,
 .activity-cta .btn:hover,
@@ -1144,6 +1191,7 @@ ul {
     /*        0 6px 12px rgba(0, 0, 0, 0.5);*/
 }
 
+.connect-cta .btn:active,
 .social-links .btn:active,
 .activity-cta .btn:active {
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
@@ -1153,13 +1201,16 @@ ul {
             0 6px 3px rgba(0, 0, 0, 0.4);
 }
 
-
+.connect-cta button > .inset-inner,
+.activity-cta button > .inset-inner,
 .activity-cta a > .inset-inner {
     padding: .2rem;
     border-width: 2px;
     border-radius: 50%;
 }
 
+.connect-cta button > .inset-inner,
+.activity-cta button > .inset-inner,
 .activity-cta a i {
     padding: .6rem;
 }
