@@ -26,50 +26,51 @@
 <!-- Header container -->
 <header>
     <!-- Navbar Container -->
-    <nav class="navbar navbar-light row bg-w2 fixed-top">
-        <ul class="nav-links list-inline row row-cols-5 align-items-center justify-content-between">
+    <nav class="navbar navbar-light fixed-top align-items-center">
+        <div class="nav-container row row-cols-5">
 
-            <!--Header Item-->
-            <li class="list-inline-item">
-                <!--Placeholder Dot -->
-                <a class="navbar-brand" href="#!" role="button">
+            <!--Header Item -->
+            <div class="col">
+                <a class="navbar-brand" href="index.html" role="button">
                     JS<span class="d-none d-sm-inline">.stack</span>
                 </a>
-                <!--Placeholder Dot -->
-            </li>
-            <!--/Header Item-->
+            </div>
+            <!--/Header Item -->
 
             <!--Header Item-->
-            <li class="list-inline-item">
-                <a class="" href="tel:+63945-994-5975" role="button">
-                    <span class="d-none d-sm-inline">Call me</span>
-                    <i class="fas fa-phone"></i>
+            <div class="col">
+                <a class="nav-link" href="tel:+63945-994-5975" role="button" data-toggle="tooltip"
+                   data-placement="bottom" trigger="manual" title="Call me">
+                    <span class="d-none d-xxl-inline text-nowrap">Call me</span>
+                    <ion-icon name="call-outline"></ion-icon>
                 </a>
-            </li>
-            <!--/Header Item-->
+            </div>
+            <!--/Header Item -->
 
             <!--Header Item-->
-            <li class="list-inline-item text-center">
-                <a class="" href="#!" role="button">
-                    <span class="d-none d-sm-inline">Download my CV</span>
-                    <i class="fas far fa-dot-circle"></i>
+            <div class="col text-center">
+                <a class="nav-link" href="#!" role="button" data-toggle="tooltip" data-placement="bottom"
+                   trigger="manual"
+                   title="Download my CV">
+                    <span class="d-none d-xxl-inline text-nowrap">Download my CV</span>
+                    <ion-icon name="cloud-download-outline"></ion-icon>
                 </a>
-            </li>
-            <!--/Header Item-->
+            </div>
+            <!--/Header Item -->
 
             <!-- Header Item -->
-            <li class="list-inline-item text-right">
-
-                <a class="" href="#!" role="button">
-                    <span class="d-none d-sm-inline">Save my contact</span>
-                    <i class="fas fa-save"></i>
+            <div class="col text-right">
+                <a class="nav-link" href="#!" role="button" data-toggle="tooltip" data-placement="bottom"
+                   trigger="manual"
+                   title="Save my contact">
+                    <span class="d-none d-xxl-inline text-nowrap">Save my contact</span>
+                    <ion-icon name="person-add-outline"></ion-icon>
                 </a>
-
-            </li>
+            </div>
             <!-- /Header Item -->
 
             <!-- Header Item -->
-            <li class="list-inline-item text-right">
+            <div class="col text-right nav-link">
                 <!-- Toggle button -->
                 <button
                         class="navbar-toggler"
@@ -81,57 +82,123 @@
                         aria-label="Toggle navigation"
                         style="padding: 0; margin: 0; z-index: 5;"
                 >
-                    <i class="fas fa-bars"></i>
+                    <ion-icon name="menu-outline"></ion-icon>
                 </button>
                 <!-- Toggle button -->
-            </li>
+            </div>
             <!-- /Header Item -->
 
-        </ul>
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left links -->
-            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-                    >Disabled</a
-                    >
-                </li>
-                <li>
-                    <!-- Expand Toggle Button -->
-                    <button class="btn btn-outline-dark text-left show shin-2" type="button"
-                            data-ripple-color="dark"
-                            data-toggle="collapse"
-                            data-target=".collapse-all"
-                            aria-expanded="true"
-                            aria-controls="collapseZero collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">
-                        Expand All
-                    </button>
-                    <!-- /Expand Toggle Button -->
-                </li>
-            </ul>
-            <!-- Left links -->
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse d-none" id="navbarSupportedContent">
+                <!-- Left links -->
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item d-flex">
+                        <a class="btn flex-fill justify-content-between" type="button"
+                                href="index.html">
+                            <span class="d-flex justify-content-between">
+                                <span class="button-text">
+                                    INTRODUCTION
+                                </span>
+                                <i class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <button class="btn flex-fill justify-content-between" type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseTwo"
+                                aria-controls="collapseTwo">
+                            <span class="d-flex justify-content-between">
+                                <span class="button-text">
+                                    PROFICIENCY
+                                </span>
+                                <i class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <button class="btn flex-fill justify-content-between" type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseThree"
+                                aria-controls="collapseThree">
+                            <span class="d-flex justify-content-between">
+                                <span class="button-text">
+                                    EXPERIENCE
+                                </span>
+                                <i class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <button class="btn flex-fill justify-content-between" type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseFour"
+                                aria-controls="collapseFour">
+                            <span class="d-flex justify-content-between">
+                                <span class="button-text">
+                                    EXAMPLES
+                                </span>
+                                <i class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <button class="btn flex-fill justify-content-between" type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseFive"
+                                aria-controls="collapseFive">
+                            <span class="d-flex justify-content-between">
+                                <span class="button-text">
+                                    REFERENCES
+                                </span>
+                                <i class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <button class="btn flex-fill justify-content-between" type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseSix"
+                                aria-controls="collapseSix">
+                            <span class="d-flex justify-content-between">
+                                <span class="button-text">
+                                    CONNECT
+                                </span>
+                                <i class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <!-- Expand Toggle Button -->
+                        <button class="btn collapsed flex-fill justify-content-between" type="button"
+                                data-ripple-color="dark"
+                                data-toggle="collapse"
+                                data-target=".collapse-all"
+                                aria-expanded="false"
+                                aria-controls="collapseZero collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">
+                            Expand All
+                        </button>
+                        <!-- /Expand Toggle Button -->
+                    </li>
+                </ul>
+                <!-- Left links -->
 
-            <!-- Search form -->
-            <form class="d-flex input-group w-auto">
-                <input
-                        type="search"
-                        class="form-control"
-                        placeholder="Type query"
-                        aria-label="Search"
-                />
-                <button class="btn btn-outline-primary" type="button" data-ripple-color="dark">
-                    Search
-                </button>
-            </form>
+                <!-- Search form -->
+                <form class="d-flex input-group w-auto">
+                    <input
+                            type="search"
+                            class="form-control"
+                            placeholder="Type query"
+                            aria-label="Search"
+                    >
+                    <button class="btn btn-outline-primary" type="button" data-ripple-color="dark">
+                        Search
+                    </button>
+                </form>
+            </div>
+            <!-- Collapsible wrapper -->
+
         </div>
-        <!-- Collapsible wrapper -->
 
     </nav>
     <!-- /Navbar Container -->
@@ -139,7 +206,7 @@
 <!-- /Header container -->
 
 <!-- Accordion wrapper -->
-<main class="accordion" id="resumeStack" style="margin-top: 45px;">
+<main class="accordion" id="resumeStack">
 
     <!-- Collapse 0 Tab -->
     <div class="row">
@@ -369,7 +436,6 @@
                                                         type="button"
                                                         data-toggle="collapse"
                                                         data-target="#collapseFive"
-                                                        aria-expanded="false"
                                                         aria-controls="collapseFive"
                                                         style="background-color: #FAFBFC;
                                                            border-color: #D4D6D6;">
@@ -1195,7 +1261,6 @@
                                     type="button"
                                     data-toggle="collapse"
                                     data-target="#collapseSix"
-                                    aria-expanded="false"
                                     aria-controls="collapseSix">
                                 <span class="inset-inner">
                                     <i class="fas fa-arrow-circle-down"></i>
@@ -1444,7 +1509,6 @@
                                     type="button"
                                     data-toggle="collapse"
                                     data-target="#collapseFive"
-                                    aria-expanded="false"
                                     aria-controls="collapseFive">
                                 <span class="inset-inner">
                                     <i class="fas fa-arrow-circle-down"></i>
@@ -1597,7 +1661,6 @@
                                     type="button"
                                     data-toggle="collapse"
                                     data-target="#collapseFive"
-                                    aria-expanded="false"
                                     aria-controls="collapseFive">
                                 <span class="inset-inner">
                                     <i class="fas fa-arrow-circle-down"></i>
@@ -3416,6 +3479,10 @@
 <!--popper-->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>-->
+
+<!--ionicons-->
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
 
 <!--Bootstrap-->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
