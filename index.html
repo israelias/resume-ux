@@ -228,8 +228,7 @@
         </header>
 
         <!-- Collapse 0 Content-->
-        <section id="collapseZero" class="collapse collapse-all show" aria-labelledby="headingZero"
-             data-parent="#resumeStack">
+        <section id="collapseZero" class="collapse collapse-all show" aria-labelledby="headingZero" data-parent="#resumeStack">
             <div class="row">
 
                 <!-- Card Left -->
@@ -565,7 +564,7 @@
         <!-- /Collapse 0 Content -->
     </article>
 
-    <article>
+    <article id="articleOne">
 
         <header id="headingOne">
                 <h2 class="header-title d-flex">
@@ -591,29 +590,23 @@
         </header>
 
         <!-- Collapse 1 Content-->
-        <section id="collapseOne" class="collapse collapse-all" aria-labelledby="headingOne"
-             data-parent="#resumeStack">
+        <section id="collapseOne" class="collapse collapse-all" aria-labelledby="headingOne" data-parent="#resumeStack">
             <div class="row">
-
-                <!-- Card Left -->
-                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 pt-5">
+                <div class="collapse-left col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
                     <div class="inset-container">
 
                         <!-- Section Header -->
-                        <div class="inset-item card-header pt-5" style="color: #FAFAFA;border-radius: .6rem;
-                            background-color: #929181;">
-                            <h2 class="pt-5">
+                        <h3 class="inset-item">
+                            <span class="display-6 lh-1">
                                 As a super-user on the front end of design delivery, I now play a unique role at both ends of the tech stack.
-                            </h2>
-                        </div>
+                            </span>
+                        </h3>
                         <!-- /Section Header -->
 
-                        <!-- Section Body -->
-                        <div class="outset-container card-body mt-2 rounded-lg"
-                             style="background-color: transparent;">
-                            <h5 class="card-title">
+                        <section id="mainOne" class="left">
+                            <h4>
                                 What I do
-                            </h5>
+                            </h4>
                             <p>
                                 My scholastic upbringing in seven cities across the Pacific and subsequent
                                 tenures as an architect with <a
@@ -646,166 +639,182 @@
                                     href="https://codeinstitute.net/" target="_blank">Code
                                 Institute</a>.
                             </p>
-                            <p class="card-text">
+                            <footer>
                                 <small class="text-muted time-stamp">
                                     Last updated <time datetime="2020-09-24">24 September 2020</time>
                                 </small>
-                            </p>
-                        </div>
-                        <!-- /Section Body -->
-
+                            </footer>
+                        </section>
                     </div>
+
                 </div>
-                <!-- /Card Left -->
+                <div class="collapse-right col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                    <div class="inset-container">
 
-                <!-- Card Right -->
-                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 pb-5">
+                        <section id="asideOne" class="right">
+                            <h4>
+                                Expertise
+                            </h4>
 
-                    <!-- Section Sub Heading -->
-                    <div class="card-header text-muted border-0">
-                        <h3 class="text-right">
-                            Expertise
-                        </h3>
-                    </div>
-                    <!-- /Section Sub Heading -->
-
-                    <!-- Section Body -->
-                    <div class="card-body inset-container-1 border-0">
-                        <div class="list-group inset-container">
-
-                            <!-- Specialization Section -->
-                            <div class="specialization-activity outset-container">
+                            <!-- Specialization List -->
+                            <ul class="specialization-activity">
 
                                 <!-- Specialization Item -->
-                                <div class="inset-item list-group-item flex-column align-items-start pl-4 pr-4 bg-w2">
-                                    <div class="d-flex w-100 pt-1 justify-content-start">
-                                        <i class="fab fa-github"></i>
-                                        <h6 class="mb-1 pl-4">Environmental Design</h6>
+                                <li class="inset-item">
+                                    <div class="list-content">
+                                        <div class="list-icon col-2">
+                                            <ion-icon name="scan-outline"></ion-icon>
+                                        </div>
+                                        <div class="col-10">
+                                            <h6 class="mb-1">Back End Development</h6>
+                                        </div>
                                     </div>
-                                    <div class="d-flex w-100 pt-1 justify-content-between">
-                                        <p class="mb-1 pl-5">short description</p>
-                                        <small class="text-muted">Years involved</small>
+                                    <div class="list-text">
+                                        <span><i class="badge rounded-pill">Active</i></span>
+                                        <small class="time-stamp text-muted">since 2017</small>
+                                        <ion-icon name="rocket-outline"></ion-icon>
                                     </div>
-                                </div>
+                                </li>
                                 <!-- /Specialization Item -->
 
                                 <!-- Specialization Item -->
-                                <div class="inset-item shin-2 list-group-item flex-column align-items-start pl-4 pr-4 bg-w2">
-                                    <div class="d-flex w-100 pt-1 justify-content-start">
-                                        <i class="fab fa-github"></i>
-                                        <h6 class="mb-1 pl-4">UI / UX Design</h6>
+                                <li class="inset-item">
+                                    <div class="list-content">
+                                        <div class="list-icon col-2">
+                                            <ion-icon name="square-outline"></ion-icon>
+                                        </div>
+                                        <div class="col-10">
+                                            <h6 class="mb-1">Front End Development</h6>
+                                        </div>
                                     </div>
-                                    <div class="d-flex w-100 pt-1 justify-content-between">
-                                        <p class="mb-1 pl-5">short description</p>
-                                        <small class="text-muted">Years involved</small>
+                                    <div class="list-text">
+                                        <span><i class="badge rounded-pill">Active</i></span>
+                                        <small class="time-stamp text-muted">since 2017</small>
+                                        <ion-icon name="rocket-outline"></ion-icon>
                                     </div>
-                                </div>
+                                </li>
                                 <!-- /Specialization Item -->
 
                                 <!-- Specialization Item -->
-                                <div class="inset-item shin-2 list-group-item flex-column align-items-start pl-4 pr-4 bg-w2">
-                                    <div class="d-flex w-100 pt-1 justify-content-start">
-                                        <i class="fab fa-github"></i>
-                                        <h6 class="mb-1 pl-4">Front End Development</h6>
+                                <li class="inset-item">
+                                    <div class="list-content">
+                                        <div class="list-icon col-2">
+                                            <ion-icon name="shapes-outline"></ion-icon>
+                                        </div>
+                                        <div class="col-10">
+                                            <h6 class="mb-1">UI/UX Design</h6>
+                                        </div>
                                     </div>
-                                    <div class="d-flex w-100 pt-1 justify-content-between">
-                                        <p class="mb-1 pl-5">short description</p>
-                                        <small class="text-muted">Years involved</small>
+                                    <div class="list-text">
+                                        <span><i class="badge rounded-pill">Active</i></span>
+                                        <small data-dates="2017" class="time-stamp text-muted">since 2017</small>
+                                        <ion-icon name="rocket-outline"></ion-icon>
                                     </div>
-                                </div>
+                                </li>
                                 <!-- /Specialization Item -->
 
                                 <!-- Specialization Item -->
-                                <div class="inset-item sho-2 list-group-item flex-column align-items-start pl-4 pr-4 bg-w2">
-                                    <div class="d-flex w-100 pt-1 justify-content-start">
-                                        <i class="fab fa-github"></i>
-                                        <h6 class="mb-1 pl-4">Back End Development</h6>
+                                <li class="inset-item">
+                                    <div class="list-content">
+                                        <div class="list-icon col-2">
+                                            <ion-icon name="cube-outline"></ion-icon>
+                                        </div>
+                                        <div class="col-10">
+                                            <h6 class="mb-1">Architectural Design</h6>
+                                        </div>
                                     </div>
-                                    <div class="d-flex w-100 pt-1 justify-content-between">
-                                        <p class="mb-1 pl-5">short description</p>
-                                        <small class="text-muted">Years involved</small>
+                                    <div class="list-text">
+                                        <span><i class="badge rounded-pill">Active</i></span>
+                                        <small data-dates="2017" class="time-stamp text-muted">since 2017</small>
+                                        <ion-icon name="rocket-outline"></ion-icon>
                                     </div>
-                                </div>
+                                </li>
                                 <!-- /Specialization Item -->
 
                                 <!-- Specialization Item -->
-                                <div class="inset-item sho-2 list-group-item flex-column align-items-start pl-4 pr-4 bg-w2">
-                                    <div class="d-flex w-100 pt-1 justify-content-start">
-                                        <i class="fab fa-github"></i>
-                                        <h6 class="mb-1 pl-4">Project Management</h6>
+                                <li class="inset-item">
+                                    <div class="list-content">
+                                        <div class="list-icon col-2">
+                                            <ion-icon name="color-filter-outline"></ion-icon>
+                                        </div>
+                                        <div class="col-10">
+                                            <h6 class="mb-1">Design Strategy</h6>
+                                        </div>
                                     </div>
-                                    <div class="d-flex w-100 pt-1 justify-content-between">
-                                        <p class="mb-1 pl-5">short description</p>
-                                        <small class="text-muted">Years involved</small>
+                                    <div class="list-text">
+                                        <span><i class="badge rounded-pill">Active</i></span>
+                                        <small data-dates="2017" class="time-stamp text-muted">since 2017</small>
+                                        <ion-icon name="rocket-outline"></ion-icon>
                                     </div>
-                                </div>
+                                </li>
+                                <!-- /Specialization Item -->
+
+
+                                <!-- Specialization Item -->
+                                <li class="inset-item">
+                                    <div class="list-content">
+                                        <div class="list-icon col-2">
+                                            <ion-icon name="apps-outline"></ion-icon>
+                                        </div>
+                                        <div class="col-10">
+                                            <h6 class="mb-1">Project Management</h6>
+                                        </div>
+                                    </div>
+                                    <div class="list-text">
+                                        <span><i class="badge rounded-pill">Active</i></span>
+                                        <small data-dates="2017" class="time-stamp text-muted">since 2017</small>
+                                        <ion-icon name="rocket-outline"></ion-icon>
+                                    </div>
+                                </li>
                                 <!-- /Specialization Item -->
 
                                 <!-- Specialization Item -->
-                                <div class="inset-item shout-1 list-group-item flex-column align-items-start pl-4 pr-4 bg-w2">
-                                    <div class="d-flex w-100 pt-1 justify-content-start">
-                                        <i class="fab fa-github"></i>
-                                        <h6 class="mb-1 pl-4">Design Strategy</h6>
+                                <li class="inset-item">
+                                    <div class="list-content">
+                                        <div class="list-icon col-2">
+                                            <ion-icon name="copy-outline"></ion-icon>
+                                        </div>
+                                        <div class="col-10">
+                                            <h6 class="mb-1">Documentation Control</h6>
+                                        </div>
                                     </div>
-                                    <div class="d-flex w-100 pt-1 justify-content-between">
-                                        <p class="mb-1 pl-5">short description</p>
-                                        <small class="text-muted">Years involved</small>
+                                    <div class="list-text">
+                                        <span><i class="badge rounded-pill">Active</i></span>
+                                        <small data-dates="2017" class="time-stamp text-muted">since 2017</small>
+                                        <ion-icon name="rocket-outline"></ion-icon>
                                     </div>
-                                </div>
+                                </li>
                                 <!-- /Specialization Item -->
 
-                                <!-- Specialization Item -->
-                                <div class="inset-item shout-1 list-group-item flex-column align-items-start pl-4 pr-4 bg-w2">
-                                    <div class="d-flex w-100 pt-1 justify-content-start">
-                                        <i class="fab fa-github"></i>
-                                        <h6 class="mb-1 pl-4">Architectural Design</h6>
-                                    </div>
-                                    <div class="d-flex w-100 pt-1 justify-content-between">
-                                        <p class="mb-1 pl-5">short description</p>
-                                        <small class="text-muted">Years involved</small>
-                                    </div>
-                                </div>
-                                <!-- /Specialization Item -->
-
-                                <!-- Specialization Item -->
-                                <div class="inset-item shi-2 list-group-item flex-column align-items-start pl-4 pr-4 bg-w2">
-                                    <div class="d-flex w-100 pt-1 justify-content-start">
-                                        <i class="fab fa-github"></i>
-                                        <h6 class="mb-1 pl-4">Documentation Control</h6>
-                                    </div>
-                                    <div class="d-flex w-100 pt-1 justify-content-between">
-                                        <p class="mb-1 pl-5">short description</p>
-                                        <small class="text-muted">Years involved</small>
-                                    </div>
-                                </div>
-                                <!-- /Specialization Item -->
-
-                            </div>
+                            </ul>
                             <!-- /Specialization Section -->
 
-                        </div>
 
-                        <!-- Specialization CTA -->
-                        <div class="activity-cta mt-2 inset-container">
-                            <div class="d-flex flex-row align-items-stretch justify-content-end">
-                                <span class="outset-container-2 flex-fill">
-                                    <small class="mr-3 text-right5">
-                                        See my LinkedIn
-                                    </small>
-                                 </span>
-                                <a class="outset-container-2 btn"
-                                   href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank">
-                                    <span class="inset-inner">
-                                        <i class="fab fa-linkedin-in hvr-pop" style="color: #EAB1A5;"></i>
-                                        <span class="sr-only">LinkedIn</span>
-                                    </span>
-                                </a>
+
+
+                            <!-- Specialization CTA -->
+                            <div class="activity-cta mt-2 inset-container">
+                                <div class="d-flex flex-row align-items-stretch justify-content-end">
+                                    <span class="outset-container-2 flex-fill">
+                                        <small class="mr-3 text-right5">
+                                            See my LinkedIn
+                                        </small>
+                                     </span>
+                                    <a class="outset-container-2 btn"
+                                       href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank">
+                                        <span class="inset-inner">
+                                            <i class="fab fa-linkedin-in hvr-pop" style="color: #EAB1A5;"></i>
+                                            <span class="sr-only">LinkedIn</span>
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <!-- /Specialization CTA -->
+                            <!-- /Specialization CTA -->
+
+                        </section>
 
                     </div>
-                    <!-- /Section Body -->
+
 
                 </div>
                 <!-- /Card Right -->
@@ -915,7 +924,7 @@
                         <div class="list-group inset-container">
 
                             <!-- Proficiency Section -->
-                            <div class="proficiency-activity outset-container">
+                            <div class="proficiency-activity outset-container d-flex flex-wrap">
 
                                 <!-- Proficiency Item -->
                                 <div class="inset-item list-group-item flex-column align-items-start pl-4 pr-4 bg-w2">
