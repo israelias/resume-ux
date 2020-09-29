@@ -1,14 +1,20 @@
+/*!
+ * "The Curriculum Vitae of Joem Elias Sanez (Developed For The Web)"
+ * designed and built by Joem Elias Sanez
+ * as part of Milestone Project One
+ * with Code Institute
+ * on User-Centric Front-End Development
+ * first released on x/x/2020
+ * contact author via index.html
+ * fork the repo: (https://github.com/israelias)
+ */
+
 @import url("https://use.typekit.net/qyv7gbn.css");
 
-/*------------------------------------------------------------------------------- CONFIGS */
 
-/*margins for typical row inside a fluid container applied to root*/
-/*To take advantage of being able to apply css to the <html> and skip the trifecta of wrapper divs (container, row, col) for the main content and keep the markup clean*/
+/* CORE CONFIGS ------------------------------------------------------------------------------- */
+
 :root {
-    display: flex;
-    /*flex: 1 0 100%;*/
-    /*flex-wrap: wrap;*/
-    justify-content: center;
 
     --halyard-micro: "Halyard Micro", sans-serif;
     --halyard-text: "Halyard Text", sans-serif;
@@ -17,6 +23,7 @@
     --neue-haas-display: "Neue Haas Grotesk Display Pro", sans-serif;
     --attribute-mono: "Attribute Mono", sans-serif;
 
+    --matte: #D5D6D1;
     --obsidian: #2E2C2E;
     --raisin: #3E223D;
     --slate: #929181;
@@ -30,9 +37,13 @@
     --moss: #213128;
     --green: #234D3E;
 
+    /*w1*/
     --white: #FAFAFA;
+    /*w0*/
     --pearl: #F4F4F4;
+    /*w2*/
     --powder: #F5F4F2;
+    /*w3*/
     --paper: #F2F1EF;
 
     --deep-1:#4f4f4f;
@@ -50,15 +61,38 @@
 
 }
 
-/*margins for typical col-11 applied to children of root*/
+/* Apply margins for typical .row in a fluid .container to root */
+
+:root {
+    display: flex;
+    justify-content: center;
+}
+
+/* Apply edge shadows to static root canvas */
+
+:root {
+    box-shadow:
+            -3px 0 2px rgba(0, 0, 0, 0.3),
+            -3px 0 2px rgba(255, 255, 255, 0.5),
+            inset 3px 0 2px rgba(255, 255, 255, .5),
+            inset 3px 0 3px rgba(0, 0, 0, .3),
+
+            3px 0 2px rgba(0, 0, 0, 0.3),
+            3px 0 2px rgba(255, 255, 255, 0.5),
+            inset -3px 0 2px rgba(255, 255, 255, .5),
+            inset -3px 0 3px rgba(0, 0, 0, .3);
+}
+
+/* Achieve a centered 'col-ll' without '.container.row.col' wrapper divs */
+
 :root > * {
-    /*flex-shrink: 0;*/
-    /*flex: 0 0 auto;*/
     width: 91.666667%;
     margin-left: 0;
     margin-right: 0;
     background-color: #F2F1EF;
 }
+
+/* Fill 100% of width on mobile screens */
 
 @media (max-width: 575.98px) {
 
@@ -75,22 +109,123 @@
     }
 }
 
-/*------------------------------------------------------------------------------- UTILITIES */
+/* TYPE CONFIGS ------------------------------------------------------------------------------- */
 
 body {
     text-rendering: optimizeLegibility;
     font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'frac', 'onum', 'ordn', 'pnum', 'c2sc', 'salt', 'ss10';
     font-kerning: normal;
     font-variant-ligatures: common-ligatures;
-
     font-family:var(--attribute-mono);
-    /*font-weight: 300;*/
     color:#4f4f4f;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-shadow: #fff 0 1px 0, #D7D7D6 0 -1px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+p,
+i,
+ion-icon {
+    text-shadow: #fff 0 1px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+i,
+ion-icon {
+    color: #B6B6B6;
+}
+
+ion-icon {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 576px) {
+    ion-icon {
+        font-size: 1.25rem;
+    }
+}
+
 
 h1,h2 {
     font-family: var(--halyard-display);
 }
+
+
+/*LANDING BANNDER STYLING ONLY*/
+/*TO BE ORGANIZED LATER*/
+
+h1 {
+    font-family: var(--halyard-text);
+    padding: 5rem 1rem 1rem;
+    margin-bottom: .5rem;
+    /*font-size: 1.8rem;*/
+    /*line-height: 1.2rem;*/
+    font-weight: 100 !important;
+    /*letter-spacing: .1px;*/
+    color: var(--white);
+
+}
+
+#splash-heading {
+    font-family:var(--halyard-text);
+    font-weight: 100;
+    text-transform: uppercase;
+    color: var(--deep-1);
+
+}
+
+@media (max-width: 575.98px) {
+
+    #email {
+        font-size: .725rem;
+        margin-bottom: 1rem !important;
+    }
+    #collapseLanding {
+        margin-top: 2rem!important;
+    }
+
+    #band-c {
+        border-radius: .425rem!important;
+    }
+
+    #band-ul {
+        padding-top: .375rem!important;
+        padding-bottom: .375rem!important;
+    }
+    #band-t,
+    #band-b {
+        height: 40px !important;
+    }
+
+    #band-b {
+        width: 40px !important;
+    }
+
+    #band-t {
+        line-height: 1.2rem !important;
+    }
+
+}
+
+/*LANDING BANNER STYLING ONLY*/
+/*TO BE FIXED LATER*/
+
+
+@media (min-width: 740px) {
+
+    h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
+
 
 h4,h5,h6 {
     font-family: var(--halyard-text);
@@ -137,8 +272,11 @@ a:hover {
 p a {
 }
 
+/* GLOBAL SECTION CONFIGS  ------------------------------------------------------------------------------- */
 
-article section section {
+
+/*article section section,*/
+section section {
     flex: 1 1 auto;
     padding: 1rem 1rem;
     background: var(--gradient-1);
@@ -272,31 +410,7 @@ section.right ul li h6 {
     font-weight: 500;
 }
 
-.svelte-18urhxx {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0 0 1em 0;
-}
-
-.dashboard.svelte-18urhxx {
-    --h3-size: 12px;
-    --trend-label-size: 13px;
-    --trend-value-size: 20px;
-}
-
-@media (min-width: 740px) {
-    --h3-size: 13px;
-    --trend-label-size: 16px;
-}
-
-th.svelte-17tqmls.svelte-17tqmls {
-    font-size: var(--h3-size);
-    font-weight: 300;
-    text-align: left;
-    white-space: nowrap;
-    padding: 0 0 1em 0;
-    padding-right: 0px;
-}
+/* LOCAL SECTION VARIABLES ------------------------------------------------------------------------------- */
 
 ::selection {
     background: var(--yellow);
@@ -304,6 +418,10 @@ th.svelte-17tqmls.svelte-17tqmls {
 
 ::-moz-selection {
     background: var(--yellow)
+}
+
+#collapseZero h3 {
+    background-color: var(--matte);
 }
 
 #collapseOne h3 {
@@ -422,7 +540,7 @@ th.svelte-17tqmls.svelte-17tqmls {
     background: var(--raisin);
 }
 
-/*----------------------------------------------------------- Navbar */
+/* NAVBAR ------------------------------------------------------------------------------- */
 
 .nav-container {
     padding: 0 4.2%;
@@ -460,53 +578,31 @@ th.svelte-17tqmls.svelte-17tqmls {
     }
 }
 
-/*----------------------------------------------------------- Main accordion headers */
+/* MAIN CONTAINER   ------------------------------------------------------------------------------- */
 
-main {
+/*main,*/
+#bodyMain {
     margin-top: 3rem;
     position: relative;
 }
 
 @media (min-width: 576px) {
-    main {
+    /*main*/
+    #bodyMain {
         margin-top: 3.375rem;
-
     }
 }
 
-main:before,
-main:after {
-    top: 0;
-    bottom: 0;
-    z-index: 5;
-    position: absolute;
-    width: .8rem;
-    height: 100%;
-    display: block;
-    content: "";
+#resumeStack > section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
-main:before {
-    left: -4.2%;
 
-    box-shadow:
-            -3px 0 2px rgba(0, 0, 0, 0.3),
-            -3px 0 2px rgba(255, 255, 255, 0.5),
-            inset 3px 0 2px rgba(255, 255, 255, .5),
-            inset 3px 0 3px rgba(0, 0, 0, .3);
-}
+/* HEADER BUTTONS   ------------------------------------------------------------------------------- */
 
-main:after {
-    right: -4.2%;
-
-    box-shadow:
-            3px 0 2px rgba(0, 0, 0, 0.3),
-            3px 0 2px rgba(255, 255, 255, 0.5),
-            inset -3px 0 2px rgba(255, 255, 255, .5),
-            inset -3px 0 3px rgba(0, 0, 0, .3);
-}
-
-article header {
+/*article header*/
+[id^="heading"] {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -515,7 +611,8 @@ article header {
     padding-bottom: 0.75rem;
 }
 
-article header .header-title {
+/*article header .header-title,*/
+[id^="heading"] .header-title {
     padding-top: 0.0625rem;
     padding-bottom: 0.125rem;
     overflow: hidden;
@@ -524,7 +621,8 @@ article header .header-title {
     align-items: center;
 }
 
-article header button {
+/*article header button,*/
+[id^="heading"] button {
     display: flex;
     width: 100%;
     border: none;
@@ -535,43 +633,50 @@ article header button {
     z-index: 5;
 }
 
-article header .header-content {
+/*article header .header-content,*/
+[id^="heading"] .header-content {
     text-align: left;
     overflow-wrap: break-word;
     word-wrap: break-word;
     padding-bottom: .5em;
 }
 
-article header .header-name {
+/*article header .header-name,*/
+[id^="heading"] .header-name {
     position: relative;
     font-weight: 700;
 }
 
-article header .header-name:after {
+/*article header .header-name:after,*/
+[id^="heading"] .header-name:after {
     content: '/';
     display: inline-block;
     font-weight: 400;
     margin-left: 0.25rem;
 }
 
-article header .header-text {
+/*article header .header-text,*/
+[id^="heading"] .header-text {
     margin-left: .25rem;
     font-weight: 300;
     text-transform: capitalize;
 }
 
-article header .header-icon {
+/*article header .header-icon,*/
+[id^="heading"] .header-icon {
     margin-left: .25rem;
 }
 
-article header .header-icon ion-icon {
+/*article header .header-icon ion-icon,*/
+[id^="heading"] .header-icon ion-icon {
     --ionicon-stroke-width: 16px;
     color: #4f4f4f;
 }
 
-
-article header:before,
-article header:after {
+/*article header:before,*/
+/*article header:after,*/
+[id^="heading"]:before,
+[id^="heading"]:after {
     z-index: 2;
     position: absolute;
     top: -1.25rem;
@@ -581,7 +686,8 @@ article header:after {
     content: '';
 }
 
-article header:before {
+/*article header:before,*/
+[id^="heading"]:before {
     left: -4.2%;
     border-bottom-right-radius: .3rem;
     border-top-right-radius: .3rem;
@@ -589,7 +695,8 @@ article header:before {
     background: linear-gradient(90deg, #CCCDCC, #F8F9F4);
 }
 
-article header:after {
+/*article header:after,*/
+[id^="heading"]:after {
     right: -4.2%;
     border-bottom-left-radius: .3rem;
     border-top-left-radius: .3rem;
@@ -629,10 +736,15 @@ article header:after {
             inset 0 2px 3px rgba(0, 0, 0, .3);
 }
 
-article > section {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
+
+
+/*MESSES WITH ACCORDION */
+/*article > section {*/
+/*    margin-top: 3rem;*/
+/*    margin-bottom: 3rem;*/
+/*}*/
+
+/* HEADING ICON BUTTON TOGGLE BEHAVIOR */
 
 .open {
     display: none;
@@ -688,107 +800,8 @@ article > section {
 
 }
 
-/*[aria-labelledby^="heading"]:not([aria-labelledby$="Zero"]) {*/
-/*    height: 60vh;*/
-/*    overflow-x: scroll;*/
-/*}*/
-/*----------------------------------------------------------- Font Rules */
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    /*color: #707070;*/
-    text-shadow: #fff 0 1px 0, #D7D7D6 0 -1px 0;
-    -webkit-font-smoothing: antialiased;
-}
-
-p,
-i,
-ion-icon {
-    text-shadow: #fff 0 1px 0;
-    -webkit-font-smoothing: antialiased;
-}
-
-i,
-ion-icon {
-    color: #B6B6B6;
-}
-
-ion-icon {
-    font-size: 1.5rem;
-}
-
-@media (min-width: 576px) {
-    ion-icon {
-        font-size: 1.25rem;
-    }
-}
-
-
-/*----------------------------------------------------------- Tab Button Containers */
-
-button {
-    box-shadow: none;
-}
-
-.tab-button h4 {
-    /*font-weight: 300;*/
-    font-size: 1rem;
-    color: #B6B6B6;
-    /*z-index: 3;*/
-}
-
-.tab-button span {
-    text-align: center;
-    /*font-family: "Input Mono", monospace;*/
-    /*text-transform: lowercase;*/
-    letter-spacing: 2px;
-    text-shadow: #fff 0 1px 0;
-    -webkit-font-smoothing: antialiased;
-}
-
-.tab-button span > i {
-    color: #D4D6D6;
-    text-shadow: 0 3px 0 0 #A4A4A4, 0 -4px 0 0 #fafafa;
-
-    /*font-family: "Major Mono Display", monospace;*/
-    font-size: 1.25rem;
-    z-index: 8;
-    /*text-shadow: #fff 0 1px 0;*/
-    -webkit-font-smoothing: antialiased;
-}
-
-
-[data-toggle="collapse"][aria-expanded="true"].btn > span {
-    color: #fafafa;
-    text-shadow: #fff 0 1px 0;
-    -webkit-font-smoothing: antialiased;
-}
-
-
-
-
-
-
-
-@media (min-width: 768px) {
-    [id^="collapse"] .card-right .card-body {
-        border: none;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-    /*...*/
-}
-
-@media (min-width: 992px) {
-    /*    */
-}
-
+/* COLLAPSE FUNCTIONS   ------------------------------------------------------------------------------- */
 
 /*TEMPOARY SHOW ALL*/
 
@@ -810,21 +823,15 @@ button {
     /*}*/
 }
 
+/*DISPOSE LANDING CONTENT AFTER INITAL COLLAPSE*/
 
-/* ------------------------------------------------------------------ Tab Toggle */
-
-/* Sourced From (https://gist.github.com/absent1706/6ebcee9f2d7992e26f073905fc28ca97) */
-
-[data-toggle="collapse"][aria-expanded="true"] .rotate-icon {
-    -webkit-transform: rotate(180deg);
-    -moz-transform:    rotate(180deg);
-    -ms-transform:     rotate(180deg);
-    -o-transform:      rotate(180deg);
-    transform:         rotate(180deg);
+[id="collapseLanding"].collapse:not(.show) {
+    display: none;
 }
 
 
-/* ------------------------------------------------------------------ Landing Section/ Image */
+
+/* LANDING SECTION   ------------------------------------------------------------------------------- */
 
 
 .landing-heading h1 {
@@ -979,12 +986,17 @@ button {
 
 }
 
+/* CONTAINER STYLE VARIABLES  ------------------------------------------------------------------------------- */
+
+button {
+    box-shadow: none;
+}
+
 ul {
     margin-block-end: 0;
 }
 
 .outset-outer {
-    /*overflow: hidden;*/
     width: 100%;
     height: 100%;
     clip-path: inset(-.5rem);
@@ -1024,19 +1036,9 @@ ul {
             0 6px 3px rgba(0, 0, 0, 0.4);
 }
 
-.outset-inner {
-    overflow: hidden;
-    padding: .5rem;
-    border-radius: .6rem;
-    /*border-color: #F2F1EF;*/
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
-    box-shadow: 9.91px 9.91px 15px rgba(0, 0, 0, 0.2), -9.91px -9.91px 15px rgba(255, 255, 255, 0.3);
-}
-
 .inset-container {
     overflow: hidden;
     padding: .5rem;
-    box-shadow: 5px 5px 6px 0 rgba(255, 255, 255, 0.5), -5px -5px 6px 0 rgba(0, 0, 0, 0.2);
     border-radius: .75rem;
 
     box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 5px 8px 6px 0 rgba(0, 0, 0, 0.3);
@@ -1059,7 +1061,6 @@ ul {
     overflow: hidden;
     margin: 0 -.5rem 0 -.5rem;
     padding: .5rem .5rem .5rem .5rem;
-    box-shadow: 5px 5px 6px 0 rgba(255, 255, 255, 0.5), -5px -5px 6px 0 rgba(0, 0, 0, 0.2);
     border-radius: .75rem;
 
     box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 5px 8px 6px 0 rgba(0, 0, 0, 0.2);
@@ -1175,6 +1176,8 @@ ul {
     background: linear-gradient(145deg, rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0.2));
     box-shadow: 0.3px 0.3px 1px rgba(237, 238, 243, 0.1), -0.3px -0.3px 1px rgba(239, 241, 245, 0.1);
 }
+
+/* CTA BUTTON CONFIGS AND VARS   ------------------------------------------------------------------------------- */
 
 .btn {
     background-color: transparent;
@@ -1369,28 +1372,10 @@ form .connect-cta input {
     height: 3rem;
 }
 
-/* ------------------------------------------------------------------ Shadows and Insets */
+/* MISC   ------------------------------------------------------------------------------- */
 
 
-.card--body {
-    margin: 1rem;
-}
 
-.experience-item {
-    padding: .5rem 1rem;
-
-    background: linear-gradient(
-            180deg, rgba(250, 250, 250, .7),
-            rgba(0, 0, 0, .1)
-    );
-
-}
-
-.experience-item .list-group-item {
-    border: none;
-}
-
-/*----------------------------------------------------------- Landing and Title */
 
 /*GitHub styles*/
 
@@ -1420,7 +1405,7 @@ form .connect-cta input {
 }
 
 
-/* ------------------------------------------------------------------ Recommendation Section */
+/* RECOMMENDATIONS SECTION  ------------------------------------------------------------------------------- */
 
 /* CREDIT:(unmodified) Embed LinkedIn Recommendations with HTML and CSS https://www.damosdesigns.com/LinkedinRecommendationsOnWebsite/ */
 
@@ -1611,35 +1596,6 @@ blockquote, q {
 }
 
 
-
-
-
-
-
-
-
-
-
-/*----------------------------------------------------------- Color Rules */
-
-
-
-[class$="w0"] {
-    background-color: #F4F4F4;
-}
-
-[class$="w1"] {
-    background-color: #FAFAFA;
-}
-
-[class$="w2"] {
-    background-color: #F5F4F2;
-}
-
-[class$="w3"] {
-    background-color: #F2F1EF;
-}
-
 /* ------------------------------------------------------------------------------- DATA TOGGLE FEEDBACKS */
 
 
@@ -1699,168 +1655,3 @@ blockquote, q {
 }
 
 
-/*[id^="heading"] > .row {*/
-/*    overflow: hidden;*/
-/*}*/
-
-/*.tab-stack {*/
-/*    float: left;*/
-/*    position: relative;*/
-/*}*/
-
-/*@media (max-width: 575.98px) {*/
-
-/*    .card--body {*/
-/*        margin: 0;*/
-/*    }*/
-
-/*    [id^="heading"] > .row {*/
-/*        height: 40px;*/
-/*    }*/
-
-/*    .tab-button .btn {*/
-/*        font-size: .875rem;*/
-/*        margin-top: 8px;*/
-/*        height: 32px;*/
-/*        float: left;*/
-/*        padding: 3px 10px 10px 10px;*/
-/*        border-radius: 1rem 1rem 0 0;*/
-/*        -webkit-border-radius: 1rem 1rem 0 0;*/
-/*        -moz-border-radius: 1rem 1rem 0 0;*/
-/*        width: 100%;*/
-/*        box-shadow: -1px -8px 0 0 #fafafa;*/
-/*    }*/
-
-/*    .tab-stack:after,*/
-/*    .tab-button:after {*/
-/*        position: absolute;*/
-/*        bottom: 0;*/
-/*        content: "";*/
-/*        right: -1599px;*/
-/*        width: 1600px;*/
-/*        height: 20px;*/
-/*        border-bottom-left-radius: 1rem;*/
-/*        border-top: none;*/
-/*        background-color: transparent;*/
-/*        box-shadow: -25px 0 0 0 #F2F1EF, -2px -5px 0 0 #BFBFBF inset, -2px -10px 0 0 #D7D7D6 inset, -2px -15px 0 0 #EFEEEC inset, 8px -57px 0 0 #FAFAFA;*/
-/*    }*/
-
-/*    [id$="Zero"] .tab-button .btn {*/
-/*        box-shadow: -1px -8px 0 0 #000;*/
-/*    }*/
-
-/*    [id$="One"] .tab-button .btn {*/
-/*        box-shadow: -5px -8px 0 0 #423C3A;*/
-/*    }*/
-
-/*    [id$="Two"] .tab-button .btn {*/
-/*        box-shadow: -1px -8px 0 0 #B84A30;*/
-/*    }*/
-
-/*    [id$="Three"] .tab-button .btn {*/
-/*        box-shadow: -1px -8px 0 0 #1D49B8;*/
-/*    }*/
-
-/*    [id$="Four"] .tab-button .btn {*/
-/*        box-shadow: -1px -8px 0 0 #B8A922;*/
-/*    }*/
-
-/*    [id$="Five"] .tab-button .btn {*/
-/*        box-shadow: -1px -8px 0 0 #234D3E;*/
-/*    }*/
-
-/*    [id$="Six"] .tab-button .btn {*/
-/*        box-shadow: -1px -8px 0 0 #3E223D;*/
-/*    }*/
-
-/*    [id^="collapse"] .card-right .card-body,*/
-/*    [id^="collapse"] .card-right .card-header {*/
-/*        box-shadow: none;*/
-/*    }*/
-/*}*/
-
-/*@media (min-width: 576px) {*/
-
-/*    .card--body {*/
-/*        margin: 1rem;*/
-/*    }*/
-
-/*    .tab-button h4 > i {*/
-/*        z-index: 12;*/
-/*    }*/
-
-/*    [id^="heading"] > .row {*/
-/*        height: 60px;*/
-/*    }*/
-
-/*    .tab-button .btn {*/
-/*        overflow: visible;*/
-/*        margin-top: 10px;*/
-/*        height: 50px;*/
-/*        float: left;*/
-/*        padding: 10px 10px 10px 20px;*/
-/*        border-bottom: none;*/
-/*        border-radius: 1.5rem 1.5rem 0 0;*/
-/*        -webkit-border-radius: 1.5rem 1.5rem 0 0;*/
-/*        -moz-border-radius: 1.5rem 1.5rem 0 0;*/
-/*        width: 100%;*/
-/*        box-shadow:*/
-/*                -1px -10px 0 0 #B6B6B6;*/
-/*    }*/
-
-/*    .tab-button:after,*/
-/*    .tab-stack:after,*/
-/*    .tab-button .btn:after {*/
-/*        position: absolute;*/
-/*        bottom: 0;*/
-/*        content: "";*/
-/*        right: -1599px;*/
-/*        width: 1600px;*/
-/*        height: 25px;*/
-/*        border-bottom-left-radius: 1.875rem;*/
-/*        border-top: none;*/
-/*        z-index: 1;*/
-/*        background-color: transparent;*/
-/*    }*/
-
-/*    .tab-stack:after {*/
-/*        box-shadow: inset -5px 5px 6px 0 rgba(255, 255, 255, 0.5), inset 5px -5px 6px 0 rgba(0, 0, 0, 0.2);*/
-/*        z-index: 1;*/
-/*    }*/
-
-/*    [id$="Zero"] .tab-button .btn {*/
-/*        !*box-shadow: -1px -10px 0 0 #B6B6B6, inset 2px 8px 6px 0 rgba(255, 255, 255, 0.4);*!*/
-/*    }*/
-
-/*    [id$="One"] .tab-button .btn {*/
-/*        !*box-shadow: -1px -10px 0 0 #423C3A, inset 2px 8px 6px 0 rgba(255, 255, 255, 0.4);*!*/
-/*    }*/
-
-/*    [id$="Two"] .tab-button .btn {*/
-/*        !*box-shadow: -1px -10px 0 0 #B84A30, inset 2px 8px 6px 0 rgba(255, 255, 255, 0.4);*!*/
-/*    }*/
-
-/*    [id$="Three"] .tab-button .btn {*/
-/*        !*box-shadow: -1px -10px 0 0 #1D49B8, inset 2px 8px 6px 0 rgba(255, 255, 255, 0.4);*!*/
-/*    }*/
-
-/*    [id$="Four"] .tab-button .btn {*/
-/*        !*box-shadow: -1px -10px 0 0 #B8A922, inset 2px 8px 6px 0 rgba(255, 255, 255, 0.4);*!*/
-/*    }*/
-
-/*    [id$="Five"] .tab-button .btn {*/
-/*        !*box-shadow: -1px -10px 0 0 #234D3E;*!*/
-/*    }*/
-
-/*    [id$="Six"] .tab-button .btn {*/
-/*        !*box-shadow: -1px -10px 0 0 #3E223D;*!*/
-/*    }*/
-
-/*    [id^="collapse"] .card-right .card-body,*/
-/*    [id^="collapse"] .card-right .card-header {*/
-/*        box-shadow: none;*/
-/*    }*/
-/*}*/
-
-/* Learned from Tutorial (https://itnext.io/how-to-make-a-fancy-inverted-border-radius-in-css-5db048a53f95) */
-/* ------------------------------------------------------------------ Main Section Tab Buttons*/
