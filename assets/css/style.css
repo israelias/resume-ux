@@ -66,6 +66,8 @@
 :root {
     display: flex;
     justify-content: center;
+
+    scroll-behavior: smooth;
 }
 
 /* Apply edge shadows to static root canvas */
@@ -90,6 +92,16 @@
     margin-left: 0;
     margin-right: 0;
     background-color: #F2F1EF;
+}
+
+@keyframes toggleOpacity {
+    50% { opacity: 1; } /* Turn off */
+    50.001% { opacity: 0.4; }
+
+    /* Keep off state for a short period */
+
+    52.999% { opacity: 0.4; } /* Turn back on */
+    53% { opacity: 1; }
 }
 
 /* Fill 100% of width on mobile screens */
@@ -153,13 +165,71 @@ ion-icon {
 }
 
 
-h1,h2 {
+h1,h2, h3 {
     font-family: var(--halyard-display);
 }
 
+h4,h5,h6 {
+    /*font-family: var(--halyard-text);*/
+}
 
-/*LANDING BANNDER STYLING ONLY*/
-/*TO BE ORGANIZED LATER*/
+
+/*Section lead heading*/
+h4 {
+    padding: 5rem 1rem 1rem;
+    margin-bottom: .5rem;
+
+    font-family:var(--halyard-display);
+    /*line-height: calc(1rem + .08vw);*/
+
+    /*letter-spacing: .013rem;*/
+    /*text-shadow: #fff 0 .5rem 0, #D7D7D6 0 -.5rem 0;*/
+
+    color: #FAFAFA;
+    border-radius: var(--radius-2);
+}
+
+/* Section sub headings */
+h5 {
+    /*font-family:var(--attribute-mono);*/
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+
+p {
+    /*font-weight: 400;*/
+}
+
+
+b {
+    font-weight: 100;
+}
+
+a {
+    color: slategray;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p a {
+}
+
+
+/* SPLASH BANNER ------------------------------------------------------------------------------- */
+
+/* Custom 'onboarding' banner, disposes upon initial click  */
+/* To be organized */
 
 h1 {
     font-family: var(--halyard-text);
@@ -169,8 +239,16 @@ h1 {
     /*line-height: 1.2rem;*/
     font-weight: 100 !important;
     /*letter-spacing: .1px;*/
-    color: var(--white);
+    color: var(--deep-4);
 
+}
+
+@media (min-width: 740px) {
+
+    h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
 }
 
 #splash-heading {
@@ -179,6 +257,10 @@ h1 {
     text-transform: uppercase;
     color: var(--deep-1);
 
+}
+
+#collapseLanding {
+    /*transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);*/
 }
 
 @media (max-width: 575.98px) {
@@ -214,66 +296,9 @@ h1 {
 
 }
 
-/*LANDING BANNER STYLING ONLY*/
-/*TO BE FIXED LATER*/
-
-
-@media (min-width: 740px) {
-
-    h1 {
-        font-size: 2rem;
-        line-height: 2rem;
-    }
-}
-
-
-h4,h5,h6 {
-    font-family: var(--halyard-text);
-}
-
-h3 {
-    padding: 5rem 1rem 1rem;
-    margin-bottom: .5rem;
-
-    font-family:var(--halyard-display);
-    /*line-height: calc(1rem + .08vw);*/
-
-    /*letter-spacing: .013rem;*/
-    /*text-shadow: #fff 0 .5rem 0, #D7D7D6 0 -.5rem 0;*/
-
-    color: #FAFAFA;
-    border-radius: var(--radius-2);
-}
-
-h4 {
-    /*font-family:var(--attribute-mono);*/
-    font-weight: 100;
-    text-transform: uppercase;
-}
-
-
-p {
-    /*font-weight: 400;*/
-}
-
-
-b {
-    font-weight: 100;
-}
-
-a {
-    color: slategray;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-p a {
-}
+/*/SPLASH BANNER END*/
 
 /* GLOBAL SECTION CONFIGS  ------------------------------------------------------------------------------- */
-
 
 /*article section section,*/
 section section {
@@ -294,7 +319,7 @@ section.right {
     border-radius: var(--radius-2);
 }
 
-section.right h4 {
+section.right h5 {
     text-align: right;
 }
 
@@ -420,11 +445,11 @@ section.right ul li h6 {
     background: var(--yellow)
 }
 
-#collapseZero h3 {
+#collapseZero h4 {
     background-color: var(--matte);
 }
 
-#collapseOne h3 {
+#collapseOne h4 {
     background-color: var(--slate);
 }
 
@@ -444,7 +469,7 @@ section.right ul li h6 {
     background: var(--grey);
 }
 
-#collapseTwo h3 {
+#collapseTwo h4 {
     background-color: var(--ruby);
 }
 
@@ -464,7 +489,7 @@ section.right ul li h6 {
     background: var(--red);
 }
 
-#collapseThree h3 {
+#collapseThree h4 {
     background-color: var(--denim);
 }
 
@@ -484,7 +509,7 @@ section.right ul li h6 {
     background: var(--blue);
 }
 
-#collapseFour h3 {
+#collapseFour h4 {
     background-color: var(--canary);
 }
 
@@ -504,7 +529,7 @@ section.right ul li h6 {
     background: var(--yellow);
 }
 
-#collapseFive h3 {
+#collapseFive h4 {
     background-color: var(--moss);
 }
 
@@ -593,9 +618,51 @@ section.right ul li h6 {
     }
 }
 
-#resumeStack > section {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+
+.spread > div {
+    padding-bottom: 3rem;
+}
+
+.spread > :first-child {
+    padding-top: .5rem;
+}
+
+@media (min-width: 768px) {
+
+    .spread > div,
+    .spread > :first-child {
+        padding-top: 1rem;
+    }
+
+}
+
+section.right ul {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    padding: var(--radius-4);
+    border-radius: var(--radius-3) !important;
+    box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 5px 8px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+section.right ul > * {
+    margin-bottom: var(--radius-4);
+}
+
+section.right ul li {
+    flex-grow: 1;
+    min-width: 50%;
+    padding: var(--radius-3);
+    border-radius: var(--radius-2);
+    border-color: var(--paper);
+    background: var(--powder) !important;
+    box-shadow: 0 -6.4px 3px rgba(0, 0, 0, 0.2), 0 6px 3px rgba(0, 0, 0, 0.4);
+    font-family: var(--halyard-text);
+
+    padding-right: 1.25rem;
 }
 
 
@@ -627,32 +694,37 @@ section.right ul li h6 {
     width: 100%;
     border: none;
     justify-content: space-between;
-    font-size: 1.0625rem;
+    /*font-size: 1.0625rem;*/
     line-height: 1.25rem;
     background-color: transparent;
     z-index: 5;
 }
 
+[id^="heading"] button {
+    font-size:calc(1rem + .3vw)
+}
+
+@media (min-width:1200px){
+    [id^="heading"] button {
+        font-size:1.5rem
+    }
+}
+
 /*article header .header-content,*/
 [id^="heading"] .header-content {
     text-align: left;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    padding-bottom: .5em;
+    padding-top: .5rem;
+    overflow: hidden;
+    text-wrap: none;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 /*article header .header-name,*/
 [id^="heading"] .header-name {
     position: relative;
-    font-weight: 700;
-}
-
-/*article header .header-name:after,*/
-[id^="heading"] .header-name:after {
-    content: '/';
-    display: inline-block;
-    font-weight: 400;
-    margin-left: 0.25rem;
+    font-weight: 500;
+    opacity: .7;
 }
 
 /*article header .header-text,*/
@@ -660,16 +732,31 @@ section.right ul li h6 {
     margin-left: .25rem;
     font-weight: 300;
     text-transform: capitalize;
+
+    width: 50vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: .6;
+}
+
+[id^="heading"] .header-text:before {
+    content: '/';
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 0.25rem;
 }
 
 /*article header .header-icon,*/
 [id^="heading"] .header-icon {
     margin-left: .25rem;
+    padding-top: .5rem;
 }
 
 /*article header .header-icon ion-icon,*/
 [id^="heading"] .header-icon ion-icon {
-    --ionicon-stroke-width: 16px;
+    font-size: 24px;
+    --ionicon-stroke-width: 20px;
     color: #4f4f4f;
 }
 
@@ -736,102 +823,69 @@ section.right ul li h6 {
             inset 0 2px 3px rgba(0, 0, 0, .3);
 }
 
+/* COLLAPSE FUNCTIONS   ------------------------------------------------------------------------------- */
 
+/* Swap the visibility of icon pairs upon toggle of expand/collapse */
+/* .open and .closed classes added to either of two ion-icons in each header */
 
-/*MESSES WITH ACCORDION */
-/*article > section {*/
-/*    margin-top: 3rem;*/
-/*    margin-bottom: 3rem;*/
-/*}*/
-
-/* HEADING ICON BUTTON TOGGLE BEHAVIOR */
+/* Render .open to be hidden by default  */
 
 .open {
     display: none;
 }
 
+/* Hide .closed when section is expanded */
+
 [data-toggle="collapse"][aria-expanded="true"] .closed {
     display: none;
 }
+
+/* Show .open when section is expanded */
 
 [data-toggle="collapse"][aria-expanded="true"] .open {
     display: block;
 }
 
-[data-toggle="collapse"][aria-expanded="true"] .closed {
-    display: none;
-}
+/* Have the ability to scroll within an expanded section on a small screen */
+/* With the exception of the Introduction section (collapseZero) */
+/* 60vh is an arbitrary height to for both in-section scrolling and sibling header-buttons visibility */
 
-[data-toggle="collapse"][aria-expanded="true"] ~ h2 {
-    /*background: #929181;*/
-}
-
-[data-parent="#resumeStack"][id^="heading"].collapse.show {
-    /*height: 60vh;*/
-    /*overflow: scroll;*/
-}
-
-[data-toggle="collapse"][aria-expanded="true"][data-target$="One"] {
-    /*position: sticky;*/
-    /*top: 4rem;*/
-}
-
-
-
-/*.text-truncate {*/
-/*    overflow: hidden;*/
-/*    text-overflow: ellipsis;*/
-/*    white-space: nowrap;*/
-/*}*/
-
-/*height: calc(1.5em + 0.75rem + 2px);*/
-
-/*OVERFLOW ACCORDION ON MOBILE*/
 @media (max-width: 575.98px) {
 
-    article section:not([aria-labelledby$="Zero"]) {
+    #resumeStack > section:not([aria-labelledby$="Zero"]) {
         /*height: 60vh;*/
         /*overflow-x: scroll;*/
+
+        /*height: calc(100vh - var(--header-height) +.75rem);*/
+        /*overflow-y: scroll; */
+        /*-webkit-overflow-scrolling: touch;*/
     }
 
-    article header {
+    #resumeStack > header {
         /*height: 40px;*/
+        /*text-overflow: ellipsis;*/
+        /*white-space: nowrap;*/
     }
-
 }
 
+/* Override aria-expanded='false' */
+/* Ability to see and style the everything all at once  */
 
-/* COLLAPSE FUNCTIONS   ------------------------------------------------------------------------------- */
+@media (min-width: 320px) {
 
-/*TEMPOARY SHOW ALL*/
-
-/*@media (min-width: 320px) {*/
-
-/*    [data-parent="#resumeStack"].collapse:not(.show) {*/
-/*        display: block;*/
-/*    }*/
-/*}*/
-
-
-/*to scroll overflow of each section on mobile*/
-
-@media (max-width: 575.98px) {
-
-    /*[aria-labelledby^="heading"]:not([aria-labelledby$="Zero"]) {*/
-    /*    height: 60vh;*/
-    /*    overflow-x: scroll;*/
-    /*}*/
+    [data-parent="#resumeStack"].collapse:not(.show) {
+        /*display: block;*/
+    }
 }
 
-/*DISPOSE LANDING CONTENT AFTER INITAL COLLAPSE*/
+/* Dispose splash banner content upon click any header-button */
 
 [id="collapseLanding"].collapse:not(.show) {
     display: none;
 }
 
 
-
-/* LANDING SECTION   ------------------------------------------------------------------------------- */
+/* INTRODUCTION SECTION   ------------------------------------------------------------------------------- */
 
 
 .landing-heading h1 {
@@ -905,6 +959,16 @@ section.right ul li h6 {
     -webkit-font-smoothing: antialiased;
 }
 
+/* SOCIAL LINKS NAV LIST GROUP   ------------------------------------------------------------------------------- */
+
+button {
+    box-shadow: none;
+}
+
+ul {
+    margin-block-end: 0;
+}
+
 .social-links li .fas,
 .social-links li .fab,
 .social-links li .far,
@@ -927,10 +991,7 @@ section.right ul li h6 {
 
 }
 
-/* ------------------------------------------------------------------ Vertical Scroller */
-
-/*Neumorphic shadow inspired by (https://css-tricks.com/neumorphism-and-css/)*/
-
+/* RECENT ACTIVITY SCROLLER   ------------------------------------------------------------------------------- */
 
 #verticalScroller {
     margin: 0 auto;
@@ -968,7 +1029,6 @@ section.right ul li h6 {
 }
 
 .recent-activity {
-    /*position: relative;*/
     border-radius: .6rem;
 }
 
@@ -988,13 +1048,7 @@ section.right ul li h6 {
 
 /* CONTAINER STYLE VARIABLES  ------------------------------------------------------------------------------- */
 
-button {
-    box-shadow: none;
-}
-
-ul {
-    margin-block-end: 0;
-}
+/*Neumorphic shadow inspired by (https://css-tricks.com/neumorphism-and-css/)*/
 
 .outset-outer {
     width: 100%;
@@ -1374,9 +1428,6 @@ form .connect-cta input {
 
 /* MISC   ------------------------------------------------------------------------------- */
 
-
-
-
 /*GitHub styles*/
 
 .repo-color {
@@ -1597,7 +1648,61 @@ blockquote, q {
 
 
 /* ------------------------------------------------------------------------------- DATA TOGGLE FEEDBACKS */
+[id^="heading"] * {
+    transition: all 0.3s 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+#headingOne button:hover {
+    opacity: 1;
+    white-space-treatment: ;
+}
 
+[data-toggle="collapse"][aria-expanded="true"] .header-icon ion-icon {
+    --ionicon-stroke-width: 32px;
+}
+
+[data-toggle="collapse"][aria-expanded="true"] .header-name {
+    opacity: 1;
+}
+
+[data-toggle="collapse"][aria-expanded="true"] .header-content {
+    flex-wrap: wrap;
+}
+
+[data-toggle="collapse"][aria-expanded="true"] .header-text {
+    width: 100%;
+}
+
+[data-toggle="collapse"][aria-expanded="true"] .header-text:before {
+    font-weight: 500;
+}
+
+[data-toggle="collapse"][aria-expanded="true"][data-target$="One"] .header-text:before {
+    color: var(--grey);
+}
+
+[data-toggle="collapse"][aria-expanded="true"][data-target$="Two"] .header-text:before {
+    color: var(--red);
+}
+
+[data-toggle="collapse"][aria-expanded="true"][data-target$="Three"] .header-text:before {
+    color: var(--blue);
+}
+
+[data-toggle="collapse"][aria-expanded="true"][data-target$="Four"] .header-text:before {
+    color: var(--canary);
+}
+
+[data-toggle="collapse"][aria-expanded="true"][data-target$="Five"] .header-text:before {
+    color: var(--green);
+}
+
+[data-toggle="collapse"][aria-expanded="true"][data-target$="Six"] .header-text:before {
+    color: var(--raisin);
+}
+
+/*color: #707070;*/
+/*text-shadow: #FAFAFA 0 1px 0, #D4D6D6 0 -1px 0;*/
+/*-webkit-font-smoothing: antialiased;*/
 
 [data-toggle="collapse"][aria-expanded="true"][data-target$="One"].btn {
     /*background: #929181;*/
@@ -1653,5 +1758,3 @@ blockquote, q {
     /*box-shadow: -25px 0 0 0 #2e2c2e, -2px -10px 0 0 #3E223D inset;*/
     /*z-index: 6;*/
 }
-
-
