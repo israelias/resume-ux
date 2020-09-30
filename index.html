@@ -13,8 +13,10 @@
     <!-- ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">-->
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css" rel="stylesheet">
     <!-- Vertical Scroll jQuery -->
@@ -198,70 +200,102 @@
 
     </nav>
     <!-- /Navbar Container -->
+
 </header>
 <!-- /Header container -->
 
-<!-- Accordion wrapper -->
-<main id="resumeStack">
-    <article>
-        <header id="headingZero">
-            <h2 class="header-title d-flex">
-                <button class="show" type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseZero"
-                        aria-expanded="true"
-                        aria-controls="collapseZero">
-                        <span class="header-content">
-                            <span class="header-name">
-                                INTRODUCTION
-                            </span>
-                            <span class="header-text">
-                                Whoabouts and activity
-                            </span>
-                        </span>
-                    <span class="header-icon justify-self-end">
-                            <ion-icon name="code-working-outline" class="closed"></ion-icon>
-                            <ion-icon name="code-slash-outline" class="open"></ion-icon>
-                        </span>
-                </button>
-            </h2>
-        </header>
 
-        <!-- Collapse 0 Content-->
-        <section id="collapseZero" class="collapse collapse-all show" aria-labelledby="headingZero" data-parent="#resumeStack">
-            <div class="row">
+<div id="bodyMain">
+
+    <!-- Accordion wrapper -->
+    <div id="resumeStack" class="accordion">
+
+    <!-- Splash Banner Head -->
+
+        <!-- start SPLASH BANNER -->
+        <section id="collapseLanding" class="show" aria-labelledby="headingLanding" data-parent="#resumeStack">
+            <div class="pb-4 sm-pb-5">
+                <div id="band-c" class="landing-container inset-container">
+                    <h1 class="inset-item lh-1 pt-5 h3">
+                        Fifteen sections nested in seven article elements doubly stacked in one collapsible block: the
+                        curriculum vitae of Joem Elias Sanez (developed for the web).
+                    </h1>
+
+                    <section id="splash-banner" class="left landing-banner">
+                        <h2 id="splash-heading" class="h4">
+                            jStack.CV
+                        </h2>
+                        <ul id="band-ul" class="landing-masthead activity-cta mt-2 inset-container">
+                            <li id="band-li" class="d-flex flex-row align-items-stretch">
+                                <span id="band-t" class="outset-container-2 contact-text flex-fill mr-2 text-muted justify-content-between">
+                                    <span id="email" class="value">israelias.js@gmail.com</span>
+                                </span>
+                                <a id="band-b" class="outset-container-2 btn" href="mailto:israelias.js@gmail.com"
+                                   target="_blank">
+                                    <span class="inset-inner">
+                                        <i class="fas fa-envelope"></i>
+                                        <span class="sr-only">Email</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+        </section> <!-- /close splash banner -->
+
+
+    <!-- 0.0 (Introduction: Social Links & Recent Activity) -->
+
+        <!-- start 0.0 HEADER BUTTON -->
+        <header id="headingZero">
+            <h3 class="header-title d-flex">
+                <button class="collapsed" type="button" data-toggle="collapse" data-target="#collapseZero"
+                        aria-expanded="false" aria-controls="collapseZero">
+                    <span class="header-content">
+                        <span class="header-name">
+                            INTRODUCTION
+                        </span>
+                        <span class="header-text">
+                            Whoabouts and activity
+                        </span>
+                    </span>
+                    <span class="header-icon justify-self-end">
+                        <ion-icon name="code-working-outline" class="closed"></ion-icon>
+                        <ion-icon name="code-slash-outline" class="open"></ion-icon>
+                    </span>
+                </button>
+            </h3>
+        </header> <!-- /close 1.0 header button -->
+
+        <!-- start 0.0 COLLAPSED SECTION WRAPPER -->
+        <section id="collapseZero" class="collapse collapse-all" aria-labelledby="headingZero" data-parent="#resumeStack">
+            <div class="spread row">
 
                 <!-- Card Left -->
-                <div class="col-12 col-md-7 col-lg-7 col-xl-6 col-xxl-5 pt-5 order-2 order-sm-2 order-md-1 mb-5">
-                    <div class="row inset-container">
-
-                        <!-- Landing Blurb -->
-                        <div class="inset-item card-header landing-heading pt-5"
-                             style="color: #FAFAFA;border-radius: .6rem; background-color: #D5D6D1;">
-                            <h2 class="pt-5 lh-1 display-6">
-                                Joem Elias Sanez is an architect and full stack developer based in Manila.
-                            </h2>
-                        </div>
-                        <!-- /Landing Blurb -->
+                <div class="col-12 col-md-7 col-lg-7 col-xl-6 col-xxl-5 order-2 order-sm-2 order-md-1">
+                    <div class="inset-container">
+                        <h4 class="inset-item">
+                            <span class="display-6 lh-1">
+                                 Joem Elias Sanez is an architect and full stack developer based in Manila.
+                            </span>
+                        </h4>
 
                         <!-- Sub Blurb -->
-                        <div class="outset-outer mt-2 out-z">
-                            <div class="outset-container card-header landing-subheading rounded-lg"
-                                 style="background-color: transparent;">
-                                <p class="lh-2 mt-3 mb-3">
-                                    I’m <span>currently</span> focusing on <span>BIM</span> and the future of design
-                                    from
-                                    the
-                                    <span>backend</span> of
-                                    software development and open for <span>collaboration.</span>
-                                </p>
-                            </div>
-                        </div>
+                        <section class="left landing-subheading">
+                            <p class="lh-2 mt-3 mb-3">
+                                I’m <span>currently</span> focusing on <span>BIM</span> and the future of design
+                                from
+                                the
+                                <span>backend</span> of
+                                software development and open for <span>collaboration.</span>
+                            </p>
+                        </section>
                         <!-- /Sub Blurb -->
 
-                        <!-- Links -->
-                        <div class="outset-outer">
-                            <ul class="outset-outer list-inline row row-cols-5 align-items-center justify-content-between social-links pt-2">
+                        <!-- Social Links -->
+                        <ul class="outset-outer list-inline row row-cols-5 align-items-center justify-content-between social-links pt-2">
                                 <li class="list-inline-item">
                                     <a class="btn outset-container-2" href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank">
                                         <span class="inset-inner">
@@ -303,56 +337,32 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
-                        <!-- Links -->
+                        <!-- /Social Links -->
 
                     </div>
-
                 </div>
                 <!-- /Card Left -->
 
                 <!-- Card Right -->
-                <div class="col-12 col-md-5 col-lg-5 col-xl-6 col-xxl-7 pt-5 order-1 order-sm-1 order-md-2">
+                <div class="col-12 col-md-5 col-lg-5 col-xl-6 col-xxl-7 order-1 order-sm-1 order-md-2">
                     <div class="row inset-container-5">
 
-                        <div class="card-header inset-item border-0 pt-5 d-none"
-                             style="background-color: #CDCABB;border-radius:.6rem;">
-                            <div class="inset-container-4">
-                                <img src="assets/images/joem_elias_sanez_profile_02.jpg" alt="Profile photo of Joem Elias Sanez"
-                                 class="inset-item landing-heading"
-                                 style="color: #FAFAFA;border-radius: .6rem; height: 8rem;">
-                            </div>
-
-
-                        </div>
-                        <!-- Sub Blurb -->
+                        <!-- Profile Image -->
                         <div class="outset-outer out-z">
                             <div class="d-flex flex-row align-items-center justify-contents-between">
-                                <div class="shin-2-full card-header landing-subheading rounded-lg d-none"
-                                     style="background-color: transparent;">
-                                    <p class="lh-2 mt-3 mb-3 invisible">
-                                        I’m <span>currently</span> focusing on <span>BIM</span> and the future of design
-                                        from
-                                        the
-                                        <span>backend</span> of
-                                        software development and open for <span>collaboration.</span>
-                                    </p>
-                                </div>
                                 <div class="image-container">
-                                    <img src="assets/images/joem_elias_sanez_thumbnail.png" alt="">
+                                    <img src="assets/images/joem_elias_sanez_thumbnail.png" alt="Joem Elias Sanez">
                                 </div>
-
                             </div>
                         </div>
-                        <!-- /Sub Blurb -->
-
+                        <!-- /Profile Image -->
 
                         <!-- Recent Activity Section Title -->
                         <div class="row justify-content-center d-none d-md-flex pt-2">
                             <div class="col text-right">
-                                <h6 class="card-title">
+                                <h5 class="card-title">
                                     Recent Activity
-                                </h6>
+                                </h5>
                             </div>
                         </div>
                         <!-- /Recent Activity Section Title -->
@@ -512,62 +522,17 @@
                         </div>
                         <!-- /Recent Activity Carousel -->
                     </div>
-
                 </div>
                 <!-- /Card Right -->
 
             </div>
+        </section> <!-- close 0.0 collapsed section wrapper -->
 
-            <!-- Links -->
-            <div class=" col-12 col-sm-12 col-md-12 col-xl-12 pl-0 pr-0 pt-5 mb-5 d-none">
+    <!-- 1.0 (Specialization: Assets & Expertise) -->
 
-                <!-- CV -->
-                <div class="d-flex flex-row align-items-center justify-contents-between">
-                    <span class="inset-container-3   text-left flex-fill pt-2 pb-2 pl-2 text-muted">
-                        <i class="fa fa-file-pdf fa-lg" aria-hidden="true" style="color: #cf724d;"></i>
-                        <span class="inset-item pl-2 font-monospace align-center">
-                            SANEZ_CV_2020.<span class="text-lowercase">pdf</span></span>
-                        <a class="btn btn-sm btn-floating" href="https://joemelias.com"
-                           target="_blank"
-                           role="button">
-                            <i class="far fa-eye" style="color: #157FFC;"></i>
-                            <span class="sr-only">View PDF version of resume in new tab</span>
-                        </a>
-                        <a class="btn btn-sm btn-floating" href="https://joemelias.com"
-                           target="_blank"
-                           role="button">
-                            <i class="fa fa-download pt-2" style="color: #157FFC;"></i>
-                            <span class="sr-only">Download PDF version of resume</span>
-                        </a>
-                    </span>
-                    <span class="inset-container-3">
-                        <a class="btn btn-sm btn-floating" href="https://joemelias.com"
-                           target="_blank"
-                           role="button">
-                            <i class="far fa-eye" style="color: #157FFC;"></i>
-                            <span class="sr-only">View PDF version of resume in new tab</span>
-                        </a>
-                        <a class="btn btn-sm btn-floating" href="https://joemelias.com"
-                           target="_blank"
-                           role="button">
-                            <i class="fa fa-download pt-2" style="color: #157FFC;"></i>
-                            <span class="sr-only">Download PDF version of resume</span>
-                        </a>
-                    </span>
-
-                </div>
-
-            </div>
-            <!-- /Links -->
-
-        </section>
-        <!-- /Collapse 0 Content -->
-    </article>
-
-    <article id="articleOne">
-
+        <!-- start 1.0 HEADER BUTTON -->
         <header id="headingOne">
-                <h2 class="header-title d-flex">
+                <h3 class="header-title d-flex">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
                             data-target="#collapseOne"
@@ -586,26 +551,26 @@
                             <ion-icon name="code-slash-outline" class="open"></ion-icon>
                         </span>
                     </button>
-                </h2>
-        </header>
+                </h3>
+        </header> <!-- /close 1.0 header button -->
 
-        <!-- Collapse 1 Content-->
+        <!-- start 1.0 COLLAPSED SECTION WRAPPER -->
         <section id="collapseOne" class="collapse collapse-all" aria-labelledby="headingOne" data-parent="#resumeStack">
-            <div class="row">
+            <div class="spread row">
 
                 <!-- Section Left -->
-                <div class="collapse-left col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
                     <div class="inset-container">
-                        <h3 class="inset-item">
+                        <h4 class="inset-item">
                             <span class="display-6 lh-1">
                                 As a super-user on the front end of design delivery, I now play a unique role at both
                                 ends of the tech stack.
                             </span>
-                        </h3>
+                        </h4>
                         <section class="left">
-                            <h4>
+                            <h5>
                                 What I do
-                            </h4>
+                            </h5>
                             <p>
                                 My scholastic upbringing in seven cities across the Pacific and subsequent
                                 tenures as an architect with <a
@@ -650,12 +615,12 @@
                 <!-- /Section Left -->
 
                 <!-- Section Right -->
-                <div class="collapse-right col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                     <div class="inset-container">
                         <section class="right">
-                            <h4>
+                            <h5>
                                 Expertise
-                            </h4>
+                            </h5>
 
                             <!-- Specialization List -->
                             <ul class="specialization-activity">
@@ -829,54 +794,50 @@
                 <!-- /Section Right -->
 
             </div>
-        </section>
-        <!-- /Collapse 1 Content -->
-    </article>
+        </section> <!-- close 1.0 collapsed section wrapper -->
 
-    <article>
+    <!-- 2.0 (Proficiency: Skills & Coverage) -->
 
+        <!-- start 2.0 HEADER BUTTON -->
         <header id="headingTwo">
-            <h2 class="header-title d-flex">
-                <button class="collapsed" type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo">
-                        <span class="header-content">
-                            <span class="header-name">
-                                PROFICIENCY
-                            </span>
-                            <span class="header-text">
-                                Skills and coverage
-                            </span>
+            <h3 class="header-title d-flex">
+                <button class="collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                    <span class="header-content">
+                        <span class="header-name">
+                            PROFICIENCY
                         </span>
+                        <span class="header-text">
+                            Skills and coverage
+                        </span>
+                    </span>
                     <span class="header-icon justify-self-end">
-                            <ion-icon name="code-working-outline" class="closed"></ion-icon>
-                            <ion-icon name="code-slash-outline" class="open"></ion-icon>
-                        </span>
+                        <ion-icon name="code-working-outline" class="closed"></ion-icon>
+                        <ion-icon name="code-slash-outline" class="open"></ion-icon>
+                    </span>
                 </button>
-            </h2>
-        </header>
+            </h3>
+        </header> <!-- /close 2.0 header button -->
 
-        <!-- Collapse 2 Content-->
+        <!-- start 2.0 COLLAPSED SECTION WRAPPER -->
         <section id="collapseTwo" class="collapse collapse-all" aria-labelledby="headingTwo" data-parent="#resumeStack">
-            <div class="row">
+            <div class="spread row">
 
-                <!-- Section Left -->
+                <!-- start 2.0 LEFT REGION WRAPPER -->
                 <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
                     <div class="inset-container">
-                        <h3 class="inset-item">
+                        <h4 class="inset-item"> <!-- 2.0 LEAD HEADING -->
                             <span class="display-6 lh-1">
                                 I’m committed to building and bridging skills honed through my experience and
                                 dedication to design and tech.
                             </span>
-                        </h3>
+                        </h4> <!-- /2.0 lead heading -->
 
-                        <!-- /Section Body -->
+                        <!-- start 2.1 SUB-SECTION + SUB-HEADING -->
                         <section class="left">
-                            <h4>
+                            <h5>
                                 Top Strength: Adaptability
-                            </h4>
+                            </h5>
                             <p>
                                 Appointed to lead the schematic design of an airport expansion in Manila
                                 while working at <a href="https://cazarch.com/" target="_blank">CAZA Architects</a>
@@ -904,22 +865,21 @@
                                     Last updated 24 September 2020
                                 </small>
                             </footer>
-                        </section>
-                        <!-- Section Body -->
-
+                        </section> <!-- /close 2.1 sub-section + heading -->
                     </div>
-                </div>
-                <!-- /Section Left -->
+                </div> <!-- /close 2.0 left region wrapper -->
 
-                <!-- Section Right -->
+                <!-- start 2.0 RIGHT REGION WRAPPER -->
                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                     <div class="inset-container">
-                        <section class="right">
-                            <h4>
-                                Coverage
-                            </h4>
 
-                            <!-- Proficiency Section -->
+                        <!-- start 2.2 SUB-SECTION + SUB-HEADING -->
+                        <section class="right">
+                            <h5>
+                                Coverage
+                            </h5>
+
+                            <!-- start 2.2 LIST GROUP -->
                             <ul class="proficiency-activity">
 
                                 <!-- Proficiency Item -->
@@ -1066,7 +1026,6 @@
                                     </aside>
                                 </li>
                                 <!-- /Proficiency Item -->
-
 
                                 <!-- Proficiency Item -->
                                 <li class="inset-item">
@@ -1242,10 +1201,9 @@
                                 </li>
                                 <!-- /Proficiency Item -->
 
-                            </ul>
-                            <!-- /Proficiency Section -->
+                            </ul><!-- /close 2.2 list group -->
 
-                            <!-- Proficiency CTA -->
+                            <!-- start 2.2 CTA -->
                             <div class="activity-cta mt-2 inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
                                     <span class="outset-container-2 flex-fill">
@@ -1264,24 +1222,19 @@
                                         </span>
                                     </button>
                                 </div>
-                            </div>
-                            <!-- /Proficiency CTA -->
+                            </div><!-- /close 2.2 CTA -->
 
-                        </section>
+                        </section><!-- close 2.2 sub-section + sub-heading -->
                     </div>
-
-                </div>
-                <!-- /Section Right -->
-
+                </div><!-- close 2.0 right region wrapper -->
             </div>
-        </section>
-        <!-- Collapse 2 content -->
-    </article>
+        </section><!-- close 2.0 collapsed section wrapper -->
 
-    <article>
+    <!-- 3.0 (Experience: Education & Employment) -->
 
+        <!-- start 3.0 HEADER BUTTON -->
         <header id="headingThree">
-            <h2 class="header-title d-flex">
+            <h3 class="header-title d-flex">
                 <button class="collapsed" type="button"
                         data-toggle="collapse"
                         data-target="#collapseThree"
@@ -1300,28 +1253,28 @@
                             <ion-icon name="code-slash-outline" class="open"></ion-icon>
                         </span>
                 </button>
-            </h2>
-        </header>
+            </h3>
+        </header><!-- /close 3.0 header button -->
 
-        <!-- Collapse 3 Content-->
+        <!-- start 3.0 COLLAPSED SECTION WRAPPER -->
         <section id="collapseThree" class="collapse collapse-all" aria-labelledby="headingThree" data-parent="#resumeStack">
-            <div class="row">
+            <div class="spread row">
 
-                <!-- Section Left -->
+                <!-- start 3.0 LEFT REGION WRAPPER -->
                 <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
                     <div class="inset-container">
-                        <h3 class="inset-item">
+                        <h4 class="inset-item"> <!-- 3.0 LEAD HEADING -->
                             <span class="display-6 lh-1">
                                 The breadth of my experience in the built environment has uniquely positioned my
                                 role in tech.
                             </span>
-                        </h3>
+                        </h4> <!-- /3.0 lead heading -->
 
-                        <!-- Section Body -->
+                        <!-- start 3.1 SUB-SECTION + SUB-HEADING -->
                         <section class="left">
-                            <h4 class="card-title">
+                            <h5 class="card-title">
                                 Dedication: “Completeness”
-                            </h4>
+                            </h5>
                             <p>
                                 I am a designer and architect with seven years of professional experience. I am
                                 presently in pursuit of a Diploma in Software Development at <a
@@ -1360,22 +1313,21 @@
                                     Last updated 24 September 2020
                                 </small>
                             </footer>
-                        </section>
-                        <!-- /Section Body -->
-
+                        </section> <!-- /close 3.1 sub-section + heading -->
                     </div>
-                </div>
-                <!-- /Section Left -->
+                </div><!-- /close 3.0 left region wrapper -->
 
-                <!-- Section Right -->
+                <!-- start 3.0 RIGHT REGION WRAPPER -->
                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                     <div class="inset-container">
-                        <section class="right">
-                            <h4>
-                                Education
-                            </h4>
 
-                            <!-- Education List Group -->
+                        <!-- start 3.2 SUB-SECTION + SUB-HEADING -->
+                        <section class="right">
+                            <h5>
+                                Education
+                            </h5>
+
+                            <!-- start 3.2 LIST GROUP -->
                             <ul class="experience-activity">
 
                                 <!-- Education Item -->
@@ -1487,10 +1439,9 @@
                                 </li>
                                 <!-- /Education Item -->
 
-                            </ul>
-                            <!-- /Education List Group -->
+                            </ul><!-- /close 3.2 list group -->
 
-                            <!-- Education CTA -->
+                            <!-- start 3.2 CTA -->
                             <div class="activity-cta mt-2 inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
                                     <span class="outset-container-2 flex-fill">
@@ -1509,23 +1460,20 @@
                                         </span>
                                     </button>
                                 </div>
-                            </div>
-                            <!-- /Education CTA -->
-
-                        </section>
+                            </div><!-- /close 3.2 CTA -->
+                        </section><!-- close 3.2 sub-section + sub-heading -->
                     </div>
-                </div>
-                <!-- /Section Right -->
+                </div> <!-- close 2.0 right region wrapper -->
 
-                <!-- Section Right Reverse -->
+                <!-- start 3.0 RIGHT REVERSE REGION WRAPPER -->
                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
 
                     <!-- Section Sub Heading -->
                     <div class="inset-container">
                         <section class="right reverse">
-                            <h4 class="text-left">
+                            <h5 class="text-left">
                                 Employment
-                            </h4>
+                            </h5>
 
                             <!-- Employment List Group -->
                             <ul class="experience-activity">
@@ -1673,24 +1621,23 @@
 
                         </section>
                     </div>
-                </div>
-                <!-- /Section Right Reverse -->
+                </div><!-- /close 3.0 right reverse region wrapper -->
 
-                <!-- Section Left Reverse -->
+                <!-- start 3.0 LEFT REVERSE REGION WRAPPER -->
                 <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
                     <div class="inset-container">
-                        <h3 class="inset-item">
+                        <h4 class="inset-item">
                             <span class="display-6 lh-1">
                                 The breadth of my experience in the built environment has uniquely positioned my
                                 role in tech.
                             </span>
-                        </h3>
+                        </h4>
 
                         <!-- Section Body -->
                         <section class="left reverse">
-                            <h4>
+                            <h5>
                                 Dedication: “Completeness”
-                            </h4>
+                            </h5>
                             <p>
                                 At <a
                                     href="https://www.herzogdemeuron.com/index.html" target="_blank">Herzog & de Meuron</a> in New York, I was immersed in the designed
@@ -1745,18 +1692,15 @@
 
                     </div>
 
-                </div>
-                <!-- /Section Left Reverse -->
-
+                </div><!-- /close 3.0 right reverse region wrapper -->
             </div>
-        </section>
-        <!-- Collapse 3 content -->
+        </section><!-- close 3.0 collapsed section wrapper -->
 
-    </article>
+    <!-- 4.0 (Examples: Git Repo & Design Folio) -->
 
-    <article>
+        <!-- start 4.0 HEADER BUTTON -->
         <header id="headingFour">
-            <h2 class="header-title d-flex">
+            <h3 class="header-title d-flex">
                 <button class="collapsed" type="button"
                         data-toggle="collapse"
                         data-target="#collapseFour"
@@ -1775,28 +1719,28 @@
                             <ion-icon name="code-slash-outline" class="open"></ion-icon>
                         </span>
                 </button>
-            </h2>
-        </header>
+            </h3>
+        </header> <!-- /close 4.0 header button -->
 
-        <!-- Section 4 Collapse Content EXAMPLES / TECH REPO / DESIGN FOLIO -->
+        <!-- start 4.0 COLLAPSED SECTION WRAPPER -->
         <section id="collapseFour" class="collapse collapse-all" aria-labelledby="headingFour" data-parent="#resumeStack">
-            <div class="row">
+            <div class="spread row">
 
                 <!-- Section 4 Left -->
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7">
                     <div class="inset-container">
-                        <h3 class="inset-item">
+                        <h4 class="inset-item">
                             <span class="display-6 lh-1">
                                 Building product that is useful, educational and aesthetically pleasing in its
                                 iterative deployment as well as its procedural documentation.
                             </span>
-                        </h3>
+                        </h4>
 
                         <!-- Section 4 Main -->
                         <section class="left">
-                            <h4>
+                            <h5>
                                 Most Lauded for: Documentation Style
-                            </h4>
+                            </h5>
                             <p>
                                 In my first weeks as a trainee at <a
                                     href="https://www.herzogdemeuron.com/index.html" target="_blank">Herzog & de Meuron</a>
@@ -1844,9 +1788,9 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5">
                     <div class="inset-container">
                         <section class="right reverse">
-                            <h4>
+                            <h5>
                                 Tech Repo
-                            </h4>
+                            </h5>
 
                             <!-- Project Examples Section -->
                             <ul class="repo-activity">
@@ -2243,9 +2187,9 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5">
                     <div class="inset-container">
                         <section class="right reverse">
-                            <h4 class="text-right">
+                            <h5 class="text-right">
                                 Design Folio
-                            </h4>
+                            </h5>
 
                             <!-- Project Examples Section -->
                             <ul class="design-activity">
@@ -2580,18 +2524,18 @@
                 <!-- Card Right Reverse -->
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7">
                     <div class="inset-container">
-                        <h3 class="inset-item">
+                        <h4 class="inset-item">
                             <span class="display-6 lh-1">
                                 Building product that is useful, educational and aesthetically pleasing in its
                                 iterative deployment as well as its procedural documentation.
                             </span>
-                        </h3>
+                        </h4>
 
                         <!-- Section Body -->
                         <section class="left reverse">
-                            <h4>
+                            <h5>
                                 Most Lauded for: Documentation Style
-                            </h4>
+                            </h5>
                             <p class="card-text">
                                 My experiences working between the local and the global have propelled a
                                 conceptual fascination with <b class="keywords">duality</b> and <b
@@ -2643,14 +2587,13 @@
                 <!-- /Section Right Reverse -->
 
             </div>
-        </section>
-        <!-- Collapse 4 content -->
-    </article>
+        </section> <!-- close 4.0 collapsed section wrapper -->
 
-    <article>
+    <!-- 5.0 (References: Recommendations & Awards) -->
 
+        <!-- start 5.0 HEADER BUTTON -->
         <header id="headingFive">
-            <h2 class="header-title d-flex">
+            <h3 class="header-title d-flex">
                 <button class="collapsed" type="button"
                         data-toggle="collapse"
                         data-target="#collapseFive"
@@ -2669,29 +2612,29 @@
                             <ion-icon name="code-slash-outline" class="open"></ion-icon>
                         </span>
                 </button>
-            </h2>
-        </header>
+            </h3>
+        </header> <!-- /close 5.0 header button -->
 
-        <!-- Collapse 5 Content-->
+        <!-- start 5.0 COLLAPSED SECTION WRAPPER -->
         <section id="collapseFive" class="collapse collapse-all" aria-labelledby="headingFive" data-parent="#resumeStack">
-            <div class="row">
+            <div class="spread row">
 
                 <!-- Card Left -->
                 <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
                     <div class="inset-container">
-                        <h3 class="inset-item">
+                        <h4 class="inset-item">
                             <span class="display-6 lh-1">
                                 Building product that is useful, educational and aesthetically pleasing in its
                                 iterative deployment as well as its procedural documentation.
                             </span>
-                        </h3>
+                        </h4>
 
                         <!-- LinkedIn Section CREDIT -->
                         <!-- Section Body -->
                         <section class="left">
-                            <h4>
+                            <h5>
                                 Recommendations
-                            </h4>
+                            </h5>
 
                             <ul class="address activity-cta mt-2 inset-container">
                                 <li class="d-flex flex-row align-items-stretch">
@@ -2713,9 +2656,9 @@
                                 <div class="pv-recommendation-entity__header">
                                     <a href="https://www.linkedin.com/in/michaelzhangnyc/" class="pv-recommendation-entity__member">
                                         <img src="assets/images/michael_zhang.jpeg" height="56" width="56" alt="Michael Zhang">
-                                        <h5 class="t-16 t-black t-bold">
+                                        <h6 class="t-16 t-black t-bold">
                                             Michael Zhang
-                                        </h5>
+                                        </h6>
                                         <p class="t-14 t-black t-normal pb1">
                                             Associate at Zeckendorf Development
                                         </p>
@@ -2739,9 +2682,9 @@
                                 <div class="pv-recommendation-entity__header">
                                     <a href="https://www.linkedin.com/in/ginojacinto/" class="pv-recommendation-entity__member">
                                         <img src="assets/images/gino_jacinto.jpeg" width="56" height="56" alt="Gino Jacinto">
-                                        <h3 class="t-16 t-black t-bold">
+                                        <h6 class="t-16 t-black t-bold">
                                             Gino Jacinto
-                                        </h3>
+                                        </h6>
                                         <p class="t-14 t-black t-normal pb1">
                                             Lawyer, Chief Operating Officer, Chief Legal Officer, Legal Director, Legal Coordinator, Litigator, General Counsel
                                         </p>
@@ -2781,9 +2724,9 @@
                                     <a href="https://www.linkedin.com/in/per-johan-dahl-9a72872/"
                                        class="pv-recommendation-entity__member" target="_blank">
                                         <img src="assets/images/per_johan_dahl.jpeg" width="56" height="56" alt="Per-Johan Dahl">
-                                        <h3 class="t-16 t-black t-bold">
+                                        <h6 class="t-16 t-black t-bold">
                                             Per-Johan Dahl
-                                        </h3>
+                                        </h6>
                                         <p class="t-14 t-black t-normal">
                                             Associate Professor at The Department of Architecture and the Built Environment, Lund University
                                         </p>
@@ -2841,9 +2784,9 @@
                                        class="pv-recommendation-entity__member" target="_blank">
                                         <img src="assets/images/ioana_urma.jpeg" width="56" height="56"
                                              alt="Ioana Urma">
-                                        <h3 class="t-16 t-black t-bold">
+                                        <h6 class="t-16 t-black t-bold">
                                             Ioana Urma
-                                        </h3>
+                                        </h6>
                                         <p class="t-14 t-black t-normal">
                                             Educational Designer, Reg. Arch., LEED AP
                                         </p>
@@ -2884,28 +2827,28 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                     <div class="inset-container">
                         <section class="right">
-                            <h4>
+                            <h5>
                                 Awards
-                            </h4>
+                            </h5>
 
                             <!-- LinkedIn Section CREDIT -->
 
                             <section class="pv-profile-section pv-accomplishments-block pv-accomplishments-block--expanded">
-                                <h3 class="pv-accomplishments-block__count t-32 t-black t-normal pr3">
+                                <h6 class="pv-accomplishments-block__count t-32 t-black t-normal pr3">
                                     <span class="visually-hidden">Joem Elias has 16 honors</span>
                                     <span>16</span>
-                                </h3>
+                                </h6>
                                 <div class="pv-accomplishments-block__content break-words">
-                                    <h3 id="honors-title" class="pv-accomplishments-block__title t-bold t-14">
+                                    <h5 id="honors-title" class="pv-accomplishments-block__title t-bold t-14">
                                         Honors &amp; Awards
-                                    </h3>
+                                    </h5>
                                     <ul class="pv-accomplishments-block__list pv-accomplishments-block__list--has-more">
                                             <li class="pv-accomplishment-entity pv-accomplishment-entity--with-separator pv-accomplishment-entity--first pv-accomplishment-entity--expanded">
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5"><i class="fas fa-award fa-lg" aria-hidden="true"></i></div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold">
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold">
                                                     <span class="visually-hidden">honor title</span>
                                                     Honorary Speaker
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>May 2020</span>
                                                     <span class="pv-accomplishment-entity__issuer">Code Institute at Trent Global College</span>
                                                 </p>
@@ -2917,10 +2860,10 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold">
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold">
                                                     <span class="visually-hidden">honor title</span>
                                                     Pinnacle Award, Best High-Rise Building Design
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>May 2019</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>The 39th Annual BILD Awards</span>
                                                 </p>
@@ -2932,10 +2875,10 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold">
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold">
                                                     <span class="visually-hidden">honor title</span>
                                                     Gold Award, Multifamily Community of the Year
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Feb 2019</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>National Association of Home Builders</span>
                                                 </p>
@@ -2947,9 +2890,9 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
                                                     Gold Winner, Spark Pro Design Awards
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Oct 2011</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>Spark Design &amp; Architecture Awards</span>
                                                 </p>
@@ -2961,9 +2904,9 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
                                                     Finalist, Spark Concept Design Awards
-                                                </h4>
+                                                </h6>
 
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Jul 2011</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>Spark Design Awards</span>
@@ -2976,9 +2919,9 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
                                                     Gold Winner, Spark Concept Design Awards
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Jul 2011</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>Spark Design Awards</span>
                                                 </p>
@@ -2990,9 +2933,9 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
                                                     Honoree, Julius Shulman Emerging Talent Award
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Jun 2011</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>LABC Architectural Awards</span>
                                                 </p>
@@ -3004,9 +2947,9 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
                                                     Honoree, AIA 2X8 VERGE Exhibition
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Jun 2010</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>American Institute of Architects, Los Angeles Chapter</span>
                                                 </p>
@@ -3018,9 +2961,9 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
                                                     Honoree, Julius Shulman Emerging Talent Award
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Jun 2010</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>LABC Architectural Awards</span>
                                                 </p>
@@ -3032,9 +2975,9 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold"><span class="visually-hidden">honor title</span>
                                                     1st Place, Donghia Portfolio Awards
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Sep 2009</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>Angelo Donghia Foundation</span>
                                                 </p>
@@ -3047,10 +2990,10 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold">
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold">
                                                     <span class="visually-hidden">honor title</span>
                                                     Winner, 30K Angelo Donghia Scholarship For The Student Showing The Most Promise In Interior Design
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Jul 2009</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>Angelo Donghia Foundation</span>
                                                 </p>
@@ -3063,10 +3006,10 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold">
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold">
                                                     <span class="visually-hidden">honor title</span>
                                                     Honoree, AIA 2X8 SHIFT Exhibition
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Jun2009</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>American Institute of Architects, Los Angeles Chapter</span>
                                                 </p>
@@ -3079,10 +3022,10 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold">
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold">
                                                     <span class="visually-hidden">honor title</span>
                                                     Honoree, AIA 1:2 Charette Competition
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Mar 2009</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>American Institute of Architects, Los Angeles Chapter</span>
                                                 </p>
@@ -3095,10 +3038,10 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold">
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold">
                                                     <span class="visually-hidden">honor title</span>
                                                     Winner, Charette Competitions 2008-2009
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Mar 2009</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>Department of Architecture/Landscape/Interiors at Otis College of Art and Design</span>
                                                 </p>
@@ -3111,10 +3054,10 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold">
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold">
                                                     <span class="visually-hidden">honor title</span>
                                                     2nd Place, EDPA National Student Design Competition
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Feb 2009</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>Exhibit Designers and Producers Association</span>
                                                 </p>
@@ -3127,10 +3070,10 @@
                                                 <div class="pv-accomplishments-block__expand awards-icon mr-5">
                                                     <i class="fas fa-award fa-lg" aria-hidden="true"></i>
                                                 </div>
-                                                <h4 class="pv-accomplishment-entity__title t-14 t-bold">
+                                                <h6 class="pv-accomplishment-entity__title t-14 t-bold">
                                                     <span class="visually-hidden">honor title</span>
                                                     2nd Place, Donghia Portfolio Awards
-                                                </h4>
+                                                </h6>
                                                 <p class="t-14"><span class="pv-accomplishment-entity__date"><span class="visually-hidden">honor date</span>Sep 2008</span>
                                                     <span class="pv-accomplishment-entity__issuer"><span class="visually-hidden">honor issuer</span>Angelo Donghia Foundation</span>
                                                 </p>
@@ -3142,8 +3085,6 @@
                             </section>
 
                             <!-- /LinkedIn Section CREDIT -->
-
-
 
 
                         <!-- Awards CTA -->
@@ -3173,13 +3114,13 @@
                 <!-- /Card Right -->
 
             </div>
-        </section>
-        <!-- Collapse 5 content -->
-    </article>
+        </section> <!-- close 5.0 collapsed section wrapper -->
 
-    <article>
+    <!-- 6.0 (Connect: Contact Info & Message Form) -->
+
+        <!-- start 6.0 HEADER BUTTON -->
         <header id="headingSix">
-            <h2 class="header-title d-flex">
+            <h3 class="header-title d-flex">
                 <button class="collapsed" type="button"
                         data-toggle="collapse"
                         data-target="#collapseSix"
@@ -3198,12 +3139,12 @@
                             <ion-icon name="code-slash-outline" class="open"></ion-icon>
                         </span>
                 </button>
-            </h2>
-        </header>
+            </h3>
+        </header> <!-- /close 6.0 header button -->
 
-        <!-- Collapse 6 Content-->
+        <!-- start 6.0 COLLAPSED SECTION WRAPPER -->
         <section id="collapseSix" class="collapse collapse-all" aria-labelledby="headingSix" data-parent="#resumeStack">
-            <div class="row">
+            <div class="spread row">
 
                 <!-- Card Left -->
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pt-5">
@@ -3212,9 +3153,9 @@
                         <!-- Section Header -->
                         <div class="inset-item card-header pt-5" style="color: #FAFAFA;border-radius: .6rem;
                         background-color: #2E2C2E;">
-                            <h2 class="pt-5">
+                            <h4 class="pt-5">
                                 I am always keen to collaborate with good people on innovative ideas.
-                            </h2>
+                            </h4>
                         </div>
                         <!-- /Section Header -->
 
@@ -3296,9 +3237,9 @@
 
                     <!-- Section Sub Heading -->
                     <div class="card-header text-muted">
-                        <h3 class="text-right">
+                        <h5 class="text-right">
                             Drop me a line!
-                        </h3>
+                        </h5>
                     </div>
                     <!-- /Section Sub Heading -->
 
@@ -3365,12 +3306,12 @@
                 <!-- /Card Right -->
 
             </div>
-        </section>
-        <!-- Collapse 6 content -->
-    </article>
+        </section> <!-- close 6.0 collapsed section wrapper -->
 
-</main>
-<!-- Accordion wrapper -->
+    </div>
+    <!-- Accordion wrapper -->
+
+</div>
 
 <!-- Footer container -->
 <footer class="footer mt-auto bg-w2">
@@ -3497,6 +3438,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
 
 <!--scrollbar-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/perfect-scrollbar@1.5.0/dist/perfect-scrollbar.common.min.js"></script>
+<!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/perfect-scrollbar@1.5.0/dist/perfect-scrollbar.common.min.js"></script>-->
 </body>
 </html>
