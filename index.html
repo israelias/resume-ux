@@ -3413,9 +3413,17 @@
 
         $('.collapse').on('shown.bs.collapse', function (e) {
             var $article = $(this).closest('.article');
-            $('html,body').animate({
-                scrollTop: $article.offset().top
-            }, 500);
+
+            if ($(window).width() < 576) {
+                $('html,body').animate({
+                    scrollTop: $article.offset().top
+                }, 500);
+            }
+            else {
+                $('html,body').animate({
+                    scrollTop: $article.offset().top - 50
+                }, 500);
+            }
         });
 
     });
