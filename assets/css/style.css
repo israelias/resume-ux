@@ -67,7 +67,7 @@
     display: flex;
     justify-content: center;
 
-    scroll-behavior: smooth;
+    /*scroll-behavior: smooth;*/
 }
 
 /* Apply edge shadows to static root canvas */
@@ -852,7 +852,22 @@ section.right ul li {
 
 @media (max-width: 575.98px) {
 
+    .col-last {
+        display: none;
+    }
+
+    .collapse.show .col-last {
+        display: block;
+    }
+
+    [aria-labelledby^="heading"]:not([aria-labelledby$="Zero"]) {
+        height: 80vh;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
     #resumeStack > section:not([aria-labelledby$="Zero"]) {
+
         /*height: 60vh;*/
         /*overflow-x: scroll;*/
 
@@ -979,8 +994,6 @@ ul {
     text-align: center;
     /*color: #D4D6D6;*/
     text-shadow: 0 3px 0 0 #A4A4A4, 0 -4px 0 0 #fafafa;
-
-    /*font-family: "Major Mono Display", monospace;*/
     font-size: 1.25rem;
     z-index: 8;
     /*text-shadow: #fff 0 1px 0;*/
