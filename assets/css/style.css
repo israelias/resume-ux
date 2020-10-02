@@ -883,6 +883,22 @@ section.right ul li {
     }
 }
 
+@media (min-width: 768px) {
+    .reverse {
+        display: none;
+    }
+
+    .collapse.show .reverse {
+        display: block;
+    }
+    /*[aria-labelledby^="heading"]:not([aria-labelledby$="Zero"]) {*/
+    /*    height: 90vh;*/
+    /*    overflow-y: scroll;*/
+    /*    overflow-x: hidden;*/
+    /*    -webkit-overflow-scrolling: touch;*/
+    /*}*/
+}
+
 /* Override aria-expanded='false' */
 /* Ability to see and style the everything all at once  */
 
