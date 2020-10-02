@@ -11,6 +11,10 @@
 
 @import url("https://use.typekit.net/qyv7gbn.css");
 
+/*@font-face {*/
+/*    font-family: "Attribute Mono";*/
+/*    src: url("https://use.typekit.net/qyv7gbn.css") format('woff');*/
+/*}*/
 
 /* CORE CONFIGS ------------------------------------------------------------------------------- */
 
@@ -125,11 +129,30 @@
 
 body {
     text-rendering: optimizeLegibility;
-    font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'frac', 'onum', 'ordn', 'pnum', 'c2sc', 'salt', 'ss10';
     font-kerning: normal;
     font-variant-ligatures: common-ligatures;
-    font-family:var(--attribute-mono);
     color:#4f4f4f;
+}
+
+p, small {
+    font-family: attribute-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-feature-settings: 'c2sc';
+    /*font-feature-settings: 'lnum', 'liga', 'clig', 'calt', 'frac', 'onum', 'ordn', 'c2sc', 'salt', 'ss20', 'tnum';*/
+
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+    letter-spacing: .02rem;
+
+    color: #707070;
+    text-shadow: #FAFAFA 0 .3px 0, #D4D6D6 0 -.3px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+small {
+    font-size: 0.8125rem;
+    line-height: 1.1875rem;
 }
 
 h1,
@@ -165,12 +188,19 @@ ion-icon {
 }
 
 
-h1,h2, h3 {
+h1,h2 {
     font-family: var(--halyard-display);
 }
 
-h4,h5,h6 {
-    /*font-family: var(--halyard-text);*/
+h2 {
+    font-family: attribute-mono, sans-serif !important;
+    font-weight: 100;
+    font-style: normal;
+    font-feature-settings: 'smcp';
+}
+
+h3 {
+    font-family: attribute-mono;
 }
 
 
@@ -178,26 +208,37 @@ h4,h5,h6 {
 h4 {
     padding: 5rem 1rem 1rem;
     margin-bottom: .5rem;
+    border-radius: var(--radius-2);
 
-    font-family:var(--halyard-display);
-    /*line-height: calc(1rem + .08vw);*/
+    font-family: din-2014, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /*font-feature-settings: 'liga', 'clig', 'calt', 'frac', 'onum', 'ordn', 'pnum', 'salt', 'ss##', 'locl';*/
 
-    /*letter-spacing: .013rem;*/
-    /*text-shadow: #fff 0 .5rem 0, #D7D7D6 0 -.5rem 0;*/
+    font-size: calc(1.125rem + 1.5vw);
+    line-height: calc(1.625rem + 1vw);
+
 
     color: #FAFAFA;
-    border-radius: var(--radius-2);
+    text-shadow: #fff 0 .5px 0, #D7D7D6 0 -.5px 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Section sub headings */
 h5 {
-    /*font-family:var(--attribute-mono);*/
-    font-weight: 100;
+    font-family: attribute-mono, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    letter-spacing: .07rem;
     text-transform: uppercase;
 }
 
-h5 {
-
+h6 {
+    font-family: attribute-mono, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h6 {
@@ -232,7 +273,7 @@ p a {
 /* To be organized */
 
 h1 {
-    font-family: var(--halyard-text);
+    font-family: din-2014, sans-serif;
     padding: 5rem 1rem 1rem;
     margin-bottom: .5rem;
     /*font-size: 1.8rem;*/
@@ -240,6 +281,7 @@ h1 {
     font-weight: 100 !important;
     /*letter-spacing: .1px;*/
     color: var(--deep-4);
+    font-feature-settings: ;
 
 }
 
@@ -431,8 +473,9 @@ section.right ul li .list-text small {
 }
 
 section.right ul li h6 {
-    font-family: var(--halyard-micro) !important;
+    /*font-family: var(--halyard-micro) !important;*/
     font-weight: 500;
+    font-feature-settings: 'smcp', 'c2sc';
 }
 
 /* LOCAL SECTION VARIABLES ------------------------------------------------------------------------------- */
@@ -605,15 +648,13 @@ section.right ul li h6 {
 
 /* MAIN CONTAINER   ------------------------------------------------------------------------------- */
 
-/*main,*/
-#bodyMain {
+main {
     margin-top: 3rem;
     position: relative;
 }
 
 @media (min-width: 576px) {
-    /*main*/
-    #bodyMain {
+    main {
         margin-top: 3.375rem;
     }
 }
@@ -861,9 +902,9 @@ section.right ul li {
     }
 
     [aria-labelledby^="heading"]:not([aria-labelledby$="Zero"]) {
-        height: 80vh;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
+        /*height: 80vh;*/
+        /*overflow-y: scroll;*/
+        /*-webkit-overflow-scrolling: touch;*/
     }
 
     #resumeStack > section:not([aria-labelledby$="Zero"]) {
@@ -913,6 +954,18 @@ section.right ul li {
 
 [id="collapseLanding"].collapse:not(.show) {
     display: none;
+}
+
+section.collapse {
+    /*height: 50vh;*/
+}
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    /*transition: height 0.35s ease;*/
+    transition: none;
+    /*transition: opacity 0.15s linear;*/
+    /*transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);*/
 }
 
 
