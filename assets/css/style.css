@@ -71,8 +71,6 @@
 :root {
     display: flex;
     justify-content: center;
-
-    /*scroll-behavior: smooth;*/
 }
 
 /* Apply edge shadows to static root canvas */
@@ -104,7 +102,7 @@
 
 @media (max-width: 575.98px) {
     :root {
-        --of-twelve: 11;
+        --of-twelve: 12;
     }
     :root > * {
         /*width: 100%;*/
@@ -812,7 +810,18 @@ main {
 
 article {
     clip-path: inset(-3rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
+    /*position: relative;*/
+    /*clip-path: inset(1rem calc(var(--margin) * -1) -1rem calc(var(--margin) * -1));*/
     position: relative;
+
+    /*outline: 1px solid springgreen;*/
+    /*outline-offset: 1rem;*/
+}
+
+.spread {
+    outline: 1px solid coral;
+    outline-offset: .5rem;
+    -moz-outline-radius: 5px;
 }
 
 /* Set sections in both static and transition states to show overflow at left/right (to the full width of the screen) */
@@ -822,6 +831,9 @@ article {
 section.collapse,
 section.collapsing {
     clip-path: inset(-3rem calc(var(--margin) * -1) 1.36rem calc(var(--margin) * -1));
+    /*clip-path: inset(-3rem calc(var(--margin) * -1) 1rem calc(var(--margin) * -1));*/
+    /*outline: 1px solid coral;*/
+    /*outline-offset: .97rem;*/
 }
 
 .header-title {
@@ -850,23 +862,27 @@ section.right:after {
 /* Position :before pseudo elements at the center of the viewport's left margin */
 /* left: -2.08%  */
 
-article:before,
-section.collapse:before,
-section.show:before,
-section.collapsing:before,
-.spread:before {
-    left: calc(var(--margin) / 2 * -1);
+article:before {
+    left: calc(var(--margin) / 2 * -1 + .08rem);
+}
+
+@media (max-width: 575.98px) {
+    article:before {
+        left: calc(var(--margin) / 2 * -1 + .425rem);
+    }
 }
 
 /* Position :after pseudo elements at the center of the viewport's right margin */
 /* right: -2.08%  */
 
-article:after,
-section.collapse:after,
-section.show:after,
-section.collapsing:after,
-.spread:after {
-    right: calc(var(--margin) / 2 * -1);
+article:after {
+    right: calc(var(--margin) / 2 * -1 + .08rem);
+}
+
+@media (max-width: 575.98px) {
+    article:after {
+        right: calc(var(--margin) / 2 * -1 + .425rem);
+    }
 }
 
 /* Give static outer rail pseudo elements height of 100%  */
@@ -889,13 +905,14 @@ section.collapsing:before,
 section.collapsing:after,
 .spread:before,
 .spread:after {
+    /*outline: 1px dashed purple;*/
     z-index: 10;
     align-self: center;
 
     height: 10vh;
-    width: .3rem;
+    width: .5rem;
 
-    background: #F2F1EF;
+    /*background: #F2F1EF;*/
 }
 
 article:before,
@@ -905,14 +922,10 @@ article:after {
 }
 
 article:before {
-    border-bottom-right-radius: .3rem;
-    border-top-right-radius: .3rem;
     border-right: 1px solid var(--outlines);
 }
 
 article:after {
-    border-bottom-left-radius: .3rem;
-    border-top-left-radius: .3rem;
     border-left: 1px solid var(--outlines);
 }
 
@@ -923,27 +936,68 @@ section.collapse:before,
 section.show:after,
 section.collapsing:after,
 section.collapse:after {
-    top: 1.875rem;
-    transition: height ease-out .3s;
+    top: 1.6rem;
+    /*transition: height ease-out .3s;*/
 }
 
 .spread:before,
 .spread:after {
-    bottom: 1.9rem;
+    bottom: 1.5rem;
 }
 
 section.collapse:before,
 section.show:before,
 section.collapsing:before,
 .spread:before {
-    border-right: 2px solid var(--outlines);
+    left: calc(var(--margin) / 2 * -1 + .3rem);
+    border-left: 2px solid var(--outlines);
 }
+
+section.collapse:before,
+section.show:before,
+section.collapsing:before {
+    border-top-left-radius: .75rem;
+}
+
+.spread:before {
+    border-bottom-left-radius: .75rem;
+}
+
+@media (max-width: 575.98px) {
+    section.collapse:before,
+    section.show:before,
+    section.collapsing:before,
+    .spread:before {
+        left: calc(var(--margin) / 2 * -1 + .6rem);
+    }
+}
+
 
 section.collapse:after,
 section.show:after,
 section.collapsing:after,
 .spread:after {
-    border-left: 2px solid var(--outlines);
+    right: calc(var(--margin) / 2 * -1 + .3rem);
+    border-right: 2px solid var(--outlines);
+}
+
+section.collapse:after,
+section.show:after,
+section.collapsing:after {
+    border-top-right-radius: .75rem;
+}
+
+.spread:after {
+    border-bottom-right-radius: .75rem;
+}
+
+@media (max-width: 575.98px) {
+    section.collapse:after,
+    section.show:after,
+    section.collapsing:after,
+    .spread:after {
+        right: calc(var(--margin) / 2 * -1 + .6rem);
+    }
 }
 
 
@@ -956,12 +1010,16 @@ article > header:after {
 
     width: .875rem;
     height: 2.875rem;
+    /*top: -1.8rem;*/
+    /*width: .75rem;*/
+    /*height: 3.6rem;*/
+    /*border: 1px dashed red;*/
 }
 
 
 article > header:before {
     left: calc(var(--margin) / 2 * -1);
-    width: 1.175rem;
+    /*width: 1.175rem;*/
     border-bottom-right-radius: .5rem;
     border-top-right-radius: .5rem;
     background: #F2F1EF;
@@ -969,7 +1027,7 @@ article > header:before {
 
 article > header:after {
     right: calc(var(--margin) / 2 * -1);
-    width: 1.175rem;
+    /*width: 1.175rem;*/
     border-bottom-left-radius: .5rem;
     border-top-left-radius: .5rem;
     background: #F2F1EF;
@@ -981,33 +1039,40 @@ section.right:after,
 }
 
 section.right:after {
-    left: calc(var(--margin) / 2 * -1 + .2rem);
-    right: calc(var(--margin) / 2 * -1 + .2rem);
+    left: calc(var(--margin) / 2 * -1 + .5rem);
+    right: calc(var(--margin) / 2 * -1 + .5rem);
     bottom: 1.36rem;
-    border-radius: 0 0 var(--radius-5) var(--radius-5);
+    border-radius: 0 0 var(--radius-1) var(--radius-1);
     border-bottom: 2px solid var(--outlines);
-    box-shadow:
-            inset -1px 0 0 var(--outlines),
-            inset 1px 0 0 var(--outlines),
-            1px 0 0 var(--outlines),
-            -1px 0 0 var(--outlines);
+    /*box-shadow:*/
+    /*        inset -1px 0 0 var(--outlines),*/
+    /*        inset 1px 0 0 var(--outlines),*/
+    /*        1px 0 0 var(--outlines),*/
+    /*        -1px 0 0 var(--outlines);*/
     z-index: 5;
 }
 
 .header-title:after {
-    left: calc(var(--margin) / 2 * -1 + .2rem);
-    right: calc(var(--margin) / 2 * -1 + .2rem);
+    left: calc(var(--margin) / 2 * -1 + .75rem);
+    right: calc(var(--margin) / 2 * -1 + .75rem);
     top: 1.5rem;
-    border-radius: var(--radius-4) var(--radius-4) 0 0;
+    /*border-radius: var(--radius-1) var(--radius-1) 0 0;*/
     border-top: 2px solid var(--outlines);
-    box-shadow:
-            inset -1px 0 0 var(--outlines),
-            inset 1px 0 0 var(--outlines),
-            1px 0 0 var(--outlines),
-            -1px 0 0 var(--outlines);
+    /*box-shadow:*/
+    /*        inset -1px 0 0 var(--outlines),*/
+    /*        inset 1px 0 0 var(--outlines),*/
+    /*        1px 0 0 var(--outlines),*/
+    /*        -1px 0 0 var(--outlines);*/
     z-index: -1;
 }
 
+@media (max-width: 575.98px) {
+    section.right:after,
+    .header-title:after {
+        left: calc(var(--margin) / 2 * -1 + .75rem);
+        right: calc(var(--margin) / 2 * -1 + .75rem);
+    }
+}
 
 article header {
     display: flex;
@@ -1139,28 +1204,26 @@ article header .header-icon ion-icon {
 
     .col-last {
         /*with override*/
-        display: none;
+        /*display: none;*/
     }
 
     .collapse.show .col-last {
         /*with override*/
-        display: block;
+        /*display: block;*/
     }
 
-    [aria-labelledby^="heading"]:not([aria-labelledby$="Zero"]) {
-        /*height: 80vh;*/
-        /*overflow-y: scroll;*/
-        /*-webkit-overflow-scrolling: touch;*/
+    section.collapse {
+        height: 60vh;
+        /*height: calc(100vh - (4rem * 6));*/
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
     }
 
-    #resumeStack > section:not([aria-labelledby$="Zero"]) {
-
-        /*height: 60vh;*/
-        /*overflow-x: scroll;*/
-
-        /*height: calc(100vh - var(--header-height) +.75rem);*/
-        /*overflow-y: scroll; */
-        /*-webkit-overflow-scrolling: touch;*/
+    section.collapsing {
+        height: 0;
+        /*transition: none;*/
+        transition: height .7s linear;
     }
 
     #resumeStack > header {
@@ -1195,7 +1258,7 @@ article header .header-icon ion-icon {
 section.collapsed,
     /*section.collapse,*/
 section.collapse:not(.show){
-    height: 600px;
+    /*height: 600px;*/
 }
 
 .collapse {
@@ -1269,30 +1332,13 @@ section.collapsed {
 }
 
 article > section {
-    /*max-height: 600px;*/
+    /*max-height: 6 0 0 px;*/
 }
 
 article > section > section {
     max-height: 900px;
     transition: max-height .03s ease-out;
 }
-
-/*article > section {*/
-/*    height: 60vh;*/
-/*    overflow: scroll;*/
-/*    transition: min-height .04s ease-out;*/
-/*}*/
-
-/*article {*/
-/*    overflow:visible;*/
-/*    transition:transform 0.3s ease-out;*/
-/*    height:auto;*/
-/*    transform:scaleY(1);*/
-/*    transform-origin:top;*/
-/*}*/
-/*article section.collapsed {*/
-/*    transform:scaleY(0);*/
-/*}*/
 
 
 
@@ -1500,11 +1546,12 @@ ul {
 }
 
 .inset-container {
-    overflow: hidden;
-    padding: .5rem;
-    border-radius: .75rem;
+    /*overflow: hidden;*/
+    /*padding: .5rem;*/
+    /*border-radius: .75rem;*/
+    /*box-shadow: inset 0 -8px 0 0 rgba(255, 255, 255, 0.5), inset 0 8px 0 0 rgba(0, 0, 0, 0.3);*/
 
-    box-shadow: inset -5px -8px 0 0 rgba(255, 255, 255, 0.5), inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
+    /*box-shadow: inset -5px -8px 0 0 rgba(255, 255, 255, 0.5), inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);*/
 }
 
 .inset-container-1 {
@@ -2108,7 +2155,7 @@ blockquote, q {
     transition: all 0.3s 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 #headingOne button:hover {
-    opacity: 1;
+    /*opacity: 1;*/
 }
 /*    transition: border-color 0.15s ease-in-out 3s, box-shadow 0.15s ease-in-out 3s;
 */
