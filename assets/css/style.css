@@ -363,8 +363,6 @@ h1 {
 .media-content {
     display: flex;
     flex-flow: column;
-    /*align-items: stretch;*/
-    /*justify-content: space-between;*/
 }
 
 .media-content > * {
@@ -376,7 +374,7 @@ h1 {
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1550px) {
     .text-box {
         justify-content: space-between;
         align-content: space-between;
@@ -677,39 +675,39 @@ section.right ul li h6 {
 
 /* NAVBAR ------------------------------------------------------------------------------- */
 
-.nav-container {
-    padding: 0 var(--margin); /* 0 4.16% */
-    vertical-align: middle;
-}
+/*.nav-container {*/
+/*    padding: 0 var(--margin); !* 0 4.16% *!*/
+/*    vertical-align: middle;*/
+/*}*/
 
-.nav-container a {
-    display: inline-flex;
-    align-items: center;
-}
+/*.nav-container a {*/
+/*    display: inline-flex;*/
+/*    align-items: center;*/
+/*}*/
 
-.nav-container span {
-    margin-right: .6rem;
-    wrap-option: none;
-}
+/*.nav-container span {*/
+/*    margin-right: .6rem;*/
+/*    wrap-option: none;*/
+/*}*/
 
-.nav-container a.nav-link {
-    font-size: .875rem;
-    text-transform: uppercase;
-}
+/*.nav-container a.nav-link {*/
+/*    font-size: .875rem;*/
+/*    text-transform: uppercase;*/
+/*}*/
 
-.navbar {
-    align-items: center;
-    height: 3rem;
-    padding: 8px 0 3px;
-}
+/*.navbar {*/
+/*    align-items: center;*/
+/*    height: 3rem;*/
+/*    padding: 8px 0 3px;*/
+/*}*/
 
-@media (min-width: 576px) {
-    .navbar {
-        height: 3.375rem;
-        padding: 10px 0 6px;
+/*@media (min-width: 576px) {*/
+/*    .navbar {*/
+/*        height: 3.375rem;*/
+/*        padding: 10px 0 6px;*/
 
-    }
-}
+/*    }*/
+/*}*/
 
 /* MAIN CONTAINER   ------------------------------------------------------------------------------- */
 
@@ -1240,10 +1238,82 @@ article header .header-icon ion-icon {
 /* Override aria-expanded='false' */
 /* Ability to see and style the everything all at once  */
 
-@media (min-width: 320px) {
+.nav-outline {
+    display: none;
+}
+@media (min-width: 1400px) {
 
     [data-parent="#resumeStack"].collapse:not(.show) {
-        /*display: block;*/
+        display: block;
+    }
+
+    .collapse {
+        visibility: visible;
+        display: block;
+    }
+
+    :root {
+        /*flex: 1 0 100%;*/
+    }
+
+    :root > * {
+        /*width: 100%;*/
+        /*!*width: var(--width);*!*/
+        /*margin-left: 0;*/
+        /*margin-right: 0;*/
+        /*background-color: #F2F1EF;*/
+    }
+
+    #collapseLanding {
+        display: none;
+    }
+
+    .main-body {
+        position: relative;
+        right: 0;
+        /*flex: 0 0 auto;*/
+        margin-left: 33.33%;
+        width: 66.6667%;
+        /*height: 100%;*/
+        /*overflow-y: scroll;*/
+    }
+
+
+    .nav-outline {
+        display: block;
+        margin-top: 5rem;
+        position: fixed;
+        /*flex: 0 0 auto;*/
+        width: 33.333%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        background: var(--powder);
+        padding-right: .75rem;
+        padding-left: .75rem;
+        overflow: auto;
+    }
+
+    .nav {
+        font-family: din-2014;
+    }
+
+    .nav-outline ol.nav,
+    .nav-outline ul.nav {
+        flex-direction: column;
+    }
+
+    .nav-outline ul {
+        padding-left: 1rem;
+    }
+
+    .nav-outline .nav-link:before {
+        /*content: counter(section-count);*/
+    }
+
+    .nav-outline .nav-item:before {
+        /*content: counter(article-count);*/
     }
 }
 
@@ -1261,14 +1331,14 @@ section.collapse:not(.show){
     /*height: 600px;*/
 }
 
-.collapse {
-    visibility: hidden;
-}
+/*.collapse {*/
+/*    visibility: hidden;*/
+/*}*/
 
-.collapse.show {
-    visibility: visible;
-    display: block;
-}
+/*.collapse.show {*/
+/*    visibility: visible;*/
+/*    display: block;*/
+/*}*/
 
 .collapsing {
     height: 0;
@@ -1309,7 +1379,7 @@ section.collapse:not(.show){
     display:flex;
     flex-direction:column;
     justify-content:flex-start;
-    height:min-content;
+    /*height:min-content;*/
 }
 
 article {
@@ -1317,7 +1387,7 @@ article {
     /*display:flex;*/
     flex-direction:column;
     justify-content:flex-start;
-    height:min-content;
+    /*height:min-content;*/
 }
 
 section {
