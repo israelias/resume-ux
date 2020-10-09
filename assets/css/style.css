@@ -444,7 +444,7 @@ section.right ul li {
     padding: var(--radius-3);
     border-radius: var(--radius-2);
     border-color: var(--paper);
-    background: var(--powder) !important;
+    background: var(--powder);
     box-shadow: 0 -6.4px 0 rgba(0, 0, 0, 0.2), 0 6px 0 rgba(0, 0, 0, 0.4);
     font-family: var(--halyard-text);
 
@@ -1521,9 +1521,9 @@ ul {
 #verticalScroller {
     margin: 0 auto;
     position: relative;
-    /*width: 400px;*/
-    /*width: 100%;*/
+
     height: 150px;
+
     overflow: hidden;
     background: transparent;
 
@@ -1542,10 +1542,12 @@ ul {
     /*box-shadow: inset -5px -8px 6px 0 rgba(255, 255, 255, 0.5), inset 5px 8px 6px 0 rgba(0, 0, 0, 0.3);*/
 }
 
-#verticalScroller > div {
+#verticalScroller > li {
     position:absolute;
     height: auto;
     padding: 10px 10px 10px 10px;
+
+    background: transparent;
 }
 
 #verticalScroller .recent-activity {
@@ -1616,12 +1618,12 @@ ul {
 }
 
 .inset-container {
-    /*overflow: hidden;*/
-    /*padding: .5rem;*/
-    /*border-radius: .75rem;*/
+    overflow: hidden;
+    padding: .5rem;
+    border-radius: .75rem;
     /*box-shadow: inset 0 -8px 0 0 rgba(255, 255, 255, 0.5), inset 0 8px 0 0 rgba(0, 0, 0, 0.3);*/
 
-    /*box-shadow: inset -5px -8px 0 0 rgba(255, 255, 255, 0.5), inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);*/
+    box-shadow: inset -5px -8px 0 0 rgba(255, 255, 255, 0.5), inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
 }
 
 .inset-container-1 {
@@ -2357,4 +2359,412 @@ blockquote, q {
 [data-toggle="collapse"][aria-expanded="true"][data-target$="Six"].btn:after {
     /*box-shadow: -25px 0 0 0 #2e2c2e, -2px -10px 0 0 #3E223D inset;*/
     /*z-index: 6;*/
+}
+
+/*Yes that’s exactly why the var() function accepts fallback values! var(--customProperty, fallbackValue). In this case something like transform: scale(var(--scaleStart, 0.5))*/
+
+/* transition property
+* durations
+* timing function
+* delay
+
+*Animation name
+* duration
+* timing function
+delay
+iteration count
+direction
+fill mode
+play state
+*/
+
+
+:root {
+    --glide: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    --zip: cubic-bezier(1, 1.4, 0.41, 1.01);
+    --swoop: cubic-bezier(1, 0, 0.41, 1.01);
+
+    --passing: 1s;
+    --dashing: 0.75s;
+    --bustling: 0.65s;
+    --fleeting: 0.55s;
+    --flashing: 0.3s;
+
+    --late: 0.36s;
+    --short: 0.2s;
+    --prompt: 0.05s;
+    --early: 0s;
+
+    --load-down: load-down;
+    --load-up: load-up;
+    --fade-in: fade-in;
+
+    --elem: height;
+    --trans-elem-all: all;
+
+    --trans-elem: var(--elem);
+
+    /*animation: load-down 0.55s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    --fleet-down-prompt-glide-anim: var(--load-down) var(--fleeting) var(--glide) var(--prompt) 1 normal forwards running;
+
+    /*animation: load-up 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    --dash-up-early-glide-anim: var(--load-up) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+
+    /*animation: load-up 0.55s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    --fleet-up-prompt-glide-anim: var(--load-up) var(--fleeting) var(--glide) var(--prompt) 1 normal forwards running;
+
+    /*animation: load-down 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    --dash-down-early-glide-anim: var(--load-down) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+
+    /*animation: load-down 0.55s 0.s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    --fleet-down-early-glide-anim: var(--load-down) var(--fleeting) var(--glide) var(--early) 1 normal forwards running;
+
+    /*animation: load-up 0.75s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    --dash-up-prompt-glide-anim: var(--load-down) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+
+
+    /*transition: all 0.3s 0.36s cubic-bezier(0.455, 0.03, 0.515, 0.955);*/
+    --flash-all-late-glide-trans: var(--trans-elem-all) var(--flashing) var(--glide) var(--late);
+
+    /*transition: all 0.3s 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;*/
+    --flash-all-flash-glide-trans: var(--trans-elem-all) var(--flashing) var(--glide) var(--flashing);
+
+    /*transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);*/
+    --bust-all-early-zip-trans: var(--trans-elem-all) var(--bustling) var(--zip) var(--early);
+
+    /*transition: all 0.3s 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);*/
+    --flash-all-short-glide-trans: var(--trans-elem-all) var(--flashing) var(--glide) var(--short);
+
+    /*transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);*/
+    --bust-all-early-swoop-trans: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
+}
+
+
+/*drops down*/
+#collapseLanding {
+    position: relative;
+    text-align: center;
+
+    /*animation: load-up 0.75s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    -webkit-animation: var(--dash-up-early-glide-anim);
+    animation: var(--dash-up-early-glide-anim);
+
+    -webkit-transition: var(--bust-all-early-swoop-trans);
+    -o-transition: var(--bust-all-early-swoop-trans);
+    transition: var(--bust-all-early-swoop-trans);
+
+}
+
+/*up from down*/
+article {
+    position: relative;
+    animation: var(--dash-down-early-glide-anim);
+    -webkit-animation: var(--dash-down-early-glide-anim);
+
+    -webkit-transition: var(--flash-all-late-glide-trans);
+    -o-transition: var(--flash-all-late-glide-trans);
+    transition: var(--flash-all-late-glide-trans);
+}
+
+#articleZero,
+#articleThree,
+#articleSix {
+    position: relative;
+    animation: var(--dash-up-early-glide-anim);
+    -webkit-animation: var(--dash-up-early-glide-anim);
+
+    -webkit-transition: var(--flash-all-late-glide-trans);
+    -o-transition: var(--flash-all-late-glide-trans);
+    transition: var(--flash-all-late-glide-trans);
+}
+#headingZero {
+    position: relative;
+
+    -webkit-animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+    animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+
+    -webkit-transition: var(--flash-all-flash-glide-trans);
+    -o-transition: var(--flash-all-flash-glide-trans);
+    transition: var(--flash-all-flash-glide-trans);
+}
+
+#headingOne {
+    position: relative;
+
+    -webkit-animation: load-right var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+    animation: load-right var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+
+    -webkit-transition: var(--flash-all-flash-glide-trans);
+    -o-transition: var(--flash-all-flash-glide-trans);
+    transition: var(--flash-all-flash-glide-trans);
+}
+
+#headingTwo {
+    position: relative;
+
+    -webkit-animation: load-left var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+    animation: load-left var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+
+    -webkit-transition: var(--flash-all-late-glide-trans);
+    -o-transition: var(--flash-all-late-glide-trans);
+    transition: var(--flash-all-late-glide-trans);
+}
+
+#headingThree {
+    position: relative;
+
+    -webkit-animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+    animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+
+    -webkit-transition: var(--flash-all-flash-glide-trans);
+    -o-transition: var(--flash-all-flash-glide-trans);
+    transition: var(--flash-all-flash-glide-trans);
+}
+
+#headingFour {
+    position: relative;
+
+    -webkit-animation: load-right var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+    animation: load-right var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+
+    -webkit-transition: var(--flash-all-late-glide-trans);
+    -o-transition: var(--flash-all-late-glide-trans);
+    transition: var(--flash-all-late-glide-trans);
+}
+
+#headingFive {
+    position: relative;
+
+    -webkit-animation: load-left var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+    animation: load-left var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+
+    -webkit-transition: var(--flash-all-flash-glide-trans);
+    -o-transition: var(--flash-all-flash-glide-trans);
+    transition: var(--flash-all-flash-glide-trans);
+}
+
+#headingSix {
+    position: relative;
+
+    -webkit-animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+    animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+
+    -webkit-transition: var(--flash-all-late-glide-trans);
+    -o-transition: var(--flash-all-late-glide-trans);
+    transition: var(--flash-all-late-glide-trans);
+}
+
+/*fades in*/
+artic le {
+    -webkit-animation: toggle-in 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+    animation: toggle-in 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+
+/*slidesin, fades in*/
+he ader:not(.header) {
+    position: relative;
+
+    -webkit-animation: load-shrink 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+    animation: load-shrink 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+
+    -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
+    transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
+
+}
+
+header.header,
+footer.footer {
+    -webkit-animation: var(--fade-in) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+    animation: var(--fade-in) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+}
+
+
+@-webkit-keyframes load-down {
+    0% {
+        top: 400px;
+    }
+    100% {
+        top: 0;
+    }
+}
+@keyframes load-down {
+    0% {
+        top: 400px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+
+@-webkit-keyframes load-up {
+    0% {
+        top: -500px;
+    }
+    100% {
+        top: 0;
+    }
+}
+@keyframes load-up {
+    0% {
+        top: -500px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@-webkit-keyframes load-thru {
+    0% {
+        top: 300px;
+    }
+    100% {
+        top: 0;
+    }
+}
+@keyframes load-thru {
+    0% {
+        top: 300px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@-webkit-keyframes load-shrink {
+    0% {
+        /*left: 500px;*/
+        -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
+        transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
+    }
+    100% {
+        /*left: 0;*/
+        -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
+        transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
+    }
+}
+@keyframes load-shrink {
+    0% {
+        /*left: 500px;*/
+        -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
+        transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
+    }
+    100% {
+        /*left: 0;*/
+        -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
+        transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
+    }
+}
+
+@-webkit-keyframes load-left {
+    0% {
+        left: 500px;
+        -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
+        transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
+    }
+    100% {
+        left: 0;
+        -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
+        transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
+    }
+}
+@keyframes load-left {
+    0% {
+        left: 500px;
+        -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
+        transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
+    }
+    100% {
+        left: 0;
+        -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
+        transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
+    }
+}
+
+@-webkit-keyframes load-right {
+    0% {
+        right: 500px;
+        -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
+        transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
+    }
+    100% {
+        right: 0;
+        -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
+        transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
+    }
+}
+@keyframes load-right {
+    0% {
+        right: 500px;
+        -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
+        transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
+    }
+    100% {
+        right: 0;
+        -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
+        transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
+    }
+}
+
+
+
+@-webkit-keyframes load-out {
+    0% {
+        -webkit-transform: translateY(-50%) scale(0) rotateX(10deg) rotateY(10deg) rotateZ(40deg);
+        transform: translateY(-50%) scale(0) rotateX(10deg) rotateY(10deg) rotateZ(40deg);
+    }
+    100% {
+        -webkit-transform: translateY(-50%) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        transform: translateY(-50%) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+@keyframes load-out {
+    0% {
+        -webkit-transform: translateY(-50%) scale(0) rotateX(10deg) rotateY(10deg) rotateZ(40deg);
+        transform: translateY(-50%) scale(0) rotateX(10deg) rotateY(10deg) rotateZ(40deg);
+    }
+    100% {
+        -webkit-transform: translateY(-50%) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        transform: translateY(-50%) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+@keyframes toggle-in {
+    0% { opacity: 0; }
+    50.001% { opacity: 0.4; }
+    52.999% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes toggle-in {
+    0% { opacity: 0; }
+    50.001% { opacity: 0.4; }
+    52.999% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes toggle-out {
+    50% { opacity: 1; } /* Turn off */
+    50.001% { opacity: 0.4; }
+}
+
+@keyframes toggle-full {
+    /*0% { opacity: 1; }*/
+    50% { opacity: 1; } /* Turn off */
+    50.001% { opacity: 0.4; }
+    /* Keep off state for a short period */
+
+    52.999% { opacity: 0.4; } /* Turn back on */
+    53% { opacity: 1; }
+    /*100% { opacity: 1; }*/
 }
