@@ -1260,6 +1260,11 @@ input[type="radio"]:checked + label ~ main article > section {
 
 @media (max-width: 575.98px) {
 
+    /* avoid rubberband scrolling between sections */
+    body {
+        position: fixed;
+    }
+
     main {
         overflow: hidden;
     }
@@ -1293,7 +1298,32 @@ input[type="radio"]:checked + label ~ main article > section {
 }
 
 @media (min-width: 768px) {
+    .sss {
+        overflow: no-display;
+    /*     like display none */
+        overflow: no-content;
+    /*    like visibility hidden */
+    }
+    .log-o {
+        will-change: transform;
+        transition: 0.3s;
+    }
 
+    .log-o:hover {
+        transform: rotate(720deg);
+    }
+
+    .puddydat {
+        width: 200px;
+        height: 118px;
+        transition: transform 1s;
+    }
+    .puddydat:hover {
+        will-change: transform;
+    }
+    .puddydat:active {
+        transform: rotate(720deg) scale(5);
+    }
 }
 
 /* Override aria-expanded='false' */
