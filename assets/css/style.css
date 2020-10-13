@@ -1261,8 +1261,17 @@ input[type="radio"]:checked + label ~ main article > section {
 @media (max-width: 575.98px) {
 
     /* avoid rubberband scrolling between sections */
-    body {
+
+    html {
         position: fixed;
+        height: 100%;
+        overflow: hidden;
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     main {
