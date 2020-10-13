@@ -1252,6 +1252,11 @@ input[type="checkbox"]:checked + label ~ main section:after {
     display: none;
 }
 
+/* override .col-last helper when static toggle is on */
+input[type="checkbox"]:checked + label ~ main .col-last {
+    display: block;
+}
+
 input[type="checkbox"]:not(checked) + label ~ main [data-parent="#resumeStack"]:not(#collapseLanding).collapse {
     /*display: none;*/
 
