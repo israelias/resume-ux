@@ -30,17 +30,11 @@
     --yellow: #B8A922;
     --moss: #213128;
     --green: #234D3E;
-
-    /*w1*/
     --white: #FAFAFA;
-    /*w0*/
     --pearl: #F4F4F4;
-    /*w2*/
     --powder: #F5F4F2;
-    /*w3*/
     --paper: #F2F1EF;
-
-    --deep-1:#4f4f4f;
+    --deep-1: #4f4f4f;
     --deep-2: #707070;
     --deep-3: #95989A;
     --deep-4: #B0b0b0;
@@ -71,26 +65,10 @@
     justify-content: center;
 }
 
-/* Apply edge shadows to static root canvas */
-
-:root {
-    /*box-shadow:*/
-    /*        -3px 0 2px rgba(0, 0, 0, 0.3),*/
-    /*        -3px 0 2px rgba(255, 255, 255, 0.5),*/
-    /*        inset 3px 0 2px rgba(255, 255, 255, .5),*/
-    /*        inset 3px 0 3px rgba(0, 0, 0, .3),*/
-
-    /*        3px 0 2px rgba(0, 0, 0, 0.3),*/
-    /*        3px 0 2px rgba(255, 255, 255, 0.5),*/
-    /*        inset -3px 0 2px rgba(255, 255, 255, .5),*/
-    /*        inset -3px 0 3px rgba(0, 0, 0, .3);*/
-}
-
 /* Achieve a centered 'col-ll' without '.container.row.col' wrapper divs */
 
 :root > * {
-    /*width: 91.666667%;*/
-    width: var(--width);
+    width: var(--width, 91.66667%);
     margin-left: 0;
     margin-right: 0;
     background-color: var(--paper,#F2F1EF);
@@ -110,11 +88,6 @@
         margin-left: 0;
         margin-right: 0;
     }
-}
-
-[class*="col"] {
-    /*padding-left: 0;*/
-    /*padding-right: 0;*/
 }
 
 .row {
@@ -1222,6 +1195,7 @@ article header .header-icon ion-icon {
     left: 49%;
     right: 49%;
     z-index: 1030;
+    cursor: pointer;
 
 }
 input[type="radio"],
@@ -1237,6 +1211,7 @@ input[type="checkbox"]:checked + label .closed {
 input[type="radio"]:checked + label .open,
 input[type="checkbox"]:checked + label .open {
     display: block;
+    color: var(--deep-1);
 }
 
 input[type="checkbox"]:checked + label ~ main [data-parent="#resumeStack"].collapse:not(.show) {
@@ -1248,12 +1223,73 @@ input[type="checkbox"]:checked + label ~ main [data-parent="#resumeStack"]:not(#
     visibility: visible;
     height: 100%;
     overflow: visible;
+    /*animation: toggle-collapse .75s var(--glide) var(--early) 1 normal forwards running;*/
     transition: all var(--dashing) var(--glide) var(--early);
+}
+
+input[type="checkbox"]:checked + label ~ main article header .header-icon {
+    display: none;
+}
+
+/* Disable header button functionality when static toggle is on */
+
+input[type="checkbox"]:checked + label ~ main article header {
+    pointer-events: none;
+    cursor: default;
+    color: black;
+}
+
+/* Hide all collapse feature visual cues when static toggle is on */
+
+input[type="checkbox"]:checked + label ~ main article:before,
+input[type="checkbox"]:checked + label ~ main article:after,
+input[type="checkbox"]:checked + label ~ main section.right:after,
+input[type="checkbox"]:checked + label ~ main .header-title:after,
+input[type="checkbox"]:checked + label ~ main .spread:before,
+input[type="checkbox"]:checked + label ~ main .spread:after,
+input[type="checkbox"]:checked + label ~ main section:before,
+input[type="checkbox"]:checked + label ~ main section:after {
+    display: none;
+}
+
+input[type="checkbox"]:not(checked) + label ~ main [data-parent="#resumeStack"]:not(#collapseLanding).collapse {
+    /*display: none;*/
+
 }
 
 input[type="radio"]:checked + label ~ main article > section {
     height: 100%;
     overflow: visible;
+}
+
+@-webkit-keyframes toggle-collapse {
+    0% {
+        display: initial;
+        visibility: initial;
+        height: initial;
+        overflow: initial;
+    }
+    100% {
+        display: block;
+        visibility: visible;
+        height: 100%;
+        overflow: visible;
+    }
+}
+
+@keyframes toggle-collapse {
+    0% {
+        display: initial;
+        visibility: initial;
+        height: initial;
+        overflow: initial;
+    }
+    100% {
+        display: block;
+        visibility: visible;
+        height: 100%;
+        overflow: visible;
+    }
 }
 
 
@@ -1278,6 +1314,7 @@ input[type="radio"]:checked + label ~ main article > section {
 
 [data-toggle="collapse"][aria-expanded="true"] .open {
     display: block;
+    color: var(--deep-1);
 }
 
 /* Have the ability to scroll within an expanded section on a small screen */
@@ -1363,6 +1400,9 @@ input[type="radio"]:checked + label ~ main article > section {
 
 /* Override aria-expanded='false' */
 /* Ability to see and style the everything all at once  */
+
+/* Responsive sidebar menu */
+
 .nav-outline {
     font-family: din-2014;
 }
@@ -1430,6 +1470,15 @@ nav.nav-outline.show ~ .main-body {
 nav.nav-outline.collapse:not(.show) ~ .main-body {
     animation: main-grow .75s var(--glide) 0s 1 normal forwards running;
     transition: all var(--flashing) var(--zip) var(--early);
+}
+
+/* make col-12 */
+/*(min-width: 992px) and (max-width: 1199.98px)*/
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    nav.nav-outline.show ~ .main-body .spread > div  {
+        width: 100%;
+        transition: width var(--flashing) var(--zip) var(--early);
+    }
 }
 
 
