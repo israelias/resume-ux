@@ -14,18 +14,12 @@
     <!--hover.css-->
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">-->
 
-    <!-- Google Fonts -->
-    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">-->
-
     <!--Adobe fonts-->
     <!--<link rel="stylesheet" href="https://use.typekit.net/qyv7gbn.css">-->
 
     <!-- MDB -->
     <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css" rel="stylesheet">-->
 
-    <!-- Vertical Scroll jQuery -->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!--style.css-->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
@@ -36,204 +30,220 @@
     <!-- start header container -->
     <header class="header">
         <!-- start navbar Container -->
-        <nav class="navbar navbar-light fixed-top align-items-center">
-            <!-- start nav group -->
-            <div class="nav-container row row-cols-5">
+        <nav class="navbar navbar-light fixed-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
                 <!--start logo -->
-                <div class="col">
-                    <a class="navbar-brand" href="index.html" role="button">
-                        JS<span class="d-none d-sm-inline">.stack</span>
-                    </a>
-                </div><!--/close logo -->
-                <!-- start nav link -->
-                <div class="col">
-                    <a class="nav-link" href="tel:+63945-994-5975" role="button">
-                        <span class="d-none d-xxl-inline text-nowrap">Call me</span>
-                        <ion-icon name="call-outline"></ion-icon>
-                    </a>
-                </div><!--/close nav link -->
-                <!-- start CTA -->
-                <div class="col text-center">
-                    <a class="nav-link" href="#!" role="button">
-                        <span class="d-none d-xxl-inline text-nowrap">Download my CV</span>
-                        <ion-icon name="cloud-download-outline"></ion-icon>
-                    </a>
-                </div><!--/close CTA-->
-                <!-- start CTA -->
-                <div class="col text-right">
-                    <a class="nav-link" href="#!" role="button">
-                        <span class="d-none d-xxl-inline text-nowrap">Save my contact</span>
-                        <ion-icon name="person-add-outline"></ion-icon>
-                    </a>
-                </div><!-- /close CTA -->
-                <!-- start CTA -->
-                <div class="col text-right nav-link">
-                    <!-- start button -->
-                    <button
-                            class="navbar-toggler"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                            style="padding: 0; margin: 0;"
-                    >
-                        <ion-icon name="menu-outline"></ion-icon>
-                    </button><!-- close toggle button -->
-                </div><!-- /close cta -->
-                <!-- start COLLAPSIBLE WRAPPER -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left links -->
-                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-                        <li class="nav-item d-flex">
-                            <a class="btn flex-fill justify-content-between" type="button"
-                                    href="index.html">
-                                <span class="d-flex justify-content-between">
-                                    <span class="button-text">
-                                        INTRODUCTION
-                                    </span>
-                                    <i class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="nav-item d-flex">
-                            <button class="btn flex-fill justify-content-between" type="button"
-                                    data-toggle="collapse"
-                                    data-target="#collapseTwo"
-                                    aria-controls="collapseTwo">
-                                <span class="d-flex justify-content-between">
-                                    <span class="button-text">
-                                        PROFICIENCY
-                                    </span>
-                                    <i class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
-                                </span>
-                            </button>
-                        </li>
-                        <li class="nav-item d-flex">
-                            <button class="btn flex-fill justify-content-between" type="button"
-                                    data-toggle="collapse"
-                                    data-target="#collapseThree"
-                                    aria-controls="collapseThree">
-                                <span class="d-flex justify-content-between">
-                                    <span class="button-text">
-                                        EXPERIENCE
-                                    </span>
-                                    <i class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
-                                </span>
-                            </button>
-                        </li>
-                        <li class="nav-item d-flex">
-                            <button class="btn flex-fill justify-content-between" type="button"
-                                    data-toggle="collapse"
-                                    data-target="#collapseFour"
-                                    aria-controls="collapseFour">
-                                <span class="d-flex justify-content-between">
-                                    <span class="button-text">
-                                        EXAMPLES
-                                    </span>
-                                    <i class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
-                                </span>
-                            </button>
-                        </li>
-                        <li class="nav-item d-flex">
-                            <button class="btn flex-fill justify-content-between" type="button"
-                                    data-toggle="collapse"
-                                    data-target="#collapseFive"
-                                    aria-controls="collapseFive">
-                                <span class="d-flex justify-content-between">
-                                    <span class="button-text">
-                                        REFERENCES
-                                    </span>
-                                    <i class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
-                                </span>
-                            </button>
-                        </li>
-                        <li class="nav-item d-flex">
-                            <button class="btn flex-fill justify-content-between" type="button"
-                                    data-toggle="collapse"
-                                    data-target="#collapseSix"
-                                    aria-controls="collapseSix">
-                                <span class="d-flex justify-content-between">
-                                    <span class="button-text">
-                                        CONNECT
-                                    </span>
-                                    <i class="fas fa-chevron-circle-down rotate-icon align-self-start"></i>
-                                </span>
-                            </button>
-                        </li>
-                        <li class="nav-item d-flex">
-                            <!-- Expand Toggle Button -->
-                            <button class="btn collapsed flex-fill justify-content-between" type="button"
-                                    data-ripple-color="dark"
-                                    data-toggle="collapse"
-                                    data-target=".collapse-all"
-                                    aria-expanded="false"
-                                    aria-controls="collapseZero collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">
-                                Expand All
-                            </button>
-                            <!-- /Expand Toggle Button -->
-                        </li>
-                    </ul>
-                    <!-- Left links -->
-
-                    <!-- Search form -->
-                    <form class="d-flex input-group w-auto">
-                        <input
-                                type="search"
-                                class="form-control"
-                                placeholder="Type query"
-                                aria-label="Search"
-                        >
-                        <button class="btn btn-outline-primary" type="button" data-ripple-color="dark">
-                            Search
-                        </button>
-                    </form>
-                </div><!-- /close collapsible wrapper -->
-            </div><!-- close nav group -->
+                <a class="navbar-brand" href="index.html" role="button">
+                    JS<span class="d-none d-sm-inline">.stack</span>
+                </a><!--/close logo -->
+            </div>
         </nav><!-- /close navbar container -->
     </header><!-- /close header container -->
-    <!-- start 0.0 HEADER BUTTON -->
-    <header class="header d-none" id="headingMain">
-        <!--<nav class="navbar">-->
-        <nav class="navbar header-title d-flex">
-            <a class="navbar-brand header-content" href="index.html">
-                <span class="header-name">
-                    JS
-                </span>
-                <span class="header-text">
-                    Joem Elias Sanez
-                </span>
-            </a>
-            <input type="checkbox" id="expandAll" class=" " data-target=".collapse-all" aria-controls="collapseZero collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">
-            <label for="expandAll" class="header-icon justify-self-end" onclick>
-                <ion-icon name="code-working-outline" class="closed"></ion-icon>
-                <ion-icon name="code-slash-outline" class="open"></ion-icon>
-            </label>
-            <!--<button class="btn collapsed flex-fill justify-content-between" type="button"-->
-            <!--        data-ripple-color="dark"-->
-            <!--        data-toggle="collapse"-->
-            <!--        data-target=".collapse-all"-->
-            <!--        aria-expanded="false"-->
-            <!--        aria-controls="collapseZero collapseOne collapseTwo collapseThree collapseFour collapseFive collapseSix">-->
-            <!--    Expand All-->
-            <!--</button>-->
-        </nav>
-        <!--</nav>-->
-    </header> <!-- /close 1.0 header button -->
 
-    <input type="checkbox" id="toggle-all" class="sticky-bottom" data-target=".collapse-all" aria-controls="">
-    <label for="toggle-all" class="header-icon  fixed-bottom" onclick>
+    <!-- Expand All Toggle -->
+    <input type="checkbox" id="toggle-all" class="toggle-all" data-target=".collapse-all" aria-controls="">
+    <label for="toggle-all" class="header-icon  toggle-all" onclick>
+        <ion-icon name="code-working-outline" class="closed"></ion-icon>
+        <ion-icon name="code-slash-outline" class="open"></ion-icon>
+    </label>
+    <!-- close Expand All Toggle-->
+
+    <input type="radio" id="scroll-all" class="sticky-top d-none">
+    <label for="scroll-all" class="header-icon d-none  fixed-top" onclick>
         <ion-icon name="code-working-outline" class="closed"></ion-icon>
         <ion-icon name="code-slash-outline" class="open"></ion-icon>
     </label>
 
-    <input type="radio" id="scroll-all" class="sticky-top">
-    <label for="scroll-all" class="header-icon  fixed-top" onclick>
-        <ion-icon name="code-working-outline" class="closed"></ion-icon>
-        <ion-icon name="code-slash-outline" class="open"></ion-icon>
-    </label>
-
+    <!-- start Side nav at xxl -->
+    <nav id="navbarToggleExternalContent" class="collapse nav-outline">
+        <ol class="nav flex-column nav-pills menu-sidebar">
+            <li class="nav-item h1-00">
+                <a class="nav-link">
+                    The curriculum vitae of Joem Elias Sanez (developed for the web).
+                </a>
+                <ul class="nav flex-column">
+                    <li class="nav-item h2-00">
+                        <a class="nav-link">
+                            jStack.CV
+                        </a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item h5 h3-00">
+                                <a class="nav-link" href="#headingZero">
+                                    Introduction
+                                </a>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item h4-01">
+                                        <a class="nav-link" href="#collapseZero">
+                                            "Joem Elias Sanez is..."
+                                        </a>
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item h5-00">
+                                                <a class="nav-link">
+                                                    Recent Activity
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item h3-10">
+                                <a class="nav-link" href="#collapseOne" data-toggle="collapse">
+                                    Specialization
+                                </a>
+                                <a class="btn flex-fill d-none" role="button" data-toggle="collapse"
+                                   href="#collapseOne" aria-controls="collapseTwo">
+                                    Specialization
+                                </a>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item h4-10">
+                                        <a class="nav-link" href="#collapseOne">
+                                            "A unique tech stack"
+                                        </a>
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item h5-11">
+                                                <a class="nav-link">
+                                                    What I do
+                                                </a>
+                                            </li>
+                                            <li class="nav-item h5-12">
+                                                <a class="nav-link">
+                                                    Expertise
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item h3-20">
+                                <a class="nav-link" href="#headingTwo">
+                                    Proficiency
+                                </a>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item h4-20">
+                                        <a class="nav-link" href="#collapseTwo">
+                                            "Building and bridging skills..."
+                                        </a>
+                                        <ul class="nav">
+                                            <li class="nav-item h5-21">
+                                                <a class="nav-link">
+                                                    Adaptability
+                                                </a>
+                                            </li>
+                                            <li class="nav-item h5-22">
+                                                <a class="nav-link">
+                                                    Coverage
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item h3-30">
+                                <a class="nav-link" href="#headingThree">
+                                    Experience
+                                </a>
+                                <ul class="nav">
+                                    <li class="nav-item h4-30">
+                                        <a class="nav-link" href="#collapseThree">
+                                            "Breadth and depth..."
+                                        </a>
+                                        <ul class="nav">
+                                            <li class="nav-item h5-31">
+                                                <a class="nav-link">
+                                                    Education
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h5-32">
+                                                    Employment
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item h3-40">
+                                <a class="nav-link" href="#headingFour">
+                                    Examples
+                                </a>
+                                <ul class="nav">
+                                    <li class="nav-item h4-40">
+                                        <a class="nav-link" href="#collapseFour">
+                                            "Form and function..."
+                                        </a>
+                                        <ul class="nav">
+                                            <li class="nav-item h5-41">
+                                                <a class="nav-link">
+                                                    Tech Repo
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h5-42">
+                                                    Design Samples
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item h3-50">
+                                <a class="nav-link" href="#headingFive">
+                                    References
+                                </a>
+                                <ul class="nav">
+                                    <li class="nav-item h4-50">
+                                        <a class="nav-link" href="#collapseFive">
+                                            "Stacking up..."
+                                        </a>
+                                        <ul class="nav">
+                                            <li class="nav-item h5-51">
+                                                <a class="nav-link">
+                                                    Recommendations
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h5-52">
+                                                    Accomplishments
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item h3-60">
+                                <a class="nav-link" href="#headingSix">
+                                    Connect
+                                </a>
+                                <ul class="nav">
+                                    <li class="nav-item h4-60">
+                                        <a class="nav-link" href="#collapseSix">
+                                            "Always eager to connect...!"
+                                        </a>
+                                        <ul class="nav">
+                                            <li class="nav-item h5-61">
+                                                <a class="nav-link">
+                                                    Contact Info
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h5-62">
+                                                    Message Form
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </nav>
+    <!-- close side nav at xxl -->
     <main id="resumeStack" class="main-body">
         <!-- start SPLASH BANNER -->
         <section id="collapseLanding" class="show" aria-labelledby="splashLanding" data-parent="#resumeStack">
@@ -243,7 +253,6 @@
                         Fifteen sections nested in seven article elements doubly stacked in one collapsible block: the
                         curriculum vitae of Joem Elias Sanez (developed for the web).
                     </h1>
-
                     <section id="splash-banner" class="left landing-banner">
                         <h2 id="splash-heading" class="h4">
                             jStack.CV
@@ -251,13 +260,15 @@
                         <ul id="band-ul" class="landing-masthead activity-cta mt-2 inset-container">
                             <li id="band-li" class="d-flex flex-row align-items-stretch">
                                 <span id="band-t" class="outset-container-2 contact-text flex-fill mr-2 text-muted justify-content-between">
-                                    <span id="email" class="value">israelias.js@gmail.com</span>
+                                    <span id="download" class="value">
+                                        <i class="far fa-file-pdf pr-1" aria-hidden="true"></i>
+                                        sanez_cv_2020.pdf
+                                    </span>
                                 </span>
-                                <a id="band-b" class="outset-container-2 btn" href="mailto:israelias.js@gmail.com"
-                                   target="_blank">
+                                <a id="band-b" class="outset-container-2 btn" href="#" target="_blank">
                                     <span class="inset-inner">
-                                        <i class="fas fa-envelope"></i>
-                                        <span class="sr-only">Email</span>
+                                        <i class="fas fa-download"></i>
+                                        <span class="sr-only">Download my CV</span>
                                     </span>
                                 </a>
                             </li>
@@ -3480,355 +3491,21 @@
         </article><!-- close 6.0 -->
     </main><!-- close main wrapper -->
 
-    <!-- start Side nav at xxl -->
-    <nav id="structure" class="nav-outline">
-        <ol class="nav flex-column nav-pills menu-sidebar">
-            <li class="nav-item h1-00">
-                <a class="nav-link">
-                    The curriculum vitae of Joem Elias Sanez (developed for the web).
-                </a>
-                <ul class="nav flex-column">
-                    <li class="nav-item h2-00">
-                        <a class="nav-link">
-                            jStack.CV
-                        </a>
-                        <ul class="nav flex-column">
-                            <li class="nav-item h5 h3-00">
-                                <a class="nav-link" href="#headingZero">
-                                    Introduction
-                                </a>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item h4-01">
-                                        <a class="nav-link" href="#collapseZero">
-                                            "Joem Elias Sanez is..."
-                                        </a>
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item h5-00">
-                                                <a class="nav-link">
-                                                    Recent Activity
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item h3-10">
-                                <a class="nav-link" href="#headingOne">
-                                    Specialization
-                                </a>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item h4-10">
-                                        <a class="nav-link" href="#collapseOne">
-                                            "A unique tech stack"
-                                        </a>
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item h5-11">
-                                                <a class="nav-link">
-                                                    What I do
-                                                </a>
-                                            </li>
-                                            <li class="nav-item h5-12">
-                                                <a class="nav-link">
-                                                    Expertise
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item h3-20">
-                                <a class="nav-link" href="#headingTwo">
-                                    Proficiency
-                                </a>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item h4-20">
-                                        <a class="nav-link" href="#collapseTwo">
-                                            "Building and bridging skills..."
-                                        </a>
-                                        <ul class="nav">
-                                            <li class="nav-item h5-21">
-                                                <a class="nav-link">
-                                                    Adaptability
-                                                </a>
-                                            </li>
-                                            <li class="nav-item h5-22">
-                                                <a class="nav-link">
-                                                    Coverage
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item h3-30">
-                                <a class="nav-link" href="#headingThree">
-                                    Experience
-                                </a>
-                                <ul class="nav">
-                                    <li class="nav-item h4-30">
-                                        <a class="nav-link" href="#collapseThree">
-                                            "Breadth and depth..."
-                                        </a>
-                                        <ul class="nav">
-                                            <li class="nav-item h5-31">
-                                                <a class="nav-link">
-                                                    Education
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link h5-32">
-                                                    Employment
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item h3-40">
-                                <a class="nav-link" href="#headingFour">
-                                    Examples
-                                </a>
-                                <ul class="nav">
-                                    <li class="nav-item h4-40">
-                                        <a class="nav-link" href="#collapseFour">
-                                            "Form and function..."
-                                        </a>
-                                        <ul class="nav">
-                                            <li class="nav-item h5-41">
-                                                <a class="nav-link">
-                                                    Tech Repo
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link h5-42">
-                                                    Design Samples
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item h3-50">
-                                <a class="nav-link" href="#headingFive">
-                                    References
-                                </a>
-                                <ul class="nav">
-                                    <li class="nav-item h4-50">
-                                        <a class="nav-link" href="#collapseFive">
-                                            "Stacking up..."
-                                        </a>
-                                        <ul class="nav">
-                                            <li class="nav-item h5-51">
-                                                <a class="nav-link">
-                                                    Recommendations
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link h5-52">
-                                                    Accomplishments
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item h3-60">
-                                <a class="nav-link" href="#headingSix">
-                                    Connect
-                                </a>
-                                <ul class="nav">
-                                    <li class="nav-item h4-60">
-                                        <a class="nav-link" href="#collapseSix">
-                                            "Always eager to connect...!"
-                                        </a>
-                                        <ul class="nav">
-                                            <li class="nav-item h5-61">
-                                                <a class="nav-link">
-                                                    Contact Info
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link h5-62">
-                                                    Message Form
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ol>
-    </nav>
-    <!-- close side nav at xxl -->
 
     <!-- start FOOTER CONTAINER -->
-    <footer class="footer mt-auto bg-w2">
-        <div class="row align-items-end d-flex">
-            <!-- Footer Left -->
-            <div class="col-6 col-sm-7 col-md-7 col-xl-7 bg-transparent">
-                <div class="row align-items-end justify-content-between">
-                    <!-- Footer Item -->
-                    <div class="col-lg-7 col-md-12 mb-4 mb-md-0 pt-2 pl-2 sho-l-1">
-                        <h6 style="font-size: 12px;">
-                            Keep Searching
-                        </h6>
-                        <p class="lh-1">
-                            <small class="muted text-monospace lh-1" style="font-size: 11px;">
-                                Full Stack Developer. Skilled in everything from HTML to Heroku. The capacity for structural and design thinking.
-                            </small>
-                        </p>
-                    </div>
-                    <!-- /Footer Item -->
-                    <!-- Footer Item -->
-                    <div class="col-lg-5 col-md-12 mb-4 mb-md-0 pt-2 pl-2">
-                        <h6 style="font-size: 12px;">
-                            Save my CV
-                        </h6>
-                        <p>
-                            <small class="muted" style="font-size: 12px;">
-                                <a class="btn shout-1 justify-content-between align-items-stretch" href="#!"
-                                   role="button">
-                                    <span class="button-text">
-                                        <i class="fa fa-file-pdf" aria-hidden="true"></i>
-                                        SANEZ_CV_2020.pdf
-                                        <small class="small">
-                                           <i class="fa fa-download" aria-hidden="true"></i>
-                                        </small>
-                                    </span>
-                                </a>
-                            </small>
-                        </p>
-                    </div>
-                    <!-- /Footer Item -->
-                </div>
-            </div><!-- /Footer Left -->
-            <!-- Footer Right -->
-            <div class="col-6 col-sm-5 col-md-5 col-xl-5">
-                <div class="row align-items-stretch justify-content-between">
-                    <!-- Footer Item -->
-                    <div class="col mb-4 mb-md-0 pt-2 pl-2">
-                        <h6 style="font-size: 12px;">
-                            Find me online
-                        </h6>
-                        <ul class="list-inline d-flex w-100 justify-content-between align-items-center social-links">
-                            <li class="list-inline-item">
-                                <!-- Linkedin -->
-                                <a class="btn btn-floating" href="#!"
-                                   role="button">
-                                    <i class="fab fa-linkedin-in hvr-pop"></i>
-                                    <span class="sr-only">LinkedIn</span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <!-- GitHub -->
-                                <a class="btn btn-floating"
-                                   href="#!" role="button">
-                                    <i class="fab fa-github hvr-pop"></i>
-                                    <span class="sr-only">GitHub</span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <!-- Dev -->
-                                <a class="btn btn-floating" role="button">
-                                    <i class="fab fa-dev hvr-pop"></i>
-                                    <span class="sr-only">Dev</span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-floating" href="#!" role="button">
-                                    <i class="fas fa-globe hvr-pop"></i>
-                                    <span class="sr-only">Portfolio</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /Footer Item -->
-                    <!-- Footer Item -->
-                    <div class="col mb-4 mb-md-0 pt-2 pl-2 sho-r-1 text-right">
-                        <h6 style="font-size: 12px;">
-                            © Designed and Built by
-                        </h6>
-                        <p>
-                            <a class="text-dark" href="#">Joem Elias Sanez</a>
-                        </p>
-                    </div><!-- /Footer Item -->
-                </div>
-            </div><!-- /Footer Region Right -->
-        </div>
+    <footer class="footer mt-auto bg-w2" style="top: calc(100vh - 3rem); padding-top: 3rem;">
+        <!-- Footer Item -->
+        <div class="d-sm-block text-sm-center justify-content-center text-md-right">
+            <h6 class="d-sm-block d-md-inline-block text-center" style="font-size: 12px;">
+                © Designed and Built by
+            </h6>
+            <p class="d-sm-block d-md-inline-block text-center">
+                <a class="text-dark" href="#">Joem Elias Sanez</a>
+            </p>
+        </div><!-- /Footer Item -->
     </footer><!-- /Footer container -->
-
-    <!--<script>-->
-    <!--    $(document).ready(function() {-->
-
-    <!--        $('.collapse').on('shown.bs.collapse', function (e) {-->
-    <!--            var $article = $(this).closest('.article');-->
-
-    <!--            if ($(window).width() < 576) {-->
-    <!--                $('html,body').animate({-->
-    <!--                    scrollTop: $article.offset().top-->
-    <!--                }, 500);-->
-    <!--            }-->
-    <!--            else {-->
-    <!--                $('html,body').animate({-->
-    <!--                    scrollTop: $article.offset().top - 50-->
-    <!--                }, 800);-->
-    <!--            }-->
-    <!--        });-->
-
-    <!--        document.addEventListener('shown.bs.collapse', function (e) {-->
-    <!--            let article = this.closest.getElementsByName('article');-->
-
-    <!--            if (window.width() < 576) {-->
-    <!--                document.getElementsByTagName('html, body').animate({-->
-    <!--                    scrollTo: article.offset().top-->
-    <!--                }, 500);-->
-    <!--            }-->
-    <!--            else {-->
-    <!--                document.getElementsByTagName('html, body').animate({-->
-    <!--                    scrollTop: article.offset().top - 50-->
-    <!--                }, 800);-->
-    <!--            }-->
-    <!--        })-->
-    <!--    });-->
-    <!--</script>-->
-
-    <!-- Scroll JS (https://stackoverflow.com/questions/35571505/scrolling-news-feed-overlaps-divs) -->
-    <!-- followed by collapse-transition scroll-to-top helper -->
-    <script>
-        // https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload
-        // function clicks the first section
-        function startStack(){
-            // document.getElementById('startStack').click();
-        }
-        // this calls the function 3 seconds after page load
-        window.onload = function () {
-            setTimeout('startStack()', 6000);
-        }
-
-        function expandAll(){
-            let toggle = document.getElementById('expandAll');
-            let all = document.getElementsByClassName('collapse-all');
-
-            if (toggle.checked) {
-                all.style.display = 'block';
-                all.style.visibility = 'visible';
-                all.style.height = '100%';
-                all.style.overflow = 'visible';
-            }
-        }
-
-        document.getElementById("test").children[0].className += " load";
-
-
-    </script>
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
-
-    <!--scrollbar-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/perfect-scrollbar@1.5.0/dist/perfect-scrollbar.common.min.js"></script>
 </body>
 </html>

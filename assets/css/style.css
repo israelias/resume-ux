@@ -302,7 +302,14 @@ h1 {
     font-weight: 100;
     text-transform: uppercase;
     color: var(--deep-1);
+}
 
+#download {
+    font-family: attribute-mono;
+}
+
+#download i {
+    color: var(--deep-4);
 }
 
 #collapseLanding {
@@ -311,7 +318,7 @@ h1 {
 
 @media (max-width: 575.98px) {
 
-    #email {
+    #download {
         font-size: .725rem;
         margin-bottom: 1rem !important;
     }
@@ -695,7 +702,12 @@ h4 ion-icon {
 
 
 header.header {
-    /*z-index: 99;*/
+    position: absolute;
+    z-index: 99;
+}
+
+header.header .navbar-light {
+    background: var(--paper,#F2F1EF);
 }
 
 .nav-container {
@@ -1092,11 +1104,16 @@ section.right:after {
 }
 
 @media (max-width: 575.98px) {
-    section.right:after,
-    .header-title:after {
-        left: calc(var(--margin) / 2 * -1 + .75rem);
-        right: calc(var(--margin) / 2 * -1 + .75rem);
+    section.right:after {
+        left: calc(var(--margin) / 2 * -1 + .875rem);
+        right: calc(var(--margin) / 2 * -1 + .875rem);
     }
+
+    .header-title:after {
+        left: calc(var(--margin) / 2 * -1 + 1rem);
+        right: calc(var(--margin) / 2 * -1 + 1rem);
+    }
+
 }
 
 article header {
@@ -1136,7 +1153,7 @@ article header button {
 
 @media (max-width: 575.98px) {
     article header button {
-        padding: 1rem;
+        padding: 1rem 1.25rem;
     }
 }
 
@@ -1198,6 +1215,15 @@ article header .header-icon ion-icon {
 }
 
 /* MAIN HEADER NAV */
+
+.toggle-all {
+    position: fixed;
+    top: 1rem;
+    left: 49%;
+    right: 49%;
+    z-index: 1030;
+
+}
 input[type="radio"],
 input[type="checkbox"] {
     display: none;
@@ -1263,15 +1289,15 @@ input[type="radio"]:checked + label ~ main article > section {
     /* avoid rubberband scrolling between sections */
 
     html {
-        position: fixed;
-        height: 100%;
-        overflow: hidden;
+        /*position: fixed;*/
+        /*height: 100%;*/
+        /*overflow: hidden;*/
     }
     body {
-        width: 100vw;
-        height: 100vh;
-        overflow-y: auto;
-        overflow-x: hidden;
+        /*width: 100vw;*/
+        /*height: 100vh;*/
+        /*overflow-y: auto;*/
+        /*overflow-x: hidden;*/
     }
 
     main {
@@ -1337,10 +1363,183 @@ input[type="radio"]:checked + label ~ main article > section {
 
 /* Override aria-expanded='false' */
 /* Ability to see and style the everything all at once  */
-
 .nav-outline {
-    display: none;
+    font-family: din-2014;
 }
+.nav-outline ol.nav,
+.nav-outline ul.nav {
+    flex-direction: column;
+}
+
+.nav-outline ul {
+    padding-left: 1rem;
+}
+
+/* Set default state */
+nav.nav-outline.collapse {
+    display: none;
+    /*visibility: hidden;*/
+    margin-top: 5rem;
+    position: fixed;
+    width: 33.333%;
+    top: 0;
+    left: -33.33%;
+    bottom: 0;
+    height: 100%;
+    background: var(--powder);
+    padding-right: .75rem;
+    padding-left: .75rem;
+    overflow: auto;
+}
+
+/* override .collapsing event transition */
+nav.nav-outline.collapsing {
+    height: 100%;
+    transition: none;
+}
+
+/* Slide nav in on .show event */
+nav.nav-outline.show {
+    display: block;
+    animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
+    transition: all var(--flashing) var(--zip) var(--early);
+}
+
+/* Slide nav out on collapse event */
+nav.nav-outline.collapse:not(.show) {
+    display: none;
+    animation: nav-out .75s var(--glide) 0s 1 normal forwards running;
+    transition: all var(--flashing) var(--zip) var(--early);
+}
+
+nav.nav-outline.collapse ~ .main-body {
+    /*position: relative;*/
+    /*right: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*flex: 0 0 auto;*/
+}
+
+/* shrink main in on nav.show event */
+nav.nav-outline.show ~ .main-body {
+    animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
+    transition: all var(--flashing) var(--zip) var(--early);
+}
+
+/* expand main on nav.collapse event */
+nav.nav-outline.collapse:not(.show) ~ .main-body {
+    animation: main-grow .75s var(--glide) 0s 1 normal forwards running;
+    transition: all var(--flashing) var(--zip) var(--early);
+}
+
+
+:root {
+    --navwidth: -33.33%;
+    --mainwidth: 66.66%;
+}
+
+@-webkit-keyframes nav-in {
+    0% {
+        left: var(--navwidth, -33.33%);
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes nav-in {
+    0% {
+        left: var(--navwidth, -33.33%);
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes nav-out {
+    0% {
+        left: 0;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        left: var(--navwidth, -33.33%);
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes nav-out {
+    0% {
+        left: 0;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        left: var(--navwidth, -33.33%);
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes main-shrink {
+    0% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: var(--mainwidth, 66.66%);
+        left: 33.33%;
+    }
+}
+
+@keyframes main-shrink {
+    0% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: var(--mainwidth, 66.66%);
+        left: 33.33%;
+    }
+}
+@-webkit-keyframes main-grow {
+    0% {
+        width: var(--mainwidth, 66.66%);
+        left: 33.33%;
+    }
+    100% {
+        width: 100%;
+        left: 0;
+    }
+}
+@keyframes main-grow {
+    0% {
+        width: var(--mainwidth, 66.66%);
+        left: 33.33%;
+    }
+    100% {
+        width: 100%;
+        left: 0;
+    }
+}
+
 @media (min-width: 1400px) {
 
     [data-parent="#resumeStack"].collapse:not(.show) {
@@ -1378,12 +1577,10 @@ input[type="radio"]:checked + label ~ main article > section {
         /*overflow-y: scroll;*/
     }
 
-
-    .nav-outline {
+    nav.nav-outline.collapse {
         display: block;
         margin-top: 5rem;
         position: fixed;
-        /*flex: 0 0 auto;*/
         width: 33.333%;
         top: 0;
         left: 0;
@@ -1394,7 +1591,6 @@ input[type="radio"]:checked + label ~ main article > section {
         padding-left: .75rem;
         overflow: auto;
     }
-
     .nav {
         font-family: din-2014;
     }
@@ -2391,6 +2587,7 @@ blockquote, q {
 
 [data-toggle="collapse"][aria-expanded="true"] .header-icon ion-icon {
     --ionicon-stroke-width: 32px;
+    padding-bottom: .25rem;
 }
 
 [data-toggle="collapse"][aria-expanded="true"] .header-name {
