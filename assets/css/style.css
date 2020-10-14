@@ -95,6 +95,8 @@
     margin-right: 0;
 }
 
+/* Potentially override the MDB framework variables? */
+
 :root {
     /*--bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";*/
     /*--bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;*/
@@ -163,10 +165,13 @@ ion-icon {
     }
 }
 
+/* Splash landing headings */
 
 h1,h2 {
     font-family: var(--halyard-display);
 }
+
+/* Splash landing sub-heading  */
 
 h2 {
     font-family: attribute-mono, sans-serif !important;
@@ -175,12 +180,13 @@ h2 {
     font-feature-settings: 'smcp';
 }
 
+/* Header button headings */
 h3 {
     font-family: attribute-mono;
 }
 
+/* Section lead heading */
 
-/*Section lead heading*/
 h4 {
     padding: 5rem 1rem 1rem;
     margin-bottom: .5rem;
@@ -212,21 +218,15 @@ h5 {
     text-transform: uppercase;
 }
 
+/* Media content headings */
+
 h6 {
     font-family: attribute-mono, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-h6 {
-
-}
-
-
-p {
-    /*font-weight: 400;*/
-}
-
+/* Text content keywords */
 
 b {
     font-weight: 100;
@@ -238,9 +238,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-p a {
 }
 
 
@@ -322,9 +319,13 @@ h1 {
 
 }
 
-/*/SPLASH BANNER END*/
+/* GLOBAL .COL DIV CONFIGS  ------------------------------------------------------------------------------- */
 
-/* GLOBAL SECTION CONFIGS  ------------------------------------------------------------------------------- */
+/*!
+ * Main left and right .col divs are paired with either .text-box (left) or .media-box (right)
+ * Both $='box'es effectively turn the .cols to flex parents responsively wrapping children
+ * The *-items and *-content children are the main sub sections, headings and uls following
+ */
 
 .text-box {
     display: flex;
@@ -372,6 +373,10 @@ h1 {
     margin-top: auto;
 }
 
+/* GLOBAL SECTION ELEMENT CONFIGS  ------------------------------------------------------------------------------- */
+
+/* Apply typical Bootstrap .card-body configs to main sub-sections, with custom global aesthetic  */
+
 article section section,
 section section {
     flex: 1 1 auto;
@@ -401,6 +406,8 @@ section.right h5 {
     text-align: right;
 }
 
+/* Apply global flex behavior and visual language to media list-groups */
+
 section.right ul {
     overflow: hidden;
     display: flex;
@@ -411,7 +418,6 @@ section.right ul {
     border-radius: var(--radius-3) !important;
     box-shadow: inset -5px -8px 0 0 rgba(255, 255, 255, 0.5), inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
 }
-
 
 section.right ul > * {
     margin-bottom: var(--radius-4);
@@ -518,7 +524,8 @@ section.right ul li h6 {
     font-feature-settings: 'smcp', 'c2sc';
 }
 
-/* headline icon */
+/* Apply global icon transitions to section h4 headlines */
+/* CREDIT (modified) inspired by on-show transitions in: https://codeconvey.com/pure-css-accordion-menu/ */
 
 section.show h4 ion-icon {
     left: 260px;
@@ -537,142 +544,10 @@ h4 ion-icon {
     opacity: 0.08;
 }
 
-/* LOCAL SECTION VARIABLES ------------------------------------------------------------------------------- */
-
-::selection {
-    background: var(--yellow);
-}
-
-::-moz-selection {
-    background: var(--yellow)
-}
-
-#collapseZero h4 {
-    background-color: var(--matte);
-}
-
-#collapseOne h4 {
-    background-color: var(--slate);
-}
-
-#collapseOne b {
-    color: var(--slate);
-}
-
-#collapseOne a {
-    color: var(--grey);
-}
-
-#collapseOne p::selection {
-    background: var(--grey);
-}
-
-#collapseOne p::-moz-selection {
-    background: var(--grey);
-}
-
-#collapseTwo h4 {
-    background-color: var(--ruby);
-}
-
-#collapseTwo b {
-    color: var(--ruby);
-}
-
-#collapseTwo a {
-    color: var(--red);
-}
-
-#collapseTwo p::selection {
-    background: var(--red);
-}
-
-#collapseTwo p::-moz-selection {
-    background: var(--red);
-}
-
-#collapseThree h4 {
-    background-color: var(--denim);
-}
-
-#collapseThree b {
-    color: var(--denim);
-}
-
-#collapseThree a {
-    color: var(--blue);
-}
-
-#collapseThree p::selection {
-    background: var(--blue);
-}
-
-#collapseThree p::-moz-selection {
-    background: var(--blue);
-}
-
-#collapseFour h4 {
-    background-color: var(--canary);
-}
-
-#collapseFour b {
-    color: var(--canary);
-}
-
-#collapseFour a {
-    color: var(--yellow);
-}
-
-#collapseFour p::selection {
-    background: var(--yellow);
-}
-
-#collapseFour p::-moz-selection {
-    background: var(--yellow);
-}
-
-#collapseFive h4 {
-    background-color: var(--moss);
-}
-
-#collapseFive b {
-    color: var(--moss);
-}
-
-#collapseFive a {
-    color: var(--green);
-}
-
-#collapseFive p::selection {
-    background: var(--green);
-}
-
-#collapseFive p::-moz-selection {
-    background: var(--green);
-}
-
-#collapseSix h4 {
-    background-color: var(--obsidian);
-}
-
-#collapseSix b {
-    color: var(--obsidian);
-}
-
-#collapseSix a {
-    color: var(--raisin);
-}
-
-#collapseSix p::selection {
-    background: var(--raisin);
-}
-
-#collapseSix p::-moz-selection {
-    background: var(--raisin);
-}
-
 /* NAVBAR ------------------------------------------------------------------------------- */
 
+/* Absolutely positioned elements in the dom will always go above everything even if it's position fixed */
+/* https://stackoverflow.com/questions/13071429/how-to-position-main-content-below-header-and-footer-in-css */
 
 header.header {
     position: absolute;
@@ -789,7 +664,7 @@ section.right ul li {
 
 /*!
  * Pseudo elements are applied to the left and right margins of the following elements
- * to achieve the effect of containers sliding on rails during a .collapsing event
+ * to achieve the effect of containers sliding on vertical rails during a .collapsing event
  *
  * 1. <main> : outer-most static rail
  * 2. <article> : static rail
@@ -820,18 +695,7 @@ main {
 
 article {
     clip-path: inset(-3rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
-    /*position: relative;*/
-    /*clip-path: inset(1rem calc(var(--margin) * -1) -1rem calc(var(--margin) * -1));*/
     position: relative;
-
-    /*outline: 1px solid springgreen;*/
-    /*outline-offset: 1rem;*/
-}
-
-.spread {
-    /*outline: 1px solid coral;*/
-    /*outline-offset: .5rem;*/
-    /*-moz-outline-radius: 5px;*/
 }
 
 /* Set sections in both static and transition states to show overflow at left/right (to the full width of the screen) */
@@ -841,9 +705,6 @@ article {
 section.collapse,
 section.collapsing {
     clip-path: inset(-3rem calc(var(--margin) * -1) 1.36rem calc(var(--margin) * -1));
-    /*clip-path: inset(-3rem calc(var(--margin) * -1) 1rem calc(var(--margin) * -1));*/
-    /*outline: 1px solid coral;*/
-    /*outline-offset: .97rem;*/
 }
 
 .header-title {
@@ -874,6 +735,7 @@ section.right:after {
 
 article:before {
     left: calc(var(--margin) / 2 * -1 + .08rem);
+    border-right: 1px solid var(--outlines);
 }
 
 @media (max-width: 575.98px) {
@@ -887,6 +749,7 @@ article:before {
 
 article:after {
     right: calc(var(--margin) / 2 * -1 + .08rem);
+    border-left: 1px solid var(--outlines);
 }
 
 @media (max-width: 575.98px) {
@@ -901,11 +764,16 @@ article:before,
 article:after {
     top: 0;
     height: 100%;
+
+    z-index: -1;
+    width: .3rem;
 }
 
 /* Give inner-most top and bottom rail pseudo elements a consistent width and a variable height  */
 /* Set background color to the html body color */
 /* Z depth of 10 to be at the foreground of the body */
+
+/* Note: the .collapse.collapsing.show. variety are necessary for continuity during the BS.transitioning event */
 
 section.collapse:before,
 section.collapse:after,
@@ -915,30 +783,14 @@ section.collapsing:before,
 section.collapsing:after,
 .spread:before,
 .spread:after {
-    /*outline: 1px dashed purple;*/
     z-index: 10;
     align-self: center;
 
     height: 10vh;
     width: .5rem;
-
-    /*background: #F2F1EF;*/
 }
 
-article:before,
-article:after {
-    z-index: -1;
-    width: .3rem;
-}
-
-article:before {
-    border-right: 1px solid var(--outlines);
-}
-
-article:after {
-    border-left: 1px solid var(--outlines);
-}
-
+/* Position top left and top right pseudo-rails relative to section elements */
 
 section.show:before,
 section.collapsing:before,
@@ -947,13 +799,16 @@ section.show:after,
 section.collapsing:after,
 section.collapse:after {
     top: 1.6rem;
-    /*transition: height ease-out .3s;*/
 }
+
+/* Position bottom left and bottom right pseudo-rails relative to .spread divs */
 
 .spread:before,
 .spread:after {
     bottom: 1.5rem;
 }
+
+/* Apply left-centric styling to top left and bottom left pseudo-rails */
 
 section.collapse:before,
 section.show:before,
@@ -963,11 +818,15 @@ section.collapsing:before,
     border-left: 2px solid var(--outlines);
 }
 
+/* Style top left pseudo-rail */
+
 section.collapse:before,
 section.show:before,
 section.collapsing:before {
     border-top-left-radius: .75rem;
 }
+
+/* Style bottom left pseudo-rail */
 
 .spread:before {
     border-bottom-left-radius: .75rem;
@@ -982,6 +841,7 @@ section.collapsing:before {
     }
 }
 
+/* Apply right-centric styling to top right and bottom right pseudo-rails */
 
 section.collapse:after,
 section.show:after,
@@ -991,11 +851,15 @@ section.collapsing:after,
     border-right: 2px solid var(--outlines);
 }
 
+/* Style top right pseudo-rail */
+
 section.collapse:after,
 section.show:after,
 section.collapsing:after {
     border-top-right-radius: .75rem;
 }
+
+/* Style bottom right pseudo-rail */
 
 .spread:after {
     border-bottom-right-radius: .75rem;
@@ -1010,6 +874,16 @@ section.collapsing:after {
     }
 }
 
+/*!
+ * Horizontal pseudo elements are applied to individual header elements
+ * to simulate connection to the vertical pseudo-rails
+ *
+ * 1. <header> : pseudo left/right to hide rails beyond
+ * 2. section.right : pseudo bottom horizontal
+ * 3. .header-title : pseudo top horizontal
+ */
+
+/* Position top-most header pseudo-concealer elements that 'cover' pseudo-rails beyond */
 
 article > header:before,
 article > header:after {
@@ -1020,12 +894,9 @@ article > header:after {
 
     width: .875rem;
     height: 2.875rem;
-    /*top: -1.8rem;*/
-    /*width: .75rem;*/
-    /*height: 3.6rem;*/
-    /*border: 1px dashed red;*/
 }
 
+/* Style left pseudo-concealer */
 
 article > header:before {
     left: calc(var(--margin) / 2 * -1);
@@ -1035,6 +906,8 @@ article > header:before {
     background: #F2F1EF;
 }
 
+/* Style right pseudo-concealer */
+
 article > header:after {
     right: calc(var(--margin) / 2 * -1);
     /*width: 1.175rem;*/
@@ -1043,10 +916,14 @@ article > header:after {
     background: #F2F1EF;
 }
 
+/* Style top and bottom pseudo-horizontals  */
+
 section.right:after,
 .header-title:after {
     height: .5rem;
 }
+
+/* Position bottom pseudo-horizontal */
 
 section.right:after {
     left: calc(var(--margin) / 2 * -1 + .5rem);
@@ -1061,6 +938,8 @@ section.right:after {
     /*        -1px 0 0 var(--outlines);*/
     z-index: 5;
 }
+
+/* Position top pseudo-horizontal */
 
 .header-title:after {
     left: calc(var(--margin) / 2 * -1 + .75rem);
@@ -1088,6 +967,8 @@ section.right:after {
     }
 
 }
+
+/* ARTICLE HEADER BUTTON   ------------------------------------------------------------------------------- */
 
 article header {
     display: flex;
@@ -1187,7 +1068,15 @@ article header .header-icon ion-icon {
     color: #4f4f4f;
 }
 
-/* MAIN HEADER NAV */
+/* TOGGLE-ALL CHECKBOX BUTTON   ------------------------------------------------------------------------------- */
+
+/*!
+ * Ability to collapse-all and expand-all
+ * enabled by a fixed-position checkbox input element
+ *
+ * NOTE: The element is placed outside of the main header nav in order to
+ * select and elicit behavior on sibling elements upon :checked toggle
+ */
 
 .toggle-all {
     position: fixed;
@@ -1196,8 +1085,8 @@ article header .header-icon ion-icon {
     right: 49%;
     z-index: 1030;
     cursor: pointer;
-
 }
+
 input[type="radio"],
 input[type="checkbox"] {
     display: none;
@@ -1232,6 +1121,7 @@ input[type="checkbox"]:checked + label ~ main article header .header-icon {
 }
 
 /* Disable header button functionality when static toggle is on */
+/* https://stackoverflow.com/questions/2091168/how-to-disable-a-link-using-only-css */
 
 input[type="checkbox"]:checked + label ~ main article header {
     pointer-events: none;
@@ -1298,7 +1188,7 @@ input[type="radio"]:checked + label ~ main article > section {
 }
 
 
-/* COLLAPSE FUNCTIONS   ------------------------------------------------------------------------------- */
+/* GLOBAL COLLAPSE-BUTTON FUNCTIONS   ------------------------------------------------------------------------------- */
 
 /* Swap the visibility of icon pairs upon toggle of expand/collapse */
 /* .open and .closed classes added to either of two ion-icons in each header */
@@ -1322,37 +1212,23 @@ input[type="radio"]:checked + label ~ main article > section {
     color: var(--deep-1);
 }
 
+/* MOBILE COLLAPSE-SECTION CONFIGS   ------------------------------------------------------------------------------- */
+
 /* Have the ability to scroll within an expanded section on a small screen */
 /* With the exception of the Introduction section (collapseZero) */
 /* 60vh is an arbitrary height to for both in-section scrolling and sibling header-buttons visibility */
 
 @media (max-width: 575.98px) {
 
-    /* avoid rubberband scrolling between sections */
-
-    html {
-        /*position: fixed;*/
-        /*height: 100%;*/
-        /*overflow: hidden;*/
-    }
-    body {
-        /*width: 100vw;*/
-        /*height: 100vh;*/
-        /*overflow-y: auto;*/
-        /*overflow-x: hidden;*/
-    }
-
     main {
         overflow: hidden;
     }
 
     .col-last {
-        /*with override*/
         display: none;
     }
 
     .collapse.show .col-last {
-        /*with override*/
         display: block;
     }
 
@@ -1374,39 +1250,16 @@ input[type="radio"]:checked + label ~ main article > section {
     }
 }
 
-@media (min-width: 768px) {
-    .sss {
-        overflow: no-display;
-    /*     like display none */
-        overflow: no-content;
-    /*    like visibility hidden */
-    }
-    .log-o {
-        will-change: transform;
-        transition: 0.3s;
-    }
+/* SIDE NAV   ------------------------------------------------------------------------------- */
 
-    .log-o:hover {
-        transform: rotate(720deg);
-    }
-
-    .puddydat {
-        width: 200px;
-        height: 118px;
-        transition: transform 1s;
-    }
-    .puddydat:hover {
-        will-change: transform;
-    }
-    .puddydat:active {
-        transform: rotate(720deg) scale(5);
-    }
-}
-
-/* Override aria-expanded='false' */
-/* Ability to see and style the everything all at once  */
-
-/* Responsive sidebar menu */
+/*!
+ * Nav outline with scroll spy toggles in on menu-button click event
+ * Currently dependent on the .collapse event
+ *
+ * KNOWN BUG: A Flash upon clicking the menu is perhaps inherited from the .collapse family
+ *            Provided the transitions/animation below are maintainer, this feature might be
+ *            equally effective a radio button boolean (removing its dependency on the BS .collapse)
+ */
 
 .nav-outline {
     font-family: din-2014;
@@ -1421,6 +1274,7 @@ input[type="radio"]:checked + label ~ main article > section {
 }
 
 /* Set default state */
+
 nav.nav-outline.collapse {
     display: none;
     /*visibility: hidden;*/
@@ -1438,12 +1292,14 @@ nav.nav-outline.collapse {
 }
 
 /* override .collapsing event transition */
+
 nav.nav-outline.collapsing {
     height: 100%;
     transition: none;
 }
 
 /* Slide nav in on .show event */
+
 nav.nav-outline.show {
     display: block;
     animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
@@ -1451,12 +1307,14 @@ nav.nav-outline.show {
 }
 
 /* Slide nav out on collapse event */
+
 nav.nav-outline.collapse:not(.show) {
     display: none;
     animation: nav-out .75s var(--glide) 0s 1 normal forwards running;
     transition: all var(--flashing) var(--zip) var(--early);
 }
 
+/* Set default state of main-body (OBSOLETE) */
 nav.nav-outline.collapse ~ .main-body {
     /*position: relative;*/
     /*right: 0;*/
@@ -1466,12 +1324,14 @@ nav.nav-outline.collapse ~ .main-body {
 }
 
 /* shrink main in on nav.show event */
+
 nav.nav-outline.show ~ .main-body {
     animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
     transition: all var(--flashing) var(--zip) var(--early);
 }
 
 /* expand main on nav.collapse event */
+
 nav.nav-outline.collapse:not(.show) ~ .main-body {
     animation: main-grow .75s var(--glide) 0s 1 normal forwards running;
     transition: all var(--flashing) var(--zip) var(--early);
@@ -1479,6 +1339,7 @@ nav.nav-outline.collapse:not(.show) ~ .main-body {
 
 /* make col-12 */
 /*(min-width: 992px) and (max-width: 1199.98px)*/
+
 @media (min-width: 1200px) and (max-width: 1399.98px) {
     nav.nav-outline.show ~ .main-body .spread > div  {
         width: 100%;
@@ -1594,101 +1455,49 @@ nav.nav-outline.collapse:not(.show) ~ .main-body {
     }
 }
 
+/* Trigger Side Nav event at 1400px */
+/* TO BE REVISED  */
+
 @media (min-width: 1400px) {
 
     [data-parent="#resumeStack"].collapse:not(.show) {
-        display: block;
+        /*display: block;*/
     }
 
     .collapse {
-        visibility: visible;
-        display: block;
+        /*visibility: visible;*/
+        /*display: block;*/
     }
 
-    :root {
-        /*flex: 1 0 100%;*/
-    }
-
-    :root > * {
-        /*width: 100%;*/
-        /*!*width: var(--width);*!*/
-        /*margin-left: 0;*/
-        /*margin-right: 0;*/
-        /*background-color: #F2F1EF;*/
-    }
 
     #collapseLanding {
-        display: none;
+        /*display: none;*/
     }
 
     .main-body {
-        position: relative;
-        right: 0;
-        /*flex: 0 0 auto;*/
-        margin-left: 33.33%;
-        width: 66.6667%;
-        /*height: 100%;*/
-        /*overflow-y: scroll;*/
+        /*position: relative;*/
+        /*right: 0;*/
+        /*margin-left: 33.33%;*/
+        /*width: 66.6667%;*/
     }
 
     nav.nav-outline.collapse {
-        display: block;
-        margin-top: 5rem;
-        position: fixed;
-        width: 33.333%;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        height: 100%;
-        background: var(--powder);
-        padding-right: .75rem;
-        padding-left: .75rem;
-        overflow: auto;
-    }
-    .nav {
-        font-family: din-2014;
-    }
-
-    .nav-outline ol.nav,
-    .nav-outline ul.nav {
-        flex-direction: column;
-    }
-
-    .nav-outline ul {
-        padding-left: 1rem;
-    }
-
-    .nav-outline .nav-link:before {
-        /*content: counter(section-count);*/
-    }
-
-    .nav-outline .nav-item:before {
-        /*content: counter(article-count);*/
+        /*display: block;*/
+        /*margin-top: 5rem;*/
+        /*position: fixed;*/
+        /*width: 33.333%;*/
+        /*top: 0;*/
+        /*left: 0;*/
+        /*bottom: 0;*/
+        /*height: 100%;*/
+        /*background: var(--powder);*/
+        /*padding-right: .75rem;*/
+        /*padding-left: .75rem;*/
+        /*overflow: auto;*/
     }
 }
 
-/* Dispose splash banner content upon click any header-button */
-
-[id="collapseLanding"].collapse:not(.show) {
-    display: none;
-}
-
-
-
-section.collapsed,
-    /*section.collapse,*/
-section.collapse:not(.show){
-    /*height: 600px;*/
-}
-
-/*.collapse {*/
-/*    visibility: hidden;*/
-/*}*/
-
-/*.collapse.show {*/
-/*    visibility: visible;*/
-/*    display: block;*/
-/*}*/
+/* GLOBAL SECTION TRANSITION CONFIGS    ------------------------------------------------------------------------------- */
 
 .collapsing {
     height: 0;
@@ -1700,16 +1509,6 @@ section.collapse:not(.show){
     transition: height 700ms cubic-bezier(.23,-0.09,.18,1.25) 0s;
 }
 
-
-
-/*[id^="collapse"] {*/
-/*    -webkit-transition-property: height, visibility;*/
-/*    transition-property: height, visibility;*/
-/*    -webkit-transition-duration: 0.3s;*/
-/*    transition-duration: 0.3s;*/
-/*    -webkit-transition-timing-function: ease-out;*/
-/*    transition-timing-function: ease-out;*/
-/*}*/
 
 /*HIDE ACTIVE*/
 .show.collapsing {
@@ -1751,19 +1550,13 @@ section.collapsed {
     flex: 0;
 }
 
-article > section {
-    /*max-height: 6 0 0 px;*/
-}
-
-article > section > section {
-    max-height: 900px;
-    transition: max-height .03s ease-out;
-}
-
-
-
 /* INTRODUCTION SECTION   ------------------------------------------------------------------------------- */
 
+/* Dispose splash banner content upon click any header-button */
+
+[id="collapseLanding"].collapse:not(.show) {
+    display: none;
+}
 
 .landing-heading h1 {
     /*font-size: 3.5rem;*/
@@ -2628,16 +2421,150 @@ blockquote, q {
     z-index: 1;
 }
 
+/* LOCAL SECTION VARIABLES ------------------------------------------------------------------------------- */
 
-/* ------------------------------------------------------------------------------- DATA TOGGLE FEEDBACKS */
+::selection {
+    background: var(--yellow);
+}
+
+::-moz-selection {
+    background: var(--yellow)
+}
+
+#collapseZero h4 {
+    background-color: var(--matte);
+}
+
+#collapseOne h4 {
+    background-color: var(--slate);
+}
+
+#collapseOne b {
+    color: var(--slate);
+}
+
+#collapseOne a {
+    color: var(--grey);
+}
+
+#collapseOne p::selection {
+    background: var(--grey);
+}
+
+#collapseOne p::-moz-selection {
+    background: var(--grey);
+}
+
+#collapseTwo h4 {
+    background-color: var(--ruby);
+}
+
+#collapseTwo b {
+    color: var(--ruby);
+}
+
+#collapseTwo a {
+    color: var(--red);
+}
+
+#collapseTwo p::selection {
+    background: var(--red);
+}
+
+#collapseTwo p::-moz-selection {
+    background: var(--red);
+}
+
+#collapseThree h4 {
+    background-color: var(--denim);
+}
+
+#collapseThree b {
+    color: var(--denim);
+}
+
+#collapseThree a {
+    color: var(--blue);
+}
+
+#collapseThree p::selection {
+    background: var(--blue);
+}
+
+#collapseThree p::-moz-selection {
+    background: var(--blue);
+}
+
+#collapseFour h4 {
+    background-color: var(--canary);
+}
+
+#collapseFour b {
+    color: var(--canary);
+}
+
+#collapseFour a {
+    color: var(--yellow);
+}
+
+#collapseFour p::selection {
+    background: var(--yellow);
+}
+
+#collapseFour p::-moz-selection {
+    background: var(--yellow);
+}
+
+#collapseFive h4 {
+    background-color: var(--moss);
+}
+
+#collapseFive b {
+    color: var(--moss);
+}
+
+#collapseFive a {
+    color: var(--green);
+}
+
+#collapseFive p::selection {
+    background: var(--green);
+}
+
+#collapseFive p::-moz-selection {
+    background: var(--green);
+}
+
+#collapseSix h4 {
+    background-color: var(--obsidian);
+}
+
+#collapseSix b {
+    color: var(--obsidian);
+}
+
+#collapseSix a {
+    color: var(--raisin);
+}
+
+#collapseSix p::selection {
+    background: var(--raisin);
+}
+
+#collapseSix p::-moz-selection {
+    background: var(--raisin);
+}
+
+/* HEADER BUTTON FEEDBACK   ------------------------------------------------------------------------------- */
+
+/* CREDIT (inspiration) https://stackoverflow.com/questions/137449/css-for-hover-that-includes-all-child-elements */
+
 [id^="heading"] * {
     transition: all 0.3s 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 #headingOne button:hover {
     /*opacity: 1;*/
 }
-/*    transition: border-color 0.15s ease-in-out 3s, box-shadow 0.15s ease-in-out 3s;
-*/
 
 [data-toggle="collapse"][aria-expanded="true"] .header-icon ion-icon {
     --ionicon-stroke-width: 32px;
@@ -2712,85 +2639,21 @@ blockquote, q {
     border-color: var(--yellow);
 }
 
+/* INTRO ANIMATION  ------------------------------------------------------------------------------- */
 
-
-[data-toggle="collapse"][aria-expanded="true"][data-target$="One"].btn {
-    /*background: #929181;*/
-}
-
-[data-toggle="collapse"][aria-expanded="true"][data-target$="One"].btn:after {
-    /*box-shadow: -25px 0 0 0 #929181, -2px -10px 0 0 #B7B1A8 inset;*/
-    /*z-index: 6;*/
-}
-
-[data-toggle="collapse"][aria-expanded="true"][data-target$="Two"].btn {
-    /*background: #89413D;*/
-}
-
-[data-toggle="collapse"][aria-expanded="true"][data-target$="Two"].btn:after {
-    /*box-shadow: -25px 0 0 0 #89413D, -2px -10px 0 0 rgba(184, 74, 48, .2) inset;*/
-    /*z-index: 6;*/
-}
-
-[data-toggle="collapse"][aria-expanded="true"][data-target$="Three"].btn {
-    /*background: #37455C;*/
-}
-
-[data-toggle="collapse"][aria-expanded="true"][data-target$="Three"].btn:after {
-    /*box-shadow: -25px 0 0 0 #37455C, -2px -10px 0 0 #1D49B8 inset;*/
-    /*z-index: 6;*/
-}
-
-[data-toggle="collapse"][aria-expanded="true"][data-target$="Four"].btn {
-    /*background: #D27511;*/
-}
-
-[data-toggle="collapse"][aria-expanded="true"][data-target$="Four"].btn:after {
-    /*box-shadow: -25px 0 0 0 #D27511, -2px -10px 0 0 #B8A922 inset;*/
-    /*z-index: 6;*/
-}
-
-[data-toggle="collapse"][aria-expanded="true"][data-target$="Five"].btn {
-    /*background: #213128;*/
-}
-
-
-[data-toggle="collapse"][aria-expanded="true"][data-target$="Five"].btn:after {
-    /*box-shadow: -25px 0 0 0 #213128, -2px -10px 0 0 #234D3E inset;*/
-    /*z-index: 6;*/
-}
-
-[data-toggle="collapse"][aria-expanded="true"][data-target$="Six"].btn {
-    /*background: #2e2c2e;*/
-}
-
-[data-toggle="collapse"][aria-expanded="true"][data-target$="Six"].btn:after {
-    /*box-shadow: -25px 0 0 0 #2e2c2e, -2px -10px 0 0 #3E223D inset;*/
-    /*z-index: 6;*/
-}
-
-/*Yes that’s exactly why the var() function accepts fallback values! var(--customProperty, fallbackValue). In this case something like transform: scale(var(--scaleStart, 0.5))*/
-
-/* transition property
-* durations
-* timing function
-* delay
-
-*Animation name
-* duration
-* timing function
-delay
-iteration count
-direction
-fill mode
-play state
-*/
+/* CREDIT (helper tool) https://cubic-bezier.com/#.23,-0.09,.18,1.25 */
+/* CREDIT (inspiration) timing functions are modeled after: https://codeconvey.com/pure-css-accordion-menu/ */
 
 
 :root {
+
+    /* Anim/Trans Timing function variables */
+
     --glide: cubic-bezier(0.455, 0.03, 0.515, 0.955);
     --zip: cubic-bezier(1, 1.4, 0.41, 1.01);
     --swoop: cubic-bezier(1, 0, 0.41, 1.01);
+
+    /* Anim/Trans Duration variables */
 
     --passing: 1s;
     --dashing: 0.75s;
@@ -2798,19 +2661,27 @@ play state
     --fleeting: 0.55s;
     --flashing: 0.3s;
 
+    /* Anim/Trans Time Delay variables */
+
     --late: 0.36s;
     --short: 0.2s;
     --prompt: 0.05s;
     --early: 0s;
 
+    /* Animation name variables */
+
     --load-down: load-down;
     --load-up: load-up;
     --fade-in: fade-in;
 
+    /* Transition property variables */
+
     --elem: height;
     --trans-elem-all: all;
-
     --trans-elem: var(--elem);
+
+    /* Animation Shorthand variables */
+    /* Name, Duration, Time Function, Delay, Iteration Count, Direction, Fill mode, Play state */
 
     /*animation: load-down 0.55s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
     --fleet-down-prompt-glide-anim: var(--load-down) var(--fleeting) var(--glide) var(--prompt) 1 normal forwards running;
@@ -2830,6 +2701,8 @@ play state
     /*animation: load-up 0.75s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
     --dash-up-prompt-glide-anim: var(--load-down) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
 
+    /* Transition Shorthand variables */
+    /* Transition Property, Duration, Timing Function, Delay */
 
     /*transition: all 0.3s 0.36s cubic-bezier(0.455, 0.03, 0.515, 0.955);*/
     --flash-all-late-glide-trans: var(--trans-elem-all) var(--flashing) var(--glide) var(--late);
@@ -2847,23 +2720,19 @@ play state
     --bust-all-early-swoop-trans: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
 }
 
-/*https://cubic-bezier.com/#.23,-0.09,.18,1.25*/
-/*drops down*/
+/* Loads up from down */
+/* BUG: Animation from Side Nav toggle is carried over */
+
 #collapseLanding {
     position: relative;
     text-align: center;
 
-    /*animation: load-up 0.75s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    animation: var(--load-up) 1s var(--glide) var(--early) 1 normal forwards running;
+    -webkit-animation: var(--load-up) 1s var(--glide) var(--early) 1 normal forwards running;
 
-    animation: var(--load-down) 1.2s var(--glide) 0s 1 normal forwards running;
-    -webkit-animation: var(--load-down) 1.2s var(--glide) 0s 1 normal forwards running;
-    /*-webkit-animation: var(--dash-up-early-glide-anim);*/
-    /*animation: var(--dash-up-early-glide-anim);*/
-
-    /*-webkit-transition: var(--bust-all-early-swoop-trans);*/
+    -webkit-transition: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
     -o-transition: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
     transition: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
-
 }
 
 article {
@@ -2887,6 +2756,7 @@ article {
     -o-transition: var(--flash-all-late-glide-trans);
     transition: var(--flash-all-late-glide-trans);
 }
+
 #headingZero {
     position: relative;
 
@@ -2964,24 +2834,6 @@ article {
     transition: var(--flash-all-late-glide-trans);
 }
 
-/*fades in*/
-artic le {
-    -webkit-animation: toggle-in 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
-    animation: toggle-in 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
-}
-
-/*slidesin, fades in*/
-he ader:not(.header) {
-    position: relative;
-
-    -webkit-animation: load-shrink 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
-    animation: load-shrink 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
-
-    -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
-    transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
-
-}
-
 header.header,
 footer.footer {
     -webkit-animation: var(--fade-in) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
@@ -3024,28 +2876,22 @@ footer.footer {
     }
 }
 
-
-
 @-webkit-keyframes load-shrink {
     0% {
-        /*left: 500px;*/
         -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
         transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
     }
     100% {
-        /*left: 0;*/
         -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
         transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
     }
 }
 @keyframes load-shrink {
     0% {
-        /*left: 500px;*/
         -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
         transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
     }
     100% {
-        /*left: 0;*/
         -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
         transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
     }
@@ -3101,22 +2947,6 @@ footer.footer {
     }
 }
 
-
-
-@keyframes toggle-in {
-    0% { opacity: 0; }
-    50.001% { opacity: 0.4; }
-    52.999% { opacity: 0.4; }
-    100% { opacity: 1; }
-}
-
-@-webkit-keyframes toggle-in {
-    0% { opacity: 0; }
-    50.001% { opacity: 0.4; }
-    52.999% { opacity: 0.4; }
-    100% { opacity: 1; }
-}
-
 @keyframes fade-in {
     0% { opacity: 0; }
     100% { opacity: 1; }
@@ -3125,20 +2955,4 @@ footer.footer {
 @-webkit-keyframes fade-in {
     0% { opacity: 0; }
     100% { opacity: 1; }
-}
-
-@keyframes toggle-out {
-    50% { opacity: 1; } /* Turn off */
-    50.001% { opacity: 0.4; }
-}
-
-@keyframes toggle-full {
-    /*0% { opacity: 1; }*/
-    50% { opacity: 1; } /* Turn off */
-    50.001% { opacity: 0.4; }
-    /* Keep off state for a short period */
-
-    52.999% { opacity: 0.4; } /* Turn back on */
-    53% { opacity: 1; }
-    /*100% { opacity: 1; }*/
 }
