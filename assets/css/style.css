@@ -47,6 +47,8 @@
 
     --gradient-1: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
     --gradient-2: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
+    --gradient-3: linear-gradient(145deg, rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0.2));
+    --gradient-4: linear-gradient(180deg, rgba(250, 250, 250, .7), rgba(0, 0, 0, .1));
 
     /* Desired width (out of 12) */
     --of-twelve: 11;
@@ -415,7 +417,7 @@ section.right ul {
     list-style: none;
 
     padding: var(--radius-4);
-    border-radius: var(--radius-3) !important;
+    border-radius: var(--radius-3);
     box-shadow: inset -5px -8px 0 0 rgba(255, 255, 255, 0.5), inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -630,35 +632,6 @@ main {
 
 }
 
-section.right ul {
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-
-    padding: var(--radius-4);
-    border-radius: var(--radius-3);
-    box-shadow: inset -5px -8px 0 0 rgba(255, 255, 255, 0.5), inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
-}
-
-
-section.right ul > * {
-    margin-bottom: var(--radius-4);
-}
-
-section.right ul li {
-    flex-grow: 1;
-    min-width: 50%;
-    padding: var(--radius-3);
-    border-radius: var(--radius-2);
-    border-color: var(--paper);
-    background: var(--powder);
-    box-shadow: 0 -6.4px 0 rgba(0, 0, 0, 0.2), 0 6px 0 rgba(0, 0, 0, 0.4);
-    font-family: var(--halyard-text);
-
-    padding-right: 1.25rem;
-}
-
 
 /* ELEMENT TRANSITION STYLES   ------------------------------------------------------------------------------- */
 
@@ -677,6 +650,7 @@ section.right ul li {
  * calc(var(--margin) * -1) == -4.16%
  * calc(var(--margin) / 2 * -1) == -2.08%
  */
+/* BUG: PSEUDOS are funky on Safari */
 
 :root {
     --outlines: var(--raisin);
@@ -1259,6 +1233,7 @@ input[type="radio"]:checked + label ~ main article > section {
  * KNOWN BUG: A Flash upon clicking the menu is perhaps inherited from the .collapse family
  *            Provided the transitions/animation below are maintainer, this feature might be
  *            equally effective a radio button boolean (removing its dependency on the BS .collapse)
+ *            Most noticeable on Chrome browser
  */
 
 .nav-outline {
@@ -1499,30 +1474,22 @@ nav.nav-outline.collapse:not(.show) ~ .main-body {
 
 /* GLOBAL SECTION TRANSITION CONFIGS    ------------------------------------------------------------------------------- */
 
+/* CREDIT cubic bezier preview/helper https://cubic-bezier.com/#.23,-0.09,.18,1.25 */
+/* BUG: on Chrome, transition on collapsing a shown section only takes effect on first element */
+
 .collapsing {
     height: 0;
     overflow: hidden;
 
-    -webkit-transition: height 700ms cubic-bezier(.23,-0.09,.18,1.25) 0s;
-    -moz-transition: height 700ms cubic-bezier(.23,-0.09,.18,1.25) 0s;
-    -o-transition: height 700ms cubic-bezier(.23,-0.09,.18,1.25) 0s;
-    transition: height 700ms cubic-bezier(.23,-0.09,.18,1.25) 0s;
+    -webkit-transition: height 700ms var(--glide) 0s;
+    -moz-transition: height 700ms var(--glide) 0s;
+    -o-transition: height 700ms var(--glide) 0s;
+    transition: height 700ms var(--glide) 0s;
 }
 
 
-/*HIDE ACTIVE*/
-.show.collapsing {
-    height: auto;
-    overflow: hidden;
-    transition: height 2000ms linear 3s;
-}
-
-/*Show Hidden */
-.collapsing.show {
-    height: auto;
-    overflow: hidden;
-    transition: height 10000ms linear 5s;
-}
+/* Transitioning flex during .collapsing event */
+/* CREDIT (modified) https://css-tricks.com/using-css-transitions-auto-dimensions/ */
 
 #resumeStack {
     display:flex;
@@ -1713,7 +1680,7 @@ ul {
     border: 2px solid #F7F7F7;
     border-radius: .6rem;
 
-    background: linear-gradient(180deg, rgba(250, 250, 250, .7), rgba(0, 0, 0, .1));
+    background: var(--gradient-4);
 
     box-shadow:
             3px 0 0 rgba(180, 180, 180, .7),
@@ -1788,31 +1755,6 @@ ul {
 
 /*Neumorphic shadow inspired by (https://css-tricks.com/neumorphism-and-css/)*/
 
-.outset-outer {
-    width: 100%;
-    height: 100%;
-    clip-path: inset(-.5rem);
-    padding: 0;
-}
-
-.out-z {
-    z-index: 5;
-}
-
-.outset-container {
-    overflow: hidden;
-    /*padding: .5rem;*/
-
-    border-radius: .6rem;
-    border-color: #F2F1EF;
-
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
-    box-shadow:
-            0 8px 0 rgba(0, 0, 0, 0.2),
-                /*-3px 8px 3px rgba(255, 255, 255, 0.3),*/
-            0 -6px 0 rgba(0, 0, 0, 0.3);
-}
-
 .outset-container-2 {
     overflow: hidden;
     padding: .5rem;
@@ -1820,11 +1762,10 @@ ul {
     border-radius: .6rem;
     border-color: #F2F1EF;
 
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+    background: var(--gradient-1);
 
     box-shadow:
             0 -8px 0 rgba(0, 0, 0, 0.2),
-                /*4px 8px 3px rgba(255, 255, 255, 0.3),*/
             0 6px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -1832,9 +1773,10 @@ ul {
     overflow: hidden;
     padding: .5rem;
     border-radius: .75rem;
-    /*box-shadow: inset 0 -8px 0 0 rgba(255, 255, 255, 0.5), inset 0 8px 0 0 rgba(0, 0, 0, 0.3);*/
 
-    box-shadow: inset -5px -8px 0 0 rgba(255, 255, 255, 0.5), inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
+    box-shadow:
+            inset -5px -8px 0 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 575.98px) {
@@ -1844,50 +1786,6 @@ ul {
     }
 }
 
-.inset-container-1 {
-    overflow: hidden;
-    padding: .5rem;
-    border-radius: .75rem;
-
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5));
-
-    box-shadow:
-            0 3.3px 0 rgba(0, 0, 0, 0.3),
-            0 -3.3px 0 rgba(255, 255, 255, 0.5),
-            inset 0 2px 0 rgba(255, 255, 255, 1);
-}
-
-.inset-container-2 {
-    overflow: hidden;
-    margin: 0 -.5rem 0 -.5rem;
-    padding: .5rem .5rem .5rem .5rem;
-    border-radius: .75rem;
-
-    box-shadow: inset -5px -8px 0 0 rgba(255, 255, 255, 0.5), inset 5px 8px 0 0 rgba(0, 0, 0, 0.2);
-}
-
-.inset-container-3 {
-    overflow: hidden;
-    padding: .3rem;
-    border-radius: 1.25rem;
-
-    box-shadow: inset -5px -8px 0 0 rgba(255, 255, 255, 0.5), inset 3px 6px 0 0 rgba(0, 0, 0, 0.3);
-}
-
-.inset-container-4 {
-    overflow: hidden;
-    padding: .3rem;
-    border-radius: 1.25rem;
-    width: min-content;
-
-    box-shadow: inset -5px -8px 0 0 rgba(255, 255, 255, 0.5), inset 3px 6px 0 0 rgba(0, 0, 0, 0.3);
-}
-
-.inset-container-5 {
-    overflow: hidden;
-    padding: .5rem;
-    border-radius: .75rem;
-}
 
 .inset-container-6 {
     overflow: hidden;
@@ -1908,30 +1806,6 @@ ul {
     border: none;
 }
 
-.inset-item-1 {
-    position: relative;
-    border: 2px solid #F7F7F7;
-    border-radius: .6rem;
-
-    box-shadow:
-            3px 0 0 rgba(180, 180, 180, .7),
-            -3px 0 0 rgba(250, 250, 250, .4);
-
-}
-
-.inset-item-2 {
-    position: relative;
-    border: 2px solid #F7F7F7;
-    border-radius: .6rem;
-
-    background: linear-gradient(180deg, rgba(250, 250, 250, .7), rgba(0, 0, 0, .1));
-
-    box-shadow:
-            3px 0 0 rgba(180, 180, 180, .7),
-            -3px 0 0 rgba(250, 250, 250, .4);
-
-}
-
 .inset-item:after {
     position: absolute;
     bottom: 0;
@@ -1947,7 +1821,7 @@ ul {
 
     border-radius: .6rem;
 
-    background: var(--gradient-2, linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2)));
+    background: var(--gradient-2);
 }
 
 /* LIST ITEM LINK HOVER */
@@ -1962,41 +1836,18 @@ li.link-item.inset-item {
 
 li.link-item:hover {
     box-shadow: 2px 2px 0 white, -2px -2px 0 white;
-    background: linear-gradient(
-            -45deg,
-            rgba(0, 0, 0, 0.1),
-            rgba(255, 255, 255, 0.2)
-    );
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
 }
 
 li.link-item.inset-item a {
     z-index: 12;
 }
 
-
-.inset-item-1:after {
-    position: absolute;
-    bottom: 0;
-    content: "";
-
-    right: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    border-radius: .6rem;
-
-    background: linear-gradient(
-            180deg,
-            rgba(250, 250, 250, .7),
-            rgba(0, 0, 0, .1)
-    );
-}
-
 .inset-inner {
-    background: linear-gradient(145deg, rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0.2));
-    box-shadow: 0.3px 0.3px 0 rgba(237, 238, 243, 0.1), -0.3px -0.3px 0 rgba(239, 241, 245, 0.1);
+    background: var(--gradient-3);
+    box-shadow:
+            0.3px 0.3px 0 rgba(237, 238, 243, 0.1),
+            -0.3px -0.3px 0 rgba(239, 241, 245, 0.1);
 }
 
 /* CTA BUTTON CONFIGS AND VARS   ------------------------------------------------------------------------------- */
@@ -2051,8 +1902,10 @@ li.link-item.inset-item a {
     padding: .4rem;
     border-radius: 50%;
     background: black;
-    background: linear-gradient(145deg, rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0.2));
-    box-shadow: 2px 2px 0 rgba(237, 238, 243, 0.1), -2px -2px 0 rgba(239, 241, 245, 0.1);
+    background: var(--gradient-3);
+    box-shadow:
+            2px 2px 0 rgba(237, 238, 243, 0.1),
+            -2px -2px 0 rgba(239, 241, 245, 0.1);
 }
 
 .social-links li .fa,
@@ -2137,7 +1990,7 @@ ul.activity-cta li i {
 .social-links .btn:focus,
 .activity-cta .btn:hover,
 .activity-cta .btn:focus {
-    background: linear-gradient(180deg, rgba(250, 250, 250, .7), rgba(0, 0, 0, .1));
+    background: var(--gradient-4);
     box-shadow:
             0 -8px 0 rgba(0, 0, 0, 0.2),
             0 6px 0 rgba(0, 0, 0, 0.4),
@@ -2148,7 +2001,7 @@ ul.activity-cta li i {
 .connect-cta .btn:active,
 .social-links .btn:active,
 .activity-cta .btn:active {
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+    background: var(--gradient-1);
     box-shadow:
             0 -8px 0 rgba(0, 0, 0, 0.2),
             4px 8px 0 rgba(255, 255, 255, 0.3),
@@ -2169,8 +2022,6 @@ ul.activity-cta li i {
     padding: .6rem;
 }
 
-
-
 @media (max-width: 575.98px) {
 
     .activity-cta button > .inset-inner,
@@ -2186,9 +2037,7 @@ ul.activity-cta li i {
     .activity-cta .fas {
         font-size: .5rem;
     }
-
 }
-
 
 form .connect-cta input {
     height: 3rem;
@@ -2249,8 +2098,7 @@ section.show .activity-cta .btn {
 
 figure {
     border-radius: .6rem;
-
-    background: var(--gradient-2, linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2)));
+    background: var(--gradient-2);
 }
 
 /* CREDIT:(modified) Embed LinkedIn Recommendations with HTML and CSS https://www.damosdesigns.com/LinkedinRecommendationsOnWebsite/ */
@@ -2643,14 +2491,37 @@ blockquote, q {
 
 /* CREDIT (helper tool) https://cubic-bezier.com/#.23,-0.09,.18,1.25 */
 /* CREDIT (inspiration) timing functions are modeled after: https://codeconvey.com/pure-css-accordion-menu/ */
-
+/* Reference: understanding the timing function https://www.quackit.com/css/css3/properties/css_animation-timing-function.cfm */
+/* Reference: the mathematical function http://morrow.github.io/css-reference/html/partial/timing-function.html */
+/* In cubic-bezier(x1, y1, x2, y2), x is time, y is progression; x(time) cannot go below 0 or over 1, but y(progression) can */
+/* With a careful understanding of the definition, below are custom keywords with custom time functions  */
 
 :root {
 
     /* Anim/Trans Timing function variables */
 
+    /*!
+     * 'glide' is a refined variation of 'ease-in-out':
+     * a smooth slow start with an equally smooth slow end https://cubic-bezier.com/#.45,.02,.51,.95
+     */
     --glide: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+    /*!
+     * 'breeze' is an 'ease' with a heightened overbound:
+     * a rapid start with a slow arrival and discreet bounce https://cubic-bezier.com/#.23,-0.09,.18,1.25
+     */
+    --breeze: cubic-bezier(.23, -0.09, .18, 1.25);
+
+    /*!
+     * 'zip' is a 'linear' progression with a surprise bounce:
+     * a consistent speed with an interrupted end https://cubic-bezier.com/#1,1.4,.41,1.01
+     */
     --zip: cubic-bezier(1, 1.4, 0.41, 1.01);
+
+    /*!
+     * 'swoop' is an 'ease-in-out' with a late and steep progression:
+     * an extra slow start with a rapid progression before a relaxed end https://cubic-bezier.com/#1,0,.41,1.01
+     */
     --swoop: cubic-bezier(1, 0, 0.41, 1.01);
 
     /* Anim/Trans Duration variables */
