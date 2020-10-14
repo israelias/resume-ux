@@ -26,13 +26,14 @@
 
     <title>Joem Elias Sanez CV</title>
 </head>
-<body id="bodyMain" data-spy="scroll" data-target="#structure" data-offset="0">
+<body id="bodyMain" data-spy="scroll" data-target="#navOutline" data-offset="40">
     <!-- start header container -->
     <header class="header">
         <!-- start navbar Container -->
         <nav class="navbar navbar-light fixed-top">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navOutline"
+                        aria-controls="structure" aria-expanded="false" aria-label="Toggle navigation">
                     <ion-icon name="menu-outline" class="closed"></ion-icon>
                     <ion-icon name="close-outline" class="open"></ion-icon>
                 </button>
@@ -54,37 +55,44 @@
     </label>
     <!-- close Expand All Toggle-->
 
+    <!-- start Override height+overflow on mobile (DISABLED) -->
     <input type="radio" id="scroll-all" class="sticky-top d-none">
     <label for="scroll-all" class="header-icon d-none  fixed-top" onclick>
         <ion-icon name="code-working-outline" class="closed"></ion-icon>
         <ion-icon name="code-slash-outline" class="open"></ion-icon>
     </label>
+    <!-- close Override -->
 
-    <!-- start Side nav at xxl -->
-    <nav id="navbarToggleExternalContent" class="collapse nav-outline">
+    <!-- start side menu nav outline -->
+    <nav id="navOutline" class="collapse nav-outline">
         <ol class="nav flex-column nav-pills menu-sidebar">
             <li class="nav-item h1-00">
-                <a class="nav-link">
+                <a class="nav-link" href="#collapseLanding">
                     The curriculum vitae of Joem Elias Sanez (developed for the web).
                 </a>
                 <ul class="nav flex-column">
                     <li class="nav-item h2-00">
-                        <a class="nav-link">
+                        <a class="nav-link" href="#splash-banner">
                             jStack.CV
                         </a>
                         <ul class="nav flex-column">
                             <li class="nav-item h5 h3-00">
-                                <a class="nav-link" href="#headingZero">
+                                <a class="nav-link" href="#articleZero">
                                     Introduction
                                 </a>
                                 <ul class="nav flex-column">
-                                    <li class="nav-item h4-01">
+                                    <li class="nav-item h4-00">
                                         <a class="nav-link" href="#collapseZero">
                                             "Joem Elias Sanez is..."
                                         </a>
                                         <ul class="nav flex-column">
-                                            <li class="nav-item h5-00">
-                                                <a class="nav-link">
+                                            <li class="nav-item h5-02">
+                                                <a class="nav-link" href="#sectionZero-1">
+                                                    Currently
+                                                </a>
+                                            </li>
+                                            <li class="nav-item h5-02">
+                                                <a class="nav-link" href="#sectionZero-2">
                                                     Recent Activity
                                                 </a>
                                             </li>
@@ -93,11 +101,11 @@
                                 </ul>
                             </li>
                             <li class="nav-item h3-10">
-                                <a class="nav-link" href="#collapseOne" data-toggle="collapse">
+                                <a class="nav-link" href="#articleOne">
                                     Specialization
                                 </a>
                                 <a class="btn flex-fill d-none" role="button" data-toggle="collapse"
-                                   href="#collapseOne" aria-controls="collapseTwo">
+                                   href="#collapseOne" aria-controls="collapseOne">
                                     Specialization
                                 </a>
                                 <ul class="nav flex-column">
@@ -107,12 +115,12 @@
                                         </a>
                                         <ul class="nav flex-column">
                                             <li class="nav-item h5-11">
-                                                <a class="nav-link">
+                                                <a class="nav-link" id="#sectionOne-1">
                                                     What I do
                                                 </a>
                                             </li>
                                             <li class="nav-item h5-12">
-                                                <a class="nav-link">
+                                                <a class="nav-link" id="#sectionOne-2">
                                                     Expertise
                                                 </a>
                                             </li>
@@ -121,7 +129,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item h3-20">
-                                <a class="nav-link" href="#headingTwo">
+                                <a class="nav-link" href="#articleTwo">
                                     Proficiency
                                 </a>
                                 <ul class="nav flex-column">
@@ -131,12 +139,12 @@
                                         </a>
                                         <ul class="nav">
                                             <li class="nav-item h5-21">
-                                                <a class="nav-link">
+                                                <a class="nav-link" href="#sectionTwo-1">
                                                     Adaptability
                                                 </a>
                                             </li>
                                             <li class="nav-item h5-22">
-                                                <a class="nav-link">
+                                                <a class="nav-link" href="#sectionTwo-2">
                                                     Coverage
                                                 </a>
                                             </li>
@@ -145,7 +153,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item h3-30">
-                                <a class="nav-link" href="#headingThree">
+                                <a class="nav-link" href="#articleThree">
                                     Experience
                                 </a>
                                 <ul class="nav">
@@ -155,12 +163,12 @@
                                         </a>
                                         <ul class="nav">
                                             <li class="nav-item h5-31">
-                                                <a class="nav-link">
+                                                <a class="nav-link" href="#sectionThree-1">
                                                     Education
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link h5-32">
+                                                <a class="nav-link h5-32" href="#sectionThree-2">
                                                     Employment
                                                 </a>
                                             </li>
@@ -169,7 +177,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item h3-40">
-                                <a class="nav-link" href="#headingFour">
+                                <a class="nav-link" href="#articleFour">
                                     Examples
                                 </a>
                                 <ul class="nav">
@@ -179,12 +187,12 @@
                                         </a>
                                         <ul class="nav">
                                             <li class="nav-item h5-41">
-                                                <a class="nav-link">
+                                                <a class="nav-link" href="#sectionFour-1">
                                                     Tech Repo
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link h5-42">
+                                                <a class="nav-link h5-42" href="#sectionFour-2">
                                                     Design Samples
                                                 </a>
                                             </li>
@@ -193,7 +201,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item h3-50">
-                                <a class="nav-link" href="#headingFive">
+                                <a class="nav-link" href="#articleFive">
                                     References
                                 </a>
                                 <ul class="nav">
@@ -203,12 +211,12 @@
                                         </a>
                                         <ul class="nav">
                                             <li class="nav-item h5-51">
-                                                <a class="nav-link">
+                                                <a class="nav-link" href="#sectionFive-1">
                                                     Recommendations
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link h5-52">
+                                                <a class="nav-link h5-52" href="#sectionFive-2">
                                                     Accomplishments
                                                 </a>
                                             </li>
@@ -217,7 +225,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item h3-60">
-                                <a class="nav-link" href="#headingSix">
+                                <a class="nav-link" href="#articleSix">
                                     Connect
                                 </a>
                                 <ul class="nav">
@@ -227,12 +235,12 @@
                                         </a>
                                         <ul class="nav">
                                             <li class="nav-item h5-61">
-                                                <a class="nav-link">
+                                                <a class="nav-link" href="#sectionSix-1">
                                                     Contact Info
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link h5-62">
+                                                <a class="nav-link h5-62" href="#sectionSix-2">
                                                     Message Form
                                                 </a>
                                             </li>
@@ -246,7 +254,8 @@
             </li>
         </ol>
     </nav>
-    <!-- close side nav at xxl -->
+    <!-- close side menu nav outline -->
+
     <main id="resumeStack" class="main-body">
         <!-- start SPLASH BANNER -->
         <section id="collapseLanding" class="show" aria-labelledby="splashLanding" data-parent="#resumeStack">
@@ -305,8 +314,7 @@
                 </h3>
             </header> <!-- /close 1.0 header button -->
             <!-- start 0.0 COLLAPSED SECTION WRAPPER -->
-            <section id="collapseZero" class="collapse collapse-all" aria-labelledby="headingZero"
-                     data-parent="#resumeStack">
+            <section id="collapseZero" class="collapse collapse-all" aria-labelledby="headingZero" data-parent="#resumeStack">
                 <!-- start 0.0 SPREAD -->
                 <div class="spread row">
                     <!-- start PAGE-LEFT TEXT -->
@@ -316,7 +324,7 @@
                             <ion-icon name="newspaper-outline"></ion-icon>
                         </h4>
                         <!-- start 0.1 SUB-SECTION -->
-                        <section id="0.1" class="left landing-subheading text-item">
+                        <section id="sectionZero-1" class="left landing-subheading text-item">
                             <p class="lh-2 mt-3 mb-3">
                                 I’m <span>currently</span> focusing on <span>BIM</span> and the future of design
                                 from
@@ -375,7 +383,7 @@
                         <!-- start 0.2 SUB-SECTION -->
                         <!--when scroller is on, remove class .right, set ul height-->
                         <!--when scroller is off, add class .right. remove 150px height from ul-->
-                        <section id="0.2" class="right justify-content-center pt-2 row">
+                        <section id="sectionZero-2" class="right justify-content-center pt-2 row">
 
                             <!--profile image-->
                             <div class="d-flex flex-row align-items-center justify-contents-between">
@@ -572,7 +580,7 @@
                             <ion-icon name="color-palette-outline"></ion-icon>
                         </h4>
                         <!-- start 1.1 SUB-SECTION -->
-                        <section id="1.1" class="left text-item">
+                        <section id="sectionOne-1" class="left text-item">
                             <h5>
                                 What I do
                             </h5>
@@ -619,7 +627,7 @@
                     <!-- start 1.0 PAGE-RIGHT MEDIA -->
                     <div class="inset-container media-box col-last col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                         <!-- start 1.2 SUB-SECTION -->
-                        <section id="1.2" class="right media-content">
+                        <section id="sectionOne-2" class="right media-content">
                             <h5>
                                 Expertise
                             </h5>
@@ -828,7 +836,7 @@
                             <ion-icon name="flash-outline"></ion-icon>
                         </h4>
                         <!-- start 2.1 SUB-SECTION -->
-                        <section id="2.1" class="left text-item">
+                        <section id="sectionTwo-1" class="left text-item">
                             <h5>
                                 Top Strength: Adaptability
                             </h5>
@@ -864,7 +872,7 @@
                     <!-- start 2.0 PAGE-RIGHT MEDIA -->
                     <div class="inset-container media-box col-last col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                         <!-- start 2.2 SUB-SECTION -->
-                        <section id="2.2" class="right media-content">
+                        <section id="sectionTwo-2" class="right media-content">
                             <h5>
                                 Coverage
                             </h5>
@@ -1254,7 +1262,7 @@
                             <ion-icon name="construct-outline"></ion-icon>
                         </h4>
                         <!-- start 3.1 SUB-SECTION -->
-                        <section id="3.1" class="left text-item">
+                        <section id="sectionThree-1" class="left text-item">
                             <h5 class="card-title">
                                 Dedication: “Completeness”
                             </h5>
@@ -1342,7 +1350,7 @@
                     <!-- start 3.0 PAGE-RIGHT MEDIA -->
                     <div class="inset-container media-box col-last col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                         <!-- start 3.2 SUB-SECTION -->
-                        <section id="3.2" class="right media-content">
+                        <section id="sectionThree-2" class="right media-content">
                             <h5>
                                 Education
                             </h5>
@@ -1661,7 +1669,7 @@
                             <ion-icon name="terminal-outline"></ion-icon>
                         </h4>
                         <!-- start 4.1 SUB-SECTION -->
-                        <section id="4.1" class="left text-item">
+                        <section id="sectionFour-1" class="left text-item">
                             <h5>
                                 Most Lauded for: Documentation Style
                             </h5>
@@ -1730,7 +1738,7 @@
                     <!-- start 4.0 PAGE-RIGHT MEDIA -->
                     <div class="inset-container media-box col-last col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                         <!-- start 4.2 SUB-SECTION -->
-                        <section id="4.2" class="right media-content">
+                        <section id="sectionFour-2" class="right media-content">
                             <h5>
                                 Tech Repo
                             </h5>
@@ -2220,7 +2228,7 @@
                             <ul class="design-activity">
 
                                 <!-- Project Item -->
-                                <li class="d-none inset-item list-group-item flex-column align-items-start pl-3 pr-2 bg-w3 shout-1">
+                                <li class="d-none inset-item list-group-item flex-column align-items-start pl-3 pr-2 bg-w3">
                                     <div class="d-flex w-100 pt-1 row justify-content-between">
 
                                         <!-- Repo Stats -->
@@ -2882,7 +2890,7 @@
                         </h4>
                         <!-- LinkedIn Section CREDIT -->
                         <!-- start 5.1 SUB-SECTION -->
-                        <section id="5.1" class="left text-item">
+                        <section id="sectionFive-1" class="left text-item">
                             <h5>
                                 Recommendations
                             </h5>
@@ -3077,7 +3085,7 @@
                     <!-- start 5.0 PAGE-RIGHT MEDIA -->
                     <div class="media-box inset-container col-last col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                         <!-- start 5.2 SUB-SECTION -->
-                        <section id="5.2" class="right media-content break-words">
+                        <section id="sectionFive-2" class="right media-content break-words">
                             <h5 id="honors-title" class="pv-accomplishments-block__title t-bold t-14">
                                 Honors &amp; Awards
                             </h5>
@@ -3381,7 +3389,7 @@
                             <ion-icon name="locate-outline" aria-hidden="true"></ion-icon>
                         </h4>
                         <!-- start 6.1 SUB-SECTION -->
-                        <section id="6.1" class="left text-item">
+                        <section id="sectionSix-1" class="left text-item">
                             <h5>
                                 Contact
                             </h5>
@@ -3433,7 +3441,7 @@
                     <!-- start 6.0 PAGE-RIGHT MEDIA -->
                     <div class="media-box inset-container col-last col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                         <!-- start 6.2 SUB-SECTION -->
-                        <section id="6.2" class="right media-content">
+                        <section id="sectionSix-2" class="right media-content">
                             <h5 class="text-right">
                                 Drop me a line!
                             </h5>
