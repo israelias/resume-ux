@@ -9,7 +9,9 @@
  * fork the repo: (https://github.com/israelias)
  */
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css");
+/* Potentially import dependencies instead of linking in html? */
+/*@import url("https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css");*/
+
 @import url("https://use.typekit.net/qyv7gbn.css");
 
 
@@ -50,30 +52,37 @@
     --gradient-3: linear-gradient(145deg, rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0.2));
     --gradient-4: linear-gradient(180deg, rgba(250, 250, 250, .7), rgba(0, 0, 0, .1));
 
-    /* Desired width (out of 12) */
+    /* Desired width variable (out of 12) */
     --of-twelve: 11;
 
-    /* Full width */
+    /* Resulting width property as percentage */
     --width: calc(var(--of-twelve) / 12 * 100%);
-    /* Single margin (Half of the balance) */
-    --margin: calc((12 - var(--of-twelve)) / 12 / 2 * 100%);
 
+    /* Remaining balance of desired width as percentage */
+    --offset: calc((12 - var(--of-twelve)) / 12 * 100%);
+
+    /* Declare a responsive margin property to be a function of half the balance of the desired width */
+    --margin: calc(var(--offset) / 2);
+
+    /* OPTION to calculate --margin as a separate function with less nested calcs and custom vars */
+    /*--margin: calc((12 - var(--of-twelve)) / 12 / 2 * 100%);*/
 }
 
-/* Apply margins for typical .row in a fluid .container to root */
+/* Apply margins for typical .row in a fluid .container to :root */
 
 :root {
     display: flex;
     justify-content: center;
 }
 
-/* Achieve a centered 'col-ll' without '.container.row.col' wrapper divs */
+/* Achieve a centered 'col-*' without '.container.row.col' wrapper divs */
+/* If --of-twelve: 11; then --width: 91.66667% is given to children of :root (in this case, the <body>) */
 
 :root > * {
-    width: var(--width, 91.66667%);
+    width: var(--width);
     margin-left: 0;
     margin-right: 0;
-    background-color: var(--paper,#F2F1EF);
+    background-color: var(--paper);
 }
 
 /* Fill 100% of width on mobile screens */
@@ -81,14 +90,6 @@
 @media (max-width: 575.98px) {
     :root {
         --of-twelve: 12;
-    }
-    :root > * {
-        /*width: 100%;*/
-    }
-
-    .row {
-        margin-left: 0;
-        margin-right: 0;
     }
 }
 
@@ -111,7 +112,7 @@ body {
     text-rendering: optimizeLegibility;
     font-kerning: normal;
     font-variant-ligatures: common-ligatures;
-    color:#4f4f4f;
+    color: var(--deep-1);
 }
 
 p, small {
@@ -125,8 +126,8 @@ p, small {
     line-height: 1.375rem;
     letter-spacing: .02rem;
 
-    color: #707070;
-    text-shadow: #FAFAFA 0 .3px 0, #D4D6D6 0 -.3px 0;
+    color: var(--deep-2);
+    text-shadow: var(--white) 0 .3px 0, #D4D6D6 0 -.3px 0;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -204,7 +205,7 @@ h4 {
     line-height: calc(1.625rem + 1vw);
 
 
-    color: #FAFAFA;
+    color: var(--white);
     text-shadow: #fff 0 .5px 0, #D7D7D6 0 -.5px 0;
     -webkit-font-smoothing: antialiased;
 }
@@ -656,7 +657,7 @@ main {
     --outlines: var(--raisin);
 }
 
-/* Set main to show overflow at left/right only (to the full width of the screen) */
+/* Set main to show overflow at left/right only (offset to the negative --margin property) */
 /* The 0 top and bottom clip-path values contain pseudo elements within the variable viewport height */
 
 main {
@@ -664,7 +665,7 @@ main {
     position: relative;
 }
 
-/* Set article to show overflow at left/right (to the full width of the screen) */
+/* Set article to show overflow at left/right (offset to the negative --margin property) */
 /* with a top offset of the height of its immediate header */
 
 article {
@@ -672,7 +673,7 @@ article {
     position: relative;
 }
 
-/* Set sections in both static and transition states to show overflow at left/right (to the full width of the screen) */
+/* Set sections in both static and transition states to show overflow at left/right (offset to --margin) */
 /* with a top offset of the height of its preceding header */
 /* and a bottom inset of the height of its following header */
 
@@ -682,7 +683,7 @@ section.collapsing {
 }
 
 .header-title {
-    clip-path: inset(-1.5rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));;
+    clip-path: inset(-1.5rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
 }
 
 article:before,
@@ -704,8 +705,8 @@ section.right:after {
     content: "";
 }
 
-/* Position :before pseudo elements at the center of the viewport's left margin */
-/* left: -2.08%  */
+/* Offset :before pseudo elements to  the center of the offset --margin property  */
+/* if --of-twelve: 11; then the following left: value is -2.08%  */
 
 article:before {
     left: calc(var(--margin) / 2 * -1 + .08rem);
@@ -718,8 +719,8 @@ article:before {
     }
 }
 
-/* Position :after pseudo elements at the center of the viewport's right margin */
-/* right: -2.08%  */
+/* Position :after pseudo elements at the center of the offset --margin property */
+/* if --of-twelve: 11; then the following right: value is -2.08%  */
 
 article:after {
     right: calc(var(--margin) / 2 * -1 + .08rem);
@@ -874,7 +875,6 @@ article > header:after {
 
 article > header:before {
     left: calc(var(--margin) / 2 * -1);
-    /*width: 1.175rem;*/
     border-bottom-right-radius: .5rem;
     border-top-right-radius: .5rem;
     background: #F2F1EF;
@@ -884,7 +884,6 @@ article > header:before {
 
 article > header:after {
     right: calc(var(--margin) / 2 * -1);
-    /*width: 1.175rem;*/
     border-bottom-left-radius: .5rem;
     border-top-left-radius: .5rem;
     background: #F2F1EF;
@@ -993,7 +992,7 @@ article header .header-content {
     display: flex;
     flex-wrap: nowrap;
 
-    background-color: #F2F1EF;
+    background-color: var(--paper);
 }
 
 article header .header-name {
@@ -1007,7 +1006,7 @@ article header .header-text {
     font-weight: 300;
     text-transform: capitalize;
 
-    width: 50vw;
+    /*width: 50vw;*/
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1032,8 +1031,8 @@ article header .header-text:before {
 article header .header-icon {
     margin-left: .25rem;
     padding-top: .5rem;
-    background-color: #F2F1EF;
-    /*z-index: 20 !important;*/
+
+    background-color: var(--paper);
 }
 
 article header .header-icon ion-icon {
@@ -1116,7 +1115,7 @@ input[type="checkbox"]:checked + label ~ main section:after {
     display: none;
 }
 
-/* override .col-last helper when static toggle is on */
+/* Override .col-last helper when static toggle is on */
 input[type="checkbox"]:checked + label ~ main .col-last {
     display: block;
 }
@@ -1130,6 +1129,8 @@ input[type="radio"]:checked + label ~ main article > section {
     height: 100%;
     overflow: visible;
 }
+
+/* Transitions for checkbox toggle are presently ineffective */
 
 @-webkit-keyframes toggle-collapse {
     0% {
@@ -1227,18 +1228,65 @@ input[type="radio"]:checked + label ~ main article > section {
 /* SIDE NAV   ------------------------------------------------------------------------------- */
 
 /*!
- * Nav outline with scroll spy toggles in on menu-button click event
- * Currently dependent on the .collapse event
+ * Nav outline with scroll-spy toggles in on menu-button click event
+ * Currently dependent on the .collapse event class
  *
- * KNOWN BUG: A Flash upon clicking the menu is perhaps inherited from the .collapse family
- *            Provided the transitions/animation below are maintainer, this feature might be
- *            equally effective a radio button boolean (removing its dependency on the BS .collapse)
- *            Most noticeable on Chrome browser
+ * Responsive behavior follows the logic of a column shrinking to the offset variable of a sibling column
+ * In this case, the <main> succumbs to an off-canvas <nav>
+ *
+ * NOTE:
+ *     <body> is the only element to elicit behavior resulting from declarations at :root
+ *     The immediate children of <body> are:
+ *     <header> <input/label> <nav> <main> and <footer>
+ *     Global reactive events occur by utilising the .show and :checked classes with sibling selectors
+ *     In particular, <main> ~ <nav> and <input> ~ <main> will be reactive to each other's sibling/class events
  */
 
+
+/* Reset and re-declare inherited variables at inner body level */
+/* Delimit access to the nav and main elements via class selectors */
+
+.main-body,
 .nav-outline {
-    font-family: din-2014;
+
+    /* Set a new value (out of twelve) */
+    --of-twelve: 4;
+
+    /* Repeat and re-declare --width and --offset properties together with the new value --of-twelve */
+    --width: calc(var(--of-twelve) / 12 * 100%);
+    --offset: calc((12 - var(--of-twelve)) / 12 * 100%);
+
+    /* Instantiate --width to be the object property of new variable --navwidth  */
+    --navwidth: var(--width);
+
+    /* Instantiate --offset to be the object property of new variable --mainwidth */
+    --mainwidth: var(--offset);
 }
+
+/* Set the default state of nav */
+
+.nav-outline {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--navwidth) * -1);
+
+    /* Set the width of nav to be an instance of --navwidth */
+    width: var(--navwidth);
+    height: 100%;
+
+    margin-top: 5rem;
+    padding-right: .75rem;
+    padding-left: .75rem;
+
+    background: var(--powder);
+    overflow: auto;
+
+    font-family: din-2014, sans-serif;
+}
+
+/* Style parenthetic configs for nav */
+
 .nav-outline ol.nav,
 .nav-outline ul.nav {
     flex-direction: column;
@@ -1248,89 +1296,49 @@ input[type="radio"]:checked + label ~ main article > section {
     padding-left: 1rem;
 }
 
-/* Set default state */
-
-nav.nav-outline.collapse {
-    display: none;
-    /*visibility: hidden;*/
-    margin-top: 5rem;
-    position: fixed;
-    width: 33.333%;
-    top: 0;
-    left: -33.33%;
-    bottom: 0;
-    height: 100%;
-    background: var(--powder);
-    padding-right: .75rem;
-    padding-left: .75rem;
-    overflow: auto;
-}
-
-/* override .collapsing event transition */
-
-nav.nav-outline.collapsing {
-    height: 100%;
-    transition: none;
-}
-
 /* Slide nav in on .show event */
 
-nav.nav-outline.show {
+.nav-outline.show {
     display: block;
     animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
     transition: all var(--flashing) var(--zip) var(--early);
 }
 
-/* Slide nav out on collapse event */
+/* Slide nav out on .collapse event */
 
-nav.nav-outline.collapse:not(.show) {
+.nav-outline:not(.show) {
     display: none;
     animation: nav-out .75s var(--glide) 0s 1 normal forwards running;
     transition: all var(--flashing) var(--zip) var(--early);
 }
 
-/* Set default state of main-body (OBSOLETE) */
-nav.nav-outline.collapse ~ .main-body {
-    /*position: relative;*/
-    /*right: 0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*flex: 0 0 auto;*/
-}
+/* Shrink main in on nav.show event */
 
-/* shrink main in on nav.show event */
-
-nav.nav-outline.show ~ .main-body {
+.nav-outline.show ~ .main-body {
     animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
     transition: all var(--flashing) var(--zip) var(--early);
 }
 
-/* expand main on nav.collapse event */
+/* Expand main on nav.collapse event */
 
-nav.nav-outline.collapse:not(.show) ~ .main-body {
+.nav-outline:not(.show) ~ .main-body {
     animation: main-grow .75s var(--glide) 0s 1 normal forwards running;
     transition: all var(--flashing) var(--zip) var(--early);
 }
 
-/* make col-12 */
-/*(min-width: 992px) and (max-width: 1199.98px)*/
+/* Select the div elements (the page-left, and page-right col-* variety) to wrap full width between lg and xl */
+/* ALT option: (min-width: 992px) and (max-width: 1199.98px) */
 
 @media (min-width: 1200px) and (max-width: 1399.98px) {
     nav.nav-outline.show ~ .main-body .spread > div  {
         width: 100%;
-        transition: width var(--flashing) var(--zip) var(--early);
+        transition: all var(--flashing) var(--zip) var(--early);
     }
-}
-
-
-:root {
-    --navwidth: -33.33%;
-    --mainwidth: 66.66%;
 }
 
 @-webkit-keyframes nav-in {
     0% {
-        left: var(--navwidth, -33.33%);
+        left: calc(var(--navwidth) * -1);
         display: none;
         visibility: hidden;
         opacity: 0;
@@ -1345,7 +1353,7 @@ nav.nav-outline.collapse:not(.show) ~ .main-body {
 
 @keyframes nav-in {
     0% {
-        left: var(--navwidth, -33.33%);
+        left: calc(var(--navwidth) * -1);
         display: none;
         visibility: hidden;
         opacity: 0;
@@ -1366,7 +1374,7 @@ nav.nav-outline.collapse:not(.show) ~ .main-body {
         opacity: 1;
     }
     100% {
-        left: var(--navwidth, -33.33%);
+        left: calc(var(--navwidth) * -1);
         display: none;
         visibility: hidden;
         opacity: 0;
@@ -1381,7 +1389,7 @@ nav.nav-outline.collapse:not(.show) ~ .main-body {
         opacity: 1;
     }
     100% {
-        left: var(--navwidth, -33.33%);
+        left: calc(var(--navwidth) * -1);
         display: none;
         visibility: hidden;
         opacity: 0;
@@ -1391,11 +1399,11 @@ nav.nav-outline.collapse:not(.show) ~ .main-body {
 @-webkit-keyframes main-shrink {
     0% {
         width: 100%;
-        left: 0;
+        margin-left: 0;
     }
     100% {
-        width: var(--mainwidth, 66.66%);
-        left: 33.33%;
+        width: var(--mainwidth);
+        margin-left: var(--navwidth);
     }
 }
 
@@ -1405,28 +1413,28 @@ nav.nav-outline.collapse:not(.show) ~ .main-body {
         left: 0;
     }
     100% {
-        width: var(--mainwidth, 66.66%);
-        left: 33.33%;
+        width: var(--mainwidth);
+        margin-left: var(--navwidth);
     }
 }
 @-webkit-keyframes main-grow {
     0% {
-        width: var(--mainwidth, 66.66%);
-        left: 33.33%;
+        width: var(--mainwidth);
+        margin-left: var(--navwidth);
     }
     100% {
         width: 100%;
-        left: 0;
+        margin-left: 0;
     }
 }
 @keyframes main-grow {
     0% {
-        width: var(--mainwidth, 66.66%);
-        left: 33.33%;
+        width: var(--mainwidth);
+        margin-left: var(--navwidth);
     }
     100% {
         width: 100%;
-        left: 0;
+        margin-left: 0;
     }
 }
 
@@ -1436,39 +1444,27 @@ nav.nav-outline.collapse:not(.show) ~ .main-body {
 @media (min-width: 1400px) {
 
     [data-parent="#resumeStack"].collapse:not(.show) {
-        /*display: block;*/
+        display: block;
     }
-
-    .collapse {
-        /*visibility: visible;*/
-        /*display: block;*/
-    }
-
 
     #collapseLanding {
         /*display: none;*/
     }
 
-    .main-body {
-        /*position: relative;*/
-        /*right: 0;*/
-        /*margin-left: 33.33%;*/
-        /*width: 66.6667%;*/
+    .nav-outline.show ~ .main-body,
+    .nav-outline:not(.show) ~ .main-body {
+        animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
+        transition: all var(--flashing) var(--zip) var(--early);
     }
 
-    nav.nav-outline.collapse {
-        /*display: block;*/
-        /*margin-top: 5rem;*/
-        /*position: fixed;*/
-        /*width: 33.333%;*/
-        /*top: 0;*/
-        /*left: 0;*/
-        /*bottom: 0;*/
-        /*height: 100%;*/
-        /*background: var(--powder);*/
-        /*padding-right: .75rem;*/
-        /*padding-left: .75rem;*/
-        /*overflow: auto;*/
+    .nav-outline,
+    .nav-outline.collapse:not(.show),
+    .nav-outline.collapse,
+    .nav-outline.show,
+    .nav-outline.collapsing {
+        display: block;
+        animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
+        transition: all var(--flashing) var(--zip) var(--early);
     }
 }
 
@@ -1533,10 +1529,6 @@ section.collapsed {
     -webkit-font-smoothing: antialiased;
 }
 
-.landing-subheading {
-    /*height: 130px;*/
-}
-
 .landing-subheading p {
     font-family: "Halyard Micro", monospace;
     font-size: .875rem;
@@ -1585,17 +1577,6 @@ section.collapsed {
     height: 100%;
 }
 
-.tab-button span > i {
-    color: #D4D6D6;
-    text-shadow: 0 3px 0 0 #A4A4A4, 0 -4px 0 0 #fafafa;
-
-    /*font-family: "Major Mono Display", monospace;*/
-    font-size: 1.25rem;
-    z-index: 8;
-    /*text-shadow: #fff 0 1px 0;*/
-    -webkit-font-smoothing: antialiased;
-}
-
 /* SOCIAL LINKS NAV LIST GROUP   ------------------------------------------------------------------------------- */
 
 button {
@@ -1640,7 +1621,6 @@ ul {
 
     border-radius: .75rem;
 
-    /*!*Main Background - hide when no scroll*/
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5));
 
     box-shadow:
@@ -1835,8 +1815,10 @@ li.link-item.inset-item {
 }
 
 li.link-item:hover {
-    box-shadow: 2px 2px 0 white, -2px -2px 0 white;
     background: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
+    box-shadow:
+            2px 2px 0 white,
+            -2px -2px 0 white;
 }
 
 li.link-item.inset-item a {
