@@ -1228,6 +1228,38 @@ input[type="radio"]:checked + label ~ main article > section {
 /* SIDE NAV   ------------------------------------------------------------------------------- */
 
 /*!
+ * Nav ol is a direct representative of the website's headings map  https://github.com/dzc34/headingsMap
+ * Each ul is nested to the nth level of its represented heading in the doc outline
+ * class names .list-h* are assigned to parent uls for ease of reference and direct styling
+ */
+
+/* Disable link functionality for nav outline lists beyond h3 by default  */
+/* https://stackoverflow.com/questions/2091168/how-to-disable-a-link-using-only-css */
+
+.list-h4 {
+    pointer-events: none;
+    cursor: default;
+
+    opacity: .5;
+}
+
+/* Enable link functionality for h3 outline lists on toggle of expand-all */
+
+input[type="checkbox"]:checked + label ~ nav .list-h4  {
+    opacity:1;
+    pointer-events: auto;
+    cursor: pointer;
+    /*display: none;*/
+    /*color: red;*/
+}
+
+@media (max-width: 575.98px) {
+    .list-h4 {
+        /*display: none;*/
+    }
+}
+
+/*!
  * Nav outline with scroll-spy toggles in on menu-button click event
  * Currently dependent on the .collapse event class
  *
@@ -1296,6 +1328,15 @@ input[type="radio"]:checked + label ~ main article > section {
     padding-left: 1rem;
 }
 
+@media (max-width: 575.98px) {
+    .nav-outline ul {
+        padding-left: .3rem;
+    }
+    .list-h4 a.nav-link {
+        font-size: .625rem !important;
+    }
+}
+
 /* Slide nav in on .show event */
 
 .nav-outline.show {
@@ -1312,7 +1353,7 @@ input[type="radio"]:checked + label ~ main article > section {
     transition: all var(--flashing) var(--zip) var(--early);
 }
 
-/* Shrink main in on nav.show event */
+/* Shrink main on nav.show event */
 
 .nav-outline.show ~ .main-body {
     animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
