@@ -258,7 +258,6 @@ h1 {
     font-weight: 100 !important;
     /*letter-spacing: .1px;*/
     color: var(--deep-4);
-    font-feature-settings: ;
 
 }
 
@@ -1578,7 +1577,9 @@ ul.nav {
     .spread:before,
     .spread:after,
     section:before,
-    section:after {
+    section:after,
+    section.collapse:before,
+    section.collapse:after {
         display: none;
     }
 
