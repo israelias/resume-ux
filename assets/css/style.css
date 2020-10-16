@@ -1069,24 +1069,17 @@ article header .header-icon ion-icon {
     cursor: pointer;
 }
 
-input[type="radio"],
 input[type="checkbox"] {
     display: none;
 }
 
-input[type="radio"]:checked + label .closed,
 input[type="checkbox"]:checked + label .closed {
     display: none;
 }
 
-input[type="radio"]:checked + label .open,
 input[type="checkbox"]:checked + label .open {
     display: block;
     color: var(--deep-1);
-}
-
-input[type="checkbox"]:checked + label ~ main [data-parent="#resumeStack"].collapse:not(.show) {
-    /*display: block;*/
 }
 
 input[type="checkbox"]:checked + label ~ main [data-parent="#resumeStack"]:not(#collapseLanding).collapse {
@@ -1127,16 +1120,6 @@ input[type="checkbox"]:checked + label ~ main section:after {
 /* Override .col-last helper when static toggle is on */
 input[type="checkbox"]:checked + label ~ main .col-last {
     display: block;
-}
-
-input[type="checkbox"]:not(checked) + label ~ main [data-parent="#resumeStack"]:not(#collapseLanding).collapse {
-    /*display: none;*/
-
-}
-
-input[type="radio"]:checked + label ~ main article > section {
-    height: 100%;
-    overflow: visible;
 }
 
 /* Transitions for checkbox toggle are presently ineffective */
