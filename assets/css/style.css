@@ -1260,12 +1260,6 @@ input[type="checkbox"]:checked + label ~ nav .list-h3 [href^="#article"] {
     display: block;
 }
 
-@media (max-width: 575.98px) {
-    .list-h4 {
-        /*display: none;*/
-    }
-}
-
 /*!
  * Nav outline with scroll-spy toggles in on menu-button click event
  * Currently dependent on the .collapse event class
@@ -1523,8 +1517,8 @@ ul.nav {
     }
 }
 
-/* Trigger Side Nav event at 1400px */
-/* TO BE REVISED  */
+/* Trigger a complete Side Nav click event at 1400px */
+/* NOTE: Several repeats */
 
 @media (min-width: 1400px) {
 
@@ -1551,6 +1545,43 @@ ul.nav {
         animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
         transition: all var(--flashing) var(--zip) var(--early);
     }
+    .navbar-toggler .open,
+    input[type="checkbox"] + label .open {
+        display: block;
+        color: white;
+    }
+
+    article header .header-icon,
+    .navbar-toggler .closed,
+    input[type="checkbox"] + label .closed {
+        display: none;
+        color: white;
+    }
+
+    article header,
+    .navbar-toggler,
+    input[type="checkbox"] + label {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .list-h4 {
+        opacity: 1;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+
+    article:before,
+    article:after,
+    section.right:after,
+    .header-title:after,
+    .spread:before,
+    .spread:after,
+    section:before,
+    section:after {
+        display: none;
+    }
+
 }
 
 /* GLOBAL SECTION TRANSITION CONFIGS    ------------------------------------------------------------------------------- */
