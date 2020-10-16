@@ -61,7 +61,7 @@
 
     <!-- start side menu nav outline -->
     <nav id="navOutline" class="collapse nav-outline">
-        <ol class="nav nav-pills menu-sidebar">
+        <ol class="nav nav-pills menu-sidebar list-h1">
             <li class="nav-item h1-00">
                 <a class="nav-link" href="#collapseLanding">
                     The curriculum vitae of Joem Elias Sanez (developed for the web).
@@ -74,6 +74,10 @@
                         <ul class="nav list-h3">
                             <li class="nav-item h3-00">
                                 <a class="nav-link" href="#articleZero">
+                                    Introduction
+                                </a>
+                                <a class="nav-link" role="button" data-toggle="collapse"
+                                   href="#collapseZero" aria-controls="collapseZero">
                                     Introduction
                                 </a>
                                 <ul class="nav list-h4">
@@ -100,7 +104,7 @@
                                 <a class="nav-link" href="#articleOne">
                                     Specialization
                                 </a>
-                                <a class="btn flex-fill d-none" role="button" data-toggle="collapse"
+                                <a class="nav-link" role="button" data-toggle="collapse"
                                    href="#collapseOne" aria-controls="collapseOne">
                                     Specialization
                                 </a>
@@ -128,6 +132,10 @@
                                 <a class="nav-link" href="#articleTwo">
                                     Proficiency
                                 </a>
+                                <a class="nav-link" role="button" data-toggle="collapse"
+                                   href="#collapseTwo" aria-controls="collapseTwo">
+                                    Proficiency
+                                </a>
                                 <ul class="nav list-h4">
                                     <li class="nav-item h4-20">
                                         <a class="nav-link" href="#collapseTwo">
@@ -150,6 +158,10 @@
                             </li>
                             <li class="nav-item h3-30">
                                 <a class="nav-link" href="#articleThree">
+                                    Experience
+                                </a>
+                                <a class="nav-link" role="button" data-toggle="collapse"
+                                   href="#collapseThree" aria-controls="collapseThree">
                                     Experience
                                 </a>
                                 <ul class="nav list-h4">
@@ -176,6 +188,10 @@
                                 <a class="nav-link" href="#articleFour">
                                     Examples
                                 </a>
+                                <a class="nav-link" role="button" data-toggle="collapse"
+                                   href="#collapseFour" aria-controls="collapseFour">
+                                    Examples
+                                </a>
                                 <ul class="nav list-h4">
                                     <li class="nav-item h4-40">
                                         <a class="nav-link" href="#collapseFour">
@@ -200,6 +216,10 @@
                                 <a class="nav-link" href="#articleFive">
                                     References
                                 </a>
+                                <a class="nav-link" role="button" data-toggle="collapse"
+                                   href="#collapseFive" aria-controls="collapseFive">
+                                    References
+                                </a>
                                 <ul class="nav list-h4">
                                     <li class="nav-item h4-50">
                                         <a class="nav-link" href="#collapseFive">
@@ -222,6 +242,10 @@
                             </li>
                             <li class="nav-item h3-60">
                                 <a class="nav-link" href="#articleSix">
+                                    Connect
+                                </a>
+                                <a class="nav-link" role="button" data-toggle="collapse"
+                                   href="#collapseSix" aria-controls="collapseSix">
                                     Connect
                                 </a>
                                 <ul class="nav list-h4">
@@ -292,15 +316,18 @@
             <!-- start 0.0 HEADER BUTTON -->
             <header id="headingZero">
                 <h3 class="header-title d-flex">
-                    <button id="startStack" class="collapsed" type="button" data-toggle="collapse"
+                    <button id="startStack" class="collapsed"
+                            type="button"
+                            data-toggle="collapse"
                             data-target="#collapseZero"
-                            aria-expanded="false" aria-controls="collapseZero">
+                            aria-expanded="false"
+                            aria-controls="collapseZero">
                         <span class="header-content">
                             <span class="header-name">
                                 INTRODUCTION
                             </span>
                             <span class="header-text">
-                                Whoabouts and activity
+                                About and recent activity
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
@@ -310,7 +337,6 @@
                     </button>
                 </h3>
             </header><!-- close 0.0 header button -->
-
             <!-- start 0.0 SECTION -->
             <section id="collapseZero" class="collapse collapse-all" aria-labelledby="headingZero" data-parent="#resumeStack">
                 <!-- start 0.0 SPREAD -->
@@ -377,21 +403,16 @@
                     </div><!-- close page-left text -->
 
                     <!-- start PAGE-RIGHT MEDIA -->
-                    <div class="media-box inset-container col-12 col-md-5 col-lg-5 col-xl-6 col-xxl-7 order-1 order-sm-1 order-md-2">
+                    <div class="media-box inset-container col-12 col-md-5 col-lg-5 col-xl-6 col-xxl-7 d-none d-sm-flex order-1 order-sm-1 order-md-2">
                         <!-- start 0.2 SUB-SECTION -->
-                        <!--when scroller is on, remove class .right, set ul height-->
-                        <!--when scroller is off, add class .right. remove 150px height from ul-->
                         <section id="sectionZero-2" class="right justify-content-center pt-2 row">
-
                             <!--profile image-->
                             <div class="d-flex flex-row align-items-center justify-contents-between">
                                 <div class="image-container">
                                     <img src="assets/images/joem_elias_sanez_thumbnail.png" alt="Joem Elias Sanez">
                                 </div>
-                            </div>
-
-                            <!--should be col col-md-12 col-lg-12 col-xl-10 col-xxl 7 align content center-->
-                            <h5>
+                            </div><!--/profile image -->
+                            <h5 class="d-none d-md-block">
                                 Recent Activity
                             </h5>
                             <!--start 0.2 LIST GROUP-->
@@ -536,8 +557,7 @@
                                     </div>
                                     <!-- /Project CTA -->
                                 </li>
-                                <!-- /Project Item -->
-
+                                <!-- /Project Item -->`
                             </ul><!--close 0.2 list group-->
                         </section><!-- close 0.2 sub-section -->
                     </div><!-- close page-right media -->
@@ -550,7 +570,11 @@
             <!-- start 1.0 HEADER BUTTON -->
             <header id="headingOne">
                 <h3 class="header-title d-flex">
-                    <button class="collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <button class="collapsed" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseOne"
+                            aria-expanded="false"
+                            aria-controls="collapseOne">
                         <span class="header-content">
                             <span class="header-name">
                                 SPECIALIZATION
@@ -565,7 +589,7 @@
                         </span>
                     </button>
                 </h3>
-            </header> <!-- close 1.0 header button -->
+            </header><!-- close 1.0 header button -->
             <!-- start 1.0 SECTION -->
             <section id="collapseOne" class="collapse collapse-all" aria-labelledby="headingOne" data-parent="#resumeStack">
                 <!-- start 1.0 SPREAD -->
@@ -734,7 +758,6 @@
                                 </li>
                                 <!-- /Specialization Item -->
 
-
                                 <!-- Specialization Item -->
                                 <li class="inset-item">
                                     <div class="list-content">
@@ -795,6 +818,7 @@
                                     </a>
                                 </div>
                             </div><!-- close 1.2 CTA -->
+
                         </section><!-- close 1.2 sub-section -->
                     </div><!-- close 1.0 page-right media -->
                 </div><!-- close 1.0 spread -->
@@ -806,8 +830,11 @@
             <!-- start 2.0 HEADER -->
             <header id="headingTwo">
                 <h3 class="header-title d-flex">
-                    <button class="collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
-                            aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="collapsed" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo">
                         <span class="header-content">
                             <span class="header-name">
                                 PROFICIENCY
@@ -822,7 +849,7 @@
                         </span>
                     </button>
                 </h3>
-            </header> <!-- close 2.0 header -->
+            </header><!-- close 2.0 header -->
             <!-- start 2.0 SECTION -->
             <section id="collapseTwo" class="collapse collapse-all" aria-labelledby="headingTwo" data-parent="#resumeStack">
                 <!-- start 2.0 SPREAD -->
@@ -1198,7 +1225,8 @@
                                 </li>
                                 <!-- /Proficiency Item -->
 
-                            </ul><!-- /close 2.2 list group -->
+                            </ul><!-- close 2.2 list group -->
+
                             <!-- start 2.2 CTA -->
                             <div class="activity-cta mt-2 inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
@@ -1218,7 +1246,8 @@
                                         </span>
                                     </button>
                                 </div>
-                            </div><!-- /close 2.2 CTA -->
+                            </div><!-- close 2.2 CTA -->
+
                         </section><!-- close 2.2 sub-section -->
                     </div><!-- close 2.0 page-right media -->
                 </div><!-- close 2.0 spread -->
@@ -1235,14 +1264,14 @@
                             data-target="#collapseThree"
                             aria-expanded="false"
                             aria-controls="collapseThree">
-                            <span class="header-content">
-                                <span class="header-name">
-                                    EXPERIENCE
-                                </span>
-                                <span class="header-text">
-                                    Education and employment
-                                </span>
+                        <span class="header-content">
+                            <span class="header-name">
+                                EXPERIENCE
                             </span>
+                            <span class="header-text">
+                                Education and employment
+                            </span>
+                        </span>
                         <span class="header-icon justify-self-end">
                                 <ion-icon name="code-working-outline" class="closed"></ion-icon>
                                 <ion-icon name="code-slash-outline" class="open"></ion-icon>
@@ -1263,7 +1292,7 @@
                         </h4>
                         <!-- start 3.1 SUB-SECTION -->
                         <section id="sectionThree-1" class="left text-item">
-                            <h5 class="card-title">
+                            <h5>
                                 Dedication: “Completeness”
                             </h5>
                             <p>
@@ -1467,6 +1496,7 @@
                                 <!-- /Education Item -->
 
                             </ul><!-- close 3.2 list group -->
+
                             <!-- start 3.2 CTA -->
                             <div class="activity-cta mt-2 inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
@@ -1486,8 +1516,9 @@
                                         </span>
                                     </button>
                                 </div>
-                            </div><!-- /close 3.2 CTA -->
-                            <h5 class="text-left">
+                            </div><!-- close 3.2 CTA -->
+
+                            <h5 class="text-left pt-5">
                                 Employment
                             </h5>
                             <!-- start 3.3 LIST GROUP -->
@@ -1609,7 +1640,8 @@
                                 </li>
                                 <!-- /Employment Item -->
 
-                            </ul><!-- /close 3.3 list group -->
+                            </ul><!-- close 3.3 list group -->
+
                             <!-- start 3.3 CTA -->
                             <div class="activity-cta mt-2 inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
@@ -1629,7 +1661,8 @@
                                         </span>
                                     </button>
                                 </div>
-                            </div><!-- /close 3.3 CTA -->
+                            </div><!-- close 3.3 CTA -->
+
                         </section><!-- close 3.2 sub-section -->
                     </div><!-- close 3.0 page-right media -->
                 </div><!-- close 3.0 spread -->
@@ -1641,13 +1674,17 @@
             <!-- start 4.0 HEADER -->
             <header id="headingFour">
                 <h3 class="header-title d-flex">
-                    <button class="collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <button class="collapsed" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseFour"
+                            aria-expanded="false"
+                            aria-controls="collapseFour">
                         <span class="header-content">
                             <span class="header-name">
-                                REPOSITORIES
+                                Examples
                             </span>
                             <span class="header-text">
-                                Dev and tech project samples
+                                Tech repo and design folio
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
@@ -1683,7 +1720,7 @@
                                 completeness I dedicate to every task; I remain insatiable of the software that
                                 delivered the task that measured the results that organized the iterations.
                             </p>
-                            <p class="card-text">
+                            <p>
                                 My experiences working between the local and the global have propelled a
                                 conceptual fascination with <b class="keywords">duality</b> and <b
                                     class="keywords">
@@ -1721,7 +1758,7 @@
                                     href="https://labusinesscouncil.org/events/architectural-awards/" target="_blank"><abbr
                                     title="Los Angeles Business Council">LABC</abbr> Architectural Awards</a>.
                             </p>
-                            <p class="card-text d-none">
+                            <p class="d-none">
                                 As a trained architect with 7 years of professional experience, in design coordination, I am particularly diligent about quality documentation. I write code that is readable, well-formatted, well-tested, well-documented. As a developer the pragmatism to which I approach planning and coordinate is displayed in my repository and repository commit history.
                             </p>
                             <p class="d-none">My approach to documentation/representation that is as
@@ -1823,7 +1860,7 @@
                                 </li>
                                 <!-- /Project Item -->
 
-                                <!-- Proficiency Item -->
+                                <!-- Project Item -->
                                 <li class="inset-item d-none">
                                     <div class="list-content">
                                         <div class="list-icon col-2">
@@ -1850,7 +1887,7 @@
                                         </span>
                                     </aside>
                                 </li>
-                                <!-- /Proficiency Item -->
+                                <!-- /Project Item -->
 
                                 <!-- Project Item -->
                                 <li class="inset-item project-inactive">
@@ -2076,7 +2113,8 @@
                                 </li>
                                 <!-- /Project Item -->
 
-                            </ul><!-- /close 4.2 list group -->
+                            </ul><!-- close 4.2 list group -->
+
                             <!-- start 4.2 CTA -->
                             <div class="activity-cta mt-2 inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
@@ -2093,14 +2131,15 @@
                                         </span>
                                     </a>
                                 </div>
-                            </div><!-- /close 4.2 CTA -->
+                            </div><!-- close 4.2 CTA -->
+
                         </section><!-- close 4.2 sub-section -->
                     </div><!-- close 4.0 page-right media -->
                 </div><!-- close 4.0 spread -->
             </section><!-- close 4.0 section -->
         </article><!-- close 4.0 -->
 
-        <!-- 4.0 (PORTFOLIO: Architecture & Design Folio) -->
+        <!-- 4.5 (PORTFOLIO: Architecture & Design Folio) -->
         <article class="article d-none">
             <!-- start 4.0 HEADER -->
             <header id="headingFour-ext">
@@ -2862,14 +2901,14 @@
                             data-target="#collapseFive"
                             aria-expanded="false"
                             aria-controls="collapseFive">
-                            <span class="header-content">
-                                <span class="header-name">
-                                    REFERENCES
-                                </span>
-                                <span class="header-text">
-                                    Accomplishments and recommendations
-                                </span>
+                        <span class="header-content">
+                            <span class="header-name">
+                                REFERENCES
                             </span>
+                            <span class="header-text">
+                                Accomplishments and recommendations
+                            </span>
+                        </span>
                         <span class="header-icon justify-self-end">
                                 <ion-icon name="code-working-outline" class="closed"></ion-icon>
                                 <ion-icon name="code-slash-outline" class="open"></ion-icon>
@@ -3329,23 +3368,25 @@
                                     </p>
                                 </li>
                             </ul><!-- close 5.2 list-group -->
+
                             <!-- start 5.2 CTA -->
                             <div class="activity-cta mt-2 inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
-                            <span class="outset-container-2 flex-fill">
-                                <small class="mr-3 text-right5">
-                                    See more from LinkedIn
-                                </small>
-                             </span>
+                                    <span class="outset-container-2 flex-fill">
+                                        <small class="mr-3 text-right5">
+                                            See more from LinkedIn
+                                        </small>
+                                     </span>
                                     <a class="outset-container-2 btn"
                                        href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank">
-                                <span class="inset-inner">
-                                    <i class="fab fa-linkedin-in hvr-pop" style="color: #EAB1A5;"></i>
-                                    <span class="sr-only">LinkedIn</span>
-                                </span>
+                                        <span class="inset-inner">
+                                            <i class="fab fa-linkedin-in hvr-pop" style="color: #EAB1A5;"></i>
+                                            <span class="sr-only">LinkedIn</span>
+                                        </span>
                                     </a>
                                 </div>
                             </div><!-- close 5.2 CTA -->
+
                         </section><!-- close 5.2 sub-section -->
                     </div><!-- close 5.0 page-right media -->
                 </div><!-- close 5.0 spread -->
@@ -3362,14 +3403,14 @@
                             data-target="#collapseSix"
                             aria-expanded="false"
                             aria-controls="collapseSix">
-                            <span class="header-content">
-                                <span class="header-name">
-                                    CONNECT
-                                </span>
-                                <span class="header-text">
-                                    Contact and message form
-                                </span>
+                        <span class="header-content">
+                            <span class="header-name">
+                                CONNECT
                             </span>
+                            <span class="header-text">
+                                Contact and message form
+                            </span>
+                        </span>
                         <span class="header-icon justify-self-end">
                                 <ion-icon name="code-working-outline" class="closed"></ion-icon>
                                 <ion-icon name="code-slash-outline" class="open"></ion-icon>
@@ -3430,7 +3471,7 @@
                                 </li>
                             </ul>
                             <!-- /Contact CTA -->
-                            <footer>
+                            <footer class="d-none">
                                 <small class="text-muted">
                                     Last updated 3 mins ago
                                 </small>
@@ -3500,7 +3541,7 @@
                 </div><!-- close 6.0 spread -->
             </section><!-- close 6.0 section -->
         </article><!-- close 6.0 -->
-    </main><!-- close main wrapper -->
+    </main><!-- close main stack -->
 
     <!-- start FOOTER CONTAINER -->
     <footer class="footer mt-auto bg-w2" style="top: calc(100vh - 3rem); padding-top: 3rem;">
@@ -3510,7 +3551,9 @@
                 © Designed and Built by
             </h6>
             <p class="d-sm-block d-md-inline-block text-center">
-                <a class="text-dark" href="#">Joem Elias Sanez</a>
+                <a class="text-dark" href="#">
+                    Joem Elias Sanez
+                </a>
             </p>
         </div><!-- /Footer Item -->
     </footer><!-- /Footer container -->

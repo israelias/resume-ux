@@ -849,6 +849,15 @@ section.collapsing:after {
     }
 }
 
+/* Hide inherited pseudos at landing banner section for small screens */
+
+@media (max-width: 575.98px) {
+    #collapseLanding:before,
+    #collapseLanding:after {
+        display: none;
+    }
+}
+
 /*!
  * Horizontal pseudo elements are applied to individual header elements
  * to simulate connection to the vertical pseudo-rails
@@ -1207,7 +1216,7 @@ input[type="radio"]:checked + label ~ main article > section {
         display: block;
     }
 
-    /*section.collapse,*/
+    main > section,
     article > section {
         height: 60vh;
         /*height: calc(100vh - (4rem * 6) + 43px);*/
@@ -1242,15 +1251,30 @@ input[type="radio"]:checked + label ~ main article > section {
 
     opacity: .5;
 }
-
 /* Enable link functionality for h3 outline lists on toggle of expand-all */
 
 input[type="checkbox"]:checked + label ~ nav .list-h4  {
     opacity:1;
     pointer-events: auto;
     cursor: pointer;
-    /*display: none;*/
-    /*color: red;*/
+}
+
+/* Disable and hide h3 a tags t*/
+
+.list-h3 [href^="#article"] {
+    display: none;
+}
+
+/* Disable and hide h3 button duplicates of h3 a tags on toggle of expand-all */
+
+input[type="checkbox"]:checked + label ~ nav .list-h3 [data-toggle="collapse"] {
+    display: none;
+}
+
+/* Enable and show h3 a tags on toggle of expand-all */
+
+input[type="checkbox"]:checked + label ~ nav .list-h3 [href^="#article"] {
+    display: block;
 }
 
 @media (max-width: 575.98px) {
@@ -1324,16 +1348,53 @@ input[type="checkbox"]:checked + label ~ nav .list-h4  {
     flex-direction: column;
 }
 
-.nav-outline ul {
+ul.nav {
     padding-left: 1rem;
 }
 
 @media (max-width: 575.98px) {
-    .nav-outline ul {
-        padding-left: .3rem;
+
+    /* Disable link functionality to h1 and h2 outline lists on mobile  */
+    /* CREDIT (unmodified) https://stackoverflow.com/questions/5521387/show-child-div-within-hidden-parent-div */
+    /*       Show Child Div within Hidden Parent Div */
+
+    .list-h1 [href="#collapseLanding"],
+    .list-h2 [href="#splash-banner"] {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
     }
+
+    .list-h3 li {
+        visibility: visible;
+    }
+
+    .list-h3 [data-toggle="collapse"] {
+        /*display: block;*/
+    }
+
+
+    ul.nav {
+        padding-left: .2rem;
+    }
+
+    ul.list-h2,
+    ul.list-h3 {
+        padding-left: 0;
+    }
+
+    .nav-pills.menu-sidebar .nav-link {
+        line-height: 1rem;
+    }
+
     .list-h4 a.nav-link {
-        font-size: .625rem !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 60%;
+        font-size: .625em !important;
     }
 }
 
