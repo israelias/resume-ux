@@ -12,10 +12,19 @@
 /* Potentially import dependencies instead of linking in html? */
 /*@import url("https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css");*/
 
+/* bootstrap-grid.css */
+/* bootstrap-reboot.css */
+/* bootstrap-utilities.css */
+
+/* button.js */
+/* collapse.js */
+/* scrollspy.js */
+
 @import url("https://use.typekit.net/qyv7gbn.css");
 
-
-/* CORE CONFIGS ------------------------------------------------------------------------------- */
+/* ==========================================================================
+   CORE CONFIGS
+   ========================================================================== */
 
 :root {
 
@@ -66,11 +75,9 @@
 
     /* OPTION to calculate --margin as a separate function with less nested calcs and custom vars */
     /*--margin: calc((12 - var(--of-twelve)) / 12 / 2 * 100%);*/
-}
 
-/* Apply margins for typical .row in a fluid .container to :root */
+    /* Apply margins for typical .row in a fluid .container to :root */
 
-:root {
     display: flex;
     justify-content: center;
 }
@@ -98,15 +105,9 @@
     margin-right: 0;
 }
 
-/* Potentially override the MDB framework variables? */
-
-:root {
-    /*--bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";*/
-    /*--bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;*/
-    /*--bs-gradient: linear-gradient(180deg,hsla(0,0%,100%,0.15),hsla(0,0%,100%,0));*/
-}
-
-/* TYPE CONFIGS ------------------------------------------------------------------------------- */
+/* ==========================================================================
+   TYPE CONFIGS
+   ========================================================================== */
 
 body {
     text-rendering: optimizeLegibility;
@@ -120,7 +121,6 @@ p, small {
     font-weight: 400;
     font-style: normal;
     font-feature-settings: 'c2sc';
-    /*font-feature-settings: 'lnum', 'liga', 'clig', 'calt', 'frac', 'onum', 'ordn', 'c2sc', 'salt', 'ss20', 'tnum';*/
 
     font-size: 0.9375rem;
     line-height: 1.375rem;
@@ -134,6 +134,20 @@ p, small {
 small {
     font-size: 0.8125rem;
     line-height: 1.1875rem;
+}
+
+/* Text content keywords */
+
+b {
+    font-weight: 100;
+}
+
+a {
+    color: slategray;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 h1,
@@ -168,24 +182,53 @@ ion-icon {
     }
 }
 
-/* Splash landing headings */
+/* ==========================================================================
+   HEADINGS CONFIGS
+   ========================================================================== */
 
-h1,h2 {
-    font-family: var(--halyard-display);
+/* Splash landing heading */
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 5rem 1rem 1rem;
+    margin-bottom: .5rem;
+
+    font-family: attribute-mono, sans-serif;
+    font-weight: 300 !important;
+    font-feature-settings: 'c2sc';
+
+    /*color: #A4a4a4;*/
+    /*mt-sm-5 mt-md-0 pt-sm-0 pt-md-5 lh-1 d-flex flex-column flex-wrap flex-row  h3 justify-content-center*/
+    /*color: #4a4a4a; margin: 0 auto;*/
 }
 
 /* Splash landing sub-heading  */
 
 h2 {
-    font-family: attribute-mono, sans-serif !important;
-    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+
+    text-transform: lowercase;
+
+    font-family: attribute-mono, sans-serif;
     font-style: normal;
-    font-feature-settings: 'smcp';
+
+    color: #A4a4a4;
+
+    /*pb-4 text-lowercase d-flex flex-nowrap flex-row justify-content-center*/
+    /*font-feature-settings: normal;*/
+    /*color: #a4a4a4; margin: 0 auto;*/
 }
 
 /* Header button headings */
+
 h3 {
-    font-family: attribute-mono;
+    font-family: attribute-mono, sans-serif;
 }
 
 /* Section lead heading */
@@ -204,13 +247,13 @@ h4 {
     font-size: calc(1.125rem + 1.5vw);
     line-height: calc(1.625rem + 1vw);
 
-
     color: var(--white);
     text-shadow: #fff 0 .5px 0, #D7D7D6 0 -.5px 0;
     -webkit-font-smoothing: antialiased;
 }
 
 /* Section sub headings */
+
 h5 {
     font-family: attribute-mono, sans-serif;
     font-weight: 400;
@@ -229,99 +272,404 @@ h6 {
     font-style: normal;
 }
 
-/* Text content keywords */
+/* ==========================================================================
+   LAYOUT CONFIGS
+   ========================================================================== */
 
-b {
-    font-weight: 100;
+/* Absolutely positioned elements in the dom will always go above everything even if it's position fixed */
+/* https://stackoverflow.com/questions/13071429/how-to-position-main-content-below-header-and-footer-in-css */
+
+header.header {
+    position: absolute;
+    z-index: 99;
 }
 
-a {
-    color: slategray;
+header.header .navbar-light {
+    background: var(--paper,#F2F1EF);
 }
 
-a:hover {
-    text-decoration: underline;
+main {
+    position: relative;
+    margin-top: 3rem;
 }
 
-
-/* SPLASH BANNER ------------------------------------------------------------------------------- */
-
-/* Custom 'onboarding' banner, disposes upon initial click  */
-/* To be organized */
-
-h1 {
-    font-family: din-2014, sans-serif;
-    padding: 5rem 1rem 1rem;
-    margin-bottom: .5rem;
-    /*font-size: 1.8rem;*/
-    /*line-height: 1.2rem;*/
-    font-weight: 100 !important;
-    /*letter-spacing: .1px;*/
-    color: var(--deep-4);
-
-}
-
-@media (min-width: 740px) {
-
-    h1 {
-        font-size: 2rem;
-        line-height: 2rem;
+@media (min-width: 576px) {
+    main {
+        margin-top: 3.375rem;
     }
 }
 
-#splash-heading {
-    font-family:var(--halyard-text);
-    font-weight: 100;
-    text-transform: uppercase;
-    color: var(--deep-1);
+section {
+    overflow: hidden;
 }
 
-#download {
-    font-family: attribute-mono;
+/*!
+ * A typical section is followed by a .row with a .spread class.
+ * The last .col of each column pair in a .spread includes a .col-last class
+ *
+ * Example HTML:
+ *
+ *  <section>
+ *      <div class="spread row">
+ *          <div class="col-12 col-md-12 col-lg-7 col-xl-7" ... >
+ *          <div class="col-last col-12 col-md-12 col-lg-5 col-xl-5" ... >
+ *      </div>
+ *  </section>
+ *
+ * The .spread class is used to select the global row
+ * The .col-last is used as a helper to hide the last column until its parent section is shown
+ * This alleviates the height property during a .collapse event
+ */
+
+/* Apply global margins to page-left/page-right cols */
+
+.spread > div {
+    margin-bottom: 3rem;
 }
 
-#download i {
-    color: var(--deep-4);
+.spread > :first-child {
+    margin-top: .5rem;
 }
 
-#collapseLanding {
-    /*transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);*/
+@media (min-width: 768px) {
+    .spread > div,
+    .spread > :first-child {
+        margin-top: 1rem;
+    }
 }
+
+/* MOBILE COLLAPSE-SECTION CONFIGS
+   ========================================================================== */
+
+/* Have the ability to scroll within an expanded section on a small screen */
+/* With the exception of the Introduction section (collapseZero) */
+/* 60vh is an arbitrary height to for both in-section scrolling and sibling header-buttons visibility */
 
 @media (max-width: 575.98px) {
 
-    #download {
-        font-size: .725rem;
-        margin-bottom: 1rem !important;
-    }
-    #collapseLanding {
-        margin-top: 2rem!important;
+    main {
+        overflow: hidden;
     }
 
-    #band-c {
-        border-radius: .425rem!important;
+    .col-last {
+        display: none;
     }
 
-    #band-ul {
-        padding-top: .375rem!important;
-        padding-bottom: .375rem!important;
-    }
-    #band-t,
-    #band-b {
-        height: 40px !important;
+    .collapse.show .col-last {
+        display: block;
     }
 
-    #band-b {
-        width: 40px !important;
+    article > section:not(#collapseZero) {
+        height: 60vh;
+        /*height: calc(100vh - (4rem * 6) + 43px);*/
+        overflow: scroll;
+        /*overflow-x: hidden;*/
+        /*overflow-y: scroll;*/
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
     }
-
-    #band-t {
-        line-height: 1.2rem !important;
-    }
-
 }
 
-/* GLOBAL .COL DIV CONFIGS  ------------------------------------------------------------------------------- */
+/* ==========================================================================
+   ARTICLE HEADER BUTTON
+   ========================================================================== */
+
+article header {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    margin-bottom: 0;
+}
+
+article header .header-title {
+    display: flex;
+    align-items: center;
+
+    height: 3rem;
+    overflow: hidden;
+
+    padding-top: 0.0625rem;
+    padding-bottom: 0.125rem;
+    margin-bottom: 0;
+}
+
+article header button {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    border: none;
+
+    background-color: transparent;
+
+    font-size: calc(1rem + .3vw);
+    line-height: 1.25rem;
+}
+
+@media (min-width: 1200px) {
+    article header button {
+        font-size:1.5rem
+    }
+}
+
+@media (max-width: 575.98px) {
+    article header button {
+        padding: 1rem 1.25rem;
+    }
+}
+
+article header .header-content {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+
+    padding-top: .5rem;
+
+    background-color: var(--paper);
+
+    text-wrap: none;
+    text-align: left;
+}
+
+article header .header-name {
+    position: relative;
+    font-weight: 500;
+}
+
+article header .header-text {
+    width: 100%;
+    overflow: hidden;
+
+    margin-left: .25rem;
+
+    font-weight: 300;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+@media (max-width: 575.98px) {
+    article header .header-text {
+        display: none;
+    }
+}
+
+article header .header-text:before {
+    display: inline-block;
+    margin-left: 0.25rem;
+
+    content: '/';
+    font-weight: 400;
+}
+
+article header .header-icon {
+    padding-top: .5rem;
+    margin-left: .25rem;
+
+    background-color: var(--paper);
+}
+
+article header .header-icon ion-icon {
+    color: #4f4f4f;
+    font-size: 24px;
+    --ionicon-stroke-width: 20px;
+}
+
+/* ==========================================================================
+   SECTION CONFIGS
+   ========================================================================== */
+
+/* Apply typical Bootstrap .card-body configs to main sub-sections, with custom global aesthetic  */
+
+article section section,
+section section {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+
+    background: var(--gradient-1);
+    box-shadow:
+            0 8px 0 rgba(0, 0, 0, 0.2),
+            0 -6px 0 rgba(0, 0, 0, 0.3);
+}
+
+section.left {
+    margin-top: 0.5rem;
+    border-radius: var(--radius-5);
+}
+
+section.right {
+    border-radius: var(--radius-2);
+}
+
+section.right h5 {
+    text-align: right;
+}
+
+/* Apply global flex behavior and visual language to media list-groups */
+
+section.right ul {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    padding: var(--radius-4);
+    border-radius: var(--radius-3);
+
+    list-style: none;
+
+    box-shadow:
+            inset -5px -8px 0 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+section.right ul > * {
+    margin-bottom: var(--radius-4);
+}
+
+section.right ul li {
+    flex-grow: 1;
+    min-width: 50%;
+
+    padding: var(--radius-3);
+    padding-right: 1.25rem;
+    border-radius: var(--radius-2);
+    border-color: var(--paper);
+
+    background: var(--powder);
+    font-family: var(--halyard-text);
+
+    box-shadow:
+            0 -6.4px 0 rgba(0, 0, 0, 0.2),
+            0 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+section.right ul li .list-content {
+    display: flex;
+
+    width: 100%;
+    padding: .25rem;
+
+    justify-content: space-between;
+}
+
+section.right ul li .list-icon {
+    display: flex;
+
+    padding-top: .25rem;
+    padding-right: .25rem;
+
+    justify-content: center;
+    align-items: start;
+}
+
+section.right ul li .list-icon ion-icon {
+    color: var(--deep-1);
+    --ionicon-stroke-width: 40px;
+}
+
+section.right ul.proficiency-activity li .list-icon ion-icon {
+    font-size: 1.75rem;
+    color: var(--deep-1);
+}
+
+section.right ul li .list-text {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 16.666667%;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+section.right ul.design-activity li .list-text {
+    margin-left: 0;
+}
+
+section.right ul.specialization-activity li .list-text,
+section.right ul.experience-activity li .list-text {
+    justify-content: flex-end;
+}
+
+section.right ul li .list-text i {
+    background-color: var(--pearl);
+    color: var(--green);
+
+    font-size: .6rem !important;
+    font-style: normal;
+}
+
+section.right ul li aside {
+    padding-right: .8rem;
+    color: var(--deep-1);
+}
+
+section.right ul li aside .badge {
+    padding-bottom: .2rem;
+
+    background: var(--deep-4);
+    color: var(--white);
+
+    font-size: .62rem !important;
+    font-style: normal;
+    font-weight: 400;
+    text-shadow: none;
+}
+
+section.right ul li aside ion-icon {
+    color: var(--deep-1);
+    font-size: 1.1rem !important;
+}
+
+section.right ul li aside small {
+    padding-right: .8rem;
+}
+
+section.right ul li .list-text ion-icon {
+    font-size: 1rem;
+}
+
+section.right ul li .list-text small {
+    font-family: var(--attribute-mono) !important;
+}
+
+section.right ul li h6 {
+    font-weight: 500;
+    font-feature-settings: 'smcp', 'c2sc';
+}
+
+/* SECTION.SHOW ICON TRANSITION
+   ========================================================================== */
+
+/* Apply global icon transitions to section h4 headlines */
+/* CREDIT (modified) inspired by on-show transitions in: https://codeconvey.com/pure-css-accordion-menu/ */
+
+section.show h4 ion-icon {
+    left: 260px;
+}
+
+section.collapse:not(.show) h4 ion-icon {
+    left: 400px;
+}
+
+h4 ion-icon {
+    position: absolute;
+    top: -17px;
+    left: 390px;
+
+    font-size: 180px;
+    opacity: 0.08;
+
+    transition: all .3s .3s;
+}
+
+/* ==========================================================================
+   GLOBAL .COL DIV CONFIGS
+   ========================================================================== */
 
 /*!
  * Main left and right .col divs are paired with either .text-box (left) or .media-box (right)
@@ -355,285 +703,70 @@ h1 {
     margin-top: auto;
 }
 
-
-@media (min-width: 1550px) {
-    .text-box {
-        justify-content: space-between;
-        align-content: space-between;
-        flex-wrap: nowrap;
-    }
-    .text-item {
-        /*flex: 1 40%;*/
-    }
-    .text-box .text-item:first-child {
-        width: 40%;
-        margin-right: var(--radius-3);
-    }
-}
-
 .text-item footer {
     margin-top: auto;
 }
 
-/* GLOBAL SECTION ELEMENT CONFIGS  ------------------------------------------------------------------------------- */
+/* ==========================================================================
+   MASTER SHADOW CONTAINER STYLES
+   ========================================================================== */
 
-/* Apply typical Bootstrap .card-body configs to main sub-sections, with custom global aesthetic  */
+/*!
+ * Neumorphic style to box model.
+ *
+ * This immediately drops an element into an inset within an otherwise flat canvas.
+ *
+ * CREDIT: (assistance) (https://css-tricks.com/neumorphism-and-css/)
+ * CREDIT: (assistance) Shadow generator https://neumorphic.design/
+ *
+ */
 
-article section section,
-section section {
-    flex: 1 1 auto;
-    padding: 1rem 1rem;
-    background: var(--gradient-1);
+.inset-container {
+    overflow: hidden;
+
+    padding: .5rem;
+    border-radius: .75rem;
+
     box-shadow:
-            0 8px 0 rgba(0, 0, 0, 0.2),
-            0 -6px 0 rgba(0, 0, 0, 0.3);
+            inset -5px -8px 0 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 575.98px) {
-    article section section {
-        /*padding: 1rem;*/
+    .spread > .inset-container {
+        padding: .75rem;
+        box-shadow: none;
     }
 }
 
-section.left {
-    margin-top: 0.5rem;
-    border-radius: var(--radius-5);
-}
-
-section.right {
-    border-radius: var(--radius-2);
-}
-
-section.right h5 {
-    text-align: right;
-}
-
-/* Apply global flex behavior and visual language to media list-groups */
-
-section.right ul {
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-
-    padding: var(--radius-4);
-    border-radius: var(--radius-3);
-    box-shadow: inset -5px -8px 0 0 rgba(255, 255, 255, 0.5), inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
-}
-
-section.right ul > * {
-    margin-bottom: var(--radius-4);
-}
-
-section.right ul li {
-    flex-grow: 1;
-    min-width: 50%;
-    padding: var(--radius-3);
-    border-radius: var(--radius-2);
-    border-color: var(--paper);
-    background: var(--powder);
-    box-shadow: 0 -6.4px 0 rgba(0, 0, 0, 0.2), 0 6px 0 rgba(0, 0, 0, 0.4);
-    font-family: var(--halyard-text);
-
-    padding-right: 1.25rem;
-}
-
-section.right ul li .list-content {
-    display: flex;
-    width: 100%;
-    padding: .25rem;
-    justify-content: space-between;
-}
-
-section.right ul li .list-icon {
-    padding-top: .25rem;
-    padding-right: .25rem;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-}
-
-section.right ul li .list-icon ion-icon {
-    color: var(--deep-1);
-    --ionicon-stroke-width: 40px;
-}
-
-section.right ul.proficiency-activity li .list-icon ion-icon {
-    font-size: 1.75rem;
-    color: var(--deep-1);
-}
-
-section.right ul li .list-text {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-left: 16.666667%;
-}
-
-section.right ul.design-activity li .list-text {
-    margin-left: 0;
-}
-
-section.right ul.specialization-activity li .list-text,
-section.right ul.experience-activity li .list-text {
-    justify-content: flex-end;
-}
-
-section.right ul li .list-text i {
-    font-size: .6rem !important;
-    font-style: normal;
-    color: var(--green);
-    background-color: var(--pearl);
-}
-
-section.right ul li aside {
-    padding-right: .8rem;
-    color: var(--deep-1);
-}
-
-section.right ul li aside .badge {
-    padding-bottom: .2rem;
-    font-size: .62rem !important;
-    font-style: normal;
-    font-weight: 400;
-    text-shadow: none;
-    color: var(--white);
-    background: var(--deep-4);
-    /*border: 1px solid var(--red);*/
-}
-
-section.right ul li aside ion-icon {
-    font-size: 1.1rem !important;
-    color: var(--deep-1);
-}
-
-section.right ul li aside small {
-    padding-right: .8rem;
-}
-
-section.right ul li .list-text ion-icon {
-    font-size: 1rem;
-}
-
-section.right ul li .list-text small {
-    font-family: var(--attribute-mono) !important;
-}
-
-section.right ul li h6 {
-    /*font-family: var(--halyard-micro) !important;*/
-    font-weight: 500;
-    font-feature-settings: 'smcp', 'c2sc';
-}
-
-/* Apply global icon transitions to section h4 headlines */
-/* CREDIT (modified) inspired by on-show transitions in: https://codeconvey.com/pure-css-accordion-menu/ */
-
-section.show h4 ion-icon {
-    left: 260px;
-}
-
-section.collapse:not(.show) h4 ion-icon {
-    left: 400px;
-}
-
-h4 ion-icon {
-    position: absolute;
-    top: -17px;
-    transition: all .3s .3s;
-    left: 390px;
-    font-size: 180px;
-    opacity: 0.08;
-}
-
-/* NAVBAR ------------------------------------------------------------------------------- */
-
-/* Absolutely positioned elements in the dom will always go above everything even if it's position fixed */
-/* https://stackoverflow.com/questions/13071429/how-to-position-main-content-below-header-and-footer-in-css */
-
-header.header {
-    position: absolute;
-    z-index: 99;
-}
-
-header.header .navbar-light {
-    background: var(--paper,#F2F1EF);
-}
-
-.nav-container {
-    padding: 0 var(--margin); /* 0 4.16% */
-    vertical-align: middle;
-}
-
-.nav-container a {
-    display: inline-flex;
-    align-items: center;
-}
-
-.nav-container span {
-    margin-right: .6rem;
-    wrap-option: none;
-}
-
-.nav-container a.nav-link {
-    font-size: .875rem;
-    text-transform: uppercase;
-}
-
-.navbar {
-    align-items: center;
-    height: 3rem;
-    padding: 8px 0 3px;
-}
-
-@media (min-width: 576px) {
-    .navbar {
-        height: 3.375rem;
-        padding: 10px 0 6px;
-
-    }
-}
-
-.navbar-nav {
-    z-index: 99;
-}
-
-/* MAIN CONTAINER   ------------------------------------------------------------------------------- */
-
-main {
-    margin-top: 3rem;
+.inset-item {
     position: relative;
+
+    border-radius: .6rem;
+    border: none;
 }
 
-@media (min-width: 576px) {
-    main {
-        margin-top: 3.375rem;
-    }
+.inset-item:after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+
+    z-index: 1;
+
+    right: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: .6rem;
+
+    background: var(--gradient-2);
 }
 
-
-.spread > div {
-    margin-bottom: 3rem;
-    /*padding-bottom: 3rem;*/
-}
-
-.spread > :first-child {
-    margin-top: .5rem;
-    /*padding-top: .5rem;*/
-}
-
-@media (min-width: 768px) {
-
-    .spread > div,
-    .spread > :first-child {
-        margin-top: 1rem;
-        /*padding-top: 1rem;*/
-    }
-
-}
-
-
-/* ELEMENT TRANSITION STYLES   ------------------------------------------------------------------------------- */
+/* ==========================================================================
+   PSEUDO ELEMENT TRANSITION STYLES
+   ========================================================================== */
 
 /*!
  * Pseudo elements are applied to the left and right margins of the following elements
@@ -652,32 +785,15 @@ main {
  */
 /* BUG: PSEUDOS are funky on Safari */
 
-:root {
-    --outlines: var(--raisin);
-}
-
-/* Set main to show overflow at left/right only (offset to the negative --margin property) */
-/* The 0 top and bottom clip-path values contain pseudo elements within the variable viewport height */
-
-main {
-    clip-path: inset(0 calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
-    position: relative;
-}
-
-/* Set article to show overflow at left/right (offset to the negative --margin property) */
-/* with a top offset of the height of its immediate header */
-
-article {
-    clip-path: inset(-3rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
-    position: relative;
-}
 
 /* Set sections in both static and transition states to show overflow at left/right (offset to --margin) */
 /* with a top offset of the height of its preceding header */
 /* and a bottom inset of the height of its following header */
 
+section.show,
 section.collapse,
 section.collapsing {
+    -webkit-clip-path: inset(-3rem calc(var(--margin) * -1) 1.36rem calc(var(--margin) * -1));
     clip-path: inset(-3rem calc(var(--margin) * -1) 1.36rem calc(var(--margin) * -1));
 }
 
@@ -697,12 +813,19 @@ section.collapsing:after,
 .spread:after,
 article > header:before,
 article > header:after,
+main:before,
+main:after,
 .header-title:after,
 section.right:after {
     position: absolute;
     display: block;
     content: "";
+
+    --outlines: var(--raisin);
 }
+
+/* PSEUDO VERTICALS
+   ========================================================================== */
 
 /* Offset :before pseudo elements to  the center of the offset --margin property  */
 /* if --of-twelve: 11; then the following left: value is -2.08%  */
@@ -866,36 +989,59 @@ section.collapsing:after {
  * 3. .header-title : pseudo top horizontal
  */
 
+/* PSEUDO CONCEALER
+   ========================================================================== */
+
 /* Position top-most header pseudo-concealer elements that 'cover' pseudo-rails beyond */
 
+main:before,
+main:after,
 article > header:before,
 article > header:after {
     z-index: 1;
 
-    top: -1.36rem;
     align-self: center;
 
     width: .875rem;
     height: 2.875rem;
+
+    background: var(--paper);
+}
+
+/* Position last pseudo-conceler */
+
+main:before,
+main:after {
+    bottom: -1.5rem;
+}
+
+/* Position general pseudo-concealer */
+
+article > header:before,
+article > header:after {
+    top: -1.36rem;
 }
 
 /* Style left pseudo-concealer */
 
+main:before,
 article > header:before {
     left: calc(var(--margin) / 2 * -1);
     border-bottom-right-radius: .5rem;
     border-top-right-radius: .5rem;
-    background: #F2F1EF;
 }
 
 /* Style right pseudo-concealer */
 
+main:after,
 article > header:after {
     right: calc(var(--margin) / 2 * -1);
     border-bottom-left-radius: .5rem;
     border-top-left-radius: .5rem;
-    background: #F2F1EF;
 }
+
+/* PSEUDO HORIZONTALS
+   ========================================================================== */
 
 /* Style top and bottom pseudo-horizontals  */
 
@@ -912,11 +1058,6 @@ section.right:after {
     bottom: 1.36rem;
     border-radius: 0 0 var(--radius-1) var(--radius-1);
     border-bottom: 2px solid var(--outlines);
-    /*box-shadow:*/
-    /*        inset -1px 0 0 var(--outlines),*/
-    /*        inset 1px 0 0 var(--outlines),*/
-    /*        1px 0 0 var(--outlines),*/
-    /*        -1px 0 0 var(--outlines);*/
     z-index: 5;
 }
 
@@ -926,13 +1067,7 @@ section.right:after {
     left: calc(var(--margin) / 2 * -1 + .75rem);
     right: calc(var(--margin) / 2 * -1 + .75rem);
     top: 1.5rem;
-    /*border-radius: var(--radius-1) var(--radius-1) 0 0;*/
     border-top: 2px solid var(--outlines);
-    /*box-shadow:*/
-    /*        inset -1px 0 0 var(--outlines),*/
-    /*        inset 1px 0 0 var(--outlines),*/
-    /*        1px 0 0 var(--outlines),*/
-    /*        -1px 0 0 var(--outlines);*/
     z-index: -1;
 }
 
@@ -949,107 +1084,9 @@ section.right:after {
 
 }
 
-/* ARTICLE HEADER BUTTON   ------------------------------------------------------------------------------- */
-
-article header {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-    margin-bottom: 0;
-}
-
-article header .header-title {
-    padding-top: 0.0625rem;
-    padding-bottom: 0.125rem;
-    overflow: hidden;
-    margin-bottom: 0;
-    height: 3rem;
-    align-items: center;
-}
-
-article header button {
-    display: flex;
-    width: 100%;
-    border: none;
-    justify-content: space-between;
-
-    line-height: 1.25rem;
-    background-color: transparent;
-
-    font-size:calc(1rem + .3vw)
-}
-
-@media (min-width: 1200px) {
-    article header button {
-        font-size:1.5rem
-    }
-}
-
-@media (max-width: 575.98px) {
-    article header button {
-        padding: 1rem 1.25rem;
-    }
-}
-
-article header .header-content {
-    text-align: left;
-    padding-top: .5rem;
-    overflow: hidden;
-    text-wrap: none;
-    display: flex;
-    flex-wrap: nowrap;
-
-    background-color: var(--paper);
-}
-
-article header .header-name {
-    position: relative;
-    font-weight: 500;
-    /*opacity: .7;*/
-}
-
-article header .header-text {
-    margin-left: .25rem;
-    font-weight: 300;
-    text-transform: capitalize;
-
-    /*width: 50vw;*/
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    /*opacity: .6;*/
-
-    width: 100%;
-}
-
-@media (max-width: 575.98px) {
-    article header .header-text {
-        display: none;
-    }
-}
-
-article header .header-text:before {
-    content: '/';
-    display: inline-block;
-    font-weight: 400;
-    margin-left: 0.25rem;
-}
-
-article header .header-icon {
-    margin-left: .25rem;
-    padding-top: .5rem;
-
-    background-color: var(--paper);
-}
-
-article header .header-icon ion-icon {
-    font-size: 24px;
-    --ionicon-stroke-width: 20px;
-    color: #4f4f4f;
-}
-
-/* TOGGLE-ALL CHECKBOX BUTTON   ------------------------------------------------------------------------------- */
+/* ==========================================================================
+   TOGGLE-ALL CHECKBOX BUTTON
+   ========================================================================== */
 
 /*!
  * Ability to collapse-all and expand-all
@@ -1065,6 +1102,7 @@ article header .header-icon ion-icon {
     left: 49%;
     right: 49%;
     z-index: 1030;
+
     cursor: pointer;
 }
 
@@ -1072,21 +1110,11 @@ input[type="checkbox"] {
     display: none;
 }
 
-input[type="checkbox"]:checked + label .closed {
-    display: none;
-}
-
-input[type="checkbox"]:checked + label .open {
-    display: block;
-    color: var(--deep-1);
-}
-
 input[type="checkbox"]:checked + label ~ main [data-parent="#resumeStack"]:not(#collapseLanding).collapse {
     display: block;
     visibility: visible;
     height: 100%;
     overflow: visible;
-    /*animation: toggle-collapse .75s var(--glide) var(--early) 1 normal forwards running;*/
     transition: all var(--dashing) var(--glide) var(--early);
 }
 
@@ -1117,6 +1145,7 @@ input[type="checkbox"]:checked + label ~ main section:after {
 }
 
 /* Override .col-last helper when static toggle is on */
+
 input[type="checkbox"]:checked + label ~ main .col-last {
     display: block;
 }
@@ -1153,76 +1182,18 @@ input[type="checkbox"]:checked + label ~ main .col-last {
     }
 }
 
-
-/* GLOBAL COLLAPSE-BUTTON FUNCTIONS   ------------------------------------------------------------------------------- */
-
-/* Swap the visibility of icon pairs upon toggle of expand/collapse */
-/* .open and .closed classes added to either of two ion-icons in each header */
-
-/* Render .open to be hidden by default  */
-
-.open {
-    display: none;
-}
-
-/* Hide .closed when section is expanded */
-
-[data-toggle="collapse"][aria-expanded="true"] .closed {
-    display: none;
-}
-
-/* Show .open when section is expanded */
-
-[data-toggle="collapse"][aria-expanded="true"] .open {
-    display: block;
-    color: var(--deep-1);
-}
-
-/* MOBILE COLLAPSE-SECTION CONFIGS   ------------------------------------------------------------------------------- */
-
-/* Have the ability to scroll within an expanded section on a small screen */
-/* With the exception of the Introduction section (collapseZero) */
-/* 60vh is an arbitrary height to for both in-section scrolling and sibling header-buttons visibility */
-
-@media (max-width: 575.98px) {
-
-    main {
-        overflow: hidden;
-    }
-
-    .col-last {
-        display: none;
-    }
-
-    .collapse.show .col-last {
-        display: block;
-    }
-
-    main > section,
-    article > section {
-        height: 60vh;
-        /*height: calc(100vh - (4rem * 6) + 43px);*/
-        overflow: scroll;
-        /*overflow-x: hidden;*/
-        /*overflow-y: scroll;*/
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
-    }
-
-    section.collapsing {
-        height: 0;
-        /*transition: none;*/
-        transition: height .7s linear;
-    }
-}
-
-/* SIDE NAV   ------------------------------------------------------------------------------- */
+/* ==========================================================================
+   SIDE MENU NAVIGATION
+   ========================================================================== */
 
 /*!
  * Nav ol is a direct representative of the website's headings map  https://github.com/dzc34/headingsMap
  * Each ul is nested to the nth level of its represented heading in the doc outline
  * class names .list-h* are assigned to parent uls for ease of reference and direct styling
  */
+
+/* SIDE MENU ~ TOGGLE-ALL CONFIGS
+   ========================================================================== */
 
 /* Disable link functionality for nav outline lists beyond h3 by default  */
 /* https://stackoverflow.com/questions/2091168/how-to-disable-a-link-using-only-css */
@@ -1259,6 +1230,9 @@ input[type="checkbox"]:checked + label ~ nav .list-h3 [href^="#article"] {
     display: block;
 }
 
+/* SIDE-MENU NAV ~ MAIN-BODY CONFIGS
+   ========================================================================== */
+
 /*!
  * Nav outline with scroll-spy toggles in on menu-button click event
  * Currently dependent on the .collapse event class
@@ -1273,7 +1247,6 @@ input[type="checkbox"]:checked + label ~ nav .list-h3 [href^="#article"] {
  *     Global reactive events occur by utilising the .show and :checked classes with sibling selectors
  *     In particular, <main> ~ <nav> and <input> ~ <main> will be reactive to each other's sibling/class events
  */
-
 
 /* Reset and re-declare inherited variables at inner body level */
 /* Delimit access to the nav and main elements via class selectors */
@@ -1351,7 +1324,6 @@ ul.nav {
         /*display: block;*/
     }
 
-
     ul.nav {
         padding-left: .2rem;
     }
@@ -1373,6 +1345,9 @@ ul.nav {
         font-size: .625em !important;
     }
 }
+
+/* SIDE MENU ANIMATION CONFIGS
+   ========================================================================== */
 
 /* Slide nav in on .show event */
 
@@ -1585,275 +1560,45 @@ ul.nav {
 
 }
 
-/* GLOBAL SECTION TRANSITION CONFIGS    ------------------------------------------------------------------------------- */
+/* ==========================================================================
+   GLOBAL BUTTON ICON FUNCTIONS
+   ========================================================================== */
 
-/* CREDIT cubic bezier preview/helper https://cubic-bezier.com/#.23,-0.09,.18,1.25 */
-/* BUG: on Chrome, transition on collapsing a shown section only takes effect on first element */
+/* Swap the visibility of icon pairs upon toggle of expand/collapse */
+/* .open and .closed classes added to either of two ion-icons in each header */
 
-.collapsing {
-    height: 0;
-    overflow: hidden;
+/* Render .open to be hidden by default  */
 
-    -webkit-transition: height 700ms var(--glide) 0s;
-    -moz-transition: height 700ms var(--glide) 0s;
-    -o-transition: height 700ms var(--glide) 0s;
-    transition: height 700ms var(--glide) 0s;
-}
-
-
-/* Transitioning flex during .collapsing event */
-/* CREDIT (modified) https://css-tricks.com/using-css-transitions-auto-dimensions/ */
-
-#resumeStack {
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-    /*height:min-content;*/
-}
-
-article {
-    flex:1;
-    /*display:flex;*/
-    flex-direction:column;
-    justify-content:flex-start;
-    /*height:min-content;*/
-}
-
-section {
-    overflow:hidden;
-    transition:flex 0.3s ease-out;
-    height:auto;
-    flex:1;
-}
-
-section.collapsed {
-    flex: 0;
-}
-
-/* INTRODUCTION SECTION   ------------------------------------------------------------------------------- */
-
-/* Dispose splash banner content upon click any header-button */
-
-[id="collapseLanding"].collapse:not(.show) {
+.open {
     display: none;
 }
 
-.landing-heading h1 {
-    /*font-size: 3.5rem;*/
-    font-weight: 400;
-    color: #D7D7D6;
-    text-shadow: #FAFAFA 0 3px 0, #A4A4A4 0 -1px 0;
-    -webkit-font-smoothing: antialiased;
+/* Hide .closed when section is expanded */
+
+input[type="checkbox"]:checked + label .closed,
+[data-toggle="collapse"][aria-expanded="true"] .closed {
+    display: none;
 }
 
-.landing-subheading p {
-    font-family: "Halyard Micro", monospace;
-    font-size: .875rem;
-    font-weight: 300;
-    color: #707070;
-    text-shadow: #FAFAFA 0 1px 0, #D4D6D6 0 -1px 0;
-    -webkit-font-smoothing: antialiased;
+/* Show .open when section is expanded */
+
+input[type="checkbox"]:checked + label .open,
+[data-toggle="collapse"][aria-expanded="true"] .open {
+    display: block;
+    color: var(--deep-1);
 }
 
-.landing-subheading p span:nth-of-type(2) {
-    color: #F26041;
-    text-shadow: #FAA490 0 1px 0;
-}
+/* ==========================================================================
+   GLOBAL BUTTON/LINK/CTA WRAPPER CONFIGS
+   ========================================================================== */
 
-.landing-subheading p span:nth-of-type(1) {
-    color: #187FE5;
-    text-shadow: #affbff 0 1px 0;
-}
+/* Neumorphic shadow inspired by (https://css-tricks.com/neumorphism-and-css/) */
+/* Shadow generator helper https://neumorphic.design/ */
 
-.landing-subheading p span:nth-of-type(3) {
-    color: #51d2bf;
-    text-shadow: #afffb3 0 1px 0;
-}
+/* BUTTON/LINK/CTA CONTAINERS
+   ========================================================================== */
 
-.landing-subheading p span:nth-of-type(4) {
-    color: #8E0089;
-    text-shadow: #ffb3fe 0 1px 0;
-}
-
-.image-container {
-    width: 13rem;
-    height: 13rem;
-    padding: 1rem;
-    border-style: solid;
-    border-color: #F7F6F4;
-    border-width: 1px;
-    border-radius: 50%;
-    margin: 0 auto;
-    background: #F2F1EF;
-    box-shadow:
-            inset 5.11px 5.11px 0 #D1D0CF,
-            inset -5.11px -5.11px 0 #FFFFFF;
-}
-
-.image-container > img {
-    height: 100%;
-}
-
-/* SOCIAL LINKS NAV LIST GROUP   ------------------------------------------------------------------------------- */
-
-button {
-    box-shadow: none;
-}
-
-ul {
-    margin-block-end: 0;
-}
-
-.social-links li .fas,
-.social-links li .fab,
-.social-links li .far,
-.social-links li .fa,
-.social-links li .fa-sm,
-.social-links li .fa-lg,
-.social-links li a i {
-    text-align: center;
-    /*color: #D4D6D6;*/
-    text-shadow: 0 3px 0 0 #A4A4A4, 0 -4px 0 0 #fafafa;
-    font-size: 1.25rem;
-    z-index: 8;
-    /*text-shadow: #fff 0 1px 0;*/
-    -webkit-font-smoothing: antialiased;
-
-    box-shadow: 0 1px 0 0 #FAFAFA inset, 0 -2px 0 0 #D7D7D6 inset;
-    border-radius: 50%;
-
-}
-
-/* RECENT ACTIVITY SCROLLER   ------------------------------------------------------------------------------- */
-
-
-#verticalScroller {
-    margin: 0 auto;
-    position: relative;
-
-    height: 150px;
-
-    overflow: hidden;
-    background: transparent;
-
-    border-radius: .75rem;
-
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5));
-
-    box-shadow:
-            0 3.3px 0 rgba(0, 0, 0, 0.3),
-            0 -3.3px 0 rgba(255, 255, 255, 0.5),
-            inset 0 2px 0 rgba(255, 255, 255, 1);
-
-
-    flex-direction: column;
-    align-content: start;
-    padding: 0;
-}
-
-#verticalScroller > li {
-    position:absolute;
-    height: auto;
-    padding: 10px 10px 10px 10px;
-
-    background: transparent;
-    margin-bottom: 0;
-
-    box-shadow: none;
-}
-
-#verticalScroller .recent-activity {
-    overflow: hidden;
-    border-radius: .6rem;
-}
-
-.recent-activity {
-    border-radius: .6rem;
-}
-
-.activity-item {
-    height: 100px;
-    overflow: hidden;
-    border: 2px solid #F7F7F7;
-    border-radius: .6rem;
-
-    background: var(--gradient-4);
-
-    box-shadow:
-            3px 0 0 rgba(180, 180, 180, .7),
-            -3px 0 0 rgba(250, 250, 250, .4);
-
-}
-input[type="checkbox"]:checked + label ~ main #collapseZero #scrollOne,
-#collapseZero.show #scrollOne {
-    animation:
-            scroll-in .75s var(--glide) 0s 1 normal forwards running,
-            scroll-out .75s var(--glide) 4s 1 normal forwards running,
-            scroll-in .75s var(--glide) 12s 1 normal forwards running;
-    transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
-}
-
-input[type="checkbox"]:checked + label ~ main #collapseZero #scrollTwo,
-#collapseZero.show #scrollTwo {
-    animation:
-            scroll-in .75s var(--glide) 4s 1 normal forwards running,
-            scroll-out .75s var(--glide) 8s 1 normal forwards running;
-    transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
-}
-
-input[type="checkbox"]:checked + label ~ main #collapseZero #scrollThree,
-#collapseZero.show #scrollThree {
-    animation:
-            scroll-in .75s var(--glide) 8s 1 normal forwards running,
-            scroll-out .75s var(--glide) 12s 1 normal forwards running;
-    transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
-}
-
-#scrollOne,
-#scrollTwo,
-#scrollThree {
-    top: 150px;
-}
-
-
-@-webkit-keyframes scroll-out {
-    0% {
-        top: 0;
-    }
-    100% {
-        top: -200px;
-    }
-}
-@keyframes scroll-out {
-    0% {
-        top: 0;
-    }
-    100% {
-        top: -200px;
-    }
-}
-
-@-webkit-keyframes scroll-in {
-    0% {
-        top: 200px;
-    }
-    100% {
-        top: 0;
-    }
-}
-@keyframes scroll-in {
-    0% {
-        top: 200px;
-    }
-    100% {
-        top: 0;
-    }
-}
-
-
-/* CONTAINER STYLE VARIABLES  ------------------------------------------------------------------------------- */
-
-/*Neumorphic shadow inspired by (https://css-tricks.com/neumorphism-and-css/)*/
+/* Style general .btn .cta wrapper */
 
 .outset-container-2 {
     overflow: hidden;
@@ -1869,23 +1614,14 @@ input[type="checkbox"]:checked + label ~ main #collapseZero #scrollThree,
             0 6px 0 rgba(0, 0, 0, 0.4);
 }
 
-.inset-container {
-    overflow: hidden;
-    padding: .5rem;
-    border-radius: .75rem;
+/* Style general icon wrapper */
 
+.inset-inner {
+    background: var(--gradient-3);
     box-shadow:
-            inset -5px -8px 0 0 rgba(255, 255, 255, 0.5),
-            inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
+            0.3px 0.3px 0 rgba(237, 238, 243, 0.1),
+            -0.3px -0.3px 0 rgba(239, 241, 245, 0.1);
 }
-
-@media (max-width: 575.98px) {
-    .spread > .inset-container {
-        padding: .75rem;
-        box-shadow: none;
-    }
-}
-
 
 .inset-container-6 {
     overflow: hidden;
@@ -1900,31 +1636,7 @@ input[type="checkbox"]:checked + label ~ main #collapseZero #scrollThree,
             inset 0 -3.3px 0 #FFFFFF;
 }
 
-.inset-item {
-    position: relative;
-    border-radius: .6rem;
-    border: none;
-}
-
-.inset-item:after {
-    position: absolute;
-    bottom: 0;
-    content: "";
-
-    z-index: 1;
-
-    right: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    border-radius: .6rem;
-
-    background: var(--gradient-2);
-}
-
-/* LIST ITEM LINK HOVER */
+/* Style general .btn hover/feedback  */
 
 li.link-item.inset-item:hover::after {
     z-index: -1;
@@ -1945,14 +1657,7 @@ li.link-item.inset-item a {
     z-index: 12;
 }
 
-.inset-inner {
-    background: var(--gradient-3);
-    box-shadow:
-            0.3px 0.3px 0 rgba(237, 238, 243, 0.1),
-            -0.3px -0.3px 0 rgba(239, 241, 245, 0.1);
-}
-
-/* CTA BUTTON CONFIGS AND VARS   ------------------------------------------------------------------------------- */
+/* Style general button class */
 
 .btn {
     background-color: transparent;
@@ -1961,16 +1666,46 @@ li.link-item.inset-item a {
     border-radius: .6rem;
 }
 
+/* Style general cta button icons */
 
 .fa, .fab, .fal, .far, .fas {
-    /*color: rgba(182, 182, 182, .2);*/
     text-shadow: #fff 0 1px 0;
     -webkit-font-smoothing: antialiased;
     line-height: 1;
 }
 
+/* SOCIAL LINKS/BUTTON STYLE VARIABLES
+   ========================================================================== */
+
+/* Style social links list items */
+
 .social-links {
     width: 100%;
+}
+
+.social-links li .fas,
+.social-links li .fab,
+.social-links li .far,
+.social-links li .fa,
+.social-links li .fa-sm,
+.social-links li .fa-lg,
+.social-links li a i {
+    z-index: 8;
+    border-radius: 50%;
+    padding: .6rem;
+
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+
+    text-align: center;
+    text-shadow:
+            0 3px 0 0 #A4A4A4,
+            0 -4px 0 0 #fafafa;
+
+    box-shadow:
+            0 1px 0 0 #FAFAFA inset,
+            0 -2px 0 0 #D7D7D6 inset;
+
 }
 
 .nav-links .list-inline-item,
@@ -1987,8 +1722,6 @@ li.link-item.inset-item a {
 
 .social-links .btn {
     display: flex;
-    /*height: 4rem;*/
-    /*width: 4rem;*/
 
     justify-content: center;
     align-items: center;
@@ -2008,15 +1741,6 @@ li.link-item.inset-item a {
     box-shadow:
             2px 2px 0 rgba(237, 238, 243, 0.1),
             -2px -2px 0 rgba(239, 241, 245, 0.1);
-}
-
-.social-links li .fa,
-.social-links li .fab,
-.social-links li .fal,
-.social-links li .far,
-.social-links li .fas {
-    padding: .6rem;
-    font-size: 1rem;
 }
 
 @media (max-width: 575.98px) {
@@ -2043,6 +1767,9 @@ li.link-item.inset-item a {
     }
 
 }
+
+/* CTA BUTTON/LINKS STYLE VARIABLES
+   ========================================================================== */
 
 ul.activity-cta {
     padding-left: 0;
@@ -2084,7 +1811,6 @@ ul.activity-cta li i {
     justify-content: center;
     align-items: center;
 }
-
 
 .connect-cta .btn:hover,
 .connect-cta .btn:focus,
@@ -2152,6 +1878,9 @@ form .connect-cta input {
     margin-left: 0.25rem;
 }
 
+/* BUTTON/LINK ~ COLLAPSE CONFIGS
+   ========================================================================== */
+
 .activity-cta .btn {
     border: none;
     color: transparent;
@@ -2166,9 +1895,292 @@ section.show .activity-cta .btn {
     transition: border-color 0.15s ease-in-out 3s, box-shadow 0.15s ease-in-out 3s;
 }
 
-/* MISC   ------------------------------------------------------------------------------- */
+/* ==========================================================================
+   COLLAPSE SECTION TRANSITION CONFIGS
+   ========================================================================== */
 
-/*GitHub styles*/
+/* CREDIT cubic bezier preview/helper https://cubic-bezier.com/#.23,-0.09,.18,1.25 */
+/* BUG: on Chrome, transition on collapsing a shown section only takes effect on first element */
+
+
+.collapsing {
+    height: 0;
+    overflow: hidden;
+
+    -webkit-transition: height 700ms var(--glide) 0s;
+    -moz-transition: height 700ms var(--glide) 0s;
+    -o-transition: height 700ms var(--glide) 0s;
+    transition: height 700ms var(--glide) 0s;
+}
+
+/* ==========================================================================
+   SPLASH BANNER
+   ========================================================================== */
+
+/* Custom 'onboarding' banner, disposes upon initial click  */
+/* To be organized */
+/* Dispose splash banner content upon click any header-button */
+
+[id="collapseLanding"].collapse:not(.show) {
+    display: none;
+}
+
+#test1,
+#test2 {
+    animation: flex .75s var(--breeze) 2s;
+}
+
+@keyframes flex {
+    0% {
+        flex-direction: row;
+    }
+    100% {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 740px) {
+
+    h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
+
+#splash-heading {
+    font-family:var(--halyard-text);
+    font-weight: 100;
+    text-transform: uppercase;
+    color: var(--deep-1);
+}
+
+#download {
+    font-family: attribute-mono;
+}
+
+#download i {
+    color: var(--deep-4);
+}
+
+@media (max-width: 575.98px) {
+
+    #download {
+        font-size: .725rem;
+        margin-bottom: 1rem !important;
+    }
+    #collapseLanding {
+        margin-top: 2rem!important;
+    }
+
+    #band-c {
+        border-radius: .425rem!important;
+    }
+
+    #band-ul {
+        padding-top: .375rem!important;
+        padding-bottom: .375rem!important;
+    }
+    #band-t,
+    #band-b {
+        height: 40px !important;
+    }
+
+    #band-b {
+        width: 40px !important;
+    }
+
+    #band-t {
+        line-height: 1.2rem !important;
+    }
+
+}
+
+/* ==========================================================================
+   INTRODUCTION SECTION
+   ========================================================================== */
+
+.landing-subheading p {
+    font-family: "Halyard Micro", monospace;
+    font-size: .875rem;
+    font-weight: 300;
+    color: #707070;
+    text-shadow: #FAFAFA 0 1px 0, #D4D6D6 0 -1px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.landing-subheading p span:nth-of-type(2) {
+    color: #F26041;
+    text-shadow: #FAA490 0 1px 0;
+}
+
+.landing-subheading p span:nth-of-type(1) {
+    color: #187FE5;
+    text-shadow: #affbff 0 1px 0;
+}
+
+.landing-subheading p span:nth-of-type(3) {
+    color: #51d2bf;
+    text-shadow: #afffb3 0 1px 0;
+}
+
+.landing-subheading p span:nth-of-type(4) {
+    color: #8E0089;
+    text-shadow: #ffb3fe 0 1px 0;
+}
+
+.image-container {
+    width: 13rem;
+    height: 13rem;
+    padding: 1rem;
+    border-style: solid;
+    border-color: #F7F6F4;
+    border-width: 1px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: #F2F1EF;
+    box-shadow:
+            inset 5.11px 5.11px 0 #D1D0CF,
+            inset -5.11px -5.11px 0 #FFFFFF;
+}
+
+.image-container > img {
+    height: 100%;
+}
+
+/* INTRO RECENT ACTIVITY SCROLLER
+   ========================================================================== */
+
+#verticalScroller {
+    margin: 0 auto;
+    position: relative;
+
+    height: 150px;
+
+    overflow: hidden;
+    background: transparent;
+
+    border-radius: .75rem;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5));
+
+    box-shadow:
+            0 3.3px 0 rgba(0, 0, 0, 0.3),
+            0 -3.3px 0 rgba(255, 255, 255, 0.5),
+            inset 0 2px 0 rgba(255, 255, 255, 1);
+
+
+    flex-direction: column;
+    align-content: start;
+    padding: 0;
+}
+
+#verticalScroller > li {
+    position:absolute;
+    height: auto;
+    padding: 10px 10px 10px 10px;
+
+    background: transparent;
+    margin-bottom: 0;
+
+    box-shadow: none;
+}
+
+#verticalScroller .recent-activity {
+    overflow: hidden;
+    border-radius: .6rem;
+}
+
+.recent-activity {
+    border-radius: .6rem;
+}
+
+.activity-item {
+    height: 100px;
+    overflow: hidden;
+    border: 2px solid #F7F7F7;
+    border-radius: .6rem;
+
+    background: var(--gradient-4);
+
+    box-shadow:
+            3px 0 0 rgba(180, 180, 180, .7),
+            -3px 0 0 rgba(250, 250, 250, .4);
+
+}
+
+/* INTRO SCROLLER ~ INPUT CONFIGS
+   ========================================================================== */
+
+input[type="checkbox"]:checked + label ~ main #collapseZero #scrollOne,
+#collapseZero.show #scrollOne {
+    animation:
+            scroll-in .75s var(--glide) 0s 1 normal forwards running,
+            scroll-out .75s var(--glide) 4s 1 normal forwards running,
+            scroll-in .75s var(--glide) 12s 1 normal forwards running;
+    transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
+}
+
+input[type="checkbox"]:checked + label ~ main #collapseZero #scrollTwo,
+#collapseZero.show #scrollTwo {
+    animation:
+            scroll-in .75s var(--glide) 4s 1 normal forwards running,
+            scroll-out .75s var(--glide) 8s 1 normal forwards running;
+    transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
+}
+
+input[type="checkbox"]:checked + label ~ main #collapseZero #scrollThree,
+#collapseZero.show #scrollThree {
+    animation:
+            scroll-in .75s var(--glide) 8s 1 normal forwards running,
+            scroll-out .75s var(--glide) 12s 1 normal forwards running;
+    transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
+}
+
+#scrollOne,
+#scrollTwo,
+#scrollThree {
+    top: 150px;
+}
+
+@-webkit-keyframes scroll-out {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -200px;
+    }
+}
+@keyframes scroll-out {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -200px;
+    }
+}
+
+@-webkit-keyframes scroll-in {
+    0% {
+        top: 200px;
+    }
+    100% {
+        top: 0;
+    }
+}
+@keyframes scroll-in {
+    0% {
+        top: 200px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+/* ==========================================================================
+   REPO STATS
+   ========================================================================== */
+
+/* GitHub styles */
 
 .repo-color {
     position: relative;
@@ -2196,14 +2208,16 @@ section.show .activity-cta .btn {
 }
 
 
-/* RECOMMENDATIONS SECTION  ------------------------------------------------------------------------------- */
+/* ==========================================================================
+   RECOMMENDATIONS SECTION
+   ========================================================================== */
+
+/* CREDIT:(modified) Embed LinkedIn Recommendations with HTML and CSS https://www.damosdesigns.com/LinkedinRecommendationsOnWebsite/ */
 
 figure {
     border-radius: .6rem;
     background: var(--gradient-2);
 }
-
-/* CREDIT:(modified) Embed LinkedIn Recommendations with HTML and CSS https://www.damosdesigns.com/LinkedinRecommendationsOnWebsite/ */
 
 .pv-recommendation-entity:first-child {
     padding-top: 0;
@@ -2371,7 +2385,9 @@ blockquote, q {
     z-index: 1;
 }
 
-/* LOCAL SECTION VARIABLES ------------------------------------------------------------------------------- */
+/* ==========================================================================
+   LOCAL SECTION COLOR VARIABLES
+   ========================================================================== */
 
 ::selection {
     background: var(--yellow);
@@ -2505,12 +2521,13 @@ blockquote, q {
     background: var(--raisin);
 }
 
-/* HEADER BUTTON FEEDBACK   ------------------------------------------------------------------------------- */
-
+/* ==========================================================================
+   HEADER BUTTON DATA-TOGGLE FEEDBACK VARIABLES
+   ========================================================================== */
 /* CREDIT (inspiration) https://stackoverflow.com/questions/137449/css-for-hover-that-includes-all-child-elements */
 
 [id^="heading"] * {
-    transition: all 0.3s 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.3s var(--glide) 0.2s;
 }
 #headingOne button:hover {
     /*opacity: 1;*/
@@ -2589,7 +2606,9 @@ blockquote, q {
     border-color: var(--yellow);
 }
 
-/* INTRO ANIMATION  ------------------------------------------------------------------------------- */
+/* ==========================================================================
+   LANDING ANIMATION
+   ========================================================================== */
 
 /* CREDIT (helper tool) https://cubic-bezier.com/#.23,-0.09,.18,1.25 */
 /* CREDIT (inspiration) timing functions are modeled after: https://codeconvey.com/pure-css-accordion-menu/ */
