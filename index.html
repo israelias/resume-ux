@@ -23,25 +23,29 @@
 </head>
 <body id="bodyMain" data-spy="scroll" data-target="#navOutline" data-offset="40">
 
-    <!-- start header container -->
+    <!-- start HEADER MAIN -->
     <header class="header">
-        <!-- start navbar Container -->
+        <!-- start NAV MAIN -->
         <nav class="navbar navbar-light fixed-top">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navOutline"
-                        aria-controls="structure" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button"
+                        data-toggle="collapse"
+                        data-target="#navOutline"
+                        aria-controls="structure"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
                     <ion-icon name="menu-outline" class="closed"></ion-icon>
                     <ion-icon name="close-outline" class="open"></ion-icon>
                 </button>
-                <!--start logo -->
+                <!-- start LOGO -->
                 <a class="navbar-brand" href="index.html" role="button">
                     JS<span class="d-none d-sm-inline">.stack</span>
                 </a><!--close logo -->
             </div>
-        </nav><!-- close navbar container -->
-    </header><!-- close header container -->
+        </nav><!-- close nav main -->
+    </header><!-- close header main -->
 
-    <!-- Expand All Toggle -->
+    <!-- start EXPAND All TOGGLE -->
     <input type="checkbox" id="toggle-all" class="toggle-all" data-target=".collapse-all" aria-controls="">
     <label for="toggle-all" class="header-icon  toggle-all" onclick>
         <ion-icon name="code-working-outline" class="d-none closed"></ion-icon>
@@ -49,9 +53,9 @@
         <ion-icon name="contract-outline" class="open"></ion-icon>
         <ion-icon name="expand-outline" class="closed"></ion-icon>
     </label>
-    <!-- close Expand All Toggle-->
+    <!-- close expand all toggle-->
 
-    <!-- start side menu nav outline -->
+    <!-- start NAV OUTLINE -->
     <nav id="navOutline" class="collapse nav-outline">
         <ol class="nav nav-pills menu-sidebar list-h1">
             <li class="nav-item h1-00">
@@ -266,12 +270,12 @@
             </li>
         </ol>
     </nav>
-    <!-- close side menu nav outline -->
+    <!-- close nav outline -->
 
     <main id="resumeStack" class="main-body">
 
         <!-- start SPLASH BANNER -->
-        <section id="collapseLanding" class="show" aria-labelledby="splashLanding" data-parent="#resumeStack">
+        <section id="collapseLanding" class="d-none show" aria-labelledby="splashLanding" data-parent="#resumeStack">
             <div class="pb-4 sm-pb-5">
                 <div id="band-c" class="landing-container inset-container">
                     <h1 class="inset-item lh-1 pt-5 h3">
@@ -303,11 +307,66 @@
             </div>
         </section><!-- close splash banner -->
 
+        <!-- start SPLASH BANNER -->
+        <section id="collapseLanding" class="show" aria-labelledby="splashLanding" data-parent="#resumeStack">
+            <div class="d-flex flex-column pb-4 pb-sm-5">
+
+                <h1 class="mt-sm-5 mt-md-0 pt-sm-0 pt-md-5 lh-1 h3">
+
+                    <span class="d-none flex-row flex-sm-row flex-md-row mr-auto mr-sm-auto mr-md-0 mr-lg-auto ml-lg-auto text-lowercase">
+                        The c<span class="d-none d-md-inline pr-3">urriculum </span><span class="d-md-none">.
+                    </span>v<span class="d-md-none">.</span><span class="d-none d-md-inline pr-3">itae</span>
+                    </span>
+
+                    <span class="d-flex flex-row flex-sm-row flex-md-row mr-auto mr-sm-auto mr-md-0 mr-lg-auto ml-lg-auto text-lowercase">
+                        The curriculum vitae
+                    </span>
+                    <span class=" d-flex flex-row flex-sm-row flex-md-column mr-auto mr-sm-auto mr-md-0">
+                        of Joem Elias Sanez
+                    </span>
+                </h1>
+                <h2 class="h6">
+                    <span id="test1" class="d-flex flex-column flex-sm-column flex-md-row mb-5 mb-sm-5 mb-md-0 pr-2"
+                          style="width:; line-height: .875rem; color: #a4a4a4;">
+                        <span class="text-right">(dev</span>
+                        <span class="text-right">el</span>
+                        <span class="text-right">op</span>
+                        <span class="text-right d-none d-md-flex pr-2">ed</span>
+                    </span>
+                    <span class="position-absolute text-left font-italic d-flex flex-column mt-4 pt-3 pr-4 d-md-none">ed</span>
+                    <span id="test2" class="d-flex flex-column flex-sm-column flex-md-row mt-auto mt-sm-auto mt-md-0"
+                          style="width:; line-height: .9rem;">
+                        <span class=" pr-2">for </span>
+                        <span class="text-left ml-2 ml-sm-2 ml-md-0 pr-2">the </span>
+                        <span class="text-left ml-4 ml-sm-4 ml-md-0">web)</span>
+                    </span>
+                </h2>
+                <div id="band-ul" class="landing-masthead activity-cta mt-2 mb-3 pl-0 inset-container">
+                    <div id="band-li" class="d-flex flex-row align-items-stretch">
+                        <span id="band-t"
+                              class="outset-container-2 contact-text flex-fill mr-2 text-muted justify-content-between align-middle" style="padding-top: .625rem;">
+                            <span id="download" class="value">
+                                <i class="far fa-file-pdf pr-1" aria-hidden="true"></i>
+                                sanez_cv_2020.pdf
+                            </span>
+                        </span>
+                        <a id="band-b" class="outset-container-2 btn" href="#" target="_blank">
+                            <span class="inset-inner">
+                                <i class="fas fa-download"></i>
+                                <span class="sr-only">Download my CV</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- close splash banner -->
+
         <!-- start 0.0 (Introduction: Social Links & Recent Activity) -->
         <article id="articleZero" class="article">
             <!-- start 0.0 HEADER BUTTON -->
             <header id="headingZero">
-                <h3 class="header-title d-flex">
+                <h3 class="header-title">
                     <button id="startStack" class="collapsed"
                             type="button"
                             data-toggle="collapse"
@@ -554,14 +613,14 @@
                         </section><!-- close 0.2 sub-section -->
                     </div><!-- close page-right media -->
                 </div><!-- close 0.0 spread -->
-            </section> <!-- close 0.0 section -->
+            </section><!-- close 0.0 section -->
         </article><!-- close 0.0 -->
 
         <!-- 1.0 (Specialization: Assets & Expertise) -->
         <article id="articleOne" class="article">
             <!-- start 1.0 HEADER BUTTON -->
             <header id="headingOne">
-                <h3 class="header-title d-flex">
+                <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
                             data-target="#collapseOne"
@@ -646,7 +705,6 @@
                             <h5>
                                 Expertise
                             </h5>
-
                             <!-- start 1.2 LIST GROUP -->
                             <ul class="specialization-activity">
 
@@ -790,9 +848,7 @@
                                 </li>
                                 <!-- /Specialization Item -->
 
-                            </ul>
-                            <!-- /Specialization Section -->
-
+                            </ul><!-- close 1.2 list group -->
                             <!-- start 1.2 CTA -->
                             <div class="activity-cta mt-2 inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
@@ -810,7 +866,6 @@
                                     </a>
                                 </div>
                             </div><!-- close 1.2 CTA -->
-
                         </section><!-- close 1.2 sub-section -->
                     </div><!-- close 1.0 page-right media -->
                 </div><!-- close 1.0 spread -->
@@ -821,7 +876,7 @@
         <article id="articleTwo" class="article">
             <!-- start 2.0 HEADER -->
             <header id="headingTwo">
-                <h3 class="header-title d-flex">
+                <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
                             data-target="#collapseTwo"
@@ -868,7 +923,7 @@
                                 communities around the world has also taught me the rewards of
                                 entrepreneurialism and leadership.
                             </p>
-                            <p class="card-text">
+                            <p>
                                 I believe the most essential skill — for the building industry or otherwise —
                                 is to be able to think and produce <strong>algorithmically</strong>. As a full
                                 stack developer,  I stay up to speed with new tech by experimenting with new
@@ -925,7 +980,7 @@
                                         </span>
                                     </aside>
                                 </li>
-                                <!-- /Proficiency Item -->
+                                <!-- /proficiency item -->
 
                                 <!-- Proficiency Item -->
                                 <li class="inset-item">
@@ -1018,7 +1073,7 @@
                                 <li class="inset-item">
                                     <div class="list-content">
                                         <div class="list-icon col-2">
-                                            <ion-icon name="logo-html5"></ion-icon>
+                                            <ion-icon name="server-sharp"></ion-icon>
                                         </div>
                                         <div class="col-10">
                                             <h6>SQL / NoSQL</h6>
@@ -1044,7 +1099,7 @@
                                 <!-- /Proficiency Item -->
 
                                 <!-- Proficiency Item -->
-                                <li class="inset-item">
+                                <li class="inset-item d-none">
                                     <div class="list-content">
                                         <div class="list-icon col-2">
                                             <ion-icon name="logo-html5"></ion-icon>
@@ -1076,7 +1131,7 @@
                                 <li class="inset-item">
                                     <div class="list-content">
                                         <div class="list-icon col-2">
-                                            <ion-icon name="logo-html5"></ion-icon>
+                                            <img src="https://img.icons8.com/wired/32/000000/autodesk-revit.png"/>
                                         </div>
                                         <div class="col-10">
                                             <h6>BIM / Revit</h6>
@@ -1105,7 +1160,7 @@
                                 <li class="inset-item">
                                     <div class="list-content">
                                         <div class="list-icon col-2">
-                                            <ion-icon name="logo-html5"></ion-icon>
+                                            <ion-icon name="cube"></ion-icon>
                                         </div>
                                         <div class="col-10">
                                             <h6>Rhino / AutoCAD</h6>
@@ -1134,7 +1189,7 @@
                                 <li class="inset-item">
                                     <div class="list-content">
                                         <div class="list-icon col-2">
-                                            <ion-icon name="logo-html5"></ion-icon>
+                                            <ion-icon name="create"></ion-icon>
                                         </div>
                                         <div class="col-10">
                                             <h6>Adobe XD / PS / AI / ID</h6>
@@ -1218,7 +1273,6 @@
                                 <!-- /Proficiency Item -->
 
                             </ul><!-- close 2.2 list group -->
-
                             <!-- start 2.2 CTA -->
                             <div class="activity-cta mt-2 inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
@@ -1239,7 +1293,6 @@
                                     </button>
                                 </div>
                             </div><!-- close 2.2 CTA -->
-
                         </section><!-- close 2.2 sub-section -->
                     </div><!-- close 2.0 page-right media -->
                 </div><!-- close 2.0 spread -->
@@ -1250,7 +1303,7 @@
         <article id="articleThree" class="article">
             <!-- start 3.0 HEADER -->
             <header id="headingThree">
-                <h3 class="header-title d-flex">
+                <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
                             data-target="#collapseThree"
@@ -1665,7 +1718,7 @@
         <article id="articleFour" class="article">
             <!-- start 4.0 HEADER -->
             <header id="headingFour">
-                <h3 class="header-title d-flex">
+                <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
                             data-target="#collapseFour"
@@ -2135,7 +2188,7 @@
         <article class="article d-none">
             <!-- start 4.0 HEADER -->
             <header id="headingFour-ext">
-                <h3 class="header-title d-flex">
+                <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
                             data-target="#collapseFour-ext"
@@ -2887,7 +2940,7 @@
         <article id="articleFive" class="article">
             <!-- start 5.0 HEADER -->
             <header id="headingFive">
-                <h3 class="header-title d-flex">
+                <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
                             data-target="#collapseFive"
@@ -2902,9 +2955,9 @@
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
-                                <ion-icon name="code-working-outline" class="closed"></ion-icon>
-                                <ion-icon name="code-slash-outline" class="open"></ion-icon>
-                            </span>
+                            <ion-icon name="code-working-outline" class="closed"></ion-icon>
+                            <ion-icon name="code-slash-outline" class="open"></ion-icon>
+                        </span>
                     </button>
                 </h3>
             </header><!-- close 5.0 header -->
@@ -3382,14 +3435,14 @@
                         </section><!-- close 5.2 sub-section -->
                     </div><!-- close 5.0 page-right media -->
                 </div><!-- close 5.0 spread -->
-            </section> <!-- close 5.0 section -->
+            </section><!-- close 5.0 section -->
         </article><!-- close 5.0 -->
 
         <!-- 6.0 (Connect: Contact Info & Message Form) -->
         <article id="articleSix" class="article">
             <!-- start 6.0 HEADER -->
             <header id="headingSix">
-                <h3 class="header-title d-flex">
+                <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
                             data-target="#collapseSix"
@@ -3404,9 +3457,9 @@
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
-                                <ion-icon name="code-working-outline" class="closed"></ion-icon>
-                                <ion-icon name="code-slash-outline" class="open"></ion-icon>
-                            </span>
+                            <ion-icon name="code-working-outline" class="closed"></ion-icon>
+                            <ion-icon name="code-slash-outline" class="open"></ion-icon>
+                        </span>
                     </button>
                 </h3>
             </header><!-- close 6.0 header -->
@@ -3528,7 +3581,7 @@
 
                                 </div><!-- close 6.2 form group -->
                             </form><!-- close 6.2 form element -->
-                        </section>
+                        </section><!-- close 6.2 sub-section -->
                     </div><!-- close 6.0 page-right media -->
                 </div><!-- close 6.0 spread -->
             </section><!-- close 6.0 section -->
@@ -3547,8 +3600,8 @@
                     Joem Elias Sanez
                 </a>
             </p>
-        </div><!-- /Footer Item -->
-    </footer><!-- /Footer container -->
+        </div><!-- /footer item -->
+    </footer><!-- /footer main -->
 
     <!--OPT 1 Bootstrap Alpha-->
     <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>-->
