@@ -556,6 +556,7 @@ section.right > ul > li .list-content {
     justify-content: space-between;
 }
 
+/*.proficiency-activity ion-icon,*/
 section.right > ul > li .list-icon {
     display: flex;
 
@@ -571,10 +572,10 @@ section.right > ul > li .list-icon ion-icon {
     --ionicon-stroke-width: 40px;
 }
 
-section.right > ul.proficiency-activity li .list-icon ion-icon {
-    font-size: 1.75rem;
-    color: var(--deep-1);
-}
+/*section.right > ul.proficiency-activity li .list-icon ion-icon {*/
+/*    font-size: 1.75rem;*/
+/*    color: var(--deep-1);*/
+/*}*/
 
 section.right > ul > li .list-text {
     display: flex;
@@ -2205,8 +2206,6 @@ input[type="checkbox"]:checked + label ~ main #collapseZero #scrollThree,
 
     list-style: none;
 
-
-    /*list-unstyled d-flex w-100 pt-1 justify-content-between align-items-center pb-2 mb-2*/
 }
 /* GitHub styles */
 
@@ -2238,6 +2237,93 @@ input[type="checkbox"]:checked + label ~ main #collapseZero #scrollThree,
     background-color: #FBFBFB;
     color: #757575;
 }
+
+.proficiency-activity .stats-activity {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.proficiency-activity ion-icon {
+    font-size: 1.75rem;
+    color: var(--deep-1);
+}
+
+.proficiency-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.proficiency-title {
+    display: flex;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    margin-right: auto;
+    margin-bottom: auto;
+    /*d-flex mr-auto mb-auto pt-2 pl-2*/
+}
+
+.proficiency-stats {
+    align-self: center;
+    margin-left: auto;
+    margin-top: auto;
+    padding-right: .5rem;
+    /*align-self-center ml-auto mt-auto pr-2*/
+}
+
+.icon-heading {
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+}
+/* sup sub */
+
+[data-coverage-project-count]:before,
+[data-coverage-time]:before {
+    bottom: -.25em;
+    position: relative;
+    font-size: .7rem;
+    font-family: attribute-text;
+    font-weight: 300;
+    /*font-feature-settings: 'smcp';*/
+    /*text-transform: uppercase;*/
+    letter-spacing: .02rem;
+    line-height: 0;
+    vertical-align: baseline;
+    color: var(--deep-1);
+    content: var(--label);
+}
+[data-coverage-time]:after,
+[data-coverage-project-count]:after {
+    display: inline-block;
+    padding: .2em .45em;
+    margin-top: -.1rem;
+    margin-left: -.5rem;
+
+    font-size: .75rem;
+    font-family: attribute-mono;
+    font-weight: 400;
+    line-height: 1;
+
+    border-radius:50rem;
+
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    text-shadow: none;
+
+    background-color: #FBFBFB;
+    color: #757575;
+}
+
+[data-coverage-time] { --label: 'years \00a0'; }
+[data-coverage-project-count] { --label: 'projects \00a0'; }
+
+[data-coverage-time]:before { content: var(--label); }
+[data-coverage-project-count]:before { content: var(--label); }
+
+[data-coverage-time]:after { content: attr(data-coverage-time); color: #f93154; }
+
+[data-coverage-project-count]:after { content: attr(data-coverage-project-count); color: #1266f1; }
+
 
 .language-activity {
     margin-top: .5rem;
@@ -2271,12 +2357,18 @@ input[type="checkbox"]:checked + label ~ main #collapseZero #scrollThree,
     /*outline: 0;*/
     /*opacity: 0.9;*/
 }
+[data-repo-commit-count] {
+    --label: 'commits';
+}
 
-[data-repo-size]:after { content: attr(data-repo-size) '\00a0' 'mb'; }
+[data-repo-size] {
+    --label: 'mb';
+}
+[data-repo-size]:after { content: attr(data-repo-size) '\00a0' var(--label); }
 
 [data-repo-branch-count]:after { content: attr(data-repo-branch-count); }
 
-[data-repo-commit-count]:after { content: attr(data-repo-commit-count) '\00a0' 'commits'; }
+[data-repo-commit-count]:after { content: attr(data-repo-commit-count) '\00a0' var(--label); }
 
 .project-item.active [data-repo-status]:after {
     content: attr(data-repo-status);
