@@ -34,8 +34,15 @@
                         aria-controls="structure"
                         aria-expanded="false"
                         aria-label="Toggle navigation">
-                    <ion-icon name="menu-outline" class="closed"></ion-icon>
-                    <ion-icon name="close-outline" class="open"></ion-icon>
+                    <!-- menu outline, close outline -->
+                    <div class="toggle-container d-flex">
+                        <span class="menu-icon d-flex position-relative align-self-center pb-4 left">
+                            <ion-icon id="showmenu" name="close-outline"
+                                      class="see-more d-flex position-absolute float-left"></ion-icon>
+                            <ion-icon id="hidemenu" name="menu-outline"
+                                      class="see-less d-flex position-absolute float-left"></ion-icon>
+                        </span>
+                    </div>
                 </button>
                 <!-- start LOGO -->
                 <a class="navbar-brand" href="index.html" role="button">
@@ -57,15 +64,15 @@
 
     <!-- start NAV OUTLINE -->
     <nav id="navOutline" class="collapse nav-outline">
-        <ol class="nav nav-pills menu-sidebar list-h1">
-            <li class="nav-item h1-00">
+        <ol class="nav nav-pills menu-sidebar list-h1 outset-container-2 nav-content">
+            <li class="nav-item h1-00 outline-item">
                 <a class="nav-link" href="#collapseLanding">
-                    The curriculum vitae of Joem Elias Sanez (developed for the web).
+                    The curriculum vitae of Joem Elias Sanez
                 </a>
                 <ul class="nav list-h2">
                     <li class="nav-item h2-00">
                         <a class="nav-link" href="#splash-banner">
-                            jStack.CV
+                            (developed for the web)
                         </a>
                         <ul class="nav list-h3">
                             <li class="nav-item h3-00">
@@ -469,8 +476,128 @@
                             <!--start 0.2 LIST GROUP-->
                             <ul id="verticalScroller" class="recent-activity-cta d-none d-md-flex justify-content-center">
 
+                                <!-- start PROJECT ITEM (MS1) -->
+                                <li id="scrollOne" class="recent-activity project-item row active w-100">
+                                    <div class="activity-item flex-column pl-4 pr-4">
+                                    <!-- start PROJECT REPO STATS -->
+                                    <ul class="stats-activity">
+                                        <li class="data-repo-commit">
+                                            <a href="https://github.com/israelias/resume-redux/commits/master"
+                                               target="_blank" class="btn-link data-repo data-stats"
+                                               data-repo-commit-count="178">
+                                                <ion-icon name="git-commit" class="align-middle">
+                                                    <span class="sr-only">
+                                                        Commit count
+                                                    </span>
+                                                </ion-icon>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/israelias/resume-redux/branches"
+                                               target="_blank" class="btn-link data-repo data-stats"
+                                               data-repo-branch-count="2">
+                                                <ion-icon name="git-branch" class="align-middle">
+                                                    <span class="sr-only">
+                                                        Branch count
+                                                    </span>
+                                                </ion-icon>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/israelias/resume-redux/settings"
+                                               target="_blank" class="btn-link data-repo data-stats"
+                                               data-repo-size="88.4">
+                                                <ion-icon name="barcode" class="align-middle">
+                                                    <span class="sr-only">
+                                                        Repo size
+                                                    </span>
+                                                </ion-icon>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://israelias.github.io/resume-redux/"
+                                               target="_blank" class="btn-link data-repo data-stats"
+                                               data-repo-status="Active">
+                                                <ion-icon name="rocket" class="align-middle">
+                                                    <span class="sr-only">
+                                                        Deployment status
+                                                    </span>
+                                                </ion-icon>
+                                            </a>
+                                        </li>
+                                    </ul ><!-- close project repo stats -->
+
+                                    <!-- PROJECT THUMBNAIL -->
+                                    <div class="col-6 col-sm-5 col-md-5 col-lg-5">
+                                        <img src="https://github.com/israelias/resume-redux/blob/master/documentation/RedUX_200901_1639.png?raw=true"
+                                             width="75"
+                                             alt="project thumbnail"
+                                             class="img-thumbnail img-fluid mb-2">
+                                    </div>
+                                    <!-- /project thumbnail -->
+
+                                    <!-- PROJECT TEXT -->
+                                    <div class="col-6 col-sm-7 col-md-7 col-lg-7 pr-2 pl-3">
+                                        <h6 class="mb-1">
+                                            cv-of-js
+                                        </h6>
+                                        <small>
+                                            User-Centric Front-end Development
+                                        </small>
+                                        <!-- start PROJECT LANGUAGE STATS -->
+                                        <div class="language-activity">
+                                            <!-- start PROGRESS CONTAINER -->
+                                            <div class="progress">
+                                                <!-- HTML PROGRESS BAR -->
+                                                <div class="progress-bar progress-html"
+                                                     role="progressbar"
+                                                     aria-valuenow="78.1"
+                                                     aria-valuemin="0"
+                                                     aria-valuemax="100"
+                                                     aria-label="HTML 78.1"
+                                                     style="width: 78.1%;">
+                                                </div>
+                                                <!-- /html progress bar -->
+
+                                                <!-- CSS PROGRESS BAR -->
+                                                <div class="progress-bar progress-css"
+                                                     role="progressbar"
+                                                     aria-valuenow="29.9"
+                                                     aria-valuemin="0"
+                                                     aria-valuemax="100"
+                                                     aria-label="CSS 21.9"
+                                                     style="width: 21.9%;">
+                                                </div>
+                                                <!-- /css progress bar -->
+
+                                            </div><!-- close progress container -->
+
+                                            <!-- HTML PROGRESS LABEL -->
+                                            <a class="language-item"
+                                               href="https://github.com/israelias/resume-redux/search?l=html" target="_blank">
+                                                <ion-icon name="ellipse" class="mr-2 repo-html"></ion-icon>
+                                                <span class="mr-1 text-body small">HTML</span>
+                                                <span class="text-black-50 small">78.1%</span>
+                                            </a>
+                                            <!-- /html progress label -->
+
+                                            <!-- CSS PROGRESS LABEL -->
+                                            <a class="language-item"
+                                               href="https://github.com/israelias/resume-redux/search?l=css" target="_blank">
+                                                <ion-icon name="ellipse" class="mr-2 repo-css"></ion-icon>
+                                                <span class="mr-1 text-body">CSS</span>
+                                                <span class="text-black-50">21.9%</span>
+                                            </a>
+                                            <!-- /css progress label -->
+
+                                        </div><!-- close project language stats -->
+                                    </div>
+                                    <!-- /project text -->
+                                    </div>
+                                </li><!-- close project item (ms1) -->
+
                                 <!-- Commit Item -->
-                                <li id="scrollOne" class="recent-activity bg-transparent col-12">
+                                <li id="scrollOne" class="d-none recent-activity bg-transparent col-12">
                                     <div class="activity-item d-flex flex-column pl-4 pr-4">
                                         <div class="d-flex w-100 pt-1 justify-content-between">
                                             <p class="mb-1">Add content requirements to README.md</p>
@@ -3458,8 +3585,8 @@
                             <!-- Recommendation Item -->
                             <figure class="pv-recommendation-entity">
                                 <div class="pv-recommendation-entity__header">
-                                    <a href="https://www.linkedin.com/in/per-johan-dahl-9a72872/"
-                                       class="pv-recommendation-entity__member" target="_blank">
+                                    <a href="https://www.linkedin.com/in/per-johan-dahl-9a72872/" target="_blank"
+                                       class="pv-recommendation-entity__member">
                                         <img src="assets/images/per_johan_dahl.jpeg" width="56" height="56" alt="Per-Johan Dahl">
                                         <h6 class="t-16 t-black t-bold">
                                             Per-Johan Dahl
@@ -3527,10 +3654,10 @@
                             <!-- Recommendation Item -->
                             <figure class="pv-recommendation-entity">
                                 <div class="pv-recommendation-entity__header">
-                                    <a href="https://www.linkedin.com/in/ioanaurma/"
-                                       class="pv-recommendation-entity__member" target="_blank">
+                                    <a href="https://www.linkedin.com/in/ioanaurma/" target="_blank"
+                                       class="pv-recommendation-entity__member">
                                         <img src="assets/images/ioana_urma.jpeg" width="56" height="56"
-                                             alt="Ioana Urma">
+                                             alt="Ioana Urma" class="img-fluid figure-img img-thumbnail">
                                         <h6 class="t-16 t-black t-bold">
                                             Ioana Urma
                                         </h6>
