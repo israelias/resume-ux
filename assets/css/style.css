@@ -810,6 +810,85 @@ details[open] #readmore {
     }
 }
 
+@-webkit-keyframes disappear-90 {
+    0% {
+        transform: rotateZ(0);
+        transform: scaleX(1);
+        trasform: rotateY(0);
+        opacity: 1;
+    }
+    50% {
+        /*transform: scaleX(0);*/
+        /*trasform: rotateY(0);*/
+
+    }
+    100% {
+        opacity: 0;
+        transform: rotateY(1.571rad);
+        transform: rotateZ(180deg);
+        transform: scaleX(0);
+    }
+}
+@keyframes disappear-90 {
+    0% {
+        transform: rotateZ(0);
+        transform: scaleX(1);
+        trasform: rotateY(0);
+        opacity: 1;
+    }
+    50% {
+        /*transform: scaleX(0);*/
+        /*trasform: rotateY(0);*/
+
+    }
+    100% {
+        transform: rotateY(1.571rad);
+        transform: rotateZ(180deg);
+        transform: scaleX(0);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes appear-90 {
+    0% {
+        transform: rotateY(1.571rad);
+        transform: rotateZ(180deg);
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    50% {
+        /*transform: rotateZ(0);*/
+        /*trasform: rotateY(0);*/
+        /*transform: scaleX(0);*/
+    }
+    100% {
+        transform: rotateZ(0);
+        trasform: rotateY(0);
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+@keyframes appear-90 {
+    0% {
+        transform: rotateY(1.571rad);
+        transform: rotateZ(180deg);
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    50% {
+        /*transform: rotateZ(0);*/
+        /*trasform: rotateY(0);*/
+        /*transform: scaleX(0);*/
+    }
+    100% {
+        transform: rotateZ(0);
+        trasform: rotateY(0);
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+
 @-webkit-keyframes menu-in {
     0% {
         padding-left: 0;
@@ -862,6 +941,8 @@ details[open] #readmore {
     transition: all var(--flashing) var(--zip) var(--early);
 }
 
+.show-swap,
+.hide-swap,
 .see-more,
 .see-less {
     color: black;
@@ -890,6 +971,67 @@ details[open] #readmore {
     position: relative;
     animation: appear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
     transition: all var(--flashing) var(--glide) var(--short);
+}
+
+/* Hide .closed when section is expanded */
+
+/*input[type="checkbox"]:checked + label .show-swap {*/
+/*    position: relative;*/
+/*    animation: appear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;*/
+/*    transition: all var(--flashing) var(--glide) var(--short);*/
+/*}*/
+
+/*input[type="checkbox"]:not(checked) + label .show-swap {*/
+/*    position: relative;*/
+/*    animation: disappear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;*/
+/*    transition: all var(--flashing) var(--glide) var(--short);*/
+/*}*/
+
+/*input[type="checkbox"]:checked + label .hide-swap {*/
+/*    position: relative;*/
+/*    animation: disappear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;*/
+/*    transition: all var(--flashing) var(--glide) var(--short);*/
+/*}*/
+
+/*input[type="checkbox"]:not(checked) + label .hide-swap {*/
+/*    position: relative;*/
+/*    animation: appear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;*/
+/*    transition: all var(--flashing) var(--glide) var(--short);*/
+/*}*/
+
+input[type="checkbox"]:checked + label .show-swap {
+    position: relative;
+    transform: rotateZ(180deg);
+    animation: appear-90 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+    transition: all var(--flashing) var(--glide) var(--short);
+}
+
+input[type="checkbox"]:not(checked) + label .show-swap {
+    position: relative;
+    /*transform: rotateZ(180deg);*/
+    animation: disappear-90 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+    transition: all var(--flashing) var(--glide) var(--short);
+}
+
+input[type="checkbox"]:checked + label .hide-swap {
+    position: relative;
+    transform: rotateZ(180deg);
+    /*display: none;*/
+    animation: appear-90 var(--flashing) var(--swoop) var(--early) 1 normal reverse running;
+    transition: all var(--flashing) var(--glide) var(--short);
+}
+
+input[type="checkbox"]:not(checked) + label .hide-swap {
+    position: relative;
+    animation: disappear-90 var(--flashing) var(--swoop) var(--early) 1 normal reverse running;
+    transition: all var(--flashing) var(--glide) var(--short);
+}
+
+/* Show .open when section is expanded */
+
+input[type="checkbox"]:checked + label .o pen {
+    display: block;
+    color: var(--deep-1);
 }
 
 /* ==========================================================================

@@ -36,7 +36,7 @@
                         aria-label="Toggle navigation">
                     <!-- menu outline, close outline -->
                     <div class="toggle-container d-flex">
-                        <span class="menu-icon d-flex position-relative align-self-center pb-4 left">
+                        <span class="menu-icon d-flex position-relative align-self-center pb-4 ">
                             <ion-icon id="showmenu" name="close-outline"
                                       class="see-more d-flex position-absolute float-left"></ion-icon>
                             <ion-icon id="hidemenu" name="menu-outline"
@@ -55,10 +55,16 @@
     <!-- start EXPAND All TOGGLE -->
     <input type="checkbox" id="toggle-all" class="toggle-all" data-target=".collapse-all" aria-controls="">
     <label for="toggle-all" class="header-icon  toggle-all" onclick>
-        <ion-icon name="code-working-outline" class="d-none closed"></ion-icon>
-        <ion-icon name="code-slash-outline" class="d-none open"></ion-icon>
-        <ion-icon name="contract-outline" class="open"></ion-icon>
-        <ion-icon name="expand-outline" class="closed"></ion-icon>
+        <div class="toggle-container d-flex">
+            <span class="menu-icon d-flex position-relative align-self-center pb-4">
+                <ion-icon id="hideswap" name="toggle-outline"
+                          class="hide-swap d-flex position-absolute float-left clos ed"></ion-icon>
+                <ion-icon id="showswap" name="toggle-filled"
+                          class="show-swap d-flex position-absolute float-left ope n"></ion-icon>
+                <ion-icon name="contract-outline" class="open d-none"></ion-icon>
+                <ion-icon name="expand-outline" class="closed d-none"></ion-icon>
+            </span>
+        </div>
     </label>
     <!-- close expand all toggle-->
 
