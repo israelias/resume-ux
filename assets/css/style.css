@@ -2794,8 +2794,19 @@ ion-icon.icon-outline {
     border-radius: 50%;
 }
 
+
 /* .data-stats includes all data-* */
 /* .data-repo + for repo-activity  */
+
+/* REPO BADGE VALUE */
+
+/* This styles the status badge VALUE for REPO stats as a pseudo :after */
+/* The repo stats' have an icon as a label ONLY, which is hardcoded i the html */
+
+/* FOR REPO BADGES It goes: 1. icon-label (hardcoded) 2. badge-value (pseudo :after) */
+
+/* This is modeled after a typical Bootstrap .badge class */
+
 [data-repo-status]:after,
 [data-repo-commit-count]:after,
 [data-repo-size]:after,
@@ -2815,7 +2826,15 @@ ion-icon.icon-outline {
     background-color: #FBFBFB;
     color: #757575;
 }
-/* sup sub */
+
+/* TYPICAL BADGE TEXT LABEL */
+
+/* This styles the status badge TEXT for items AS REQUIRED as a pseudo :before */
+/* Stats like number-of-awards/projects and years-of-experience have a text as label, following an icon which us hardcoded in the html */
+
+/* FOR TYPICAL BADGES It goes: 1. icon-label (hardcoded) 2. text-label (pseudo :boefore) 3. badge-value (pseudo :after) */
+
+/* This additional label is modeled after a superscript/subscript positioning */
 
 [data-awards-count]:before,
 [data-honors-count]:before,
@@ -2835,6 +2854,14 @@ ion-icon.icon-outline {
     color: var(--deep-1);
     content: var(--label);
 }
+
+/* TYPICAL BADGE VALUE */
+
+/* This styles the status badge VALUE for ALL badges EXCEPT repo stats as a pseudo :after */
+
+/* FOR TYPICAL BADGES It goes: 1. icon-label (hardcoded) 2. text-label (pseudo :boefore) 3. badge-value (pseudo :after) */
+
+/* This is a bespoke appropriation of the Boostrap .badge and .badge-notification classes */
 
 [data-awards-count]:after,
 [data-honors-count]:after,
