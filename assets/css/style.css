@@ -9,6 +9,13 @@
  * fork the repo: (https://github.com/israelias)
  */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* Potentially import dependencies instead of linking in html? */
 /*@import url("https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css");*/
 
@@ -76,6 +83,23 @@
     /* OPTION to calculate --margin as a separate function with less nested calcs and custom vars */
     /*--margin: calc((12 - var(--of-twelve)) / 12 / 2 * 100%);*/
 
+    --gutter-x: 1.5rem;
+
+    --padding: calc(var(--gutter-x) / 2);
+
+    /* media breakpoints from bootstrap */
+    --max-xs-mobile-down: 575.98px;
+    --min-sm-mobile-up: 576px;
+    --max-sm-mobile-down: 767.98px;
+    --min-md-tablet-up: 768px;
+    --max-md-tablet-down: 991.98px;
+    --min-lg-desktop-up: 992px;
+    --max-lg-desktop-down: 1199.98px;
+    --min-xl-desktop-up: 1200px;
+    --max-xl-desktop-down: 1399.98px;
+    --min-xxl-desktop-up: 1400px;
+
+
     /* Apply margins for typical .row in a fluid .container to :root */
 
     display: flex;
@@ -89,6 +113,8 @@
     width: var(--width);
     margin-left: 0;
     margin-right: 0;
+    /* TODO this is new */
+    margin-top: 3rem;
     background-color: var(--paper);
 }
 
@@ -97,6 +123,7 @@
 @media (max-width: 575.98px) {
     :root {
         --of-twelve: 12;
+        --gutter-x: 0;
     }
 }
 
@@ -199,10 +226,6 @@ h1 {
     font-family: attribute-mono, sans-serif;
     font-weight: 300 !important;
     font-feature-settings: 'c2sc';
-
-    /*color: #A4a4a4;*/
-    /*mt-sm-5 mt-md-0 pt-sm-0 pt-md-5 lh-1 d-flex flex-column flex-wrap flex-row  h3 justify-content-center*/
-    /*color: #4a4a4a; margin: 0 auto;*/
 }
 
 /* Splash landing sub-heading  */
@@ -219,10 +242,6 @@ h2 {
     font-style: normal;
 
     color: #A4a4a4;
-
-    /*pb-4 text-lowercase d-flex flex-nowrap flex-row justify-content-center*/
-    /*font-feature-settings: normal;*/
-    /*color: #a4a4a4; margin: 0 auto;*/
 }
 
 /* Header button headings */
@@ -242,8 +261,6 @@ h4 {
     font-family: din-2014, sans-serif;
     font-weight: 400;
     font-style: normal;
-    /*font-feature-settings: 'liga', 'clig', 'calt', 'frac', 'onum', 'ordn', 'pnum', 'salt', 'ss##', 'locl';*/
-
     font-size: calc(1.125rem + 1.5vw);
     line-height: calc(1.625rem + 1vw);
 
@@ -288,9 +305,52 @@ header.header .navbar-light {
     background: var(--paper,#F2F1EF);
 }
 
+/*html {*/
+/*    !*position: fixed;*!*/
+/*    !*flex: 0 0 auto;*!*/
+/*    height: 100vh;*/
+/*    !*height: calc(100vh + 8rem);*!*/
+/*}*/
+
+/*body {*/
+/*    min-height: 100%;*/
+/*    position: fixed;*/
+
+/*    max-height: 90vh;*/
+/*    margin-top: 2rem !important;*/
+
+/*    !*display: flex;*!*/
+/*    !*flex-direction: column;*!*/
+/*    !*padding-top: 3rem;*!*/
+/*    !*flex: 1;*!*/
+
+/*    !*display: flex;*!*/
+/*    justify-content: center !important;*/
+/*    !*flex-direction: column;*!*/
+/*    max-height: calc(100vh + 8rem);*/
+/*    overflow: auto;*/
+/*}*/
+
+/*body > * {*/
+/*    flex: 1;*/
+
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    flex-direction: column;*/
+/*}*/
+
 main {
     position: relative;
-    margin-top: 3rem;
+    /*margin-top: 3rem;*/
+    margin-right: calc(var(--gutter-x) / -2);
+    margin-left: calc(var(--gutter-x) / -2);
+    /* TODO fix */
+    /*height: calc(100vh - 24rem);*/
+}
+
+main > * {
+    padding-right: calc(var(--gutter-x) / 2);
+    padding-left: calc(var(--gutter-x) / 2);
 }
 
 @media (min-width: 576px) {
@@ -299,43 +359,14 @@ main {
     }
 }
 
+@media (max-width: 575.98px) {
+    body {
+        position: static;
+    }
+}
+
 section {
     overflow: hidden;
-}
-
-/*!
- * A typical section is followed by a .row with a .spread class.
- * The last .col of each column pair in a .spread includes a .col-last class
- *
- * Example HTML:
- *
- *  <section>
- *      <div class="spread row">
- *          <div class="col-12 col-md-12 col-lg-7 col-xl-7" ... >
- *          <div class="col-last col-12 col-md-12 col-lg-5 col-xl-5" ... >
- *      </div>
- *  </section>
- *
- * The .spread class is used to select the global row
- * The .col-last is used as a helper to hide the last column until its parent section is shown
- * This alleviates the height property during a .collapse event
- */
-
-/* Apply global margins to page-left/page-right cols */
-
-.spread > div {
-    margin-bottom: 3rem;
-}
-
-.spread > :first-child {
-    margin-top: .5rem;
-}
-
-@media (min-width: 768px) {
-    .spread > div,
-    .spread > :first-child {
-        margin-top: 1rem;
-    }
 }
 
 /* MOBILE COLLAPSE-SECTION CONFIGS
@@ -345,34 +376,46 @@ section {
 /* With the exception of the Introduction section (collapseZero) */
 /* 60vh is an arbitrary height to for both in-section scrolling and sibling header-buttons visibility */
 
-@media (max-width: 575.98px) {
 
-    main {
-        overflow: hidden;
-    }
-
-    .col-last {
-        display: none;
-    }
-
-    .collapse.show .col-last {
-        display: block;
-    }
-
-    article > section:not(#collapseZero) {
-        height: 60vh;
-        /*height: calc(100vh - (4rem * 6) + 43px);*/
-        overflow: scroll;
-        /*overflow-x: hidden;*/
-        /*overflow-y: scroll;*/
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
-    }
-}
 
 /* ==========================================================================
    ARTICLE HEADER BUTTON
    ========================================================================== */
+
+/*!
+ * Article header with button targeting article section.
+ *
+ * This styles the header button dedicated to every collapsed section under
+ * data-parent="resumeStack".
+ * Each header is identified with an id that is the aria-labelled-by of its
+ * corresponding section.
+ * Each header id is also used to customize global and local
+ * aria-expanded="true" or aria-expanded="false" toggle states.
+ *
+ * Each header must only contain one h3 element with the '.header-title' class.
+ *
+ *  Example HTML:
+ *
+ * <header id="headingZero">
+ *     <h3 class="header-title">
+ *         <button class="collapsed" data-toggle="collapse" data-target="#collapseZero" aria-expanded="false">
+ *             <span class="header-content">
+ *                 <span class="header-name">
+ *                     INTRODUCTION
+ *                 </span>
+ *                 <span class="header-text">
+ *                     About and recent activity
+ *                 </span>
+ *             </span>
+ *             <span class="header-icon justify-self-end">
+ *                 <ion-icon name="code-working-outline" class="closed"></ion-icon>
+ *                 <ion-icon name="code-slash-outline" class="open"></ion-icon>
+ *             </span>
+ *         </button>
+ *     </h3>
+ * </header>
+ */
+
 
 article header {
     position: relative;
@@ -384,7 +427,17 @@ article header {
     margin-bottom: 0;
 }
 
-article header .header-title {
+/**
+ * Header title
+ *
+ * Must only contain one button control element targeting its corresponding #collapse[Number].
+ *
+ * 1. Create a flexbox container within which a button control element's contents invariably align
+ * 2. Set a fixed height for consistent presentation of headers
+ * 3. Configure box model properties
+ */
+
+.header-title {
     display: flex;
     align-items: center;
 
@@ -396,7 +449,18 @@ article header .header-title {
     margin-bottom: 0;
 }
 
-article header button {
+/**
+ * Header button
+ *
+ * Must only contain '.header-content' and '.header-icon' children.
+ *
+ * 1. Create a flexbox container within which button text and button icons are positioned using flex properties
+ * 2. Reset <button> element styles given by browser and/or inherited from mdb.min.css
+ * 3. Set the responsive parent font-size for '.header-content' and '.header-icon'
+ * 4. Adjust presentation for sm and xl screens
+ */
+
+.header-title button {
     display: flex;
     justify-content: space-between;
 
@@ -410,38 +474,53 @@ article header button {
 }
 
 @media (min-width: 1200px) {
-    article header button {
+    .header-title button {
         font-size:1.5rem
     }
 }
 
 @media (max-width: 575.98px) {
-    article header button {
+    .header-title button {
         padding: 1rem 1.25rem;
     }
 }
 
-article header .header-content {
+/**
+ * Header content
+ *
+ * Must only contain '.header-name' and '.header-text' children.
+ *
+ * 1. Create a flexbox container within which text are transformed into flex items
+ * 2. Set box model and presentation
+ */
+
+.header-content {
     display: flex;
-    flex-wrap: nowrap;
-    overflow: hidden;
+    /*flex-wrap: nowrap;*/
+    /*overflow: hidden;*/
 
     padding-top: .5rem;
+    padding-right: .125rem;
+    padding-left: .125rem;
 
     background-color: var(--paper);
 
-    text-wrap: none;
-    text-align: left;
+    /*text-wrap: none;*/
+    /*text-align: left;*/
 }
 
-article header .header-name {
+/* Main header name */
+
+.header-name {
     position: relative;
     font-weight: 500;
 }
 
-article header .header-text {
-    width: 100%;
-    overflow: hidden;
+/* Supporting header text */
+
+.header-text {
+    /*width: 100%;*/
+    /*overflow: hidden;*/
 
     margin-left: .25rem;
 
@@ -458,7 +537,9 @@ article header .header-text {
     }
 }
 
-article header .header-text:before {
+/* The forward slash "/" between the name and the supporting text */
+
+.header-text:before {
     display: inline-block;
     margin-left: 0.25rem;
 
@@ -466,62 +547,242 @@ article header .header-text:before {
     font-weight: 400;
 }
 
-article header .header-icon {
+/**
+ * The '.header-content' class wraps the '.header-name' and '.header-text'
+ * The '.header-icon' contains the ion-icon components that toggle visibility depending
+ * on the current state of the collapsible element tied to the icon's parent button control element.
+**/
+
+/* Main header icon container */
+
+.header-icon {
     padding-top: .5rem;
+    padding-right: .125rem;
+    padding-left: .125rem;
     margin-left: .25rem;
 
     background-color: var(--paper);
 }
 
-article header .header-icon ion-icon {
+/* Main header icon styles */
+
+.header-icon ion-icon {
     color: #4f4f4f;
     font-size: 24px;
     --ionicon-stroke-width: 20px;
 }
 
 /* ==========================================================================
-   SECTION CONFIGS
+   ARTICLE PAGE SPREAD (.COL DIV CONFIGS) @prefixed
    ========================================================================== */
 
-/* Apply typical Bootstrap .card-body configs to main sub-sections, with custom global aesthetic  */
+/*!
+ * Typical section division.
+ *
+ * The '.spread' class is used to select the global parent element of column pairs in each collapsed section.
+ * Attached as an additive helper to the bs '.row' class.
+ *
+ * Example HTML:
+ *
+ * <section class="collapse">
+ *     <div class="spread row">
+ *         <div class="outer-body col-12 col-lg-7" ... >
+ *             <section class="inner-body left" ... >
+ *         <div class="outer-body col-12 col-lg-5" ... >
+ *             <section class="inner-body right" ... >
+ *     </div>
+ * </section>
+ */
 
-article section section,
-section section {
-    flex: 1 1 auto;
+/* TODO Purge .col-last and .spread > :nth-child(2) */
+/* TODO Purge .media-box and .text-box classes */
+/* TODO Purge .text-item class */
+/* TODO Separate left/right positioning styles from media/text presentation styles */
+
+/**
+ * Divs in a .spread
+ *
+ * 1. Create a flexbox container out of sibling columns within which content is positioned using flex properties
+ * 2. Turns <h4> and <section> in first div into flex items
+ * 3. Turns <section> in second div into flex itm
+ */
+
+.outer-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+
+    padding: .5rem;
+    border-radius: .75rem;
+    margin-bottom: 3rem;
+
+    -webkit-box-shadow:
+            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Set flex behavior of first column (appears first, or left) */
+
+.outer-body:first-child {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+
+    margin-top: .5rem;
+}
+
+/* Set flex behavior of second column (appears second, or right) */
+
+.outer-body:nth-child(2) {
+
+}
+
+@media (max-width: 991.98px) {
+    section:not(.show) .outer-body:nth-child(2) {
+        /*display: none;*/
+    }
+
+    section.show .outer-body:nth-child(2) {
+        /*display: block;*/
+    }
+}
+
+@media (min-width: 768px) {
+    .outer-body:first-child,
+    .outer-body:nth-child(2) {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .outer-body {
+        padding: .75rem;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+    }
+}
+
+.outer-item {
+    position: relative;
+
+    border-radius: .6rem;
+    border: none;
+}
+
+.outer-item:after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    border-radius: .6rem;
+
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    background: var(--gradient-2);
+}
+
+/* Child sub sections @prefixed
+   ========================================================================== */
+
+/* Set flex behavior and typical presentation of section.left and section.right */
+
+.inner-body {
     padding: 1rem 1rem;
 
     background: var(--gradient-1);
+
+    -webkit-box-shadow:
+            0 8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 -6px var(--blur-sm) rgba(0, 0, 0, 0.3);
     box-shadow:
-            0 8px 0 rgba(0, 0, 0, 0.2),
-            0 -6px 0 rgba(0, 0, 0, 0.3);
+            0 8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 -6px var(--blur-sm) rgba(0, 0, 0, 0.3);
 }
 
-section.left {
+/* Set flex behavior and typical presentation of section.left */
+
+.inner-body.left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 100%;
+            flex: 1 100%;
+
     margin-top: 0.5rem;
     border-radius: var(--radius-5);
 }
 
-section.right {
+/* Set flex behavior and typical presentation of section.right */
+
+.inner-body.right {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+
     border-radius: var(--radius-2);
 }
 
-section.right h5 {
+/* MEDIA SECTION */
+
+/* Make section.right a flex container, turning h5, ul and .activity-cta into flex items */
+/* applies to section.right */
+
+.media-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+}
+
+.media-content h5 {
     text-align: right;
 }
 
-/* SECTION.SHOW ICON TRANSITION
+/* Set growth behavior to h5, ul and .activity-cta */
+
+.media-content > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+}
+
+/* Push .activity-cta down */
+
+.media-content > :last-child {
+    margin-top: auto;
+}
+
+
+/* SECTION.SHOW ICON TRANSITION @prefixed
    ========================================================================== */
 
 /* Apply global icon transitions to section h4 headlines */
 /* CREDIT (modified) inspired by on-show transitions in: https://codeconvey.com/pure-css-accordion-menu/ */
 
+/* Position icon on .show */
+
 section.show h4 ion-icon {
     left: 260px;
 }
 
+/* Position icon at rest */
+
 section.collapse:not(.show) h4 ion-icon {
     left: 400px;
 }
+
+/* Set default styles of icon */
 
 h4 ion-icon {
     position: absolute;
@@ -531,65 +792,14 @@ h4 ion-icon {
     font-size: 180px;
     opacity: 0.08;
 
+    -webkit-transition: all .3s .3s;
+    -o-transition: all .3s .3s;
     transition: all .3s .3s;
-}
-
-/* ==========================================================================
-   GLOBAL .COL DIV CONFIGS
-   ========================================================================== */
-
-/*!
- * Main left and right .col divs are paired with either .text-box (left) or .media-box (right)
- * Both $='box'es effectively turn the .cols to flex parents responsively wrapping children
- * The *-items and *-content children are the main sub sections, headings and uls following
- */
-
-.text-box {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.text-box > * {
-    flex: 1 100%;
-}
-
-.media-box {
-    display: flex;
-}
-
-.media-content {
-    display: flex;
-    flex-flow: column;
-}
-
-.media-content > * {
-    flex: 1 1 auto;
-}
-
-.media-content > :last-child {
-    margin-top: auto;
-}
-
-/* TESTING FLEX PARAGRAPHS (UNDO)*/
-
-.text-item {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*flex-wrap: wrap;*/
-}
-
-section.text-item {
-    /*align-items: stretch;*/
-}
-
-.text-item footer {
-    margin-top: auto;
 }
 
 /* ==========================================================================
    DETAILS/SUMMARY ELEMENT CONFIGS
    ========================================================================== */
-
 
 summary::-webkit-details-marker {
     display: none;
@@ -603,32 +813,57 @@ summary {
 /* Hiding The disclosure widget */
 /* https://medium.com/an-idea/the-details-of-a-dropdown-a817dc27e545 */
 
+/* Style summary "read more" icon return transition */
+
 details > summary #readmore {
     position: relative;
-    animation: appear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+
+    -webkit-animation: appear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+            animation: appear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+
+    -webkit-transition: all var(--flashing) var(--zip) var(--late);
+    -o-transition: all var(--flashing) var(--zip) var(--late);
     transition: all var(--flashing) var(--zip) var(--late);
 }
 
+/* Style active summary "read more" icon active transition */
+
 details[open] #readmore {
     position: relative;
-    animation: disappear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+
+    -webkit-animation: disappear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+            animation: disappear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+
+    -webkit-transition: all var(--passing) var(--zip) var(--early);
+    -o-transition: all var(--passing) var(--zip) var(--early);
     transition: all var(--passing) var(--zip) var(--early);
 }
+
+/* Icon configs */
 
 #readmore {
     color: black;
     font-size: 32px;
 }
 
+/* Position "read more" container */
 
 .read-more {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: end;
+
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+
     list-style: none;
     cursor: pointer;
 
     font-family: attribute-mono, sans-serif;
 }
+
+/* Type configs */
 
 .read-more .read-text {
     margin-top: .5rem;
@@ -636,8 +871,11 @@ details[open] #readmore {
     padding-left: auto;
 
     font-size: .875rem;
-    font-feature-settings: 'smcp';
+    -webkit-font-feature-settings: 'smcp';
+            font-feature-settings: 'smcp';
 }
+
+/* Hover state */
 
 .read-text:hover {
     text-underline-color: #157FFC;
@@ -645,35 +883,40 @@ details[open] #readmore {
     border-bottom: 1px solid #157FFC;
 }
 
-/* modified bootstap dropdown menu properties combo without popper */
+/* A bespoke dropdown summary item, combining elements from bs.min.css
+ * No popper. */
+/* TODO this is funky with the flex elements */
 
 .summary-content {
     position: absolute;
-    /*top: 100%;*/
-    /*left: 0;*/
     z-index: 1000;
     min-width: 10rem;
 
-    align-content: end;
+    -ms-flex-line-pack: end;
+        align-content: end;
     padding: .5rem;
     margin: 1.125rem 0 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background: var(--pearl) !important;
-    /*background: rgba(250, 250, 250, 0.6) !important;*/
-    background-clip: padding-box;
 
     border: 2px solid var(--white) !important;
     border-radius: .75rem;
 
-    box-shadow:
-            inset -5px -8px 0 0 rgba(255, 255, 255, 0.5),
-            inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
-}
+    background-clip: padding-box;
+    background: var(--pearl) !important;
+    color: #212529;
 
+    font-size: 1rem;
+    text-align: left;
+
+    list-style: none;
+
+    -webkit-box-shadow:
+            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+}
 
 .summary-item {
     padding: 5rem 1rem 1rem;
@@ -687,207 +930,175 @@ details[open] #readmore {
     .summary-content {
         position: static;
         top: 0;
-        left: .4rem;
         right: 0;
+        left: .4rem;
+
         /*width: 70vw;*/
         height: 40vh;
         overflow: scroll !important;
         -webkit-overflow-scrolling: touch;
         scroll-behavior: smooth;
     }
-    .summary-item {
-        /*overflow: scroll !important;*/
-        /*-webkit-overflow-scrolling: touch;*/
-        /*scroll-behavior: smooth;*/
-    }
 }
+
+/* Summary appear icon animation keyframes */
 
 @-webkit-keyframes appear-225 {
     0% {
-        transform: rotateZ(225deg);
+        -webkit-transform: rotateZ(225deg);
+                transform: rotateZ(225deg);
     }
     50% {
         trasform: rotateZ(0deg);
-        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
     }
     100% {
-        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
     }
 }
+
 @keyframes appear-225 {
     0% {
-        transform: rotateZ(225deg);
+        -webkit-transform: rotateZ(225deg);
+                transform: rotateZ(225deg);
     }
     50% {
         trasform: rotateZ(0deg);
-        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
     }
     100% {
-        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
     }
 }
+
+/* Summary disappear icon animation keyframes */
 
 @-webkit-keyframes disappear-225 {
     0% {
-        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
     }
     50% {
-        transform: scaleX(0);
-        trasform: rotateZ(0deg)
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+                trasform: rotateZ(0deg)
     }
     100% {
-        transform: rotateZ(225deg);
+        -webkit-transform: rotateZ(225deg);
+                transform: rotateZ(225deg);
     }
 }
+
 @keyframes disappear-225 {
     0% {
-        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
     }
     50% {
-        transform: scaleX(0);
-        trasform: rotateZ(0deg)
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+                trasform: rotateZ(0deg)
     }
     100% {
-        transform: rotateZ(225deg);
+        -webkit-transform: rotateZ(225deg);
+                transform: rotateZ(225deg);
     }
 }
 
-@-webkit-keyframes disappear-180 {
-    0% {
-        transform: scaleY(1);
-        margin-left: 0;
-    }
-    50% {
-        transform: scaleY(0);
-        trasform: rotateX(0);
-    }
-    100% {
-        transform: rotateX(1.571rad);
-        margin-left: 33.33%;
-    }
+/* ==========================================================================
+   Navigation icon transitions @prefixed
+   ========================================================================== */
+
+/* Menu icon container */
+
+.menu-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
 }
-@keyframes disappear-180 {
-    0% {
-        transform: scaleY(1);
-        margin-left: 0;
-    }
-    50% {
-        transform: scaleY(0);
-        trasform: rotateX(0);
-    }
-    100% {
-        transform: rotateX(1.571rad);
-        margin-left: 33.33%;
-    }
+/* Set menu-in active transition of container */
+
+.navbar-toggler[aria-expanded="true"] .menu-icon {
+    position: relative;
+
+    -webkit-animation: menu-in .75s var(--glide) var(--late) 1 normal forwards running;
+            animation: menu-in .75s var(--glide) var(--late) 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+         -o-transition: all var(--flashing) var(--zip) var(--early);
+            transition: all var(--flashing) var(--zip) var(--early);
 }
 
-@-webkit-keyframes appear-180 {
-    0% {
-        transform: rotateX(1.571rad);
-        margin-left: 33.33%;
-    }
-    50% {
-        trasform: rotateX(0);
-        transform: scaleY(0);
-    }
-    100% {
-        transform: scaleY(1);
-        margin-left: 0;
-    }
-}
-@keyframes appear-180 {
-    0% {
-        transform: rotateX(1.571rad);
-        margin-left: 33.33%;
-    }
-    50% {
-        trasform: rotateX(0);
-        transform: scaleY(0);
-    }
-    100% {
-        transform: scaleY(1);
-        margin-left: 0;
-    }
+/* Set menu-out inactive transition of container */
+
+.navbar-toggler[aria-expanded="false"] .menu-icon {
+    position: relative;
+
+    -webkit-animation: menu-out .75s var(--glide) 0s 1 normal forwards running;
+            animation: menu-out .75s var(--glide) 0s 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+         -o-transition: all var(--flashing) var(--zip) var(--early);
+            transition: all var(--flashing) var(--zip) var(--early);
 }
 
-@-webkit-keyframes disappear-90 {
-    0% {
-        transform: rotateZ(0);
-        transform: scaleX(1);
-        trasform: rotateY(0);
-        opacity: 1;
-    }
-    50% {
-        /*transform: scaleX(0);*/
-        /*trasform: rotateY(0);*/
+/* Style ion-icons for menu nav and checkbox toggle */
 
-    }
-    100% {
-        opacity: 0;
-        transform: rotateY(1.571rad);
-        transform: rotateZ(180deg);
-        transform: scaleX(0);
-    }
-}
-@keyframes disappear-90 {
-    0% {
-        transform: rotateZ(0);
-        transform: scaleX(1);
-        trasform: rotateY(0);
-        opacity: 1;
-    }
-    50% {
-        /*transform: scaleX(0);*/
-        /*trasform: rotateY(0);*/
-
-    }
-    100% {
-        transform: rotateY(1.571rad);
-        transform: rotateZ(180deg);
-        transform: scaleX(0);
-        opacity: 0;
-    }
+.show-swap,
+.hide-swap,
+.see-more,
+.see-less {
+    color: black;
+    font-size: 32px;
 }
 
-@-webkit-keyframes appear-90 {
-    0% {
-        transform: rotateY(1.571rad);
-        transform: rotateZ(180deg);
-        transform: scaleX(0);
-        opacity: 0;
-    }
-    50% {
-        /*transform: rotateZ(0);*/
-        /*trasform: rotateY(0);*/
-        /*transform: scaleX(0);*/
-    }
-    100% {
-        transform: rotateZ(0);
-        trasform: rotateY(0);
-        transform: scaleX(1);
-        opacity: 1;
-    }
-}
-@keyframes appear-90 {
-    0% {
-        transform: rotateY(1.571rad);
-        transform: rotateZ(180deg);
-        transform: scaleX(0);
-        opacity: 0;
-    }
-    50% {
-        /*transform: rotateZ(0);*/
-        /*trasform: rotateY(0);*/
-        /*transform: scaleX(0);*/
-    }
-    100% {
-        transform: rotateZ(0);
-        trasform: rotateY(0);
-        transform: scaleX(1);
-        opacity: 1;
-    }
+/* Set menu-in/menu-out active/inactive animation for icon in container */
+/* Two ion-icons, rotating and disappearing on toggle */
+
+.navbar-toggler[aria-expanded="true"] .see-more {
+    position: relative;
+
+    -webkit-animation: appear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+            animation: appear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--glide) var(--short);
+         -o-transition: all var(--flashing) var(--glide) var(--short);
+            transition: all var(--flashing) var(--glide) var(--short);
 }
 
+.navbar-toggler[aria-expanded="false"] .see-more {
+    position: relative;
+
+    -webkit-animation: disappear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+            animation: disappear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--glide) var(--short);
+         -o-transition: all var(--flashing) var(--glide) var(--short);
+            transition: all var(--flashing) var(--glide) var(--short);
+}
+
+.navbar-toggler[aria-expanded="true"] .see-less {
+    position: relative;
+
+    -webkit-animation: disappear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+            animation: disappear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--glide) var(--short);
+         -o-transition: all var(--flashing) var(--glide) var(--short);
+            transition: all var(--flashing) var(--glide) var(--short);
+}
+
+.navbar-toggler[aria-expanded="false"] .see-less {
+    position: relative;
+
+    -webkit-animation: appear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+            animation: appear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--glide) var(--short);
+         -o-transition: all var(--flashing) var(--glide) var(--short);
+            transition: all var(--flashing) var(--glide) var(--short);
+}
+
+/* Menu-in animation keyframes */
 
 @-webkit-keyframes menu-in {
     0% {
@@ -906,6 +1117,9 @@ details[open] #readmore {
         padding-left: 30vw;
     }
 }
+
+/* Menu-out animation keyframes */
+
 @-webkit-keyframes menu-out {
     0% {
         padding-left: 30vw;
@@ -914,6 +1128,7 @@ details[open] #readmore {
         padding-left: 0;
     }
 }
+
 @keyframes menu-out {
     0% {
         padding-left: 30vw;
@@ -923,126 +1138,236 @@ details[open] #readmore {
     }
 }
 
+/* Menu Disappear icon animation keyframes */
 
-.menu-icon {
-    display: flex;
-    position: relative;
+@-webkit-keyframes disappear-180 {
+    0% {
+        -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+        margin-left: 0;
+    }
+    50% {
+        -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+        trasform: rotateX(0);
+    }
+    100% {
+        -webkit-transform: rotateX(1.571rad);
+                transform: rotateX(1.571rad);
+        margin-left: 33.33%;
+    }
+}
+@keyframes disappear-180 {
+    0% {
+        -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+        margin-left: 0;
+    }
+    50% {
+        -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+        trasform: rotateX(0);
+    }
+    100% {
+        -webkit-transform: rotateX(1.571rad);
+                transform: rotateX(1.571rad);
+        margin-left: 33.33%;
+    }
 }
 
-.navbar-toggler[aria-expanded="true"] .menu-icon {
-    position: relative;
-    animation: menu-in .75s var(--glide) var(--late) 1 normal forwards running;
-    transition: all var(--flashing) var(--zip) var(--early);
+/* Menu Appear icon animation keyframes */
+/* TODO change 33.33% to custom property responsive to @media queries */
+
+@-webkit-keyframes appear-180 {
+    0% {
+        -webkit-transform: rotateX(1.571rad);
+                transform: rotateX(1.571rad);
+        margin-left: 33.33%;
+    }
+    50% {
+        trasform: rotateX(0);
+        -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+        margin-left: 0;
+    }
 }
 
-.navbar-toggler[aria-expanded="false"] .menu-icon {
-    position: relative;
-    animation: menu-out .75s var(--glide) 0s 1 normal forwards running;
-    transition: all var(--flashing) var(--zip) var(--early);
+@keyframes appear-180 {
+    0% {
+        -webkit-transform: rotateX(1.571rad);
+                transform: rotateX(1.571rad);
+        margin-left: 33.33%;
+    }
+    50% {
+        trasform: rotateX(0);
+        -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+        margin-left: 0;
+    }
 }
 
-.show-swap,
-.hide-swap,
-.see-more,
-.see-less {
-    color: black;
-    font-size: 32px;
+/* Nav Checkbox toggle switch  @prefixed
+   ========================================================================== */
+
+/* Toggle checkbox icon transitions */
+
+/* Set active/inactive swap for icons in container */
+/* Two ion-icons, rotating, and swapping on toggle */
+
+#toggle-all:checked + label .show-swap {
+    position: relative;
+
+    -webkit-transform: rotateZ(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotateZ(180deg);
+
+    -webkit-animation: appear-90 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+            animation: appear-90 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--glide) var(--short);
+         -o-transition: all var(--flashing) var(--glide) var(--short);
+            transition: all var(--flashing) var(--glide) var(--short);
 }
 
-.navbar-toggler[aria-expanded="true"] .see-more {
+#toggle-all:not(checked) + label .show-swap {
     position: relative;
-    animation: appear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
-    transition: all var(--flashing) var(--glide) var(--short);
+
+    -webkit-animation: disappear-90 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+            animation: disappear-90 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--glide) var(--short);
+         -o-transition: all var(--flashing) var(--glide) var(--short);
+            transition: all var(--flashing) var(--glide) var(--short);
 }
 
-.navbar-toggler[aria-expanded="false"] .see-more {
+/* Animates in reverse */
+
+#toggle-all:checked + label .hide-swap {
     position: relative;
-    animation: disappear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
-    transition: all var(--flashing) var(--glide) var(--short);
-}
-/* !*/
-.navbar-toggler[aria-expanded="true"] .see-less {
-    position: relative;
-    animation: disappear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
-    transition: all var(--flashing) var(--glide) var(--short);
-}
 
-.navbar-toggler[aria-expanded="false"] .see-less {
-    position: relative;
-    animation: appear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
-    transition: all var(--flashing) var(--glide) var(--short);
-}
+    -webkit-transform: rotateZ(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotateZ(180deg);
 
-/* Hide .closed when section is expanded */
-
-/*input[type="checkbox"]:checked + label .show-swap {*/
-/*    position: relative;*/
-/*    animation: appear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;*/
-/*    transition: all var(--flashing) var(--glide) var(--short);*/
-/*}*/
-
-/*input[type="checkbox"]:not(checked) + label .show-swap {*/
-/*    position: relative;*/
-/*    animation: disappear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;*/
-/*    transition: all var(--flashing) var(--glide) var(--short);*/
-/*}*/
-
-/*input[type="checkbox"]:checked + label .hide-swap {*/
-/*    position: relative;*/
-/*    animation: disappear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;*/
-/*    transition: all var(--flashing) var(--glide) var(--short);*/
-/*}*/
-
-/*input[type="checkbox"]:not(checked) + label .hide-swap {*/
-/*    position: relative;*/
-/*    animation: appear-180 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;*/
-/*    transition: all var(--flashing) var(--glide) var(--short);*/
-/*}*/
-
-input[type="checkbox"]:checked + label .show-swap {
-    position: relative;
-    transform: rotateZ(180deg);
-    animation: appear-90 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
-    transition: all var(--flashing) var(--glide) var(--short);
-}
-
-input[type="checkbox"]:not(checked) + label .show-swap {
-    position: relative;
-    /*transform: rotateZ(180deg);*/
-    animation: disappear-90 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
-    transition: all var(--flashing) var(--glide) var(--short);
-}
-
-input[type="checkbox"]:checked + label .hide-swap {
-    position: relative;
-    transform: rotateZ(180deg);
-    /*display: none;*/
     animation: appear-90 var(--flashing) var(--swoop) var(--early) 1 normal reverse running;
-    transition: all var(--flashing) var(--glide) var(--short);
+    -webkit-transition: all var(--flashing) var(--glide) var(--short);
+         -o-transition: all var(--flashing) var(--glide) var(--short);
+            transition: all var(--flashing) var(--glide) var(--short);
 }
 
-input[type="checkbox"]:not(checked) + label .hide-swap {
+/* Animates in reverse */
+
+#toggle-all:not(checked) + label .hide-swap {
     position: relative;
+
     animation: disappear-90 var(--flashing) var(--swoop) var(--early) 1 normal reverse running;
-    transition: all var(--flashing) var(--glide) var(--short);
+    -webkit-transition: all var(--flashing) var(--glide) var(--short);
+         -o-transition: all var(--flashing) var(--glide) var(--short);
+            transition: all var(--flashing) var(--glide) var(--short);
 }
 
-/* Show .open when section is expanded */
+/* Toggle icon disappear animation keyframes */
 
-input[type="checkbox"]:checked + label .o pen {
-    display: block;
-    color: var(--deep-1);
+@-webkit-keyframes disappear-90 {
+    0% {
+        -webkit-transform: rotateZ(0);
+                transform: rotateZ(0);
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+        trasform: rotateY(0);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: rotateY(1.571rad);
+                transform: rotateY(1.571rad);
+        -webkit-transform: rotateZ(180deg);
+                transform: rotateZ(180deg);
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+    }
+}
+
+@keyframes disappear-90 {
+    0% {
+        -webkit-transform: rotateZ(0);
+                transform: rotateZ(0);
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+        trasform: rotateY(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotateY(1.571rad);
+                transform: rotateY(1.571rad);
+        -webkit-transform: rotateZ(180deg);
+                transform: rotateZ(180deg);
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        opacity: 0;
+    }
+}
+
+/* Toggle icon appear animation keyframes */
+
+@-webkit-keyframes appear-90 {
+    0% {
+        -webkit-transform: rotateY(1.571rad);
+                transform: rotateY(1.571rad);
+        -webkit-transform: rotateZ(180deg);
+                transform: rotateZ(180deg);
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateZ(0);
+                transform: rotateZ(0);
+        trasform: rotateY(0);
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+@keyframes appear-90 {
+    0% {
+        -webkit-transform: rotateY(1.571rad);
+                transform: rotateY(1.571rad);
+        -webkit-transform: rotateZ(180deg);
+                transform: rotateZ(180deg);
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateZ(0);
+                transform: rotateZ(0);
+        trasform: rotateY(0);
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+        opacity: 1;
+    }
 }
 
 /* ==========================================================================
-   <UL> LIST GROUP CONFIGS
+   <UL> LIST GROUP CONFIGS @prefixed
    ========================================================================== */
 
 /* Apply global flex behavior and visual language to media list-groups */
 
 .media-content > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     overflow: hidden;
 
     padding: var(--radius-4);
@@ -1050,9 +1375,13 @@ input[type="checkbox"]:checked + label .o pen {
 
     list-style: none;
 
+    -webkit-box-shadow:
+            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+
     box-shadow:
-            inset -5px -8px 0 0 rgba(255, 255, 255, 0.5),
-            inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
+            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
 }
 
 .media-content > ul > * {
@@ -1060,7 +1389,9 @@ input[type="checkbox"]:checked + label .o pen {
 }
 
 .media-content > ul > li {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     min-width: 50%;
 
     padding: var(--radius-3);
@@ -1070,28 +1401,42 @@ input[type="checkbox"]:checked + label .o pen {
     background: var(--powder);
     font-family: var(--halyard-text);
 
+    -webkit-box-shadow:
+            0 -6.4px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
+
     box-shadow:
-            0 -6.4px 0 rgba(0, 0, 0, 0.2),
-            0 6px 0 rgba(0, 0, 0, 0.4);
+            0 -6.4px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
 }
 
 .list-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
     width: 100%;
     padding: .25rem;
 
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .list-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
     padding-top: .25rem;
     padding-right: .25rem;
 
-    justify-content: center;
-    align-items: start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
 }
 
 .list-icon ion-icon {
@@ -1105,18 +1450,25 @@ input[type="checkbox"]:checked + label .o pen {
 }
 
 .list-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     margin-left: 16.666667%;
 
-    justify-content: space-around;
-    align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 section.right > ul > li h6 {
     font-weight: 500;
-    font-feature-settings: 'smcp', 'c2sc';
+    -webkit-font-feature-settings: 'smcp', 'c2sc';
+            font-feature-settings: 'smcp', 'c2sc';
 }
 
 /* ==========================================================================
@@ -1139,15 +1491,20 @@ section.right > ul > li h6 {
     padding: .5rem;
     border-radius: .75rem;
 
+    -webkit-box-shadow:
+            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+
     box-shadow:
-            inset -5px -8px 0 0 rgba(255, 255, 255, 0.5),
-            inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
+            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 575.98px) {
     .spread > .inset-container {
         padding: .75rem;
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
 }
 
@@ -1160,14 +1517,12 @@ section.right > ul > li h6 {
 
 .inset-item:after {
     position: absolute;
-    bottom: 0;
-    content: "";
-
     z-index: 1;
-
-    right: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
 
+    content: "";
     width: 100%;
     height: 100%;
 
@@ -1206,12 +1561,25 @@ section.show,
 section.collapse,
 section.collapsing {
     -webkit-clip-path: inset(-3rem calc(var(--margin) * -1) 1.36rem calc(var(--margin) * -1));
-    clip-path: inset(-3rem calc(var(--margin) * -1) 1.36rem calc(var(--margin) * -1));
+            clip-path: inset(-3rem calc(var(--margin) * -1) 1.36rem calc(var(--margin) * -1));
 }
 
 .header-title {
-    clip-path: inset(-1.5rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
+    -webkit-clip-path: inset(-1.5rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
+            clip-path: inset(-1.5rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
 }
+
+:root {
+    --outlines: var(--raisin);
+}
+
+/* TODO animate toggle in to be a horizontal line */
+/* TODO fix onshow animations */
+/* TODO fix margins for lg */
+/* TODO streamline the mobile experience like the md experience */
+/* TODO design the nav to be like a calling card */
+/* TODO change the href when toggle is on */
+
 
 article:before,
 article:after,
@@ -1232,8 +1600,6 @@ section.right:after {
     position: absolute;
     display: block;
     content: "";
-
-    --outlines: var(--raisin);
 }
 
 /* PSEUDO VERTICALS
@@ -1293,7 +1659,9 @@ section.collapsing:after,
 .spread:before,
 .spread:after {
     z-index: 10;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+            align-self: center;
 
     height: 10vh;
     width: .5rem;
@@ -1412,7 +1780,9 @@ article > header:before,
 article > header:after {
     z-index: 1;
 
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+            align-self: center;
 
     width: .875rem;
     height: 2.875rem;
@@ -1438,18 +1808,74 @@ article > header:after {
 
 main:before,
 article > header:before {
-    left: calc(var(--margin) / 2 * -1);
     border-bottom-right-radius: .5rem;
     border-top-right-radius: .5rem;
+}
+
+/* Position general left pseudo-concealer */
+
+article > header:before {
+    left: calc(var(--margin) * -1 + var(--padding));
+}
+
+/* Position last left pseudo-concealer */
+
+main:before {
+    left: calc(var(--margin) * -1 + var(--gutter-x));
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    main:before {
+        left: calc(var(--margin) * -1 + var(--padding));
+    }
+
+    article > header:before {
+        left: calc(var(--margin) * -1);
+    }
+}
+
+@media (max-width: 575.98px) {
+    main:before,
+    article > header:before {
+        left: calc(var(--margin) / 2 * -1);
+    }
 }
 
 /* Style right pseudo-concealer */
 
 main:after,
 article > header:after {
-    right: calc(var(--margin) / 2 * -1);
     border-bottom-left-radius: .5rem;
     border-top-left-radius: .5rem;
+}
+
+/* Position general right pseudo-concealer */
+
+article > header:after {
+    right: calc(var(--margin) * -1 + var(--padding));
+}
+
+/* Position last right pseudo-concealer */
+
+main:after {
+    right: calc(var(--margin) * -1 + var(--gutter-x));
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    main:after {
+        right: calc(var(--margin) * -1 + var(--padding));
+    }
+
+    article > header:after {
+        right: calc(var(--margin) * -1);
+    }
+}
+
+@media (max-width: 575.98px) {
+    main:after,
+    article > header:after {
+        right: calc(var(--margin) / 2 * -1);
+    }
 }
 
 /* PSEUDO HORIZONTALS
@@ -1465,22 +1891,22 @@ section.right:after,
 /* Position bottom pseudo-horizontal */
 
 section.right:after {
+    z-index: 5;
+    bottom: 1.36rem;
     left: calc(var(--margin) / 2 * -1 + .5rem);
     right: calc(var(--margin) / 2 * -1 + .5rem);
-    bottom: 1.36rem;
     border-radius: 0 0 var(--radius-1) var(--radius-1);
     border-bottom: 2px solid var(--outlines);
-    z-index: 5;
 }
 
 /* Position top pseudo-horizontal */
 
 .header-title:after {
+    z-index: -1;
+    top: 1.5rem;
     left: calc(var(--margin) / 2 * -1 + .75rem);
     right: calc(var(--margin) / 2 * -1 + .75rem);
-    top: 1.5rem;
     border-top: 2px solid var(--outlines);
-    z-index: -1;
 }
 
 @media (max-width: 575.98px) {
@@ -1493,11 +1919,358 @@ section.right:after {
         left: calc(var(--margin) / 2 * -1 + 1rem);
         right: calc(var(--margin) / 2 * -1 + 1rem);
     }
-
 }
 
 /* ==========================================================================
-   TOGGLE-ALL CHECKBOX BUTTON
+   Master Collapse functions and animations @prefixed
+   ========================================================================== */
+
+[data-parent="#resumeStack"] {
+    --height: calc(50vh + 6rem);
+    height: var(--height);
+    overflow: auto;
+}
+
+[data-parent="#resumeStack"].collapsing {
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+[data-parent="#resumeStack"].show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1 !important;
+        -ms-flex: 1 !important;
+            flex: 1 !important;
+
+    height: var(--height);
+
+    -webkit-animation: show-event .75s var(--glide) 0s 1 normal forwards running;
+    animation: show-event .75s var(--glide) 0s 1 normal forwards running;
+    -webkit-transition:
+            all .3s var(--zip) 0s,
+            -webkit-box-flex .1s var(--swoop) 0s;
+    transition:
+            all .3s var(--zip) 0s,
+            -webkit-box-flex .1s var(--swoop) 0s;
+    -o-transition:
+            all .3s var(--zip) 0s,
+            flex .1s var(--swoop) 0s;
+    transition:
+            all .3s var(--zip) 0s,
+            flex .1s var(--swoop) 0s;
+    transition:
+            all .3s var(--zip) 0s,
+            flex .1s var(--swoop) 0s,
+            -webkit-box-flex .1s var(--swoop) 0s,
+            -ms-flex .1s var(--swoop) 0s;
+}
+
+[data-parent="#resumeStack"]:not(.show) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 !important;
+            flex: 0 !important;
+
+    height: 0;
+
+    -webkit-animation: hide-event .55s var(--glide) 0s 1 normal forwards running;
+    animation: hide-event .55s var(--glide) 0s 1 normal forwards running;
+    -webkit-transition:
+            all .3s var(--zip) 0s,
+            -webkit-box-flex .1s var(--swoop) 0s;
+    transition:
+            all .3s var(--zip) 0s,
+            -webkit-box-flex .1s var(--swoop) 0s;
+    -o-transition:
+            all .3s var(--zip) 0s,
+            flex .1s var(--swoop) 0s;
+    transition:
+            all .3s var(--zip) 0s,
+            flex .1s var(--swoop) 0s;
+    transition:
+            all .3s var(--zip) 0s,
+            flex .1s var(--swoop) 0s,
+            -webkit-box-flex .1s var(--swoop) 0s,
+            -ms-flex .1s var(--swoop) 0s;
+}
+
+@media (max-width: 575.98px) {
+    main {
+        overflow: hidden;
+        height: calc(100vh + 6rem);
+    }
+
+    article > section:not(#collapseZero) {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+
+    :root {
+        --outlines: var(--raisin) !important;
+        font-size: .938rem;
+    }
+
+    [data-parent="#resumeStack"] {
+        --height: calc(50vh + 6rem);
+        height: var(--height);
+        overflow: scroll;
+    }
+
+    [data-parent="#resumeStack"]:not(#collapseZero) .outer-body:first-child,
+    [data-parent="#resumeStack"]:not(#collapseZero) .left {
+        display: none !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    [data-parent="#resumeStack"]:not(#collapseZero) .outer-body:first-child,
+    [data-parent="#resumeStack"]:not(#collapseZero) .left {
+        display: none !important;
+    }
+
+    article {
+        flex: 0 0 auto !important;
+        width: 100% !important;
+    }
+
+    #articleZero {
+        width: 100% !important;
+    }
+
+    #collapseZero .outer-body:first-child {
+        width: 100%;
+    }
+
+    #collapseZero .outer-body:nth-child(2) {
+        width: 100%;
+    }
+
+}
+
+/* Show event animation keyframes */
+
+@keyframes show-event {
+    0% {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-box-flex: 0;
+            -ms-flex: 0;
+                flex: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+    }
+    50% {
+        visibility: visible;
+        opacity: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    100% {
+        height: var(--height);
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        visibility: visible;
+        opacity: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+}
+
+@-webkit-keyframes show-event {
+    0% {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-box-flex: 0;
+                flex: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+                flex-direction: column-reverse;
+    }
+    50% {
+        visibility: visible;
+        opacity: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+    }
+    100% {
+        height: var(--height);
+        -webkit-box-flex: 1;
+                flex: 1;
+        visibility: visible;
+        opacity: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+    }
+}
+
+/* Hide event animation keyframes */
+
+@keyframes hide-event {
+    0% {
+        height: var(--height);
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        opacity: 1;
+        visibility: visible;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+    }
+    100% {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-box-flex: 0;
+            -ms-flex: 0;
+                flex: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+    }
+}
+
+@-webkit-keyframes hide-event {
+    0% {
+        height: var(--height);
+        -webkit-box-flex: 1;
+                flex: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        opacity: 1;
+        visibility: visible;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+                flex-direction: column-reverse;
+    }
+    100% {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-box-flex: 0;
+                flex: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+                flex-direction: column-reverse;
+    }
+}
+
+/* Hide event animation keyframs at xl */
+
+@media (min-width: 1200px) {
+    @keyframes hide-event {
+        0% {
+            height: var(--height);
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            opacity: 1;
+            visibility: visible;
+        }
+        50% {
+            opacity: 1;
+            visibility: visible;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+        }
+
+        /* Delay column reverse at 100% for less movement on large screens */
+
+        100% {
+            height: 0;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-box-flex: 0;
+                -ms-flex: 0;
+                    flex: 0;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+                -ms-flex-direction: column-reverse;
+                    flex-direction: column-reverse;
+        }
+    }
+
+    @-webkit-keyframes hide-event {
+        0% {
+            height: var(--height);
+            -webkit-box-flex: 1;
+                    flex: 1;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                    flex-direction: column;
+            opacity: 1;
+            visibility: visible;
+        }
+        50% {
+            opacity: 1;
+            visibility: visible;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                    flex-direction: column;
+        }
+
+        /* Delay column reverse at 100% for less movement on large screens */
+
+        100% {
+            height: 0;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-box-flex: 0;
+                    flex: 0;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+                    flex-direction: column-reverse;
+        }
+    }
+}
+
+/* ==========================================================================
+   TOGGLE-ALL CHECKBOX BUTTON @prefixed
    ========================================================================== */
 
 /*!
@@ -1506,9 +2279,15 @@ section.right:after {
  *
  * NOTE: The element is placed outside of the main header nav in order to
  * select and elicit behavior on sibling elements upon :checked toggle
+ *
+ * input is invisible
+ *
+ * input[type="checkbox"] selector is written as #toggle-all for clarity
  */
 
-.toggle-all {
+/* Position and style the label for the checkbox */
+
+[for="toggle-all"] {
     position: fixed;
     top: 1rem;
     left: 49%;
@@ -1518,26 +2297,50 @@ section.right:after {
     cursor: pointer;
 }
 
-input[type="checkbox"] {
-    display: none;
+#toggle-all:not(checked) + label ~ main {
+    /* Toggle to 2px */
+    --blur-xs: 0px;
+    /* Toggle to 3px */
+    --blur-sm: 0px;
+    /* Toggle to 6px */
+    --blur-md: 0px;
 }
 
-input[type="checkbox"]:checked + label ~ main [data-parent="#resumeStack"]:not(#collapseLanding).collapse {
+#toggle-all:checked + label ~ main {
+    /* Toggle to 2px */
+    --blur-xs: 2px;
+    /* Toggle to 3px */
+    --blur-sm: 3px;
+    /* Toggle to 6px */
+    --blur-md: 6px;
+}
+
+/* If checked, render all collapsed feature sections to be visible  */
+
+#toggle-all:checked + label ~ main [data-parent="#resumeStack"]:not(#collapseLanding).collapse {
     display: block;
     visibility: visible;
     height: 100%;
     overflow: visible;
-    transition: all var(--dashing) var(--glide) var(--early);
+
+    -webkit-animation: show-event .75s ease-in-out 0s;
+            animation: show-event .75s ease-in-out 0s;
+    -webkit-transition: all var(--dashing) var(--glide) var(--early);
+         -o-transition: all var(--dashing) var(--glide) var(--early);
+            transition: all var(--dashing) var(--glide) var(--early);
 }
 
-input[type="checkbox"]:checked + label ~ main article header .header-icon {
+
+/* If checked, hide all article > header icon buttons as their local boolean functionality will (truthy) return feedback for a (falsey) collapse.show  */
+
+#toggle-all:checked + label ~ main article header .header-icon {
     display: none;
 }
 
 /* Disable header button functionality when static toggle is on */
 /* https://stackoverflow.com/questions/2091168/how-to-disable-a-link-using-only-css */
 
-input[type="checkbox"]:checked + label ~ main article header {
+#toggle-all:checked + label ~ main article header {
     pointer-events: none;
     cursor: default;
     color: black;
@@ -1545,53 +2348,21 @@ input[type="checkbox"]:checked + label ~ main article header {
 
 /* Hide all collapse feature visual cues when static toggle is on */
 
-input[type="checkbox"]:checked + label ~ main article:before,
-input[type="checkbox"]:checked + label ~ main article:after,
-input[type="checkbox"]:checked + label ~ main section.right:after,
-input[type="checkbox"]:checked + label ~ main .header-title:after,
-input[type="checkbox"]:checked + label ~ main .spread:before,
-input[type="checkbox"]:checked + label ~ main .spread:after,
-input[type="checkbox"]:checked + label ~ main section:before,
-input[type="checkbox"]:checked + label ~ main section:after {
+#toggle-all:checked + label ~ main article:before,
+#toggle-all:checked + label ~ main article:after,
+#toggle-all:checked + label ~ main section.right:after,
+#toggle-all:checked + label ~ main .header-title:after,
+#toggle-all:checked + label ~ main .spread:before,
+#toggle-all:checked + label ~ main .spread:after,
+#toggle-all:checked + label ~ main section:before,
+#toggle-all:checked + label ~ main section:after {
     display: none;
 }
 
 /* Override .col-last helper when static toggle is on */
 
-input[type="checkbox"]:checked + label ~ main .col-last {
+#toggle-all:checked + label ~ main .outer-body:nth-child(2) {
     display: block;
-}
-
-/* Transitions for checkbox toggle are presently ineffective */
-
-@-webkit-keyframes toggle-collapse {
-    0% {
-        display: initial;
-        visibility: initial;
-        height: initial;
-        overflow: initial;
-    }
-    100% {
-        display: block;
-        visibility: visible;
-        height: 100%;
-        overflow: visible;
-    }
-}
-
-@keyframes toggle-collapse {
-    0% {
-        display: initial;
-        visibility: initial;
-        height: initial;
-        overflow: initial;
-    }
-    100% {
-        display: block;
-        visibility: visible;
-        height: 100%;
-        overflow: visible;
-    }
 }
 
 /* ==========================================================================
@@ -1616,9 +2387,10 @@ input[type="checkbox"]:checked + label ~ main .col-last {
 
     opacity: .5;
 }
+
 /* Enable link functionality for h3 outline lists on toggle of expand-all */
 
-input[type="checkbox"]:checked + label ~ nav .list-h4  {
+#toggle-all:checked + label ~ nav .list-h4  {
     opacity:1;
     pointer-events: auto;
     cursor: pointer;
@@ -1632,13 +2404,13 @@ input[type="checkbox"]:checked + label ~ nav .list-h4  {
 
 /* Disable and hide h3 button duplicates of h3 a tags on toggle of expand-all */
 
-input[type="checkbox"]:checked + label ~ nav .list-h3 [data-toggle="collapse"] {
+#toggle-all:checked + label ~ nav .list-h3 [data-toggle="collapse"] {
     display: none;
 }
 
 /* Enable and show h3 a tags on toggle of expand-all */
 
-input[type="checkbox"]:checked + label ~ nav .list-h3 [href^="#article"] {
+#toggle-all:checked + label ~ nav .list-h3 [href^="#article"] {
     display: block;
 }
 
@@ -1678,6 +2450,21 @@ input[type="checkbox"]:checked + label ~ nav .list-h3 [href^="#article"] {
 
     /* Instantiate --offset to be the object property of new variable --mainwidth */
     --mainwidth: var(--offset);
+
+    /* Variable margin-left property, reassign at medium screen */
+    --mainstart: 0;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .main-body,
+    .nav-outline {
+        --of-twelve: 3 !important;
+        --mainstart: calc(var(--navwidth) / 2);
+    }
+
+    .main-body {
+        width: var(--mainwidth) !important;
+    }
 }
 
 /* Set the default state of nav */
@@ -1689,6 +2476,7 @@ input[type="checkbox"]:checked + label ~ nav .list-h3 [href^="#article"] {
     left: calc(var(--navwidth) * -1);
 
     /* Set the width of nav to be an instance of --navwidth */
+
     width: var(--navwidth);
     height: 100%;
 
@@ -1703,34 +2491,23 @@ input[type="checkbox"]:checked + label ~ nav .list-h3 [href^="#article"] {
 }
 
 .nav-content {
-    /*position: absolute;*/
-    /*top: 100%;*/
-    /*left: 0;*/
-    z-index: 1000;
-    min-width: 10rem;
-
-    align-content: end;
-    padding: .5rem;
     margin: 1.125rem 0 0;
-
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
 
     background-color: #fff;
     background: var(--pearl) !important;
-    /*background: rgba(250, 250, 250, 0.6) !important;*/
     background-clip: padding-box;
 
     border: 2px solid var(--white) !important;
     border-radius: .75rem;
 
+    -webkit-box-shadow:
+            inset -5px -8px 0 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
+
     box-shadow:
             inset -5px -8px 0 0 rgba(255, 255, 255, 0.5),
             inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
 }
-
 
 .outline-item {
     padding: 1rem 1rem 1rem;
@@ -1740,39 +2517,40 @@ input[type="checkbox"]:checked + label ~ nav .list-h3 [href^="#article"] {
     background: var(--white);
 }
 
-/*ul.nav .nav-item:not(:last-child):after,*/
-/*.nav-item:after {*/
-/*    position: absolute;*/
-/*    left: 2.25rem;*/
-/*    height: calc(100% - 2.45rem);*/
-/*    top: 3rem;*/
-/*    width: 1px;*/
-/*    margin-top: .5rem;*/
-/*    content: "";*/
-/*    background-color: rgba(0,0,0,.1);*/
-/*}*/
-
-
-
-
-/*.stepper-vertical .stepper-content,*/
-/*.nav-link {*/
-/*    overflow: hidden;*/
-/*    padding: 0 1.5rem 1.5rem 3.75rem;*/
-/*    -webkit-transition: height .3s ease-in-out,margin-top .3s ease-in-out,margin-bottom .3s ease-in-out,padding-top .3s ease-in-out,padding-bottom .3s ease-in-out;*/
-/*    transition: height .3s ease-in-out,margin-top .3s ease-in-out,margin-bottom .3s ease-in-out,padding-top .3s ease-in-out,padding-bottom .3s ease-in-out;*/
-/*}*/
-
-
 /* Style parenthetic configs for nav */
 
 .nav-outline ol.nav,
 .nav-outline ul.nav {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 ul.nav {
     padding-left: 1rem;
+}
+
+/* SIDE-MENU scroll spy hover states
+   ========================================================================== */
+
+/* Scrollspy active state */
+
+.nav-pills.menu-sidebar .nav-link.active {
+    background-color: transparent;
+    /*-webkit-box-shadow: none;*/
+    /*box-shadow: none;*/
+    color: #1266f1;
+    font-weight: 600;
+    border-left: .125rem dashed #1266f1;
+    border-radius: 0;
+}
+
+.nav-pills.menu-sidebar [href="#collapseLanding"].nav-link.active,
+.nav-pills.menu-sidebar [href="#splash-banner"].nav-link.active {
+    color: unset;
+    font-weight: unset;
+    border: none;
 }
 
 @media (max-width: 575.98px) {
@@ -1813,10 +2591,32 @@ ul.nav {
 
     .list-h4 a.nav-link {
         overflow: hidden;
-        text-overflow: ellipsis;
+
+        -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
         white-space: nowrap;
         width: 60%;
         font-size: .625em !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .list-h2 [href="#splash-banner"],
+    .list-h4 [href^="#collapse"],
+    .list-h5 > :first-child {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .list-h5 > :nth-child(2) {
+        visibility: visible;
+    }
+
+    ul.nav {
+        padding-left: .5rem;
     }
 }
 
@@ -1827,30 +2627,44 @@ ul.nav {
 
 .nav-outline.show {
     display: block;
-    animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
-    transition: all var(--flashing) var(--zip) var(--early);
+
+    -webkit-animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
+            animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+         -o-transition: all var(--flashing) var(--zip) var(--early);
+            transition: all var(--flashing) var(--zip) var(--early);
 }
 
 /* Slide nav out on .collapse event */
 
 .nav-outline:not(.show) {
     display: none;
-    animation: nav-out .75s var(--glide) 0s 1 normal forwards running;
-    transition: all var(--flashing) var(--zip) var(--early);
+
+    -webkit-animation: nav-out .75s var(--glide) 0s 1 normal forwards running;
+            animation: nav-out .75s var(--glide) 0s 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+         -o-transition: all var(--flashing) var(--zip) var(--early);
+            transition: all var(--flashing) var(--zip) var(--early);
 }
 
 /* Shrink main on nav.show event */
 
 .nav-outline.show ~ .main-body {
-    animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
-    transition: all var(--flashing) var(--zip) var(--early);
+    -webkit-animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
+            animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+         -o-transition: all var(--flashing) var(--zip) var(--early);
+            transition: all var(--flashing) var(--zip) var(--early);
 }
 
 /* Expand main on nav.collapse event */
 
 .nav-outline:not(.show) ~ .main-body {
-    animation: main-grow .75s var(--glide) 0s 1 normal forwards running;
-    transition: all var(--flashing) var(--zip) var(--early);
+    -webkit-animation: main-grow .75s var(--glide) 0s 1 normal forwards running;
+            animation: main-grow .75s var(--glide) 0s 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+         -o-transition: all var(--flashing) var(--zip) var(--early);
+            transition: all var(--flashing) var(--zip) var(--early);
 }
 
 /* Select the div elements (the page-left, and page-right col-* variety) to wrap full width between lg and xl */
@@ -1859,9 +2673,14 @@ ul.nav {
 @media (min-width: 1200px) and (max-width: 1399.98px) {
     nav.nav-outline.show ~ .main-body .spread > div  {
         width: 100%;
-        transition: all var(--flashing) var(--zip) var(--early);
+
+        -webkit-transition: all var(--flashing) var(--zip) var(--early);
+             -o-transition: all var(--flashing) var(--zip) var(--early);
+                transition: all var(--flashing) var(--zip) var(--early);
     }
 }
+
+/* Side Menu Nav-in animation keyframes */
 
 @-webkit-keyframes nav-in {
     0% {
@@ -1893,6 +2712,8 @@ ul.nav {
     }
 }
 
+/* Side Menu nav-out animation keyframes */
+
 @-webkit-keyframes nav-out {
     0% {
         left: 0;
@@ -1923,10 +2744,12 @@ ul.nav {
     }
 }
 
+/* Side menu main-shrink animation keyframes */
+
 @-webkit-keyframes main-shrink {
     0% {
-        width: 100%;
-        margin-left: 0;
+        width: calc(var(--mainwidth) + var(--navwidth));
+        margin-left: var(--mainstart);
     }
     100% {
         width: var(--mainwidth);
@@ -1936,22 +2759,25 @@ ul.nav {
 
 @keyframes main-shrink {
     0% {
-        width: 100%;
-        margin-left: 0;
+        width: calc(var(--mainwidth) + var(--navwidth));
+        margin-left: var(--mainstart);
     }
     100% {
         width: var(--mainwidth);
         margin-left: var(--navwidth);
     }
 }
+
+/* Side menu main-grow animation keyframes */
+
 @-webkit-keyframes main-grow {
     0% {
         width: var(--mainwidth);
         margin-left: var(--navwidth);
     }
     100% {
-        width: 100%;
-        margin-left: 0;
+        width: calc(var(--mainwidth) + var(--navwidth));
+        margin-left: var(--mainstart);
     }
 }
 @keyframes main-grow {
@@ -1960,55 +2786,56 @@ ul.nav {
         margin-left: var(--navwidth);
     }
     100% {
-        width: 100%;
-        margin-left: 0;
+        width: calc(var(--mainwidth) + var(--navwidth));
+        margin-left: var(--mainstart);
     }
 }
 
+/* SIDE MENU + EXPAND ALL FULL SPREAD STATE
+   ========================================================================== */
+
 /* Trigger a complete Side Nav click event at 1400px */
-/* NOTE: Several repeats */
+/* Also triggers an expand all at the largest media query, showing all content. */
 
 @media (min-width: 1400px) {
+    :root {
+        --outlines: transparent;
+    }
 
     [data-parent="#resumeStack"].collapse:not(.show) {
         display: block;
     }
 
-    #collapseLanding {
-        /*display: none;*/
-    }
-
     .nav-outline.show ~ .main-body,
     .nav-outline:not(.show) ~ .main-body {
-        animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
-        transition: all var(--flashing) var(--zip) var(--early);
+        -webkit-animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
+                animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
+        -webkit-transition: all var(--flashing) var(--zip) var(--early);
+             -o-transition: all var(--flashing) var(--zip) var(--early);
+                transition: all var(--flashing) var(--zip) var(--early);
     }
 
-    .nav-outline,
-    .nav-outline.collapse:not(.show),
-    .nav-outline.collapse,
-    .nav-outline.show,
-    .nav-outline.collapsing {
+    .nav-outline.collapse:not(.show) {
         display: block;
-        animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
-        transition: all var(--flashing) var(--zip) var(--early);
-    }
-    .navbar-toggler .open,
-    input[type="checkbox"] + label .open {
-        display: block;
-        color: white;
+
+        -webkit-animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
+                animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
+        -webkit-transition: all var(--flashing) var(--zip) var(--early);
+             -o-transition: all var(--flashing) var(--zip) var(--early);
+                transition: all var(--flashing) var(--zip) var(--early);
     }
 
-    article header .header-icon,
-    .navbar-toggler .closed,
-    input[type="checkbox"] + label .closed {
+    .menu-icon {
+        opacity: .1;
+    }
+
+    article header .header-icon {
         display: none;
-        color: white;
     }
 
     article header,
-    .navbar-toggler,
-    input[type="checkbox"] + label {
+    #nav-button,
+    #toggle-all + label {
         pointer-events: none;
         cursor: default;
     }
@@ -2018,20 +2845,6 @@ ul.nav {
         pointer-events: auto;
         cursor: pointer;
     }
-
-    article:before,
-    article:after,
-    section.right:after,
-    .header-title:after,
-    .spread:before,
-    .spread:after,
-    section:before,
-    section:after,
-    section.collapse:before,
-    section.collapse:after {
-        display: none;
-    }
-
 }
 
 /* ==========================================================================
@@ -2049,14 +2862,14 @@ ul.nav {
 
 /* Hide .closed when section is expanded */
 details[open] .closed,
-input[type="checkbox"]:checked + label .closed,
+#toggle-all:checked + label .closed,
 [data-toggle="collapse"][aria-expanded="true"] .closed {
     display: none;
 }
 
 /* Show .open when section is expanded */
 details[open] .open,
-input[type="checkbox"]:checked + label .open,
+#toggle-all:checked + label .open,
 [data-toggle="collapse"][aria-expanded="true"] .open {
     display: block;
     color: var(--deep-1);
@@ -2083,18 +2896,26 @@ input[type="checkbox"]:checked + label .open,
 
     background: var(--gradient-1);
 
+    -webkit-box-shadow:
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
+
     box-shadow:
-            0 -8px 0 rgba(0, 0, 0, 0.2),
-            0 6px 0 rgba(0, 0, 0, 0.4);
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
 }
 
 /* Style general icon wrapper */
 
 .inset-inner {
     background: var(--gradient-3);
+
+    -webkit-box-shadow:
+            0.3px 0.3px var(--blur-sm) rgba(237, 238, 243, 0.1),
+            -0.3px -0.3px var(--blur-sm) rgba(239, 241, 245, 0.1);
     box-shadow:
-            0.3px 0.3px 0 rgba(237, 238, 243, 0.1),
-            -0.3px -0.3px 0 rgba(239, 241, 245, 0.1);
+            0.3px 0.3px var(--blur-sm) rgba(237, 238, 243, 0.1),
+            -0.3px -0.3px var(--blur-sm) rgba(239, 241, 245, 0.1);
 }
 
 .inset-container-6 {
@@ -2105,9 +2926,13 @@ input[type="checkbox"]:checked + label .open,
     margin-top: 3px;
     margin-bottom: 3px;
 
+    -webkit-box-shadow:
+            inset 0 3.3px var(--blur-sm) #B0B2B5,
+            inset 0 -3.3px var(--blur-sm) #FFFFFF;
+
     box-shadow:
-            inset 0 3.3px 0 #B0B2B5,
-            inset 0 -3.3px 0 #FFFFFF;
+            inset 0 3.3px var(--blur-sm) #B0B2B5,
+            inset 0 -3.3px var(--blur-sm) #FFFFFF;
 }
 
 /* Style general .btn hover/feedback  */
@@ -2121,10 +2946,15 @@ li.link-item.inset-item {
 }
 
 li.link-item:hover {
+    background: -o-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
     background: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
+
+    -webkit-box-shadow:
+            2px 2px var(--blur-xs) white,
+            -2px -2px var(--blur-xs) white;
     box-shadow:
-            2px 2px 0 white,
-            -2px -2px 0 white;
+            2px 2px var(--blur-xs) white,
+            -2px -2px var(--blur-xs) white;
 }
 
 li.link-item.inset-item a {
@@ -2176,6 +3006,9 @@ li.link-item.inset-item a {
             0 3px 0 0 #A4A4A4,
             0 -4px 0 0 #fafafa;
 
+    -webkit-box-shadow:
+            0 1px 0 0 #FAFAFA inset,
+            0 -2px 0 0 #D7D7D6 inset;
     box-shadow:
             0 1px 0 0 #FAFAFA inset,
             0 -2px 0 0 #D7D7D6 inset;
@@ -2195,10 +3028,17 @@ li.link-item.inset-item a {
 }
 
 .social-links .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     padding: 1rem;
     border-style: solid;
@@ -2210,16 +3050,22 @@ li.link-item.inset-item a {
 .social-links li a > .inset-inner {
     padding: .4rem;
     border-radius: 50%;
-    background: black;
+
     background: var(--gradient-3);
+
+    -webkit-box-shadow:
+            2px 2px var(--blur-xs) rgba(237, 238, 243, 0.1),
+            -2px -2px var(--blur-xs) rgba(239, 241, 245, 0.1);
     box-shadow:
-            2px 2px 0 rgba(237, 238, 243, 0.1),
-            -2px -2px 0 rgba(239, 241, 245, 0.1);
+            2px 2px var(--blur-xs) rgba(237, 238, 243, 0.1),
+            -2px -2px var(--blur-xs) rgba(239, 241, 245, 0.1);
 }
 
 @media (max-width: 575.98px) {
 
     .social-links {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: start;
     }
 
@@ -2266,12 +3112,16 @@ ul.activity-cta li .contact-text {
     /*padding-left: .625rem;*/
     padding-top: .625rem;
     vertical-align: middle;
-    justify-content: space-between;
-    align-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
 }
 
 ul.activity-cta li .contact-text .key {
-    justify-self: left;
+    -ms-grid-column-align: left;
+        justify-self: left;
 }
 
 ul.activity-cta li i {
@@ -2279,11 +3129,19 @@ ul.activity-cta li i {
 }
 
 .activity-cta .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+
     height: 3rem;
     width: 3rem;
-    justify-content: center;
-    align-items: center;
+
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .connect-cta .btn:hover,
@@ -2293,21 +3151,30 @@ ul.activity-cta li i {
 .activity-cta .btn:hover,
 .activity-cta .btn:focus {
     background: var(--gradient-4);
+    -webkit-box-shadow:
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4),
+            3px -8px var(--blur-sm) rgba(180, 180, 180, .7),
+            -3px 6px var(--blur-sm) rgba(250, 250, 250, .4);
     box-shadow:
-            0 -8px 0 rgba(0, 0, 0, 0.2),
-            0 6px 0 rgba(0, 0, 0, 0.4),
-            3px -8px 0 rgba(180, 180, 180, .7),
-            -3px 6px 0 rgba(250, 250, 250, .4);
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4),
+            3px -8px var(--blur-sm) rgba(180, 180, 180, .7),
+            -3px 6px var(--blur-sm) rgba(250, 250, 250, .4);
 }
 
 .connect-cta .btn:active,
 .social-links .btn:active,
 .activity-cta .btn:active {
     background: var(--gradient-1);
+    -webkit-box-shadow:
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            4px 8px var(--blur-sm) rgba(255, 255, 255, 0.3),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
     box-shadow:
-            0 -8px 0 rgba(0, 0, 0, 0.2),
-            4px 8px 0 rgba(255, 255, 255, 0.3),
-            0 6px 0 rgba(0, 0, 0, 0.4);
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            4px 8px var(--blur-sm) rgba(255, 255, 255, 0.3),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
 }
 
 .connect-cta button > .inset-inner,
@@ -2367,7 +3234,22 @@ section.show .activity-cta .btn {
     border: 2px solid #8bbafe;
     outline: 0;
     /*box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);*/
-    transition: border-color 0.15s ease-in-out 3s, box-shadow 0.15s ease-in-out 3s;
+    -webkit-transition:
+            border-color 0.15s ease-in-out 3s,
+            -webkit-box-shadow 0.15s ease-in-out 3s;
+        -o-transition:
+                border-color 0.15s ease-in-out 3s,
+                box-shadow 0.15s ease-in-out 3s;
+            transition:
+                    border-color 0.15s ease-in-out 3s,
+                    -webkit-box-shadow 0.15s ease-in-out 3s;
+    transition:
+            border-color 0.15s ease-in-out 3s,
+            box-shadow 0.15s ease-in-out 3s;
+    transition:
+            border-color 0.15s ease-in-out 3s,
+            box-shadow 0.15s ease-in-out 3s,
+            -webkit-box-shadow 0.15s ease-in-out 3s;
 }
 
 /* BADGE/STATS ~ COLLAPSE CONFIGS
@@ -2377,29 +3259,26 @@ section.show .activity-cta .btn {
     opacity: 0;
 }
 
+#toggle-all:checked + label ~ main .data-stats,
 section.show .data-stats {
     opacity: 1;
     /*box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);*/
-    transition: opacity 0.15s var(--breeze) .3s, box-shadow 0.15s var(--glide) 1s;
-}
-
-
-/* ==========================================================================
-   COLLAPSE SECTION TRANSITION CONFIGS
-   ========================================================================== */
-
-/* CREDIT cubic bezier preview/helper https://cubic-bezier.com/#.23,-0.09,.18,1.25 */
-/* BUG: on Chrome, transition on collapsing a shown section only takes effect on first element */
-
-
-.collapsing {
-    height: 0;
-    overflow: hidden;
-
-    -webkit-transition: height 700ms var(--glide) 0s;
-    -moz-transition: height 700ms var(--glide) 0s;
-    -o-transition: height 700ms var(--glide) 0s;
-    transition: height 700ms var(--glide) 0s;
+    -webkit-transition:
+            opacity 0.15s var(--breeze) .3s,
+            -webkit-box-shadow 0.15s var(--glide) 1s;
+        -o-transition:
+                opacity 0.15s var(--breeze) .3s,
+                box-shadow 0.15s var(--glide) 1s;
+            transition:
+                    opacity 0.15s var(--breeze) .3s,
+                    -webkit-box-shadow 0.15s var(--glide) 1s;
+    transition:
+            opacity 0.15s var(--breeze) .3s,
+            box-shadow 0.15s var(--glide) 1s;
+    transition:
+            opacity 0.15s var(--breeze) .3s,
+            box-shadow 0.15s var(--glide) 1s,
+            -webkit-box-shadow 0.15s var(--glide) 1s;
 }
 
 /* ==========================================================================
@@ -2410,9 +3289,6 @@ section.show .data-stats {
 /* To be organized */
 /* Dispose splash banner content upon click any header-button */
 
-[id="collapseLanding"].collapse:not(.show) {
-    display: none;
-}
 
 @media (min-width: 740px) {
     h1 {
@@ -2470,7 +3346,7 @@ section.show .data-stats {
 }
 
 /* ==========================================================================
-   INTRODUCTION SECTION
+   INTRODUCTION SECTION @prefixed
    ========================================================================== */
 
 .landing-subheading p {
@@ -2505,58 +3381,73 @@ section.show .data-stats {
 .image-container {
     width: 13rem;
     height: 13rem;
+
     padding: 1rem;
-    border-style: solid;
-    border-color: #F7F6F4;
-    border-width: 1px;
-    border-radius: 50%;
     margin: 0 auto;
+
+    border: 1px solid #F7F6F4;
+    border-radius: 50%;
+
     background: #F2F1EF;
+    -webkit-box-shadow:
+            inset 5.11px 5.11px var(--blur-md) #D1D0CF,
+            inset -5.11px -5.11px var(--blur-md) #FFFFFF;
     box-shadow:
-            inset 5.11px 5.11px 0 #D1D0CF,
-            inset -5.11px -5.11px 0 #FFFFFF;
+            inset 5.11px 5.11px var(--blur-md) #D1D0CF,
+            inset -5.11px -5.11px var(--blur-md) #FFFFFF;
 }
 
 .image-container > img {
     height: 100%;
 }
 
-/* INTRO RECENT ACTIVITY SCROLLER
+/* INTRO RECENT ACTIVITY SCROLLER @prefixed
    ========================================================================== */
 
 #verticalScroller {
-    margin: 0 auto;
     position: relative;
+    overflow: hidden;
 
     height: 150px;
-
-    overflow: hidden;
+    padding: 0;
+    margin: 0 auto;
     background: transparent;
-
     border-radius: .75rem;
 
+    -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    -ms-flex-line-pack: start;
+        align-content: start;
+
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(255, 255, 255, 0.5)));
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5));
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5));
 
-    box-shadow:
-            0 3.3px 0 rgba(0, 0, 0, 0.3),
-            0 -3.3px 0 rgba(255, 255, 255, 0.5),
+    -webkit-box-shadow:
+            0 3.3px var(--blur-xs) rgba(0, 0, 0, 0.3),
+            0 -3.3px var(--blur-xs) rgba(255, 255, 255, 0.5),
             inset 0 2px 0 rgba(255, 255, 255, 1);
 
+    box-shadow:
+            0 3.3px var(--blur-xs) rgba(0, 0, 0, 0.3),
+            0 -3.3px var(--blur-xs) rgba(255, 255, 255, 0.5),
+            inset 0 2px 0 rgba(255, 255, 255, 1);
 
-    flex-direction: column;
-    align-content: start;
-    padding: 0;
 }
 
 #verticalScroller > li {
     position:absolute;
-    height: auto;
+
     padding: 10px 10px 10px 10px;
+    margin-bottom: 0;
+    height: auto;
 
     background: transparent;
-    margin-bottom: 0;
 
-    box-shadow: none;
+    -webkit-box-shadow: none;
+        box-shadow: none;
 }
 
 #verticalScroller .recent-activity {
@@ -2569,12 +3460,17 @@ section.show .data-stats {
 }
 
 .activity-item {
-    height: 100px;
     overflow: hidden;
+    height: 100px;
+
     border: 2px solid #F7F7F7;
     border-radius: .6rem;
 
     background: var(--gradient-4);
+
+    -webkit-box-shadow:
+            3px 0 0 rgba(180, 180, 180, .7),
+            -3px 0 0 rgba(250, 250, 250, .4);
 
     box-shadow:
             3px 0 0 rgba(180, 180, 180, .7),
@@ -2582,32 +3478,51 @@ section.show .data-stats {
 
 }
 
-/* INTRO SCROLLER ~ INPUT CONFIGS
+/* INTRO SCROLLER ~ INPUT CONFIGS @prefixed
    ========================================================================== */
 
-input[type="checkbox"]:checked + label ~ main #collapseZero #scrollOne,
+#toggle-all:checked + label ~ main #collapseZero #scrollOne,
 #collapseZero.show #scrollOne {
+    -webkit-animation:
+            scroll-in .75s var(--glide) 0s 1 normal forwards running,
+            scroll-out .75s var(--glide) 4s 1 normal forwards running,
+            scroll-in .75s var(--glide) 12s 1 normal forwards running;
     animation:
             scroll-in .75s var(--glide) 0s 1 normal forwards running,
             scroll-out .75s var(--glide) 4s 1 normal forwards running,
             scroll-in .75s var(--glide) 12s 1 normal forwards running;
-    transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
+
+    -webkit-transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
+         -o-transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
+            transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
 }
 
-input[type="checkbox"]:checked + label ~ main #collapseZero #scrollTwo,
+#toggle-all:checked + label ~ main #collapseZero #scrollTwo,
 #collapseZero.show #scrollTwo {
+    -webkit-animation:
+            scroll-in .75s var(--glide) 4s 1 normal forwards running,
+            scroll-out .75s var(--glide) 8s 1 normal forwards running;
     animation:
             scroll-in .75s var(--glide) 4s 1 normal forwards running,
             scroll-out .75s var(--glide) 8s 1 normal forwards running;
-    transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
+
+    -webkit-transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
+         -o-transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
+            transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
 }
 
-input[type="checkbox"]:checked + label ~ main #collapseZero #scrollThree,
+#toggle-all:checked + label ~ main #collapseZero #scrollThree,
 #collapseZero.show #scrollThree {
+    -webkit-animation:
+            scroll-in .75s var(--glide) 8s 1 normal forwards running,
+            scroll-out .75s var(--glide) 12s 1 normal forwards running;
     animation:
             scroll-in .75s var(--glide) 8s 1 normal forwards running,
             scroll-out .75s var(--glide) 12s 1 normal forwards running;
-    transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
+
+    -webkit-transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
+         -o-transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
+            transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
 }
 
 #scrollOne,
@@ -2669,7 +3584,6 @@ input[type="checkbox"]:checked + label ~ main #collapseZero #scrollThree,
     margin-right: auto;
     margin-bottom: auto;
     min-width: 50%;
-    /*d-flex mr-auto mb-auto pt-2 pl-2*/
 }
 
 @media (max-width: 767.98px) {
@@ -2967,6 +3881,8 @@ ion-icon.icon-outline {
     color: #00b74a;
 }
 
+/* Status colors */
+
 .current [data-repo-status]:after {
     content: attr(data-repo-status);
     color: #1266f1;
@@ -2981,6 +3897,8 @@ ion-icon.icon-outline {
     content: attr(data-repo-status);
     color: #b23cfd;
 }
+
+/* GitHub language colors */
 
 .repo-html{ color: #E14C30; }
 .progress-html { background-color: #E14C30; }
@@ -3226,7 +4144,7 @@ blockquote, q {
 }
 
 [data-toggle="collapse"][aria-expanded="true"] .header-text {
-    width: 100%;
+    /*width: 100%;*/
 }
 
 [data-toggle="collapse"][aria-expanded="true"] .header-text:before {
@@ -3428,50 +4346,6 @@ article {
     -o-transition: var(--flash-all-late-glide-trans);
     transition: var(--flash-all-late-glide-trans);
 }
-
-/*#headingThree {*/
-/*    position: relative;*/
-
-/*    -webkit-animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-/*    animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-
-/*    -webkit-transition: var(--flash-all-flash-glide-trans);*/
-/*    -o-transition: var(--flash-all-flash-glide-trans);*/
-/*    transition: var(--flash-all-flash-glide-trans);*/
-/*}*/
-
-/*#headingFour {*/
-/*    position: relative;*/
-
-/*    -webkit-animation: load-right var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-/*    animation: load-right var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-
-/*    -webkit-transition: var(--flash-all-late-glide-trans);*/
-/*    -o-transition: var(--flash-all-late-glide-trans);*/
-/*    transition: var(--flash-all-late-glide-trans);*/
-/*}*/
-
-/*#headingFive {*/
-/*    position: relative;*/
-
-/*    -webkit-animation: load-left var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-/*    animation: load-left var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-
-/*    -webkit-transition: var(--flash-all-flash-glide-trans);*/
-/*    -o-transition: var(--flash-all-flash-glide-trans);*/
-/*    transition: var(--flash-all-flash-glide-trans);*/
-/*}*/
-
-/*#headingSix {*/
-/*    position: relative;*/
-
-/*    -webkit-animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-/*    animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-
-/*    -webkit-transition: var(--flash-all-late-glide-trans);*/
-/*    -o-transition: var(--flash-all-late-glide-trans);*/
-/*    transition: var(--flash-all-late-glide-trans);*/
-/*}*/
 
 header.header,
 footer.footer {
