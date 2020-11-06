@@ -23,6 +23,24 @@
 </head>
 <body class="root-body" id="bodyMain" data-spy="scroll" data-target="#nav-outline" data-offset="5">
 
+    <!-- start EXPAND All TOGGLE -->
+    <input type="checkbox" id="toggle-all" class="invisible">
+    <label for="toggle-all">
+        <div class="toggle-container d-flex">
+            <span class="menu-icon d-flex position-relative align-self-center pb-4">
+                 <ion-icon id="hideswap" name="radio-button-off"
+                          class="hide-swap d-flex position-absolute float-left">
+                    <span class="sr-only">Expand All</span>
+                </ion-icon>
+                <ion-icon id="showswap" name="radio-button-on"
+                          class="show-swap d-flex position-absolute float-left">
+                    <span class="sr-only">Collapse All</span>
+                </ion-icon>
+            </span>
+        </div>
+    </label>
+    <!-- close expand all toggle-->
+
     <!-- start HEADER MAIN -->
     <header class="body-header">
         <!-- start NAV MAIN -->
@@ -57,33 +75,6 @@
             </div>
         </nav><!-- close nav main -->
     </header><!-- close header main -->
-
-    <!-- start EXPAND All TOGGLE -->
-    <input type="checkbox" id="toggle-all" class="invisible">
-    <label for="toggle-all">
-        <div class="toggle-container d-flex">
-            <span class="menu-icon d-flex position-relative align-self-center pb-4">
-                <ion-icon id="hideswap" name="toggle-outline"
-                          class="d-none hide-swap  position-absolute float-left">
-                    <span class="sr-only">Expand All</span>
-                </ion-icon>
-                <ion-icon id="showswap" name="toggle-filled"
-                          class="d-none show-swap  position-absolute float-left">
-                    <span class="sr-only">Collapse All</span>
-                </ion-icon>
-
-                 <ion-icon id="hideswap" name="radio-button-off"
-                          class="hide-swap d-flex position-absolute float-left">
-                    <span class="sr-only">Expand All</span>
-                </ion-icon>
-                <ion-icon id="showswap" name="radio-button-on"
-                          class="show-swap d-flex position-absolute float-left">
-                    <span class="sr-only">Collapse All</span>
-                </ion-icon>
-            </span>
-        </div>
-    </label>
-    <!-- close expand all toggle-->
 
     <!-- start NAV OUTLINE -->
     <nav class="body-nav collapse" id="nav-outline">
@@ -345,7 +336,7 @@
                 </li>
             </ol>
             <!-- start 0.1 SOCIAL LINKS -->
-            <ul class="nav-links activity-cta connect-cta  inset-item nav-content">
+            <ul class="nav-links activity-cta connect-cta links-content nav-content">
                 <li class="inset-container outline-item d-flex">
                     <a class="btn outset-container-2 flex-fill" href="https://www.linkedin.com/in/joem-elias-sanez/"
                        target="_blank">
@@ -4305,11 +4296,22 @@
     </main><!-- close main stack -->
 
     <!-- start FOOTER CONTAINER -->
-    <footer class="body-footer fixed-bottom mt-auto bg-w2">
+    <footer class="body-footer fixed-bottom d-flex flex-row justify-content-between align-middle mt-auto bg-w2">
         <!-- Footer Item -->
-        <div class="d-sm-block text-sm-center justify-content-center text-md-right">
-            <h6 class="d-inline-block  text-center" style="font-size: 12px;">
-                © Designed and Built by
+
+        <div class="text-sm-center justify-content-center mr-auto text-md-left">
+            <span class="d-inline-block text-center">
+                <ion-icon class="align-middle" name="logo-github"></ion-icon>
+            </span>
+            <p class="d-inline-block text-center">
+                <a class="text-dark align-middle small" href="https://github.com/israelias" target="_blank">
+                    @israelias
+                </a>
+            </p>
+        </div><!-- /footer item -->
+        <div class="text-sm-center justify-content-center ml-auto text-md-right">
+            <h6 class="d-inline-block text-center">
+                © <span class="d-none d-lg-inline-block">Designed and Built by</span>
             </h6>
             <p class="d-inline-block text-center">
                 <a class="text-dark" href="#">

@@ -209,8 +209,8 @@
    ========================================================================== */
 
 body {
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
+    /*-webkit-overflow-scrolling: touch;*/
+    /*scroll-behavior: smooth;*/
 
     text-rendering: optimizeLegibility;
     font-kerning: normal;
@@ -404,20 +404,19 @@ h6 {
     --blur-md: 0px;
 
     position: fixed;
+    overflow: hidden;
+
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    /*max-height: calc(100vmax - 24rem);*/
-    /*bottom: 3rem;*/
-
-
-    overflow: hidden;
 
     padding-left: var(--margin);
     padding-right: var(--margin);
     margin-right: calc(var(--gutter-x) / -2);
     margin-left: calc(var(--gutter-x) / -2);
+    margin-top: 3.375rem;
+    margin-bottom: 3.375rem;
 }
 
 .body-main > * {
@@ -431,11 +430,14 @@ h6 {
     height: 10px;
 }
 
+/* Maximum height query */
+
 @media (max-height: 666.98px) {
     :root {
         --of-twelve: 10.75;
         font-size: .938rem;
     }
+
     .body-main {
         position: -webkit-sticky;
         position: sticky;
@@ -458,13 +460,6 @@ h6 {
         height: var(--height);
 
         flex-direction: column-reverse;
-    }
-}
-
-@media (min-width: 576px) {
-    .body-main {
-        margin-top: 3.375rem;
-        margin-bottom: 3.375rem;
     }
 }
 
@@ -1886,6 +1881,7 @@ section.right:after {
 
 @media (min-width: 576px) and (max-width: 991.98px) {
     .nav-content {
+        --navlink-height: 1.24rem;
         --navlist-height: calc(var(--navlink-height) * 4 + .5rem);
         --navlist-top: calc(var(--navlink-height) * -1);
     }
@@ -1921,7 +1917,7 @@ ul.nav {
 .outline-item {
     overflow: hidden;
     padding: 1rem 1rem 1rem;
-    margin-bottom: .5rem;
+    /*margin-bottom: .5rem;*/
     border-radius: var(--radius-2);
     border: 1px solid var(--grey) !important;
     background: var(--white);
@@ -1938,7 +1934,8 @@ ul.nav {
 }
 
 
-/* Relatively position lists, list items and list links in nav outline.
+/*
+ * Relatively position lists, list items and list links in nav outline.
  * Prevents :before element from positioning relative to the next parent.
  */
 
@@ -1949,14 +1946,34 @@ ul.nav {
 }
 
 /*
+ * Absolute positioning as a boolean tool.
+ *
+ * This attaches key element positioning in nav outline to the :checked selector.
+ * Scrollspy and pagination should only be enabled when the website is in static
+ * expand-all state.
+ *
+ * As the feedback states of nav outline are given to pseudo elements absolutely
+ * positioned relative to their parent elements; positioning absolute children
+ * by traversing the :checked selector results in an effective on/off hack.
+ *
  * Absolutely position pseudo elements of list items in nav
- * outline for pagination and scrollspy features.
+ * outline for pagination and scrollspy features only when #toggle-all
+ * is ':checked'.
  */
 
-.nav:before,
-.nav:after,
-.nav-item:before,
-.nav-link:before {
+#toggle-all:checked ~ .body-nav .nav:before,
+#toggle-all:checked ~ .body-nav .nav:after,
+#toggle-all:checked ~ .body-nav .nav-item:before,
+#toggle-all:checked ~ .body-nav .nav-link:before {
+    position: absolute;
+    display: block;
+    content: "";
+}
+
+/* Absolutely position nav-item's pseudo element regardless of the toggle state.
+ * This is to */
+
+.nav-item:before {
     position: absolute;
     display: block;
     content: "";
@@ -2225,7 +2242,7 @@ ul.nav {
         visibility: visible;
         width: auto;
         height: auto;
-        padding: auto;
+        margin-top:-.55rem;
     }
 }
 
@@ -2346,25 +2363,25 @@ ul.nav {
 }
 
 .body-nav {
-
     display: flex;
     flex-direction: column;
     flex: 1;
     align-items: flex-start;
 }
 
-@media (min-width: 576px) and (max-width: 991.98px) {
-    .body-nav {
-        --navlist-height: calc(var(--navlink-height) * 3 + .5rem);
-        --navlist-top: calc(var(--navlink-height) * -1 - .25rem);
-    }
+.body-nav > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    flex: 1;
 }
 
-.body-nav > * {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .nav-content {
+        /*--navlist-height: calc(var(--navlink-height) * 3 + .5rem);*/
+        /*--navlist-top: calc(var(--navlink-height) * -1 - .25rem);*/
+    }
 }
 
 /*
@@ -2445,7 +2462,6 @@ ul.nav {
 
 @-webkit-keyframes nav-in {
     0% {
-        /*left: calc(var(--navwidth) * -1);*/
         width: 0;
         flex: 0;
         display: none;
@@ -2457,7 +2473,6 @@ ul.nav {
         opacity: 1;
     }
     100% {
-        /*left: 0;*/
         width: var(--navwidth);
         flex: 1;
         display: flex;
@@ -2468,7 +2483,6 @@ ul.nav {
 
 @keyframes nav-in {
     0% {
-        /*left: calc(var(--navwidth) * -1);*/
         width: 0;
         flex: 0;
         display: none;
@@ -2480,7 +2494,6 @@ ul.nav {
         opacity: 1;
     }
     100% {
-        /*left: 0;*/
         width: var(--navwidth);
         flex: 1;
         display: flex;
@@ -2493,7 +2506,6 @@ ul.nav {
 
 @-webkit-keyframes nav-out {
     0% {
-        /*left: 0;*/
         width: var(--navwidth);
         flex: 1;
         display: flex;
@@ -2505,7 +2517,6 @@ ul.nav {
         opacity: 1;
     }
     100% {
-        /*left: calc(var(--navwidth) * -1);*/
         width: 0;
         flex: 0;
         display: none;
@@ -2516,7 +2527,6 @@ ul.nav {
 
 @keyframes nav-out {
     0% {
-        /*left: 0;*/
         width: var(--navwidth);
         flex: 1;
         display: flex;
@@ -2528,7 +2538,6 @@ ul.nav {
         opacity: 1;
     }
     100% {
-        /*left: calc(var(--navwidth) * -1);*/
         width: 0;
         flex: 0;
         display: none;
@@ -3311,18 +3320,85 @@ li.link-item.inset-item a {
 /* Side menu social links quick nav
    ========================================================================== */
 
+.body-nav > outset-container-2 {
+    padding: 0;
+}
+
 .nav-links {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
     padding: .75rem !important;
+    border-radius: .6rem;
+
+    background: var(--gradient-2);
 }
 
 .nav-links > * {
     flex: 0 0 auto;
     min-width: 33.3333%;
     max-width: 50%;
+}
+
+.nav-links .outline-item {
+    padding: .35rem;
+}
+
+.nav-links .inset-inner > span:first-child {
+    padding: .675rem;
+}
+
+@media (max-width: 575.98px) {
+    .nav-links {
+        padding: 0 !important;
+    }
+    .nav-links .outline-item {
+        padding: .1rem;
+        margin-bottom: 0;
+    }
+    .nav-links .inset-inner {
+        padding: .1rem;
+        border: 2px solid var(--paper);
+    }
+
+    .nav-links .inset-inner > span:first-child {
+        padding: .675rem;
+        font-size: .875rem;
+        color: var(--grey);
+    }
+    .nav-links > * {
+        max-width: 100%;
+    }
+    #toggle-all:checked ~ .body-nav .nav-links > * {
+        max-width: 50%;
+    }
+}
+
+/* Footer
+   ========================================================================== */
+
+.body-footer {
+    padding-left: var(--margin);
+    padding-right: var(--margin);
+}
+
+.body-footer h6 {
+    display: inline-block;
+    font-size: .75rem;
+}
+
+/* Header toggle box shadow */
+/* BS styles */
+
+.navbar {
+    box-shadow: none;
+    /*padding-top: .5625rem;*/
+}
+
+#toggle-all:checked ~ .body-header .navbar {
+    -webkit-box-shadow: 0 10px 20px 0 rgba(0,0,0,.05);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.05) !important;
 }
 
 /* CTA BUTTON/LINKS STYLE VARIABLES
@@ -3437,7 +3513,7 @@ form .connect-cta input {
     margin-left: 0.25rem;
 }
 
-/* BUTTON/LINK ~ COLLAPSE CONFIGS
+/* BUTTON/LINK ~ SHOW-EVENT TRANSITION
    ========================================================================== */
 
 /* Highlights CTA button three seconds after section.show */
@@ -3460,7 +3536,7 @@ section.show .activity-cta .btn {
             transition: border-color 0.15s ease-in-out 3s;
 }
 
-/* BADGE/STATS ~ COLLAPSE CONFIGS
+/* BADGE/STATS ~ SHOW-EVENT TRANSITION
    ========================================================================== */
 
 section:not(.show) .data-stats {
@@ -3480,7 +3556,7 @@ section.show .data-stats {
             transition: opacity 0.15s var(--breeze) .75s;
 }
 
-/* SECTION.SHOW ICON TRANSITION @prefixed
+/* SECTION H4 icon SHOW EVENT TRANSITION @prefixed
    ========================================================================== */
 
 /* Apply global icon transitions to section h4 headlines */
