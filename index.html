@@ -21,10 +21,10 @@
 
     <title>Joem Elias Sanez CV</title>
 </head>
-<body id="bodyMain" data-spy="scroll" data-target="#navOutline" data-offset="40">
+<body class="root-body" id="bodyMain" data-spy="scroll" data-target="#nav-outline" data-offset="5">
 
     <!-- start HEADER MAIN -->
-    <header class="header">
+    <header class="body-header">
         <!-- start NAV MAIN -->
         <nav class="navbar navbar-light fixed-top">
             <div class="container-fluid">
@@ -32,20 +32,24 @@
                         id="nav-button"
                         type="button"
                         data-toggle="collapse"
-                        data-target="#navOutline"
-                        aria-controls="structure"
+                        data-target="#nav-outline"
+                        aria-controls="nav-outline"
                         aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <!-- menu outline, close outline -->
+                        aria-label="Toggle side menu">
                     <div class="toggle-container d-flex">
-                        <span class="menu-icon d-flex position-relative align-self-center pb-4">
+                        <span class="menu-icon d-flex align-self-center pb-4">
                             <ion-icon id="showmenu" name="close-outline"
-                                      class="see-more d-flex position-absolute float-left"></ion-icon>
+                                      class="see-more d-flex position-absolute float-left">
+                                <span class="sr-only">Hide Menu</span>
+                            </ion-icon>
                             <ion-icon id="hidemenu" name="menu-outline"
-                                      class="see-less d-flex position-absolute float-left"></ion-icon>
+                                      class="see-less d-flex position-absolute float-left">
+                                <span class="sr-only">Show Menu</span>
+                            </ion-icon>
                         </span>
                     </div>
                 </button>
+                <ion-icon name="logo-github"></ion-icon>
                 <!-- start LOGO -->
                 <a class="navbar-brand" href="index.html" role="button">
                     JS<span class="d-none d-sm-inline">.stack</span>
@@ -60,277 +64,381 @@
         <div class="toggle-container d-flex">
             <span class="menu-icon d-flex position-relative align-self-center pb-4">
                 <ion-icon id="hideswap" name="toggle-outline"
-                          class="hide-swap d-flex position-absolute float-left"></ion-icon>
+                          class="d-none hide-swap  position-absolute float-left">
+                    <span class="sr-only">Expand All</span>
+                </ion-icon>
                 <ion-icon id="showswap" name="toggle-filled"
-                          class="show-swap d-flex position-absolute float-left"></ion-icon>
+                          class="d-none show-swap  position-absolute float-left">
+                    <span class="sr-only">Collapse All</span>
+                </ion-icon>
+
+                 <ion-icon id="hideswap" name="radio-button-off"
+                          class="hide-swap d-flex position-absolute float-left">
+                    <span class="sr-only">Expand All</span>
+                </ion-icon>
+                <ion-icon id="showswap" name="radio-button-on"
+                          class="show-swap d-flex position-absolute float-left">
+                    <span class="sr-only">Collapse All</span>
+                </ion-icon>
             </span>
         </div>
     </label>
     <!-- close expand all toggle-->
 
     <!-- start NAV OUTLINE -->
-    <nav id="navOutline" class="collapse nav-outline">
-        <ol class="nav nav-pills menu-sidebar list-h1 outset-container-2 nav-content">
-            <li class="nav-item h1-00 outline-item">
-                <a class="nav-link" href="#collapseLanding">
-                    The curriculum vitae of Joem Elias Sanez
-                </a>
-                <ul class="nav list-h2">
-                    <li class="nav-item h2-00">
-                        <a class="nav-link" href="#splash-banner">
-                            (developed for the web)
-                        </a>
-                        <ul class="nav list-h3">
-                            <li class="nav-item h3-00">
-                                <a class="nav-link" href="#articleZero">
-                                    Introduction
-                                </a>
-                                <a class="nav-link" role="button" data-toggle="collapse"
-                                   href="#collapseZero" aria-controls="collapseZero">
-                                    Introduction
-                                </a>
-                                <ul class="nav list-h4">
-                                    <li class="nav-item h4-00">
-                                        <a class="nav-link" href="#collapseZero">
-                                            "Joem Elias Sanez is..."
-                                        </a>
-                                        <ul class="nav list-h5">
-                                            <li class="nav-item h5-02">
-                                                <a class="nav-link" href="#sectionZero-1">
-                                                    Currently
-                                                </a>
-                                            </li>
-                                            <li class="nav-item h5-02">
-                                                <a class="nav-link" href="#sectionZero-2">
-                                                    Recent Activity
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item h3-10">
-                                <a class="nav-link" href="#articleOne">
-                                    Specialization
-                                </a>
-                                <a class="nav-link" role="button" data-toggle="collapse"
-                                   href="#collapseOne" aria-controls="collapseOne">
-                                    Specialization
-                                </a>
-                                <ul class="nav list-h4">
-                                    <li class="nav-item h4-10">
-                                        <a class="nav-link" href="#collapseOne">
-                                            "A unique tech stack"
-                                        </a>
-                                        <ul class="nav list-h5">
-                                            <li class="nav-item h5-11">
-                                                <a class="nav-link" id="#sectionOne-1">
-                                                    What I do
-                                                </a>
-                                            </li>
-                                            <li class="nav-item h5-12">
-                                                <a class="nav-link" id="#sectionOne-2">
-                                                    Expertise
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item h3-20">
-                                <a class="nav-link" href="#articleTwo">
-                                    Proficiency
-                                </a>
-                                <a class="nav-link" role="button" data-toggle="collapse"
-                                   href="#collapseTwo" aria-controls="collapseTwo">
-                                    Proficiency
-                                </a>
-                                <ul class="nav list-h4">
-                                    <li class="nav-item h4-20">
-                                        <a class="nav-link" href="#collapseTwo">
-                                            "Building and bridging skills..."
-                                        </a>
-                                        <ul class="nav list-h5">
-                                            <li class="nav-item h5-21">
-                                                <a class="nav-link" href="#sectionTwo-1">
-                                                    Adaptability
-                                                </a>
-                                            </li>
-                                            <li class="nav-item h5-22">
-                                                <a class="nav-link" href="#sectionTwo-2">
-                                                    Coverage
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item h3-30">
-                                <a class="nav-link" href="#articleThree">
-                                    Experience
-                                </a>
-                                <a class="nav-link" role="button" data-toggle="collapse"
-                                   href="#collapseThree" aria-controls="collapseThree">
-                                    Experience
-                                </a>
-                                <ul class="nav list-h4">
-                                    <li class="nav-item h4-30">
-                                        <a class="nav-link" href="#collapseThree">
-                                            "Breadth and depth..."
-                                        </a>
-                                        <ul class="nav list-h5">
-                                            <li class="nav-item h5-31">
-                                                <a class="nav-link" href="#sectionThree-1">
-                                                    Education
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link h5-32" href="#sectionThree-2">
-                                                    Employment
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item h3-40">
-                                <a class="nav-link" href="#articleFour">
-                                    Examples
-                                </a>
-                                <a class="nav-link" role="button" data-toggle="collapse"
-                                   href="#collapseFour" aria-controls="collapseFour">
-                                    Examples
-                                </a>
-                                <ul class="nav list-h4">
-                                    <li class="nav-item h4-40">
-                                        <a class="nav-link" href="#collapseFour">
-                                            "Form and function..."
-                                        </a>
-                                        <ul class="nav list-h5">
-                                            <li class="nav-item h5-41">
-                                                <a class="nav-link" href="#sectionFour-1">
-                                                    Tech Repo
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link h5-42" href="#sectionFour-2">
-                                                    Design Samples
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item h3-50">
-                                <a class="nav-link" href="#articleFive">
-                                    References
-                                </a>
-                                <a class="nav-link" role="button" data-toggle="collapse"
-                                   href="#collapseFive" aria-controls="collapseFive">
-                                    References
-                                </a>
-                                <ul class="nav list-h4">
-                                    <li class="nav-item h4-50">
-                                        <a class="nav-link" href="#collapseFive">
-                                            "Stacking up..."
-                                        </a>
-                                        <ul class="nav list-h5">
-                                            <li class="nav-item h5-51">
-                                                <a class="nav-link" href="#sectionFive-1">
-                                                    Recommendations
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link h5-52" href="#sectionFive-2">
-                                                    Accomplishments
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item h3-60">
-                                <a class="nav-link" href="#articleSix">
-                                    Connect
-                                </a>
-                                <a class="nav-link" role="button" data-toggle="collapse"
-                                   href="#collapseSix" aria-controls="collapseSix">
-                                    Connect
-                                </a>
-                                <ul class="nav list-h4">
-                                    <li class="nav-item h4-60">
-                                        <a class="nav-link" href="#collapseSix">
-                                            "Always eager to connect...!"
-                                        </a>
-                                        <ul class="nav list-h5">
-                                            <li class="nav-item h5-61">
-                                                <a class="nav-link" href="#sectionSix-1">
-                                                    Contact Info
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link h5-62" href="#sectionSix-2">
-                                                    Message Form
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ol>
+    <nav class="body-nav collapse" id="nav-outline">
+        <div class="outset-container-2">
+            <ol class="nav nav-pills menu-sidebar list-h1 nav-content">
+                <li class="nav-item item-zero h1-00 outline-item">
+                    <a class="nav-link link-zero" href="#target-zero">
+                        The curriculum vitae of Joem Elias Sanez
+                    </a>
+                    <ul class="nav list-h2">
+                        <li class="nav-item item-zero h2-00">
+                            <a class="nav-link link-zero" href="#splash-banner">
+                                (developed for the web)
+                            </a>
+                            <ul class="nav list-h3">
+                                <li class="nav-item item-one h3-00">
+                                    <a class="nav-link link-one" href="#element-one">
+                                        <span class="link-text">Introduction</span>
+                                        <ion-icon class="link-icon" name="information-circle-outline">
+                                            <span class="sr-only">Introduction</span>
+                                        </ion-icon>
+                                    </a>
+                                    <a class="nav-link link-one" role="button" data-toggle="collapse"
+                                       href="#target-one" aria-controls="target-one">
+                                        <span class="link-text">Introduction</span>
+                                        <ion-icon class="link-icon" name="information-circle-outline">
+                                            <span class="sr-only">Introduction</span>
+                                        </ion-icon>
+                                    </a>
+                                    <ul class="nav nav-one list-h4">
+                                        <li class="nav-item item-one h4-00">
+                                            <a class="nav-link link-one" href="#target-one">
+                                                "Joem Elias Sanez is..."
+                                            </a>
+                                            <ul class="nav nav-one list-h5">
+                                                <li class="nav-item item-one h5-02">
+                                                    <a class="nav-link link-one" href="#sectionZero-1">
+                                                        Outbound Links
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item item-one h5-02">
+                                                    <a class="nav-link link-one" href="#sectionZero-2">
+                                                        Recent Activity
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item item-two h3-10">
+                                    <a class="nav-link link-two" href="#element-two">
+                                        <span class="link-text">Specialization</span>
+                                        <ion-icon class="link-icon" name="bulb-outline">
+                                            <span class="sr-only">Specialization</span>
+                                        </ion-icon>
+                                    </a>
+                                    <a class="nav-link link-two" role="button" data-toggle="collapse"
+                                       href="#target-two" aria-controls="target-two">
+                                        <span class="link-text">Specialization</span>
+                                        <ion-icon class="link-icon" name="bulb-outline">
+                                            <span class="sr-only">Specialization</span>
+                                        </ion-icon>
+                                    </a>
+                                    <ul class="nav nav-two list-h4">
+                                        <li class="nav-item item-two h4-10">
+                                            <a class="nav-link link-two" href="#target-two">
+                                                "A unique tech stack..."
+                                            </a>
+                                            <ul class="nav nav-two list-h5">
+                                                <li class="nav-item item-two h5-11">
+                                                    <a class="nav-link link-two" id="#sectionOne-1">
+                                                        Tech Stack
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item item-two h5-12">
+                                                    <a class="nav-link link-two" id="#sectionOne-2">
+                                                        Expertise
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item item-three h3-20">
+                                    <a class="nav-link link-three" href="#element-three">
+                                        <span class="link-text">Proficiency</span>
+                                        <ion-icon class="link-icon" name="flash-outline">
+                                            <span class="sr-only">Proficiency</span>
+                                        </ion-icon>
+                                    </a>
+                                    <a class="nav-link link-three" role="button" data-toggle="collapse"
+                                       href="#target-three" aria-controls="target-three">
+                                        <span class="link-text">Proficiency</span>
+                                        <ion-icon class="link-icon" name="flash-outline">
+                                            <span class="sr-only">Proficiency</span>
+                                        </ion-icon>
+                                    </a>
+                                    <ul class="nav nav-three list-h4">
+                                        <li class="nav-item item-three h4-20">
+                                            <a class="nav-link link-three" href="#target-three">
+                                                "Building and bridging skills..."
+                                            </a>
+                                            <ul class="nav nav-three list-h5">
+                                                <li class="nav-item item-three h5-21">
+                                                    <a class="nav-link link-three" href="#sectionTwo-1">
+                                                        Strengths
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item item-three h5-22">
+                                                    <a class="nav-link link-three" href="#sectionTwo-2">
+                                                        Coverage
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item item-four h3-30">
+                                    <a class="nav-link link-four" href="#element-four">
+                                        <span class="link-text">Experience</span>
+                                        <ion-icon class="link-icon" name="planet-outline">
+                                            <span class="sr-only">Experience</span>
+                                        </ion-icon>
+                                    </a>
+                                    <a class="nav-link link-four" role="button" data-toggle="collapse"
+                                       href="#target-four" aria-controls="target-four">
+                                        <span class="link-text">Experience</span>
+                                        <ion-icon class="link-icon" name="planet-outline">
+                                            <span class="sr-only">Experience</span>
+                                        </ion-icon>
+                                    </a>
+                                    <ul class="nav nav-four list-h4">
+                                        <li class="nav-item item-four h4-30">
+                                            <a class="nav-link link-four" href="#target-four">
+                                                "Breadth and depth..."
+                                            </a>
+                                            <ul class="nav nav-four list-h5">
+                                                <li class="nav-item item-four h5-31">
+                                                    <a class="nav-link link-four" href="#sectionThree-1">
+                                                        Background
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item item-four">
+                                                    <a class="nav-link h5-32 link-four" href="#sectionThree-2">
+                                                        <span class="d-none d-lg-block">Education & Employment</span>
+                                                        <span class="d-lg-none">Affiliations</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item item-five h3-40">
+                                    <a class="nav-link link-five" href="#element-five">
+                                        <span class="link-text">Examples</span>
+                                        <ion-icon class="link-icon" name="rocket-outline">
+                                            <span class="sr-only">Examples</span>
+                                        </ion-icon>
+                                    </a>
+                                    <a class="nav-link link-five" role="button" data-toggle="collapse"
+                                       href="#target-five" aria-controls="target-five">
+                                        <span class="link-text">Examples</span>
+                                        <ion-icon class="link-icon" name="rocket-outline">
+                                            <span class="sr-only">Examples</span>
+                                        </ion-icon>
+                                    </a>
+                                    <ul class="nav nav-five list-h4">
+                                        <li class="nav-item h4-40">
+                                            <a class="nav-link link-five" href="#target-five">
+                                                "Form and function..."
+                                            </a>
+                                            <ul class="nav nav-five list-h5">
+                                                <li class="nav-item item-five h5-41">
+                                                    <a class="nav-link link-five" href="#sectionFour-1">
+                                                        Working Style
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item item-five disabled">
+                                                    <a class="nav-link link-five h5-42 link-five disabled"
+                                                       href="#sectionFour-2">
+                                                        Tech Repo
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item item-five h3-50">
+                                    <a class="nav-link link-six" href="#element-six">
+                                        <span class="link-text">References</span>
+                                        <ion-icon class="link-icon" name="star-outline">
+                                            <span class="sr-only">References</span>
+                                        </ion-icon>
+                                    </a>
+                                    <a class="nav-link link-six" role="button" data-toggle="collapse"
+                                       href="#target-six" aria-controls="target-six">
+                                        <span class="link-text">References</span>
+                                        <ion-icon class="link-icon" name="star-outline">
+                                            <span class="sr-only">References</span>
+                                        </ion-icon>
+                                    </a>
+                                    <ul class="nav nav-six list-h4">
+                                        <li class="nav-item item-six h4-50">
+                                            <a class="nav-link link-six" href="#target-six">
+                                                "Stacking up..."
+                                            </a>
+                                            <ul class="nav nav-six list-h5">
+                                                <li class="nav-item item-six h5-51">
+                                                    <a class="nav-link link-six" href="#sectionFive-1">
+                                                        Recommendations
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item item-six">
+                                                    <a class="nav-link h5-52 link-six" href="#sectionFive-2">
+                                                        Accomplishments
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item item-seven h3-60">
+                                    <a class="nav-link link-seven" href="#element-seven">
+                                        <span class="link-text">Connect</span>
+                                        <ion-icon class="link-icon" name="navigate-circle-outline">
+                                            <span class="sr-only">Connect</span>
+                                        </ion-icon>
+                                    </a>
+                                    <a class="nav-link link-seven" role="button" data-toggle="collapse"
+                                       href="#target-seven" aria-controls="target-seven">
+                                        <span class="link-text">Connect</span>
+                                        <ion-icon class="link-icon" name="navigate-circle-outline">
+                                            <span class="sr-only">Connect</span>
+                                        </ion-icon>
+                                    </a>
+                                    <ul class="nav nav-seven list-h4">
+                                        <li class="nav-item item-seven h4-60">
+                                            <a class="nav-link link-seven" href="#target-seven">
+                                                "Always eager to connect...!"
+                                            </a>
+                                            <ul class="nav nav-seven list-h5">
+                                                <li class="nav-item item-seven h5-61">
+                                                    <a class="nav-link link-seven" href="#sectionSix-1">
+                                                        Contact Info
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item item-seven">
+                                                    <a class="nav-link h5-62 link-seven" href="#sectionSix-2">
+                                                        Message Form
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <!-- start 0.1 SOCIAL LINKS -->
+            <ul class="nav-links activity-cta connect-cta  inset-item nav-content">
+                <li class="inset-container outline-item d-flex">
+                    <a class="btn outset-container-2 flex-fill" href="https://www.linkedin.com/in/joem-elias-sanez/"
+                       target="_blank">
+                        <span class="inset-inner">
+                            <span class="fab fa-linkedin-in"></span>
+                            <span class="sr-only">LinkedIn</span>
+                        </span>
+                    </a>
+                </li>
+                <li class="inset-container outline-item d-flex">
+                    <a class="btn outset-container-2 flex-fill" href="https://github.com/israelias" target="_blank">
+                        <span class="inset-inner">
+                            <span class="fab fa-github"></span>
+                            <span class="sr-only">GitHub</span>
+                        </span>
+                    </a>
+                </li>
+                <li class="inset-container outline-item d-flex">
+                    <a class="btn outset-container-2 flex-fill" href="https://dev.to/israelias" target="_blank">
+                        <span class="inset-inner">
+                            <span class="fab fa-dev fa-sm"></span>
+                            <span class="sr-only">Dev</span>
+                        </span>
+                    </a>
+                </li>
+                <li class=" inset-container outline-item d-flex">
+                    <a class="btn outset-container-2 flex-fill" href="https://joemelias.com" target="_blank">
+                        <span class="inset-inner">
+                            <span class="fa fa-download"></span>
+                            <span class="sr-only">Download CV</span>
+                        </span>
+                    </a>
+                </li>
+                <li class="inset-container outline-item d-flex">
+                    <a class="btn outset-container-2 flex-fill" href="mailto:israelias.js@gmail.com" target="_blank">
+                        <span class="inset-inner">
+                            <span class="fas fa-envelope"></span>
+                            <span class="sr-only">Email</span>
+                        </span>
+                    </a>
+                </li>
+                <li class="inset-container outline-item d-flex">
+                    <a class="btn outset-container-2 flex-fill" href="tel:+63-945-994-5975" target="_blank">
+                        <span class="inset-inner">
+                            <span class="fas fa-phone"></span>
+                            <span class="sr-only">Call me</span>
+                        </span>
+                    </a>
+                </li>
+            </ul><!-- close 0.1 social links -->
+        </div>
+        <!-- /Contact CTA -->
     </nav>
     <!-- close nav outline -->
 
-    <main id="resumeStack" class="main-body">
+    <main class="body-main" id="resumeStack">
 
         <!-- start SPLASH BANNER -->
-        <section id="collapseLanding" class="show" aria-labelledby="splashLanding" data-parent="#resumeStack">
-            <div class="d-flex flex-column pb-4 pb-sm-5 pl-2 pr-2">
-
-                <h1 class="mt-sm-5 mt-md-0 pt-sm-0 pt-md-5 lh-1 h3">
-
-                    <span class="d-none flex-row flex-sm-row flex-md-row mr-auto mr-sm-auto mr-md-0 mr-lg-auto ml-lg-auto text-lowercase">
-                        The c<span class="d-none d-md-inline pr-3">urriculum </span><span class="d-md-none">.
-                    </span>v<span class="d-md-none">.</span><span class="d-none d-md-inline pr-3">itae</span>
-                    </span>
-
-                    <span class="d-flex flex-row flex-sm-row flex-md-row mr-auto mr-sm-auto mr-md-0 mr-lg-auto ml-lg-auto text-lowercase">
+        <section class="main-section show" id="target-zero"
+                 aria-labelledby="splashLanding"
+                 data-parent="#resumeStack">
+            <div class="cover-banner d-flex flex-column pb-4 pb-sm-5 pl-2 pr-2">
+                <h1 class="cover-text mt-sm-5 mt-md-0 pt-sm-0 pt-md-5 lh-1 h3">
+                    <span class="cover-title text-lowercase">
                         The curriculum vitae
                     </span>
-                    <span class=" d-flex flex-row flex-sm-row flex-md-column mr-auto mr-sm-auto mr-md-0">
+                    <span class="cover-name">
                         of Joem Elias Sanez
                     </span>
                 </h1>
-                <h2 class="h6">
-                    <span id="test1" class="d-flex flex-column flex-sm-column flex-md-row mb-5 mb-sm-5 mb-md-0 pr-2"
-                          style="width:; line-height: .875rem; color: #a4a4a4;">
+                <h2 class="banner-text h6">
+                    <span class="banner-top pr-2">
                         <span class="text-right">(dev</span>
                         <span class="text-right">el</span>
                         <span class="text-right">op</span>
-                        <span class="text-right d-none d-md-flex pr-2">ed</span>
+                        <span class="banner-pseudo text-right pr-2">ed</span>
                     </span>
-                    <span class="position-absolute text-left font-italic d-flex flex-column mt-4 pt-3 pr-4 d-md-none">ed</span>
-                    <span id="test2" class="d-flex flex-column flex-sm-column flex-md-row mt-auto mt-sm-auto mt-md-0"
-                          style="width:; line-height: .9rem;">
-                        <span class=" pr-2">for </span>
-                        <span class="text-left ml-2 ml-sm-2 ml-md-0 pr-2">the </span>
-                        <span class="text-left ml-4 ml-sm-4 ml-md-0">web)</span>
+                    <span class="banner-middle">ed</span>
+                    <span class="banner-bottom">
+                        <span class="pr-2">for </span>
+                        <span class="text-left ml-2 pr-2">the </span>
+                        <span class="text-left ml-4">web)</span>
                     </span>
                 </h2>
-                <div id="band-ul" class="landing-masthead activity-cta mt-2 mb-3 pl-0 inset-container">
+                <div class="banner-cta activity-cta mt-2 mb-3 pl-0 inset-container">
                     <div id="band-li" class="d-flex flex-row align-items-stretch">
-                        <span id="band-t"
-                              class="outset-container-2 contact-text flex-fill mr-2 text-muted justify-content-between align-middle" style="padding-top: .625rem;">
-                            <span id="download" class="value">
+                        <span class="outset-container-2 contact-text flex-fill mr-2 text-muted justify-content-between align-middle">
+                            <span class="value">
                                 <i class="far fa-file-pdf pr-1" aria-hidden="true"></i>
                                 sanez_cv_2020.pdf
                             </span>
                         </span>
-                        <a id="band-b" class="outset-container-2 btn" href="#" target="_blank">
+                        <a class="outset-container-2 btn" href="#" target="_blank">
                             <span class="inset-inner">
                                 <i class="fas fa-download"></i>
                                 <span class="sr-only">Download my CV</span>
@@ -339,20 +447,19 @@
                     </div>
                 </div>
             </div>
-
         </section><!-- close splash banner -->
 
         <!-- start 0.0 (Introduction: Social Links & Recent Activity) -->
-        <article id="articleZero" class="article">
+        <article class="main-article" id="element-one">
             <!-- start 0.0 HEADER BUTTON -->
-            <header id="headingZero">
+            <header class="article-header" id="control-one">
                 <h3 class="header-title">
                     <button class="collapsed"
                             type="button"
                             data-toggle="collapse"
-                            data-target="#collapseZero"
+                            data-target="#target-one"
                             aria-expanded="false"
-                            aria-controls="collapseZero">
+                            aria-controls="target-one">
                         <span class="header-content">
                             <span class="header-name">
                                 INTRODUCTION
@@ -362,18 +469,25 @@
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
-                            <ion-icon md="code-working" ios="code-working-outline" class="closed"></ion-icon>
-                            <ion-icon md="code-slash" ios="code-slash-outline" class="open"></ion-icon>
+                            <ion-icon name="code-working-outline" class="closed">
+                                <span class="sr-only">Expand</span>
+                            </ion-icon>
+                            <ion-icon name="code-slash-outline" class="open">
+                                <span class="sr-only">Collapse</span>
+                            </ion-icon>
                         </span>
                     </button>
                 </h3>
             </header><!-- close 0.0 header button -->
             <!-- start 0.0 SECTION -->
-            <section id="collapseZero" class="collapse collapse-all" aria-labelledby="headingZero" data-parent="#resumeStack">
+            <section class="article-section collapse"
+                     id="target-one"
+                     aria-labelledby="control-one"
+                     data-parent="#resumeStack">
                 <!-- start 0.0 SPREAD -->
                 <div class="spread row">
                     <!-- start PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-md-7 col-lg-7 col-xl-6 col-xxl-5 order-2 order-sm-2 order-md-1">
+                    <div class="outer-body col-12 col-md-7 col-xl-6 col-xxl-5 order-2 order-sm-2 order-md-1">
                         <h4 class="inset-item">
                              Joem Elias Sanez is an architect and full stack developer based in Manila.
                             <ion-icon name="newspaper-outline"></ion-icon>
@@ -381,6 +495,12 @@
                         <!-- start 0.1 SUB-SECTION -->
                         <section id="sectionZero-1" class="left inner-body landing-subheading">
                             <p class="lh-2 mt-3 mb-3">
+                                I'm currently enrolled in a Full Stack Software Development
+                                Diploma and actively pursuing an entry into the tech industry. I bring excellent
+                                background and professional exposure from architecture, keen client services ability
+                                and a logical, responsive working style.
+                            </p>
+                            <p class="lh-2 mt-3 mb-3 d-none">
                                 I’m <span>currently</span> focusing on <span>BIM</span> and the future of design
                                 from
                                 the
@@ -388,7 +508,7 @@
                                 software development and open for <span>collaboration.</span>
                             </p>
                             <!-- start 0.1 SOCIAL LINKS -->
-                            <ul class="inset-container list-inline row row-cols-5 align-items-center justify-content-between social-links pt-2">
+                            <ul class="inset-container row row-cols-5 social-links">
                                 <li class="list-inline-item">
                                     <a class="btn outset-container-2" href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank">
                                     <span class="inset-inner">
@@ -434,10 +554,10 @@
                     </div><!-- close page-left text -->
 
                     <!-- start PAGE-RIGHT MEDIA -->
-                    <div class="outer-body col-12 col-md-5 col-lg-5 col-xl-6 col-xxl-7 d-none d-sm-flex order-1 order-sm-1 order-md-2">
+                    <div class="outer-body col-12 col-md-5 col-xl-6 col-xxl-7 d-none d-sm-flex order-1 order-sm-1 order-md-2">
                         <!-- start 0.2 SUB-SECTION -->
                         <section id="sectionZero-2" class="right inner-body justify-content-center pt-2 row">
-                            <!--profile image-->
+                            <!-- PROFILE IMAGE -->
                             <div class="d-flex flex-row align-items-center justify-contents-between">
                                 <div class="image-container">
                                     <img src="assets/images/joem_elias_sanez_thumbnail.png" alt="Joem Elias Sanez">
@@ -446,246 +566,128 @@
                             <h5 class="d-none d-md-block">
                                 Recent Activity
                             </h5>
-                            <!--start 0.2 LIST GROUP-->
+                            <!--start 0.2 LIST GROUP -->
                             <ul id="verticalScroller" class="recent-activity-cta d-none d-md-flex justify-content-center">
+                                <!-- start SCROLL ITEM (MS1) -->
+                                <li id="scrollOne" class="recent-activity project-item active w-100">
+                                    <div class="activity-item row">
+                                        <!-- start PROJECT REPO STATS -->
+                                        <ul class="stats-activity">
+                                            <li class="data-repo-commit">
+                                                <a href="https://github.com/israelias/resume-redux/commits/master"
+                                                   target="_blank" class="btn-link data-repo data-stats"
+                                                   data-repo-commit-count="178">
+                                                    <ion-icon name="git-commit-outline"
+                                                              class="align-middle text-muted">
+                                                        <span class="sr-only">
+                                                            Commit count
+                                                        </span>
+                                                    </ion-icon>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://github.com/israelias/resume-redux/branches"
+                                                   target="_blank" class="btn-link data-repo data-stats"
+                                                   data-repo-branch-count="2">
+                                                    <ion-icon name="git-branch-outline" class="align-middle text-muted">
+                                                        <span class="sr-only">
+                                                            Branch count
+                                                        </span>
+                                                    </ion-icon>
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="https://github.com/israelias/resume-redux/settings"
+                                                   target="_blank" class="btn-link data-repo data-stats"
+                                                   data-repo-size="88.4">
+                                                    <ion-icon name="barcode-outline" class="align-middle text-muted">
+                                                        <span class="sr-only">
+                                                            Repo size
+                                                        </span>
+                                                    </ion-icon>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://israelias.github.io/resume-redux/"
+                                                   target="_blank" class="btn-link data-repo data-stats"
+                                                   data-repo-status="Active">
+                                                    <ion-icon name="rocket-outline" class="align-middle text-muted">
+                                                        <span class="sr-only">
+                                                            Deployment status
+                                                        </span>
+                                                    </ion-icon>
+                                                </a>
+                                            </li>
+                                        </ul ><!-- close project repo stats -->
 
-                                <!-- start PROJECT ITEM (MS1) -->
-                                <li id="scrollOne" class="recent-activity project-item row active w-100">
-                                    <div class="activity-item flex-column pl-4 pr-4">
-                                    <!-- start PROJECT REPO STATS -->
-                                    <ul class="stats-activity">
-                                        <li class="data-repo-commit">
-                                            <a href="https://github.com/israelias/resume-redux/commits/master"
-                                               target="_blank" class="btn-link data-repo data-stats"
-                                               data-repo-commit-count="178">
-                                                <ion-icon name="git-commit" class="align-middle">
-                                                    <span class="sr-only">
-                                                        Commit count
-                                                    </span>
-                                                </ion-icon>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://github.com/israelias/resume-redux/branches"
-                                               target="_blank" class="btn-link data-repo data-stats"
-                                               data-repo-branch-count="2">
-                                                <ion-icon name="git-branch" class="align-middle">
-                                                    <span class="sr-only">
-                                                        Branch count
-                                                    </span>
-                                                </ion-icon>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://github.com/israelias/resume-redux/settings"
-                                               target="_blank" class="btn-link data-repo data-stats"
-                                               data-repo-size="88.4">
-                                                <ion-icon name="barcode" class="align-middle">
-                                                    <span class="sr-only">
-                                                        Repo size
-                                                    </span>
-                                                </ion-icon>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://israelias.github.io/resume-redux/"
-                                               target="_blank" class="btn-link data-repo data-stats"
-                                               data-repo-status="Active">
-                                                <ion-icon name="rocket" class="align-middle">
-                                                    <span class="sr-only">
-                                                        Deployment status
-                                                    </span>
-                                                </ion-icon>
-                                            </a>
-                                        </li>
-                                    </ul ><!-- close project repo stats -->
-
-                                    <!-- PROJECT THUMBNAIL -->
-                                    <div class="col-6 col-sm-5 col-md-5 col-lg-5">
-                                        <img src="https://github.com/israelias/resume-redux/blob/master/documentation/RedUX_200901_1639.png?raw=true"
-                                             width="75"
-                                             alt="project thumbnail"
-                                             class="img-thumbnail img-fluid mb-2">
-                                    </div>
-                                    <!-- /project thumbnail -->
-
-                                    <!-- PROJECT TEXT -->
-                                    <div class="col-6 col-sm-7 col-md-7 col-lg-7 pr-2 pl-3">
-                                        <h6 class="mb-1">
-                                            cv-of-js
-                                        </h6>
-                                        <small>
-                                            User-Centric Front-end Development
-                                        </small>
-                                        <!-- start PROJECT LANGUAGE STATS -->
-                                        <div class="language-activity">
-                                            <!-- start PROGRESS CONTAINER -->
-                                            <div class="progress">
-                                                <!-- HTML PROGRESS BAR -->
-                                                <div class="progress-bar progress-html"
-                                                     role="progressbar"
-                                                     aria-valuenow="78.1"
-                                                     aria-valuemin="0"
-                                                     aria-valuemax="100"
-                                                     aria-label="HTML 78.1"
-                                                     style="width: 78.1%;">
-                                                </div>
-                                                <!-- /html progress bar -->
-
-                                                <!-- CSS PROGRESS BAR -->
-                                                <div class="progress-bar progress-css"
-                                                     role="progressbar"
-                                                     aria-valuenow="29.9"
-                                                     aria-valuemin="0"
-                                                     aria-valuemax="100"
-                                                     aria-label="CSS 21.9"
-                                                     style="width: 21.9%;">
-                                                </div>
-                                                <!-- /css progress bar -->
-
-                                            </div><!-- close progress container -->
-
-                                            <!-- HTML PROGRESS LABEL -->
-                                            <a class="language-item"
-                                               href="https://github.com/israelias/resume-redux/search?l=html" target="_blank">
-                                                <ion-icon name="ellipse" class="mr-2 repo-html"></ion-icon>
-                                                <span class="mr-1 text-body small">HTML</span>
-                                                <span class="text-black-50 small">78.1%</span>
-                                            </a>
-                                            <!-- /html progress label -->
-
-                                            <!-- CSS PROGRESS LABEL -->
-                                            <a class="language-item"
-                                               href="https://github.com/israelias/resume-redux/search?l=css" target="_blank">
-                                                <ion-icon name="ellipse" class="mr-2 repo-css"></ion-icon>
-                                                <span class="mr-1 text-body">CSS</span>
-                                                <span class="text-black-50">21.9%</span>
-                                            </a>
-                                            <!-- /css progress label -->
-
-                                        </div><!-- close project language stats -->
-                                    </div>
-                                    <!-- /project text -->
-                                    </div>
-                                </li><!-- close project item (ms1) -->
-
-                                <!-- Commit Item -->
-                                <li id="scrollOne" class="d-none recent-activity bg-transparent col-12">
-                                    <div class="activity-item d-flex flex-column pl-4 pr-4">
-                                        <div class="d-flex w-100 pt-1 justify-content-between">
-                                            <p class="mb-1">Add content requirements to README.md</p>
-                                        </div>
-                                        <div class="d-flex w-100 pt-1 pr-3 justify-content-between align-items-center">
-                                            <img src="assets/images/joem_elias_sanez_thumbnail.png"
-                                                 style="width: 30px;"
-                                                 alt="GitHub profile photo">
-                                            <strong class="mb-1">israelias</strong>
-                                            <small class="text-muted pr-2">committed 20 hours ago</small>
-                                        </div>
-                                    </div>
-
-                                    <!-- Commit CTA -->
-                                    <div class=" text-right pr-0 bg-transparent">
-                                        <div class="d-flex flex-row align-items-center justify-content-end">
-                                            <small class="mr-3 text-cta">
-                                                Follow me on GitHub
+                                        <!-- PROJECT THUMBNAIL -->
+                                        <div class="col-3">
+                                            <h6 class="mb-1 ">
+                                                cv-of-js
+                                            </h6>
+                                            <small class="d-none">
+                                                User-Centric Front-end Development
                                             </small>
-                                            <a class="btn inset-container-6" href="https://github.com/israelias"
-                                               target="_blank">
-                                                <span class="inset-inner ">
-                                                    <i class="fab fa-github" aria-hidden="true" style="color: #157FFC;"></i>
-                                                </span>
-                                            </a>
+                                            <img src="https://github.com/israelias/resume-redux/blob/master/documentation/RedUX_200901_1639.png?raw=true"
+                                                 width="75"
+                                                 alt="project thumbnail"
+                                                 class="img-thumbnail img-fluid mb-2 d-none">
                                         </div>
+                                        <!-- /project thumbnail -->
+
+                                        <!-- PROJECT TEXT -->
+                                        <div class="col-9 pr-2 pl-3">
+                                            <!-- start PROJECT LANGUAGE STATS -->
+                                            <div class="language-activity small">
+                                                <!-- start PROGRESS CONTAINER -->
+                                                <div class="progress">
+                                                    <!-- HTML PROGRESS BAR -->
+                                                    <div class="progress-bar progress-html"
+                                                         role="progressbar"
+                                                         aria-valuenow="78.1"
+                                                         aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         aria-label="HTML 78.1"
+                                                         style="width: 78.1%;">
+                                                    </div>
+                                                    <!-- /html progress bar -->
+
+                                                    <!-- CSS PROGRESS BAR -->
+                                                    <div class="progress-bar progress-css"
+                                                         role="progressbar"
+                                                         aria-valuenow="29.9"
+                                                         aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         aria-label="CSS 21.9"
+                                                         style="width: 21.9%;">
+                                                    </div>
+                                                    <!-- /css progress bar -->
+
+                                                </div><!-- close progress container -->
+
+                                                <!-- HTML PROGRESS LABEL -->
+                                                <a class="language-item"
+                                                   href="https://github.com/israelias/resume-redux/search?l=html" target="_blank">
+                                                    <ion-icon name="ellipse" class="mr-2 repo-html"></ion-icon>
+                                                    <span class="mr-1 text-body small">HTML</span>
+                                                    <span class="text-black-50 small">78.1%</span>
+                                                </a>
+                                                <!-- /html progress label -->
+
+                                                <!-- CSS PROGRESS LABEL -->
+                                                <a class="language-item small"
+                                                   href="https://github.com/israelias/resume-redux/search?l=css" target="_blank">
+                                                    <ion-icon name="ellipse" class="mr-2 repo-css"></ion-icon>
+                                                    <span class="mr-1 text-body">CSS</span>
+                                                    <span class="text-black-50">21.9%</span>
+                                                </a>
+                                                <!-- /css progress label -->
+
+                                            </div><!-- close project language stats -->
+                                        </div>
+                                        <!-- /project text -->
                                     </div>
-                                    <!-- /Commit CTA -->
-
-                                </li>
-                                <!-- /Commit Item -->
-
-                                <!-- Recommendation Item -->
-                                <li id="scrollTwo" class="recent-activity bg-transparent col-12">
-                                    <div class="activity-item pl-3 pr-3">
-                                        <div class="d-flex w-100 pt-1 justify-content-between">
-                                            <p class="font-italic mb-2"
-                                               style="font-size: 14px; font-weight: 300;">"What sets
-                                                Joem apart are his
-                                                values, energy and mobility."</p>
-                                        </div>
-                                        <div class="d-flex w-100 pt-1 pr-3 justify-content-between align-items-center">
-                                            <img src="assets/images/michael_zhang_thumbnail.png"
-                                                 style="width: 30px;"
-                                                 alt="GitHub profile photo">
-                                            <strong class="mb-1">Michael Zhang</strong>
-                                            <small class="text-muted pr-2">worked with Joem directly</small>
-                                        </div>
-                                    </div>
-
-                                    <!-- Recommendation CTA -->
-                                    <div class="activity-cta text-right pr-0 bg-transparent">
-                                        <div class="d-flex w-100 justify-content-end align-items-center">
-                                            <small class="mr-3 text-cta">
-                                                Read more from my colleagues
-                                            </small>
-                                            <span class="inset-container-6">
-                                                <button
-                                                        class="btn btn-sm btn-floating"
-                                                        type="button"
-                                                        data-toggle="collapse"
-                                                        data-target="#collapseFive"
-                                                        aria-controls="collapseFive"
-                                                        style="background-color: #FAFBFC;
-                                                           border-color: #D4D6D6;">
-                                                    <i class="fas fa-chevron-circle-down"></i>
-                                                </button>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <!-- /Recommendation CTA -->
-                                </li>
-                                <!-- /Recommendation Item -->
-
-                                <!-- Project Item -->
-                                <li id="scrollThree" class="recent-activity bg-transparent col-12">
-                                    <div class="activity-item pl-4 pr-4">
-                                        <div class="d-flex w-100 pt-1 justify-content-between align-items-center pr-0 mb-2">
-                                            <i class="fas fa-history">
-                                        <span class="badge bg-primary rounded-pill">
-                                            14
-                                        </span>
-                                            </i>
-                                            <i class="fas fa-code-branch">
-                                        <span class="badge bg-primary rounded-pill">
-                                            14
-                                        </span>
-                                            </i>
-                                            <i class="fas fa-memory">
-                                        <span class="badge bg-primary rounded-pill">
-                                            42 kb
-                                        </span>
-                                            </i>
-                                            <i class="fas fa-rocket">
-                                        <span class="badge bg-success rounded-pill">
-                                            Active
-                                        </span>
-                                            </i>
-                                        </div>
-                                        <div class="row justify-content-between">
-                                            <div class="col-4 align-self-start pt-1">
-                                                <img src="assets/images/project_one_thumbnail.png"
-                                                     style="height: 30px; width: 70px;"
-                                                     alt="project thumbnail">
-                                            </div>
-                                            <div class="col-8 align-self-end pr-0">
-                                                <h6 class="mb-1">resume-redux</h6>
-                                                <small>
-                                                    Front end web development
-                                                </small>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Project CTA -->
+                                    <!-- start PROJECT CTA -->
                                     <div class="activity-cta text-right pr-0 bg-transparent">
                                         <div class="d-flex w-100 justify-content-end align-items-center">
                                             <small class="mr-3 text-cta">
@@ -693,22 +695,95 @@
                                             </small>
                                             <span class="inset-container-6">
                                                 <button
-                                                        class="btn btn-sm btn-floating"
+                                                        class="btn"
                                                         type="button"
                                                         data-toggle="collapse"
-                                                        data-target="#collapseThree"
+                                                        data-target="#target-five"
                                                         aria-expanded="false"
-                                                        aria-controls="collapseThree"
-                                                        style="background-color: #FAFBFC;
-                                                           border-color: #D4D6D6;">
+                                                        aria-controls="target-five">
                                                     <i class="fas fa-chevron-circle-down"></i>
                                                 </button>
                                             </span>
                                         </div>
+                                    </div><!-- close project cta -->
+                                </li><!-- close scroll item (ms1) -->
+                                <!-- start SCROLL ITEM 2 (Rec) -->
+                                <li id="scrollTwo" class="recent-activity bg-transparent">
+                                    <!-- start ACTIVITY ITEM -->
+                                    <div class="activity-item pl-3 align-middle">
+                                        <div class="pt-1">
+                                            <p class="font-italic mb-2">
+                                                "What sets
+                                                Joem apart are his
+                                                values, energy and mobility."
+                                            </p>
+                                        </div>
+                                        <div class="d-flex w-100 pt-1 pr-3 justify-content-between align-items-center">
+                                            <img src="assets/images/michael_zhang_thumbnail.png" width="30"
+                                                 alt="Recommender thumbnail image">
+                                            <strong class="mb-1 pl-4">
+                                                Michael Zhang
+                                            </strong>
+                                            <small class="text-muted pr-2">
+                                                worked with Joem directly
+                                            </small>
+                                        </div>
                                     </div>
-                                    <!-- /Project CTA -->
-                                </li>
-                                <!-- /Project Item -->`
+                                    <!-- close activity item -->
+                                    <!-- start ACTIVITY CTA -->
+                                    <div class="activity-cta text-right pr-0 bg-transparent">
+                                        <div class="d-flex w-100 justify-content-end align-items-center">
+                                            <small class="mr-3 text-cta">
+                                                Read more from my colleagues
+                                            </small>
+                                            <span class="inset-container-6">
+                                                <button
+                                                        class="btn"
+                                                        type="button"
+                                                        data-toggle="collapse"
+                                                        data-target="#target-six"
+                                                        aria-controls="target-six">
+                                                    <i class="fas fa-chevron-circle-down"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div><!-- close activity cta -->
+                                </li><!-- close scroll item 2 (rec) -->
+                                <!-- start SCROLL ITEM 3 (COMMIT MSG) -->
+                                <li id="scrollThree" class="recent-activity bg-transparent w-100">
+                                    <!-- start ACTIVITY ITEM -->
+                                    <div class="activity-item pl-3 align-middle">
+                                        <div class="pt-1">
+                                            <p class="commit-message mb-1">
+                                                Add content requirements to README.md
+                                            </p>
+                                        </div>
+                                        <div class="d-flex w-100 pt-1 pr-3 justify-content-between align-items-center">
+                                            <img src="assets/images/joem_elias_sanez_thumbnail.png" width="30"
+                                                 alt="Owner's GitHub profile photo">
+                                            <strong class="commit-username mb-1">
+                                                israelias
+                                            </strong>
+                                            <small class="commit-time text-muted pr-2">
+                                                committed 20 hours ago
+                                            </small>
+                                        </div>
+                                    </div><!-- close activity item -->
+                                    <!-- start ACTIVITY CTA -->
+                                    <div class="text-right pr-0 bg-transparent">
+                                        <div class="d-flex flex-row align-items-center justify-content-end">
+                                            <small class="mr-3 text-cta">
+                                                Follow me on GitHub
+                                            </small>
+                                            <a class="btn inset-container-6" href="https://github.com/israelias"
+                                               target="_blank">
+                                                <span class="inset-inner">
+                                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div><!-- close activity cta -->
+                                </li><!-- close scroll item 3 -->
                             </ul><!--close 0.2 list group-->
                         </section><!-- close 0.2 sub-section -->
                     </div><!-- close page-right media -->
@@ -717,15 +792,15 @@
         </article><!-- close 0.0 -->
 
         <!-- 1.0 (Specialization: Assets & Expertise) -->
-        <article id="articleOne" class="article">
+        <article class="main-article" id="element-two">
             <!-- start 1.0 HEADER BUTTON -->
-            <header id="headingOne">
+            <header class="article-header" id="control-two">
                 <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
-                            data-target="#collapseOne"
+                            data-target="#target-two"
                             aria-expanded="false"
-                            aria-controls="collapseOne">
+                            aria-controls="target-two">
                         <span class="header-content">
                             <span class="header-name">
                                 SPECIALIZATION
@@ -735,21 +810,27 @@
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
-                            <ion-icon name="code-working-outline" class="closed"></ion-icon>
-                            <ion-icon name="code-slash-outline" class="open"></ion-icon>
+                            <ion-icon name="code-working-outline" class="closed">
+                                <span class="sr-only">Expand</span>
+                            </ion-icon>
+                            <ion-icon name="code-slash-outline" class="open">
+                                <span class="sr-only">Collapse</span>
+                            </ion-icon>
                         </span>
                     </button>
                 </h3>
             </header><!-- close 1.0 header button -->
             <!-- start 1.0 SECTION -->
-            <section id="collapseOne" class="collapse collapse-all" aria-labelledby="headingOne" data-parent="#resumeStack">
+            <section class="article-section collapse"
+                     id="target-two"
+                     aria-labelledby="control-two"
+                     data-parent="#resumeStack">
                 <!-- start 1.0 SPREAD -->
                 <div class="spread row">
                     <!-- start 1.0 PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+                    <div class="outer-body col-12 col-lg-7">
                         <h4 class="inset-item">
-                            As a super-user on the front end of design delivery, I now play a unique role at both
-                            ends of the tech stack.
+                            As a super-user of design software, I bring a unique voice to the tech stack.
                             <ion-icon name="color-palette-outline"></ion-icon>
                         </h4>
                         <!-- start 1.1 SUB-SECTION -->
@@ -757,16 +838,99 @@
                             <h5>
                                 What I do
                             </h5>
-                            <p>
-                                My scholastic upbringing in seven cities across the Pacific and subsequent
-                                tenures as an architect with <a
-                                    href="https://www.herzogdemeuron.com/index.html" target="_blank">Herzog & de
-                                Meuron</a> and <a href="https://www.fosterandpartners.com/" target="_blank">Foster +
-                                Partners</a> in
-                                Europe, Asia, and the Americas are the cultural contexts that ground my
-                                work at the intersections between the local and the global.
+                            <p class="d-none">
+
+                                CURRENT SKILL PATH
+                                PREVIOUs SKILL PATH
+                                NEXT SKILL PATH
+
+                                SPECIALTY
+                                I bring excellent background and professional exposure from architecture.
+
+                                1) A strategic and conscientious approach to client service.
+
+                                2) A continuous shorthand with and passion for the design tools.
+
+                                3) A dilligent and innovative approach to documentation.
+
+                                PROFICIENT
+                                Adaptability
+                                I am passionate about building and honing skills. CodeCademy, Python. Always doing a
+                                skills path.
+
+                                1) Creativity
+
+                                2) Attention to detail
+
+                                3) Integration of interdisciplinary practices
+
+                                4) The completeness I dedicate to any task.
+
+                                EXPERIENCE
+                                (describe your previous work experience, and role within larger project context, and
+                                what contributions were)
+                                I've had the privilege of working with some of the top firms. Teaching me
+
+                                1) LARGE FIRMS/GLOBAL taught me the values of diplomacy and mobility when it comes to
+                                always being ready and always bringing your best
+
+                                2) CODE/INSTUTe/LOCAL A logical and responsive working style attuned with the values of
+                                modern SaaS
+                                environment (remote-based
+                                learning)
+
+                                EXAMPLES
+                                (describe your work process)
+
+                                1) An algorithmic approach to tasks
+
+                                2) Opportunistic approach
+
+                                3) Resourcefulness
+
+
+                                As a trained architect with 7 years of professional experience, I have developed a
+                                shorthand with the tools and technologies for design delivery.
+                                My approach to programming is inherently <b class="keywords">designed</b>. I have
+                                developed a
+                                shorthand with  I
+                                am
+                                particularly
+                                diligent about
+                                quality
+                                I write code that is readable, well-formatted, well-tested, well-documented. As a developer the
+                                pragmatism to which I approach planning and coordinate is displayed in my repository
+                                and repository commit history.
+                            </p>
+                            <p class="lead">
+                                As a developer, I bring excellent background and professional exposure from the
+                                disciplines of architecture and design.
                             </p>
                             <p>
+                                Having had roles as both internal and external stakeholder in many projects, I hone a
+                                strategic and conscientious approach to <b>client services</b>.
+                                This has driven me to appreciate the <b>opportunities</b> and <b>constraints</b> of
+                                trades, <b>technologies</b> and marketing stragies unique to client-project locales.
+                                My experience in client services have also taught me the importance of
+                                understanding cultural nuances, and the values of diplomacy and
+                                mobility at a transnational scale.
+                            </p>
+                            <p>
+                                As an active maker and creative professional, I have a shorthand with and
+                                passion for the <b>design tool</b> and its evolving proclivities. I hone a rigorous
+                                approach for staying up-to-speed with tech and cover a broad spectrum of skills that
+                                serve the various stages, scales and scopes of project delivery.
+                            </p>
+                            <p>
+                                I invariably produce with a strong desire to innovate and a conscientious approach to
+                                documentation. I approach programming as an inherent process of <b>designing with intention</b>.
+                            </p>
+                            <p class="d-none">
+                                I am able to approach problems from an angle that, at best and most applicable, is
+                                evident in practice and current in an evolving experience industry and/or, at the
+                                very least, an angle that is different and unexplored.
+                            </p>
+                            <p class="d-none">
                                 Raised in seven cities across the Pacific and collaborating on projects in
                                 Europe, Asia, and the Americas as a designer, my work is tied to my
                                 fascination with the <b>intersections</b> between the <b>local</b> and the
@@ -777,29 +941,16 @@
                                 project
                                 locations.
                             </p>
-                            <p class="d-none">
-                                I am a design architect (buildings) and a full stack developer (software)
-                                with 7 years of professional experience.
-                            </p>
-                            <p class="d-none">
-                                I worked with large design firms in Los Angeles, New York, Basel and Singapore
-                                after receiving my Master of Architecture from Columbia University.
-                            </p>
-                            <p>
-                                I am presently in pursuit of a Diploma in Software Development at <a
-                                    href="https://codeinstitute.net/" target="_blank">Code
-                                Institute</a>.
-                            </p>
                             <footer>
                                 <small class="text-muted time-stamp">
-                                    Last updated <time datetime="2020-09-24">24 September 2020</time>
+                                    Last updated <time datetime="2020-10-29">29 October 2020</time>
                                 </small>
                             </footer>
                         </section><!-- close 1.1 sub-section -->
                     </div><!-- close 1.0 page-left text -->
 
                     <!-- start 1.0 PAGE-RIGHT MEDIA -->
-                    <div class="outer-body   col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                    <div class="outer-body col-12 col-lg-5">
                         <!-- start 1.2 SUB-SECTION -->
                         <section id="sectionOne-2" class="right inner-body media-content">
                             <h5>
@@ -1001,7 +1152,7 @@
                             <div class="activity-cta mt-2 inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
                                     <span class="outset-container-2 flex-fill">
-                                        <small class="mr-3 text-right5">
+                                        <small class="mr-3 text-right">
                                             See my LinkedIn
                                         </small>
                                      </span>
@@ -1021,15 +1172,15 @@
         </article><!-- close 1.0 -->
 
         <!-- 2.0 (Proficiency: Skills & Coverage) -->
-        <article id="articleTwo" class="article">
+        <article class="main-article" id="element-three">
             <!-- start 2.0 HEADER -->
-            <header id="headingTwo">
+            <header class="article-header" id="control-three">
                 <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
-                            data-target="#collapseTwo"
+                            data-target="#target-three"
                             aria-expanded="false"
-                            aria-controls="collapseTwo">
+                            aria-controls="target-three">
                         <span class="header-content">
                             <span class="header-name">
                                 PROFICIENCY
@@ -1039,18 +1190,24 @@
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
-                            <ion-icon name="code-working-outline" class="closed"></ion-icon>
-                            <ion-icon name="code-slash-outline" class="open"></ion-icon>
+                            <ion-icon name="code-working-outline" class="closed">
+                                <span class="sr-only">Expand</span>
+                            </ion-icon>
+                            <ion-icon name="code-slash-outline" class="open">
+                                <span class="sr-only">Collapse</span>
+                            </ion-icon>
                         </span>
                     </button>
                 </h3>
             </header><!-- close 2.0 header -->
             <!-- start 2.0 SECTION -->
-            <section id="collapseTwo" class="collapse collapse-all" aria-labelledby="headingTwo" data-parent="#resumeStack">
+            <section class="article-section collapse" id="target-three"
+                     aria-labelledby="control-three"
+                     data-parent="#resumeStack">
                 <!-- start 2.0 SPREAD -->
                 <div class="spread row">
                     <!-- start 2.0 PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+                    <div class="outer-body col-12 col-lg-7">
                         <h4 class="inset-item">
                             I’m committed to building and bridging skills honed through my experience and
                             dedication to design and tech.
@@ -1061,7 +1218,43 @@
                             <h5>
                                 Top Strength: Adaptability
                             </h5>
+                            <p class="d-none">
+                                PROFICIENT
+                                Adaptability
+                                I am passionate about building and honing skills. CodeCademy, Python. Always doing a
+                                skills path.
+                                As an architect (buildings) and developer (tech), having an expansive arsenal of tools
+                                and technologies is a prerequisite.
+
+                                1) Creativity
+
+                                2) Attention to detail
+
+                                3) Integration of interdisciplinary practices
+
+                                4) The completeness I dedicate to any task.
+                            </p>
+                            <p class="lead">
+                                I bring an ambitious, opportunistic and resourceful approach to tech and its evolving
+                                tools.
+                            </p>
                             <p>
+                                As an architect (buildings) and developer (tech), I have come to approach
+                                skill-building as an inherent consequence of attaching a manner of <b>adaptability
+                            </b> to all things considered.
+                            </p>
+                            <p>
+                                I believe the most essential skill is to be able to think and produce <strong>
+                                algorithmically</strong>. As a full stack developer, I stay up to speed with new
+                                tech by experimenting with new <b>frameworks</b> and nuanced <b>workflows</b> that
+                                engender robust innovation at all scales.
+                            </p>
+                            <p>
+                                My commitment is to be <b class="keywords">adaptable</b> to new languages in
+                                order to grow, operate and contribute across <b class="keywords">platforms</b>
+                                <strong>effectively</strong> and <strong>consistently</strong>.
+                            </p>
+                            <p class="d-none">
                                 Appointed to lead the schematic design of an airport expansion in Manila
                                 while working at <a href="https://cazarch.com/" target="_blank">CAZA Architects</a>
                                 in New York, I found myself feeling like a “foreigner” designing for the city of my
@@ -1070,18 +1263,6 @@
                                 each one’s resources. Living and working in many
                                 communities around the world has also taught me the rewards of
                                 entrepreneurialism and leadership.
-                            </p>
-                            <p>
-                                I believe the most essential skill — for the building industry or otherwise —
-                                is to be able to think and produce <strong>algorithmically</strong>. As a full
-                                stack developer,  I stay up to speed with new tech by experimenting with new
-                                <b>frameworks</b> and nuanced <b>workflows</b> that engender robust innovation at
-                                all scales.
-                            </p>
-                            <p>
-                                My commitment is to be <b class="keywords">adaptable</b> to new languages in
-                                order to grow, operate and contribute across <b class="keywords">platforms</b>
-                                <strong>effectively</strong> and <strong>consistently</strong>.
                             </p>
                             <footer>
                                 <small class="text-muted time-stamp">
@@ -1092,7 +1273,7 @@
                     </div><!-- close 2.0 page-left text -->
 
                     <!-- start 2.0 PAGE-RIGHT MEDIA -->
-                    <div class="outer-body   col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                    <div class="outer-body col-12 col-lg-5">
                         <!-- start 2.2 SUB-SECTION -->
                         <section id="sectionTwo-2" class="right inner-body media-content">
                             <h5>
@@ -1473,8 +1654,8 @@
                                     <button class="outset-container-2 btn"
                                             type="button"
                                             data-toggle="collapse"
-                                            data-target="#collapseSix"
-                                            aria-controls="collapseSix">
+                                            data-target="#target-seven"
+                                            aria-controls="target-seven">
                                         <span class="inset-inner">
                                             <i class="fas fa-arrow-circle-down"></i>
                                             <span class="sr-only">To Connect section</span>
@@ -1489,15 +1670,15 @@
         </article><!-- close 2.0 -->
 
         <!-- 3.0 (Experience: Education & Employment) -->
-        <article id="articleThree" class="article">
+        <article class="main-article" id="element-four">
             <!-- start 3.0 HEADER -->
-            <header id="headingThree">
+            <header class="article-header" id="control-four">
                 <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
-                            data-target="#collapseThree"
+                            data-target="#target-four"
                             aria-expanded="false"
-                            aria-controls="collapseThree">
+                            aria-controls="target-four">
                         <span class="header-content">
                             <span class="header-name">
                                 EXPERIENCE
@@ -1507,18 +1688,25 @@
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
-                                <ion-icon name="code-working-outline" class="closed"></ion-icon>
-                                <ion-icon name="code-slash-outline" class="open"></ion-icon>
+                                <ion-icon name="code-working-outline" class="closed">
+                                <span class="sr-only">Expand</span>
+                            </ion-icon>
+                            <ion-icon name="code-slash-outline" class="open">
+                                <span class="sr-only">Collapse</span>
+                            </ion-icon>
                             </span>
                     </button>
                 </h3>
             </header><!-- close 3.0 header -->
             <!-- start 3.0 SECTION -->
-            <section id="collapseThree" class="collapse collapse-all" aria-labelledby="headingThree" data-parent="#resumeStack">
+            <section class="article-section collapse"
+                     id="target-four"
+                     aria-labelledby="control-four"
+                     data-parent="#resumeStack">
                 <!-- start 3.0 SPREAD -->
                 <div class="spread row">
                     <!-- start 3.0 PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+                    <div class="outer-body col-12 col-lg-7">
                         <h4 class="inset-item">
                             The breadth of my experience in the built environment has uniquely positioned my
                             role in tech.
@@ -1529,25 +1717,45 @@
                             <h5>
                                 Dedication: “Completeness”
                             </h5>
-                            <p>
-                                I am a designer and architect with seven years of professional experience. I am
-                                presently in pursuit of a Diploma in Software Development at <a
+                            <p class="d-none">
+                                EXPERIENCE
+                                (describe your previous work experience, and role within larger project context, and
+                                what contributions were)
+                                I've had the privilege of working with some of the top firms. Teaching me
+
+                                1) LARGE FIRMS/GLOBAL taught me the values of diplomacy and mobility when it comes to
+                                always being ready and always bringing your best
+
+                                2) CODE/INSTUTe/LOCAL A logical and responsive working style attuned with the values of
+                                modern SaaS
+                                environment (remote-based
+                                learning)
+                            </p>
+                            <p class="lead">
+                                I am presently in pursuit of a Full Stack Software Development Diploma at <a
                                     href="https://codeinstitute.net/" target="_blank">Code
-                                Institute</a>. Prior to this assignment, I was a designer at <a
+                                Institute</a>. As an active member of a program designed to
+                                replicate a modern <abbr title="Software as a Service">Saas</abbr> environment, I
+                                continue to appreciate the values and rewards of remote-based mentorship, work ethic
+                                and contribution.
+                            </p>
+                            <p>
+                                Prior to this assignment, I had the privilege of working with <a
                                     href="https://www.herzogdemeuron.com/index.html" target="_blank">Herzog & de Meuron</a>
                                 and <a href="https://www.fosterandpartners.com/" target="_blank">Foster +
-                                Partners</a> in New York, where I obtained my <em>Master of Architecture</em>
-                                from <a href="https://www.arch.columbia.edu/" target="_blank">Columbia University</a>. I
+                                Partners</a> on landmark projects in Europe, Asia, and the Americas.
+                                I obtained my <em>Master of Architecture</em> from <a
+                                    href="https://www.arch.columbia.edu/" target="_blank">Columbia University</a>. I
                                 also hold a <em>Bachelor of Fine Arts</em> in <em>Sculpture
                                 and Environmental Design</em> from <a href="https://www.otis.edu/" target="_blank">Otis
                                 College of Art and Design</a>.
                             </p>
-                            <p>
+                            <p class="d-none">
                                 Having been raised as an expat in seven cities across the pacific, <b>urban</b>
                                 architecture and its situation in the <b class="keywords">public</b> realm has
                                 motivated
                                 me, while
-                                beauty of <b class="keywords">>craft</b> and design <b class="keywords">details
+                                beauty of <b class="keywords">craft</b> and design <b class="keywords">details
                             </b> have
                                 been
                                 skills I have
@@ -1611,7 +1819,7 @@
                     </div><!-- close 3.0 page-left text -->
 
                     <!-- start 3.0 PAGE-RIGHT MEDIA -->
-                    <div class="outer-body   col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                    <div class="outer-body col-12 col-lg-5">
                         <!-- start 3.2 SUB-SECTION -->
                         <section id="sectionThree-2" class="right inner-body media-content">
                             <h5>
@@ -1789,8 +1997,8 @@
                                     <button class="outset-container-2 btn"
                                             type="button"
                                             data-toggle="collapse"
-                                            data-target="#collapseFive"
-                                            aria-controls="collapseFive">
+                                            data-target="#target-six"
+                                            aria-controls="target-six">
                                         <span class="inset-inner">
                                             <i class="fas fa-arrow-circle-down"></i>
                                             <span class="sr-only">To References section</span>
@@ -1948,8 +2156,8 @@
                                     <button class="outset-container-2 btn"
                                             type="button"
                                             data-toggle="collapse"
-                                            data-target="#collapseFive"
-                                            aria-controls="collapseFive">
+                                            data-target="#target-six"
+                                            aria-controls="target-six">
                                         <span class="inset-inner">
                                             <i class="fas fa-arrow-circle-down"></i>
                                             <span class="sr-only">To References section</span>
@@ -1964,15 +2172,15 @@
         </article><!-- close 3.0 -->
 
         <!-- 4.0 (EXAMPLES: Techo Repo & Design Folio) -->
-        <article id="articleFour" class="article">
+        <article class="main-article" id="element-five">
             <!-- start 4.0 HEADER -->
-            <header id="headingFour">
+            <header class="article-header" id="control-five">
                 <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
-                            data-target="#collapseFour"
+                            data-target="#target-five"
                             aria-expanded="false"
-                            aria-controls="collapseFour">
+                            aria-controls="target-five">
                         <span class="header-content">
                             <span class="header-name">
                                 EXAMPLES
@@ -1982,18 +2190,25 @@
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
-                            <ion-icon name="code-working-outline" class="closed"></ion-icon>
-                            <ion-icon name="code-slash-outline" class="open"></ion-icon>
+                            <ion-icon name="code-working-outline" class="closed">
+                                <span class="sr-only">Expand</span>
+                            </ion-icon>
+                            <ion-icon name="code-slash-outline" class="open">
+                                <span class="sr-only">Collapse</span>
+                            </ion-icon>
                         </span>
                     </button>
                 </h3>
             </header><!-- close 4.0 header button -->
             <!-- start 4.0 SECTION -->
-            <section id="collapseFour" class="collapse collapse-all" aria-labelledby="headingFour" data-parent="#resumeStack">
+            <section class="article-section collapse"
+                     id="target-five"
+                     aria-labelledby="control-five"
+                     data-parent="#resumeStack">
                 <!-- start 4.0 SPREAD -->
                 <div class="spread row">
                     <!-- start 4.0 PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+                    <div class="outer-body col-12 col-lg-6">
                         <h4 class="inset-item">
                             Building product that is useful, educational and aesthetically pleasing in its
                             iterative deployment as well as its procedural documentation.
@@ -2005,11 +2220,7 @@
                                 Most Lauded for: Documentation Style
                             </h5>
                             <p>
-                                I am able to approach problems from an angle that, at best and most applicable, is
-                                evident in practice and current in an evolving experience industry and/or, at the
-                                very least, an angle that is different and unexplored.
-                            </p>
-                            <p>While thorough and iterative testing of big ideas of which results are measured,
+                                While thorough and iterative testing of big ideas of which results are measured,
                                 organized and delivered without delay have been features I ascribe directly to the
                                 completeness I dedicate to every task; I remain insatiable of the software that
                                 delivered the task that measured the results that organized the iterations.
@@ -2052,13 +2263,7 @@
                                     href="https://labusinesscouncil.org/events/architectural-awards/" target="_blank"><abbr
                                     title="Los Angeles Business Council">LABC</abbr> Architectural Awards</a>.
                             </p>
-                            <p class="d-none">
-                                As a trained architect with 7 years of professional experience, in design coordination, I am particularly diligent about quality documentation. I write code that is readable, well-formatted, well-tested, well-documented. As a developer the pragmatism to which I approach planning and coordinate is displayed in my repository and repository commit history.
-                            </p>
-                            <p class="d-none">My approach to documentation/representation that is as
-                                conscientious as it is innovative.
-                            </p>
-                            <footer class="card-text">
+                            <footer>
                                 <small class="text-muted time-stamp">
                                     Last updated 24 September 2020
                                 </small>
@@ -2067,7 +2272,7 @@
                     </div><!-- close 4.0 page-left text -->
 
                     <!-- start 4.0 PAGE-right MEDIA -->
-                    <div class="outer-body   col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                    <div class="outer-body col-12 col-lg-6">
                         <!-- start 4.2 SUB-SECTION -->
                         <section id="sectionFour-2" class="right inner-body media-content">
                             <h5>
@@ -2657,13 +2862,13 @@
         <!-- 4.5 (PORTFOLIO: Architecture & Design Folio) -->
         <article class="article d-none">
             <!-- start 4.0 HEADER -->
-            <header id="headingFour-ext">
+            <header id="control-five-ext">
                 <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
-                            data-target="#collapseFour-ext"
+                            data-target="#target-five-ext"
                             aria-expanded="false"
-                            aria-controls="collapseFour-ext">
+                            aria-controls="target-five-ext">
                             <span class="header-content">
                                 <span class="header-name">
                                     PORTFOLIO
@@ -2680,7 +2885,7 @@
                 </h3>
             </header> <!-- /close 4.0 header button -->
             <!-- start 4.0 SECTION -->
-            <section id="collapseFour-ext" class="collapse collapse-all" aria-labelledby="headingFour-ext" data-parent="#resumeStack">
+            <section id="target-five-ext" class="collapse collapse-all" aria-labelledby="control-five-ext" data-parent="#resumeStack">
                 <!-- start 4.0 SPREAD -->
                 <div class="spread row">
                     <!-- start 4.0 PAGE-LEFT TEXT -->
@@ -3407,15 +3612,15 @@
         </article><!-- close 4.0 -->
 
         <!-- 5.0 (References: Recommendations & Awards) -->
-        <article id="articleFive" class="article">
+        <article class="main-article" id="element-six">
             <!-- start 5.0 HEADER -->
-            <header id="headingFive">
+            <header class="article-header" id="control-six">
                 <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
-                            data-target="#collapseFive"
+                            data-target="#target-six"
                             aria-expanded="false"
-                            aria-controls="collapseFive">
+                            aria-controls="target-six">
                         <span class="header-content">
                             <span class="header-name">
                                 REFERENCES
@@ -3425,18 +3630,25 @@
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
-                            <ion-icon name="code-working-outline" class="closed"></ion-icon>
-                            <ion-icon name="code-slash-outline" class="open"></ion-icon>
+                            <ion-icon name="code-working-outline" class="closed">
+                                <span class="sr-only">Expand</span>
+                            </ion-icon>
+                            <ion-icon name="code-slash-outline" class="open">
+                                <span class="sr-only">Collapse</span>
+                            </ion-icon>
                         </span>
                     </button>
                 </h3>
             </header><!-- close 5.0 header -->
             <!-- start 5.0 SECTION -->
-            <section id="collapseFive" class="collapse collapse-all" aria-labelledby="headingFive" data-parent="#resumeStack">
+            <section class="article-section collapse"
+                     id="target-six"
+                     aria-labelledby="control-six"
+                     data-parent="#resumeStack">
                 <!-- start 5.0 SPREAD -->
                 <div class="spread row">
                     <!-- start 5.0 PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+                    <div class="outer-body col-12 col-lg-7">
                         <h4 class="inset-item">
                             Building product that is useful, educational and aesthetically pleasing in its
                             iterative deployment as well as its procedural documentation.
@@ -3664,7 +3876,7 @@
                     </div><!-- close 5.0 page-left text -->
 
                     <!-- start 5.0 PAGE-RIGHT MEDIA -->
-                    <div class=" outer-body  col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                    <div class="outer-body col-12 col-lg-5">
                         <!-- start 5.2 SUB-SECTION -->
                         <section id="sectionFive-2" class="right inner-body media-content break-words">
                             <h5 id="honors-title" class="pv-accomplishments-block__title t-bold t-14">
@@ -3936,15 +4148,15 @@
         </article><!-- close 5.0 -->
 
         <!-- 6.0 (Connect: Contact Info & Message Form) -->
-        <article id="articleSix" class="article">
+        <article class="main-article" id="article-seven">
             <!-- start 6.0 HEADER -->
-            <header id="headingSix">
+            <header class="article-header" id="control-seven">
                 <h3 class="header-title">
                     <button class="collapsed" type="button"
                             data-toggle="collapse"
-                            data-target="#collapseSix"
+                            data-target="#target-seven"
                             aria-expanded="false"
-                            aria-controls="collapseSix">
+                            aria-controls="target-seven">
                         <span class="header-content">
                             <span class="header-name">
                                 CONNECT
@@ -3954,18 +4166,25 @@
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
-                            <ion-icon name="code-working-outline" class="closed"></ion-icon>
-                            <ion-icon name="code-slash-outline" class="open"></ion-icon>
+                            <ion-icon name="code-working-outline" class="closed">
+                                <span class="sr-only">Expand</span>
+                            </ion-icon>
+                            <ion-icon name="code-slash-outline" class="open">
+                                <span class="sr-only">Collapse</span>
+                            </ion-icon>
                         </span>
                     </button>
                 </h3>
             </header><!-- close 6.0 header -->
             <!-- start 6.0 SECTION -->
-            <section id="collapseSix" class="collapse collapse-all" aria-labelledby="headingSix" data-parent="#resumeStack">
+            <section class="article-section collapse"
+                     id="target-seven"
+                     aria-labelledby="control-seven"
+                     data-parent="#resumeStack">
                 <!-- start 6.0 SPREAD -->
                 <div class="spread row">
                     <!-- start 6.0 PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="outer-body col-12 col-lg-6">
                         <!-- start 6.0 TEXT CONTENT -->
                         <h4 class="inset-item">
                             I am always keen to collaborate with good people on innovative ideas.
@@ -4022,7 +4241,7 @@
                     </div><!-- close 6.0 page-left text -->
 
                     <!-- start 6.0 PAGE-RIGHT MEDIA -->
-                    <div class=" outer-body  col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="outer-body col-12 col-lg-6">
                         <!-- start 6.2 SUB-SECTION -->
                         <section id="sectionSix-2" class="right inner-body media-content">
                             <h5 class="text-right">
@@ -4086,13 +4305,13 @@
     </main><!-- close main stack -->
 
     <!-- start FOOTER CONTAINER -->
-    <footer class="footer mt-auto bg-w2" style="top: calc(100vh - 3rem); padding-top: 3rem;">
+    <footer class="body-footer fixed-bottom mt-auto bg-w2">
         <!-- Footer Item -->
         <div class="d-sm-block text-sm-center justify-content-center text-md-right">
-            <h6 class="d-sm-block d-md-inline-block text-center" style="font-size: 12px;">
+            <h6 class="d-inline-block  text-center" style="font-size: 12px;">
                 © Designed and Built by
             </h6>
-            <p class="d-sm-block d-md-inline-block text-center">
+            <p class="d-inline-block text-center">
                 <a class="text-dark" href="#">
                     Joem Elias Sanez
                 </a>

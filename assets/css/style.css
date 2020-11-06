@@ -16,24 +16,15 @@
 * Browsers: last 4 version
 */
 
-/* Potentially import dependencies instead of linking in html? */
-/*@import url("https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css");*/
-
-/* bootstrap-grid.css */
-/* bootstrap-reboot.css */
-/* bootstrap-utilities.css */
-
-/* button.js */
-/* collapse.js */
-/* scrollspy.js */
-
 @import url("https://use.typekit.net/qyv7gbn.css");
 
 /* ==========================================================================
-   CORE CONFIGS
+   Core configs
    ========================================================================== */
 
 :root {
+
+    /* Signature colors */
 
     --matte: #D5D6D1;
     --obsidian: #2E2C2E;
@@ -57,16 +48,112 @@
     --deep-3: #95989A;
     --deep-4: #B0b0b0;
 
+    /* Signature radii */
+
     --radius-1: .75rem;
     --radius-2: .6rem;
     --radius-3: .5rem;
     --radius-4: .4rem;
     --radius-5: .3rem;
 
+    /* Signature gradients */
+
     --gradient-1: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
     --gradient-2: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
     --gradient-3: linear-gradient(145deg, rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0.2));
     --gradient-4: linear-gradient(180deg, rgba(250, 250, 250, .7), rgba(0, 0, 0, .1));
+
+    /* Anim/Trans Timing function variables */
+
+    /*!
+     * 'glide' is a refined variation of 'ease-in-out':
+     * a smooth slow start with an equally smooth slow end https://cubic-bezier.com/#.45,.02,.51,.95
+     */
+    --glide: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+    /*!
+     * 'breeze' is an 'ease' with a heightened overbound:
+     * a rapid start with a slow arrival and discreet bounce https://cubic-bezier.com/#.23,-0.09,.18,1.25
+     */
+    --breeze: cubic-bezier(.23, -0.09, .18, 1.25);
+
+    /*!
+     * 'zip' is a 'linear' progression with a surprise bounce:
+     * a consistent speed with an interrupted end https://cubic-bezier.com/#1,1.4,.41,1.01
+     */
+    --zip: cubic-bezier(1, 1.4, 0.41, 1.01);
+
+    /*!
+     * 'swoop' is an 'ease-in-out' with a late and steep progression:
+     * an extra slow start with a rapid progression before a relaxed end https://cubic-bezier.com/#1,0,.41,1.01
+     */
+    --swoop: cubic-bezier(1, 0, 0.41, 1.01);
+
+    /* Anim/Trans Duration variables */
+
+    --passing: 1s;
+    --dashing: 0.75s;
+    --bustling: 0.65s;
+    --fleeting: 0.55s;
+    --flashing: 0.3s;
+
+    /* Anim/Trans Time Delay variables */
+
+    --late: 0.36s;
+    --short: 0.2s;
+    --prompt: 0.05s;
+    --early: 0s;
+
+    /* Animation name variables */
+
+    --load-down: load-down;
+    --load-up: load-up;
+    --fade-in: fade-in;
+
+    /* Transition property variables */
+
+    --elem: height;
+    --trans-elem-all: all;
+    --trans-elem: var(--elem);
+
+    /* Animation Shorthand variables */
+    /* Name, Duration, Time Function, Delay, Iteration Count, Direction, Fill mode, Play state */
+
+    /*animation: load-down 0.55s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    --fleet-down-prompt-glide-anim: var(--load-down) var(--fleeting) var(--glide) var(--prompt) 1 normal forwards running;
+
+    /*animation: load-up 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    --dash-up-early-glide-anim: var(--load-up) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+
+    /*animation: load-up 0.55s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    --fleet-up-prompt-glide-anim: var(--load-up) var(--fleeting) var(--glide) var(--prompt) 1 normal forwards running;
+
+    /*animation: load-down 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    --dash-down-early-glide-anim: var(--load-down) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+
+    /*animation: load-down 0.55s 0.s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    --fleet-down-early-glide-anim: var(--load-down) var(--fleeting) var(--glide) var(--early) 1 normal forwards running;
+
+    /*animation: load-up 0.75s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
+    --dash-up-prompt-glide-anim: var(--load-down) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+
+    /* Transition Shorthand variables */
+    /* Transition Property, Duration, Timing Function, Delay */
+
+    /*transition: all 0.3s 0.36s cubic-bezier(0.455, 0.03, 0.515, 0.955);*/
+    --flash-all-late-glide-trans: var(--trans-elem-all) var(--flashing) var(--glide) var(--late);
+
+    /*transition: all 0.3s 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;*/
+    --flash-all-flash-glide-trans: var(--trans-elem-all) var(--flashing) var(--glide) var(--flashing);
+
+    /*transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);*/
+    --bust-all-early-zip-trans: var(--trans-elem-all) var(--bustling) var(--zip) var(--early);
+
+    /*transition: all 0.3s 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);*/
+    --flash-all-short-glide-trans: var(--trans-elem-all) var(--flashing) var(--glide) var(--short);
+
+    /*transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);*/
+    --bust-all-early-swoop-trans: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
 
     /* Desired width variable (out of 12) */
     --of-twelve: 11;
@@ -77,31 +164,16 @@
     /* Remaining balance of desired width as percentage */
     --offset: calc((12 - var(--of-twelve)) / 12 * 100%);
 
-    /* Declare a responsive margin property to be a function of half the balance of the desired width */
+    /* Responsive margin property as a function of half the balance of the desired width */
     --margin: calc(var(--offset) / 2);
 
-    /* OPTION to calculate --margin as a separate function with less nested calcs and custom vars */
-    /*--margin: calc((12 - var(--of-twelve)) / 12 / 2 * 100%);*/
-
+    /* X dimension tolerance helper property */
     --gutter-x: 1.5rem;
 
+    /* Padding propery as half of X tolerance */
     --padding: calc(var(--gutter-x) / 2);
 
-    /* media breakpoints from bootstrap */
-    --max-xs-mobile-down: 575.98px;
-    --min-sm-mobile-up: 576px;
-    --max-sm-mobile-down: 767.98px;
-    --min-md-tablet-up: 768px;
-    --max-md-tablet-down: 991.98px;
-    --min-lg-desktop-up: 992px;
-    --max-lg-desktop-down: 1199.98px;
-    --min-xl-desktop-up: 1200px;
-    --max-xl-desktop-down: 1399.98px;
-    --min-xxl-desktop-up: 1400px;
-
-
     /* Apply margins for typical .row in a fluid .container to :root */
-
     display: flex;
     justify-content: center;
 }
@@ -111,10 +183,10 @@
 
 :root > * {
     width: var(--width);
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: var(--margin);
+    margin-right: var(--margin);
     /* TODO this is new */
-    margin-top: 3rem;
+    margin-top: calc(var(--margin) + 3rem);
     background-color: var(--paper);
 }
 
@@ -133,10 +205,13 @@
 }
 
 /* ==========================================================================
-   TYPE CONFIGS
+   Type configs
    ========================================================================== */
 
 body {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+
     text-rendering: optimizeLegibility;
     font-kerning: normal;
     font-variant-ligatures: common-ligatures;
@@ -149,24 +224,25 @@ p, small {
     font-style: normal;
     font-feature-settings: 'c2sc';
 
-    font-size: 0.9375rem;
-    line-height: 1.375rem;
-    letter-spacing: .02rem;
-
-    color: var(--deep-2);
     text-shadow: var(--white) 0 .3px 0, #D4D6D6 0 -.3px 0;
     -webkit-font-smoothing: antialiased;
 }
+p {
+    color: #262626;
+}
 
 small {
-    font-size: 0.8125rem;
-    line-height: 1.1875rem;
+    color: var(--deep-2);
+}
+
+p strong {
+    font-weight: 500;
 }
 
 /* Text content keywords */
 
 b {
-    font-weight: 100;
+    font-weight: 400;
 }
 
 a {
@@ -210,7 +286,7 @@ ion-icon {
 }
 
 /* ==========================================================================
-   HEADINGS CONFIGS
+   Headings
    ========================================================================== */
 
 /* Splash landing heading */
@@ -253,16 +329,19 @@ h3 {
 /* Section lead heading */
 
 h4 {
+    display: flex;
+    align-items: flex-end;
+
     padding: 5rem 1rem 1rem;
     margin-bottom: .5rem;
     border-radius: var(--radius-2);
-    align-content: end;
 
     font-family: din-2014, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: calc(1.125rem + 1.5vw);
-    line-height: calc(1.625rem + 1vw);
+
+    font-size: calc(1.0625rem + 1.5vw);
+    line-height: calc(1.6875rem + 1vw);
 
     color: var(--white);
     text-shadow: #fff 0 .5px 0, #D7D7D6 0 -.5px 0;
@@ -289,97 +368,120 @@ h6 {
     font-style: normal;
 }
 
+.body-footer:before {
+    display: block;
+    content: "";
+    height: 10px;
+}
+
 /* ==========================================================================
-   LAYOUT CONFIGS
+   Layout configs
    ========================================================================== */
 
-/* Absolutely positioned elements in the dom will always go above everything even if it's position fixed */
-/* https://stackoverflow.com/questions/13071429/how-to-position-main-content-below-header-and-footer-in-css */
+.root-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    top: 0;
+    bottom: 0;
+    padding-bottom: 3rem;
+    min-height: 100%;
 
-header.header {
-    position: absolute;
-    z-index: 99;
+    justify-content: center !important;
 }
 
-header.header .navbar-light {
-    background: var(--paper,#F2F1EF);
+.root-body > * {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-/*html {*/
-/*    !*position: fixed;*!*/
-/*    !*flex: 0 0 auto;*!*/
-/*    height: 100vh;*/
-/*    !*height: calc(100vh + 8rem);*!*/
-/*}*/
+.body-main {
+    --blur-xs: 0px;
+    --blur-sm: 0px;
+    --blur-md: 0px;
 
-/*body {*/
-/*    min-height: 100%;*/
-/*    position: fixed;*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*max-height: calc(100vmax - 24rem);*/
+    /*bottom: 3rem;*/
 
-/*    max-height: 90vh;*/
-/*    margin-top: 2rem !important;*/
 
-/*    !*display: flex;*!*/
-/*    !*flex-direction: column;*!*/
-/*    !*padding-top: 3rem;*!*/
-/*    !*flex: 1;*!*/
+    overflow: hidden;
 
-/*    !*display: flex;*!*/
-/*    justify-content: center !important;*/
-/*    !*flex-direction: column;*!*/
-/*    max-height: calc(100vh + 8rem);*/
-/*    overflow: auto;*/
-/*}*/
-
-/*body > * {*/
-/*    flex: 1;*/
-
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    flex-direction: column;*/
-/*}*/
-
-main {
-    position: relative;
-    /*margin-top: 3rem;*/
+    padding-left: var(--margin);
+    padding-right: var(--margin);
     margin-right: calc(var(--gutter-x) / -2);
     margin-left: calc(var(--gutter-x) / -2);
-    /* TODO fix */
-    /*height: calc(100vh - 24rem);*/
 }
 
-main > * {
+.body-main > * {
     padding-right: calc(var(--gutter-x) / 2);
     padding-left: calc(var(--gutter-x) / 2);
 }
 
+.body-header:after {
+    display: block;
+    content: "";
+    height: 10px;
+}
+
+@media (max-height: 666.98px) {
+    :root {
+        --of-twelve: 10.75;
+        font-size: .938rem;
+    }
+    .body-main {
+        position: -webkit-sticky;
+        position: sticky;
+        overflow: auto;
+
+        top: 3rem;
+        right: 0;
+        bottom: 3rem;
+        left: 0;
+        padding-bottom: 3rem;
+
+    }
+
+    [data-parent="#resumeStack"] {
+        --height: calc(100vmax - 8rem);
+    }
+
+    [data-parent="#resumeStack"].show {
+        --height: calc(100vmax - 8rem);
+        height: var(--height);
+
+        flex-direction: column-reverse;
+    }
+}
+
 @media (min-width: 576px) {
-    main {
+    .body-main {
         margin-top: 3.375rem;
+        margin-bottom: 3.375rem;
     }
 }
 
-@media (max-width: 575.98px) {
-    body {
-        position: static;
-    }
+/* Absolutely positioned elements in the dom will always go above everything even if it's position fixed */
+/* https://stackoverflow.com/questions/13071429/how-to-position-main-content-below-header-and-footer-in-css */
+
+.body-header {
+    position: absolute;
+    z-index: 99;
 }
 
-section {
-    overflow: hidden;
+.body-header .navbar-light {
+    background: var(--paper,#F2F1EF);
 }
-
-/* MOBILE COLLAPSE-SECTION CONFIGS
-   ========================================================================== */
-
-/* Have the ability to scroll within an expanded section on a small screen */
-/* With the exception of the Introduction section (collapseZero) */
-/* 60vh is an arbitrary height to for both in-section scrolling and sibling header-buttons visibility */
-
-
 
 /* ==========================================================================
-   ARTICLE HEADER BUTTON
+   Article header button
    ========================================================================== */
 
 /*!
@@ -396,9 +498,9 @@ section {
  *
  *  Example HTML:
  *
- * <header id="headingZero">
+ * <header id="control-one">
  *     <h3 class="header-title">
- *         <button class="collapsed" data-toggle="collapse" data-target="#collapseZero" aria-expanded="false">
+ *         <button class="collapsed" data-toggle="collapse" data-target="#target-one" aria-expanded="false">
  *             <span class="header-content">
  *                 <span class="header-name">
  *                     INTRODUCTION
@@ -417,7 +519,7 @@ section {
  */
 
 
-article header {
+.article-header {
     position: relative;
 
     display: flex;
@@ -496,32 +598,33 @@ article header {
 
 .header-content {
     display: flex;
-    /*flex-wrap: nowrap;*/
-    /*overflow: hidden;*/
+    align-items: center;
 
-    padding-top: .5rem;
+    padding-top: .55rem;
     padding-right: .125rem;
     padding-left: .125rem;
 
     background-color: var(--paper);
+}
 
-    /*text-wrap: none;*/
-    /*text-align: left;*/
+@media (min-width: 576px) {
+    .header-content {
+        padding-left: .4rem;
+        padding-right: .4rem;
+    }
 }
 
 /* Main header name */
 
 .header-name {
     position: relative;
+    padding-top: .1rem;
     font-weight: 500;
 }
 
 /* Supporting header text */
 
 .header-text {
-    /*width: 100%;*/
-    /*overflow: hidden;*/
-
     margin-left: .25rem;
 
     font-weight: 300;
@@ -531,8 +634,16 @@ article header {
     white-space: nowrap;
 }
 
+/* TODO select header text, display only relevant titles */
+
 @media (max-width: 575.98px) {
     article header .header-text {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .header-text {
         display: none;
     }
 }
@@ -564,6 +675,13 @@ article header {
     background-color: var(--paper);
 }
 
+@media (min-width: 576px) {
+    .header-icon {
+        padding-left: .3rem;
+        padding-right: .3rem;
+    }
+}
+
 /* Main header icon styles */
 
 .header-icon ion-icon {
@@ -573,7 +691,7 @@ article header {
 }
 
 /* ==========================================================================
-   ARTICLE PAGE SPREAD (.COL DIV CONFIGS) @prefixed
+   Article spread (.col div configs) @prefixed
    ========================================================================== */
 
 /*!
@@ -593,11 +711,6 @@ article header {
  *     </div>
  * </section>
  */
-
-/* TODO Purge .col-last and .spread > :nth-child(2) */
-/* TODO Purge .media-box and .text-box classes */
-/* TODO Purge .text-item class */
-/* TODO Separate left/right positioning styles from media/text presentation styles */
 
 /**
  * Divs in a .spread
@@ -641,16 +754,6 @@ article header {
 
 .outer-body:nth-child(2) {
 
-}
-
-@media (max-width: 991.98px) {
-    section:not(.show) .outer-body:nth-child(2) {
-        /*display: none;*/
-    }
-
-    section.show .outer-body:nth-child(2) {
-        /*display: block;*/
-    }
 }
 
 @media (min-width: 768px) {
@@ -730,282 +833,1754 @@ article header {
     border-radius: var(--radius-2);
 }
 
-/* MEDIA SECTION */
+/* ==========================================================================
+   Pseudo element transition styles
+   ========================================================================== */
 
-/* Make section.right a flex container, turning h5, ul and .activity-cta into flex items */
-/* applies to section.right */
+/**
+ * Pseudo elements are positioned to the left and right margins of the
+ * following elements to achieve the effect of containers sliding on
+ * vertical rails during concurrent '.show' and '.collapse' events
+ *
+ * 1. <main> : outer-most static rail
+ * 2. <article> : static rail
+ * 3. first <section> (and its .collapse class variety) : inner-most top rail
+ * 4. first child of the first <section> (.spread class) : inner-most bottom rail
+ *
+ * Note (current): if :root{--of-twelve: 11;}
+ * var(--width) == 91.66%
+ * var(--margin) == 4.16%
+ * calc(var(--margin) * -1) == -4.16%
+ * calc(var(--margin) / 2 * -1) == -2.08%
+ */
+/* BUG: PSEUDOS are funky on Safari */
 
-.media-content {
+article {
+    --outlines: var(--raisin);
+}
+
+/* Set sections in both static and transition states to show overflow at left/right (offset to --margin) */
+/* with a top offset of the height of its preceding header */
+/* and a bottom inset of the height of its following header */
+
+section.show,
+section.collapse,
+section.collapsing {
+    border-radius: var(--radius-1);
+    -webkit-clip-path: inset(-3rem calc(var(--margin) * -1) 1.36rem calc(var(--margin) * -1));
+            clip-path: inset(-3rem calc(var(--margin) * -1) 1.36rem calc(var(--margin) * -1));
+}
+
+.header-title {
+    -webkit-clip-path: inset(-1.5rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
+            clip-path: inset(-1.5rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
+}
+
+/* TODO animate toggle in to be a horizontal line */
+/* TODO fix onshow animations */
+/* TODO fix margins for lg */
+/* TODO streamline the mobile experience like the md experience */
+/* TODO design the nav to be like a calling card */
+/* TODO change the href when toggle is on */
+
+
+article:before,
+article:after,
+section.collapse:before,
+section.collapse:after,
+section.show:before,
+section.show:after,
+section.collapsing:before,
+section.collapsing:after,
+.spread:before,
+.spread:after,
+article > header:before,
+article > header:after,
+.header-title:after,
+section.right:after {
+    position: absolute;
+    display: block;
+    content: "";
+}
+
+/* Pseudo verticals
+   ========================================================================== */
+
+/* Offset :before pseudo elements to  the center of the offset --margin property  */
+/* if --of-twelve: 11; then the following left: value is -2.08%  */
+
+article:before {
+    left: calc(var(--margin) / 2 * -1 + .08rem);
+    border-right: 1px solid var(--outlines);
+}
+
+@media (max-width: 575.98px) {
+    article:before {
+        left: calc(var(--margin) / 2 * -1 + .425rem);
+    }
+}
+
+/* Position :after pseudo elements at the center of the offset --margin property */
+/* if --of-twelve: 11; then the following right: value is -2.08%  */
+
+article:after {
+    right: calc(var(--margin) / 2 * -1 + .08rem);
+    border-left: 1px solid var(--outlines);
+}
+
+@media (max-width: 575.98px) {
+    article:after {
+        right: calc(var(--margin) / 2 * -1 + .425rem);
+    }
+}
+
+/* Give static outer rail pseudo elements height of 100%  */
+
+article:before,
+article:after {
+    top: 0;
+    height: calc(100% - 1.36rem);
+
+    z-index: -1;
+    width: .3rem;
+}
+
+/* Give inner-most top and bottom rail pseudo elements a consistent width and a variable height  */
+/* Set background color to the html body color */
+/* Z depth of 10 to be at the foreground of the body */
+
+/* Note: the .collapse.collapsing.show. variety are necessary for continuity during the BS.transitioning event */
+
+section.collapse:before,
+section.collapse:after,
+section.show:before,
+section.show:after,
+section.collapsing:before,
+section.collapsing:after,
+.spread:before,
+.spread:after {
+    z-index: 10;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+            align-self: center;
+
+    height: 10vh;
+    width: .5rem;
+}
+
+/* Position top left and top right pseudo-rails relative to section elements */
+
+section.show:before,
+section.collapsing:before,
+section.collapse:before,
+section.show:after,
+section.collapsing:after,
+section.collapse:after {
+    top: 1.6rem;
+}
+
+/* Position bottom left and bottom right pseudo-rails relative to .spread divs */
+
+.spread:before,
+.spread:after {
+    bottom: 1.5rem;
+}
+
+/* Apply left-centric styling to top left and bottom left pseudo-rails */
+
+section.collapse:before,
+section.show:before,
+section.collapsing:before,
+.spread:before {
+    left: calc(var(--margin) / 2 * -1 + .3rem);
+    border-left: 2px solid var(--outlines);
+}
+
+/* Style top left pseudo-rail */
+
+section.collapse:before,
+section.show:before,
+section.collapsing:before {
+    border-top-left-radius: .75rem;
+}
+
+/* Style bottom left pseudo-rail */
+
+.spread:before {
+    border-bottom-left-radius: .75rem;
+}
+
+@media (max-width: 575.98px) {
+    section.collapse:before,
+    section.show:before,
+    section.collapsing:before,
+    .spread:before {
+        left: calc(var(--margin) / 2 * -1 + .6rem);
+    }
+}
+
+/* Apply right-centric styling to top right and bottom right pseudo-rails */
+
+section.collapse:after,
+section.show:after,
+section.collapsing:after,
+.spread:after {
+    right: calc(var(--margin) / 2 * -1 + .3rem);
+    border-right: 2px solid var(--outlines);
+}
+
+/* Style top right pseudo-rail */
+
+section.collapse:after,
+section.show:after,
+section.collapsing:after {
+    border-top-right-radius: .75rem;
+}
+
+/* Style bottom right pseudo-rail */
+
+.spread:after {
+    border-bottom-right-radius: .75rem;
+}
+
+@media (max-width: 575.98px) {
+    section.collapse:after,
+    section.show:after,
+    section.collapsing:after,
+    .spread:after {
+        right: calc(var(--margin) / 2 * -1 + .6rem);
+    }
+}
+
+/* Hide inherited pseudos at landing banner section for small screens */
+
+@media (max-width: 575.98px) {
+    #target-zero:before,
+    #target-zero:after {
+        display: none;
+    }
+}
+
+/*!
+ * Horizontal pseudo elements are applied to individual header elements
+ * to simulate connection to the vertical pseudo-rails
+ *
+ * 1. <header> : pseudo left/right to hide rails beyond
+ * 2. section.right : pseudo bottom horizontal
+ * 3. .header-title : pseudo top horizontal
+ */
+
+/* Pseudo concealer
+   ========================================================================== */
+
+/* Position top-most header pseudo-concealer elements that 'cover' pseudo-rails beyond */
+
+article > header:before,
+article > header:after {
+    top: -1.36rem;
+    z-index: 1;
+
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+            align-self: center;
+
+    width: .875rem;
+    height: 2.875rem;
+
+    background: var(--paper);
+    /*border: 1px dashed red;*/
+}
+
+/* Style left pseudo-concealer */
+
+article > header:before {
+    border-bottom-right-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+/* Position left pseudo-concealer */
+
+article > header:before {
+    left: calc(var(--margin) * -1);
+}
+
+@media (min-width: 992px) {
+    article > header:before {
+        left: calc(var(--margin) * -1 + .25rem);
+    }
+}
+
+@media (max-width: 575.98px) {
+    article > header:before {
+        left: calc(var(--margin) / 2 * -1);
+        height: 2.968rem;
+    }
+}
+
+/* Style right pseudo-concealer */
+
+article > header:after {
+    border-bottom-left-radius: .5rem;
+    border-top-left-radius: .5rem;
+}
+
+/* Position general right pseudo-concealer */
+
+article > header:after {
+    right: calc(var(--margin) * -1);
+}
+
+@media (min-width: 992px) {
+    article > header:after {
+        right: calc(var(--margin) * -1 + .25rem);
+    }
+}
+
+@media (max-width: 575.98px) {
+    article > header:after {
+        right: calc(var(--margin) / 2 * -1);
+        height: 2.968rem;
+    }
+}
+
+/* Pseudo horizontals
+   ========================================================================== */
+
+/* Style top and bottom pseudo-horizontals  */
+
+section.right:after,
+.header-title:after {
+    height: .5rem;
+}
+
+/* Position bottom pseudo-horizontal */
+
+section.right:after {
+    z-index: 5;
+    bottom: 1.36rem;
+    left: calc(var(--margin) / 2 * -1 + .5rem);
+    right: calc(var(--margin) / 2 * -1 + .5rem);
+    border-radius: 0 0 var(--radius-1) var(--radius-1);
+    border-bottom: 2px solid var(--outlines);
+}
+
+/* Position top pseudo-horizontal */
+
+.header-title:after {
+    z-index: -1;
+    top: 1.5rem;
+    left: calc(var(--margin) / 2 * -1 + .1875rem);
+    right: calc(var(--margin) / 2 * -1 + .1875rem);
+    border-top: 2px solid var(--outlines);
+}
+
+@media (max-width: 575.98px) {
+    section.right:after {
+        left: calc(var(--margin) / 2 * -1 + .875rem);
+        right: calc(var(--margin) / 2 * -1 + .875rem);
+    }
+
+    .header-title:after {
+        left: calc(var(--margin) / 2 * -1 + 1rem);
+        right: calc(var(--margin) / 2 * -1 + 1rem);
+    }
+}
+
+/* CREDIT https://stackoverflow.com/questions/43186015/css-hide-scroll-bar-but-have-element-scrollable */
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+::-webkit-scrollbar-track {
+    width: 0px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 0px;
+    background: transparent;
+}
+
+
+/* ==========================================================================
+   Master Collapse functions and animations @prefixed
+   ========================================================================== */
+
+/*
+ * The '.collapse' class with data-parent attribute.
+ *
+ * Adding Bootstrap's '.collapse' class exposes an opportunity to extend class
+ * events enabled by the automatically-activated collapse plugin. To take
+ * advantage of collapse plugin's events, it is important to understand what the plugin
+ * gets from the element and the sequence of classes it assigns to it.
+ *
+ * The collapse plugin utilizes three classes with default properties to handle events:
+ *     1. The '.collapse' class immediately hides content.
+ *             { display: none; }
+ *     2. The '.collapsing' class is added during transitions.
+ *             { height: 0; transition: .3s ease-in-out .3s }
+ *     3. The '.collapse.show' class shows content.
+ *             { display: block; }
+ *
+ * The 'show.bs.collapse' event.
+ *
+ * Toggling show to the control of a currently hidden element will:
+ *         ↪ Remove its '.collapse' class ↴
+ *         ↪ Add the '.collapsing' class ↴
+ *             ↪ Transition its height from 0 to its initial dimension ↴
+ *         ↪ Set aria-expanded='true' to its control element ↴
+ *         ↪ Trigger hide.bs.collapse event to an open sibling ↴
+ *         ↪ Remove the '.collapsing' class ↴
+ *         ↪ Add the '.show' class.
+ *
+ * The 'hide.bs.collapse' event.
+ *
+ * Toggling collapse to the control of a currently shown element will:
+ *         ↪ Get element's height dimension ↴
+ *         ↪ Add the '.collapsing' class ↴
+ *             ↪ Transition its height from the retrieved dimension to 0 ↴
+ *         ↪ Remove '.collapse.show' classes together ↴
+ *         ↪ Set aria-expanded='false' to its control element ↴
+ *         ↪ Remove the '.collapsing' class ↴
+ *         ↪ Add the '.collapse' class.
+ *
+ *
+ *
+ *
+ * Adding data-toggle="collapse" and data-target"<id of collapsible element>"
+ * to a button or a tag assigns control of that collapsible element.
+ *
+ *  The control element's 'aria-expanded' attribute toggles 'true'/'false' when
+ *  toggling the button/a itself.
+ *
+ * Adding a data-parent attribute ensures that all '.collapse' elements
+ * sharing the same data-parent are closed whenever the current '.collapse' element
+ * is open.
+ *
+ * https://v5.getbootstrap.com/docs/5.0/components/collapse/
+ * https://mdbootstrap.com/docs/standard/components/collapse/
+ *
+ */
+
+/* Disable transitions inherited from Bootstrap's '.collapsing' class. */
+
+[data-parent="#resumeStack"].collapsing {
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+/* Set a responsive height property to be 100% of the smaller viewport
+ * dimension minus the total height of seven headers (21rem) and
+ * top/bottom tolerances (8rem), callable to all collapsible elements sharing
+ * the data-parent attribute.
+ */
+
+[data-parent="#resumeStack"] {
+    --height: calc(100vmin - 21rem - 8rem);
+    overflow: auto;
+}
+
+/*
+ * The collapse and expand events with flex transitions.
+ *
+ * This radically customizes the 'show.bs.collapse' event by attaching
+ * specific css settings to the '.show' and ':not(.show)' selectors.
+ *
+ * Animating flex.
+ *
+ * The trick is to always display flex (never hiding the element) and instead,
+ * animating its height, and flex direction.
+ *
+ *
+ * Animating flex direction.
+ *
+ * Flipping the flex direction is key to ensuring the content 'scrolls to top'
+ * when shown. Without flexbox, the default states of the plugin's classes
+ * invariably transition element heights without consideration to the window's
+ * position relative to the revealed content. Thus, toggling a collapsed section
+ * with greater height dimension will often overshoot the transition duration
+ * and/or never open at the top of the element's content.
+ *
+ * Selecting the boolean states.
+ *
+ * The last key is to select the '.show' class directly and not traverse
+ * '.collapse.show' as this will invoke a hidden state between '.collapse'
+ * and '.show' which appears as a quick flash interrupting the transition.
+ * Conversely, it's imperative to only select ':not(.show)' instead of
+ * '.collapse' when targeting the element's hidden state.
+ *
+ */
+
+/* Set default expanded state with assigned show-event flexbox animation. */
+
+[data-parent="#resumeStack"].show {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1 !important;
+        -ms-flex: 1 !important;
+            flex: 1 !important;
+
+    height: var(--height);
+
+    -webkit-animation: show-event .75s var(--glide) 0s 1 normal forwards running;
+    animation: show-event .75s var(--glide) 0s 1 normal forwards running;
+    -webkit-transition:
+            all .3s var(--zip) 0s,
+            -webkit-box-flex .1s var(--swoop) 0s;
+    transition:
+            all .3s var(--zip) 0s,
+            -webkit-box-flex .1s var(--swoop) 0s;
+    -o-transition:
+            all .3s var(--zip) 0s,
+            flex .1s var(--swoop) 0s;
+    transition:
+            all .3s var(--zip) 0s,
+            flex .1s var(--swoop) 0s;
+    transition:
+            all .3s var(--zip) 0s,
+            flex .1s var(--swoop) 0s,
+            -webkit-box-flex .1s var(--swoop) 0s,
+            -ms-flex .1s var(--swoop) 0s;
 }
 
-.media-content h5 {
-    text-align: right;
-}
+/* Set default collapsed state with assigned hide-event flexbox animation. */
 
-/* Set growth behavior to h5, ul and .activity-cta */
-
-.media-content > * {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-}
-
-/* Push .activity-cta down */
-
-.media-content > :last-child {
-    margin-top: auto;
-}
-
-
-/* SECTION.SHOW ICON TRANSITION @prefixed
-   ========================================================================== */
-
-/* Apply global icon transitions to section h4 headlines */
-/* CREDIT (modified) inspired by on-show transitions in: https://codeconvey.com/pure-css-accordion-menu/ */
-
-/* Position icon on .show */
-
-section.show h4 ion-icon {
-    left: 260px;
-}
-
-/* Position icon at rest */
-
-section.collapse:not(.show) h4 ion-icon {
-    left: 400px;
-}
-
-/* Set default styles of icon */
-
-h4 ion-icon {
-    position: absolute;
-    top: -17px;
-    left: 390px;
-
-    font-size: 180px;
-    opacity: 0.08;
-
-    -webkit-transition: all .3s .3s;
-    -o-transition: all .3s .3s;
-    transition: all .3s .3s;
-}
-
-/* ==========================================================================
-   DETAILS/SUMMARY ELEMENT CONFIGS
-   ========================================================================== */
-
-summary::-webkit-details-marker {
-    display: none;
-}
-
-details,
-summary {
-    outline: none !important
-}
-
-/* Hiding The disclosure widget */
-/* https://medium.com/an-idea/the-details-of-a-dropdown-a817dc27e545 */
-
-/* Style summary "read more" icon return transition */
-
-details > summary #readmore {
-    position: relative;
-
-    -webkit-animation: appear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
-            animation: appear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
-
-    -webkit-transition: all var(--flashing) var(--zip) var(--late);
-    -o-transition: all var(--flashing) var(--zip) var(--late);
-    transition: all var(--flashing) var(--zip) var(--late);
-}
-
-/* Style active summary "read more" icon active transition */
-
-details[open] #readmore {
-    position: relative;
-
-    -webkit-animation: disappear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
-            animation: disappear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
-
-    -webkit-transition: all var(--passing) var(--zip) var(--early);
-    -o-transition: all var(--passing) var(--zip) var(--early);
-    transition: all var(--passing) var(--zip) var(--early);
-}
-
-/* Icon configs */
-
-#readmore {
-    color: black;
-    font-size: 32px;
-}
-
-/* Position "read more" container */
-
-.read-more {
+[data-parent="#resumeStack"]:not(.show) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 !important;
+            flex: 0 !important;
 
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    height: 0;
 
-    list-style: none;
+    -webkit-animation: hide-event .55s var(--glide) 0s 1 normal forwards running;
+    animation: hide-event .55s var(--glide) 0s 1 normal forwards running;
+    -webkit-transition:
+            all .3s var(--zip) 0s,
+            -webkit-box-flex .1s var(--swoop) 0s;
+    transition:
+            all .3s var(--zip) 0s,
+            -webkit-box-flex .1s var(--swoop) 0s;
+    -o-transition:
+            all .3s var(--zip) 0s,
+            flex .1s var(--swoop) 0s;
+    transition:
+            all .3s var(--zip) 0s,
+            flex .1s var(--swoop) 0s;
+    transition:
+            all .3s var(--zip) 0s,
+            flex .1s var(--swoop) 0s,
+            -webkit-box-flex .1s var(--swoop) 0s,
+            -ms-flex .1s var(--swoop) 0s;
+}
+
+/*
+ * Transition variables for mobile.
+ *
+ * 1. Decrease base rem scale for xs screens.
+ * 2. Only feature media content on xs screens (section.left).
+ * 3. Only feature select written content on xs screens (section.right).
+*/
+
+@media (max-width: 575.98px) {
+    :root {
+        font-size: .938rem;
+    }
+
+    article > section:not(#target-one) {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+
+    [data-parent="#resumeStack"] {
+        --height: calc(100vh - 21rem - 6rem);
+        overflow: scroll;
+    }
+}
+
+/*
+ * Transition variables for landscape-mobile to tablet screens.
+ *
+ * 1. Only feature media content on sm-md screens (section.left).
+ * 2. Only feature select written content on sm-md screens (section.right).
+*/
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+
+    .main-article {
+        flex: 0 0 auto !important;
+        width: 100% !important;
+    }
+
+    #target-one .outer-body:first-child {
+        width: 100%;
+    }
+
+    #target-one .outer-body:nth-child(2) {
+        width: 100%;
+    }
+}
+
+/*
+ * Transition variables for portrait-mobile, landscape-mobile and tablet screens.
+ *
+ * 1. Only feature media content on xs-sm-md screens (section.right) by default.
+ * 2. Show all content on toggle of expand-all.
+*/
+
+@media (max-width: 991.98px) {
+    [data-parent="#resumeStack"]:not(#target-one) .outer-body:first-child,
+    [data-parent="#resumeStack"]:not(#target-one) .left {
+        display: none !important;
+    }
+
+    #toggle-all:checked ~ main .header-text,
+    #toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-one) .outer-body:first-child,
+    #toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-one) .left {
+        display: block !important;
+    }
+}
+
+/* Show event animation keyframes */
+
+@keyframes show-event {
+    0% {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-box-flex: 0;
+            -ms-flex: 0;
+                flex: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+    }
+    50% {
+        visibility: visible;
+        opacity: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    100% {
+        height: var(--height);
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        visibility: visible;
+        opacity: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+}
+
+@-webkit-keyframes show-event {
+    0% {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-box-flex: 0;
+                flex: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+                flex-direction: column-reverse;
+    }
+    50% {
+        visibility: visible;
+        opacity: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+    }
+    100% {
+        height: var(--height);
+        -webkit-box-flex: 1;
+                flex: 1;
+        visibility: visible;
+        opacity: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+    }
+}
+
+/* Hide event animation keyframes */
+
+@keyframes hide-event {
+    0% {
+        height: var(--height);
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        opacity: 1;
+        visibility: visible;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+    }
+    100% {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-box-flex: 0;
+            -ms-flex: 0;
+                flex: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+    }
+}
+
+@-webkit-keyframes hide-event {
+    0% {
+        height: var(--height);
+        -webkit-box-flex: 1;
+                flex: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        opacity: 1;
+        visibility: visible;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+                flex-direction: column-reverse;
+    }
+    100% {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-box-flex: 0;
+                flex: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+                flex-direction: column-reverse;
+    }
+}
+
+/*
+ * Hide event animation keyframes at xl screens.
+ *
+ * This modifies the column-reverse keyframe state from occuring at
+ * 50% to instead occuring fully at 100% into the transition.
+ *
+ * The slight adjustment is a considerable and visible benefit that smooths the
+ * 'stacking' transitition when content occupies a wider frame.
+ */
+
+@media (min-width: 1200px) {
+    @keyframes hide-event {
+        0% {
+            height: var(--height);
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            opacity: 1;
+            visibility: visible;
+        }
+        50% {
+            opacity: 1;
+            visibility: visible;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+        }
+
+        /* Delay column reverse at 100% for less movement on large screens */
+
+        100% {
+            height: 0;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-box-flex: 0;
+                -ms-flex: 0;
+                    flex: 0;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+                -ms-flex-direction: column-reverse;
+                    flex-direction: column-reverse;
+        }
+    }
+
+    @-webkit-keyframes hide-event {
+        0% {
+            height: var(--height);
+            -webkit-box-flex: 1;
+                    flex: 1;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                    flex-direction: column;
+            opacity: 1;
+            visibility: visible;
+        }
+        50% {
+            opacity: 1;
+            visibility: visible;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                    flex-direction: column;
+        }
+
+        /* Delay column reverse at 100% for less movement on large screens */
+
+        100% {
+            height: 0;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-box-flex: 0;
+                    flex: 0;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+                    flex-direction: column-reverse;
+        }
+    }
+}
+
+/* ==========================================================================
+   Toggle-all checkbox button @prefixed
+   ========================================================================== */
+
+/**
+ * The global switch that toggles 'expand everything' mode.
+ *
+ * This features the ability to expand all that is not currently
+ * shown/expanded, rendering index.html into a single-page static site with
+ * seven discrete sections.
+ *
+ * Controlled by a fixed-position checkbox input element.
+ * The checkbox is placed outside of the body header in order to elicit
+ * behavior to and from immediate sibling elements via ':checked' selector.
+ *
+ * The input element is visually-hidden by default.
+ * The input's label element contains icons that swap visibility on toggle of ':checked'.
+ *
+ * Element 'input[type="checkbox"]' is assigned the identifier '#toggle-all' and
+ * will be selected by this id for code efficiency and clarity.
+ */
+
+/* Position and style the label for the checkbox */
+
+[for="toggle-all"] {
+    position: fixed;
+    top: 1rem;
+    left: 49%;
+    right: 49%;
+    z-index: 1030;
+
     cursor: pointer;
-
-    font-family: attribute-mono, sans-serif;
 }
 
-/* Type configs */
+/*
+ * The static website.
+ *
+ * This configures the master display settings when toggle-all is ':checked'.
+ *
+ * Selects <main> via general sibling selector.
+ * Can be modified to use class selector '.body-main'.
+ *
+ * 1. Set <main> position from fixed to static and allow overflow.
+ * 2. Remove interim padding when statically positioned
+ *    (fixed position elements are fixed in relation to the window, not the body,
+ *     unresponsive to margins, only padding.)
+ * 3. Set box shadow blur custom property from 0 (previous) to new value(s).
+ */
 
-.read-more .read-text {
-    margin-top: .5rem;
-    padding-right: 1rem;
-    padding-left: auto;
+#toggle-all:checked ~ main {
+    --blur-xs: 2px;
+    --blur-sm: 3px;
+    --blur-md: 6px;
 
-    font-size: .875rem;
-    -webkit-font-feature-settings: 'smcp';
-            font-feature-settings: 'smcp';
+    position: static;
+    overflow: visible;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-/* Hover state */
+/* If checked, force a show-event for all currently collapsed sections with
+ * the exception of the landing section (target-zero)
+ */
 
-.read-text:hover {
-    text-underline-color: #157FFC;
-    text-underline: #157FFC !important;
-    border-bottom: 1px solid #157FFC;
+#toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-zero).collapse {
+    display: flex;
+    visibility: visible;
+    height: 100%;
+    overflow: visible;
+
+    -webkit-animation: show-event .75s ease-in-out 0s;
+            animation: show-event .75s ease-in-out 0s;
+    -webkit-transition: all var(--dashing) var(--glide) var(--early);
+         -o-transition: all var(--dashing) var(--glide) var(--early);
+            transition: all var(--dashing) var(--glide) var(--early);
 }
 
-/* A bespoke dropdown summary item, combining elements from bs.min.css
- * No popper. */
-/* TODO this is funky with the flex elements */
+/* If checked, hide all article > header icon buttons as their local boolean
+ * functionality will (truthy) return feedback for a (falsy) '.collapse.show'.
+ */
 
-.summary-content {
-    position: absolute;
-    z-index: 1000;
-    min-width: 10rem;
+#toggle-all:checked ~ main article header .header-icon {
+    display: none;
+}
 
-    -ms-flex-line-pack: end;
-        align-content: end;
-    padding: .5rem;
+/* If checked, disable header button functionality as their local boolean
+ * functionality is rendered inconsequential.
+ */
+
+#toggle-all:checked ~ main article header {
+    pointer-events: none;
+    cursor: default;
+    color: black;
+}
+
+/* If checked, hide all features and visual cues attributed to '.collapse'
+ * transitions.
+ *
+ * Simply set the '--outlines' property (color of pseudo rails) to transparent.
+ */
+
+#toggle-all:checked ~ main article {
+    --outlines: transparent;
+}
+
+/* ==========================================================================
+   Side menu navigation
+   ========================================================================== */
+
+/**
+ * Nav > ol is a direct representation of the website's headings map,
+ * A list of headings, with lists nested to the level of their heading hierarchy.
+ *
+ * Credit: (modified) headingsMap https://github.com/dzc34/headingsMap
+ *
+ * Each <ul> is nested to the nth level of its represented heading in the
+ * document outline.
+ * Class names '.list-h*' are assigned to parent <ul>s for ease of reference
+ * and direct class styling.
+ */
+
+/* Side menu and toggle-all checkbox
+   ========================================================================== */
+
+/* Disable link functionality for nav outline lists beyond level h3 by default */
+
+.list-h4 {
+    pointer-events: none;
+    cursor: default;
+
+    opacity: .5;
+}
+
+/* If checked, enable link functionality for level h3 outline lists */
+
+#toggle-all:checked + label ~ nav .list-h4  {
+    opacity:1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* The html markup for h3 headings in nav outline includes two tags with the
+ * same section title.
+ *
+ * 1. One is a control element for a collapsed section.
+ * 2. The other targets the given section when the site is static.
+ *
+ * As their target and link functions are not interchangeable, one is simply
+ * hidden until the other is shown. Visibility is applied on an as-need basis.
+ * i.e. control elements are disabled/hidden when toggle-all is ':checked'.
+ */
+
+/* Disable and hide non-control-element level h3 <a> tags by default. */
+
+.list-h3 [href^="#element"] {
+    display: none;
+}
+
+/* If checked, disable and hide control-element level h3 <a> or <button>
+ * duplicates of non-control-element h3 <a> tags.
+ */
+
+#toggle-all:checked ~ nav .list-h3 [data-toggle="collapse"] {
+    display: none;
+}
+
+/* If checked, enable and show non-control-element level h3 <a> tags */
+
+#toggle-all:checked ~ nav .list-h3 [href^="#element"] {
+    display: block;
+}
+
+/* Side menu and scroll spy and feedback
+   ========================================================================== */
+
+/*
+ * The top level list of nav outline.
+ *
+ * This styles the container for the ordered list of headings, which contains
+ * lists nested to the level of their heading hierarchy.
+ *
+ * Must be assigned with Bootstrap's '.nav-pills' and 'menu-sidebar' classes
+ * for effective scrollspy '.active' styles.
+ * Must contain an <li> element with the '.outline-item' and '.nav-item' classes
+ *
+ * 1. Configure box model and presentation.
+ * 2. Declare properties for scope.
+ */
+
+.nav-content {
+    --navlink-height: 1rem;
+    --navlist-height: calc(var(--navlink-height) * 5 + .75rem);
+    --navlist-top: calc(var(--navlink-height) * -1 + .25rem);
+
     margin: 1.125rem 0 0;
+
+    background-color: #fff;
+    background: var(--pearl) !important;
+    background-clip: padding-box;
 
     border: 2px solid var(--white) !important;
     border-radius: .75rem;
 
-    background-clip: padding-box;
-    background: var(--pearl) !important;
-    color: #212529;
-
-    font-size: 1rem;
-    text-align: left;
-
-    list-style: none;
-
     -webkit-box-shadow:
-            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
-            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+            inset -5px -8px 0 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
 
     box-shadow:
-            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
-            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+            inset -5px -8px 0 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
 }
 
-.summary-item {
-    padding: 5rem 1rem 1rem;
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .nav-content {
+        --navlist-height: calc(var(--navlink-height) * 4 + .5rem);
+        --navlist-top: calc(var(--navlink-height) * -1);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .nav-content {
+        --navlist-height: calc(var(--navlink-height) * 3 + 1.25rem);
+        --navlist-top: calc(var(--navlink-height) * -1 + .25rem);
+    }
+}
+
+/* Set column flex direction to all lists in nav outline */
+
+.body-nav ol.nav,
+.body-nav ul.nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+ul.nav {
+    padding-left: 1rem;
+}
+
+/*
+ * The parent list item of nav outline.
+ *
+ * Must be an immediate child of the '.nav-content' class.
+ */
+
+.outline-item {
+    overflow: hidden;
+    padding: 1rem 1rem 1rem;
     margin-bottom: .5rem;
     border-radius: var(--radius-2);
     border: 1px solid var(--grey) !important;
     background: var(--white);
 }
 
+/* Set the height of link <a> elements assigned the class name '.nav-link'
+ * to be an instance of property --link-height.
+ */
+.nav-pills.menu-sidebar .nav-link {
+    line-height: var(--navlink-height);
+}
+.nav-link {
+    height: var(--navlink-height);
+}
+
+
+/* Relatively position lists, list items and list links in nav outline.
+ * Prevents :before element from positioning relative to the next parent.
+ */
+
+.nav,
+.nav-item,
+.nav-link {
+    position: relative;
+}
+
+/*
+ * Absolutely position pseudo elements of list items in nav
+ * outline for pagination and scrollspy features.
+ */
+
+.nav:before,
+.nav:after,
+.nav-item:before,
+.nav-link:before {
+    position: absolute;
+    display: block;
+    content: "";
+}
+
+/*
+ * Horizontal feedback on hover
+ *
+ * Set transparent horizontal border to :before pseudo element of list items
+ * in nav outline.
+ */
+
+.list-h3 .nav-item:before {
+    top: .675rem;
+    right: -20%;
+    height: 10px;
+    width: 64%;
+    border-top: .5px dotted transparent;
+}
+
+/* Change horizontal border color of :before pseudo element of list items
+ * on hover.
+ */
+
+.nav-item:hover::before {
+    border-top: 2px double blue;
+}
+
+/*
+ * Pagination track
+ *
+ * Absolutely position a vertical line at the heading h3 level of nav outline
+ * to render as a rail in which segments are highlighted when '.active' class
+ * is added to nested list items
+ */
+
+.list-h3:before {
+    top: .55rem;
+    left: 100%;
+
+    height: calc(100% - var(--navlink-height));
+    width: .1rem;
+
+    background-color: rgba(02, 42, 251, .1);
+    transition: all .3s var(--swoop) .3s;
+}
+
+/*
+ * Pagination item
+ *
+ * Absolutely position a vertical segments at heading h5 level of nav outline
+ * with a variable top border width render as a rail in which segments are highlighted when '.active' class
+ * is added to nested list items
+ */
+
+.list-h4:after {
+    top: var(--navlist-top);
+    left: 100%;
+
+    height: var(--link-height);
+    width: .1rem;
+
+    border-top: 2px solid var(--raisin);
+    transition: all .3s var(--swoop) .3s;
+}
+
 @media (max-width: 575.98px) {
-    .summary-content {
+    .list-h3:before,
+    .list-h4:after {
+        left: -2%;
+    }
+}
+
+/*
+ * Pagination item general active state.
+ *
+ * Set style for pagination item to transform when given scrollspy's '.active'
+ * class via general sibling selector.
+ */
+
+.nav-pills.menu-sidebar .nav-link.active ~ .nav:after {
+    border-top-width: var(--navlist-height);
+    border-top-color: var(--blue);
+}
+
+/*
+ * Scrollspy general inactive track.
+ *
+ * Absolutely position a horizontal line before nav-links in nav outline that
+ * renders highlighted when '.active' class is added to nested list items and
+ * when hovered over.
+ */
+
+.nav-link:before {
+    top: .55rem;
+    right: 100%;
+    height: 10px;
+    width: 77%;
+    border-top: 1px solid var(--grey);
+}
+
+/* Style general hovered track. */
+
+.nav-link:hover::before {
+    border-top: 2px double blue;
+}
+
+/* Disable '.active' style states for parent '.link-zero' in nav outline.
+ * Styles via '.nav-pills.menu-sidebar' are inherited from 'bootstrap.min.css'
+ * and primarly control the '.active' state of elements within which scroll spy
+ * is enabled.
+ */
+
+.nav-pills.menu-sidebar .link-zero.nav-link.active {
+    color: initial;
+    font-weight: normal;
+    border-left: none;
+    border-radius: 0;
+}
+
+/* Disable scroll spy when not checked */
+
+#toggle-all:not(checked) ~ .body-nav .nav-pills.menu-sidebar .nav-link.active {
+    border-left: none;
+}
+
+/* Enable scrollspy when checked */
+
+#toggle-all:checked ~ .body-nav .nav-pills.menu-sidebar .nav-link.active {
+    border-left-width: .125rem;
+    border-left-style: solid;
+}
+
+/*
+ * Scrollspy general active state.
+ *
+ * The class designation '.nav-pills.menu-sidebar .nav-link.active' from
+ * Bootstrap is how active spied items from the body are styled in the
+ * nav outline.
+ *
+ * Required to pass parent '.nav-pills.menu-sidebar' on every child class
+ * assignment.
+ *
+ * Set state to transition border width and style to link items when given
+ * scrollspy's '.active' class.
+ */
+
+.nav-pills.menu-sidebar .nav-link.active {
+    color: var(--blue);
+    border-left-width: .125rem;
+    border-left-style: solid;
+}
+
+/* Style general state of nav-link pseudo :before element to transition
+ * border widths when given scrollspy's '.active' class in nav outline
+ */
+
+.nav-pills.menu-sidebar .nav-link.active:before {
+    border-top-width: 2px;
+    border-top-color: var(--blue);
+}
+
+
+@media (max-width: 575.98px) {
+
+    #toggle-all:checked ~ main {
         position: static;
-        top: 0;
-        right: 0;
-        left: .4rem;
+        display: block;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
 
-        /*width: 70vw;*/
-        height: 40vh;
-        overflow: scroll !important;
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
+    .body-nav > .outset-container-2,
+    .nav-content,
+    .outline-item,
+    .list-h3 {
+        width: 100%;
+    }
+
+
+    .nav-content:first-child {
+        /*display: none;*/
+    }
+
+    .nav-links > * {
+        /*max-width: 100% !important;*/
+    }
+
+    .link-zero {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul.nav {
+        padding-left: .2rem;
+    }
+
+    ul.list-h2,
+    ul.list-h3 {
+        padding-left: 0 !important;
+    }
+
+    .list-h5 .nav-link {
+        visibility: hidden;
+    }
+
+    .list-h4 [href^="#target"],
+    .list-h5 .nav-link:nth-child(2) {
+        display: none;
+    }
+
+    .nav-pills.menu-sidebar .nav-link {
+        line-height: 1rem;
+    }
+
+    .list-h4 a.nav-link {
+        overflow: hidden;
+
+        -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 60%;
+        font-size: .625em !important;
+    }
+
+    .link-text {
+        display: none;
+    }
+
+    #toggle-all:checked ~ main .header-content {
+        flex-wrap: wrap;
+    }
+    #toggle-all:checked ~ main .header-text {
+        width: 100%;
+    }
+
+    #toggle-all:checked ~ .body-nav . {
+
+    }
+}
+@media (min-width: 576px) { .link-icon { display: none; } }
+
+@media (max-width: 991.98px) {
+    .list-h2 [href="#splash-banner"],
+    .list-h4 [href^="#target"],
+    .list-h5 > :first-child {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .list-h5 > :nth-child(2) {
+        visibility: visible;
+    }
+
+    ul.nav {
+        padding-left: .5rem;
+    }
+
+    #toggle-all:checked ~ .body-nav .list-h5 > :first-child {
+        visibility: visible;
+        width: auto;
+        height: auto;
+        padding: auto;
     }
 }
 
-/* Summary appear icon animation keyframes */
+/* Side menu and main body
+   ========================================================================== */
 
-@-webkit-keyframes appear-225 {
-    0% {
-        -webkit-transform: rotateZ(225deg);
-                transform: rotateZ(225deg);
+/* SIDE MENU ANIMATION CONFIGS
+   ========================================================================== */
+
+/**
+ * The nav > ol document outline is also controlled with the '.collapse' element
+ * and target class definitions. This allows custom
+ * slides in on toggle of menu-button click event
+ * Currently dependent on the .collapse event class
+ *
+ * Responsive behavior follows the logic of a column shrinking to the offset variable of a sibling column
+ * In this case, the <main> succumbs to an off-canvas <nav>
+ *
+ * NOTE:
+ *     <body> is the only element to elicit behavior resulting from declarations at :root
+ *     The immediate children of <body> are:
+ *     <header> <input/label> <nav> <main> and <footer>
+ *     Global reactive events occur by utilising the .show and :checked classes with sibling selectors
+ *     In particular, <main> ~ <nav> and <input> ~ <main> will be reactive to each other's sibling/class events
+ */
+
+/*
+ * The side menu event  and expand events with flex transitions.
+ *
+ * This radically customizes the 'show.bs.collapse' event by attaching
+ * specific css settings to the '.show' and ':not(.show)' selectors.
+ *
+ * Animating flex.
+ *
+ * The trick is to always display flex (never hiding the element) and instead,
+ * animating its height, and flex direction.
+ *
+ *
+ * Animating flex direction.
+ *
+ * Flipping the flex direction is key to ensuring the content 'scrolls to top'
+ * when shown. Without flexbox, the default states of the plugin's classes
+ * invariably transition element heights without consideration to the window's
+ * position relative to the revealed content. Thus, toggling a collapsed section
+ * with greater height dimension will often overshoot the transition duration
+ * and/or never open at the top of the element's content.
+ *
+ * Selecting the boolean states.
+ *
+ * The last key is to select the '.show' class directly and not traverse
+ * '.collapse.show' as this will invoke a hidden state between '.collapse'
+ * and '.show' which appears as a quick flash interrupting the transition.
+ * Conversely, it's imperative to only select ':not(.show)' instead of
+ * '.collapse' when targeting the element's hidden state.
+ *
+ */
+
+/* Reset and re-declare inherited variables at inner body level */
+/* Delimit access to the nav and main elements via class selectors */
+
+.body-header,
+.body-main,
+.body-nav {
+
+    /* Set a new value (out of twelve) */
+    --of-twelve: 4;
+
+    /* Repeat and re-declare --width and --offset properties together with the new value --of-twelve */
+    --width: calc(var(--of-twelve) / 12 * 100%);
+    --offset: calc((12 - var(--of-twelve)) / 12 * 100%);
+
+    /* Instantiate --width to be the object property of new variable --navwidth  */
+    --navwidth: var(--width);
+
+    /* Instantiate --offset to be the object property of new variable --mainwidth */
+    --mainwidth: var(--offset);
+
+    /* Variable margin-left property, reassign at medium screen */
+    --mainstart: 0;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .body-header,
+    .body-main,
+    .body-nav {
+        --of-twelve: 3 !important;
+        --mainstart: calc(var(--navwidth) / 2);
     }
-    50% {
-        trasform: rotateZ(0deg);
-        -webkit-transform: scaleX(0);
-                transform: scaleX(0);
-    }
-    100% {
-        -webkit-transform: scaleX(1);
-                transform: scaleX(1);
+
+    .body-main {
+        width: var(--mainwidth) !important;
     }
 }
 
-@keyframes appear-225 {
-    0% {
-        -webkit-transform: rotateZ(225deg);
-                transform: rotateZ(225deg);
-    }
-    50% {
-        trasform: rotateZ(0deg);
-        -webkit-transform: scaleX(0);
-                transform: scaleX(0);
-    }
-    100% {
-        -webkit-transform: scaleX(1);
-                transform: scaleX(1);
+/*
+ * The body nav container.
+ *
+ * This styles the body's main <nav> element.
+ *
+ * Assigned element id="nav-outline" that targets <body> to enable
+ * scrollspy feature.
+ */
+
+.body-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    margin-top: 5rem;
+    padding-right: .75rem;
+    padding-left: .75rem;
+
+    background: var(--powder);
+    overflow: auto;
+
+    font-family: din-2014, sans-serif;
+}
+
+.body-nav {
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .body-nav {
+        --navlist-height: calc(var(--navlink-height) * 3 + .5rem);
+        --navlist-top: calc(var(--navlink-height) * -1 - .25rem);
     }
 }
 
-/* Summary disappear icon animation keyframes */
+.body-nav > * {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
-@-webkit-keyframes disappear-225 {
-    0% {
-        -webkit-transform: scaleX(1);
-                transform: scaleX(1);
-    }
-    50% {
-        -webkit-transform: scaleX(0);
-                transform: scaleX(0);
-                trasform: rotateZ(0deg)
-    }
-    100% {
-        -webkit-transform: rotateZ(225deg);
-                transform: rotateZ(225deg);
+/*
+ * Disable transitions inherited from Bootstrap's '.collapsing' class.
+ *
+ * Adding Bootstrap's '.collapse' class activates the collapse plugin for that
+ * element.
+ *
+ * The '.collapse' class immediately hides content.
+ * The '.collapsing' class is added during transitions.
+ * The '.show' class shows content.
+ */
+
+.body-nav.collapsing {
+    transition: none !important;
+    height: 100% !important;
+}
+
+/* Slide nav in on .show event */
+
+.body-nav.show {
+    display: flex;
+
+    -webkit-animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
+            animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+         -o-transition: all var(--flashing) var(--zip) var(--early);
+            transition: all var(--flashing) var(--zip) var(--early);
+}
+
+/* Slide nav out on .collapse event */
+/*.body-nav { display: none;}*/
+.body-nav:not(.show) {
+    display: flex;
+    height: 100%;
+
+    -webkit-animation: nav-out .75s var(--glide) 0s 1 normal forwards running;
+            animation: nav-out .75s var(--glide) 0s 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+         -o-transition: all var(--flashing) var(--zip) var(--early);
+            transition: all var(--flashing) var(--zip) var(--early);
+}
+
+/* Shrink main on nav.show event */
+
+.body-nav.show ~ .body-main {
+    -webkit-animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
+            animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+         -o-transition: all var(--flashing) var(--zip) var(--early);
+            transition: all var(--flashing) var(--zip) var(--early);
+}
+
+/* Expand main on nav.collapse event */
+
+.body-nav:not(.show) ~ .body-main {
+    -webkit-animation: main-grow .75s var(--glide) 0s 1 normal forwards running;
+            animation: main-grow .75s var(--glide) 0s 1 normal forwards running;
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+         -o-transition: all var(--flashing) var(--zip) var(--early);
+            transition: all var(--flashing) var(--zip) var(--early);
+}
+
+/* Select the div elements (the page-left, and page-right col-* variety) to wrap full width between lg and xl */
+/* ALT option: (min-width: 992px) and (max-width: 1199.98px) */
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    nav.body-nav.show ~ .body-main .spread > div  {
+        width: 100%;
+
+        -webkit-transition: all var(--flashing) var(--zip) var(--early);
+             -o-transition: all var(--flashing) var(--zip) var(--early);
+                transition: all var(--flashing) var(--zip) var(--early);
     }
 }
 
-@keyframes disappear-225 {
+/* Side Menu Nav-in animation keyframes */
+
+@-webkit-keyframes nav-in {
     0% {
-        -webkit-transform: scaleX(1);
-                transform: scaleX(1);
+        /*left: calc(var(--navwidth) * -1);*/
+        width: 0;
+        flex: 0;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
     }
     50% {
-        -webkit-transform: scaleX(0);
-                transform: scaleX(0);
-                trasform: rotateZ(0deg)
+        visibility: visible;
+        opacity: 1;
     }
     100% {
-        -webkit-transform: rotateZ(225deg);
-                transform: rotateZ(225deg);
+        /*left: 0;*/
+        width: var(--navwidth);
+        flex: 1;
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes nav-in {
+    0% {
+        /*left: calc(var(--navwidth) * -1);*/
+        width: 0;
+        flex: 0;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    50% {
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        /*left: 0;*/
+        width: var(--navwidth);
+        flex: 1;
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/* Side Menu nav-out animation keyframes */
+
+@-webkit-keyframes nav-out {
+    0% {
+        /*left: 0;*/
+        width: var(--navwidth);
+        flex: 1;
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+    }
+    50% {
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        /*left: calc(var(--navwidth) * -1);*/
+        width: 0;
+        flex: 0;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes nav-out {
+    0% {
+        /*left: 0;*/
+        width: var(--navwidth);
+        flex: 1;
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+    }
+    50% {
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        /*left: calc(var(--navwidth) * -1);*/
+        width: 0;
+        flex: 0;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+/* Side menu main-shrink animation keyframes */
+
+@-webkit-keyframes main-shrink {
+    0% {
+        width: calc(var(--mainwidth) + var(--navwidth));
+        margin-left: var(--mainstart);
+    }
+    100% {
+        width: var(--mainwidth);
+        margin-left: var(--navwidth);
+    }
+}
+
+@keyframes main-shrink {
+    0% {
+        width: calc(var(--mainwidth) + var(--navwidth));
+        margin-left: var(--mainstart);
+    }
+    100% {
+        width: var(--mainwidth);
+        margin-left: var(--navwidth);
+    }
+}
+
+/* Side menu main-grow animation keyframes */
+
+@-webkit-keyframes main-grow {
+    0% {
+        width: var(--mainwidth);
+        margin-left: var(--navwidth);
+    }
+    100% {
+        width: calc(var(--mainwidth) + var(--navwidth));
+        margin-left: var(--mainstart);
+    }
+}
+@keyframes main-grow {
+    0% {
+        width: var(--mainwidth);
+        margin-left: var(--navwidth);
+    }
+    100% {
+        width: calc(var(--mainwidth) + var(--navwidth));
+        margin-left: var(--mainstart);
     }
 }
 
@@ -1013,21 +2588,22 @@ details[open] #readmore {
    Navigation icon transitions @prefixed
    ========================================================================== */
 
-/* Menu icon container */
+.body-header {
+    --vw-width: calc(var(--of-twelve) / 12 * 100vw);
+    --vw-offset: calc((12 - var(--of-twelve)) / 12 * 100vw);
 
-.menu-icon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
+    /* Instantiate --vw-width to be the object property of var vw-navwidth minus twice the gutter x */
+    --vw-navwidth: calc(var(--vw-width) - (var(--gutter-x) * 2));
+    --vw-mainwidth: calc(var(--vw-offset) - var(--vw-margin));
+
+    --vw-navstart: 0;
 }
+
 /* Set menu-in active transition of container */
 
 .navbar-toggler[aria-expanded="true"] .menu-icon {
-    position: relative;
-
-    -webkit-animation: menu-in .75s var(--glide) var(--late) 1 normal forwards running;
-            animation: menu-in .75s var(--glide) var(--late) 1 normal forwards running;
+    -webkit-animation: menu-in .75s var(--glide) var(--early) 1 normal forwards running;
+            animation: menu-in .75s var(--glide) var(--early) 1 normal forwards running;
     -webkit-transition: all var(--flashing) var(--zip) var(--early);
          -o-transition: all var(--flashing) var(--zip) var(--early);
             transition: all var(--flashing) var(--zip) var(--early);
@@ -1036,13 +2612,51 @@ details[open] #readmore {
 /* Set menu-out inactive transition of container */
 
 .navbar-toggler[aria-expanded="false"] .menu-icon {
-    position: relative;
-
-    -webkit-animation: menu-out .75s var(--glide) 0s 1 normal forwards running;
-            animation: menu-out .75s var(--glide) 0s 1 normal forwards running;
+    -webkit-animation: menu-out .75s var(--glide) var(--early) 1 normal forwards running;
+            animation: menu-out .75s var(--glide) var(--early) 1 normal forwards running;
     -webkit-transition: all var(--flashing) var(--zip) var(--early);
          -o-transition: all var(--flashing) var(--zip) var(--early);
             transition: all var(--flashing) var(--zip) var(--early);
+}
+
+/* Menu-in animation keyframes */
+
+@-webkit-keyframes menu-in {
+    0% {
+        margin-left: var(--vw-navstart);
+    }
+    100% {
+        margin-left: var(--vw-navwidth);
+    }
+}
+
+@keyframes menu-in {
+    0% {
+        margin-left: var(--vw-navstart);
+    }
+    100% {
+        margin-left: var(--vw-navwidth);
+    }
+}
+
+/* Menu-out animation keyframes */
+
+@-webkit-keyframes menu-out {
+    0% {
+        margin-left: var(--vw-navwidth);
+    }
+    100% {
+        margin-left: var(--vw-navstart);
+    }
+}
+
+@keyframes menu-out {
+    0% {
+        margin-left: var(--vw-navwidth);
+    }
+    100% {
+        margin-left: var(--vw-navstart);
+    }
 }
 
 /* Style ion-icons for menu nav and checkbox toggle */
@@ -1053,6 +2667,25 @@ details[open] #readmore {
 .see-less {
     color: black;
     font-size: 32px;
+}
+
+/* Menu icon container */
+
+.menu-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+.toggle-container { position: relative; }
+.toggle-container:before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -.5rem;
+    width: 100%;
+    height: 24px;
+    border-bottom: 2px solid black;
 }
 
 /* Set menu-in/menu-out active/inactive animation for icon in container */
@@ -1098,53 +2731,12 @@ details[open] #readmore {
             transition: all var(--flashing) var(--glide) var(--short);
 }
 
-/* Menu-in animation keyframes */
-
-@-webkit-keyframes menu-in {
-    0% {
-        padding-left: 0;
-    }
-    100% {
-        padding-left: 30vw;
-    }
-}
-
-@keyframes menu-in {
-    0% {
-        padding-left: 0;
-    }
-    100% {
-        padding-left: 30vw;
-    }
-}
-
-/* Menu-out animation keyframes */
-
-@-webkit-keyframes menu-out {
-    0% {
-        padding-left: 30vw;
-    }
-    100% {
-        padding-left: 0;
-    }
-}
-
-@keyframes menu-out {
-    0% {
-        padding-left: 30vw;
-    }
-    100% {
-        padding-left: 0;
-    }
-}
-
 /* Menu Disappear icon animation keyframes */
 
 @-webkit-keyframes disappear-180 {
     0% {
         -webkit-transform: scaleY(1);
                 transform: scaleY(1);
-        margin-left: 0;
     }
     50% {
         -webkit-transform: scaleY(0);
@@ -1154,14 +2746,12 @@ details[open] #readmore {
     100% {
         -webkit-transform: rotateX(1.571rad);
                 transform: rotateX(1.571rad);
-        margin-left: 33.33%;
     }
 }
 @keyframes disappear-180 {
     0% {
         -webkit-transform: scaleY(1);
                 transform: scaleY(1);
-        margin-left: 0;
     }
     50% {
         -webkit-transform: scaleY(0);
@@ -1171,18 +2761,15 @@ details[open] #readmore {
     100% {
         -webkit-transform: rotateX(1.571rad);
                 transform: rotateX(1.571rad);
-        margin-left: 33.33%;
     }
 }
 
 /* Menu Appear icon animation keyframes */
-/* TODO change 33.33% to custom property responsive to @media queries */
 
 @-webkit-keyframes appear-180 {
     0% {
         -webkit-transform: rotateX(1.571rad);
                 transform: rotateX(1.571rad);
-        margin-left: 33.33%;
     }
     50% {
         trasform: rotateX(0);
@@ -1192,7 +2779,6 @@ details[open] #readmore {
     100% {
         -webkit-transform: scaleY(1);
                 transform: scaleY(1);
-        margin-left: 0;
     }
 }
 
@@ -1200,7 +2786,6 @@ details[open] #readmore {
     0% {
         -webkit-transform: rotateX(1.571rad);
                 transform: rotateX(1.571rad);
-        margin-left: 33.33%;
     }
     50% {
         trasform: rotateX(0);
@@ -1210,7 +2795,6 @@ details[open] #readmore {
     100% {
         -webkit-transform: scaleY(1);
                 transform: scaleY(1);
-        margin-left: 0;
     }
 }
 
@@ -1356,6 +2940,1070 @@ details[open] #readmore {
     }
 }
 
+/* SIDE MENU + EXPAND ALL FULL SPREAD STATE
+   ========================================================================== */
+
+/* Trigger a complete Side Nav click event at 1400px */
+/* Also triggers an expand all at the largest media query, showing all content. */
+
+@media (min-width: 1400px) {
+    main {
+        position: static !important;
+        overflow: visible !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    article {
+        --outlines: transparent;
+    }
+
+    [data-parent="#resumeStack"].collapse:not(.show) {
+        --height: 100%;
+        height: var(--height);
+
+        -webkit-animation: show-event .75s var(--glide) 0s 1 normal forwards running;
+        animation: show-event .75s var(--glide) 0s 1 normal forwards running;
+        -webkit-transition:
+                all .3s var(--zip) 0s,
+                -webkit-box-flex .1s var(--swoop) 0s;
+        transition:
+                all .3s var(--zip) 0s,
+                -webkit-box-flex .1s var(--swoop) 0s;
+        -o-transition:
+                all .3s var(--zip) 0s,
+                flex .1s var(--swoop) 0s;
+        transition:
+                all .3s var(--zip) 0s,
+                flex .1s var(--swoop) 0s;
+        transition:
+                all .3s var(--zip) 0s,
+                flex .1s var(--swoop) 0s,
+                -webkit-box-flex .1s var(--swoop) 0s,
+                -ms-flex .1s var(--swoop) 0s;
+    }
+
+    .body-nav.show ~ .body-main,
+    .body-nav:not(.show) ~ .body-main {
+        -webkit-animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
+                animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
+        -webkit-transition: all var(--flashing) var(--zip) var(--early);
+             -o-transition: all var(--flashing) var(--zip) var(--early);
+                transition: all var(--flashing) var(--zip) var(--early);
+    }
+
+    .body-nav.collapse:not(.show) {
+        display: block;
+
+        -webkit-animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
+                animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
+        -webkit-transition: all var(--flashing) var(--zip) var(--early);
+             -o-transition: all var(--flashing) var(--zip) var(--early);
+                transition: all var(--flashing) var(--zip) var(--early);
+    }
+
+    .menu-icon {
+        opacity: .1;
+    }
+
+    article header .header-icon {
+        display: none;
+    }
+
+    article header,
+    #nav-button,
+    #toggle-all + label {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .list-h4 {
+        opacity: 1;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+}
+
+/* ==========================================================================
+   GLOBAL BUTTON ICON FUNCTIONS
+   ========================================================================== */
+
+/* Swap the visibility of icon pairs upon toggle of expand/collapse */
+/* .open and .closed classes added to either of two ion-icons in each header */
+
+/* Render .open to be hidden by default  */
+
+.open {
+    display: none;
+}
+
+/* Hide .closed when section is expanded */
+details[open] .closed,
+[data-toggle="collapse"][aria-expanded="true"] .closed {
+    display: none;
+}
+
+/* Show .open when section is expanded */
+details[open] .open,
+[data-toggle="collapse"][aria-expanded="true"] .open {
+    display: block;
+    color: var(--deep-1);
+}
+
+
+/* ==========================================================================
+   MASTER SHADOW CONTAINER STYLES
+   ========================================================================== */
+
+/*!
+ * Neumorphic style to box model.
+ *
+ * This immediately drops an element into an inset within an otherwise flat canvas.
+ *
+ * CREDIT: (assistance) (https://css-tricks.com/neumorphism-and-css/)
+ * CREDIT: (assistance) Shadow generator https://neumorphic.design/
+ *
+ */
+
+.inset-container {
+    overflow: hidden;
+
+    padding: .5rem;
+    border-radius: .75rem;
+
+    -webkit-box-shadow:
+            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+}
+
+.inset-item {
+    position: relative;
+
+    border-radius: .6rem;
+    border: none;
+}
+
+.inset-item:after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    border-radius: .6rem;
+
+    background: var(--gradient-2);
+}
+
+/* ==========================================================================
+   GLOBAL BUTTON/LINK/CTA WRAPPER CONFIGS
+   ========================================================================== */
+
+/* Neumorphic shadow inspired by (https://css-tricks.com/neumorphism-and-css/) */
+/* Shadow generator helper https://neumorphic.design/ */
+
+/* BUTTON/LINK/CTA CONTAINERS
+   ========================================================================== */
+
+/* Style general .btn .cta wrapper */
+
+.outset-container-2 {
+    overflow: hidden;
+    padding: .5rem;
+
+    border-radius: .6rem;
+    border-color: #F2F1EF;
+
+    background: var(--gradient-1);
+
+    -webkit-box-shadow:
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
+
+    box-shadow:
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
+}
+
+/* Style general icon wrapper */
+
+.inset-inner {
+    background: var(--gradient-3);
+
+    -webkit-box-shadow:
+            0.3px 0.3px var(--blur-sm) rgba(237, 238, 243, 0.1),
+            -0.3px -0.3px var(--blur-sm) rgba(239, 241, 245, 0.1);
+    box-shadow:
+            0.3px 0.3px var(--blur-sm) rgba(237, 238, 243, 0.1),
+            -0.3px -0.3px var(--blur-sm) rgba(239, 241, 245, 0.1);
+}
+
+.inset-container-6 {
+    overflow: hidden;
+
+    border-radius: 100%;
+
+    -webkit-box-shadow:
+            inset 0 3.3px var(--blur-sm) #B0B2B5,
+            inset 0 -3.3px var(--blur-sm) #FFFFFF;
+
+    box-shadow:
+            inset 0 3.3px var(--blur-sm) #B0B2B5,
+            inset 0 -3.3px var(--blur-sm) #FFFFFF;
+}
+
+/* Style general .btn hover/feedback  */
+
+li.link-item.inset-item:hover::after {
+    z-index: -1;
+}
+
+li.link-item.inset-item {
+    cursor: pointer;
+}
+
+li.link-item:hover {
+    background: -o-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
+
+    -webkit-box-shadow:
+            2px 2px var(--blur-xs) white,
+            -2px -2px var(--blur-xs) white;
+    box-shadow:
+            2px 2px var(--blur-xs) white,
+            -2px -2px var(--blur-xs) white;
+}
+
+li.link-item.inset-item a {
+    z-index: 12;
+}
+
+/* Style general button class */
+
+.btn {
+    background-color: transparent;
+    border: none;
+    padding: .5rem;
+    border-radius: .6rem;
+}
+
+/* Style general cta button icons */
+
+.fa, .fab, .fal, .far, .fas {
+    text-shadow: #fff 0 1px 0;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+}
+
+/* SOCIAL LINKS/BUTTON STYLE VARIABLES
+   ========================================================================== */
+
+/* Style social links list items */
+
+.social-links {
+    width: 100%;
+    padding-top: .5rem;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.social-links li .fas,
+.social-links li .fab,
+.social-links li .far,
+.social-links li .fa,
+.social-links li .fa-sm,
+.social-links li .fa-lg,
+.social-links li a i {
+    z-index: 8;
+    border-radius: 50%;
+    padding: .6rem;
+
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+
+    text-align: center;
+    text-shadow:
+            0 3px 0 0 #A4A4A4,
+            0 -4px 0 0 #fafafa;
+
+    -webkit-box-shadow:
+            0 1px 0 0 #FAFAFA inset,
+            0 -2px 0 0 #D7D7D6 inset;
+    box-shadow:
+            0 1px 0 0 #FAFAFA inset,
+            0 -2px 0 0 #D7D7D6 inset;
+
+}
+
+.social-links .list-inline-item {
+    width: 20%;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li a:hover,
+.social-links li a:focus {
+    color: #F2F1EF;
+}
+
+.social-links .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    padding: 1rem;
+    border-style: solid;
+    border-color: #B6B6B6;
+    border-width: 1px;
+    border-radius: .5rem;
+}
+
+.social-links .inset-inner {
+    padding: .4rem;
+    border-radius: 50%;
+
+    background: var(--gradient-3);
+
+    -webkit-box-shadow:
+            2px 2px var(--blur-xs) rgba(237, 238, 243, 0.1),
+            -2px -2px var(--blur-xs) rgba(239, 241, 245, 0.1);
+    box-shadow:
+            2px 2px var(--blur-xs) rgba(237, 238, 243, 0.1),
+            -2px -2px var(--blur-xs) rgba(239, 241, 245, 0.1);
+}
+
+@media (max-width: 575.98px) {
+    .social-links .btn {
+        height: 3.5rem;
+        padding: 1rem;
+    }
+
+    .social-links .inset-inner {
+        padding: .2rem;
+    }
+
+    .social-links .fa,
+    .social-links .fab,
+    .social-links .fal,
+    .social-links .far,
+    .social-links .fas {
+        font-size: .5rem;
+    }
+}
+
+/* Side menu social links quick nav
+   ========================================================================== */
+
+.nav-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: .75rem !important;
+}
+
+.nav-links > * {
+    flex: 0 0 auto;
+    min-width: 33.3333%;
+    max-width: 50%;
+}
+
+/* CTA BUTTON/LINKS STYLE VARIABLES
+   ========================================================================== */
+
+.activity-cta {
+    padding-left: 0;
+}
+
+.address :not(:first-child) {
+    padding-top: .625rem;
+}
+
+.activity-cta .outset-container-2 {
+    vertical-align: middle;
+}
+
+.activity-cta .contact-text {
+    text-align: center;
+    padding-top: .625rem;
+    vertical-align: middle;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+}
+
+.activity-cta i {
+    color: #A0B6CC;
+}
+
+.activity-cta .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    height: 3rem;
+    width: 3rem;
+
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.btn:hover,
+.btn:focus {
+    background: var(--gradient-4);
+    -webkit-box-shadow:
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4),
+            3px -8px var(--blur-sm) rgba(180, 180, 180, .7),
+            -3px 6px var(--blur-sm) rgba(250, 250, 250, .4);
+    box-shadow:
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4),
+            3px -8px var(--blur-sm) rgba(180, 180, 180, .7),
+            -3px 6px var(--blur-sm) rgba(250, 250, 250, .4);
+}
+
+.btn:active {
+    background: var(--gradient-1);
+    -webkit-box-shadow:
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            4px 8px var(--blur-sm) rgba(255, 255, 255, 0.3),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
+    box-shadow:
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            4px 8px var(--blur-sm) rgba(255, 255, 255, 0.3),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
+}
+
+.btn .inset-inner {
+    padding: .2rem;
+    border-width: 2px;
+    border-radius: 50%;
+}
+
+.connect-cta button > .inset-inner,
+.activity-cta button > .inset-inner,
+.activity-cta a i {
+    padding: .6rem;
+}
+
+@media (max-width: 575.98px) {
+    .activity-cta button > .inset-inner,
+    .activity-cta a > .inset-inner {
+        padding: .2rem;
+        border-radius: 50%;
+    }
+
+    .activity-cta .fa,
+    .activity-cta .fab,
+    .activity-cta .fal,
+    .activity-cta .far,
+    .activity-cta .fas {
+        font-size: .5rem;
+    }
+}
+
+form .connect-cta input {
+    height: 3rem;
+}
+
+.activity-cta small:after {
+    content: '\2192';
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 0.25rem;
+}
+
+/* BUTTON/LINK ~ COLLAPSE CONFIGS
+   ========================================================================== */
+
+/* Highlights CTA button three seconds after section.show */
+
+section.collapse:not(.show) .activity-cta .btn {
+    border-color: transparent;
+    color: transparent;
+
+    -webkit-transition: border-color 0.15s ease-in-out 0s;
+         -o-transition: border-color 0.15s ease-in-out 0s;
+            transition: border-color 0.15s ease-in-out 0s;
+}
+
+section.show .activity-cta .btn {
+    border: 2px solid #8bbafe;
+    outline: 0;
+
+    -webkit-transition: border-color 0.15s ease-in-out 3s;
+         -o-transition: border-color 0.15s ease-in-out 3s;
+            transition: border-color 0.15s ease-in-out 3s;
+}
+
+/* BADGE/STATS ~ COLLAPSE CONFIGS
+   ========================================================================== */
+
+section:not(.show) .data-stats {
+    opacity: 0;
+
+    -webkit-transition: opacity 0.3s var(--breeze) 0s;
+         -o-transition: opacity 0.3s var(--breeze) 0s;
+            transition: opacity 0.3s var(--breeze) 0s;
+}
+
+#toggle-all:checked + label ~ main .data-stats,
+section.show .data-stats {
+    opacity: 1;
+
+    -webkit-transition: opacity 0.15s var(--breeze) .75s;
+         -o-transition: opacity 0.15s var(--breeze) .75s;
+            transition: opacity 0.15s var(--breeze) .75s;
+}
+
+/* SECTION.SHOW ICON TRANSITION @prefixed
+   ========================================================================== */
+
+/* Apply global icon transitions to section h4 headlines */
+/* CREDIT (modified) inspired by on-show transitions in: https://codeconvey.com/pure-css-accordion-menu/ */
+
+/* Position icon on .show */
+
+section.show h4 ion-icon {
+    left: 260px;
+}
+
+/* Position icon at rest */
+
+section.collapse:not(.show) h4 ion-icon {
+    left: 400px;
+}
+
+/* Set default styles of icon */
+
+h4 ion-icon {
+    position: absolute;
+    top: -17px;
+    left: 390px;
+
+    font-size: 180px;
+    opacity: 0.08;
+
+    -webkit-transition: all .3s .75s;
+         -o-transition: all .3s .75s;
+            transition: all .3s .75s;
+}
+
+/* ==========================================================================
+   Vertical scroller @prefixed
+   ========================================================================== */
+
+/**
+ * Recent activity animated auto scroll.
+ *
+ * This creates a "newsfeed" reel out of vertically stacked list items that
+ * take turn scrolling into a fixed frame upon toggle of .show and :checked.
+ *
+ * Features an activity item and a call to action.
+ */
+
+/**
+ * Scroller container
+ *
+ * 1. Declare properties for scope
+ * 2. Set total --scroll-height to be the sum of --item-height and --cta-height
+ * 3. Set box model and presentation
+ */
+
+#verticalScroller {
+    --item-height: 9.75rem;
+    --cta-height: 4.5rem;
+    --scroll-height: calc(var(--item-height) + var(--cta-height));
+
+    position: relative;
+    overflow: hidden;
+
+    height: var(--scroll-height);
+    padding: 0;
+    margin: 0 auto;
+    background: transparent;
+    border-radius: .75rem;
+
+    -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    -ms-flex-line-pack: start;
+        align-content: start;
+
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(255, 255, 255, 0.5)));
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5));
+
+    -webkit-box-shadow:
+            0 3.3px var(--blur-xs) rgba(0, 0, 0, 0.3),
+            0 -3.3px var(--blur-xs) rgba(255, 255, 255, 0.5),
+            inset 0 2px 0 rgba(255, 255, 255, 1);
+
+    box-shadow:
+            0 3.3px var(--blur-xs) rgba(0, 0, 0, 0.3),
+            0 -3.3px var(--blur-xs) rgba(255, 255, 255, 0.5),
+            inset 0 2px 0 rgba(255, 255, 255, 1);
+}
+
+/**
+ * Scroll item
+ *
+ * Must only contain one '.activity-item' child and one '.activity-cta' child
+ * Animates via the '#scroll-*' id selector
+ *
+ * 1. Set styles and positioning for all incoming scroll items
+ * 2. Clear shadows inherited from li core configs
+ */
+
+#verticalScroller > li {
+    position:absolute;
+    overflow: hidden;
+
+    height: auto;
+    padding: .625rem;
+    margin-bottom: 0;
+    border-radius: .6rem;
+
+    background: transparent;
+
+    -webkit-box-shadow: none;
+        box-shadow: none;
+}
+
+/**
+ * Activity item container
+ *
+ * Can contain any element to be featured in the feed, with local box-model adjustment on as-need basis.
+ * Must precede '.activity-cta'
+ *
+ * 1. Set consistent height property as an instance of --item-height
+ * 2. Scale down all child elements via font-size base rem
+ */
+
+.activity-item {
+    overflow: hidden;
+    height: var(--item-height);
+
+    border: 2px solid #F7F7F7;
+    border-radius: .6rem;
+
+    font-size: .8125rem;
+
+    background: var(--gradient-4);
+
+    -webkit-box-shadow:
+            3px 0 0 rgba(180, 180, 180, .7),
+            -3px 0 0 rgba(250, 250, 250, .4);
+
+    box-shadow:
+            3px 0 0 rgba(180, 180, 180, .7),
+            -3px 0 0 rgba(250, 250, 250, .4);
+}
+
+/**
+ * Activity CTA container
+ *
+ * Contains CTA button immediately following '.activity-item'
+ * A local adjustment to global '.activity-cta' class
+ *
+ * 1. Set maximum height to be an instance of --cta-height (the balance
+ *    of the total scroll item height)
+ * 2. Scale down all child elements via font-size base rem
+ * 3. Adjust '.btn' class to fit the smaller frame
+ */
+
+#verticalScroller .activity-cta {
+    max-height: var(--cta-height);
+    font-size: .8125rem;
+}
+
+#verticalScroller .activity-cta .btn {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* Scroller event @prefixed
+   ========================================================================== */
+
+/**
+ * This starts the animation whenever the hidden parent section is shown.
+ *
+ * 1. Whenever the '.show' class is added to the #target-one section element
+ * 2. Whenever the the '#toggle-all' checkbox is 'checked'
+ */
+
+/* Offset three scroll items to the total height of the scroller container by default */
+
+#scrollOne,
+#scrollTwo,
+#scrollThree {
+    top: var(--scroll-height);
+}
+
+/* Scroll the first item back in at the end of the animation */
+
+#toggle-all:checked + label ~ main #target-one #scrollOne,
+#target-one.show #scrollOne {
+    -webkit-animation:
+            scroll-in .75s var(--glide) 0s 1 normal forwards running,
+            scroll-out .75s var(--glide) 4s 1 normal forwards running,
+            scroll-in .75s var(--glide) 12s 1 normal forwards running;
+    animation:
+            scroll-in .75s var(--glide) 0s 1 normal forwards running,
+            scroll-out .75s var(--glide) 4s 1 normal forwards running,
+            scroll-in .75s var(--glide) 12s 1 normal forwards running;
+
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+         -o-transition: all var(--flashing) var(--zip) var(--early);
+            transition: all var(--flashing) var(--zip) var(--early);
+}
+
+/* Second scroll item */
+
+#toggle-all:checked + label ~ main #target-one #scrollTwo,
+#target-one.show #scrollTwo {
+    -webkit-animation:
+            scroll-in .75s var(--glide) 4s 1 normal forwards running,
+            scroll-out .75s var(--glide) 8s 1 normal forwards running;
+    animation:
+            scroll-in .75s var(--glide) 4s 1 normal forwards running,
+            scroll-out .75s var(--glide) 8s 1 normal forwards running;
+
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+         -o-transition: all var(--flashing) var(--zip) var(--early);
+            transition: all var(--flashing) var(--zip) var(--early);
+}
+
+/* Third scroll item */
+
+#toggle-all:checked + label ~ main #target-one #scrollThree,
+#target-one.show #scrollThree {
+    -webkit-animation:
+            scroll-in .75s var(--glide) 8s 1 normal forwards running,
+            scroll-out .75s var(--glide) 12s 1 normal forwards running;
+    animation:
+            scroll-in .75s var(--glide) 8s 1 normal forwards running,
+            scroll-out .75s var(--glide) 12s 1 normal forwards running;
+
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+         -o-transition: all var(--flashing) var(--zip) var(--early);
+            transition: all var(--flashing) var(--zip) var(--early);
+}
+
+/* Scroller keyframes
+   ========================================================================== */
+
+/* Scroll in animation keyframes */
+
+@-webkit-keyframes scroll-in {
+    0% {
+        top: calc(var(--scroll-height) + var(--cta-height));
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes scroll-in {
+    0% {
+        top: calc(var(--scroll-height) + var(--cta-height));
+    }
+    100% {
+        top: 0;
+    }
+}
+
+/* Scroll out animation keyframes */
+
+@-webkit-keyframes scroll-out {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: calc((var(--scroll-height) + var(--cta-height)) * -1);
+    }
+}
+
+@keyframes scroll-out {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: calc((var(--scroll-height) + var(--cta-height)) * -1);
+    }
+}
+
+/* ==========================================================================
+   Landing banner
+   ========================================================================== */
+
+/* Custom 'onboarding' banner, disposes upon initial click  */
+/* To be organized */
+
+/* Dispose splash banner content upon click any header-button */
+
+#target-zero:not(.show) {
+    display: none;
+}
+
+.cover-banner {
+    padding-top: 6rem;
+}
+
+@media (min-width: 740px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
+
+.cover-title,
+.cover-name,
+.banner-top,
+.banner-bottom {
+    display: flex;
+}
+
+.banner-top {
+    line-height: .875rem;
+    color: #a4a4a4;
+    animation: banner-top .75s var(--swoop) 2.75s 1 normal forwards running;
+    transition: all .75s var(--swoop) .3s;
+}
+
+.banner-bottom {
+    line-height: .9rem;
+    animation: banner-bottom .75s var(--swoop) 2.75s 1 normal forwards running;
+    transition: all .75s var(--swoop) .3s;
+}
+
+.banner-middle {
+    opacity: 0;
+    animation: banner-middle .75s var(--swoop) 2.65s 1 normal forwards running;
+    transition: all .75s var(--swoop) .3s;
+}
+
+.banner-pseudo {
+    text-align: right;
+    padding-right: 1rem;
+    line-height: .875rem;
+    animation: banner-pseudo 1s var(--swoop) 2.3s 1 normal forwards running;
+    transition: all .75s var(--breeze) 2s;
+}
+
+@-webkit-keyframes banner-top {
+    0% {
+        flex-direction: row;
+        margin-bottom: 0;
+        line-height: 1;
+        justify-content: space-around;
+    }
+    100% {
+        flex-direction: column;
+        margin-bottom: 3rem;
+        line-height: .875rem;
+        justify-content: center;
+    }
+}
+
+@-webkit-keyframes banner-bottom {
+    0% {
+        flex-direction: row;
+        margin-top: 0;
+        line-height: 1;
+        justify-content: space-around;
+    }
+    100% {
+        flex-direction: column;
+        margin-top: auto;
+        line-height: .9rem;
+        justify-content: center;
+    }
+}
+
+@-webkit-keyframes banner-middle {
+    0% {
+        position: absolute;
+        display: none;
+        text-align: left;
+        font-style: normal;
+        padding-right: 1.5rem;
+        margin-top: -40rem;
+        padding-top: 0;
+        padding-bottom: 600px;
+        opacity: 0;
+    }
+    50% {
+        font-style: italic;
+        opacity: 1;
+        display: flex;
+    }
+    100% {
+        display: flex;
+        position: absolute;
+        text-align: left;
+        font-style: italic;
+        padding-right: 1.5rem;
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 0;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes banner-pseudo {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+.banner-cta .value {
+    font-family: attribute-mono, sans-serif;
+}
+
+.banner-cta .value i {
+    color: var(--deep-4);
+}
+
+@media (max-width: 575.98px) {
+
+    .banner-cta .value {
+        font-size: .725rem;
+        margin-bottom: 1rem;
+    }
+    #target-zero {
+        margin-top: 2rem;
+    }
+
+    .banner-cta {
+        padding-top: .375rem;
+        padding-bottom: .375rem;
+    }
+    .banner-cta .contact-text,
+    .banner-cta .btn {
+        height: 40px;
+    }
+}
+
+/* ==========================================================================
+   INTRODUCTION SECTION @prefixed
+   ========================================================================== */
+
+.landing-subheading p {
+    font-family: "Halyard Micro", monospace;
+    font-size: .875rem;
+    font-weight: 300;
+    color: #707070;
+    text-shadow: #FAFAFA 0 1px 0, #D4D6D6 0 -1px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.landing-subheading p span:nth-of-type(2) {
+    color: #F26041;
+    text-shadow: #FAA490 0 1px 0;
+}
+
+.landing-subheading p span:nth-of-type(1) {
+    color: #187FE5;
+    text-shadow: #affbff 0 1px 0;
+}
+
+.landing-subheading p span:nth-of-type(3) {
+    color: #51d2bf;
+    text-shadow: #afffb3 0 1px 0;
+}
+
+.landing-subheading p span:nth-of-type(4) {
+    color: #8E0089;
+    text-shadow: #ffb3fe 0 1px 0;
+}
+
+.image-container {
+    width: 13rem;
+    height: 13rem;
+
+    padding: 1rem;
+    margin: 0 auto;
+
+    border: 1px solid #F7F6F4;
+    border-radius: 50%;
+
+    background: #F2F1EF;
+    -webkit-box-shadow:
+            inset 5.11px 5.11px var(--blur-md) #D1D0CF,
+            inset -5.11px -5.11px var(--blur-md) #FFFFFF;
+    box-shadow:
+            inset 5.11px 5.11px var(--blur-md) #D1D0CF,
+            inset -5.11px -5.11px var(--blur-md) #FFFFFF;
+}
+
+.image-container > img {
+    height: 100%;
+}
+
+/* ==========================================================================
+   Media box section
+   ========================================================================== */
+
+/* Make section.right a flex container, turning h5, ul and .activity-cta into flex items */
+/* applies to section.right */
+
+.media-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+}
+
+.media-content h5 {
+    text-align: right;
+}
+
+/* Set growth behavior to h5, ul and .activity-cta */
+
+.media-content > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+}
+
+/* Push .activity-cta down */
+
+.media-content > :last-child {
+    margin-top: auto;
+}
+
 /* ==========================================================================
    <UL> LIST GROUP CONFIGS @prefixed
    ========================================================================== */
@@ -1472,2113 +4120,37 @@ section.right > ul > li h6 {
 }
 
 /* ==========================================================================
-   MASTER SHADOW CONTAINER STYLES
+   Media list item
    ========================================================================== */
 
-/*!
- * Neumorphic style to box model.
+/**
+ * Media list item.
  *
- * This immediately drops an element into an inset within an otherwise flat canvas.
+ * This styles the list items in every media list except for the #target-one section,
+ * which is controlled by the '#verticalScroller', and the #target-six section,
+ * which is styled via the LinkedIn section.
  *
- * CREDIT: (assistance) (https://css-tricks.com/neumorphism-and-css/)
- * CREDIT: (assistance) Shadow generator https://neumorphic.design/
+ * Typically includes an h6 with a 'detail-title' class,
+ * and an an aside with a '.detail-stats' class.
+ * The '.detail-stats' container wraps the '.stats-activity' badge list.
  *
  */
 
-.inset-container {
-    overflow: hidden;
+/* List item container */
 
-    padding: .5rem;
-    border-radius: .75rem;
-
-    -webkit-box-shadow:
-            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
-            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
-
-    box-shadow:
-            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
-            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 575.98px) {
-    .spread > .inset-container {
-        padding: .75rem;
-        -webkit-box-shadow: none;
-                box-shadow: none;
-    }
-}
-
-.inset-item {
-    position: relative;
-
-    border-radius: .6rem;
-    border: none;
-}
-
-.inset-item:after {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-
-    content: "";
-    width: 100%;
-    height: 100%;
-
-    border-radius: .6rem;
-
-    background: var(--gradient-2);
-}
-
-/* ==========================================================================
-   PSEUDO ELEMENT TRANSITION STYLES
-   ========================================================================== */
-
-/*!
- * Pseudo elements are applied to the left and right margins of the following elements
- * to achieve the effect of containers sliding on vertical rails during a .collapsing event
- *
- * 1. <main> : outer-most static rail
- * 2. <article> : static rail
- * 3. first <section> (and its .collapse class variety) : inner-most top rail
- * 4. first child of the first <section> (.spread class) : inner-most bottom rail
- *
- * Note (current): if :root{--of-twelve: 11;}
- * var(--width) == 91.66%
- * var(--margin) == 4.16%
- * calc(var(--margin) * -1) == -4.16%
- * calc(var(--margin) / 2 * -1) == -2.08%
- */
-/* BUG: PSEUDOS are funky on Safari */
-
-
-/* Set sections in both static and transition states to show overflow at left/right (offset to --margin) */
-/* with a top offset of the height of its preceding header */
-/* and a bottom inset of the height of its following header */
-
-section.show,
-section.collapse,
-section.collapsing {
-    -webkit-clip-path: inset(-3rem calc(var(--margin) * -1) 1.36rem calc(var(--margin) * -1));
-            clip-path: inset(-3rem calc(var(--margin) * -1) 1.36rem calc(var(--margin) * -1));
-}
-
-.header-title {
-    -webkit-clip-path: inset(-1.5rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
-            clip-path: inset(-1.5rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
-}
-
-:root {
-    --outlines: var(--raisin);
-}
-
-/* TODO animate toggle in to be a horizontal line */
-/* TODO fix onshow animations */
-/* TODO fix margins for lg */
-/* TODO streamline the mobile experience like the md experience */
-/* TODO design the nav to be like a calling card */
-/* TODO change the href when toggle is on */
-
-
-article:before,
-article:after,
-section.collapse:before,
-section.collapse:after,
-section.show:before,
-section.show:after,
-section.collapsing:before,
-section.collapsing:after,
-.spread:before,
-.spread:after,
-article > header:before,
-article > header:after,
-main:before,
-main:after,
-.header-title:after,
-section.right:after {
-    position: absolute;
-    display: block;
-    content: "";
-}
-
-/* PSEUDO VERTICALS
-   ========================================================================== */
-
-/* Offset :before pseudo elements to  the center of the offset --margin property  */
-/* if --of-twelve: 11; then the following left: value is -2.08%  */
-
-article:before {
-    left: calc(var(--margin) / 2 * -1 + .08rem);
-    border-right: 1px solid var(--outlines);
-}
-
-@media (max-width: 575.98px) {
-    article:before {
-        left: calc(var(--margin) / 2 * -1 + .425rem);
-    }
-}
-
-/* Position :after pseudo elements at the center of the offset --margin property */
-/* if --of-twelve: 11; then the following right: value is -2.08%  */
-
-article:after {
-    right: calc(var(--margin) / 2 * -1 + .08rem);
-    border-left: 1px solid var(--outlines);
-}
-
-@media (max-width: 575.98px) {
-    article:after {
-        right: calc(var(--margin) / 2 * -1 + .425rem);
-    }
-}
-
-/* Give static outer rail pseudo elements height of 100%  */
-
-article:before,
-article:after {
-    top: 0;
-    height: 100%;
-
-    z-index: -1;
-    width: .3rem;
-}
-
-/* Give inner-most top and bottom rail pseudo elements a consistent width and a variable height  */
-/* Set background color to the html body color */
-/* Z depth of 10 to be at the foreground of the body */
-
-/* Note: the .collapse.collapsing.show. variety are necessary for continuity during the BS.transitioning event */
-
-section.collapse:before,
-section.collapse:after,
-section.show:before,
-section.show:after,
-section.collapsing:before,
-section.collapsing:after,
-.spread:before,
-.spread:after {
-    z-index: 10;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-            align-self: center;
-
-    height: 10vh;
-    width: .5rem;
-}
-
-/* Position top left and top right pseudo-rails relative to section elements */
-
-section.show:before,
-section.collapsing:before,
-section.collapse:before,
-section.show:after,
-section.collapsing:after,
-section.collapse:after {
-    top: 1.6rem;
-}
-
-/* Position bottom left and bottom right pseudo-rails relative to .spread divs */
-
-.spread:before,
-.spread:after {
-    bottom: 1.5rem;
-}
-
-/* Apply left-centric styling to top left and bottom left pseudo-rails */
-
-section.collapse:before,
-section.show:before,
-section.collapsing:before,
-.spread:before {
-    left: calc(var(--margin) / 2 * -1 + .3rem);
-    border-left: 2px solid var(--outlines);
-}
-
-/* Style top left pseudo-rail */
-
-section.collapse:before,
-section.show:before,
-section.collapsing:before {
-    border-top-left-radius: .75rem;
-}
-
-/* Style bottom left pseudo-rail */
-
-.spread:before {
-    border-bottom-left-radius: .75rem;
-}
-
-@media (max-width: 575.98px) {
-    section.collapse:before,
-    section.show:before,
-    section.collapsing:before,
-    .spread:before {
-        left: calc(var(--margin) / 2 * -1 + .6rem);
-    }
-}
-
-/* Apply right-centric styling to top right and bottom right pseudo-rails */
-
-section.collapse:after,
-section.show:after,
-section.collapsing:after,
-.spread:after {
-    right: calc(var(--margin) / 2 * -1 + .3rem);
-    border-right: 2px solid var(--outlines);
-}
-
-/* Style top right pseudo-rail */
-
-section.collapse:after,
-section.show:after,
-section.collapsing:after {
-    border-top-right-radius: .75rem;
-}
-
-/* Style bottom right pseudo-rail */
-
-.spread:after {
-    border-bottom-right-radius: .75rem;
-}
-
-@media (max-width: 575.98px) {
-    section.collapse:after,
-    section.show:after,
-    section.collapsing:after,
-    .spread:after {
-        right: calc(var(--margin) / 2 * -1 + .6rem);
-    }
-}
-
-/* Hide inherited pseudos at landing banner section for small screens */
-
-@media (max-width: 575.98px) {
-    #collapseLanding:before,
-    #collapseLanding:after {
-        display: none;
-    }
-}
-
-/*!
- * Horizontal pseudo elements are applied to individual header elements
- * to simulate connection to the vertical pseudo-rails
- *
- * 1. <header> : pseudo left/right to hide rails beyond
- * 2. section.right : pseudo bottom horizontal
- * 3. .header-title : pseudo top horizontal
- */
-
-/* PSEUDO CONCEALER
-   ========================================================================== */
-
-/* Position top-most header pseudo-concealer elements that 'cover' pseudo-rails beyond */
-
-main:before,
-main:after,
-article > header:before,
-article > header:after {
-    z-index: 1;
-
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-            align-self: center;
-
-    width: .875rem;
-    height: 2.875rem;
-
-    background: var(--paper);
-}
-
-/* Position last pseudo-conceler */
-
-main:before,
-main:after {
-    bottom: -1.5rem;
-}
-
-/* Position general pseudo-concealer */
-
-article > header:before,
-article > header:after {
-    top: -1.36rem;
-}
-
-/* Style left pseudo-concealer */
-
-main:before,
-article > header:before {
-    border-bottom-right-radius: .5rem;
-    border-top-right-radius: .5rem;
-}
-
-/* Position general left pseudo-concealer */
-
-article > header:before {
-    left: calc(var(--margin) * -1 + var(--padding));
-}
-
-/* Position last left pseudo-concealer */
-
-main:before {
-    left: calc(var(--margin) * -1 + var(--gutter-x));
-}
-
-@media (min-width: 576px) and (max-width: 991.98px) {
-    main:before {
-        left: calc(var(--margin) * -1 + var(--padding));
-    }
-
-    article > header:before {
-        left: calc(var(--margin) * -1);
-    }
-}
-
-@media (max-width: 575.98px) {
-    main:before,
-    article > header:before {
-        left: calc(var(--margin) / 2 * -1);
-    }
-}
-
-/* Style right pseudo-concealer */
-
-main:after,
-article > header:after {
-    border-bottom-left-radius: .5rem;
-    border-top-left-radius: .5rem;
-}
-
-/* Position general right pseudo-concealer */
-
-article > header:after {
-    right: calc(var(--margin) * -1 + var(--padding));
-}
-
-/* Position last right pseudo-concealer */
-
-main:after {
-    right: calc(var(--margin) * -1 + var(--gutter-x));
-}
-
-@media (min-width: 576px) and (max-width: 991.98px) {
-    main:after {
-        right: calc(var(--margin) * -1 + var(--padding));
-    }
-
-    article > header:after {
-        right: calc(var(--margin) * -1);
-    }
-}
-
-@media (max-width: 575.98px) {
-    main:after,
-    article > header:after {
-        right: calc(var(--margin) / 2 * -1);
-    }
-}
-
-/* PSEUDO HORIZONTALS
-   ========================================================================== */
-
-/* Style top and bottom pseudo-horizontals  */
-
-section.right:after,
-.header-title:after {
-    height: .5rem;
-}
-
-/* Position bottom pseudo-horizontal */
-
-section.right:after {
-    z-index: 5;
-    bottom: 1.36rem;
-    left: calc(var(--margin) / 2 * -1 + .5rem);
-    right: calc(var(--margin) / 2 * -1 + .5rem);
-    border-radius: 0 0 var(--radius-1) var(--radius-1);
-    border-bottom: 2px solid var(--outlines);
-}
-
-/* Position top pseudo-horizontal */
-
-.header-title:after {
-    z-index: -1;
-    top: 1.5rem;
-    left: calc(var(--margin) / 2 * -1 + .75rem);
-    right: calc(var(--margin) / 2 * -1 + .75rem);
-    border-top: 2px solid var(--outlines);
-}
-
-@media (max-width: 575.98px) {
-    section.right:after {
-        left: calc(var(--margin) / 2 * -1 + .875rem);
-        right: calc(var(--margin) / 2 * -1 + .875rem);
-    }
-
-    .header-title:after {
-        left: calc(var(--margin) / 2 * -1 + 1rem);
-        right: calc(var(--margin) / 2 * -1 + 1rem);
-    }
-}
-
-/* ==========================================================================
-   Master Collapse functions and animations @prefixed
-   ========================================================================== */
-
-[data-parent="#resumeStack"] {
-    --height: calc(50vh + 6rem);
-    height: var(--height);
-    overflow: auto;
-}
-
-[data-parent="#resumeStack"].collapsing {
-    -webkit-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
-}
-
-[data-parent="#resumeStack"].show {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-flex: 1 !important;
-        -ms-flex: 1 !important;
-            flex: 1 !important;
-
-    height: var(--height);
-
-    -webkit-animation: show-event .75s var(--glide) 0s 1 normal forwards running;
-    animation: show-event .75s var(--glide) 0s 1 normal forwards running;
-    -webkit-transition:
-            all .3s var(--zip) 0s,
-            -webkit-box-flex .1s var(--swoop) 0s;
-    transition:
-            all .3s var(--zip) 0s,
-            -webkit-box-flex .1s var(--swoop) 0s;
-    -o-transition:
-            all .3s var(--zip) 0s,
-            flex .1s var(--swoop) 0s;
-    transition:
-            all .3s var(--zip) 0s,
-            flex .1s var(--swoop) 0s;
-    transition:
-            all .3s var(--zip) 0s,
-            flex .1s var(--swoop) 0s,
-            -webkit-box-flex .1s var(--swoop) 0s,
-            -ms-flex .1s var(--swoop) 0s;
-}
-
-[data-parent="#resumeStack"]:not(.show) {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-flex: 0 !important;
-        -ms-flex: 0 !important;
-            flex: 0 !important;
-
-    height: 0;
-
-    -webkit-animation: hide-event .55s var(--glide) 0s 1 normal forwards running;
-    animation: hide-event .55s var(--glide) 0s 1 normal forwards running;
-    -webkit-transition:
-            all .3s var(--zip) 0s,
-            -webkit-box-flex .1s var(--swoop) 0s;
-    transition:
-            all .3s var(--zip) 0s,
-            -webkit-box-flex .1s var(--swoop) 0s;
-    -o-transition:
-            all .3s var(--zip) 0s,
-            flex .1s var(--swoop) 0s;
-    transition:
-            all .3s var(--zip) 0s,
-            flex .1s var(--swoop) 0s;
-    transition:
-            all .3s var(--zip) 0s,
-            flex .1s var(--swoop) 0s,
-            -webkit-box-flex .1s var(--swoop) 0s,
-            -ms-flex .1s var(--swoop) 0s;
-}
-
-@media (max-width: 575.98px) {
-    main {
-        overflow: hidden;
-        height: calc(100vh + 6rem);
-    }
-
-    article > section:not(#collapseZero) {
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
-    }
-
-    :root {
-        --outlines: var(--raisin) !important;
-        font-size: .938rem;
-    }
-
-    [data-parent="#resumeStack"] {
-        --height: calc(50vh + 6rem);
-        height: var(--height);
-        overflow: scroll;
-    }
-
-    [data-parent="#resumeStack"]:not(#collapseZero) .outer-body:first-child,
-    [data-parent="#resumeStack"]:not(#collapseZero) .left {
-        display: none !important;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 991.98px) {
-    [data-parent="#resumeStack"]:not(#collapseZero) .outer-body:first-child,
-    [data-parent="#resumeStack"]:not(#collapseZero) .left {
-        display: none !important;
-    }
-
-    article {
-        flex: 0 0 auto !important;
-        width: 100% !important;
-    }
-
-    #articleZero {
-        width: 100% !important;
-    }
-
-    #collapseZero .outer-body:first-child {
-        width: 100%;
-    }
-
-    #collapseZero .outer-body:nth-child(2) {
-        width: 100%;
-    }
-
-}
-
-/* Show event animation keyframes */
-
-@keyframes show-event {
-    0% {
-        height: 0;
-        visibility: hidden;
-        opacity: 0;
-        -webkit-box-flex: 0;
-            -ms-flex: 0;
-                flex: 0;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
-    }
-    50% {
-        visibility: visible;
-        opacity: 1;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-    }
-    100% {
-        height: var(--height);
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-        visibility: visible;
-        opacity: 1;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-    }
-}
-
-@-webkit-keyframes show-event {
-    0% {
-        height: 0;
-        visibility: hidden;
-        opacity: 0;
-        -webkit-box-flex: 0;
-                flex: 0;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-                flex-direction: column-reverse;
-    }
-    50% {
-        visibility: visible;
-        opacity: 1;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-                flex-direction: column;
-    }
-    100% {
-        height: var(--height);
-        -webkit-box-flex: 1;
-                flex: 1;
-        visibility: visible;
-        opacity: 1;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-                flex-direction: column;
-    }
-}
-
-/* Hide event animation keyframes */
-
-@keyframes hide-event {
-    0% {
-        height: var(--height);
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        opacity: 1;
-        visibility: visible;
-    }
-    50% {
-        opacity: 1;
-        visibility: visible;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
-    }
-    100% {
-        height: 0;
-        visibility: hidden;
-        opacity: 0;
-        -webkit-box-flex: 0;
-            -ms-flex: 0;
-                flex: 0;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
-    }
-}
-
-@-webkit-keyframes hide-event {
-    0% {
-        height: var(--height);
-        -webkit-box-flex: 1;
-                flex: 1;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-                flex-direction: column;
-        opacity: 1;
-        visibility: visible;
-    }
-    50% {
-        opacity: 1;
-        visibility: visible;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-                flex-direction: column-reverse;
-    }
-    100% {
-        height: 0;
-        visibility: hidden;
-        opacity: 0;
-        -webkit-box-flex: 0;
-                flex: 0;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-                flex-direction: column-reverse;
-    }
-}
-
-/* Hide event animation keyframs at xl */
-
-@media (min-width: 1200px) {
-    @keyframes hide-event {
-        0% {
-            height: var(--height);
-            -webkit-box-flex: 1;
-                -ms-flex: 1;
-                    flex: 1;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            opacity: 1;
-            visibility: visible;
-        }
-        50% {
-            opacity: 1;
-            visibility: visible;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-        }
-
-        /* Delay column reverse at 100% for less movement on large screens */
-
-        100% {
-            height: 0;
-            visibility: hidden;
-            opacity: 0;
-            -webkit-box-flex: 0;
-                -ms-flex: 0;
-                    flex: 0;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: reverse;
-                -ms-flex-direction: column-reverse;
-                    flex-direction: column-reverse;
-        }
-    }
-
-    @-webkit-keyframes hide-event {
-        0% {
-            height: var(--height);
-            -webkit-box-flex: 1;
-                    flex: 1;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                    flex-direction: column;
-            opacity: 1;
-            visibility: visible;
-        }
-        50% {
-            opacity: 1;
-            visibility: visible;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                    flex-direction: column;
-        }
-
-        /* Delay column reverse at 100% for less movement on large screens */
-
-        100% {
-            height: 0;
-            visibility: hidden;
-            opacity: 0;
-            -webkit-box-flex: 0;
-                    flex: 0;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: reverse;
-                    flex-direction: column-reverse;
-        }
-    }
-}
-
-/* ==========================================================================
-   TOGGLE-ALL CHECKBOX BUTTON @prefixed
-   ========================================================================== */
-
-/*!
- * Ability to collapse-all and expand-all
- * enabled by a fixed-position checkbox input element
- *
- * NOTE: The element is placed outside of the main header nav in order to
- * select and elicit behavior on sibling elements upon :checked toggle
- *
- * input is invisible
- *
- * input[type="checkbox"] selector is written as #toggle-all for clarity
- */
-
-/* Position and style the label for the checkbox */
-
-[for="toggle-all"] {
-    position: fixed;
-    top: 1rem;
-    left: 49%;
-    right: 49%;
-    z-index: 1030;
-
-    cursor: pointer;
-}
-
-#toggle-all:not(checked) + label ~ main {
-    /* Toggle to 2px */
-    --blur-xs: 0px;
-    /* Toggle to 3px */
-    --blur-sm: 0px;
-    /* Toggle to 6px */
-    --blur-md: 0px;
-}
-
-#toggle-all:checked + label ~ main {
-    /* Toggle to 2px */
-    --blur-xs: 2px;
-    /* Toggle to 3px */
-    --blur-sm: 3px;
-    /* Toggle to 6px */
-    --blur-md: 6px;
-}
-
-/* If checked, render all collapsed feature sections to be visible  */
-
-#toggle-all:checked + label ~ main [data-parent="#resumeStack"]:not(#collapseLanding).collapse {
-    display: block;
-    visibility: visible;
-    height: 100%;
-    overflow: visible;
-
-    -webkit-animation: show-event .75s ease-in-out 0s;
-            animation: show-event .75s ease-in-out 0s;
-    -webkit-transition: all var(--dashing) var(--glide) var(--early);
-         -o-transition: all var(--dashing) var(--glide) var(--early);
-            transition: all var(--dashing) var(--glide) var(--early);
-}
-
-
-/* If checked, hide all article > header icon buttons as their local boolean functionality will (truthy) return feedback for a (falsey) collapse.show  */
-
-#toggle-all:checked + label ~ main article header .header-icon {
-    display: none;
-}
-
-/* Disable header button functionality when static toggle is on */
-/* https://stackoverflow.com/questions/2091168/how-to-disable-a-link-using-only-css */
-
-#toggle-all:checked + label ~ main article header {
-    pointer-events: none;
-    cursor: default;
-    color: black;
-}
-
-/* Hide all collapse feature visual cues when static toggle is on */
-
-#toggle-all:checked + label ~ main article:before,
-#toggle-all:checked + label ~ main article:after,
-#toggle-all:checked + label ~ main section.right:after,
-#toggle-all:checked + label ~ main .header-title:after,
-#toggle-all:checked + label ~ main .spread:before,
-#toggle-all:checked + label ~ main .spread:after,
-#toggle-all:checked + label ~ main section:before,
-#toggle-all:checked + label ~ main section:after {
-    display: none;
-}
-
-/* Override .col-last helper when static toggle is on */
-
-#toggle-all:checked + label ~ main .outer-body:nth-child(2) {
-    display: block;
-}
-
-/* ==========================================================================
-   SIDE MENU NAVIGATION
-   ========================================================================== */
-
-/*!
- * Nav ol is a direct representative of the website's headings map  https://github.com/dzc34/headingsMap
- * Each ul is nested to the nth level of its represented heading in the doc outline
- * class names .list-h* are assigned to parent uls for ease of reference and direct styling
- */
-
-/* SIDE MENU ~ TOGGLE-ALL CONFIGS
-   ========================================================================== */
-
-/* Disable link functionality for nav outline lists beyond h3 by default  */
-/* https://stackoverflow.com/questions/2091168/how-to-disable-a-link-using-only-css */
-
-.list-h4 {
-    pointer-events: none;
-    cursor: default;
-
-    opacity: .5;
-}
-
-/* Enable link functionality for h3 outline lists on toggle of expand-all */
-
-#toggle-all:checked + label ~ nav .list-h4  {
-    opacity:1;
-    pointer-events: auto;
-    cursor: pointer;
-}
-
-/* Disable and hide h3 a tags t*/
-
-.list-h3 [href^="#article"] {
-    display: none;
-}
-
-/* Disable and hide h3 button duplicates of h3 a tags on toggle of expand-all */
-
-#toggle-all:checked + label ~ nav .list-h3 [data-toggle="collapse"] {
-    display: none;
-}
-
-/* Enable and show h3 a tags on toggle of expand-all */
-
-#toggle-all:checked + label ~ nav .list-h3 [href^="#article"] {
-    display: block;
-}
-
-/* SIDE-MENU NAV ~ MAIN-BODY CONFIGS
-   ========================================================================== */
-
-/*!
- * Nav outline with scroll-spy toggles in on menu-button click event
- * Currently dependent on the .collapse event class
- *
- * Responsive behavior follows the logic of a column shrinking to the offset variable of a sibling column
- * In this case, the <main> succumbs to an off-canvas <nav>
- *
- * NOTE:
- *     <body> is the only element to elicit behavior resulting from declarations at :root
- *     The immediate children of <body> are:
- *     <header> <input/label> <nav> <main> and <footer>
- *     Global reactive events occur by utilising the .show and :checked classes with sibling selectors
- *     In particular, <main> ~ <nav> and <input> ~ <main> will be reactive to each other's sibling/class events
- */
-
-/* Reset and re-declare inherited variables at inner body level */
-/* Delimit access to the nav and main elements via class selectors */
-
-.main-body,
-.nav-outline {
-
-    /* Set a new value (out of twelve) */
-    --of-twelve: 4;
-
-    /* Repeat and re-declare --width and --offset properties together with the new value --of-twelve */
-    --width: calc(var(--of-twelve) / 12 * 100%);
-    --offset: calc((12 - var(--of-twelve)) / 12 * 100%);
-
-    /* Instantiate --width to be the object property of new variable --navwidth  */
-    --navwidth: var(--width);
-
-    /* Instantiate --offset to be the object property of new variable --mainwidth */
-    --mainwidth: var(--offset);
-
-    /* Variable margin-left property, reassign at medium screen */
-    --mainstart: 0;
-}
-
-@media (min-width: 576px) and (max-width: 991.98px) {
-    .main-body,
-    .nav-outline {
-        --of-twelve: 3 !important;
-        --mainstart: calc(var(--navwidth) / 2);
-    }
-
-    .main-body {
-        width: var(--mainwidth) !important;
-    }
-}
-
-/* Set the default state of nav */
-
-.nav-outline {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: calc(var(--navwidth) * -1);
-
-    /* Set the width of nav to be an instance of --navwidth */
-
-    width: var(--navwidth);
-    height: 100%;
-
-    margin-top: 5rem;
-    padding-right: .75rem;
-    padding-left: .75rem;
-
-    background: var(--powder);
-    overflow: auto;
-
-    font-family: din-2014, sans-serif;
-}
-
-.nav-content {
-    margin: 1.125rem 0 0;
-
-    background-color: #fff;
-    background: var(--pearl) !important;
-    background-clip: padding-box;
-
-    border: 2px solid var(--white) !important;
-    border-radius: .75rem;
-
-    -webkit-box-shadow:
-            inset -5px -8px 0 0 rgba(255, 255, 255, 0.5),
-            inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
-
-    box-shadow:
-            inset -5px -8px 0 0 rgba(255, 255, 255, 0.5),
-            inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
-}
-
-.outline-item {
-    padding: 1rem 1rem 1rem;
-    margin-bottom: .5rem;
-    border-radius: var(--radius-2);
-    border: 1px solid var(--grey) !important;
-    background: var(--white);
-}
-
-/* Style parenthetic configs for nav */
-
-.nav-outline ol.nav,
-.nav-outline ul.nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-
-ul.nav {
-    padding-left: 1rem;
-}
-
-/* SIDE-MENU scroll spy hover states
-   ========================================================================== */
-
-/* Scrollspy active state */
-
-.nav-pills.menu-sidebar .nav-link.active {
-    background-color: transparent;
-    /*-webkit-box-shadow: none;*/
-    /*box-shadow: none;*/
-    color: #1266f1;
-    font-weight: 600;
-    border-left: .125rem dashed #1266f1;
-    border-radius: 0;
-}
-
-.nav-pills.menu-sidebar [href="#collapseLanding"].nav-link.active,
-.nav-pills.menu-sidebar [href="#splash-banner"].nav-link.active {
-    color: unset;
-    font-weight: unset;
-    border: none;
-}
-
-@media (max-width: 575.98px) {
-
-    /* Disable link functionality to h1 and h2 outline lists on mobile  */
-    /* CREDIT (unmodified) https://stackoverflow.com/questions/5521387/show-child-div-within-hidden-parent-div */
-    /*       Show Child Div within Hidden Parent Div */
-
-    .list-h1 [href="#collapseLanding"],
-    .list-h2 [href="#splash-banner"] {
-        visibility: hidden;
-        width: 0;
-        height: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    .list-h3 li {
-        visibility: visible;
-    }
-
-    .list-h3 [data-toggle="collapse"] {
-        /*display: block;*/
-    }
-
-    ul.nav {
-        padding-left: .2rem;
-    }
-
-    ul.list-h2,
-    ul.list-h3 {
-        padding-left: 0;
-    }
-
-    .nav-pills.menu-sidebar .nav-link {
-        line-height: 1rem;
-    }
-
-    .list-h4 a.nav-link {
-        overflow: hidden;
-
-        -o-text-overflow: ellipsis;
-            text-overflow: ellipsis;
-        white-space: nowrap;
-        width: 60%;
-        font-size: .625em !important;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 991.98px) {
-    .list-h2 [href="#splash-banner"],
-    .list-h4 [href^="#collapse"],
-    .list-h5 > :first-child {
-        visibility: hidden;
-        width: 0;
-        height: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    .list-h5 > :nth-child(2) {
-        visibility: visible;
-    }
-
-    ul.nav {
-        padding-left: .5rem;
-    }
-}
-
-/* SIDE MENU ANIMATION CONFIGS
-   ========================================================================== */
-
-/* Slide nav in on .show event */
-
-.nav-outline.show {
-    display: block;
-
-    -webkit-animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
-            animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
-    -webkit-transition: all var(--flashing) var(--zip) var(--early);
-         -o-transition: all var(--flashing) var(--zip) var(--early);
-            transition: all var(--flashing) var(--zip) var(--early);
-}
-
-/* Slide nav out on .collapse event */
-
-.nav-outline:not(.show) {
-    display: none;
-
-    -webkit-animation: nav-out .75s var(--glide) 0s 1 normal forwards running;
-            animation: nav-out .75s var(--glide) 0s 1 normal forwards running;
-    -webkit-transition: all var(--flashing) var(--zip) var(--early);
-         -o-transition: all var(--flashing) var(--zip) var(--early);
-            transition: all var(--flashing) var(--zip) var(--early);
-}
-
-/* Shrink main on nav.show event */
-
-.nav-outline.show ~ .main-body {
-    -webkit-animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
-            animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
-    -webkit-transition: all var(--flashing) var(--zip) var(--early);
-         -o-transition: all var(--flashing) var(--zip) var(--early);
-            transition: all var(--flashing) var(--zip) var(--early);
-}
-
-/* Expand main on nav.collapse event */
-
-.nav-outline:not(.show) ~ .main-body {
-    -webkit-animation: main-grow .75s var(--glide) 0s 1 normal forwards running;
-            animation: main-grow .75s var(--glide) 0s 1 normal forwards running;
-    -webkit-transition: all var(--flashing) var(--zip) var(--early);
-         -o-transition: all var(--flashing) var(--zip) var(--early);
-            transition: all var(--flashing) var(--zip) var(--early);
-}
-
-/* Select the div elements (the page-left, and page-right col-* variety) to wrap full width between lg and xl */
-/* ALT option: (min-width: 992px) and (max-width: 1199.98px) */
-
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-    nav.nav-outline.show ~ .main-body .spread > div  {
-        width: 100%;
-
-        -webkit-transition: all var(--flashing) var(--zip) var(--early);
-             -o-transition: all var(--flashing) var(--zip) var(--early);
-                transition: all var(--flashing) var(--zip) var(--early);
-    }
-}
-
-/* Side Menu Nav-in animation keyframes */
-
-@-webkit-keyframes nav-in {
-    0% {
-        left: calc(var(--navwidth) * -1);
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-    }
-    100% {
-        left: 0;
-        display: block;
-        visibility: visible;
-        opacity: 1;
-    }
-}
-
-@keyframes nav-in {
-    0% {
-        left: calc(var(--navwidth) * -1);
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-    }
-    100% {
-        left: 0;
-        display: block;
-        visibility: visible;
-        opacity: 1;
-    }
-}
-
-/* Side Menu nav-out animation keyframes */
-
-@-webkit-keyframes nav-out {
-    0% {
-        left: 0;
-        display: block;
-        visibility: visible;
-        opacity: 1;
-    }
-    100% {
-        left: calc(var(--navwidth) * -1);
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-    }
-}
-
-@keyframes nav-out {
-    0% {
-        left: 0;
-        display: block;
-        visibility: visible;
-        opacity: 1;
-    }
-    100% {
-        left: calc(var(--navwidth) * -1);
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-    }
-}
-
-/* Side menu main-shrink animation keyframes */
-
-@-webkit-keyframes main-shrink {
-    0% {
-        width: calc(var(--mainwidth) + var(--navwidth));
-        margin-left: var(--mainstart);
-    }
-    100% {
-        width: var(--mainwidth);
-        margin-left: var(--navwidth);
-    }
-}
-
-@keyframes main-shrink {
-    0% {
-        width: calc(var(--mainwidth) + var(--navwidth));
-        margin-left: var(--mainstart);
-    }
-    100% {
-        width: var(--mainwidth);
-        margin-left: var(--navwidth);
-    }
-}
-
-/* Side menu main-grow animation keyframes */
-
-@-webkit-keyframes main-grow {
-    0% {
-        width: var(--mainwidth);
-        margin-left: var(--navwidth);
-    }
-    100% {
-        width: calc(var(--mainwidth) + var(--navwidth));
-        margin-left: var(--mainstart);
-    }
-}
-@keyframes main-grow {
-    0% {
-        width: var(--mainwidth);
-        margin-left: var(--navwidth);
-    }
-    100% {
-        width: calc(var(--mainwidth) + var(--navwidth));
-        margin-left: var(--mainstart);
-    }
-}
-
-/* SIDE MENU + EXPAND ALL FULL SPREAD STATE
-   ========================================================================== */
-
-/* Trigger a complete Side Nav click event at 1400px */
-/* Also triggers an expand all at the largest media query, showing all content. */
-
-@media (min-width: 1400px) {
-    :root {
-        --outlines: transparent;
-    }
-
-    [data-parent="#resumeStack"].collapse:not(.show) {
-        display: block;
-    }
-
-    .nav-outline.show ~ .main-body,
-    .nav-outline:not(.show) ~ .main-body {
-        -webkit-animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
-                animation: main-shrink .75s var(--glide) 0s 1 normal forwards running;
-        -webkit-transition: all var(--flashing) var(--zip) var(--early);
-             -o-transition: all var(--flashing) var(--zip) var(--early);
-                transition: all var(--flashing) var(--zip) var(--early);
-    }
-
-    .nav-outline.collapse:not(.show) {
-        display: block;
-
-        -webkit-animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
-                animation: nav-in .75s var(--glide) 0s 1 normal forwards running;
-        -webkit-transition: all var(--flashing) var(--zip) var(--early);
-             -o-transition: all var(--flashing) var(--zip) var(--early);
-                transition: all var(--flashing) var(--zip) var(--early);
-    }
-
-    .menu-icon {
-        opacity: .1;
-    }
-
-    article header .header-icon {
-        display: none;
-    }
-
-    article header,
-    #nav-button,
-    #toggle-all + label {
-        pointer-events: none;
-        cursor: default;
-    }
-
-    .list-h4 {
-        opacity: 1;
-        pointer-events: auto;
-        cursor: pointer;
-    }
-}
-
-/* ==========================================================================
-   GLOBAL BUTTON ICON FUNCTIONS
-   ========================================================================== */
-
-/* Swap the visibility of icon pairs upon toggle of expand/collapse */
-/* .open and .closed classes added to either of two ion-icons in each header */
-
-/* Render .open to be hidden by default  */
-
-.open {
-    display: none;
-}
-
-/* Hide .closed when section is expanded */
-details[open] .closed,
-#toggle-all:checked + label .closed,
-[data-toggle="collapse"][aria-expanded="true"] .closed {
-    display: none;
-}
-
-/* Show .open when section is expanded */
-details[open] .open,
-#toggle-all:checked + label .open,
-[data-toggle="collapse"][aria-expanded="true"] .open {
-    display: block;
-    color: var(--deep-1);
-}
-
-/* ==========================================================================
-   GLOBAL BUTTON/LINK/CTA WRAPPER CONFIGS
-   ========================================================================== */
-
-/* Neumorphic shadow inspired by (https://css-tricks.com/neumorphism-and-css/) */
-/* Shadow generator helper https://neumorphic.design/ */
-
-/* BUTTON/LINK/CTA CONTAINERS
-   ========================================================================== */
-
-/* Style general .btn .cta wrapper */
-
-.outset-container-2 {
-    overflow: hidden;
-    padding: .5rem;
-
-    border-radius: .6rem;
-    border-color: #F2F1EF;
-
-    background: var(--gradient-1);
-
-    -webkit-box-shadow:
-            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
-            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
-
-    box-shadow:
-            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
-            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
-}
-
-/* Style general icon wrapper */
-
-.inset-inner {
-    background: var(--gradient-3);
-
-    -webkit-box-shadow:
-            0.3px 0.3px var(--blur-sm) rgba(237, 238, 243, 0.1),
-            -0.3px -0.3px var(--blur-sm) rgba(239, 241, 245, 0.1);
-    box-shadow:
-            0.3px 0.3px var(--blur-sm) rgba(237, 238, 243, 0.1),
-            -0.3px -0.3px var(--blur-sm) rgba(239, 241, 245, 0.1);
-}
-
-.inset-container-6 {
-    overflow: hidden;
-    padding: .3rem;
-    /*border-radius: 1.25rem;*/
-    border-radius: 100%;
-    margin-top: 3px;
-    margin-bottom: 3px;
-
-    -webkit-box-shadow:
-            inset 0 3.3px var(--blur-sm) #B0B2B5,
-            inset 0 -3.3px var(--blur-sm) #FFFFFF;
-
-    box-shadow:
-            inset 0 3.3px var(--blur-sm) #B0B2B5,
-            inset 0 -3.3px var(--blur-sm) #FFFFFF;
-}
-
-/* Style general .btn hover/feedback  */
-
-li.link-item.inset-item:hover::after {
-    z-index: -1;
-}
-
-li.link-item.inset-item {
-    cursor: pointer;
-}
-
-li.link-item:hover {
-    background: -o-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
-    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
-
-    -webkit-box-shadow:
-            2px 2px var(--blur-xs) white,
-            -2px -2px var(--blur-xs) white;
-    box-shadow:
-            2px 2px var(--blur-xs) white,
-            -2px -2px var(--blur-xs) white;
-}
-
-li.link-item.inset-item a {
-    z-index: 12;
-}
-
-/* Style general button class */
-
-.btn {
-    background-color: transparent;
-    border: none;
-    padding: .5rem;
-    border-radius: .6rem;
-}
-
-/* Style general cta button icons */
-
-.fa, .fab, .fal, .far, .fas {
-    text-shadow: #fff 0 1px 0;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1;
-}
-
-/* SOCIAL LINKS/BUTTON STYLE VARIABLES
-   ========================================================================== */
-
-/* Style social links list items */
-
-.social-links {
-    width: 100%;
-}
-
-.social-links li .fas,
-.social-links li .fab,
-.social-links li .far,
-.social-links li .fa,
-.social-links li .fa-sm,
-.social-links li .fa-lg,
-.social-links li a i {
-    z-index: 8;
-    border-radius: 50%;
-    padding: .6rem;
-
-    font-size: 1rem;
-    -webkit-font-smoothing: antialiased;
-
-    text-align: center;
-    text-shadow:
-            0 3px 0 0 #A4A4A4,
-            0 -4px 0 0 #fafafa;
-
-    -webkit-box-shadow:
-            0 1px 0 0 #FAFAFA inset,
-            0 -2px 0 0 #D7D7D6 inset;
-    box-shadow:
-            0 1px 0 0 #FAFAFA inset,
-            0 -2px 0 0 #D7D7D6 inset;
-
-}
-
-.nav-links .list-inline-item,
-.social-links .list-inline-item {
-    width: 20%;
-    padding: 0;
-    margin: 0;
-}
-
-.social-links li a:hover,
-.social-links li a:focus {
-    color: #F2F1EF;
-}
-
-.social-links .btn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-
-    padding: 1rem;
-    border-style: solid;
-    border-color: #B6B6B6;
-    border-width: 1px;
-    border-radius: .5rem;
-}
-
-.social-links li a > .inset-inner {
-    padding: .4rem;
-    border-radius: 50%;
-
-    background: var(--gradient-3);
-
-    -webkit-box-shadow:
-            2px 2px var(--blur-xs) rgba(237, 238, 243, 0.1),
-            -2px -2px var(--blur-xs) rgba(239, 241, 245, 0.1);
-    box-shadow:
-            2px 2px var(--blur-xs) rgba(237, 238, 243, 0.1),
-            -2px -2px var(--blur-xs) rgba(239, 241, 245, 0.1);
-}
-
-@media (max-width: 575.98px) {
-
-    .social-links {
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: start;
-    }
-
-    .social-links .btn {
-        height: 3.5rem;
-        padding: 1rem;
-    }
-
-    .social-links li a > .inset-inner {
-        padding: .2rem;
-    }
-
-    .social-links .fa,
-    .social-links .fab,
-    .social-links .fal,
-    .social-links .far,
-    .social-links .fas {
-        font-size: .5rem;
-    }
-
-}
-
-/* CTA BUTTON/LINKS STYLE VARIABLES
-   ========================================================================== */
-
-ul.activity-cta {
-    padding-left: 0;
-}
-
-ul.activity-cta :not(:first-child) {
-    padding-top: .625rem;
-}
-
-ul.activity-cta li .outset-container-2 {
-    vertical-align: middle;
-    /*padding-right: .625rem;*/
-}
-
-
-ul.activity-cta li .contact-text {
-    /*width: 100%;*/
-    text-align: center;
-    /*display: flex;*/
-    /*padding-left: .625rem;*/
-    padding-top: .625rem;
-    vertical-align: middle;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-line-pack: center;
-        align-content: center;
-}
-
-ul.activity-cta li .contact-text .key {
-    -ms-grid-column-align: left;
-        justify-self: left;
-}
-
-ul.activity-cta li i {
-    color: #A0B6CC;
-}
-
-.activity-cta .btn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-
-    height: 3rem;
-    width: 3rem;
-
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-
-.connect-cta .btn:hover,
-.connect-cta .btn:focus,
-.social-links .btn:hover,
-.social-links .btn:focus,
-.activity-cta .btn:hover,
-.activity-cta .btn:focus {
-    background: var(--gradient-4);
-    -webkit-box-shadow:
-            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
-            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4),
-            3px -8px var(--blur-sm) rgba(180, 180, 180, .7),
-            -3px 6px var(--blur-sm) rgba(250, 250, 250, .4);
-    box-shadow:
-            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
-            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4),
-            3px -8px var(--blur-sm) rgba(180, 180, 180, .7),
-            -3px 6px var(--blur-sm) rgba(250, 250, 250, .4);
-}
-
-.connect-cta .btn:active,
-.social-links .btn:active,
-.activity-cta .btn:active {
-    background: var(--gradient-1);
-    -webkit-box-shadow:
-            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
-            4px 8px var(--blur-sm) rgba(255, 255, 255, 0.3),
-            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
-    box-shadow:
-            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
-            4px 8px var(--blur-sm) rgba(255, 255, 255, 0.3),
-            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
-}
-
-.connect-cta button > .inset-inner,
-.activity-cta button > .inset-inner,
-.activity-cta a > .inset-inner {
-    padding: .2rem;
-    border-width: 2px;
-    border-radius: 50%;
-}
-
-.connect-cta button > .inset-inner,
-.activity-cta button > .inset-inner,
-.activity-cta a i {
-    padding: .6rem;
-}
-
-@media (max-width: 575.98px) {
-
-    .activity-cta button > .inset-inner,
-    .activity-cta a > .inset-inner {
-        padding: .2rem;
-        border-radius: 50%;
-    }
-
-    .activity-cta .fa,
-    .activity-cta .fab,
-    .activity-cta .fal,
-    .activity-cta .far,
-    .activity-cta .fas {
-        font-size: .5rem;
-    }
-}
-
-form .connect-cta input {
-    height: 3rem;
-}
-
-.activity-cta small:after {
-    content: '\2192';
-    display: inline-block;
-    font-weight: 400;
-    margin-left: 0.25rem;
-}
-
-/* BUTTON/LINK ~ COLLAPSE CONFIGS
-   ========================================================================== */
-
-.activity-cta .btn {
-    border-color: transparent;
-    color: transparent;
-    outline: ;
-}
-
-section.show .activity-cta .btn {
-    /*color: #495057;*/
-    /*background-color: #fff;*/
-    border: 2px solid #8bbafe;
-    outline: 0;
-    /*box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);*/
-    -webkit-transition:
-            border-color 0.15s ease-in-out 3s,
-            -webkit-box-shadow 0.15s ease-in-out 3s;
-        -o-transition:
-                border-color 0.15s ease-in-out 3s,
-                box-shadow 0.15s ease-in-out 3s;
-            transition:
-                    border-color 0.15s ease-in-out 3s,
-                    -webkit-box-shadow 0.15s ease-in-out 3s;
-    transition:
-            border-color 0.15s ease-in-out 3s,
-            box-shadow 0.15s ease-in-out 3s;
-    transition:
-            border-color 0.15s ease-in-out 3s,
-            box-shadow 0.15s ease-in-out 3s,
-            -webkit-box-shadow 0.15s ease-in-out 3s;
-}
-
-/* BADGE/STATS ~ COLLAPSE CONFIGS
-   ========================================================================== */
-
-.data-stats {
-    opacity: 0;
-}
-
-#toggle-all:checked + label ~ main .data-stats,
-section.show .data-stats {
-    opacity: 1;
-    /*box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);*/
-    -webkit-transition:
-            opacity 0.15s var(--breeze) .3s,
-            -webkit-box-shadow 0.15s var(--glide) 1s;
-        -o-transition:
-                opacity 0.15s var(--breeze) .3s,
-                box-shadow 0.15s var(--glide) 1s;
-            transition:
-                    opacity 0.15s var(--breeze) .3s,
-                    -webkit-box-shadow 0.15s var(--glide) 1s;
-    transition:
-            opacity 0.15s var(--breeze) .3s,
-            box-shadow 0.15s var(--glide) 1s;
-    transition:
-            opacity 0.15s var(--breeze) .3s,
-            box-shadow 0.15s var(--glide) 1s,
-            -webkit-box-shadow 0.15s var(--glide) 1s;
-}
-
-/* ==========================================================================
-   SPLASH BANNER
-   ========================================================================== */
-
-/* Custom 'onboarding' banner, disposes upon initial click  */
-/* To be organized */
-/* Dispose splash banner content upon click any header-button */
-
-
-@media (min-width: 740px) {
-    h1 {
-        font-size: 2rem;
-        line-height: 2rem;
-    }
-}
-
-#splash-heading {
-    font-family:var(--halyard-text);
-    font-weight: 100;
-    text-transform: uppercase;
-    color: var(--deep-1);
-}
-
-#download {
-    font-family: attribute-mono;
-}
-
-#download i {
-    color: var(--deep-4);
-}
-
-@media (max-width: 575.98px) {
-
-    #download {
-        font-size: .725rem;
-        margin-bottom: 1rem !important;
-    }
-    #collapseLanding {
-        margin-top: 2rem!important;
-    }
-
-    #band-c {
-        border-radius: .425rem!important;
-    }
-
-    #band-ul {
-        padding-top: .375rem!important;
-        padding-bottom: .375rem!important;
-    }
-    #band-t,
-    #band-b {
-        height: 40px !important;
-    }
-
-    #band-b {
-        width: 40px !important;
-    }
-
-    #band-t {
-        line-height: 1.2rem !important;
-    }
-
-}
-
-/* ==========================================================================
-   INTRODUCTION SECTION @prefixed
-   ========================================================================== */
-
-.landing-subheading p {
-    font-family: "Halyard Micro", monospace;
-    font-size: .875rem;
-    font-weight: 300;
-    color: #707070;
-    text-shadow: #FAFAFA 0 1px 0, #D4D6D6 0 -1px 0;
-    -webkit-font-smoothing: antialiased;
-}
-
-.landing-subheading p span:nth-of-type(2) {
-    color: #F26041;
-    text-shadow: #FAA490 0 1px 0;
-}
-
-.landing-subheading p span:nth-of-type(1) {
-    color: #187FE5;
-    text-shadow: #affbff 0 1px 0;
-}
-
-.landing-subheading p span:nth-of-type(3) {
-    color: #51d2bf;
-    text-shadow: #afffb3 0 1px 0;
-}
-
-.landing-subheading p span:nth-of-type(4) {
-    color: #8E0089;
-    text-shadow: #ffb3fe 0 1px 0;
-}
-
-.image-container {
-    width: 13rem;
-    height: 13rem;
-
-    padding: 1rem;
-    margin: 0 auto;
-
-    border: 1px solid #F7F6F4;
-    border-radius: 50%;
-
-    background: #F2F1EF;
-    -webkit-box-shadow:
-            inset 5.11px 5.11px var(--blur-md) #D1D0CF,
-            inset -5.11px -5.11px var(--blur-md) #FFFFFF;
-    box-shadow:
-            inset 5.11px 5.11px var(--blur-md) #D1D0CF,
-            inset -5.11px -5.11px var(--blur-md) #FFFFFF;
-}
-
-.image-container > img {
-    height: 100%;
-}
-
-/* INTRO RECENT ACTIVITY SCROLLER @prefixed
-   ========================================================================== */
-
-#verticalScroller {
-    position: relative;
-    overflow: hidden;
-
-    height: 150px;
-    padding: 0;
-    margin: 0 auto;
-    background: transparent;
-    border-radius: .75rem;
-
-    -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-    -ms-flex-line-pack: start;
-        align-content: start;
-
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(255, 255, 255, 0.5)));
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5));
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5));
-
-    -webkit-box-shadow:
-            0 3.3px var(--blur-xs) rgba(0, 0, 0, 0.3),
-            0 -3.3px var(--blur-xs) rgba(255, 255, 255, 0.5),
-            inset 0 2px 0 rgba(255, 255, 255, 1);
-
-    box-shadow:
-            0 3.3px var(--blur-xs) rgba(0, 0, 0, 0.3),
-            0 -3.3px var(--blur-xs) rgba(255, 255, 255, 0.5),
-            inset 0 2px 0 rgba(255, 255, 255, 1);
-
-}
-
-#verticalScroller > li {
-    position:absolute;
-
-    padding: 10px 10px 10px 10px;
-    margin-bottom: 0;
-    height: auto;
-
-    background: transparent;
-
-    -webkit-box-shadow: none;
-        box-shadow: none;
-}
-
-#verticalScroller .recent-activity {
-    overflow: hidden;
-    border-radius: .6rem;
-}
-
-.recent-activity {
-    border-radius: .6rem;
-}
-
-.activity-item {
-    overflow: hidden;
-    height: 100px;
-
-    border: 2px solid #F7F7F7;
-    border-radius: .6rem;
-
-    background: var(--gradient-4);
-
-    -webkit-box-shadow:
-            3px 0 0 rgba(180, 180, 180, .7),
-            -3px 0 0 rgba(250, 250, 250, .4);
-
-    box-shadow:
-            3px 0 0 rgba(180, 180, 180, .7),
-            -3px 0 0 rgba(250, 250, 250, .4);
-
-}
-
-/* INTRO SCROLLER ~ INPUT CONFIGS @prefixed
-   ========================================================================== */
-
-#toggle-all:checked + label ~ main #collapseZero #scrollOne,
-#collapseZero.show #scrollOne {
-    -webkit-animation:
-            scroll-in .75s var(--glide) 0s 1 normal forwards running,
-            scroll-out .75s var(--glide) 4s 1 normal forwards running,
-            scroll-in .75s var(--glide) 12s 1 normal forwards running;
-    animation:
-            scroll-in .75s var(--glide) 0s 1 normal forwards running,
-            scroll-out .75s var(--glide) 4s 1 normal forwards running,
-            scroll-in .75s var(--glide) 12s 1 normal forwards running;
-
-    -webkit-transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
-         -o-transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
-            transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
-}
-
-#toggle-all:checked + label ~ main #collapseZero #scrollTwo,
-#collapseZero.show #scrollTwo {
-    -webkit-animation:
-            scroll-in .75s var(--glide) 4s 1 normal forwards running,
-            scroll-out .75s var(--glide) 8s 1 normal forwards running;
-    animation:
-            scroll-in .75s var(--glide) 4s 1 normal forwards running,
-            scroll-out .75s var(--glide) 8s 1 normal forwards running;
-
-    -webkit-transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
-         -o-transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
-            transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
-}
-
-#toggle-all:checked + label ~ main #collapseZero #scrollThree,
-#collapseZero.show #scrollThree {
-    -webkit-animation:
-            scroll-in .75s var(--glide) 8s 1 normal forwards running,
-            scroll-out .75s var(--glide) 12s 1 normal forwards running;
-    animation:
-            scroll-in .75s var(--glide) 8s 1 normal forwards running,
-            scroll-out .75s var(--glide) 12s 1 normal forwards running;
-
-    -webkit-transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
-         -o-transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
-            transition: var(--trans-elem-all) var(--flashing) var(--zip) var(--early);
-}
-
-#scrollOne,
-#scrollTwo,
-#scrollThree {
-    top: 150px;
-}
-
-@-webkit-keyframes scroll-out {
-    0% {
-        top: 0;
-    }
-    100% {
-        top: -200px;
-    }
-}
-@keyframes scroll-out {
-    0% {
-        top: 0;
-    }
-    100% {
-        top: -200px;
-    }
-}
-
-@-webkit-keyframes scroll-in {
-    0% {
-        top: 200px;
-    }
-    100% {
-        top: 0;
-    }
-}
-@keyframes scroll-in {
-    0% {
-        top: 200px;
-    }
-    100% {
-        top: 0;
-    }
-}
-
-/* ==========================================================================
-   REPO STATS
-   ========================================================================== */
-
-
-/* media list item */
 .detail-item {
     display: flex;
     flex-wrap: wrap;
 }
 
+/**
+ * Detail title container
+ *
+ * Contains '.icon-heading' and/or '.title-heading'  children.
+ */
+
 .detail-title {
     display: flex;
-    /*padding-top: .5rem;*/
     padding-top: .25rem;
     padding-left: .5rem;
     margin-right: auto;
@@ -3592,11 +4164,43 @@ section.show .data-stats {
     }
 }
 
+/* Set box model presentation for title and icon heading */
+
+.title-heading,
+.icon-heading {
+    padding: .25rem calc(var(--bs-gutter-x) / 2) .5rem;
+}
+
+/* Set atypical styles to icon-outline variety */
+
+.icon-heading.icon-outline {
+    padding-top: .25rem;
+    padding-right: .25rem;
+
+    font-size: 1.25rem;
+    color: var(--deep-1);
+    --ionicon-stroke-width: 40px;
+}
+
+@media (max-width: 575.98px) {
+    .icon-heading.icon-outline {
+        font-size: 1.5rem;
+    }
+}
+
+/**
+ * Detail stats container
+ *
+ * Typically assigned to the <aside> element and wraps the '.stats-activity' ul
+ *
+ * 1. Establish alignment of elements within
+ * 2. Clear margin left in order to position elements to the right
+ */
+
 .detail-stats {
     align-self: center;
     margin-left: auto;
     margin-top: auto;
-    /*padding-right: .5rem;*/
     padding-right: .8rem;
 
     line-height: 0;
@@ -3604,50 +4208,24 @@ section.show .data-stats {
     color: var(--deep-1);
 }
 
-.detail-stats ion-icon {
-    color: var(--deep-1);
-    font-size: 1.1rem;
-}
-
-.icon-heading {
-    padding-right: 1rem;
-    padding-bottom: .5rem;
-    /* typical row >* padding */
-    padding-right: calc(var(--bs-gutter-x) / 2);
-    padding-left: calc(var(--bs-gutter-x) / 2);
-}
-
-.title-heading {
-    padding-top: .25rem;
-    padding-right: calc(var(--bs-gutter-x) / 2);
-    padding-left: calc(var(--bs-gutter-x) / 2);
-}
+/* Set typical icon label */
 
 .icon-label {
     vertical-align: bottom;
     padding-left: 1rem;
-    font-size: 8px;
     color: var(--deep-1);
+
+    font-size: 1.1rem;
     --ionicon-stroke-width: 16px;
 }
 
-ion-icon.icon-outline {
-    color: var(--deep-1);
-    --ionicon-stroke-width: 40px;
-    font-size: 1.25rem;
-
-    /*display: flex;*/
-    padding-top: .25rem;
-    padding-right: .25rem;
-    /*justify-content: center;*/
-    /*align-items: start;*/
-}
-
-@media (max-width: 575.98px) {
-    ion-icon.icon-outline {
-        font-size: 1.5rem;
-    }
-}
+/**
+ * Stats activity list container
+ *
+ * This configures a list of badges associated with a parent list item.
+ * Local adjustments as required per '*-activity' class
+ *
+ */
 
 .stats-activity {
     display: flex;
@@ -3697,29 +4275,123 @@ ion-icon.icon-outline {
 .repo-activity .stats-activity {
     text-wrap: none;
 }
-/* GitHub styles */
 
-.repo-color {
+/* Data badges
+   ========================================================================== */
+
+/**
+ * Attributes are assigned to elements that carry data to be presented as content
+ * to facilitate label styling and streamline potential data assignments from
+ * local or public databases in a future release.
+ *
+ * All custom [data-*] attributes are children of the '.data-stats' class.
+ * Attributes in the repo section share the additional '.data-repo' class.
+ */
+
+/**
+ * Typical badge label
+ *
+ * This styles the badge text label for badge items as a pseudo :before.
+ * Labels are modeled after superscript/subscript positioning.
+ * Content set to --label property by default; assign value within scope.
+ *
+ * The typical badge, from left to right, includes:
+ * 1. icon-label (hardcoded ion-icon in index.html)
+ * 2. text-label (pseudo :before element)
+ * 3. badge-value (pseudo :after element)
+ */
+
+[data-awards-count]:before,
+[data-honors-count]:before,
+[data-coverage-project-count]:before,
+[data-coverage-time]:before {
     position: relative;
-    top: 1px;
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+    bottom: -.25em;
+
+    vertical-align: baseline;
+
+    font-size: .7rem;
+    font-family: attribute-text;
+    font-weight: 300;
+    letter-spacing: .02rem;
+    line-height: 0;
+
+    color: var(--deep-1);
+    content: var(--label);
 }
 
+/* Declare variable values for the custom property '--label' accessible
+ * to and for the given attributes' scope.
+ */
 
-/* .data-stats includes all data-* */
-/* .data-repo + for repo-activity  */
+[data-honors-count] { --label: 'honors \00a0'; }
+[data-awards-count] { --label: 'awards \00a0'; }
+[data-coverage-time] { --label: 'years \00a0'; }
+[data-coverage-project-count] { --label: 'projects \00a0'; }
 
-/* REPO BADGE VALUE */
+/**
+ * Typical badge value
+ *
+ * This styles the status badge value for all badges except repo stats as a
+ * pseudo :after element. It is a bespoke appropriation of the Boostrap
+ * '.badge' and '.badge-notification' classes.
+ */
 
-/* This styles the status badge VALUE for REPO stats as a pseudo :after */
-/* The repo stats' have an icon as a label ONLY, which is hardcoded i the html */
+[data-awards-count]:after,
+[data-honors-count]:after,
+[data-coverage-time]:after,
+[data-coverage-project-count]:after {
+    display: inline-block;
+    padding: .2em .45em;
+    margin-top: -.1rem;
+    margin-left: -.5rem;
 
-/* FOR REPO BADGES It goes: 1. icon-label (hardcoded) 2. badge-value (pseudo :after) */
+    border-radius: 50rem;
+    border: 2px solid var(--white);
 
-/* This is modeled after a typical Bootstrap .badge class */
+    font-size: .75rem;
+    font-family: attribute-mono, sans-serif;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+
+    background-color: #fbfbfb;
+    color: #757575;
+
+    text-shadow:
+            0 1px 0 0 #A4A4A4,
+            0 -1px 0 0 #fafafa;
+
+    box-shadow:
+            inset 0 1px 0 rgba(0, 0, 0, 0.3),
+            inset 0 -1px 0 rgba(255, 255, 255, 0.5);
+
+    -webkit-transition: all .3s .75s;
+    -o-transition: all .3s .75s;
+    transition: all .3s .75s;
+}
+
+/* Set content to attr(*) and assign color for typical badge values */
+
+[data-honors-count]:after { content: attr(data-honors-count); color: #f93154; }
+[data-awards-count]:after { content: attr(data-awards-count); color: #1266f1; }
+[data-coverage-time]:after { content: attr(data-coverage-time); color: #f93154; }
+[data-coverage-project-count]:after { content: attr(data-coverage-project-count); color: #1266f1; }
+
+/**
+ * Repo badge value
+ *
+ * This styles the badge value for GitHub repository stats in a pseudo
+ * :after element. It is a bespoke version of the Boostrap '.badge' class.
+ *
+ * Repo badges are <a> links to the scope's source.
+ *
+ * A typical repo badge, from left to right, includes:
+ * 1. icon-label (hardcoded ion-icon in index.html)
+ * 2. badge-value (pseudo :after element)
+ */
 
 [data-repo-status]:after,
 [data-repo-commit-count]:after,
@@ -3741,103 +4413,60 @@ ion-icon.icon-outline {
     color: #757575;
 }
 
-/* TYPICAL BADGE TEXT LABEL */
+/* Declare variable values for the custom property '--label' accessible
+ * to and for the given attributes' scope.
+ */
 
-/* This styles the status badge TEXT for items AS REQUIRED as a pseudo :before */
-/* Stats like number-of-awards/projects and years-of-experience have a text as label, following an icon which us hardcoded in the html */
+[data-repo-commit-count] { --label: '\00a0 commits'; }
+[data-repo-size] { --label: '\00a0 mb'; }
 
-/* FOR TYPICAL BADGES It goes: 1. icon-label (hardcoded) 2. text-label (pseudo :boefore) 3. badge-value (pseudo :after) */
+/* Set content to attr(*) and label property for repo badge values */
 
-/* This additional label is modeled after a superscript/subscript positioning */
+[data-repo-size]:after { content: attr(data-repo-size) var(--label); }
+[data-repo-branch-count]:after { content: attr(data-repo-branch-count); }
+[data-repo-commit-count]:after { content: attr(data-repo-commit-count) var(--label); }
+[data-repo-status]:after { content: attr(data-repo-status); }
 
-[data-awards-count]:before,
-[data-honors-count]:before,
-[data-coverage-project-count]:before,
-[data-coverage-time]:before {
-    bottom: -.25em;
-    /*top: -.5em;*/
-    position: relative;
-    font-size: .7rem;
-    font-family: attribute-text;
-    font-weight: 300;
-    /*font-feature-settings: 'smcp';*/
-    /*text-transform: uppercase;*/
-    letter-spacing: .02rem;
-    line-height: 0;
-    vertical-align: baseline;
-    color: var(--deep-1);
-    content: var(--label);
+/* Style project status colors based on provided status class.
+ * Classes '.active' '.current' '.next' and '.prospective' are added to the parent list item
+ * to effectively assign and select states of a project.
+ */
+
+.active [data-repo-status]:after { color: #00b74a; }
+.current [data-repo-status]:after { color: #1266f1; }
+.next [data-repo-status]:after { color: #f93154; }
+.prospective [data-repo-status]:after { color: #b23cfd; }
+
+/* Repo badge link hover state */
+
+.data-repo:hover::after {
+    background-color: #0d6efd;
+    color: #e9ecef !important;
 }
 
-/* TYPICAL BADGE VALUE */
+/* Remove text label when side menu is active. */
 
-/* This styles the status badge VALUE for ALL badges EXCEPT repo stats as a pseudo :after */
-
-/* FOR TYPICAL BADGES It goes: 1. icon-label (hardcoded) 2. text-label (pseudo :boefore) 3. badge-value (pseudo :after) */
-
-/* This is a bespoke appropriation of the Boostrap .badge and .badge-notification classes */
-
-[data-awards-count]:after,
-[data-honors-count]:after,
-[data-coverage-time]:after,
-[data-coverage-project-count]:after {
-    display: inline-block;
-    padding: .2em .45em;
-    /*top: -.5e;*/
-    margin-top: -.1rem;
-    margin-left: -.5rem;
-
-    font-size: .75rem;
-    font-family: attribute-mono;
-    font-weight: 500;
-    line-height: 1;
-
-    border-radius: 50rem;
-
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    /*text-shadow: none;*/
-    background-color: #FBFBFB;
-    color: #757575;
-
-    text-shadow:
-            0 1px 0 0 #A4A4A4,
-            0 -1px 0 0 #fafafa;
-
-    border: 2px solid var(--white);
-    /*background:*/
-    /*        linear-gradient(*/
-    /*                0deg, rgba(160, 160, 160, 0.2),*/
-    /*                rgba(255, 255, 255, 0.9));*/
-
-    box-shadow:
-            inset 0 1px 0 rgba(0, 0, 0, 0.3),
-            inset 0 -1px 0 rgba(255, 255, 255, 0.5);
+.body-nav.show ~ .body-main .data-stats {
+    --label: "" !important;
 }
 
-[data-honors-count] { --label: 'honors \00a0'; }
-[data-awards-count] { --label: 'awards \00a0'; }
-[data-coverage-time] { --label: 'years \00a0'; }
-[data-coverage-project-count] { --label: 'projects \00a0'; }
+/* Progress bars
+   ========================================================================== */
 
-[data-honors-count]:before { content: var(--label); }
-[data-awards-count]:before { content: var(--label); }
-[data-coverage-time]:before { content: var(--label); }
-[data-coverage-project-count]:before { content: var(--label); }
+/**
+ * GitHub's color and progress bar styles are used to directly convey language
+ * coverage of a given repository.
+ */
 
-[data-honors-count]:after { content: attr(data-honors-count); color: #f93154; }
-[data-awards-count]:after { content: attr(data-awards-count); color: #1266f1; }
-[data-coverage-time]:after { content: attr(data-coverage-time); color: #f93154; }
-[data-coverage-project-count]:after { content: attr(data-coverage-project-count); color: #1266f1; }
-
+/* Languange stats container */
 
 .language-activity {
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-    margin-left: .5rem;
+    margin: .5rem;
     padding-right: 1.5rem;
 }
+
+/* Language title container */
+
 .language-item {
     display: inline-flex;
     flex-wrap: nowrap;
@@ -3848,57 +4477,18 @@ ion-icon.icon-outline {
     font-size: .875rem;
 }
 
+/* Style icon dot between language titles */
+
 .language-item ion-icon {
     font-size: 8px;
 }
 
-.btn-link:hover::after {
-    /*color: ;*/
-    background-color: #0d6efd;
-    color: #e9ecef;
-
-    /*color: #fff;*/
-    /*text-decoration: none;*/
-    /*outline: 0;*/
-    /*opacity: 0.9;*/
-}
-
-[data-repo-commit-count] {
-    --label: 'commits';
-}
-
-[data-repo-size] {
-    --label: 'mb';
-}
-[data-repo-size]:after { content: attr(data-repo-size) '\00a0' var(--label); }
-
-[data-repo-branch-count]:after { content: attr(data-repo-branch-count); }
-
-[data-repo-commit-count]:after { content: attr(data-repo-commit-count) '\00a0' var(--label); }
-
-.active [data-repo-status]:after {
-    content: attr(data-repo-status);
-    color: #00b74a;
-}
-
-/* Status colors */
-
-.current [data-repo-status]:after {
-    content: attr(data-repo-status);
-    color: #1266f1;
-}
-
-.next [data-repo-status]:after {
-    content: attr(data-repo-status);
-    color: #f93154;
-}
-
-.prospective [data-repo-status]:after {
-    content: attr(data-repo-status);
-    color: #b23cfd;
-}
-
-/* GitHub language colors */
+/**
+ * Github language colors
+ *
+ * '.repo-*' color and '.progress-*' background color assigned to the dot
+ * ion-icon and the corresponding progress bar, respectively.
+ */
 
 .repo-html{ color: #E14C30; }
 .progress-html { background-color: #E14C30; }
@@ -3909,12 +4499,238 @@ ion-icon.icon-outline {
 .repo-javascript { color: #F1DF64; }
 .progress-javascript { background-color: #F1DF64; }
 
-
 /* ==========================================================================
-   RECOMMENDATIONS SECTION
+   DETAILS/SUMMARY ELEMENT CONFIGS
    ========================================================================== */
 
-/* CREDIT:(modified) Embed LinkedIn Recommendations with HTML and CSS https://www.damosdesigns.com/LinkedinRecommendationsOnWebsite/ */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details,
+summary {
+    position: relative;
+    outline: none !important
+}
+
+/* Hiding The disclosure widget */
+/* https://medium.com/an-idea/the-details-of-a-dropdown-a817dc27e545 */
+
+/* Style summary "read more" icon return transition */
+
+details > summary #readmore {
+    position: relative;
+
+    -webkit-animation: appear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+            animation: appear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+
+    -webkit-transition: all var(--flashing) var(--zip) var(--late);
+    -o-transition: all var(--flashing) var(--zip) var(--late);
+    transition: all var(--flashing) var(--zip) var(--late);
+}
+
+/* Style active summary "read more" icon active transition */
+
+details[open] #readmore {
+    position: relative;
+
+    -webkit-animation: disappear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+            animation: disappear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
+
+    -webkit-transition: all var(--passing) var(--zip) var(--early);
+    -o-transition: all var(--passing) var(--zip) var(--early);
+    transition: all var(--passing) var(--zip) var(--early);
+}
+
+/* Icon configs */
+
+#readmore {
+    color: black;
+    font-size: 32px;
+}
+
+/* Position "read more" container */
+
+.read-more {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+
+    list-style: none;
+    cursor: pointer;
+
+    font-family: attribute-mono, sans-serif;
+}
+
+/* Type configs */
+
+.read-more .read-text {
+    margin-top: .5rem;
+    padding-right: 1rem;
+    padding-left: auto;
+
+    font-size: .875rem;
+    -webkit-font-feature-settings: 'smcp';
+            font-feature-settings: 'smcp';
+}
+
+/* Hover state */
+
+.read-text:hover {
+    text-underline-color: #157FFC;
+    text-underline: #157FFC !important;
+    border-bottom: 1px solid #157FFC;
+}
+
+/* A bespoke dropdown summary item, combining elements from bs.min.css
+ * No popper. */
+
+.summary-content {
+    position: absolute;
+    z-index: 5;
+    width: 68vw;
+
+    -ms-flex-line-pack: end;
+        align-content: end;
+    padding: .5rem;
+    margin: 1.125rem 0 0;
+
+    border: 2px solid var(--white) !important;
+    border-radius: .75rem;
+
+    background-clip: padding-box;
+    background: var(--pearl) !important;
+    color: #212529;
+
+    font-size: 1rem;
+    text-align: left;
+
+    list-style: none;
+
+    -webkit-box-shadow:
+            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
+            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+}
+
+.summary-item {
+    padding: 5rem 1rem 1rem;
+    margin-bottom: .5rem;
+    border-radius: var(--radius-2);
+    border: 1px solid var(--grey) !important;
+    background: var(--white);
+}
+
+@media (max-width: 575.98px) {
+    .summary-content {
+        position: static;
+        top: 0;
+        right: 0;
+        left: .4rem;
+
+        height: 40vh;
+        overflow: scroll !important;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+}
+
+/* Summary appear icon animation keyframes */
+
+@-webkit-keyframes appear-225 {
+    0% {
+        -webkit-transform: rotateZ(225deg);
+                transform: rotateZ(225deg);
+    }
+    50% {
+        trasform: rotateZ(0deg);
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+    }
+}
+
+@keyframes appear-225 {
+    0% {
+        -webkit-transform: rotateZ(225deg);
+                transform: rotateZ(225deg);
+    }
+    50% {
+        trasform: rotateZ(0deg);
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+    }
+}
+
+/* Summary disappear icon animation keyframes */
+
+@-webkit-keyframes disappear-225 {
+    0% {
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+    }
+    50% {
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+                trasform: rotateZ(0deg)
+    }
+    100% {
+        -webkit-transform: rotateZ(225deg);
+                transform: rotateZ(225deg);
+    }
+}
+
+@keyframes disappear-225 {
+    0% {
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+    }
+    50% {
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+                trasform: rotateZ(0deg)
+    }
+    100% {
+        -webkit-transform: rotateZ(225deg);
+                transform: rotateZ(225deg);
+    }
+}
+
+/* ==========================================================================
+   Recommendations and awards sections
+   ========================================================================== */
+
+/**
+ * Recommendation <blockquote>s and awards <li> are direct documentation with
+ * assigned css rulesets from LinkedIn's public profile section.
+ *
+ * Minor adjustments are made to suit the site's global styles.
+ *
+ * CREDIT: (modified) Embed LinkedIn Recommendations with HTML and CSS
+ *         https://www.damosdesigns.com/LinkedinRecommendationsOnWebsite/
+ */
+
+/* Configure first sub section to accommodate <summary> dropdown overflow */
+
+#target-six .outer-body:first-child {
+    overflow: visible;
+}
+
+/* Wrap LinkedIn elements in <figure> element with site signature styles */
 
 figure {
     border-radius: .6rem;
@@ -3933,7 +4749,8 @@ figure {
     padding: 16px 0;
 }
 
-/* image settings */
+/* Recommender image */
+
 .pv-recommendation-entity img {
     border-radius: 50%
 }
@@ -3969,7 +4786,7 @@ a.pv-recommendation-entity__member {
     border-bottom: 0px #fff;
 }
 
-/* Name of recommending. Adjusted */
+/* Recommender name */
 
 .t-16 {
     padding-top: 20px;
@@ -3977,34 +4794,40 @@ a.pv-recommendation-entity__member {
     line-height: 1.33333;
 }
 
-/* Title of recommending */
+/* Recommender title */
 
 .t-14 {
     font-size: 1.0rem;
     line-height: 1.42857;
 }
 
-/* date and relationship */
+/* Date of relationship */
+
 .t-12 {
     font-size: .9rem;
     line-height: 1.33333;
 }
 
-/* more text styles */
+/* Miscellaneous text styles */
+
 .t-black {
     color: rgba(0,0,0,.9);
 }
+
 .t-bold {
     font-weight: 600;
 }
+
 .t-normal {
     font-weight: 400;
 }
+
 .t-black--light {
     color: rgba(0,0,0,.6);
 }
 
-/* sizing of recommendation text */
+/* Size of recommendation text */
+
 blockquote {
     font-size: 1rem;
     line-height: 1.3333;
@@ -4085,56 +4908,111 @@ blockquote, q {
 }
 
 /* ==========================================================================
-   LOCAL SECTION COLOR VARIABLES
+   Local section color variables
    ========================================================================== */
 
 ::selection { background: var(--yellow); }
 ::-moz-selection { background: var(--yellow) }
 
-#collapseZero h4 { background-color: var(--matte); }
+#target-one h4 { background-color: var(--matte); }
 
-#collapseOne h4 { background-color: var(--slate); }
-#collapseOne b { color: var(--slate); }
-#collapseOne a { color: var(--grey); }
-#collapseOne p::selection { background: var(--grey); }
-#collapseOne p::-moz-selection { background: var(--grey); }
+#target-two h4 { background-color: var(--slate); }
+#target-two b { color: var(--slate); }
+#target-two a { color: var(--grey); }
+#target-two p::selection { background: var(--grey); }
+#target-two p::-moz-selection { background: var(--grey); }
 
-#collapseTwo h4 { background-color: var(--ruby); }
-#collapseTwo b { color: var(--ruby); }
-#collapseTwo a { color: var(--red); }
-#collapseTwo p::selection { background: var(--red); }
-#collapseTwo p::-moz-selection { background: var(--red); }
+#target-three h4 { background-color: var(--ruby); }
+#target-three b { color: var(--ruby); }
+#target-three a { color: var(--red); }
+#target-three p::selection { background: var(--red); }
+#target-three p::-moz-selection { background: var(--red); }
 
-#collapseThree h4 { background-color: var(--denim); }
-#collapseThree b { color: var(--denim); }
-#collapseThree a { color: var(--blue); }
-#collapseThree p::selection { background: var(--blue); }
-#collapseThree p::-moz-selection { background: var(--blue); }
+#target-four h4 { background-color: var(--denim); }
+#target-four b { color: var(--denim); }
+#target-four a { color: var(--blue); }
+#target-four p::selection { background: var(--blue); }
+#target-four p::-moz-selection { background: var(--blue); }
 
-#collapseFour h4 { background-color: var(--canary); }
-#collapseFour b { color: var(--canary); }
-#collapseFour a { color: var(--yellow); }
-#collapseFour p::selection { background: var(--yellow); }
-#collapseFour p::-moz-selection { background: var(--yellow); }
+#target-five h4 { background-color: var(--canary); }
+#target-five b { color: var(--canary); }
+#target-five a { color: var(--yellow); }
+#target-five p::selection { background: var(--yellow); }
+#target-five p::-moz-selection { background: var(--yellow); }
 
-#collapseFive h4 { background-color: var(--moss); }
-#collapseFive b { color: var(--moss); }
-#collapseFive a { color: var(--green); }
-#collapseFive p::selection { background: var(--green); }
-#collapseFive p::-moz-selection { background: var(--green); }
+#target-six h4 { background-color: var(--moss); }
+#target-six b { color: var(--moss); }
+#target-six a { color: var(--green); }
+#target-six p::selection { background: var(--green); }
+#target-six p::-moz-selection { background: var(--green); }
 
-#collapseSix h4 { background-color: var(--obsidian); }
-#collapseSix b { color: var(--obsidian); }
-#collapseSix a { color: var(--raisin); }
-#collapseSix p::selection { background: var(--raisin); }
-#collapseSix p::-moz-selection { background: var(--raisin); }
+#target-seven h4 { background-color: var(--obsidian); }
+#target-seven b { color: var(--obsidian); }
+#target-seven a { color: var(--raisin); }
+#target-seven p::selection { background: var(--raisin); }
+#target-seven p::-moz-selection { background: var(--raisin); }
 
 /* ==========================================================================
-   HEADER BUTTON DATA-TOGGLE FEEDBACK VARIABLES
+   Nav outline and pagination color variables
    ========================================================================== */
-/* CREDIT (inspiration) https://stackoverflow.com/questions/137449/css-for-hover-that-includes-all-child-elements */
 
-[id^="heading"] * {
+/*
+ * Pagination item specific active states.
+ *
+ * Attach signature colors to pagination items to transition when given
+ * scrollspy's '.active' class via general sibling selector.
+ */
+
+.nav-pills.menu-sidebar .link-one.active ~ .nav-one:after { border-top-color: var(--obsidian); }
+.nav-pills.menu-sidebar .link-two.active ~ .nav-two:after { border-top-color: var(--slate); }
+.nav-pills.menu-sidebar .link-three.active ~ .nav-three:after { border-top-color: var(--ruby); }
+.nav-pills.menu-sidebar .link-four.active ~ .nav-four:after { border-top-color: var(--denim); }
+.nav-pills.menu-sidebar .link-five.active ~ .nav-five:after { border-top-color: var(--canary); }
+.nav-pills.menu-sidebar .link-six.active ~ .nav-six:after { border-top-color: var(--moss); }
+.nav-pills.menu-sidebar .link-seven.active ~ .nav-seven:after { border-top-color: var(--obsidian); }
+
+/*
+ * Scrollspy specific active states.
+ *
+ * Attach signature colors to scrollspy's '.active' class when added to link items
+ * in nav outline
+ */
+
+.nav-pills.menu-sidebar .link-one.active { color: var(--slate); border-left-color: var(--green); }
+.nav-pills.menu-sidebar .link-two.active { color: var(--grey); border-left-color: var(--grey); }
+.nav-pills.menu-sidebar .link-three.active { color: var(--red); border-left-color: var(--red); }
+.nav-pills.menu-sidebar .link-four.active { color: var(--blue); border-left-color: var(--blue); }
+.nav-pills.menu-sidebar .link-five.active { color: var(--yellow); border-left-color: var(--yellow); }
+.nav-pills.menu-sidebar .link-six.active { color: var(--green); border-left-color: var(--green); }
+.nav-pills.menu-sidebar .link-seven.active { color: var(--grey); border-left-color: var(--grey); }
+
+/* Attach signature colors to hovered link items in nav outline */
+
+.link-one.nav-link:hover { color: var(--grey); }
+.link-two.nav-link:hover { color: var(--grey); }
+.link-three.nav-link:hover { color: var(--red); }
+.link-four.nav-link:hover { color: var(--blue); }
+.link-five.nav-link:hover { color: var(--canary); }
+.link-six.nav-link:hover { color: var(--green); }
+.link-seven.nav-link:hover { color: var(--yellow); }
+
+/* Attach signature styles to nav-link pseudo :before element to transition
+ * border colors when given scrollspy's '.active' class in nav outline.
+ */
+
+.nav-pills.menu-sidebar .link-one.active:before { border-top-color: var(--obsidian); }
+.nav-pills.menu-sidebar .link-two.active:before { border-top-color: var(--slate); }
+.nav-pills.menu-sidebar .link-three.active:before { border-top-color: var(--ruby); }
+.nav-pills.menu-sidebar .link-four.active:before { border-top-color: var(--denim); }
+.nav-pills.menu-sidebar .link-five.active:before { border-top-color: var(--canary); }
+.nav-pills.menu-sidebar .link-six.active:before { border-top-color: var(--moss); }
+.nav-pills.menu-sidebar .link-seven.active:before { border-top-color: var(--raisin); }
+
+/* ==========================================================================
+   Header button feedback and color variables
+   ========================================================================== */
+
+[id^="control"] * {
     transition: all 0.3s var(--glide) 0.2s;
 }
 
@@ -4143,32 +5021,42 @@ blockquote, q {
     padding-bottom: .25rem;
 }
 
-[data-toggle="collapse"][aria-expanded="true"] .header-text {
-    /*width: 100%;*/
-}
-
 [data-toggle="collapse"][aria-expanded="true"] .header-text:before {
     font-weight: 500;
 }
 
-#headingZero [aria-expanded="true"] .header-text:before { color: var(--white); }
-#headingOne [aria-expanded="true"] .header-text:before { color: var(--grey); }
-#headingTwo [aria-expanded="true"] .header-text:before { color: var(--red); }
-#headingThree [aria-expanded="true"] .header-text:before { color: var(--blue); }
-#headingFour [aria-expanded="true"] .header-text:before { color: var(--canary); }
-#headingFive [aria-expanded="true"] .header-text:before { color: var(--green); }
-#headingSix [aria-expanded="true"] .header-text:before { color: var(--raisin); }
+/**
+ * Header text feedback
+ *
+ * This changes the color of the forward slash '/' in each article's header
+ * button to the section's signature color when the section is open.
+ */
 
-#headingZero .header-title:hover::after { border-color: var(--white); }
-#headingOne .header-title:hover::after { border-color: var(--grey); }
-#headingTwo .header-title:hover::after { border-color: var(--red); }
-#headingThree .header-title:hover::after { border-color: var(--blue); }
-#headingFour .header-title:hover::after { border-color: var(--canary); }
-#headingFive .header-title:hover::after { border-color: var(--green); }
-#headingSix .header-title:hover::after { border-color: var(--yellow); }
+#control-one [aria-expanded="true"] .header-text:before { color: var(--white); }
+#control-two [aria-expanded="true"] .header-text:before { color: var(--grey); }
+#control-three [aria-expanded="true"] .header-text:before { color: var(--red); }
+#control-four [aria-expanded="true"] .header-text:before { color: var(--blue); }
+#control-five [aria-expanded="true"] .header-text:before { color: var(--canary); }
+#control-six [aria-expanded="true"] .header-text:before { color: var(--green); }
+#control-seven [aria-expanded="true"] .header-text:before { color: var(--raisin); }
+
+/**
+ * Pseudo-horizontals feedback
+ *
+ * This changes the border color of the horizontal line in each article's
+ * header button to the section's signature color when hovered over.
+ */
+
+#control-one .header-title:hover::after { border-color: var(--white); }
+#control-two .header-title:hover::after { border-color: var(--grey); }
+#control-three .header-title:hover::after { border-color: var(--red); }
+#control-four .header-title:hover::after { border-color: var(--blue); }
+#control-five .header-title:hover::after { border-color: var(--canary); }
+#control-six .header-title:hover::after { border-color: var(--green); }
+#control-seven .header-title:hover::after { border-color: var(--yellow); }
 
 /* ==========================================================================
-   LANDING ANIMATION
+   Landing animation
    ========================================================================== */
 
 /* CREDIT (helper tool) https://cubic-bezier.com/#.23,-0.09,.18,1.25 */
@@ -4178,105 +5066,11 @@ blockquote, q {
 /* In cubic-bezier(x1, y1, x2, y2), x is time, y is progression; x(time) cannot go below 0 or over 1, but y(progression) can */
 /* With a careful understanding of the definition, below are custom keywords with custom time functions  */
 
-:root {
-
-    /* Anim/Trans Timing function variables */
-
-    /*!
-     * 'glide' is a refined variation of 'ease-in-out':
-     * a smooth slow start with an equally smooth slow end https://cubic-bezier.com/#.45,.02,.51,.95
-     */
-    --glide: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-
-    /*!
-     * 'breeze' is an 'ease' with a heightened overbound:
-     * a rapid start with a slow arrival and discreet bounce https://cubic-bezier.com/#.23,-0.09,.18,1.25
-     */
-    --breeze: cubic-bezier(.23, -0.09, .18, 1.25);
-
-    /*!
-     * 'zip' is a 'linear' progression with a surprise bounce:
-     * a consistent speed with an interrupted end https://cubic-bezier.com/#1,1.4,.41,1.01
-     */
-    --zip: cubic-bezier(1, 1.4, 0.41, 1.01);
-
-    /*!
-     * 'swoop' is an 'ease-in-out' with a late and steep progression:
-     * an extra slow start with a rapid progression before a relaxed end https://cubic-bezier.com/#1,0,.41,1.01
-     */
-    --swoop: cubic-bezier(1, 0, 0.41, 1.01);
-
-    /* Anim/Trans Duration variables */
-
-    --passing: 1s;
-    --dashing: 0.75s;
-    --bustling: 0.65s;
-    --fleeting: 0.55s;
-    --flashing: 0.3s;
-
-    /* Anim/Trans Time Delay variables */
-
-    --late: 0.36s;
-    --short: 0.2s;
-    --prompt: 0.05s;
-    --early: 0s;
-
-    /* Animation name variables */
-
-    --load-down: load-down;
-    --load-up: load-up;
-    --fade-in: fade-in;
-
-    /* Transition property variables */
-
-    --elem: height;
-    --trans-elem-all: all;
-    --trans-elem: var(--elem);
-
-    /* Animation Shorthand variables */
-    /* Name, Duration, Time Function, Delay, Iteration Count, Direction, Fill mode, Play state */
-
-    /*animation: load-down 0.55s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
-    --fleet-down-prompt-glide-anim: var(--load-down) var(--fleeting) var(--glide) var(--prompt) 1 normal forwards running;
-
-    /*animation: load-up 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
-    --dash-up-early-glide-anim: var(--load-up) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
-
-    /*animation: load-up 0.55s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
-    --fleet-up-prompt-glide-anim: var(--load-up) var(--fleeting) var(--glide) var(--prompt) 1 normal forwards running;
-
-    /*animation: load-down 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
-    --dash-down-early-glide-anim: var(--load-down) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
-
-    /*animation: load-down 0.55s 0.s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
-    --fleet-down-early-glide-anim: var(--load-down) var(--fleeting) var(--glide) var(--early) 1 normal forwards running;
-
-    /*animation: load-up 0.75s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
-    --dash-up-prompt-glide-anim: var(--load-down) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
-
-    /* Transition Shorthand variables */
-    /* Transition Property, Duration, Timing Function, Delay */
-
-    /*transition: all 0.3s 0.36s cubic-bezier(0.455, 0.03, 0.515, 0.955);*/
-    --flash-all-late-glide-trans: var(--trans-elem-all) var(--flashing) var(--glide) var(--late);
-
-    /*transition: all 0.3s 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;*/
-    --flash-all-flash-glide-trans: var(--trans-elem-all) var(--flashing) var(--glide) var(--flashing);
-
-    /*transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);*/
-    --bust-all-early-zip-trans: var(--trans-elem-all) var(--bustling) var(--zip) var(--early);
-
-    /*transition: all 0.3s 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);*/
-    --flash-all-short-glide-trans: var(--trans-elem-all) var(--flashing) var(--glide) var(--short);
-
-    /*transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);*/
-    --bust-all-early-swoop-trans: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
-}
 
 /* Loads up from down */
 /* BUG: Animation from Side Nav toggle is carried over */
-
-#collapseLanding {
+/*#resumeStack { animation: load-down .75s var(--glide) 0s;  }*/
+#target-zero {
     position: relative;
     text-align: center;
 
@@ -4286,6 +5080,32 @@ blockquote, q {
     -webkit-transition: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
     -o-transition: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
     transition: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
+}
+
+@-webkit-keyframes intro {
+    0% {
+        /*--of-twelve: 1;*/
+        /*opacity: 0;*/
+        /*width: 0;*/
+        /*visibility: hidden;*/
+        /*margin-top: 900px;*/
+        /*-webkit-transform: translateY(0) scale(0) rotateX(10deg) rotateY(10deg) rotateZ(40deg);*/
+        /*transform: translateY(0) scale(0) rotateX(10deg) rotateY(10deg) rotateZ(40deg);*/
+    }
+    50% {
+        /*--of-twelve: 11;*/
+        /*opacity: .51;*/
+        /*width: ;*/
+    }
+    100% {
+        /*opacity: 1;*/
+        /*--of-twelve: 11;*/
+        /*width: 100%;*/
+        /*margin-top: 0;*/
+        /*visibility: visible;*/
+        /*-webkit-transform: translateY(0) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);*/
+        /*transform: translateY(0) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);*/
+    }
 }
 
 article {
@@ -4298,9 +5118,9 @@ article {
     transition: var(--flash-all-late-glide-trans);
 }
 
-#articleZero,
-#articleThree,
-#articleSix {
+#element-one,
+#element-four,
+#element-seven {
     position: relative;
     animation: var(--dash-up-early-glide-anim);
     -webkit-animation: var(--dash-up-early-glide-anim);
@@ -4310,9 +5130,9 @@ article {
     transition: var(--flash-all-late-glide-trans);
 }
 
-#headingZero,
-#headingThree,
-#headingSix {
+#control-one,
+#control-four,
+#control-seven {
     position: relative;
 
     -webkit-animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;
@@ -4323,8 +5143,8 @@ article {
     transition: var(--flash-all-flash-glide-trans);
 }
 
-#headingOne,
-#headingFour {
+#control-two,
+#control-five {
     position: relative;
 
     -webkit-animation: load-right var(--dashing) var(--glide) var(--early) 1 normal forwards running;
@@ -4335,8 +5155,8 @@ article {
     transition: var(--flash-all-flash-glide-trans);
 }
 
-#headingTwo,
-#headingFive {
+#control-three,
+#control-six {
     position: relative;
 
     -webkit-animation: load-left var(--dashing) var(--glide) var(--early) 1 normal forwards running;
@@ -4347,8 +5167,8 @@ article {
     transition: var(--flash-all-late-glide-trans);
 }
 
-header.header,
-footer.footer {
+.body-header,
+.body-footer {
     -webkit-animation: var(--fade-in) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
     animation: var(--fade-in) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
 }
