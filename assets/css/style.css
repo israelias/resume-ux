@@ -178,6 +178,12 @@
     justify-content: center;
 }
 
+/* TODO fix margin right on safari
+    Fix button target on nav
+    Fix overflow of nav links on opera, make them wrap
+    Fix overflow on ref section and examples section
+    */
+
 /* Achieve a centered 'col-*' without '.container.row.col' wrapper divs */
 /* If --of-twelve: 11; then --width: 91.66667% is given to children of :root (in this case, the <body>) */
 
@@ -391,7 +397,8 @@ h6 {
 }
 
 .root-body > * {
-    flex: 1;
+    /*flex: 1;*/
+    /* todo */
 
     display: flex;
     justify-content: center;
@@ -404,6 +411,8 @@ h6 {
     --blur-md: 0px;
 
     position: fixed;
+    /* todo */
+    /*overflow: auto;*/
     overflow: hidden;
 
     top: 0;
@@ -424,44 +433,44 @@ h6 {
     padding-left: calc(var(--gutter-x) / 2);
 }
 
-.body-header:after {
-    display: block;
-    content: "";
-    height: 10px;
-}
+/*.body-header:after {*/
+/*    display: block;*/
+/*    content: "";*/
+/*    height: 10px;*/
+/*}*/
 
 /* Maximum height query */
 
-@media (max-height: 666.98px) {
-    :root {
-        --of-twelve: 10.75;
-        font-size: .938rem;
-    }
+/*@media (max-height: 666.98px) {*/
+/*    :root {*/
+/*        --of-twelve: 10.75;*/
+/*        font-size: .938rem;*/
+/*    }*/
 
-    .body-main {
-        position: -webkit-sticky;
-        position: sticky;
-        overflow: auto;
+/*    .body-main {*/
+/*        position: -webkit-sticky;*/
+/*        position: sticky;*/
+/*        overflow: auto;*/
 
-        top: 3rem;
-        right: 0;
-        bottom: 3rem;
-        left: 0;
-        padding-bottom: 3rem;
+/*        top: 3rem;*/
+/*        right: 0;*/
+/*        bottom: 3rem;*/
+/*        left: 0;*/
+/*        padding-bottom: 3rem;*/
 
-    }
+/*    }*/
 
-    [data-parent="#resumeStack"] {
-        --height: calc(100vmax - 8rem);
-    }
+/*    [data-parent="#resumeStack"] {*/
+/*        --height: calc(100vmax - 8rem);*/
+/*    }*/
 
-    [data-parent="#resumeStack"].show {
-        --height: calc(100vmax - 8rem);
-        height: var(--height);
+/*    [data-parent="#resumeStack"].show {*/
+/*        --height: calc(100vmax - 8rem);*/
+/*        height: var(--height);*/
 
-        flex-direction: column-reverse;
-    }
-}
+/*        flex-direction: column-reverse;*/
+/*    }*/
+/*}*/
 
 /* Absolutely positioned elements in the dom will always go above everything even if it's position fixed */
 /* https://stackoverflow.com/questions/13071429/how-to-position-main-content-below-header-and-footer-in-css */
@@ -1274,7 +1283,8 @@ section.right:after {
  */
 
 [data-parent="#resumeStack"] {
-    --height: calc(100vmin - 21rem - 8rem);
+    /* todo from vmax */
+    --height: calc(100vh - 21rem - 8rem);
     overflow: auto;
 }
 
@@ -1722,7 +1732,10 @@ section.right:after {
     --blur-md: 6px;
 
     position: static;
-    overflow: visible;
+    /* todo */
+    /*overflow: visible;*/
+    overflow: scroll;
+    flex-direction: column;
     padding-left: 0;
     padding-right: 0;
 }
@@ -2140,9 +2153,10 @@ ul.nav {
 @media (max-width: 575.98px) {
 
     #toggle-all:checked ~ main {
-        position: static;
+        /* Todo */
+        /*position: static;*/
         display: block;
-        overflow: scroll;
+        /*overflow: scroll;*/
         overflow-x: hidden;
     }
 
@@ -2151,15 +2165,6 @@ ul.nav {
     .outline-item,
     .list-h3 {
         width: 100%;
-    }
-
-
-    .nav-content:first-child {
-        /*display: none;*/
-    }
-
-    .nav-links > * {
-        /*max-width: 100% !important;*/
     }
 
     .link-zero {
@@ -2188,10 +2193,6 @@ ul.nav {
         display: none;
     }
 
-    .nav-pills.menu-sidebar .nav-link {
-        line-height: 1rem;
-    }
-
     .list-h4 a.nav-link {
         overflow: hidden;
 
@@ -2212,11 +2213,8 @@ ul.nav {
     #toggle-all:checked ~ main .header-text {
         width: 100%;
     }
-
-    #toggle-all:checked ~ .body-nav . {
-
-    }
 }
+
 @media (min-width: 576px) { .link-icon { display: none; } }
 
 @media (max-width: 991.98px) {
@@ -2308,7 +2306,8 @@ ul.nav {
 .body-nav {
 
     /* Set a new value (out of twelve) */
-    --of-twelve: 4;
+    /* todo from 4 */
+    --of-twelve: 3;
 
     /* Repeat and re-declare --width and --offset properties together with the new value --of-twelve */
     --width: calc(var(--of-twelve) / 12 * 100%);
@@ -2334,6 +2333,8 @@ ul.nav {
 
     .body-main {
         width: var(--mainwidth) !important;
+        /* todo remove margin right */
+        margin-right: auto !important;
     }
 }
 
@@ -2552,10 +2553,12 @@ ul.nav {
     0% {
         width: calc(var(--mainwidth) + var(--navwidth));
         margin-left: var(--mainstart);
+        margin-right: var(--mainstart);
     }
     100% {
         width: var(--mainwidth);
         margin-left: var(--navwidth);
+        margin-right: auto;
     }
 }
 
@@ -2563,10 +2566,12 @@ ul.nav {
     0% {
         width: calc(var(--mainwidth) + var(--navwidth));
         margin-left: var(--mainstart);
+        margin-right: var(--mainstart);
     }
     100% {
         width: var(--mainwidth);
         margin-left: var(--navwidth);
+        margin-right: auto;
     }
 }
 
@@ -2576,20 +2581,24 @@ ul.nav {
     0% {
         width: var(--mainwidth);
         margin-left: var(--navwidth);
+        margin-right: auto;
     }
     100% {
         width: calc(var(--mainwidth) + var(--navwidth));
         margin-left: var(--mainstart);
+        margin-right: var(--mainstart);
     }
 }
 @keyframes main-grow {
     0% {
         width: var(--mainwidth);
         margin-left: var(--navwidth);
+        margin-right: auto;
     }
     100% {
         width: calc(var(--mainwidth) + var(--navwidth));
         margin-left: var(--mainstart);
+        margin-right: var(--mainstart);
     }
 }
 
