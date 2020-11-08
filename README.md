@@ -87,8 +87,7 @@ The result is a web resume that is:
 
  Here we go!
 
-<!--<details>-->
-<!--  <summary>Strategy</summary>-->
+<details><summary> 1.0 Strategy  </summary>
 
 ## 1.0 Strategy
 
@@ -106,6 +105,8 @@ The result is a web resume that is:
 
 - Their goals and needs are:
   - In addition to above (as the site is the owner is the business is the consumer), the ultimate goal is to transform a CV into an interactive, attractive and customisable experience that reflects the candidate's proficiency in the manner in which the content itself is presented.
+
+<details><summary> 1.1 Research </summary>
 
 ### 1.1 Research
 
@@ -186,6 +187,8 @@ Three target user profiles were assembled from user research. Each profile repre
 <!--| <sub>Loathes</sub>     | <br/>Seeing other companies' coding challenges in your repo.<sup>[1](#note-1)<sup><br/>                                                                                                                                                                    | <br/>Seeing inappropriate content or things that are too personal.<sup>[1](#note-1)<sup><br/>                                                                                | <br/>Seeing ubiquitous progress bars that don't add real value.<sup>[2](#note-2)<sup><br/>                                                                                                                                          |-->
 <!--| <sub>Quote</sub>       | <br/>As a leader in the industry, I won't spend much time here. What is it about you that stands out and that I haven't already seen in others? I want to *see* that without having to *find* that. Whatever that is.<br/><br/>                            | <br/>As a stakeholder in the hiring process, if you win, I win. Why would you choose us? I'd like to know where you are and give you a call.<sup>[4](#note-4)<sup><br/><br/> | <br/>As a collaborator with a background in design, cognitive diversity on your endeavours found through the exploration of other interests is just as important as a myriad of code repositories.<sup>[1](#note-1)<sup> <br/><br/> |-->
 
+</details>
+<details><summary> 1.2 User Expectations </summary>
 
 ### 1.2 User Expectations
 
@@ -212,6 +215,9 @@ All additions and improvements to the plan should always count towards the goals
 - Give clear understanding of owner's nuanced stack expertise
 - Evidence of dev community activity in social media (dev.to, Twitter, etc.)
 - Reduce number clicks to arrive at goal
+
+</details>
+<details><summary> 1.3 User Stories </summary>
 
 ### 1.3 User Stories
 
@@ -260,6 +266,8 @@ All additions and improvements to the plan should always count towards the goals
 >
 > ###### <sub>Note</sub> 4 Varies. Profile summaries and headlines on LinkedIn
 
+</details>
+<details><summary> 1.4 High Level Paradigms </summary>
 
 ### 1.4 High-Level Paradigms
 
@@ -279,6 +287,9 @@ In order to achieve the goal of standing out to the three target users, the foll
 2. Provide opportunistic actions to increase GitHub following (collaborate) and recruiter interaction (hire)
 3. Capitalize on owner's nuanced position in the tech stack as primary unique selling point
 4. In every way achievable, portray all measurable 'static' information as 'live' statistics
+
+</details>
+<details><summary> 1.5 Strategy Table </summary>
 
 ### 1.5 Strategy table
 
@@ -319,10 +330,9 @@ In order to achieve the goal of standing out to the three target users, the foll
 
 <!--If importance and viability are equal, then we are in a position to do it all. Draw out your own version of the graph below to work out what features you should drop.-->
 
-<!--</details>-->
-
-<!--<details>-->
-<!--  <summary>Scope</summary>-->
+</details>
+</details>
+<details><summary> 2.0 Scope </summary>
 
 ## 2.0 Scope
 
@@ -339,6 +349,8 @@ In order to achieve the goal of standing out to the three target users, the foll
 <!--- Use **SPRINT** goals to keep on track. Don't allow scope-creep to happen (additional features not agreed on in strategy)-->
 
 <!--- Pack in MVP features up front, unfold new experiences over time.-->
+
+<details><summary> 2.1 Requirement and Specifications </summary>
 
 ### 2.1 Requirements and Functional Specifications
 
@@ -365,6 +377,9 @@ There is a difference between how one imagines something will be used and how it
   - [ ] The website should never "go to sleep" or get buried under no activity
   - [ ] Take advantage of leaving easter eggs to attract return visits.
     - Think of them like designed error messages.
+
+</details>
+<details><summary> 2.2 Functional Requirements </summary>
 
 ### 2.2 Functional Requirements
 > ###### Requirements are needs; not features.
@@ -397,6 +412,9 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
 <!--- [ ] Brainstorm and mind map on what things people might not know they need. -->
 <!--- [ ] Research and discussion on needs of the demographic.-->
 
+</details>
+<details><summary> 2.3 Content Requirements </summary>
+
 ### 2.3 Content Requirements
 
 <!--- What mixed content/media do we need to meet the needs of the user?-->
@@ -421,8 +439,10 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
 | Recommendations                     | <ol><li>Excerpts from recommendations with:<ol><li> recommender</li><li>relationship</li> <li>Excerpt</li><li>image</li><li> link</li></ol></li></ol> | text, image             |      |
 | Download CV                         | PDF version of the above                                                                                                                              | text                    |      |
 
+</details>
+<details><summary> 2.4 What’s on the table? </summary>
 
-### 2.2 What's On The Table?
+### 2.4 What's On The Table?
 
 - [x] Landing Page (Voice)
 <!--- [ ] <sup>________________________________________________(*cta*)</sup>-->
@@ -457,10 +477,9 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
 
 <!--#### Release 3-->
 
-<!--</details>-->
-
-<!--<details>-->
-<!--  <summary>Structure</summary>-->
+</details>
+</details>
+<details><summary> 3.0 Structure </summary>
 
 ## 3.0 Structure
 
@@ -473,6 +492,8 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
 <!--- Consistency of elements and relationships-->
 <!--- Is it learnable and intuitive?-->
 <!--- Can the user understand and easily navigate through the system when using it for the first time?-->
+
+<details><summary> 3.1 Organization of Func </summary>
 
 ### 3.1 Organisation of Functionality and Content
 
@@ -492,6 +513,9 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
 
 - Information is organized in a linear sequence at the hub stack
 - The order sequence is a direct response to the user research implemented at strategy plane
+
+</details>
+<details><summary> 3.2 Interaction Design </summary>
 
 ### 3.2 Interaction Design (IXD)
 
@@ -548,6 +572,9 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
 	- The accordion stack is designed so that additional stacks can be added in the future, with a possible infinite scroll feature.
 	- In this scenario, a “blank” section could offer a “404 Error” page that is designed in the same way as all sections
 - Home == Safety
+
+</details>
+<details><summary> 3.3 Information Architecture </summary>
 
 ### 3.3 Information Architecture (IA)
 
@@ -701,6 +728,9 @@ The __bare minimum__ requirements to accommodate the needs of the owner and the 
 ![](documentation/RedUX_200901_1626.png)
 
 ![](documentation/RedUX_200901_1627.png)
+
+</details>
+<details><summary> 3.4 Principles of Organization </summary>
 
 ### 3.4 Principles of Organisation
 
@@ -881,10 +911,9 @@ Dictionary list (unordered, get by key name)
     ```
 
 
-<!--</details>-->
-
-<!--<details>-->
-<!--  <summary>Skeleton</summary>-->
+</details>
+</details>
+<details><summary> 4.0 Skeleton </summary>
 
 ## 4.0 Skeleton
 
@@ -909,6 +938,8 @@ What form will the application take? How will the information be represented? Ho
 <!--- Allows *immediate* interaction -- first-time learning-->
 <!--- Audience appropriate-->
 <!--- Perfectly meets the needs of its intended audience-->
+
+<details><summary> 4.1 Features and Usefulness </summary>
 
 ### 4.1 Features and Usefulness
 
@@ -937,6 +968,9 @@ What form will the application take? How will the information be represented? Ho
 - Usability increases as it is a repetitive motion
 - Gives the user easy decisions that do not over-complicate things
 - Choices are reduced to what is available on the stack
+
+</details>
+<details><summary> 4.2 Navigation Design </summary>
 
 ### 4.2 Navigation Design
 
@@ -993,6 +1027,9 @@ What form will the application take? How will the information be represented? Ho
 - Are intuitive and obvious
 - Are taken from everyday life
 
+</details>
+<details><summary> 4.3 Information Design </summary>
+	
 ### 4.3 Information Design
 
 >###### Arrangement of the elements that contain the information
@@ -1028,6 +1065,9 @@ Good Info design should be invisible...
 <!--  - Work History-->
 
 <!--Which icons will we use? Which are best to represent our needs?-->
+
+</details>
+<details><summary> 4.4 Interface Design </summary>
 
 ### 4.4 Interface Design
 
@@ -1109,10 +1149,9 @@ ___
 <!--- Do the relationships work?-->
 <!--- Paper first, then Balsamic or Marvel app.-->
 
-<!--</details>-->
-
-<!--<details>-->
-<!--  <summary>Surface</summary>-->
+</details>
+</details>
+<details><summary> 5.0 Surface </summary>
 
 ## 5.0 Surface
 
@@ -1126,6 +1165,8 @@ ___
 - What can the user click on?
 - Where can the user go?
 - What is the final version of the info appearing on the screen?
+
+<details><summary> 5.1 Visual Language </summary>
 
 ### Visual Language
 
@@ -1150,6 +1191,9 @@ The most important elements are easily recognized
 >
 > Consistent patterns
 
+</details>
+<details><summary> 5.2 Typography </summary>
+
 #### Fonts and Typography
 
 - Should be visually distinct
@@ -1158,7 +1202,8 @@ The most important elements are easily recognized
 
 > ### Good UX smells like value.
 
-<!--</details>-->
+</details>
+</details>
 
 ### Design
 
