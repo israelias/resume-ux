@@ -1036,9 +1036,8 @@ Good Info design should be invisible...
 <!--- Prototyping and wireframes-->
 <!--- Mockups using Balsamic-->
 
-#### Wireframes: Schematic
 
-![](documentation/RedUX_200901_1639.png)
+<!--![](documentation/RedUX_200901_1639.png)-->
 
 <!--- Page Anatomy-->
 <!--- Element Stack-->
@@ -1050,36 +1049,40 @@ ___
 - Expanded Nest Mobile
 
 
-#### Wireframes: Development
+#### Wireframes: Schematic
 
-- Landing
-  - [Web]()
-  - Mobile A
-  - Mobile B
-- Introduction
-  - Web
-  - Mobile A
-  - Mobile B
-- Technologies
-  - Web
-  - Mobile A
-  - Mobile B
-- Examples
-  - Web
-  - Mobile A
-  - Mobile B
-- Experience
-  - Web
-  - Mobile A
-  - Mobile B
-- References
-  - Web
-  - Mobile A
-  - Mobile B
-- Contact
-  - Web
-  - Mobile A
-  - Mobile B
+- Five Planes of UX
+  - [Procedural Wires](https://israelias.github.io/resume-redux/wireframes/schematic/Wireframes_Schematic_Mentor_Presentation_03SEP2020_Part_One.pdf)
+
+- Part 1: Landing
+  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_01.png)
+  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_01_a.png)
+  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_01_b.png)
+- Part 2: Introduction
+  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_02.png)
+  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_02_a.png)
+  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_02_b.png)
+- Part 3: Technologies
+  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_03.png)
+  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_03_a.png)
+  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_03_b.png)
+- Part 4: Examples
+  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_04.png)
+  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_04_a.png)
+  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_04_b.png)
+  - [Mobile C](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_04_c.png)
+- Part 5: Experience
+  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_05.png)
+  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_05_a.png)
+  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_05_b.png)
+- Part 6: References
+  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_06.png)
+  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_06_a.png)
+  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_06_b.png)
+- Part 7: Contact
+  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_07.png)
+  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_07_a.png)
+  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_07_b.png)
 
 ___
 
