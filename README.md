@@ -4,7 +4,6 @@
 [![Documentation Status](https://readthedocs.org/projects/resume-redux/badge/?version=latest)](https://resume-redux.readthedocs.io/en/latest/?badge=latest)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4204/badge)](https://bestpractices.coreinfrastructure.org/projects/4204)
 
-<sub>The project is in early stages of UX design; currently wrapping up user research; developing high-fidelity wireframes using Adobe XD.</sub>
 
 <!--![](documentation/RedUX_200826_0413.png)-->
 
@@ -32,30 +31,10 @@ The result is a web resume that is:
 - [Resume RedUX](#resume-redux)
 - [UX](#ux)
   - [1.0 Strategy](#10-strategy)
-    - [1.1 Research](#11-research)
-    - [1.2 User Expectations](#12-user-expectations)
-    - [1.3 User Stories](#13-user-stories)
-    - [1.4 High-Level Paradigms](#14-high-level-paradigms)
-    - [1.5 Strategy table](#15-strategy-table)
   - [2.0 Scope](#20-scope)
-    - [2.1 Requirements and Functional Specifications](#21-requirements-and-functional-specifications)
-    - [2.2 Functional Requirements](#22-functional-requirements)
-    - [2.3 Content Requirements](#23-content-requirements)
-    - [2.2 What's On The Table?](#22-whats-on-the-table)
   - [3.0 Structure](#30-structure)
-    - [3.1 Organisation of Functionality and Content](#31-organisation-of-functionality-and-content)
-    - [3.2 Interaction Design (IXD)](#32-interaction-design-ixd)
-    - [3.3 Information Architecture (IA)](#33-information-architecture-ia)
-    - [3.4 Principles of Organisation](#34-principles-of-organisation)
   - [4.0 Skeleton](#40-skeleton)
-    - [4.1 Features and Usefulness](#41-features-and-usefulness)
-    - [4.2 Navigation Design](#42-navigation-design)
-    - [4.3 Information Design](#43-information-design)
-    - [4.4 Interface Design](#44-interface-design)
   - [5.0 Surface](#50-surface)
-    - [Visual Language](#visual-language)
-    - [Good UX smells like value.](#good-ux-smells-like-value)
-    - [Design](#design)
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Features Left to Implement](#features-left-to-implement)
@@ -95,7 +74,7 @@ The result is a web resume that is:
 > ###### For whom I am trying to achieve it.
 
 - The main goals of the site are:
-  - To establish a personal brand for the owner and avatar for the owner's online presence
+  - To establish a personal and professional brand for the owner
   - Attract and retain a following in the developer community
   - Attract recruiter reader software and analytics
   - Be up to a standard that is competitve with UX designed responsive web resumes
@@ -113,7 +92,7 @@ The result is a web resume that is:
 
 	#### Stakeholder Research (Self)
 
-	![](documentation/RedUX_200901_1619.png)
+	![](https://israelias.github.io/resume-redux/documentation/RedUX_200901_1619.png)
 
 	#### Competitor Review
 
@@ -155,16 +134,17 @@ The result is a web resume that is:
 
 	>###### Note: Names and entities have been modified/fabricated for this exercise.
 
-	![](documentation/RedUX_200901_1621.png)
+    <img src="documentation/RedUX_200901_1621.png" width="200%">
+	<!--![](https://israelias.github.io/resume-redux/documentation/RedUX_200901_1621.png)-->
 
-	<!--|                        | <img src="documentation/RedUX_200817_Jacob_01.jpg" width="200px">                                                                                                                                                                                          | <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px">                                                                                                            | <img src="documentation/RedUX_200821_Peter_01.jpg" width="200px">                                                                                                                                                                   |-->
-	<!--| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |-->
-	<!--| <sub>Name</sub>        | **Jacob Grobin**                                                                                                                                                                                                                                           | **Tracy Letts**                                                                                                                                                              | **Peter Venti**                                                                                                                                                                                                                     |-->
-	<!--| <sub>Designation</sub> | **Senior Developer**                                                                                                                                                                                                                                       | **Recruiter**                                                                                                                                                                | **Collaborator**                                                                                                                                                                                                                    |-->
-	<!--| <sub>Headline</sub>    | VP of Engineering at Fulcram3D <br/>New York, NY                                                                                                                                                                                                           | Talent Acquisition Lead at Enigma Recruitment<br/> Sydney NSW                                                                                                                | Design Computation at Lamb Space Design<br/>San Francisco, CA                                                                                                                                                                       |-->
-	<!--| <sub>Loves</sub>       | <br/>Seeing a polyglot who shows interest in different languages.<br/>                                                                                                                                                                                     | <br/>Seeing a lot of activity on your profile shows me how involved you are as a developer.<br/>                                                                             | <br/>Seeing that you contribute to open source projects shows me that you want to give back and can play well with others.<sup>[1](#note-1)<sup><br/>                                                                               |-->
-	<!--| <sub>Loathes</sub>     | <br/>Seeing other companies' coding challenges in your repo.<sup>[1](#note-1)<sup><br/>                                                                                                                                                                    | <br/>Seeing inappropriate content or things that are too personal.<sup>[1](#note-1)<sup><br/>                                                                                | <br/>Seeing ubiquitous progress bars that don't add real value.<sup>[2](#note-2)<sup><br/>                                                                                                                                          |-->
-	<!--| <sub>Quote</sub>       | <br/>As a leader in the industry, I won't spend much time here. What is it about you that stands out and that I haven't already seen in others? I want to *see* that without having to *find* that. Whatever that is.<br/><br/>                            | <br/>As a stakeholder in the hiring process, if you win, I win. Why would you choose us? I'd like to know where you are and give you a call.<sup>[4](#note-4)<sup><br/><br/> | <br/>As a collaborator with a background in design, cognitive diversity on your endeavours found through the exploration of other interests is just as important as a myriad of code repositories.<sup>[1](#note-1)<sup> <br/><br/> |-->
+	|                        | <img src="documentation/RedUX_200817_Jacob_01.jpg" width="200px">                                                                                                                                                                                          | <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px">                                                                                                            | <img src="documentation/RedUX_200821_Peter_01.jpg" width="200px">                                                                                                                                                                   |
+	| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+	| <sub>Name</sub>        | **Jacob Grobin**                                                                                                                                                                                                                                           | **Tracy Letts**                                                                                                                                                              | **Peter Venti**                                                                                                                                                                                                                     |
+	| <sub>Designation</sub> | **Senior Developer**                                                                                                                                                                                                                                       | **Recruiter**                                                                                                                                                                | **Collaborator**                                                                                                                                                                                                                    |
+	| <sub>Headline</sub>    | VP of Engineering at Fulcram3D <br/>New York, NY                                                                                                                                                                                                           | Talent Acquisition Lead at Enigma Recruitment<br/> Sydney NSW                                                                                                                | Design Computation at Lamb Space Design<br/>San Francisco, CA                                                                                                                                                                       |
+	| <sub>Loves</sub>       | <br/>Seeing a polyglot who shows interest in different languages.<br/>                                                                                                                                                                                     | <br/>Seeing a lot of activity on your profile shows me how involved you are as a developer.<br/>                                                                             | <br/>Seeing that you contribute to open source projects shows me that you want to give back and can play well with others.<sup>[1](#note-1)<sup><br/>                                                                               |
+	| <sub>Loathes</sub>     | <br/>Seeing other companies' coding challenges in your repo.<sup>[1](#note-1)<sup><br/>                                                                                                                                                                    | <br/>Seeing inappropriate content or things that are too personal.<sup>[1](#note-1)<sup><br/>                                                                                | <br/>Seeing ubiquitous progress bars that don't add real value.<sup>[2](#note-2)<sup><br/>                                                                                                                                          |
+	| <sub>Quote</sub>       | <br/>As a leader in the industry, I won't spend much time here. What is it about you that stands out and that I haven't already seen in others? I want to *see* that without having to *find* that. Whatever that is.<br/><br/>                            | <br/>As a stakeholder in the hiring process, if you win, I win. Why would you choose us? I'd like to know where you are and give you a call.<sup>[4](#note-4)<sup><br/><br/> | <br/>As a collaborator with a background in design, cognitive diversity on your endeavours found through the exploration of other interests is just as important as a myriad of code repositories.<sup>[1](#note-1)<sup> <br/><br/> |
 
 	<br>
 	</details>
@@ -191,9 +171,11 @@ The result is a web resume that is:
 
 	- Increase "activity" or evidence of activity
 	- Progress bars do not give the user anything. Instead, show evidence of experience. Show integrity.
-	- Give clear understanding of owner's nuanced stack expertise
+    - Stats or progress bars should be relative to something measurable.
+	- Give clear understanding of owner's nuanced tech stack.
 	- Evidence of dev community activity in social media (dev.to, Twitter, etc.)
-	- Reduce number clicks to arrive at goal
+	- Avoid scenarios where a user may get lost.
+    - No more than two clicks until user sees what they're looking.
 
 	<br>
 	</details>
@@ -236,7 +218,6 @@ The result is a web resume that is:
 	| <sub>Quote</sub>                                                                                                | <br/>As a potential collaborator and experienced programmer with a background in design, cognitive diversity on your endeavours found through the exploration of other interests is just as important as a myriad of code repositories. I found you here as I was impressed by your LinkedIn. I believe if you have to wonder how to make an impression, then you aren't. So before I even say hello, I want fork your repository and impress you with my contribution.<sup>[1](#note-1)<sup> <br/><br/> |
 	| <sub>Goals</sub>                                                                                                | <br/>1. As a potential collaborator, I want to find your project(s) and quickly fork a repository.<br/><br/>2. As a potential collaborator, I want to find stats of your contribution footprint.<br/><br/>3. As a potential collaborator, I want to find the best way to get in contact with the organisation with any questions I may have.<br/><br/>                                                                                                                                                        |
 
-
 	> ###### [<sub>Note</sub> 1](https://www.builtinchicago.org/2018/05/08/what-companies-look-for-on-github)  Article. GitHub profile realities.
 	>
 	> ###### [<sub>Note</sub> 2](https://dev.to/kethmars/what-i-learned-after-reviewing-over-40-developer-portfolios-9-tips-for-a-better-portfolio-4me7) Post. Portfolio review feedback on dev.to
@@ -265,8 +246,10 @@ The result is a web resume that is:
 	3. Capitalize on owner's nuanced position in the tech stack as primary unique selling point
 	4. In every way achievable, portray all measurable 'static' information as 'live' statistics
 
+    <br>
 	</details>
 	<details><summary><b> 1.5 Strategy Table </b></summary>
+	<br>
 
 	> ##### The trade-off between importance and viability.
 	> ##### Can we build a solution given the limited time and resources available?
@@ -299,9 +282,7 @@ The result is a web resume that is:
 	<!--###### ⬆️ UX efforts should accommodate this-->
 	<!--###### ⬇️ Unwise use of time to address this-->
 
-
-	![](documentation/RedUX_200901_1622.png)
-
+	![](https://israelias.github.io/resume-redux/documentation/RedUX_200901_1622.png)
 
 	<!--If importance and viability are equal, then we are in a position to do it all. Draw out your own version of the graph below to work out what features you should drop.-->
 
@@ -328,7 +309,7 @@ The result is a web resume that is:
 
 <!--- Pack in MVP features up front, unfold new experiences over time.-->
 
-- Pack in MVP features up front.
+- Packing in MVP features up front.
   
 	<details><summary><b> 2.1 Requirements and Specifications </b></summary>
 
@@ -382,8 +363,7 @@ The result is a web resume that is:
 	| <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px"></br><sub>**Recruiter:** Tracy</sub> | **Recruiter chooses to interview owner**    | <ol><br/>    <li>Ability to view skills    <li>Ability to measure candidacy against others    <li>Ability to view employment status <li>Ability to download CV  <li>Ability to view contact info and timezone/location<br/></ul> |
 	| <img src="documentation/RedUX_200821_Peter_01.jpg" width="200px"></br><sub>**Collaborator:** Peter</sub>  | **Collaborator chooses to work with owner** | <ol><br/>    <li>Ability to view skills    <li>Ability to view project experience    <li>Ability to submit project request   <li>Ability to view contact info<br/></ul> |
 
-	<!--[https://mermaidjs.github.io/mermaid-live-editor/#/view/Z3JhcGggVEQKQVtJc3N1ZV0gLS0+fHRyaWFnZXwgQihpbnZlc3RpZ2F0ZSkKQiAtLT4gQ3tMZXQgbWUgdGhpbmt9CkMgLS0+fEF8IERbc2V2ZXJpdHkgMV0KQyAtLT58QnwgRVtzZXZlcml0eSAyXQpDIC0tPnxDfCBGW3NldmVyaXR5IDNd-->
-	<!--](https://mermaidjs.github.io/mermaid-live-editor/#/view/Z3JhcGggVEQKQVtJc3N1ZV0gLS0+fHRyaWFnZXwgQihpbnZlc3RpZ2F0ZSkKQiAtLT4gQ3tMZXQgbWUgdGhpbmt9CkMgLS0+fEF8IERbc2V2ZXJpdHkgMV0KQyAtLT58QnwgRVtzZXZlcml0eSAyXQpDIC0tPnxDfCBGW3NldmVyaXR5IDNd)-->
+
 
 	<!--Requirements are needs not features.-->
 	<!--it's employers evaluating my skills over needing a website-->
@@ -396,12 +376,12 @@ The result is a web resume that is:
 	<details><summary><b> 2.3 Content Requirements </b></summary>
 	<br>
 
-	<!--- What mixed content/media do we need to meet the needs of the user?-->
+	- What mixed content/media do we need to meet the needs of the user?
 
-	<!--- Objective – what does the user want to accomplish?-->
-	<!--- Functional – What does the user need to reach their objective?-->
-	<!--- Non-functional – What constrains does the site or app have to perform within?-->
-	<!--- Business Rules – What dynamic constrains do we have to meet? (calculations, definitions, legal etc)-->
+	- Objective – what does the user want to accomplish?
+	- Functional – What does the user need to reach their objective?
+	- Non-functional – What constrains does the site or app have to perform within?
+	- Business Rules – What dynamic constrains do we have to meet? (calculations, definitions, legal etc)
 
 	| Section                             | Content                                                                                                                                               | Type                    | Note |
 	| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ---- |
@@ -418,8 +398,10 @@ The result is a web resume that is:
 	| Recommendations                     | <ol><li>Excerpts from recommendations with:<ol><li> recommender</li><li>relationship</li> <li>Excerpt</li><li>image</li><li> link</li></ol></li></ol> | text, image             |      |
 	| Download CV                         | PDF version of the above                                                                                                                              | text                    |      |
 
+    <br>
 	</details>
 	<details><summary><b> 2.4 What’s on the table? </b></summary>
+    <br>
 
 	- [x] Landing Page (Voice)
 	<!--- [ ] <sup>________________________________________________(*cta*)</sup>-->
@@ -912,222 +894,213 @@ What form will the application take? How will the information be represented? Ho
 ![](documentation/RedUX_200901_1630.png)
 
 - Good UI Design:
+  - Allows *immediate* interaction -- first-time learning
+  - Audience appropriate
+  - Perfectly meets the needs of its intended audience
 
-- Allows *immediate* interaction -- first-time learning
-- Audience appropriate
-- Perfectly meets the needs of its intended audience
+    <br>
+  	<details><summary><b> 4.1 Features and Usefulness </b></summary>
+  	<br>
+
+  	#### Form Follows Function
+
+  	- The tabs as literal tabs and the stack as a literal stack
+  	- This gives people what they want and where they want it
+  	- It is offered in a visual format that users can (and want to) access)
+  	- Usability improves when similar parts are expressed in similar ways
+  	- No surprises for user. Content may differ, but general shape and perception remains consistent
+
+  	#### Progressive Disclosure
+
+  	- Information is revealed over time and across space within the delimited region of a consistent page type
+
+  	#### Grouping, Order and Hierarchy
+
+  	- Section tabs and sub-section contents are grouped in order of importance and in order of adjacency elements
+  	- High priorities established at Stategy level are the first information and CTAs to appear
+  	- Navigation elements *move from top to bottom in order of priority* while content moves from left to right in order of per-section CTA direction
+
+  	#### Less Features `==` User Friendly
+
+  	- The singular feature that makes it user friendly
+  	- Simple in it complexity
+  	- Usability increases as it is a repetitive motion
+  	- Gives the user easy decisions that do not over-complicate things
+  	- Choices are reduced to what is available on the stack
 
   	<br>
-	<details><summary><b> 4.1 Features and Usefulness </b></summary>
-	<br>
+  	</details>
+  	<details><summary><b> 4.2 Navigation Design </b></summary>
+  	<br>
 
-	#### Form Follows Function
+  	#### The Accordion Stack
 
-	- The tabs as literal tabs and the stack as a literal stack
-	- This gives people what they want and where they want it
-	- It is offered in a visual format that users can (and want to) access)
-	- Usability improves when similar parts are expressed in similar ways
-	- No surprises for user. Content may differ, but general shape and perception remains consistent
+  	- Intuitive Navigation and Completion of Tasks
+  		- x
+  	- Placement, Order, Hierarchy, Priorities
+  	  	- x
+  	- Navigational Benefits
+  	  	- The rendering of the accordion hub as **pagination** controls offers clear visibility of the Information Architecture
+  	  	- It also offers a thorough sense of depth and breadth without ever losing sight of the start, middle and end.
 
-	#### Progressive Disclosure
+  	![](documentation/RedUX_200901_1634.png)
 
-	- Information is revealed over time and across space within the delimited region of a consistent page type
+  	#### Representational Icons
 
-	#### Grouping, Order and Hierarchy
+  	- Clear meaning
+  	- Familiar objects
 
-	- Section tabs and sub-section contents are grouped in order of importance and in order of adjacency elements
-	- Priority one established at Stategy level is the first information to appear
-	- Navigation elements *move from top to bottom in order of priority* while content moves from left to right in order of information and features
+  	#### Reduce Cognitive Friction
 
-	#### Less Features `==` User Friendly
+  	- Ensure navigation elements are visible and easily findable
+  	- Ensure they don't require time to decode
+  	- Differentiate between navigational elements with **colour, icons and text**
 
-	- The singular feature that makes it user friendly
-	- simple in it complexity
-	- Usability increases as it is a repetitive motion
-	- Gives the user easy decisions that do not over-complicate things
-	- Choices are reduced to what is available on the stack
+  	#### Consistent
 
-	<br>
-	</details>
-	<details><summary><b> 4.2 Navigation Design </b></summary>
-	<br>
+  	- Same interactions and behaviors
+  	- Don't rearrange the order
+  	- Don't move expected elements to a different location
 
-	#### The Accordion Stack
+  	#### Metaphors
 
-	- Intuitive Navigation and Completion of Tasks
-		- x
-	- Placement, Order, Hierarchy, Priorities
-	  	- x
-	- Navigational Benefits
-	  	- The rendering of the accordion hub as **pagination** controls offers clear visibility of the Information Architecture
-	  	- It also offers a thorough sense of depth and breadth without ever losing sight of the start, middle and end.
+      - Visual metaphors provide shortcuts for use.
+      - They provide clear, established meaning and reinforce positive associations with the owner's candidacy.
+  	- The nav outline sections titles collapse to icons on mobile screens.
+  	- The following relationships are reinforced throughout the project as icons and written text.
 
-	![](documentation/RedUX_200901_1634.png)
+  	| Literal                        | Metaphor       |
+  	| ------------------------------ | -------------- |
+  	| Introduction                     | light bulb     |
+  	| Specialization          | wrench         |
+  	| Proficiency                      | paint brush    |
+  	| Experience a product understandable | speech bubbles |
+  	| Examples                    | sun            |
+  	| References                         | book           |
+  	| Connect                   | house          |
+  	| Thorough                       | list           |
+  	| Environmentally Friendly       | earth          |
+  	| As little design as possible   | dot            |
 
+  	<br>
+  	</details>
+  	<details><summary><b> 4.3 Information Design </b></summary>
+  	<br>
 
-	#### Representational Icons
+  	>###### Arrangement of the elements that contain the information
+  	Good Info design should be invisible...
+  	- Easy to complete **forms**
+  	- Strong **instructions**
+  	- Strong **educational materials**
+  	- Strongly represented **scientific data**
+  	- No dangerous manufacturing Uis
+  	- Everything is **relevant**
 
-	- Clear meaning
-	- Familiar objects
+  	> Too much information is worse than no information at all.
 
-	#### Reduce Cognitive Friction
+  	![](documentation/RedUX_200901_1637.png)
 
-	- Ensure navigation elements are visible and easily findable
-	- Ensure they don't require time to decode
-	- Differentiate between navigational elements with **colour, icons and text**
+  	<!--#### Context and Order Matter-->
 
-	#### Consistent
+  	<!--- Use **categorical ordering** when information is similar and clustered-->
+  	<!--  - Courses-->
+  	<!--  - Blog-->
 
-	- Same interactions and behaviors
-	- Don't rearrange the order
-	- Don't move expected elements to a different location
+  	<!--- Use **alphabetical ordering** when information is referential-->
+  	<!--  - Contacts List-->
+  	<!--  - Dictionary-->
 
-	<!--#### Metaphors-->
+  	<!--- Use **location ordering** when waydinding and orientation is needed-->
+  	<!--  - Sports, Geography site-->
 
-	<!--Good Design is:-->
+  	<!--- Use **time ordering** when comparing fixed duration events-->
+  	<!--  - Timeline-->
+  	<!--  - Work History-->
 
-	<!--| Literal                        | Metaphor       |-->
-	<!--| ------------------------------ | -------------- |-->
-	<!--| Innovative                     | light bulb     |-->
-	<!--| Make a Product Useful          | wrench         |-->
-	<!--| Aesthetic                      | paint brush    |-->
-	<!--| Makes a product understandable | speech bubbles |-->
-	<!--| Unobtrusive                    | sun            |-->
-	<!--| Honest                         | book           |-->
-	<!--| Long Lasting                   | house          |-->
-	<!--| Thorough                       | list           |-->
-	<!--| Environmentally Friendly       | earth          |-->
-	<!--| As little design as possible   | dot            |-->
+  	<!--Which icons will we use? Which are best to represent our needs?-->
 
-	#### Visual Metaphors
+  	<br>
+  	</details>
+  	<details><summary><b> 4.4 Interface Design </b></summary>
+  	<br>
 
-	- Provide shortcuts for use
-	- Are intuitive and obvious
-	- Are taken from everyday life
+  	<!--The best arrangement and visual presentation of the elements-->
 
-	<br>
-	</details>
-	<details><summary><b> 4.3 Information Design </b></summary>
-	<br>
+  	<!--- Prototyping and wireframes-->
+  	<!--- Mockups using Balsamic-->
 
-	>###### Arrangement of the elements that contain the information
-	Good Info design should be invisible...
-	- Easy to complete **forms**
-	- Strong **instructions**
-	- Strong **educational materials**
-	- Strongly represented **scientific data**
-	- No dangerous manufacturing Uis
-	- Everything is **relevant**
+  	<!--![](documentation/RedUX_200901_1639.png)-->
 
-	> Too much information is worse than no information at all.
+  	<!--- Page Anatomy-->
+  	<!--- Element Stack-->
+  	<!--- Grid Set Out-->
+  	<!--- Mobile Stack-->
 
+  	___
+  	- Hub & Spoke Desktop
+  	- Expanded Nest Mobile
 
-	![](documentation/RedUX_200901_1637.png)
+  	#### Wireframes: Schematic
 
+  	- Five Planes of UX
+  	  - [Procedural Wires](https://israelias.github.io/resume-redux/wireframes/schematic/Wireframes_Schematic_Mentor_Presentation_03SEP2020_Part_One.pdf)
 
-	<!--#### Context and Order Matter-->
+  	- Part 1: Landing
+  	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_01.png)
+  	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_01_a.png)
+  	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_01_b.png)
+  	- Part 2: Introduction
+  	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_02.png)
+  	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_02_a.png)
+  	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_02_b.png)
+  	- Part 3: Technologies
+  	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_03.png)
+  	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_03_a.png)
+  	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_03_b.png)
+  	- Part 4: Examples
+  	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_04.png)
+  	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_04_a.png)
+  	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_04_b.png)
+  	  - [Mobile C](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_04_c.png)
+  	- Part 5: Experience
+  	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_05.png)
+  	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_05_a.png)
+  	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_05_b.png)
+  	- Part 6: References
+  	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_06.png)
+  	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_06_a.png)
+  	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_06_b.png)
+  	- Part 7: Contact
+  	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_07.png)
+  	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_07_a.png)
+  	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_07_b.png)
 
-	<!--- Use **categorical ordering** when information is similar and clustered-->
-	<!--  - Courses-->
-	<!--  - Blog-->
+  	___
 
-	<!--- Use **alphabetical ordering** when information is referential-->
-	<!--  - Contacts List-->
-	<!--  - Dictionary-->
+  	- Alternates
 
-	<!--- Use **location ordering** when waydinding and orientation is needed-->
-	<!--  - Sports, Geography site-->
+  	<!--2D model of the product that provides-->
 
-	<!--- Use **time ordering** when comparing fixed duration events-->
-	<!--  - Timeline-->
-	<!--  - Work History-->
+  	<!--- form-->
+  	<!--- information-->
+  	<!--- arrangement volume-->
 
-	<!--Which icons will we use? Which are best to represent our needs?-->
+  	<!--Just a starting point (no colours, images or effects referred to).-->
 
-	<br>
-	</details>
-	<details><summary><b> 4.4 Interface Design </b></summary>
-	<br>
+  	<!--- See how each screen fits into the whole site-->
+  	<!--- Determine which links and content is required to meet the needs of the user-->
+  	<!--- See how balanced elements are & how they relate to each other-->
+  	<!--- What gets included-->
+  	<!--- How it is organised-->
+  	<!--- What gets priority-->
+  	<!--- Where are elements located?-->
+  	<!--- Has anything been left out?-->
+  	<!--- Is the top priority content noticed first?-->
+  	<!--- Revisit strategy and goals – are we on track?-->
+  	<!--- Do the relationships work?-->
+  	<!--- Paper first, then Balsamic or Marvel app.-->
 
-	<!--The best arrangement and visual presentation of the elements-->
-
-	<!--- Prototyping and wireframes-->
-	<!--- Mockups using Balsamic-->
-
-
-	<!--![](documentation/RedUX_200901_1639.png)-->
-
-	<!--- Page Anatomy-->
-	<!--- Element Stack-->
-	<!--- Grid Set Out-->
-	<!--- Mobile Stack-->
-
-	___
-	- Hub & Spoke Desktop
-	- Expanded Nest Mobile
-
-
-	#### Wireframes: Schematic
-
-	- Five Planes of UX
-	  - [Procedural Wires](https://israelias.github.io/resume-redux/wireframes/schematic/Wireframes_Schematic_Mentor_Presentation_03SEP2020_Part_One.pdf)
-
-	- Part 1: Landing
-	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_01.png)
-	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_01_a.png)
-	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_01_b.png)
-	- Part 2: Introduction
-	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_02.png)
-	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_02_a.png)
-	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_02_b.png)
-	- Part 3: Technologies
-	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_03.png)
-	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_03_a.png)
-	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_03_b.png)
-	- Part 4: Examples
-	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_04.png)
-	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_04_a.png)
-	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_04_b.png)
-	  - [Mobile C](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_04_c.png)
-	- Part 5: Experience
-	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_05.png)
-	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_05_a.png)
-	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_05_b.png)
-	- Part 6: References
-	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_06.png)
-	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_06_a.png)
-	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_06_b.png)
-	- Part 7: Contact
-	  - [Web](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Web%20_07.png)
-	  - [Mobile A](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_07_a.png)
-	  - [Mobile B](https://raw.githubusercontent.com/israelias/resume-redux/master/wireframes/schematic/Mobile_07_b.png)
-
-	___
-
-	- Alternates
-
-	<!--2D model of the product that provides-->
-
-	<!--- form-->
-	<!--- information-->
-	<!--- arrangement volume-->
-
-	<!--Just a starting point (no colours, images or effects referred to).-->
-
-	<!--- See how each screen fits into the whole site-->
-	<!--- Determine which links and content is required to meet the needs of the user-->
-	<!--- See how balanced elements are & how they relate to each other-->
-	<!--- What gets included-->
-	<!--- How it is organised-->
-	<!--- What gets priority-->
-	<!--- Where are elements located?-->
-	<!--- Has anything been left out?-->
-	<!--- Is the top priority content noticed first?-->
-	<!--- Revisit strategy and goals – are we on track?-->
-	<!--- Do the relationships work?-->
-	<!--- Paper first, then Balsamic or Marvel app.-->
-
-	</details>
+  	</details>
 </details>
 <details open>
 <summary> 
@@ -1183,19 +1156,71 @@ What form will the application take? How will the information be represented? Ho
 	</details>
 </details>
 
-### Design
+# Design
 
 - Color Scheme
+  - Given the movement that occurs on the screen upon section transitions, the site's overall color and peripheral default color states are decidedly neutral, spanning a spectrum of off-whites; a range of neutral greys; either of which afford the project its most stylistic reading in four gradients.
+    - Whites
+        - --white: #FAFAFA;
+        - --pearl: #F4F4F4;
+        - --powder: #F5F4F2;
+        - --paper: #F2F1EF;
+    - Greys
+      - --deep-1: #4f4f4f;
+      - --deep-2: #707070;
+      - --deep-3: #95989A;
+      - --deep-4: #B0b0b0;
+    - Gradients
+      - --gradient-1: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+      - --gradient-2: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
+      - --gradient-3: linear-gradient(145deg, rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0.2));
+      - --gradient-4: linear-gradient(180deg, rgba(250, 250, 250, .7), rgba(0, 0, 0, .1));
+  - Each section is assigned a bold accent signature color, which it carrier throughout the project in two tones: 1) a deep, rich, tone with a waxed matte finish 2) and a faded high-saturation highlight with a diffused backlit glow.
+    - Signature blends, in pairs:
+      - --obsidian: #2E2C2E; --raisin: #3E223D;
+      - --slate: #929181; --grey: #B7B1A8;
+      - --ruby: #89413D; --red: #B84A30;
+      - --denim: #37455C; --blue: #1D49B8;
+      - --canary: #D27511; --yellow: #B8A922;
+      - --moss: #213128; --green: #234D3E;
 - Typography
-- Imagery
+  - [Viktor Nübel](https://viktornuebel.medium.com/how-scripts-helped-to-design-a-typeface-for-coding-9af5f28d742a)'s [FF Attribute](https://www.fontshop.com/superfamilies/ff-attribute) font family is the stylistic feature font of the project's main body, including [FF Attribute Mono](https://www.fontshop.com/families/ff-attribute-mono) and [FF Attribute Text](https://www.fontshop.com/families/ff-attribute-text); while [Vasily Biryukov](http://luc.devroye.org/fonts-51517.html)'s opinionated take on the classic [FF DIN](https://en.wikipedia.org/wiki/FF_DIN) family with [DIN 2014](https://fonts.adobe.com/fonts/din-2014) is featured in section headlines.
 
 # Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
-
 ## Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+
+### Interactive collapse feature
+  - The project takes advantage of transition classes handled by Bootstrap's `data-toggle` event handler framework and its `data-target` event listener to achieve an interactive navigation system that serves as a one-stop wayfinding feature and the very vessel for display of all content navigated. Designed to be an all-encompassing ticket to content, the 'stack' is programmed to clearly present and quickly deliver content to and from the immediate vicinity of the very first touchpoint. The ubiquitous nature of the transition feature is a keyframed directive for the learnable impulse and the rewards of gaining immediate shorthand with the user and their impulses.
+  - The website uses X to achieve Y, by having them fill out Z
+
+### Collapse transitions along rails
+  - In addition to customizing transitions, vertical and horizontal rails are positioned along collapsing margins in order to achieve the effect of containers sliding on vertical rails, and growing out of lines from a seemingly blank and flat page. The rails are pseudo a variety of sixteen `:before` and `:after` elements absolutely positioned relative to several parent classes of the collapse plugin's returned states. This renders the transitions to be more tactical and material, designed to marry the regularity of straight lines with the curious malleability of a decidedly two-dimensional canvas with flat shadows.
+
+### The master switch to the static site
+  -  The project features the ability to virtually turn off all functionality and visual definition attributed to the website's show and hide transition events, rendering [index.html](https://github.com/israelias/resume-redux/blob/b6bc247a4c903fc0fd56c23f2b9ac751e9af6d50/index.html) into a static single-page site discretely sectioned in seven parts. This is controlled by a checkbox `input`  element strategically placed in the DOM to be a direct sibling of the `<main>` and `<nav>` elements, each containing all content of seven sections and all list items of the side menu document outline, respectively. Traversing the general sibling selector on toggle of the input's boolean selector `:checked ~ main >  *` is the most popular and powerful selector in [style.css](https://github.com/israelias/resume-redux/blob/master/assets/css/style.css), commencing up to 30 rulesets, virtually interacting with the most elements in the DOM to showcase the project's radical flexibility and the totality of its ambition to accommodate the nuances of user experience.
+
+
+### The headings map as an interactive document outline
+  -  The project features a direct representation of the website's headings map, that, together with the varying permutations of returned `.show` and `:checked` classes, reels from the delightful complications of [scrollspy](https://v5.getbootstrap.com/docs/5.0/components/scrollspy/)'s fleeting `.active` class. Enabled on the `<body>`, Bootstrap's Scrollspy events are programmed in the side menu and visible only when it's useful: when 'expand all' is `:checked`.  As the side menu is a list of the website's headings, containing lists that are nested to the level of their heading hierarchy, the `.active` items invariably play a game of musical links, revealing data and returning feedback on the virtues of relative 'nestedness' and proximities.
+
+### Pagination events along a document track
+  -  The project is programmed to elicit further, more marcro, events via Scrollspy's `.active` class in the form of a scaled linear representation of the website's height, where segments are highlighted relative to 'where' the user is. This is attributed to an absolutely positioned pseudo element with a selector that traverses an `.active` sibling. The scale to which these line segments are relative to the path that its on works to afford users a sense of place in an otherwise scaleless, immeasurable window.
+
+- 
+
+- 
+
+ * A list of headings, with lists nested to the level of their heading hierarchy.
+ *
+ * Credit: (modified) headingsMap https://github.com/dzc34/headingsMap
+ *
+ * Each <ul> is nested to the nth level of its represented heading in the
+ * document outline.
+ * Class names '.list-h*' are assigned to parent <ul>s for ease of reference
+ * and direct class styling.
+ */
+- The input's label element contains icons that swap visibility on toggle of ':checked'.
 
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
@@ -1277,10 +1302,23 @@ For any scenarios that have not been automated, test the user stories manually a
    4. Try to submit the form with all inputs valid and verify that a success message appears.
 
 1. Relative positioning as a boolean tool:
-   1. Go to the "Contact Us" page
-   2. Try to submit the empty form and verify that an error message about the required fields appears
-   3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-   4. Try to submit the form with all inputs valid and verify that a success message appears.
+   1.  * Absolute positioning as a boolean tool.
+ *
+ * This attaches key element positioning in nav outline to the :checked selector.
+ * Scrollspy and pagination should only be enabled when the website is in static
+ * expand-all state.
+ *
+ * As the feedback states of nav outline are given to pseudo elements absolutely
+ * positioned relative to their parent elements; positioning absolute children
+ * by traversing the :checked selector results in an effective on/off hack.
+ *
+ * Absolutely position pseudo elements of list items in nav
+ * outline for pagination and scrollspy features only when #toggle-all
+ * is ':checked'.
+   2. Go to the "Contact Us" page
+   3. Try to submit the empty form and verify that an error message about the required fields appears
+   4. Try to submit the form with an invalid email address and verify that a relevant error message appears
+   5. Try to submit the form with all inputs valid and verify that a success message appears.
 
 1. Hacking the .collapse.show event:
     1. Go to the "Contact Us" page
@@ -1353,6 +1391,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ## Documentation
 - The CSS rulesets and comments strictly follow Nicolas Gallagher's [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css). <!--(@necolas)-->
+- headingsMap https://github.com/dzc34/headingsMap
 
 ## Content
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
