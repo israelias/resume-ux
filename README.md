@@ -1192,7 +1192,6 @@ What form will the application take? How will the information be represented? Ho
 
 ### Interactive collapse feature
   - The project takes advantage of transition classes handled by Bootstrap's `data-toggle` event handler framework and its `data-target` event listener to achieve an interactive navigation system that serves as a one-stop wayfinding feature and the very vessel for display of all content navigated. Designed to be an all-encompassing ticket to content, the 'stack' is programmed to clearly present and quickly deliver content to and from the immediate vicinity of the very first touchpoint. The ubiquitous nature of the transition feature is a keyframed directive for the learnable impulse and the rewards of gaining immediate shorthand with the user and their impulses.
-  - The website uses X to achieve Y, by having them fill out Z
 
 ### Collapse transitions along rails
   - In addition to customizing transitions, vertical and horizontal rails are positioned along collapsing margins in order to achieve the effect of containers sliding on vertical rails, and growing out of lines from a seemingly blank and flat page. The rails are pseudo a variety of sixteen `:before` and `:after` elements absolutely positioned relative to several parent classes of the collapse plugin's returned states. This renders the transitions to be more tactical and material, designed to marry the regularity of straight lines with the curious malleability of a decidedly two-dimensional canvas with flat shadows.
@@ -1207,19 +1206,13 @@ What form will the application take? How will the information be represented? Ho
 ### Pagination events along a document track
   -  The project is programmed to elicit further, more marcro, events via Scrollspy's `.active` class in the form of a scaled linear representation of the website's height, where segments are highlighted relative to 'where' the user is. This is attributed to an absolutely positioned pseudo element with a selector that traverses an `.active` sibling. The scale to which these line segments are relative to the path that its on works to afford users a sense of place in an otherwise scaleless, immeasurable window.
 
+### Download me at arrival
+  - The website features a call to action download button upon landing on the site that is styled in the same fashion as all forthcoming CTAs. The intention is twofold: 1) to provide the the shortest clickable distance between arrival and achieving the singular most valuable touchpoint 2) to establish and reinforce the visual language of the CTA container in its seven identical iterations.
 - 
 
 - 
 
- * A list of headings, with lists nested to the level of their heading hierarchy.
- *
- * Credit: (modified) headingsMap https://github.com/dzc34/headingsMap
- *
- * Each <ul> is nested to the nth level of its represented heading in the
- * document outline.
- * Class names '.list-h*' are assigned to parent <ul>s for ease of reference
- * and direct class styling.
- */
+
 - The input's label element contains icons that swap visibility on toggle of ':checked'.
 
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
@@ -1289,72 +1282,98 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
 
 ## User Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+> >| <img src="documentation/RedUX_200817_Jacob_01.jpg" width="200px"><br><sub>**Developer:** Jacob</sub> | Collaborator <br> <br>*Jacob Venti**<br><br><sub>Asociate Lead in Design Computation   Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA</sub> |
+> >| --- | --- |
+> >| <sub>Goals</sub> | <sub>Touchpoints</sub> |
+> >| <br><br><ol><li> As a leader in the industry, I want to have a good understanding of who you are and what you are all about within a few seconds.</li></ol><br><br> | <br><ul><li>Each of the seven excerpts of the owner's narrative  is curated to feature an assertive upheld value, existing independent of the others, contained in a headline "truism" to have a clear, equal resonance at each iteration.  The first passage was recently revised to include a short paragraph summary, and is now the only paragraph featured on mobile devices.</li></ul> <br/> |
+> >| <ol><li>As a leader in the industry, I want to be led seamlessly through the site to arrive at valuable content with the minimum amount of clicks.</li></ol> | <br/><ul><li>The website features an interactive collapsible navigational 'stack' programmed to clearly present and quickly deliver content to and from the immediate vicinity of the very first touchpoint. The ubiquity of this feature is aimed at capturing an immediate shorthand with the user, playing to the impulses of his/her learnablility. Additionally, the cut-to-the-chase download-my-cv CTA makes this arrival the most valuable touchpoint for both user and owner</li><ul> <br/> |
+> >| <br><ol><li>As a leader in the industry, I want to see evidence of your credibility and capability as a professional. I want to see what others have said about you or how they have reacted to you. I also want to locate sources of your credibility to see that they are legitimate and to have an idea of your influence on the industry.</li></ol><br><br> | <br/><ul><li>Every content type in every category of the CV is essentially and intentionally "over-cited" as the ambition is to let the many references and sources and data speak for itself, with links to every source,  embracing a manner of  "designed placeholding," with the most true content. The high-level paradigm is that activity is equal to content. For this reason, the everu corner of the website is "activity-centric", showcasing the owner's honest web footprint.</li><ul><br/> |
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
-1. Contact form:
-   1. Go to the "Contact Us" page
-   2. Try to submit the empty form and verify that an error message about the required fields appears
-   3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-   4. Try to submit the form with all inputs valid and verify that a success message appears.
+> > | <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px"><br><sub>**Recruiter:** Tracy</sub> | Recruiter <br> <br>*Tracy Letts**<br><br><sub>Asociate Lead in Design Computation Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA</sub> |
+> > | --- | --- |
+> > | <sub>Goals</sub> | <sub>Touchpoints</sub> |
+> > | <br><br><ol><li> As a Recruiter, I want to find information on your skills and projects ASAP..</li></ol><br><br> | <br><ul><li>The website is designed to circulate across three main CTAs as one navigates from landing to finish. These three CTAs are: Download my CV, which is first, and appears twice more, 2) my LinkedIn and 3) my GitHub. There are two chapters dedicated solely to 1) the owner's areas of expertise and 2) the owner's proficiency with skills within such areas. Additionally, the download button as a landing greeting is a calculated effort to establish and reinforce the visual language of the CTA container and its seven identical iterations.</li></ul> <br/> |
+> > | <ol><li>As a Recruiter, I want to understand the easiest and most reliable method of saving and sharing your profile to my team.</li></ol> | <br/><ul><li>The website's per-section CTAs follows the rule of proximity, and are positioned so as to close every chapter and open the next. The website also features three sets of quick-link button groups, emerging at introduction, at side menu, and at the final connect section. These CTA button groups include the ability to save my contact info and CV,  la touchpoints for CTAs  section  on contact information and a message form.</li><ul> <br/> |
+> > | <br><ol><li>As a Recruiter, I want to find the best way to get in contact with you in case I want to connect..</li></ol><br><br> | <br/><ul><li>The website's per-section CTAs follows the rule of proximity, and are positioned so as to close every chapter and open the next. The website also features three sets of quick-link button groups, emerging at introduction, at side menu, and at the final connect section. These CTA button groups include the ability to save my contact info and CV,  la touchpoints for CTAs  section  on contact information and a message form.</li><ul><br/> |
 
-1. Relative positioning as a boolean tool:
-   1.  * Absolute positioning as a boolean tool.
- *
- * This attaches key element positioning in nav outline to the :checked selector.
- * Scrollspy and pagination should only be enabled when the website is in static
- * expand-all state.
- *
- * As the feedback states of nav outline are given to pseudo elements absolutely
- * positioned relative to their parent elements; positioning absolute children
- * by traversing the :checked selector results in an effective on/off hack.
- *
- * Absolutely position pseudo elements of list items in nav
- * outline for pagination and scrollspy features only when #toggle-all
- * is ':checked'.
-   2. Go to the "Contact Us" page
-   3. Try to submit the empty form and verify that an error message about the required fields appears
-   4. Try to submit the form with an invalid email address and verify that a relevant error message appears
-   5. Try to submit the form with all inputs valid and verify that a success message appears.
 
-1. Hacking the .collapse.show event:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+> > | <img src="documentation/RedUX_200821_Peter_01.jpg" width="200px"><br><sub>**Recruiter:** Tracy</sub> | Collaborator <br> <br>*Peter Venti**<br><br><sub>Asociate Lead in Design Computation Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA</sub> |
+> > | --- | --- |
+> > | <sub>Goals</sub> | <sub>Touchpoints</sub> |
+> > | <br><br><ol><li> As a potential collaborator, I want to find your project(s) and quickly fork a repository..</li></ol><br><br> | <br><ul><li>The website dedicates a section on the owners GitHub repository, featuring snapshots of his work with data rendered as live badges, and time stamps. Not only does the project section have a CTA to fork repos, the project container itself includes various badge links to various facets of the repository.</li></ul> <br/> |
+> > | <ol><li>As a potential collaborator, I want to find stats of your contribution footprint.</li></ol> | <br/><ul><li>The website features stats of the owner's footprint in every measurable profesional capacity including: repo contributions, commits, commit messages, project statuses (active, current, next, forthcoming), years in practice, awards and honors. Additionally, the website can be toggled to static mode to show all collapsed sections. Wayfindingin this mode, should one require it, is featured as a proprtional linear scale that shows you where you are on the  very tall page. This is designed to ensure there is always a way to safety in case a user requires it.</li><ul> <br/> |
+> > | <br><ol><li>As a potential collaborator, I want to find the best way to get in contact with the you with any questions I may have<br><br> | <br/><ul><li>The website is designed to feature at least three ways to get in contact with the owner, providing immediate flexibility as well as a logical progression to connecting and/or researching the owner prior to connecting. The site directly offers the owner's email address in a CTA button that will open your email in any device; a CTA that will open your phone app in case you wish to proceed with a call and/or save the owner's number; a CTA that will open google maps in case you wish to have some idea of the owner's location; along with four other links to the owner's Dev account, Github account, LinkedIn, and a dedicated in-page message form that's been pre-filled with a default message which is there to help you break the ice as well as further express the delight with which the owner welcomes new connections..</li><ul><br/> |
 
-1. Scrolling to top:
-   1. Go to the "Contact Us" page
-   2. Try to submit the empty form and verify that an error message about the required fields appears
-   3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-   4. Try to submit the form with all inputs valid and verify that a success message appears.
 
-1. Clip-path on Safari:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
 
-1. Scrolling to top:
-   1. Go to the "Contact Us" page
-   2. Try to submit the empty form and verify that an error message about the required fields appears
-   3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-   4. Try to submit the form with all inputs valid and verify that a success message appears.
+<!--In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.-->
 
-1. Margin-left on safari:
-   1. Go to the "Contact Us" page
-   2. Try to submit the empty form and verify that an error message about the required fields appears
-   3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-   4. Try to submit the form with all inputs valid and verify that a success message appears.
+<!--Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.-->
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+<!--For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:-->
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+<!--1. Contact form:-->
+<!--   1. Go to the "Contact Us" page-->
+<!--   2. Try to submit the empty form and verify that an error message about the required fields appears-->
+<!--   3. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
+<!--   4. Try to submit the form with all inputs valid and verify that a success message appears.-->
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+<!--1. Relative positioning as a boolean tool:-->
+<!--   1.  * Absolute positioning as a boolean tool.-->
+<!-- *-->
+<!-- * This attaches key element positioning in nav outline to the :checked selector.-->
+<!-- * Scrollspy and pagination should only be enabled when the website is in static-->
+<!-- * expand-all state.-->
+<!-- *-->
+<!-- * As the feedback states of nav outline are given to pseudo elements absolutely-->
+<!-- * positioned relative to their parent elements; positioning absolute children-->
+<!-- * by traversing the :checked selector results in an effective on/off hack.-->
+<!-- *-->
+<!-- * Absolutely position pseudo elements of list items in nav-->
+<!-- * outline for pagination and scrollspy features only when #toggle-all-->
+<!-- * is ':checked'.-->
+<!--   2. Go to the "Contact Us" page-->
+<!--   3. Try to submit the empty form and verify that an error message about the required fields appears-->
+<!--   4. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
+<!--   5. Try to submit the form with all inputs valid and verify that a success message appears.-->
+
+<!--1. Hacking the .collapse.show event:-->
+<!--    1. Go to the "Contact Us" page-->
+<!--    2. Try to submit the empty form and verify that an error message about the required fields appears-->
+<!--    3. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
+<!--    4. Try to submit the form with all inputs valid and verify that a success message appears.-->
+
+<!--1. Scrolling to top:-->
+<!--   1. Go to the "Contact Us" page-->
+<!--   2. Try to submit the empty form and verify that an error message about the required fields appears-->
+<!--   3. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
+<!--   4. Try to submit the form with all inputs valid and verify that a success message appears.-->
+
+<!--1. Clip-path on Safari:-->
+<!--    1. Go to the "Contact Us" page-->
+<!--    2. Try to submit the empty form and verify that an error message about the required fields appears-->
+<!--    3. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
+<!--    4. Try to submit the form with all inputs valid and verify that a success message appears.-->
+
+<!--1. Scrolling to top:-->
+<!--   1. Go to the "Contact Us" page-->
+<!--   2. Try to submit the empty form and verify that an error message about the required fields appears-->
+<!--   3. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
+<!--   4. Try to submit the form with all inputs valid and verify that a success message appears.-->
+
+<!--1. Margin-left on safari:-->
+<!--   1. Go to the "Contact Us" page-->
+<!--   2. Try to submit the empty form and verify that an error message about the required fields appears-->
+<!--   3. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
+<!--   4. Try to submit the form with all inputs valid and verify that a success message appears.-->
+
+<!--In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.-->
+
+<!--You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.-->
+
+<!--If this section grows too long, you may want to split it off into a separate file and link to it from here.-->
 
 ## Miscellaneous
 
