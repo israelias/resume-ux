@@ -469,7 +469,7 @@ h6 {
    Article header button
    ========================================================================== */
 
-/*!
+/**
  * Article header with button targeting article section.
  *
  * This styles the header button dedicated to every collapsed section under
@@ -2382,13 +2382,6 @@ ul.nav {
     flex: 1;
 }
 
-@media (min-width: 576px) and (max-width: 991.98px) {
-    .nav-content {
-        /*--navlist-height: calc(var(--navlink-height) * 3 + .5rem);*/
-        /*--navlist-top: calc(var(--navlink-height) * -1 - .25rem);*/
-    }
-}
-
 /*
  * Disable transitions inherited from Bootstrap's '.collapsing' class.
  *
@@ -2593,6 +2586,7 @@ ul.nav {
         margin-right: var(--mainstart);
     }
 }
+
 @keyframes main-grow {
     0% {
         width: var(--mainwidth);
@@ -2770,6 +2764,7 @@ ul.nav {
                 transform: rotateX(1.571rad);
     }
 }
+
 @keyframes disappear-180 {
     0% {
         -webkit-transform: scaleY(1);
@@ -3126,13 +3121,13 @@ details[open] .open,
 }
 
 /* ==========================================================================
-   GLOBAL BUTTON/LINK/CTA WRAPPER CONFIGS
+   Global button/link/CTA wrappers
    ========================================================================== */
 
 /* Neumorphic shadow inspired by (https://css-tricks.com/neumorphism-and-css/) */
 /* Shadow generator helper https://neumorphic.design/ */
 
-/* BUTTON/LINK/CTA CONTAINERS
+/* Button/link/CTA container styles
    ========================================================================== */
 
 /* Style general .btn .cta wrapper */
@@ -3182,32 +3177,6 @@ details[open] .open,
             inset 0 -3.3px var(--blur-sm) #FFFFFF;
 }
 
-/* Style general .btn hover/feedback  */
-
-li.link-item.inset-item:hover::after {
-    z-index: -1;
-}
-
-li.link-item.inset-item {
-    cursor: pointer;
-}
-
-li.link-item:hover {
-    background: -o-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
-    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
-
-    -webkit-box-shadow:
-            2px 2px var(--blur-xs) white,
-            -2px -2px var(--blur-xs) white;
-    box-shadow:
-            2px 2px var(--blur-xs) white,
-            -2px -2px var(--blur-xs) white;
-}
-
-li.link-item.inset-item a {
-    z-index: 12;
-}
-
 /* Style general button class */
 
 .btn {
@@ -3225,7 +3194,7 @@ li.link-item.inset-item a {
     line-height: 1;
 }
 
-/* SOCIAL LINKS/BUTTON STYLE VARIABLES
+/* Social links/button style variables
    ========================================================================== */
 
 /* Style social links list items */
@@ -3447,7 +3416,7 @@ li.link-item.inset-item a {
             align-items: center;
 }
 
-/* Global hover styles to CTA buttons */
+/* Style global hover state of CTA buttons */
 
 .btn:hover,
 .btn:focus {
@@ -3464,7 +3433,7 @@ li.link-item.inset-item a {
             -3px 6px var(--blur-sm) rgba(250, 250, 250, .4);
 }
 
-/* Global 'pressed' styles to CTA buttons */
+/* Style global 'pressed' state of CTA buttons */
 
 .btn:active {
     background: var(--gradient-1);
@@ -3478,11 +3447,15 @@ li.link-item.inset-item a {
             0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
 }
 
+/* Style inner button container for icons */
+
 .btn .inset-inner {
     padding: .2rem;
     border-width: 2px;
     border-radius: 50%;
 }
+
+/* CTA variety adjustmenmts */
 
 .connect-cta button > .inset-inner,
 .activity-cta button > .inset-inner,
@@ -3520,26 +3493,6 @@ li.link-item.inset-item a {
 .activity-cta:hover,
 .activity-cta:focus {
     text-align: right;
-}
-
-.form-control {
-    background-color: var(--paper);
-}
-
-form .connect-cta input {
-    height: 3rem;
-}
-
-.form-group-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 4rem;
-}
-
-.form-group-button i {
-    color: #A0B6CC;
 }
 
 /* BUTTON/LINK ~ SHOW-EVENT TRANSITION
@@ -3624,10 +3577,38 @@ section.collapse:not(.show) .section-icon {
             transition: all .3s .75s;
 }
 
+/* Mirror icons for sections five (Examples) and seven (Connect)
+ * This is purely to accommodate the selected graphic icon
+ */
+
 #target-five .section-icon,
 #target-seven .section-icon {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+/* ==========================================================================
+   Message form element styles
+   ========================================================================== */
+
+.form-control {
+    background-color: var(--paper);
+}
+
+form .connect-cta input {
+    height: 3rem;
+}
+
+.form-group-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+}
+
+.form-group-button i {
+    color: #A0B6CC;
 }
 
 
@@ -3877,7 +3858,7 @@ section.collapse:not(.show) .section-icon {
 }
 
 /* ==========================================================================
-   Landing banner
+   Landing banner (#target-zero)
    ========================================================================== */
 
 /* Custom 'onboarding' banner, disposes upon initial click  */
@@ -4151,10 +4132,25 @@ section.collapse:not(.show) .section-icon {
 }
 
 /* ==========================================================================
-   INTRODUCTION SECTION @prefixed
+   INTRODUCTION SECTION @prefixed (#target-one)
    ========================================================================== */
 
-.landing-subheading p {
+/* Hide profile photo and vertical scroller until medium screens
+ * Important not to set display to none as the vertical pseudo rails rely
+ * on section.right */
+
+@media (max-width: 767.98px) {
+    #target-one .outer-body:nth-child(2),
+    #target-one .outer-body:nth-child(2) .inner-body {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: none;
+        box-shadow: none;
+    }
+}
+
+.landing-s ubheading p {
     font-family: "Halyard Micro", monospace;
     font-size: .875rem;
     font-weight: 300;
@@ -5154,6 +5150,8 @@ blockquote, q {
 ::-moz-selection { background: var(--yellow) }
 
 #target-one h4 { background-color: var(--matte); }
+/*#target-one b { color: var(--matte); }*/
+/*#target-one a { color: var(--matte); }*/
 
 #target-two h4 { background-color: var(--slate); }
 #target-two b { color: var(--slate); }
