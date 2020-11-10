@@ -429,49 +429,16 @@ h6 {
     margin-bottom: 3.375rem;
 }
 
+@media (max-width: 575.98px) {
+    .body-main {
+        position: static;
+    }
+}
+
 .body-main > * {
     padding-right: calc(var(--gutter-x) / 2);
     padding-left: calc(var(--gutter-x) / 2);
 }
-
-/*.body-header:after {*/
-/*    display: block;*/
-/*    content: "";*/
-/*    height: 10px;*/
-/*}*/
-
-/* Maximum height query */
-
-/*@media (max-height: 666.98px) {*/
-/*    :root {*/
-/*        --of-twelve: 10.75;*/
-/*        font-size: .938rem;*/
-/*    }*/
-
-/*    .body-main {*/
-/*        position: -webkit-sticky;*/
-/*        position: sticky;*/
-/*        overflow: auto;*/
-
-/*        top: 3rem;*/
-/*        right: 0;*/
-/*        bottom: 3rem;*/
-/*        left: 0;*/
-/*        padding-bottom: 3rem;*/
-
-/*    }*/
-
-/*    [data-parent="#resumeStack"] {*/
-/*        --height: calc(100vmax - 8rem);*/
-/*    }*/
-
-/*    [data-parent="#resumeStack"].show {*/
-/*        --height: calc(100vmax - 8rem);*/
-/*        height: var(--height);*/
-
-/*        flex-direction: column-reverse;*/
-/*    }*/
-/*}*/
 
 /* Absolutely positioned elements in the dom will always go above everything even if it's position fixed */
 /* https://stackoverflow.com/questions/13071429/how-to-position-main-content-below-header-and-footer-in-css */
@@ -483,6 +450,19 @@ h6 {
 
 .body-header .navbar-light {
     background: var(--paper,#F2F1EF);
+}
+
+/* Footer
+   ========================================================================== */
+
+.body-footer {
+    padding-left: var(--margin);
+    padding-right: var(--margin);
+}
+
+.body-footer h6 {
+    display: inline-block;
+    font-size: .75rem;
 }
 
 /* ==========================================================================
@@ -1429,13 +1409,14 @@ section.right:after {
         font-size: .938rem;
     }
 
-    article > section:not(#target-one) {
+    .article-section:not(#target-one) {
         -webkit-overflow-scrolling: touch;
         scroll-behavior: smooth;
     }
 
     [data-parent="#resumeStack"] {
         --height: calc(100vh - 21rem - 6rem);
+        /*--height: 60vh;*/
         overflow: scroll;
     }
 }
@@ -1448,7 +1429,6 @@ section.right:after {
 */
 
 @media (min-width: 576px) and (max-width: 991.98px) {
-
     .main-article {
         flex: 0 0 auto !important;
         width: 100% !important;
@@ -2989,7 +2969,7 @@ ul.nav {
 /* Also triggers an expand all at the largest media query, showing all content. */
 
 @media (min-width: 1400px) {
-    main {
+    .body-main {
         position: static !important;
         overflow: visible !important;
         padding-left: 0 !important;
@@ -3408,19 +3388,6 @@ li.link-item.inset-item a {
     }
 }
 
-/* Footer
-   ========================================================================== */
-
-.body-footer {
-    padding-left: var(--margin);
-    padding-right: var(--margin);
-}
-
-.body-footer h6 {
-    display: inline-block;
-    font-size: .75rem;
-}
-
 /* Header toggle box shadow */
 /* BS styles */
 
@@ -3660,7 +3627,7 @@ section.collapse:not(.show) .section-icon {
 #target-five .section-icon,
 #target-seven .section-icon {
     -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 
@@ -3818,7 +3785,7 @@ section.collapse:not(.show) .section-icon {
 
 /* Scroll the first item back in at the end of the animation */
 
-#toggle-all:checked + label ~ main #target-one #scrollOne,
+#toggle-all:checked ~ main #scrollOne,
 #target-one.show #scrollOne {
     -webkit-animation:
             scroll-in .75s var(--glide) 0s 1 normal forwards running,
@@ -3836,7 +3803,7 @@ section.collapse:not(.show) .section-icon {
 
 /* Second scroll item */
 
-#toggle-all:checked + label ~ main #target-one #scrollTwo,
+#toggle-all:checked ~ main #scrollTwo,
 #target-one.show #scrollTwo {
     -webkit-animation:
             scroll-in .75s var(--glide) 4s 1 normal forwards running,
@@ -3852,7 +3819,7 @@ section.collapse:not(.show) .section-icon {
 
 /* Third scroll item */
 
-#toggle-all:checked + label ~ main #target-one #scrollThree,
+#toggle-all:checked ~ main #scrollThree,
 #target-one.show #scrollThree {
     -webkit-animation:
             scroll-in .75s var(--glide) 8s 1 normal forwards running,
@@ -5354,32 +5321,6 @@ blockquote, q {
     transition: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
 }
 
-@-webkit-keyframes intro {
-    0% {
-        /*--of-twelve: 1;*/
-        /*opacity: 0;*/
-        /*width: 0;*/
-        /*visibility: hidden;*/
-        /*margin-top: 900px;*/
-        /*-webkit-transform: translateY(0) scale(0) rotateX(10deg) rotateY(10deg) rotateZ(40deg);*/
-        /*transform: translateY(0) scale(0) rotateX(10deg) rotateY(10deg) rotateZ(40deg);*/
-    }
-    50% {
-        /*--of-twelve: 11;*/
-        /*opacity: .51;*/
-        /*width: ;*/
-    }
-    100% {
-        /*opacity: 1;*/
-        /*--of-twelve: 11;*/
-        /*width: 100%;*/
-        /*margin-top: 0;*/
-        /*visibility: visible;*/
-        /*-webkit-transform: translateY(0) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);*/
-        /*transform: translateY(0) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);*/
-    }
-}
-
 article {
     position: relative;
     animation: article .75s var(--glide) 0s ;
@@ -5391,51 +5332,6 @@ article {
     transition: var(--flash-all-late-glide-trans);
 }
 
-
-@-webkit-keyframes nav {
-    0% {
-        left: -900px;
-    }
-    100% {
-        left: 0;
-    }
-}
-@keyframes article {
-    0% {
-        left: -900px;
-    }
-    100% {
-        left: 0;
-    }
-}
-
-.body-mai n {
-    /*position: relative;*/
-    animation: main .75s var(--glide) 0s 1 normal forwards running;
-    /*animation: var(--dash-down-early-glide-anim);*/
-    /*-webkit-animation: var(--dash-down-early-glide-anim);*/
-
-    -webkit-transition: var(--flash-all-late-glide-trans);
-    -o-transition: var(--flash-all-late-glide-trans);
-    transition: var(--flash-all-late-glide-trans);
-}
-
-@-webkit-keyframes main {
-    0% {
-        flex-direction: column;
-    }
-    100% {
-        flex-direction: column-reverse;
-    }
-}
-@keyframes article {
-    0% {
-        flex-direction: column;
-    }
-    100% {
-        flex-direction: column-reverse;
-    }
-}
 
 @-webkit-keyframes article {
     0% {
@@ -5531,7 +5427,6 @@ article {
     }
 }
 
-
 @-webkit-keyframes load-up {
     0% {
         top: -500px;
@@ -5540,6 +5435,7 @@ article {
         top: 0;
     }
 }
+
 @keyframes load-up {
     0% {
         top: -500px;
