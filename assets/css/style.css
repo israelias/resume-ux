@@ -178,12 +178,6 @@
     justify-content: center;
 }
 
-/* TODO fix margin right on safari
-    Fix button target on nav
-    Fix overflow of nav links on opera, make them wrap
-    Fix overflow on ref section and examples section
-    */
-
 /* Achieve a centered 'col-*' without '.container.row.col' wrapper divs */
 /* If --of-twelve: 11; then --width: 91.66667% is given to children of :root (in this case, the <body>) */
 
@@ -191,8 +185,6 @@
     width: var(--width);
     margin-left: var(--margin);
     margin-right: var(--margin);
-    /* TODO this is new */
-    /*margin-top: calc(var(--margin) + 3rem);*/
     background-color: var(--paper);
 }
 
@@ -379,21 +371,20 @@ h6 {
    ========================================================================== */
 
 .root-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    top: 0;
-    bottom: 0;
-    padding-bottom: 3rem;
-    min-height: 100%;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*flex: 1;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*padding-bottom: 3rem;*/
+    /*min-height: 100%;*/
 
-    justify-content: center !important;
+    /*justify-content: center !important;*/
 }
 
-.root-body > * {
-    /*flex: 1;*/
-    /* todo */
+/* This is how the stack contracts from its center axis as opposed to pulling from the top or bottom */
 
+.root-body > * {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -405,8 +396,6 @@ h6 {
     --blur-md: 0px;
 
     position: fixed;
-    /* todo */
-    /*overflow: auto;*/
     overflow: hidden;
 
     top: 0;
@@ -416,12 +405,11 @@ h6 {
 
     padding-left: var(--margin);
     padding-right: var(--margin);
-    margin-right: calc(var(--gutter-x) / -2);
-    margin-left: calc(var(--gutter-x) / -2);
+
+    margin: 0 auto;
+
     padding-top: 3.375rem;
     padding-bottom: 3.375rem;
-    /*margin-top: 3.375rem;*/
-    /*margin-bottom: 3.375rem;*/
 }
 
 @media (max-width: 767.98px) {
@@ -485,12 +473,6 @@ h6 {
         padding-right: 1rem;
         padding-bottom: 44px;
     }
-
-    /*.body-footer:after {*/
-    /*    display: block;*/
-    /*    content: "";*/
-    /*    height: 10px;*/
-    /*}*/
 }
 
 /* ==========================================================================
@@ -1472,22 +1454,22 @@ section.right:after {
 }
 
 /*
- * Transition variables for portrait-mobile, landscape-mobile and tablet screens.
+ * Transition variables for portrait-mobile and tablet screens.
  *
- * 1. Only feature media content on xs-sm-md screens (section.right) by default.
+ * 1. Only feature media content on xs-sm-md devices (section.right) by default.
  * 2. Show all content on toggle of expand-all.
 */
 
 @media (max-width: 991.98px) {
     [data-parent="#resumeStack"]:not(#target-one) .outer-body:first-child,
     [data-parent="#resumeStack"]:not(#target-one) .left {
-        display: none !important;
+        display: none;
     }
 
     #toggle-all:checked ~ main .header-text,
     #toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-one) .outer-body:first-child,
     #toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-one) .left {
-        display: flex !important;
+        display: flex;
     }
 }
 
@@ -1770,10 +1752,30 @@ section.right:after {
     padding-right: 0;
 }
 
+/*
+ * Prevent flex behavior and overflow when toggling expand-all on mobile
+ * and force header text to wrap and occupy two lines.
+ */
+
+@media (min-width: 575.98px) {
+    #toggle-all:checked ~ main {
+        display: block;
+        overflow-x: hidden;
+    }
+
+    #toggle-all:checked ~ main .header-content {
+        flex-wrap: wrap;
+    }
+    #toggle-all:checked ~ main .header-text {
+        width: 100%;
+    }
+}
+
 /* If checked, force a show-event for all currently collapsed sections with
  * the exception of the landing section (target-zero)
  */
 
+#toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-zero).show,
 #toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-zero).collapse {
     display: flex;
     visibility: visible;
@@ -1882,6 +1884,46 @@ section.right:after {
     display: block;
 }
 
+/* Adjust visibility of list items for tablet and mobile devices */
+
+@media (max-width: 991.98px) {
+    .link-zero,
+    .list-h4 [href^="#target"],
+    .list-h5 > :first-child {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .list-h5 > :nth-child(2) {
+        visibility: visible;
+    }
+}
+
+/* Adjust visibility of list items for mobile portrait devices */
+
+@media (max-width: 575.98px) {
+    ul.list-h2,
+    ul.list-h3 {
+        padding-left: 0 !important;
+    }
+
+    .list-h5 .nav-link {
+        visibility: hidden;
+    }
+
+    .list-h4 [href^="#target"],
+    .list-h5 .nav-link:nth-child(2) {
+        display: none;
+    }
+
+    .link-text {
+        display: none;
+    }
+}
+
 /* Side menu and scroll spy and feedback
    ========================================================================== */
 
@@ -1900,11 +1942,14 @@ section.right:after {
  */
 
 .nav-content {
-    --navlink-height: 1rem;
-    --navlist-height: calc(var(--navlink-height) * 5 + .75rem);
-    --navlist-top: calc(var(--navlink-height) * -1 + .25rem);
+    --navlink-height: 1.05rem;
+    --navlink-offset: calc(var(--navlink-height) - 1rem);
+    --navlist-top: calc(var(--navlink-height) * -1);
+    --navlink-start: calc(var(--navlink-height) / 2);
+    --navlist-height: calc(var(--navlink-height) * 5 - var(--navlink-offset) + .25rem);
+    --navitem-right: -50%;
 
-    margin: 1.125rem 0 0;
+    width: 100%;
 
     background-color: #fff;
     background: var(--pearl) !important;
@@ -1922,18 +1967,23 @@ section.right:after {
             inset 5px 8px 0 0 rgba(0, 0, 0, 0.3);
 }
 
-@media (min-width: 576px) and (max-width: 991.98px) {
+/* Adjust scope property values for medium screens and lower */
+
+@media (max-width: 991.98px) {
     .nav-content {
-        --navlink-height: 1.24rem;
-        --navlist-height: calc(var(--navlink-height) * 4 + .5rem);
-        --navlist-top: calc(var(--navlink-height) * -1);
+        --navlink-height: 1.2rem;
+        --navlist-height: calc(var(--navlink-height) * 3);
+        --navitem-right: -40%;
     }
 }
 
+/* Adjust scrope propert values for xs screens */
+
 @media (max-width: 575.98px) {
     .nav-content {
-        --navlist-height: calc(var(--navlink-height) * 3 + 1.25rem);
-        --navlist-top: calc(var(--navlink-height) * -1 + .25rem);
+        --navlink-height: 1.5rem;
+        --navlist-height: calc(var(--navlink-height) * 3 - var(--navlink-offset));
+        --navitem-right: -5%;
     }
 }
 
@@ -1947,8 +1997,9 @@ section.right:after {
             flex-direction: column;
 }
 
+
 ul.nav {
-    padding-left: 1rem;
+    padding-left: .2rem;
 }
 
 .body-nav button {
@@ -1962,7 +2013,10 @@ ul.nav {
  */
 
 .outline-item {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    width: 100%;
     padding: 1rem 1rem 1rem;
     /*margin-bottom: .5rem;*/
     border-radius: var(--radius-2);
@@ -1975,10 +2029,8 @@ ul.nav {
  */
 
 .nav-pills.menu-sidebar .nav-link {
+    white-space: nowrap;
     line-height: var(--navlink-height);
-}
-.nav-link {
-    height: var(--navlink-height);
 }
 
 /*
@@ -2005,7 +2057,7 @@ ul.nav {
  *
  * Absolutely position pseudo elements of list items in nav
  * outline for pagination and scrollspy features only when #toggle-all
- * is ':checked'.
+ * is ':checked' or when the screen width is greater than the screen height.
  */
 
 #toggle-all:checked ~ .body-nav .nav:before,
@@ -2015,6 +2067,17 @@ ul.nav {
     position: absolute;
     display: block;
     content: "";
+}
+
+@media (max-width: 991.98px) and  (orientation: landscape) {
+    .body-nav .nav:before,
+    .body-nav .nav:after,
+    .body-nav .nav-item:before,
+    .body-nav .nav-link:before {
+        position: absolute;
+        display: block;
+        content: "";
+    }
 }
 
 /* Absolutely position nav-item's pseudo element regardless of the toggle state.
@@ -2034,9 +2097,8 @@ ul.nav {
  */
 
 .list-h3 .nav-item:before {
-    top: .675rem;
-    right: -20%;
-    height: 10px;
+    top: calc(var(--navlink-start) + var(--navlink-offset));
+    right: var(--navitem-right);
     width: 64%;
     border-top: .5px dotted transparent;
 }
@@ -2058,10 +2120,9 @@ ul.nav {
  */
 
 .list-h3:before {
-    top: .55rem;
+    top: calc(var(--navlink-start) + var(--navlink-offset));
     left: 100%;
-
-    height: calc(100% - var(--navlink-height));
+    height: 100%;
     width: .1rem;
 
     background-color: rgba(02, 42, 251, .1);
@@ -2077,10 +2138,8 @@ ul.nav {
  */
 
 .list-h4:after {
-    top: var(--navlist-top);
+    top: calc(var(--navlink-start) + var(--navlist-top) - var(--navlink-offset));
     left: 100%;
-
-    height: var(--link-height);
     width: .1rem;
 
     border-top: 2px solid var(--raisin);
@@ -2115,9 +2174,8 @@ ul.nav {
  */
 
 .nav-link:before {
-    top: .55rem;
+    top: var(--navlink-start);
     right: 100%;
-    height: 10px;
     width: 77%;
     border-top: 1px solid var(--grey);
 }
@@ -2141,17 +2199,24 @@ ul.nav {
     border-radius: 0;
 }
 
-/* Disable scroll spy when not checked */
+/* Disable scroll spy by default */
 
-#toggle-all:not(checked) ~ .body-nav .nav-pills.menu-sidebar .nav-link.active {
+.body-nav .nav-pills.menu-sidebar .nav-link.active {
     border-left: none;
 }
 
-/* Enable scrollspy when checked */
+/* Enable scrollspy when checked or when screen is landscape */
 
-#toggle-all:checked ~ .body-nav .nav-pills.menu-sidebar .nav-link.active {
+#toggle-all:checked ~ .body-nav .nav-pills.menu-sidebar .nav-link:not(.link-zero).active {
     border-left-width: .125rem;
     border-left-style: solid;
+}
+
+@media (max-width: 991.98px) and  (orientation: landscape) {
+    .body-nav .nav-pills.menu-sidebar .nav-link.active {
+        border-left-width: .125rem;
+        border-left-style: solid;
+    }
 }
 
 /*
@@ -2178,105 +2243,11 @@ ul.nav {
  * border widths when given scrollspy's '.active' class in nav outline
  */
 
+/* :not(.link-zero) TODO disable link zero*/
+
 .nav-pills.menu-sidebar .nav-link.active:before {
     border-top-width: 2px;
     border-top-color: var(--blue);
-}
-
-
-@media (max-width: 575.98px) {
-
-    #toggle-all:checked ~ main {
-        /* Todo */
-        /*position: static;*/
-        display: block;
-        /*overflow: scroll;*/
-        overflow-x: hidden;
-    }
-
-    .body-nav > .outset-container-2,
-    .nav-content,
-    .outline-item,
-    .list-h3 {
-        width: 100%;
-    }
-
-    .link-zero {
-        visibility: hidden;
-        width: 0;
-        height: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    ul.nav {
-        padding-left: .2rem;
-    }
-
-    ul.list-h2,
-    ul.list-h3 {
-        padding-left: 0 !important;
-    }
-
-    .list-h5 .nav-link {
-        visibility: hidden;
-    }
-
-    .list-h4 [href^="#target"],
-    .list-h5 .nav-link:nth-child(2) {
-        display: none;
-    }
-
-    .list-h4 a.nav-link {
-        overflow: hidden;
-
-        -o-text-overflow: ellipsis;
-            text-overflow: ellipsis;
-        white-space: nowrap;
-        width: 60%;
-        font-size: .625em !important;
-    }
-
-    .link-text {
-        display: none;
-    }
-
-    #toggle-all:checked ~ main .header-content {
-        flex-wrap: wrap;
-    }
-    #toggle-all:checked ~ main .header-text {
-        width: 100%;
-    }
-}
-
-.link-icon {font-size: 1.5rem;}
-@media (min-width: 576px) { .link-icon { display: none; } }
-
-@media (max-width: 991.98px) {
-    .list-h2 [href="#splash-banner"],
-    .list-h4 [href^="#target"],
-    .list-h5 > :first-child {
-        visibility: hidden;
-        width: 0;
-        height: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    .list-h5 > :nth-child(2) {
-        visibility: visible;
-    }
-
-    ul.nav {
-        padding-left: .5rem;
-    }
-
-    #toggle-all:checked ~ .body-nav .list-h5 > :first-child {
-        visibility: visible;
-        width: auto;
-        height: auto;
-        margin-top:-.55rem;
-    }
 }
 
 /* Side menu and main body
@@ -2341,8 +2312,7 @@ ul.nav {
 .body-nav {
 
     /* Set a new value (out of twelve) */
-    /* todo from 4 */
-    --of-twelve: 3;
+    --of-twelve: 4;
 
     /* Repeat and re-declare --width and --offset properties together with the new value --of-twelve */
     --width: calc(var(--of-twelve) / 12 * 100%);
@@ -2354,23 +2324,8 @@ ul.nav {
     /* Instantiate --offset to be the object property of new variable --mainwidth */
     --mainwidth: var(--offset);
 
-    /* Variable margin-left property, reassign at medium screen */
+    /* Start/end margin property for animation keyframes */
     --mainstart: 0;
-}
-
-@media (min-width: 576px) and (max-width: 991.98px) {
-    .body-header,
-    .body-main,
-    .body-nav {
-        --of-twelve: 3 !important;
-        --mainstart: calc(var(--navwidth) / 2);
-    }
-
-    .body-main {
-        width: var(--mainwidth) !important;
-        /* todo remove margin right */
-        margin-right: auto !important;
-    }
 }
 
 /*
@@ -2411,6 +2366,8 @@ ul.nav {
     justify-content: stretch;
     align-items: center;
     flex: 1;
+
+    width: 100%;
 }
 
 /*
@@ -2994,8 +2951,19 @@ ul.nav {
 /* Trigger a complete Side Nav click event at 1400px */
 /* Also triggers an expand all at the largest media query, showing all content. */
 
-@media (min-width: 1400px) {
+/* As W3C described, regardless of the device type (mobile or desktop), when
+ * the viewport height is larger than the width, the orientation is described
+ * as portrait. Conversely, it is described as landscape when the width viewport
+ * size is larger than the height.*/
+
+/* Set box shadow blur custom property from 0 (previous) to new value(s). */
+
+@media (max-width: 991.98px) and  (orientation: landscape) {
     .body-main {
+        --blur-xs: 2px;
+        --blur-sm: 3px;
+        --blur-md: 6px;
+
         position: static !important;
         overflow: visible !important;
         padding-left: 0 !important;
@@ -3006,7 +2974,8 @@ ul.nav {
         --outlines: transparent;
     }
 
-    [data-parent="#resumeStack"].collapse:not(.show) {
+    [data-parent="#resumeStack"].collapse:not(.show),
+    [data-parent="#resumeStack"].show {
         --height: 100%;
         height: var(--height);
 
@@ -3333,6 +3302,18 @@ details[open] .open,
 /* Side menu social links quick nav
    ========================================================================== */
 
+/* Style side menu lnk icon */
+
+.link-icon {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 576px) {
+    .link-icon {
+        display: none;
+    }
+}
+
 .body-nav > outset-container-2 {
     padding: 0;
 }
@@ -3567,6 +3548,12 @@ section.show .data-stats {
     -webkit-transition: opacity 0.15s var(--breeze) .75s;
          -o-transition: opacity 0.15s var(--breeze) .75s;
             transition: opacity 0.15s var(--breeze) .75s;
+}
+
+@media (max-width: 991.98px) and  (orientation: landscape) {
+    section:not(.show) .data-stats {
+        opacity: 1;
+    }
 }
 
 /* SECTION H4 icon SHOW EVENT TRANSITION @prefixed
@@ -3813,6 +3800,17 @@ form .connect-cta input {
             transition: all var(--flashing) var(--zip) var(--early);
 }
 
+/* Trigger scroll one in on lanscape orientation */
+
+@media (max-width: 991.98px) and  (orientation: landscape) {
+    #scrollOne {
+        -webkit-animation:
+            scroll-in .75s var(--glide) 0s 1 normal forwards running;
+        animation:
+            scroll-in .75s var(--glide) 0s 1 normal forwards running;
+    }
+}
+
 /* Second scroll item */
 
 #toggle-all:checked ~ main #scrollTwo,
@@ -3916,63 +3914,137 @@ form .connect-cta input {
 .cover-name,
 .banner-top,
 .banner-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .banner-top {
     line-height: .875rem;
     color: #a4a4a4;
-    animation: banner-top .75s var(--swoop) 2.75s 1 normal forwards running;
-    transition: all .75s var(--swoop) .3s;
+    /*flex-direction: column;*/
+    -webkit-animation: banner-top .75s var(--swoop) 2.75s 1 normal forwards running;
+            animation: banner-top .75s var(--swoop) 2.75s 1 normal forwards running;
+    -webkit-transition: all .75s var(--swoop) .3s;
+         -o-transition: all .75s var(--swoop) .3s;
+            transition: all .75s var(--swoop) .3s;
 }
 
 .banner-bottom {
+    /*flex-direction: column;*/
     line-height: .9rem;
-    animation: banner-bottom .75s var(--swoop) 2.75s 1 normal forwards running;
-    transition: all .75s var(--swoop) .3s;
+    -webkit-animation: banner-bottom .75s var(--swoop) 2.75s 1 normal forwards running;
+            animation: banner-bottom .75s var(--swoop) 2.75s 1 normal forwards running;
+    -webkit-transition: all .75s var(--swoop) .3s;
+         -o-transition: all .75s var(--swoop) .3s;
+            transition: all .75s var(--swoop) .3s;
 }
 
 .banner-middle {
     opacity: 0;
-    animation: banner-middle .75s var(--swoop) 2.65s 1 normal forwards running;
-    transition: all .75s var(--swoop) .3s;
+    -webkit-animation: banner-middle .75s var(--swoop) 2.65s 1 normal forwards running;
+            animation: banner-middle .75s var(--swoop) 2.65s 1 normal forwards running;
+    -webkit-transition: all .75s var(--swoop) .3s;
+         -o-transition: all .75s var(--swoop) .3s;
+            transition: all .75s var(--swoop) .3s;
 }
 
 .banner-pseudo {
     text-align: right;
     padding-right: 1rem;
     line-height: .875rem;
-    animation: banner-pseudo 1s var(--swoop) 2.3s 1 normal forwards running;
-    transition: all .75s var(--breeze) 2s;
+    -webkit-animation: banner-pseudo 1s var(--swoop) 2.3s 1 normal forwards running;
+            animation: banner-pseudo 1s var(--swoop) 2.3s 1 normal forwards running;
+    -webkit-transition: all .75s var(--breeze) 2s;
+         -o-transition: all .75s var(--breeze) 2s;
+            transition: all .75s var(--breeze) 2s;
 }
 
 @-webkit-keyframes banner-top {
     0% {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row;
         margin-bottom: 0;
         line-height: 1;
         justify-content: space-around;
     }
     100% {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
         margin-bottom: 3rem;
         line-height: .875rem;
-        justify-content: center;
+        -webkit-box-pack: center;
+                justify-content: center;
+    }
+}
+
+@keyframes banner-top {
+    0% {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        margin-bottom: 0;
+        line-height: 1;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    }
+    100% {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-bottom: 3rem;
+        line-height: .875rem;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 }
 
 @-webkit-keyframes banner-bottom {
     0% {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row;
         margin-top: 0;
         line-height: 1;
         justify-content: space-around;
     }
     100% {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
         margin-top: auto;
         line-height: .9rem;
-        justify-content: center;
+        -webkit-box-pack: center;
+                justify-content: center;
+    }
+}
+
+@keyframes banner-bottom {
+    0% {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        margin-top: 0;
+        line-height: 1;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    }
+    100% {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-top: auto;
+        line-height: .9rem;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 }
 
@@ -3991,9 +4063,45 @@ form .connect-cta input {
     50% {
         font-style: italic;
         opacity: 1;
+        display: -webkit-box;
         display: flex;
     }
     100% {
+        display: -webkit-box;
+        display: flex;
+        position: absolute;
+        text-align: left;
+        font-style: italic;
+        padding-right: 1.5rem;
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes banner-middle {
+    0% {
+        position: absolute;
+        display: none;
+        text-align: left;
+        font-style: normal;
+        padding-right: 1.5rem;
+        margin-top: -40rem;
+        padding-top: 0;
+        padding-bottom: 600px;
+        opacity: 0;
+    }
+    50% {
+        font-style: italic;
+        opacity: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    100% {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         position: absolute;
         text-align: left;
@@ -5248,6 +5356,7 @@ blockquote, q {
 /* Loads up from down */
 /* BUG: Animation from Side Nav toggle is carried over */
 /*#resumeStack { animation: load-down .75s var(--glide) 0s;  }*/
+
 #target-zero {
     position: relative;
     text-align: center;
@@ -5310,36 +5419,36 @@ article {
 #control-seven {
     position: relative;
 
-    -webkit-animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;
-    animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+    /*-webkit-animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
+    /*animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
 
-    -webkit-transition: var(--flash-all-flash-glide-trans);
-    -o-transition: var(--flash-all-flash-glide-trans);
-    transition: var(--flash-all-flash-glide-trans);
+    /*-webkit-transition: var(--flash-all-flash-glide-trans);*/
+    /*-o-transition: var(--flash-all-flash-glide-trans);*/
+    /*transition: var(--flash-all-flash-glide-trans);*/
 }
 
 #control-two,
 #control-five {
     position: relative;
 
-    -webkit-animation: load-right var(--dashing) var(--glide) var(--early) 1 normal forwards running;
-    animation: load-right var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+    /*-webkit-animation: load-right var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
+    /*animation: load-right var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
 
-    -webkit-transition: var(--flash-all-flash-glide-trans);
-    -o-transition: var(--flash-all-flash-glide-trans);
-    transition: var(--flash-all-flash-glide-trans);
+    /*-webkit-transition: var(--flash-all-flash-glide-trans);*/
+    /*-o-transition: var(--flash-all-flash-glide-trans);*/
+    /*transition: var(--flash-all-flash-glide-trans);*/
 }
 
 #control-three,
 #control-six {
     position: relative;
 
-    -webkit-animation: load-left var(--dashing) var(--glide) var(--early) 1 normal forwards running;
-    animation: load-left var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+    /*-webkit-animation: load-left var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
+    /*animation: load-left var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
 
-    -webkit-transition: var(--flash-all-late-glide-trans);
-    -o-transition: var(--flash-all-late-glide-trans);
-    transition: var(--flash-all-late-glide-trans);
+    /*-webkit-transition: var(--flash-all-late-glide-trans);*/
+    /*-o-transition: var(--flash-all-late-glide-trans);*/
+    /*transition: var(--flash-all-late-glide-trans);*/
 }
 
 .body-header,
@@ -5468,7 +5577,7 @@ article {
 
 :root:after {
     position: absolute;
-    z-index: 1;
+    z-index: 1100;
     top: 0;
     right: 0;
     bottom: 0;
@@ -5583,22 +5692,3 @@ article {
     }
 }
 
-
-@media (orientation: landscape) {
-    .body-main {
-        position: static;
-        flex: 1 0 auto;
-        min-height: calc(100vh - 7.75rem);
-
-    }
-
-    [data-parent="#resumeStack"] {
-        --height: calc(100vmax - 21rem - 6rem);
-        /* --height: 60vh; */
-        overflow: scroll;
-    }
-
-    .body-nav {
-        overflow: scroll;
-    }
-}
