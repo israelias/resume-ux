@@ -1763,9 +1763,8 @@ section.right:after {
     --blur-md: 6px;
 
     position: static;
-    /* todo */
-    /*overflow: visible;*/
     overflow: scroll;
+
     flex-direction: column;
     padding-left: 0;
     padding-right: 0;
@@ -3917,137 +3916,63 @@ form .connect-cta input {
 .cover-name,
 .banner-top,
 .banner-bottom {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 
 .banner-top {
     line-height: .875rem;
     color: #a4a4a4;
-    /*flex-direction: column;*/
-    -webkit-animation: banner-top .75s var(--swoop) 2.75s 1 normal forwards running;
-            animation: banner-top .75s var(--swoop) 2.75s 1 normal forwards running;
-    -webkit-transition: all .75s var(--swoop) .3s;
-         -o-transition: all .75s var(--swoop) .3s;
-            transition: all .75s var(--swoop) .3s;
+    animation: banner-top .75s var(--swoop) 2.75s 1 normal forwards running;
+    transition: all .75s var(--swoop) .3s;
 }
 
 .banner-bottom {
-    /*flex-direction: column;*/
     line-height: .9rem;
-    -webkit-animation: banner-bottom .75s var(--swoop) 2.75s 1 normal forwards running;
-            animation: banner-bottom .75s var(--swoop) 2.75s 1 normal forwards running;
-    -webkit-transition: all .75s var(--swoop) .3s;
-         -o-transition: all .75s var(--swoop) .3s;
-            transition: all .75s var(--swoop) .3s;
+    animation: banner-bottom .75s var(--swoop) 2.75s 1 normal forwards running;
+    transition: all .75s var(--swoop) .3s;
 }
 
 .banner-middle {
     opacity: 0;
-    -webkit-animation: banner-middle .75s var(--swoop) 2.65s 1 normal forwards running;
-            animation: banner-middle .75s var(--swoop) 2.65s 1 normal forwards running;
-    -webkit-transition: all .75s var(--swoop) .3s;
-         -o-transition: all .75s var(--swoop) .3s;
-            transition: all .75s var(--swoop) .3s;
+    animation: banner-middle .75s var(--swoop) 2.65s 1 normal forwards running;
+    transition: all .75s var(--swoop) .3s;
 }
 
 .banner-pseudo {
     text-align: right;
     padding-right: 1rem;
     line-height: .875rem;
-    -webkit-animation: banner-pseudo 1s var(--swoop) 2.3s 1 normal forwards running;
-            animation: banner-pseudo 1s var(--swoop) 2.3s 1 normal forwards running;
-    -webkit-transition: all .75s var(--breeze) 2s;
-         -o-transition: all .75s var(--breeze) 2s;
-            transition: all .75s var(--breeze) 2s;
+    animation: banner-pseudo 1s var(--swoop) 2.3s 1 normal forwards running;
+    transition: all .75s var(--breeze) 2s;
 }
 
 @-webkit-keyframes banner-top {
     0% {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-                flex-direction: row;
+        flex-direction: row;
         margin-bottom: 0;
         line-height: 1;
         justify-content: space-around;
     }
     100% {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-                flex-direction: column;
+        flex-direction: column;
         margin-bottom: 3rem;
         line-height: .875rem;
-        -webkit-box-pack: center;
-                justify-content: center;
-    }
-}
-
-@keyframes banner-top {
-    0% {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        margin-bottom: 0;
-        line-height: 1;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-    }
-    100% {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        margin-bottom: 3rem;
-        line-height: .875rem;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        justify-content: center;
     }
 }
 
 @-webkit-keyframes banner-bottom {
     0% {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-                flex-direction: row;
+        flex-direction: row;
         margin-top: 0;
         line-height: 1;
         justify-content: space-around;
     }
     100% {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-                flex-direction: column;
+        flex-direction: column;
         margin-top: auto;
         line-height: .9rem;
-        -webkit-box-pack: center;
-                justify-content: center;
-    }
-}
-
-@keyframes banner-bottom {
-    0% {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        margin-top: 0;
-        line-height: 1;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-    }
-    100% {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        margin-top: auto;
-        line-height: .9rem;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        justify-content: center;
     }
 }
 
@@ -4066,45 +3991,9 @@ form .connect-cta input {
     50% {
         font-style: italic;
         opacity: 1;
-        display: -webkit-box;
         display: flex;
     }
     100% {
-        display: -webkit-box;
-        display: flex;
-        position: absolute;
-        text-align: left;
-        font-style: italic;
-        padding-right: 1.5rem;
-        margin-top: 1.5rem;
-        padding-top: 1rem;
-        padding-bottom: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes banner-middle {
-    0% {
-        position: absolute;
-        display: none;
-        text-align: left;
-        font-style: normal;
-        padding-right: 1.5rem;
-        margin-top: -40rem;
-        padding-top: 0;
-        padding-bottom: 600px;
-        opacity: 0;
-    }
-    50% {
-        font-style: italic;
-        opacity: 1;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-    100% {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         position: absolute;
         text-align: left;
@@ -5695,4 +5584,21 @@ article {
 }
 
 
+@media (orientation: landscape) {
+    .body-main {
+        position: static;
+        flex: 1 0 auto;
+        min-height: calc(100vh - 7.75rem);
 
+    }
+
+    [data-parent="#resumeStack"] {
+        --height: calc(100vmax - 21rem - 6rem);
+        /* --height: 60vh; */
+        overflow: scroll;
+    }
+
+    .body-nav {
+        overflow: scroll;
+    }
+}
