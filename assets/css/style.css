@@ -2603,6 +2603,12 @@ ul.nav {
     --vw-navstart: 0;
 }
 
+@media (max-width: 575.98px) {
+    .body-header {
+        --vw-navwidth: 25vw;
+    }
+}
+
 /* Set menu-in active transition of container */
 
 .navbar-toggler[aria-expanded="true"] .menu-icon {
@@ -2681,7 +2687,11 @@ ul.nav {
     display: flex;
     position: relative;
 }
-.toggle-container { position: relative; }
+
+.toggle-container {
+    position: relative;
+}
+
 .toggle-container:before {
     position: absolute;
     content: "";
@@ -2690,6 +2700,81 @@ ul.nav {
     width: 100%;
     height: 24px;
     border-bottom: 2px solid black;
+}
+
+#toggle-all + label .toggle-container:after {
+    position: absolute;
+    content: "";
+    display: block;
+
+    top: -.5rem;
+    height: 24px;
+    border-bottom: 2px solid var(--raisin);
+
+    left: 16px;
+
+    width: 1rem;
+    margin-right: -6rem;
+}
+
+.navbar-brand:before {
+    position: absolute;
+    content: "";
+    display: block;
+
+    top: .5rem;
+    height: 24px;
+    border-bottom: 1px solid var(--grey);
+
+    left: 16px;
+
+    width: 0;
+    /*margin-right: 0;*/
+    margin-left: 10vw;
+}
+
+#toggle-all:checked + label ion-icon {
+    color: var(--ruby);
+}
+
+#toggle-all + label .toggle-container:before {
+    border-bottom: 2px solid var(--raisin);
+    width: 0;
+    margin-left: -12rem;
+    left: 16px;
+    /*background-color: pink;*/
+    transition: all .3s var(--glide) 0s;
+}
+
+#toggle-all:checked + label .toggle-container:before {
+    width: 30vw;
+    margin-left: -15vw;
+    transition: all .3s var(--glide) 0s;
+    border-bottom-color: var(--denim);
+}
+
+@media (max-width: 991.98px) and (orientation: landscape) {
+    #toggle-all:checked + label .toggle-container:before,
+    #toggle-all + label .toggle-container:before {
+        width: 4rem;
+        margin-left: 17vw;
+        /*transition: all .3s var(--glide) 0s;*/
+        /*border-bottom-color: red;*/
+    }
+    #toggle-all + label .toggle-container:after {
+        width: 25vw;
+        margin-left: 17vw;
+        /*width: 400%;*/
+        /*left: 100%;*/
+        transition: all .3s var(--glide) 0s;
+        border-bottom-color: var(--ruby);
+    }
+    .navbar-brand:before {
+        width: 15vw;
+        margin-left: 70vw;
+        /*margin-left: -70vw;*/
+        transition: all .3s var(--swoop) 0s;
+    }
 }
 
 /* Set menu-in/menu-out active/inactive animation for icon in container */
@@ -3020,7 +3105,7 @@ ul.nav {
     }
 
     .menu-icon {
-        opacity: .1;
+        opacity: .2;
     }
 
     article header .header-icon {
@@ -3923,41 +4008,77 @@ form .connect-cta input {
     line-height: .875rem;
     color: #a4a4a4;
     /*flex-direction: column;*/
-    -webkit-animation: banner-top .75s var(--swoop) 2.75s 1 normal forwards running;
-            animation: banner-top .75s var(--swoop) 2.75s 1 normal forwards running;
-    -webkit-transition: all .75s var(--swoop) .3s;
-         -o-transition: all .75s var(--swoop) .3s;
-            transition: all .75s var(--swoop) .3s;
+    -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-bottom: 3rem;
+        line-height: .875rem;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+
+
+
+    /*-webkit-animation: banner-top .75s var(--swoop) 2.75s 1 normal forwards running;*/
+    /*        animation: banner-top .75s var(--swoop) 2.75s 1 normal forwards running;*/
+    /*-webkit-transition: all .75s var(--swoop) .3s;*/
+    /*     -o-transition: all .75s var(--swoop) .3s;*/
+    /*        transition: all .75s var(--swoop) .3s;*/
 }
 
 .banner-bottom {
     /*flex-direction: column;*/
     line-height: .9rem;
-    -webkit-animation: banner-bottom .75s var(--swoop) 2.75s 1 normal forwards running;
-            animation: banner-bottom .75s var(--swoop) 2.75s 1 normal forwards running;
-    -webkit-transition: all .75s var(--swoop) .3s;
-         -o-transition: all .75s var(--swoop) .3s;
-            transition: all .75s var(--swoop) .3s;
+    -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-top: auto;
+        line-height: .9rem;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+
+
+    /*-webkit-animation: banner-bottom .75s var(--swoop) 2.75s 1 normal forwards running;*/
+    /*        animation: banner-bottom .75s var(--swoop) 2.75s 1 normal forwards running;*/
+    /*-webkit-transition: all .75s var(--swoop) .3s;*/
+    /*     -o-transition: all .75s var(--swoop) .3s;*/
+    /*        transition: all .75s var(--swoop) .3s;*/
 }
 
 .banner-middle {
     opacity: 0;
-    -webkit-animation: banner-middle .75s var(--swoop) 2.65s 1 normal forwards running;
-            animation: banner-middle .75s var(--swoop) 2.65s 1 normal forwards running;
-    -webkit-transition: all .75s var(--swoop) .3s;
-         -o-transition: all .75s var(--swoop) .3s;
-            transition: all .75s var(--swoop) .3s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    text-align: left;
+    font-style: italic;
+    padding-right: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    opacity: 1;
+
+    /*-webkit-animation: banner-middle .75s var(--swoop) 2.65s 1 normal forwards running;*/
+    /*        animation: banner-middle .75s var(--swoop) 2.65s 1 normal forwards running;*/
+    /*-webkit-transition: all .75s var(--swoop) .3s;*/
+    /*     -o-transition: all .75s var(--swoop) .3s;*/
+    /*        transition: all .75s var(--swoop) .3s;*/
 }
 
 .banner-pseudo {
-    text-align: right;
-    padding-right: 1rem;
-    line-height: .875rem;
-    -webkit-animation: banner-pseudo 1s var(--swoop) 2.3s 1 normal forwards running;
-            animation: banner-pseudo 1s var(--swoop) 2.3s 1 normal forwards running;
-    -webkit-transition: all .75s var(--breeze) 2s;
-         -o-transition: all .75s var(--breeze) 2s;
-            transition: all .75s var(--breeze) 2s;
+    display: none;
+    /*text-align: right;*/
+    /*padding-right: 1rem;*/
+    /*line-height: .875rem;*/
+    /*-webkit-animation: banner-pseudo 1s var(--swoop) 2.3s 1 normal forwards running;*/
+    /*        animation: banner-pseudo 1s var(--swoop) 2.3s 1 normal forwards running;*/
+    /*-webkit-transition: all .75s var(--breeze) 2s;*/
+    /*     -o-transition: all .75s var(--breeze) 2s;*/
+    /*        transition: all .75s var(--breeze) 2s;*/
 }
 
 @-webkit-keyframes banner-top {
