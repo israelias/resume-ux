@@ -374,12 +374,6 @@ h6 {
     font-style: normal;
 }
 
-.body-footer:before {
-    display: block;
-    content: "";
-    height: 10px;
-}
-
 /* ==========================================================================
    Layout configs
    ========================================================================== */
@@ -425,13 +419,16 @@ h6 {
     margin-right: calc(var(--gutter-x) / -2);
     margin-left: calc(var(--gutter-x) / -2);
     padding-top: 3.375rem;
+    padding-bottom: 3.375rem;
     /*margin-top: 3.375rem;*/
-    margin-bottom: 3.375rem;
+    /*margin-bottom: 3.375rem;*/
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
     .body-main {
         position: static;
+        flex: 1 0 auto;
+        min-height: calc(100vh - 7.75rem);
     }
 }
 
@@ -476,13 +473,24 @@ h6 {
     font-size: .75rem;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
+    #target-zero {
+        height: 40vh;
+    }
     .body-footer {
+        flex-shrink: 0;
+        height: 3rem;
         position: static;
         padding-left: 1rem;
         padding-right: 1rem;
         padding-bottom: 44px;
     }
+
+    /*.body-footer:after {*/
+    /*    display: block;*/
+    /*    content: "";*/
+    /*    height: 10px;*/
+    /*}*/
 }
 
 /* ==========================================================================
@@ -1479,7 +1487,7 @@ section.right:after {
     #toggle-all:checked ~ main .header-text,
     #toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-one) .outer-body:first-child,
     #toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-one) .left {
-        display: block !important;
+        display: flex !important;
     }
 }
 
@@ -1944,6 +1952,10 @@ ul.nav {
     padding-left: 1rem;
 }
 
+.body-nav button {
+    border: none;
+}
+
 /*
  * The parent list item of nav outline.
  *
@@ -1962,13 +1974,13 @@ ul.nav {
 /* Set the height of link <a> elements assigned the class name '.nav-link'
  * to be an instance of property --link-height.
  */
+
 .nav-pills.menu-sidebar .nav-link {
     line-height: var(--navlink-height);
 }
 .nav-link {
     height: var(--navlink-height);
 }
-
 
 /*
  * Relatively position lists, list items and list links in nav outline.
@@ -3891,7 +3903,7 @@ form .connect-cta input {
 }
 
 .cover-banner {
-    padding-top: 6rem;
+    /*padding-top: 6rem;*/
 }
 
 @media (min-width: 740px) {
@@ -4135,9 +4147,6 @@ form .connect-cta input {
     .banner-cta .value {
         font-size: .725rem;
         margin-bottom: 1rem;
-    }
-    #target-zero {
-        margin-top: 2rem;
     }
 
     .banner-cta {
@@ -4866,12 +4875,12 @@ details[open] #readmore {
     list-style: none;
 
     -webkit-box-shadow:
-            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
-            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
 
     box-shadow:
-            inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
-            inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+            0 -8px var(--blur-sm) rgba(0, 0, 0, 0.2),
+            0 6px var(--blur-sm) rgba(0, 0, 0, 0.4);
 }
 
 .summary-item {
@@ -4882,6 +4891,12 @@ details[open] #readmore {
     background: var(--white);
 }
 
+/* Adjust width of summary content when side menu is shown */
+
+.body-nav.show ~ .body-main .summary-content {
+    width: 40vw;
+}
+
 @media (max-width: 575.98px) {
     .summary-content {
         position: static;
@@ -4889,10 +4904,18 @@ details[open] #readmore {
         right: 0;
         left: .4rem;
 
+        width: 55vw;
         height: 40vh;
         overflow: scroll !important;
         -webkit-overflow-scrolling: touch;
         scroll-behavior: smooth;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .summary-content {
+        width: 40vw;
+        overflow: scroll;
     }
 }
 
@@ -4980,8 +5003,18 @@ details[open] #readmore {
 
 /* Configure first sub section to accommodate <summary> dropdown overflow */
 
-#target-six .outer-body:first-child {
-    overflow: visible;
+#target-six .left {
+    overflow: scroll;
+}
+
+@media (min-width: 992px) {
+    #target-six .outer-body:first-child {
+        overflow: visible;
+    }
+
+    #target-six .left {
+        overflow: visible;
+    }
 }
 
 /* Wrap LinkedIn elements in <figure> element with site signature styles */
