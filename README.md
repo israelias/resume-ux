@@ -73,9 +73,9 @@ The result is a web resume that is:
 
 ### 1.1 Research
 
-#### Stakeholder Research (Self)
 
-![](https://israelias.github.io/resume-redux/documentation/RedUX_200901_1619.png)
+- [UX Research Board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1619.png)
+
 
 #### Competitor Review
 
@@ -107,11 +107,15 @@ The result is a web resume that is:
 
 #### User Persona Overview
 
-Three target user profiles have been assembled from user research. Each profile represents a collection of expectations, objectives, compelling experiences, peeves and emotional triggers of a curated user group. Key attributes of each persona are sourced from articles, social media, news and comments, developer feeds and LinkedIn on the outset subject of what x user group looks for in a candidate's resume/portfolio. Further documentation on the subject data is loosely footnoted where quotations are paraphrased or directly cited. For the purpose of conducting use cases and journey maps, these personas -- following an analysis of theirs and the owner's motives -- will serve as the narratives reviewed for establishing scope upon which further development of the project is defined.
+Three target user profiles have been assembled from user research. Each profile represents a collection of expectations, objectives, compelling experiences, peeves and emotional triggers of a curated user group. Key attributes of each persona are sourced from articles, social media, news and comments, developer feeds and LinkedIn on the outset subject of what x user group looks for in a candidate's resume/portfolio. Further documentation on the subject data are loosely footnoted where quotations are paraphrased or directly cited. For the purpose of automating virtual use cases, empathy and journey maps, these personas -- following an analysis of theirs and the owner's motives -- will serve as the narratives reviewed for establishing scope upon which further development of the project is defined.
+
+- See [User Stories](#13-user-stories) for complete persona profiles and defined user goals.
+
+- See [User Testing](#user-testing) for task-specific descriptions of how the project meets goals defined in this plane.
 
 
 
-- [User Persona Board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1621.png)
+- [User Persona Ideation Board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1621.png)
 
     <details><summary> User Persona Table </summary>
 
@@ -142,7 +146,10 @@ Three target user profiles have been assembled from user research. Each profile 
 
 ### 1.3 User Stories
 
-##### User Persona 1: Senior Developer
+The following tables define user goals in the context of scenarios assigned to the three targeted user personas. The additional descriptions provide a short but reliable *empathy* map for the project, and were highly influential to the ideation key opportunities throughout development. These emotional triggers set forth the user's motivations prior to encountering the website. See [User Testing](#user-testing) for the task-specific descriptions of how user goals defined in this plane are met by project.
+
+<details><summary> User Persona 1: Senior Developer </summary>
+
 
 >|<img src="documentation/RedUX_200817_Jacob_01.jpg" width="500px"> | Senior Developer <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 >| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,7 +161,9 @@ Three target user profiles have been assembled from user research. Each profile 
 >| <sub>Quote</sub>                                                                                                 | <br/>As a leader in the industry, I won't spend much time here. What is it about this candidate/service/product that stands out and that I haven't already seen in others?I want to *see* that without having to *find* that. Whatever that is.<br/><br/>                                                                                                                                                                                                                                                                                                                                                                                           |
 >| <sub>Goals</sub>                                                                                                 | <br/>1. As a leader in the industry, I want to have a good understanding of who you are and what you are all about within a few seconds.<br/><br/>2. As a leader in the industry, I want to be led seamlessly through the site to arrive at valuable content with the minimum amount of clicks.<br/><br/>3. As a leader in the industry, I want to see evidence of your credibility and capability as a professional. I want to see what others have said about you or how they have reacted to you. I also want to locate sources of your credibility to see that they are legitimate and to have an idea of your influence on the industry. <br/><br/> |
 
-##### User Persona 2: Recruiter
+</details>
+<details><summary> User Persona 2: Recruiter </summary>
+
 
 >| <img src="documentation/RedUX_200817_Tracy_01.jpg" width="500px"> | Recruiter                                                                                                                                                                                                                                                                                                                                     |
 >| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -166,7 +175,9 @@ Three target user profiles have been assembled from user research. Each profile 
 >| <sub>Quote</sub>                                                                                                 | <br/>As a stakeholder in the hiring process, if you win, I win. I've already seen your LinkedIn. I landed here from the job-hunt database in our server which means you were already recommended by someone. Why would you choose us? I'd like to know where you are and give you a call.<sup>[4](#note-4)<sup><br/><br/>                     |
 >| <sub>Goals</sub>                                                                                                 | <br/>1. As a Recruiter, I want to find information on your skills and projects ASAP.<br/><br/>2. As a Recruiter, I want to understand the easiest and most reliable method of saving and sharing your profile to my team. <br/><br/>3. As a Recruiter, I want to find the best way to get in contact with you in case I want to connect.<br/><br/> |
 
-##### User Persona 3: Collaborator
+</details>
+<details><summary> User Persona 3: Collaborator </summary>
+
 
 >| <img src="documentation/RedUX_200821_Peter_01.jpg" width="800px"> | Collaborator                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 >| --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -178,20 +189,24 @@ Three target user profiles have been assembled from user research. Each profile 
 >| <sub>Quote</sub>                                                                                                | <br/>As a potential collaborator and experienced programmer with a background in design, cognitive diversity on your endeavours found through the exploration of other interests is just as important as a myriad of code repositories. I found you here as I was impressed by your LinkedIn. I believe if you have to wonder how to make an impression, then you aren't. So before I even say hello, I want fork your repository and impress you with my contribution.<sup>[1](#note-1)<sup> <br/><br/> |
 >| <sub>Goals</sub>                                                                                                | <br/>1. As a potential collaborator, I want to find your project(s) and quickly fork a repository.<br/><br/>2. As a potential collaborator, I want to find stats of your contribution footprint.<br/><br/>3. As a potential collaborator, I want to find the best way to get in contact with the organisation with any questions I may have.<br/><br/>                                                                                                                                                        |
 
+</details>
+
 > ###### [<sub>Note</sub> 1](https://www.builtinchicago.org/2018/05/08/what-companies-look-for-on-github)  Article. GitHub profile realities.
 > ###### [<sub>Note</sub> 2](https://dev.to/kethmars/what-i-learned-after-reviewing-over-40-developer-portfolios-9-tips-for-a-better-portfolio-4me7) Post. Portfolio review feedback on dev.to
 > ###### [<sub>Note</sub> 3](https://news.ycombinator.com/item?id=24034211) Forum. Role of software in architecture on ycombinator
 > ###### <sub>Note</sub> 4 Varies. Profile summaries and headlines on LinkedIn
 
+
 ### 1.4 High Level Paradigms
 
-#### The Owner's Key Principles
+The defining criteria from user research can be narrowed down to two guiding principles that radically and reliably shape the development of the project.
 
-- Portraying Honesty and Integrity
+- Owner's Key Principle
+  - Portraying Honesty and Integrity
 
-#### The Users' Triggers
+- Key To User's Triggers
+  - Showing Activity at Every Possible Opportunity
 
-- Showing Activity at Every Possible Opportunity
 
 #### Standing Out
 
@@ -239,9 +254,9 @@ In order to achieve the goal of standing out to the three target users, the foll
 
 ## 2.0 Scope 
 
-The minimum requirements for an MVP are...  
-New experiences over time are...
-The mvp up front that are in line with strategy goals are..
+<!--The minimum requirements for an MVP are...  -->
+<!--New experiences over time are...-->
+<!--The mvp up front that are in line with strategy goals are..-->
 
 ### 2.1 Requirements and Specifications
 
@@ -306,11 +321,11 @@ The variety of content/media required to meet the needs of the user and the owne
 
 ## 3.0 Structure
 
-Providing structure to the scope, information is organized along a parent category which contain two discrete sub-categories to feature: 1) text-based content and  2) image-based content.
-The site info is structured....
-The elements consistently...
-learnable and intuitive......
-in order for the user to understand easily how to navigate the site for the very first time..
+<!--Providing structure to the scope, information is organized along a parent category which contain two discrete sub-categories to feature: 1) text-based content and  2) image-based content.-->
+<!--The site info is structured....-->
+<!--The elements consistently...-->
+<!--learnable and intuitive......-->
+<!--in order for the user to understand easily how to navigate the site for the very first time..-->
 
 ### 3.1 Organization of Functionality and Content
 
@@ -485,14 +500,31 @@ The website offers micro changes to afford users the knowledge of what has previ
 
 #### Semantic Sectioning Elements
 
-> main
-> > section
-> > > article
-> > > > header
-> > > > section
-> > > article
-> > > > header
-> > > > section
+The website takes advantage of HTML5 semantic sectioning elements to bring clarity and refinement to the larger structures within index.html.
+
+- Articles as Parent Elements
+  - The website utilizes the `<article>` element to semantically convey disparate parent 'articles' within a larger `<main>` stack structure.
+  - The use of this element also strengthens the front-end rendering of collapsed content as separate elements.
+
+- Headers as Control Elements
+  - Adopting the use of article elements exposed a unique opportunity to appropriately dedicate a `<header>` for each article, that simultaneously functions as a control element for the collapsed target `<section>` following.
+  - Taking direct precedent from notable front-end publication websites like [The Guardian](https://github.com/guardian/frontend), headers allow preview of introductory content for each collapsed target while simultaneously conveying semantic clarity to this relationship.
+
+- Sections as Target Elements
+  - A primary `<section>` element follows as the immediate and only sibling if each `<article>`'s `<header>`, completing the trifecta of outer-most structures that define index.html.
+
+
+    ```
+    
+    <article id="element-one">
+        <header id="control-one" ... >   
+            <!-- Controls visibility of first section -->
+        <section id="target-one" ... >   
+            <!-- Contains complete structure of first section -->
+    </article>
+    ```
+
+
 
 ## 4.0 Skeleton
 
@@ -626,7 +658,7 @@ Which icons will we use? Which are best to represent our needs?
 - [Interface Design Board - Schematic Page Anatomy](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1639.png)
 
 
-#### Wireframes: Schematic
+#### Schematic Wireframes
 
 - Five Planes of UX
   - [Procedural Wires](https://israelias.github.io/resume-redux/wireframes/schematic/Wireframes_Schematic_Mentor_Presentation_03SEP2020_Part_One.pdf)
@@ -765,6 +797,18 @@ Each section is assigned a bold accent signature color, which it carrier through
 ### Pagination events along a document track
   -  The project is programmed to elicit further, more marcro, events via Scrollspy's `.active` class in the form of a scaled linear representation of the website's height, where segments are highlighted relative to 'where' the user is. This is attributed to an absolutely positioned pseudo element with a selector that traverses an `.active` sibling. The scale to which these line segments are relative to the path that its on works to afford users a sense of place in an otherwise scaleless, immeasurable window.
 
+### Dashboard Static Landscape Mode
+- ggg
+
+### Recent Activity Vertical Scroller
+- The project attaches custom animation to vertically stacked, absolutely position list items that take turn scrolling into the window of a fixed frame when its parent target section is `.show` and when static mode is `:checked`. The result is an effective mini "newsfeed" reel highlighting the owner's recent activity.
+
+### Read More Summary Element
+- The project applies custom controls for the `<details>` element and its hidden `<summary>` content that effectively achieves dropdown and floating "tooltip" functionality for the native elements, respectively, without the use of popper.js. The result is the ability to offer extended versions of excerpted passages in the website's recommendations that floats in the section rather than pushing elements down when opened. This is achieved by selective query and positioning of the summary tag.
+
+### Data Badges
+- The project features data statistics from media list items in the form of badges that are transitioned to reveal when its parent section is shown. The badges are achieved by concocting a bespoke combination of a typical BS .badge. The result is the appearance of live data for otherwise static, hardcoded attributes.
+
 ### Download me at arrival
   - The website features a call to action download button upon landing on the site that is styled in the same fashion as all forthcoming CTAs. The intention is twofold: 1) to provide the the shortest clickable distance between arrival and achieving the singular most valuable touchpoint 2) to establish and reinforce the visual language of the CTA container in its seven identical iterations.
 - 
@@ -842,28 +886,32 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
 ## User Testing
 
 
-> >| <img src="documentation/RedUX_200817_Jacob_01.jpg" width="200px"><br><sub>**Developer:** Jacob</sub> | Collaborator <br> <br>*Jacob Venti**<br><br><sub>Asociate Lead in Design Computation   Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA</sub> |
-> >| --- | --- |
-> >| <sub>Goals</sub> | <sub>Touchpoints</sub> |
-> >| <br><br><ol><li> As a leader in the industry, I want to have a good understanding of who you are and what you are all about within a few seconds.</li></ol><br><br> | <br><ul><li>Each of the seven excerpts of the owner's narrative  is curated to feature an assertive upheld value, existing independent of the others, contained in a headline "truism" to have a clear, equal resonance at each iteration.  The first passage was recently revised to include a short paragraph summary, and is now the only paragraph featured on mobile devices.</li></ul> <br/> |
-> >| <ol><li>As a leader in the industry, I want to be led seamlessly through the site to arrive at valuable content with the minimum amount of clicks.</li></ol> | <br/><ul><li>The website features an interactive collapsible navigational 'stack' programmed to clearly present and quickly deliver content to and from the immediate vicinity of the very first touchpoint. The ubiquity of this feature is aimed at capturing an immediate shorthand with the user, playing to the impulses of his/her learnablility. Additionally, the cut-to-the-chase download-my-cv CTA makes this arrival the most valuable touchpoint for both user and owner</li><ul> <br/> |
-> >| <br><ol><li>As a leader in the industry, I want to see evidence of your credibility and capability as a professional. I want to see what others have said about you or how they have reacted to you. I also want to locate sources of your credibility to see that they are legitimate and to have an idea of your influence on the industry.</li></ol><br><br> | <br/><ul><li>Every content type in every category of the CV is essentially and intentionally "over-cited" as the ambition is to let the many references and sources and data speak for itself, with links to every source,  embracing a manner of  "designed placeholding," with the most true content. The high-level paradigm is that activity is equal to content. For this reason, the everu corner of the website is "activity-centric", showcasing the owner's honest web footprint.</li><ul><br/> |
+<!--> >| <img src="documentation/RedUX_200817_Jacob_01.jpg" width="200px"><br><sub>**Developer:** Jacob</sub> | Collaborator <br> <br>*Jacob Venti**<br><br><sub>Asociate Lead in Design Computation   Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA</sub> |-->
+<!--> >| --- | --- |-->
+<!--> >| <sub>Goals</sub> | <sub>Touchpoints</sub> |-->
+<!--> >| <br><br><ol><li> As a leader in the industry, I want to have a good understanding of who you are and what you are all about within a few seconds.</li></ol><br><br> | <br><ul><li>Each of the seven excerpts of the owner's narrative  is curated to feature an assertive upheld value, existing independent of the others, contained in a headline "truism" to have a clear, equal resonance at each iteration.  The first passage was recently revised to include a short paragraph summary, and is now the only paragraph featured on mobile devices.</li></ul> <br/> |-->
+<!--> >| <ol><li>As a leader in the industry, I want to be led seamlessly through the site to arrive at valuable content with the minimum amount of clicks.</li></ol> | <br/><ul><li>The website features an interactive collapsible navigational 'stack' programmed to clearly present and quickly deliver content to and from the immediate vicinity of the very first touchpoint. The ubiquity of this feature is aimed at capturing an immediate shorthand with the user, playing to the impulses of his/her learnablility. Additionally, the cut-to-the-chase download-my-cv CTA makes this arrival the most valuable touchpoint for both user and owner</li><ul> <br/> |-->
+<!--> >| <br><ol><li>As a leader in the industry, I want to see evidence of your credibility and capability as a professional. I want to see what others have said about you or how they have reacted to you. I also want to locate sources of your credibility to see that they are legitimate and to have an idea of your influence on the industry.</li></ol><br><br> | <br/><ul><li>Every content type in every category of the CV is essentially and intentionally "over-cited" as the ambition is to let the many references and sources and data speak for itself, with links to every source,  embracing a manner of  "designed placeholding," with the most true content. The high-level paradigm is that activity is equal to content. For this reason, the everu corner of the website is "activity-centric", showcasing the owner's honest web footprint.</li><ul><br/> |-->
 
 
-> > | <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px"><br><sub>**Recruiter:** Tracy</sub> | Recruiter <br> <br>*Tracy Letts**<br><br><sub>Asociate Lead in Design Computation Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA</sub> |
-> > | --- | --- |
-> > | <sub>Goals</sub> | <sub>Touchpoints</sub> |
-> > | <br><br><ol><li> As a Recruiter, I want to find information on your skills and projects ASAP..</li></ol><br><br> | <br><ul><li>The website is designed to circulate across three main CTAs as one navigates from landing to finish. These three CTAs are: Download my CV, which is first, and appears twice more, 2) my LinkedIn and 3) my GitHub. There are two chapters dedicated solely to 1) the owner's areas of expertise and 2) the owner's proficiency with skills within such areas. Additionally, the download button as a landing greeting is a calculated effort to establish and reinforce the visual language of the CTA container and its seven identical iterations.</li></ul> <br/> |
-> > | <ol><li>As a Recruiter, I want to understand the easiest and most reliable method of saving and sharing your profile to my team.</li></ol> | <br/><ul><li>The website's per-section CTAs follows the rule of proximity, and are positioned so as to close every chapter and open the next. The website also features three sets of quick-link button groups, emerging at introduction, at side menu, and at the final connect section. These CTA button groups include the ability to save my contact info and CV,  la touchpoints for CTAs  section  on contact information and a message form.</li><ul> <br/> |
-> > | <br><ol><li>As a Recruiter, I want to find the best way to get in contact with you in case I want to connect..</li></ol><br><br> | <br/><ul><li>The website's per-section CTAs follows the rule of proximity, and are positioned so as to close every chapter and open the next. The website also features three sets of quick-link button groups, emerging at introduction, at side menu, and at the final connect section. These CTA button groups include the ability to save my contact info and CV,  la touchpoints for CTAs  section  on contact information and a message form.</li><ul><br/> |
+<!--> > | <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px"><br><sub>**Recruiter:** Tracy</sub> | Recruiter <br> <br>*Tracy Letts**<br><br><sub>Asociate Lead in Design Computation Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA</sub> |-->
+<!--> > | --- | --- |-->
+<!--> > | <sub>Goals</sub> | <sub>Touchpoints</sub> |-->
+<!--> > | <br><br><ol><li> As a Recruiter, I want to find information on your skills and projects ASAP..</li></ol><br><br> | <br><ul><li>The website is designed to circulate across three main CTAs as one navigates from landing to finish. These three CTAs are: Download my CV, which is first, and appears twice more, 2) my LinkedIn and 3) my GitHub. There are two chapters dedicated solely to 1) the owner's areas of expertise and 2) the owner's proficiency with skills within such areas. Additionally, the download button as a landing greeting is a calculated effort to establish and reinforce the visual language of the CTA container and its seven identical iterations.</li></ul> <br/> |-->
+<!--> > | <ol><li>As a Recruiter, I want to understand the easiest and most reliable method of saving and sharing your profile to my team.</li></ol> | <br/><ul><li>The website's per-section CTAs follows the rule of proximity, and are positioned so as to close every chapter and open the next. The website also features three sets of quick-link button groups, emerging at introduction, at side menu, and at the final connect section. These CTA button groups include the ability to save my contact info and CV,  la touchpoints for CTAs  section  on contact information and a message form.</li><ul> <br/> |-->
+<!--> > | <br><ol><li>As a Recruiter, I want to find the best way to get in contact with you in case I want to connect..</li></ol><br><br> | <br/><ul><li>The website's per-section CTAs follows the rule of proximity, and are positioned so as to close every chapter and open the next. The website also features three sets of quick-link button groups, emerging at introduction, at side menu, and at the final connect section. These CTA button groups include the ability to save my contact info and CV,  la touchpoints for CTAs  section  on contact information and a message form.</li><ul><br/> |-->
 
 
-> > | <img src="documentation/RedUX_200821_Peter_01.jpg" width="200px"><br><sub>**Recruiter:** Tracy</sub> | Collaborator <br> <br>*Peter Venti**<br><br><sub>Asociate Lead in Design Computation Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA</sub> |
-> > | --- | --- |
-> > | <sub>Goals</sub> | <sub>Touchpoints</sub> |
-> > | <br><br><ol><li> As a potential collaborator, I want to find your project(s) and quickly fork a repository..</li></ol><br><br> | <br><ul><li>The website dedicates a section on the owners GitHub repository, featuring snapshots of his work with data rendered as live badges, and time stamps. Not only does the project section have a CTA to fork repos, the project container itself includes various badge links to various facets of the repository.</li></ul> <br/> |
-> > | <ol><li>As a potential collaborator, I want to find stats of your contribution footprint.</li></ol> | <br/><ul><li>The website features stats of the owner's footprint in every measurable profesional capacity including: repo contributions, commits, commit messages, project statuses (active, current, next, forthcoming), years in practice, awards and honors. Additionally, the website can be toggled to static mode to show all collapsed sections. Wayfindingin this mode, should one require it, is featured as a proprtional linear scale that shows you where you are on the  very tall page. This is designed to ensure there is always a way to safety in case a user requires it.</li><ul> <br/> |
-> > | <br><ol><li>As a potential collaborator, I want to find the best way to get in contact with the you with any questions I may have<br><br> | <br/><ul><li>The website is designed to feature at least three ways to get in contact with the owner, providing immediate flexibility as well as a logical progression to connecting and/or researching the owner prior to connecting. The site directly offers the owner's email address in a CTA button that will open your email in any device; a CTA that will open your phone app in case you wish to proceed with a call and/or save the owner's number; a CTA that will open google maps in case you wish to have some idea of the owner's location; along with four other links to the owner's Dev account, Github account, LinkedIn, and a dedicated in-page message form that's been pre-filled with a default message which is there to help you break the ice as well as further express the delight with which the owner welcomes new connections..</li><ul><br/> |
+<!--> > | <img src="documentation/RedUX_200821_Peter_01.jpg" width="200px"><br><sub>**Recruiter:** Tracy</sub> | Collaborator <br> <br>*Peter Venti**<br><br><sub>Asociate Lead in Design Computation Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA</sub> |-->
+<!--> > | --- | --- |-->
+<!--> > | <sub>Goals</sub> | <sub>Touchpoints</sub> |-->
+<!--> > | <br><br><ol><li> As a potential collaborator, I want to find your project(s) and quickly fork a repository..</li></ol><br><br> | <br><ul><li>The website dedicates a section on the owners GitHub repository, featuring snapshots of his work with data rendered as live badges, and time stamps. Not only does the project section have a CTA to fork repos, the project container itself includes various badge links to various facets of the repository.</li></ul> <br/> |-->
+<!--> > | <ol><li>As a potential collaborator, I want to find stats of your contribution footprint.</li></ol> | <br/><ul><li>The website features stats of the owner's footprint in every measurable profesional capacity including: repo contributions, commits, commit messages, project statuses (active, current, next, forthcoming), years in practice, awards and honors. Additionally, the website can be toggled to static mode to show all collapsed sections. Wayfindingin this mode, should one require it, is featured as a proprtional linear scale that shows you where you are on the  very tall page. This is designed to ensure there is always a way to safety in case a user requires it.</li><ul> <br/> |-->
+<!--> > | <br><ol><li>As a potential collaborator, I want to find the best way to get in contact with the you with any questions I may have<br><br> | <br/><ul><li>The website is designed to feature at least three ways to get in contact with the owner, providing immediate flexibility as well as a logical progression to connecting and/or researching the owner prior to connecting. The site directly offers the owner's email address in a CTA button that will open your email in any device; a CTA that will open your phone app in case you wish to proceed with a call and/or save the owner's number; a CTA that will open google maps in case you wish to have some idea of the owner's location; along with four other links to the owner's Dev account, Github account, LinkedIn, and a dedicated in-page message form that's been pre-filled with a default message which is there to help you break the ice as well as further express the delight with which the owner welcomes new connections..</li><ul><br/> |-->
+
+
+
+.
 
 
 
@@ -875,15 +923,15 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
 
 <!-- Animation fill property -->
 
-- root-body
-  - body-header
-  - body-nav
-  - body-main
-    - main-article
-      - article-section
-        - outer-body
-          - left inner-body
-          - right inner-body
+<!--- root-body-->
+<!--  - body-header-->
+<!--  - body-nav-->
+<!--  - body-main-->
+<!--    - main-article-->
+<!--      - article-section-->
+<!--        - outer-body-->
+<!--          - left inner-body-->
+<!--          - right inner-body-->
 
 <!--1. Contact form:-->
 <!--   1. Go to the "Contact Us" page-->
@@ -916,11 +964,29 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
 <!--    3. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
 <!--    4. Try to submit the form with all inputs valid and verify that a success message appears.-->
 
-<!--1. Scrolling to top:-->
-<!--   1. Go to the "Contact Us" page-->
-<!--   2. Try to submit the empty form and verify that an error message about the required fields appears-->
-<!--   3. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
-<!--   4. Try to submit the form with all inputs valid and verify that a success message appears.-->
+## Notable Fixes
+
+1. Scrolling to top:
+   1. Fixed the issue of
+   2. Try to submit the empty form and verify that an error message about the required fields appears
+   3. Try to submit the form with an invalid email address and verify that a relevant error message appears
+   4. Try to submit the form with all inputs valid and verify that a success message appears.
+ -  line 3414 including Adding a javascript snippet that  feature to scroll active section to top of screen 720007c0c1ebd3c06a5cc43264a24f7fff5f5630
+```
+$('.collapse').on('shown.bs.collapse', function (e) {
+            var $article = $(this).closest('.article');
+            $('html,body').animate({
+                scrollTop: $article.offset().top
+            }, 500);
+        });
+```
+
+1. Uninterrupted asynchronous transitions
+   - With consideration to the dom and the data-parent functionality/requirement of the collapse feature, the doc outline has been remodeled for effective site performance. Index.html is now thoroughly structured from h1-h6. Article elements were removed to achieve a continuous section~section transition. (See commit fba0a53…) The markup now benefits from comments as well as semantic nomenclature of regions and chapter numbers.
+ (commit 2ec861ca16c90ad1fa306076dcb2c234133d6733)
+
+2. Buttons over anchors
+   - Anchor elements with an href property to a collapsed section id modified the browser URL. This made the single-page index.html cumbersome to navigate using the browser's back button as each toggle on a tab in the accordion is rendered as a new page, caching a back-history at every click. Wrapping each tab section in a button element with a data-target attribute (instead of href) linked to a collapsed section id appears to fix this problem. (commit acc00e9a1e9d020f6831b2ce5f82be08b73883f3)
 
 <!--1. Clip-path on Safari:-->
 <!--    1. Go to the "Contact Us" page-->
@@ -946,6 +1012,22 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
 
 <!--If this section grows too long, you may want to split it off into a separate file and link to it from here.-->
 
+## Documentation Notes
+
+- Component-based approach to rulesets in style.css
+
+- Animations have animation-fill-property set to forwards, meaning the animation applies the styles at keyframe 100% to the element. (The default is none, which means typically, animation keyframe styles come and go; without accountability to property values before or after they are called). The fill property is particulary essential for all animations attached to impermanent/state/pseudo class selectors controlling boolean states (.show, :checked) as such elements need to hold set values of either/or for the duration of the class's transit. As a result of this feature, keyframes rulesets are equally determinstic as the rulesets to which they serve. In some cases, state properties are only assigned at keyframes 100% property and not repeated at the class ruleset that calls that keyframe. Widely accepting that the responsibility of keyframes as vital. To that end, For this project, in style.css, they are omitted when they are not needed so as to minimize repetition of calls to state properties.
+
+  - For example, not setting the animation fill property for .collapse.show will allow .collapse to trigger its hidden state between .collapsing transitions by bootstrap. resulting in a quick flash. To program aroud that flash, the alternative is to explicitly provide a ruleset for the returned class variety as well as the order in wich the plugin returns such classes i.e.  .collapse and :not(.show), .collapsing:not(.show).
+
+- Buttons in nav outline, some elements are duplicates: one representing an href a and a button data target. Serving only and are visible on for state changes or media queries.
+
+- For the most part, the type of classes assigned to elements in index.html are controlled in style.css and only helper classes such as lh-1, .align-middle from libraries are used. Never using classes that set a family of properties other than the .nav-pills variety for scrollspy. If required, only helpers with a single scope/purpse i.e. text-right. Effort was made to keep this to a minimum, typically warranting dedicated rulesets for elements requiring three or more heavy-lifting helper classes. Helper classes that are considered "heavy-lifting" are classes that set box model display properties and dimensions. However, this is not always achieved as in some cases, minor elements using heavy lifting helper classes were not deemed to fully require dedicated rulesets in style.css. Decision was made relative to the scope of what is already controlled in style.css.
+
+- In order to keep the markup clean and avoid the nested trifecta of 'container-fluid -> row -> col-11' before arriving at semantic html-sectioned elements; the utilities that achieve the wrapper's responsive behavior are now applied to the html itself, removing three levels of div-wraps.
+
+- Given the semantic clarity achieved in the article-stack, consideration will be given to the removal of the Introduction `<article>` from the collapsible stack; its potential, logical (and semantic) location being within the main body `<header>`.
+
 ## Miscellaneous
 
 - Throughout its development, the project is continuously tested for consistency on the following browsers:
@@ -961,13 +1043,17 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
 
 ## Known Bugs
 
-- xxx
-- xxx
-- xxx
+- Pseudo `:before` and `:after` vertical rail elements absolutely positioned to parent `section.collapse`, `section.collapsing` and `section:not(.show)`  tend to be treated as overflow on Safari as it presently lacks support for `clip-path`,  thus forcing the "top" of the rail to be hidden at the boundaries of its parent article element.
+
+- Arriving at a square aspect ratio on a Safari desktop browser has previously caused a media query loop as Safari attempts to accommodate the `@media (orientation: landscape)` query and the default media setting simultaenously. All other browsers choose the latter.
 
 # Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+- The website uses GitHub Pages to deploy index.html with its singular style.css stylesheet.
+  - This is achieved by simply activating the Pages feature on the settings of this repository.
+
+- 
+  This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
 - Different values for environment variables (Heroku Config Vars)?
@@ -979,16 +1065,15 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 # Credits
 
-## Documentation
-- The CSS rulesets and comments strictly follow Nicolas Gallagher's [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css). <!--(@necolas)-->
-- headingsMap https://github.com/dzc34/headingsMap
+<!--## Documentation-->
 
-## Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+<!--## Content-->
+<!--- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)-->
 
-## Media
-- The photos used in this site were obtained from ...
+## Content and Media
+- All written content and media outside of iconography and typography are conceived by the owner or retrieved from the owner's public profiles.
 
 ## Acknowledgements
 
-- I received inspiration for this project from X
+- The CSS rulesets and comment style strictly follow Nicolas Gallagher's [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css). <!--(@necolas)-->
+- headingsMap https://github.com/dzc34/headingsMap
