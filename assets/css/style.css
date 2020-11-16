@@ -1123,7 +1123,7 @@ article > header:before {
 
 @media (min-width: 992px) {
     article > header:before {
-        left: calc(var(--margin) * -1 + .25rem);
+        left: calc(var(--margin) * -1 + 1vw);
     }
 }
 
@@ -1149,7 +1149,7 @@ article > header:after {
 
 @media (min-width: 992px) {
     article > header:after {
-        right: calc(var(--margin) * -1 + .25rem);
+        right: calc(var(--margin) * -1 + 1vw);
     }
 }
 
@@ -1719,7 +1719,8 @@ section.right:after {
     top: 1rem;
     left: 49%;
     right: 49%;
-    z-index: 1030;
+    /*z-index: 1030;*/
+    z-index: 100;
 
     cursor: pointer;
 }
@@ -2589,8 +2590,22 @@ ul.nav {
 }
 
 /* ==========================================================================
-   Navigation icon transitions @prefixed
+   Navigation icon and container transitions @prefixed
    ========================================================================== */
+
+/* Navigation indicators and icons for the side menu and the master checkbox
+ * toggle feature custom animations and transitions to signify and control
+ * boolean states.
+ */
+
+/* Declare properties at the body's main header to which the menu icon's
+ * position will be animated.
+ *
+ * This is manually synced with the side menu '.body-nav' transitions.
+ * This extends the '--of-twelve' value re-declared at the previews '.body-*' scope
+ * but sets width properties to viewport-width units as the button has no sibling like
+ * '--mainwidth' to respond to, and is in a fixed-position header.
+ */
 
 .body-header {
     --vw-width: calc(var(--of-twelve) / 12 * 100vw);
@@ -2603,13 +2618,22 @@ ul.nav {
     --vw-navstart: 0;
 }
 
+/* Reset the calcs for --vw-navwidth with a manual gutter width override for
+ * mobiles.
+ * This is only necessary if 'gutter-x' is set to 0 for a particular media
+ * query. In this case, gutter-x is 0 for mobile.
+ */
+
 @media (max-width: 575.98px) {
     .body-header {
-        --vw-navwidth: 25vw;
+        --vw-navwidth: calc(var(--vw-width) - 1.5rem * 2);
     }
 }
 
-/* Set menu-in active transition of container */
+/* Apply 'menu-in' animation for the '.menu-icon' container.
+ * This slides the icon container in when the side menu's control element
+ * indicates that the side menu is expanded.
+ */
 
 .navbar-toggler[aria-expanded="true"] .menu-icon {
     -webkit-animation: menu-in .75s var(--glide) var(--early) 1 normal forwards running;
@@ -2619,7 +2643,10 @@ ul.nav {
             transition: all var(--flashing) var(--zip) var(--early);
 }
 
-/* Set menu-out inactive transition of container */
+/* Set 'menu-out' animation for the 'menu-icon' container.
+ * This slides the icon container back to default position when the side menu's
+ * control element indicates that the side menu is not expanded.
+ */
 
 .navbar-toggler[aria-expanded="false"] .menu-icon {
     -webkit-animation: menu-out .75s var(--glide) var(--early) 1 normal forwards running;
@@ -2669,6 +2696,9 @@ ul.nav {
     }
 }
 
+/* Nav icons
+   ========================================================================== */
+
 /* Style ion-icons for menu nav and checkbox toggle */
 
 .show-swap,
@@ -2679,7 +2709,15 @@ ul.nav {
     font-size: 32px;
 }
 
-/* Menu icon container */
+/* Set color to checkbox icon when checkbox is checked.
+ * Icon is only visible on mobile.
+ */
+
+#toggle-all:checked + label ion-icon {
+    color: var(--ruby);
+}
+
+/* Set presentation styles of menu icon containers. */
 
 .menu-icon {
     display: -webkit-box;
@@ -2688,9 +2726,30 @@ ul.nav {
     position: relative;
 }
 
+/* Declare default status content values for the '.toggle-container' class. */
+
 .toggle-container {
+    --current-mode: "interactive/";
+    --current-state: "collapsible";
+    --current-action: "expand";
+    --current-scope: "all";
+
     position: relative;
 }
+
+/* Re-set values for the '.toggle-container' class when #toggle-all is :checked. */
+
+#toggle-all:checked + label .toggle-container {
+    --current-mode: "static/";
+    --current-state: "expanded";
+    --current-action: "collapse";
+    --current-scope: "back";
+}
+
+/* Position a horizontal line :before the two toggle-containers.
+ * This sets out a pseudo horizontal line that becomes visible when
+ * the side menu icon is toggled and when the master checkbox is toggled.
+ */
 
 .toggle-container:before {
     position: absolute;
@@ -2702,83 +2761,129 @@ ul.nav {
     border-bottom: 2px solid black;
 }
 
+/*
+ * The state indicator.
+ *
+ * Position a horizontal line :after the master checkbox input element.
+ * This sets out and styles the default state of the checkbox input button
+ * horizontal line, which displays the '--current-mode' and
+ * '--current-state' declared at the parent scope.
+ */
+
+
 #toggle-all + label .toggle-container:after {
     position: absolute;
-    content: "";
     display: block;
+    content: var(--current-mode) "\a" var(--current-state);
 
     top: -.5rem;
+    left: 16px;
+
+    width: 20vw;
     height: 24px;
+    margin-left: 15vw;
+
     border-bottom: 2px solid var(--raisin);
 
-    left: 16px;
+    white-space: pre-wrap;
 
-    width: 1rem;
-    margin-right: -6rem;
+    transition: all .3s var(--glide) 0s;
 }
 
-.navbar-brand:before {
-    position: absolute;
-    content: "";
-    display: block;
+/* Style toggled state of state indicator.
+ * When #toggle-all is checked, transition to the other side of the
+ * toggle icon (left), and grow to half the viewport width.
+ * Content updates based on property at parent. */
 
-    top: .5rem;
-    height: 24px;
-    border-bottom: 1px solid var(--grey);
-
-    left: 16px;
-
-    width: 0;
-    /*margin-right: 0;*/
-    margin-left: 10vw;
+#toggle-all:checked + label .toggle-container:after {
+    width: 50vw;
+    margin-left: -15vw;
 }
 
-#toggle-all:checked + label ion-icon {
-    color: var(--ruby);
-}
+/*
+ * The action indicator.
+ *
+ * Position a horizontal line :before the master checkbox input element.
+ * This extends the checkbox toggle clickable area to a dedicated action
+ * pseudo button which displays the '--current-action' and
+ * '--current-scope' declared at the parent scope.
+ */
 
 #toggle-all + label .toggle-container:before {
-    border-bottom: 2px solid var(--raisin);
-    width: 0;
-    margin-left: -12rem;
+    content: var(--current-action) "\a" var(--current-scope);
     left: 16px;
-    /*background-color: pink;*/
+
+    width: 1vw;
+    margin-left: -15vw;
+
+    border-bottom: 2px solid var(--raisin);
     transition: all .3s var(--glide) 0s;
 }
+
+/* Style toggled state of action indicator.
+ * When #toggle-all is checked, transition to the other side of the
+ * toggle icon (right).
+ * Content updates based on property at parent. */
 
 #toggle-all:checked + label .toggle-container:before {
-    width: 30vw;
-    margin-left: -15vw;
-    transition: all .3s var(--glide) 0s;
-    border-bottom-color: var(--denim);
+    margin-left: 15vw;
 }
+
+/* Set values for the '.toggle-container' class when device/browser width is
+ * greater than its height on tablet screens and below; set it to override
+ * rules when #toggle-all is :checked.
+ * This sets the action indicator and the status indicator for dahsboard mode,
+ * expanding the pseudo line to occupy the majority of the header area, and
+ * indicate the system-wide fixed-control triggered by the auto-landscape query.
+ */
 
 @media (max-width: 991.98px) and (orientation: landscape) {
+    .toggle-container,
+    #toggle-all:checked + label .toggle-container {
+        --current-mode: "dashboard/";
+        --current-state: "expanded";
+        --current-action: "landscape";
+        --current-scope: "auto";
+    }
+
     #toggle-all:checked + label .toggle-container:before,
     #toggle-all + label .toggle-container:before {
-        width: 4rem;
+        color: var(--deep-3);
         margin-left: 17vw;
-        /*transition: all .3s var(--glide) 0s;*/
-        /*border-bottom-color: red;*/
     }
-    #toggle-all + label .toggle-container:after {
-        width: 25vw;
-        margin-left: 17vw;
-        /*width: 400%;*/
-        /*left: 100%;*/
-        transition: all .3s var(--glide) 0s;
-        border-bottom-color: var(--ruby);
-    }
-    .navbar-brand:before {
-        width: 15vw;
-        margin-left: 70vw;
-        /*margin-left: -70vw;*/
-        transition: all .3s var(--swoop) 0s;
+
+    #toggle-all + label .toggle-container:after,
+    #toggle-all:checked + label .toggle-container:after {
+        margin-left: -48vw;
+        width: 85vw;
     }
 }
 
-/* Set menu-in/menu-out active/inactive animation for icon in container */
-/* Two ion-icons, rotating and disappearing on toggle */
+/* Set values of the '.toggle-container' status variables to display nothing on
+ * mobile screens as a radio button icon stands in its place.
+ */
+
+@media (max-width: 575.98px) {
+    .toggle-container,
+    #toggle-all:checked + label .toggle-container {
+        --current-mode: "";
+        --current-state: "";
+        --current-action: "";
+        --current-scope: "";
+    }
+
+    #toggle-all + label .toggle-container:after,
+    #toggle-all + label .toggle-container:before {
+        display: none;
+    }
+}
+
+/* Set menu-in/menu-out active/inactive animation for icon in container
+ * This applies custom animation to two opposing icons that appear/disappear
+ * on toggle of its parent menu button control element.
+ */
+
+/* When a closed menu is toggled, animate the close icon in. */
 
 .navbar-toggler[aria-expanded="true"] .see-more {
     position: relative;
@@ -2790,6 +2895,8 @@ ul.nav {
             transition: all var(--flashing) var(--glide) var(--short);
 }
 
+/* When an open menu is toggled, animate the close icon out. */
+
 .navbar-toggler[aria-expanded="false"] .see-more {
     position: relative;
 
@@ -2799,6 +2906,8 @@ ul.nav {
          -o-transition: all var(--flashing) var(--glide) var(--short);
             transition: all var(--flashing) var(--glide) var(--short);
 }
+
+/* When a closed menu is toggled, animate the menu icon out. */
 
 .navbar-toggler[aria-expanded="true"] .see-less {
     position: relative;
@@ -2810,6 +2919,8 @@ ul.nav {
             transition: all var(--flashing) var(--glide) var(--short);
 }
 
+/* When an open menu is toggled to close, animate the menu icon back in. */
+
 .navbar-toggler[aria-expanded="false"] .see-less {
     position: relative;
 
@@ -2820,7 +2931,10 @@ ul.nav {
             transition: all var(--flashing) var(--glide) var(--short);
 }
 
-/* Menu Disappear icon animation keyframes */
+/* Menu/close icons animation keyframes
+ * This transitions either the hamburger or close icon to 'flip' and disappear,
+ * as the hamburger or close icon 'flips' and appears.
+ */
 
 @-webkit-keyframes disappear-180 {
     0% {
@@ -2854,7 +2968,11 @@ ul.nav {
     }
 }
 
-/* Menu Appear icon animation keyframes */
+/* Menu/close icons animation keyframes
+ * Reverse of disappear, transitions either the hamburger or close icon to 'flip'
+ * and disappear, as the hamburger or close icon 'flips' and appears.
+ * Note: Setting animation to alternate/reverse does not work.
+ */
 
 @-webkit-keyframes appear-180 {
     0% {
@@ -2891,10 +3009,12 @@ ul.nav {
 /* Nav Checkbox toggle switch  @prefixed
    ========================================================================== */
 
-/* Toggle checkbox icon transitions */
+/* Set :not(checked)/:checked animation for icon in container.
+ * This applies custom animation to two opposing icons that appear/disappear
+ * on toggle of its parent input/label control element.
+ */
 
-/* Set active/inactive swap for icons in container */
-/* Two ion-icons, rotating, and swapping on toggle */
+/* When checked, animate the 'on' radio button icon in. */
 
 #toggle-all:checked + label .show-swap {
     position: relative;
@@ -2910,6 +3030,8 @@ ul.nav {
             transition: all var(--flashing) var(--glide) var(--short);
 }
 
+/* When not checked, animate the 'on' radio button icon out. */
+
 #toggle-all:not(checked) + label .show-swap {
     position: relative;
 
@@ -2920,7 +3042,9 @@ ul.nav {
             transition: all var(--flashing) var(--glide) var(--short);
 }
 
-/* Animates in reverse */
+/* When checked, animate the 'off' radio button icon out.
+ * The reverse direction visually works for circular icons.
+ */
 
 #toggle-all:checked + label .hide-swap {
     position: relative;
@@ -2935,7 +3059,7 @@ ul.nav {
             transition: all var(--flashing) var(--glide) var(--short);
 }
 
-/* Animates in reverse */
+/* When not checked, animate the 'off' radio button icon in. */
 
 #toggle-all:not(checked) + label .hide-swap {
     position: relative;
@@ -3030,18 +3154,21 @@ ul.nav {
     }
 }
 
-/* SIDE MENU + EXPAND ALL FULL SPREAD STATE
+/* Master dashboard state/landscape mode styles
    ========================================================================== */
 
-/* Trigger a complete Side Nav click event at 1400px */
-/* Also triggers an expand all at the largest media query, showing all content. */
-
-/* As W3C described, regardless of the device type (mobile or desktop), when
- * the viewport height is larger than the width, the orientation is described
- * as portrait. Conversely, it is described as landscape when the width viewport
- * size is larger than the height.*/
-
-/* Set box shadow blur custom property from 0 (previous) to new value(s). */
+/*
+ * On tablet screens and lower, when viewport width is larger than height,
+ * force side menu to show, and trigger expand all static state.
+ *
+ * Declaires box shadow blur properties to the same values declared when
+ * #toggle-all is :checked.
+ * This calls the nav.show and the collapse.show animations for its
+ * opposite/collapse selectors, preventing calls to local boolean states.
+ * This selects miscellaneous elements previously set when #toggle-all is :checked
+ * to appear in the same manner but traversing a non-boolean selector, as
+ * the media query is itself the boolean selector.
+ */
 
 @media (max-width: 991.98px) and  (orientation: landscape) {
     .body-main {
@@ -3736,7 +3863,7 @@ form .connect-cta input {
  * 3. Set box model and presentation
  */
 
-#verticalScroller {
+#vertical-scroller {
     --item-height: 9.75rem;
     --cta-height: 4.5rem;
     --scroll-height: calc(var(--item-height) + var(--cta-height));
@@ -3782,7 +3909,7 @@ form .connect-cta input {
  * 2. Clear shadows inherited from li core configs
  */
 
-#verticalScroller > li {
+#vertical-scroller > li {
     position:absolute;
     overflow: hidden;
 
@@ -3839,12 +3966,12 @@ form .connect-cta input {
  * 3. Adjust '.btn' class to fit the smaller frame
  */
 
-#verticalScroller .activity-cta {
+#vertical-scroller .activity-cta {
     max-height: var(--cta-height);
     font-size: .8125rem;
 }
 
-#verticalScroller .activity-cta .btn {
+#vertical-scroller .activity-cta .btn {
     width: 2.5rem;
     height: 2.5rem;
 }
@@ -3861,16 +3988,16 @@ form .connect-cta input {
 
 /* Offset three scroll items to the total height of the scroller container by default */
 
-#scrollOne,
-#scrollTwo,
-#scrollThree {
+#scroll-one,
+#scroll-two,
+#scroll-three {
     top: var(--scroll-height);
 }
 
 /* Scroll the first item back in at the end of the animation */
 
-#toggle-all:checked ~ main #scrollOne,
-#target-one.show #scrollOne {
+#toggle-all:checked ~ main #scroll-one,
+#target-one.show #scroll-one {
     -webkit-animation:
             scroll-in .75s var(--glide) 0s 1 normal forwards running,
             scroll-out .75s var(--glide) 4s 1 normal forwards running,
@@ -3888,7 +4015,7 @@ form .connect-cta input {
 /* Trigger scroll one in on lanscape orientation */
 
 @media (max-width: 991.98px) and  (orientation: landscape) {
-    #scrollOne {
+    #scroll-one {
         -webkit-animation:
             scroll-in .75s var(--glide) 0s 1 normal forwards running;
         animation:
@@ -3898,8 +4025,8 @@ form .connect-cta input {
 
 /* Second scroll item */
 
-#toggle-all:checked ~ main #scrollTwo,
-#target-one.show #scrollTwo {
+#toggle-all:checked ~ main #scroll-two,
+#target-one.show #scroll-two {
     -webkit-animation:
             scroll-in .75s var(--glide) 4s 1 normal forwards running,
             scroll-out .75s var(--glide) 8s 1 normal forwards running;
@@ -3914,8 +4041,8 @@ form .connect-cta input {
 
 /* Third scroll item */
 
-#toggle-all:checked ~ main #scrollThree,
-#target-one.show #scrollThree {
+#toggle-all:checked ~ main #scroll-three,
+#target-one.show #scroll-three {
     -webkit-animation:
             scroll-in .75s var(--glide) 8s 1 normal forwards running,
             scroll-out .75s var(--glide) 12s 1 normal forwards running;
@@ -4007,7 +4134,6 @@ form .connect-cta input {
 .banner-top {
     line-height: .875rem;
     color: #a4a4a4;
-    /*flex-direction: column;*/
     -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
@@ -4017,18 +4143,9 @@ form .connect-cta input {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-
-
-
-    /*-webkit-animation: banner-top .75s var(--swoop) 2.75s 1 normal forwards running;*/
-    /*        animation: banner-top .75s var(--swoop) 2.75s 1 normal forwards running;*/
-    /*-webkit-transition: all .75s var(--swoop) .3s;*/
-    /*     -o-transition: all .75s var(--swoop) .3s;*/
-    /*        transition: all .75s var(--swoop) .3s;*/
 }
 
 .banner-bottom {
-    /*flex-direction: column;*/
     line-height: .9rem;
     -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -4039,13 +4156,6 @@ form .connect-cta input {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-
-
-    /*-webkit-animation: banner-bottom .75s var(--swoop) 2.75s 1 normal forwards running;*/
-    /*        animation: banner-bottom .75s var(--swoop) 2.75s 1 normal forwards running;*/
-    /*-webkit-transition: all .75s var(--swoop) .3s;*/
-    /*     -o-transition: all .75s var(--swoop) .3s;*/
-    /*        transition: all .75s var(--swoop) .3s;*/
 }
 
 .banner-middle {
@@ -4061,196 +4171,10 @@ form .connect-cta input {
     padding-top: 1rem;
     padding-bottom: 0;
     opacity: 1;
-
-    /*-webkit-animation: banner-middle .75s var(--swoop) 2.65s 1 normal forwards running;*/
-    /*        animation: banner-middle .75s var(--swoop) 2.65s 1 normal forwards running;*/
-    /*-webkit-transition: all .75s var(--swoop) .3s;*/
-    /*     -o-transition: all .75s var(--swoop) .3s;*/
-    /*        transition: all .75s var(--swoop) .3s;*/
 }
 
 .banner-pseudo {
     display: none;
-    /*text-align: right;*/
-    /*padding-right: 1rem;*/
-    /*line-height: .875rem;*/
-    /*-webkit-animation: banner-pseudo 1s var(--swoop) 2.3s 1 normal forwards running;*/
-    /*        animation: banner-pseudo 1s var(--swoop) 2.3s 1 normal forwards running;*/
-    /*-webkit-transition: all .75s var(--breeze) 2s;*/
-    /*     -o-transition: all .75s var(--breeze) 2s;*/
-    /*        transition: all .75s var(--breeze) 2s;*/
-}
-
-@-webkit-keyframes banner-top {
-    0% {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-                flex-direction: row;
-        margin-bottom: 0;
-        line-height: 1;
-        justify-content: space-around;
-    }
-    100% {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-                flex-direction: column;
-        margin-bottom: 3rem;
-        line-height: .875rem;
-        -webkit-box-pack: center;
-                justify-content: center;
-    }
-}
-
-@keyframes banner-top {
-    0% {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        margin-bottom: 0;
-        line-height: 1;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-    }
-    100% {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        margin-bottom: 3rem;
-        line-height: .875rem;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-    }
-}
-
-@-webkit-keyframes banner-bottom {
-    0% {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-                flex-direction: row;
-        margin-top: 0;
-        line-height: 1;
-        justify-content: space-around;
-    }
-    100% {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-                flex-direction: column;
-        margin-top: auto;
-        line-height: .9rem;
-        -webkit-box-pack: center;
-                justify-content: center;
-    }
-}
-
-@keyframes banner-bottom {
-    0% {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        margin-top: 0;
-        line-height: 1;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-    }
-    100% {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        margin-top: auto;
-        line-height: .9rem;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-    }
-}
-
-@-webkit-keyframes banner-middle {
-    0% {
-        position: absolute;
-        display: none;
-        text-align: left;
-        font-style: normal;
-        padding-right: 1.5rem;
-        margin-top: -40rem;
-        padding-top: 0;
-        padding-bottom: 600px;
-        opacity: 0;
-    }
-    50% {
-        font-style: italic;
-        opacity: 1;
-        display: -webkit-box;
-        display: flex;
-    }
-    100% {
-        display: -webkit-box;
-        display: flex;
-        position: absolute;
-        text-align: left;
-        font-style: italic;
-        padding-right: 1.5rem;
-        margin-top: 1.5rem;
-        padding-top: 1rem;
-        padding-bottom: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes banner-middle {
-    0% {
-        position: absolute;
-        display: none;
-        text-align: left;
-        font-style: normal;
-        padding-right: 1.5rem;
-        margin-top: -40rem;
-        padding-top: 0;
-        padding-bottom: 600px;
-        opacity: 0;
-    }
-    50% {
-        font-style: italic;
-        opacity: 1;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-    100% {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        position: absolute;
-        text-align: left;
-        font-style: italic;
-        padding-right: 1.5rem;
-        margin-top: 1.5rem;
-        padding-top: 1rem;
-        padding-bottom: 0;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes banner-pseudo {
-    0% {
-        visibility: visible;
-    }
-    100% {
-        visibility: hidden;
-    }
-}
-
-@keyframes banner-pseudo {
-    0% {
-        visibility: visible;
-    }
-    100% {
-        visibility: hidden;
-    }
 }
 
 .banner-cta .value {
@@ -4508,7 +4432,7 @@ section.right > ul > li h6 {
  * Media list item.
  *
  * This styles the list items in every media list except for the #target-one section,
- * which is controlled by the '#verticalScroller', and the #target-six section,
+ * which is controlled by the '#vertical-scroller', and the #target-six section,
  * which is styled via the LinkedIn section.
  *
  * Typically includes an h6 with a 'detail-title' class,
@@ -5523,55 +5447,6 @@ article {
     }
 }
 
-#element-one,
-#element-four,
-#element-seven {
-    position: relative;
-    /*animation: var(--dash-up-early-glide-anim);*/
-    /*-webkit-animation: var(--dash-up-early-glide-anim);*/
-
-    /*-webkit-transition: var(--flash-all-late-glide-trans);*/
-    /*-o-transition: var(--flash-all-late-glide-trans);*/
-    /*transition: var(--flash-all-late-glide-trans);*/
-}
-
-#control-one,
-#control-four,
-#control-seven {
-    position: relative;
-
-    /*-webkit-animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-    /*animation: load-shrink var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-
-    /*-webkit-transition: var(--flash-all-flash-glide-trans);*/
-    /*-o-transition: var(--flash-all-flash-glide-trans);*/
-    /*transition: var(--flash-all-flash-glide-trans);*/
-}
-
-#control-two,
-#control-five {
-    position: relative;
-
-    /*-webkit-animation: load-right var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-    /*animation: load-right var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-
-    /*-webkit-transition: var(--flash-all-flash-glide-trans);*/
-    /*-o-transition: var(--flash-all-flash-glide-trans);*/
-    /*transition: var(--flash-all-flash-glide-trans);*/
-}
-
-#control-three,
-#control-six {
-    position: relative;
-
-    /*-webkit-animation: load-left var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-    /*animation: load-left var(--dashing) var(--glide) var(--early) 1 normal forwards running;*/
-
-    /*-webkit-transition: var(--flash-all-late-glide-trans);*/
-    /*-o-transition: var(--flash-all-late-glide-trans);*/
-    /*transition: var(--flash-all-late-glide-trans);*/
-}
-
 .body-header,
 .body-footer {
     -webkit-animation: var(--fade-in) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
@@ -5614,76 +5489,6 @@ article {
     }
 }
 
-@-webkit-keyframes load-shrink {
-    0% {
-        -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
-        transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
-        transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
-    }
-}
-@keyframes load-shrink {
-    0% {
-        -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
-        transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
-        transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
-    }
-}
-
-@-webkit-keyframes load-left {
-    0% {
-        left: 500px;
-        -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
-        transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
-    }
-    100% {
-        left: 0;
-        -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
-        transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
-    }
-}
-@keyframes load-left {
-    0% {
-        left: 500px;
-        -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
-        transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
-    }
-    100% {
-        left: 0;
-        -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
-        transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
-    }
-}
-
-@-webkit-keyframes load-right {
-    0% {
-        right: 500px;
-        -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
-        transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
-    }
-    100% {
-        right: 0;
-        -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
-        transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
-    }
-}
-@keyframes load-right {
-    0% {
-        right: 500px;
-        -webkit-transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0);
-        transform: translateY(0) scale(0) rotateX(0) rotateY(0) rotateZ(0deg);
-    }
-    100% {
-        right: 0;
-        -webkit-transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0);
-        transform: translateY(0) scale(1) rotateX(0) rotateY(0) rotateZ(0deg);
-    }
-}
 
 @keyframes fade-in {
     0% { opacity: 0; }
