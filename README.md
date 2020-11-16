@@ -660,6 +660,8 @@ Which icons will we use? Which are best to represent our needs?
 
 #### Schematic Wireframes
 
+Mockups commenced in September 2020..
+
 - Five Planes of UX
   - [Procedural Wires](https://israelias.github.io/resume-redux/wireframes/schematic/Wireframes_Schematic_Mentor_Presentation_03SEP2020_Part_One.pdf)
 
@@ -735,6 +737,8 @@ Provides information and context
 
 ### 5.2 Color Scheme
 
+- [Color Palette](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_20116_0746.png)
+
 Given the movement that occurs on the screen upon section transitions, the site's overall color and peripheral default color states are decidedly neutral, spanning a spectrum of off-whites; a range of neutral greys; either of which afford the project its most stylistic reading in four gradients.
 
 - Whites
@@ -756,26 +760,42 @@ Given the movement that occurs on the screen upon section transitions, the site'
 Each section is assigned a bold accent signature color, which it carrier throughout the project in two tones: 1) a deep, rich, tone with a waxed matte finish 2) and a faded high-saturation highlight with a diffused backlit glow.
 
 - Signature blends, in pairs:
-  - --obsidian: #2E2C2E; --raisin: #3E223D;
-  - --slate: #929181; --grey: #B7B1A8;
-  - --ruby: #89413D; --red: #B84A30;
-  - --denim: #37455C; --blue: #1D49B8;
-  - --canary: #D27511; --yellow: #B8A922;
-  - --moss: #213128; --green: #234D3E;
+  - ![](documentation/obsidian.png) --obsidian: #2E2C2E; --raisin: #3E223D;
+  - ![](documentation/slate.png) --slate: #929181; --grey: #B7B1A8;
+  - ![](documentation/ruby.png) --ruby: #89413D; --red: #B84A30;
+  - ![](documentation/denim.png) --denim: #37455C; --blue: #1D49B8;
+  - ![](documentation/canary.png) --canary: #D27511; --yellow: #B8A922;
+  - ![](documentation/moss.png) --moss: #213128; --green: #234D3E;
 
 
 ### 5.3 Typography
 
-- Should be visually distinct
-- Indicate diferent information
-- Should be consistent
-- Good UX smells like value.
+<!--- Should be visually distinct-->
+<!--- Indicate diferent information-->
+<!--- Should be consistent-->
+<!--- Good UX smells like value.-->
 
 - Typography
   - [Viktor Nübel](https://viktornuebel.medium.com/how-scripts-helped-to-design-a-typeface-for-coding-9af5f28d742a)'s [FF Attribute](https://www.fontshop.com/superfamilies/ff-attribute) font family is the stylistic feature font of the project's main body, including [FF Attribute Mono](https://www.fontshop.com/families/ff-attribute-mono) and [FF Attribute Text](https://www.fontshop.com/families/ff-attribute-text); while [Vasily Biryukov](http://luc.devroye.org/fonts-51517.html)'s opinionated take on the classic [FF DIN](https://en.wikipedia.org/wiki/FF_DIN) family with [DIN 2014](https://fonts.adobe.com/fonts/din-2014) is featured in section headlines.
 
+### 5.4 Movement
+
+Custom Timing Function Variables
+
+- `--glide` is a refined variation of `ease-in-out`: a smooth slow start with an equally smooth slow end.
+  - [Preview](https://cubic-bezier.com/#.45,.02,.51,.95) `cubic-bezier(0.455, 0.03, 0.515, 0.955)`
 
 
+- `--breeze` is similar to `ease` but with a heightened overbound: a rapid start with a slow finish and a discreet bounce.
+  - [Preview](https://cubic-bezier.com/#.23,-0.09,.18,1.25) `cubic-bezier(.23, -0.09, .18, 1.25)`
+
+
+- `--zip` is a typically `linear` progression with a forceful and surprise bounce: a consistent speed with an interrupted end.
+  - [Preview](https://cubic-bezier.com/#1,1.4,.41,1.01) `cubic-bezier(1, 1.4, 0.41, 1.01)`
+
+
+- `--swoop` is an `ease-in-out` with a late and steep progression: an extra slow start with a rapid progression before a relaxed end.
+  - [Preview ](https://cubic-bezier.com/#1,0,.41,1.01) `cubic-bezier(1, 0, 0.41, 1.01)`
 
 # Features
 
@@ -818,9 +838,9 @@ Each section is assigned a bold accent signature color, which it carrier through
 
 - The input's label element contains icons that swap visibility on toggle of ':checked'.
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+<!--For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.-->
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+<!--In addition, you may also use this section to discuss plans for additional features to be implemented in the future:-->
 
 ## Features Left to Implement
 - Another feature idea
@@ -885,33 +905,50 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
 
 ## User Testing
 
+-   #### Senior Dev. User Goals
 
-<!--> >| <img src="documentation/RedUX_200817_Jacob_01.jpg" width="200px"><br><sub>**Developer:** Jacob</sub> | Collaborator <br> <br>*Jacob Venti**<br><br><sub>Asociate Lead in Design Computation   Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA</sub> |-->
-<!--> >| --- | --- |-->
-<!--> >| <sub>Goals</sub> | <sub>Touchpoints</sub> |-->
-<!--> >| <br><br><ol><li> As a leader in the industry, I want to have a good understanding of who you are and what you are all about within a few seconds.</li></ol><br><br> | <br><ul><li>Each of the seven excerpts of the owner's narrative  is curated to feature an assertive upheld value, existing independent of the others, contained in a headline "truism" to have a clear, equal resonance at each iteration.  The first passage was recently revised to include a short paragraph summary, and is now the only paragraph featured on mobile devices.</li></ul> <br/> |-->
-<!--> >| <ol><li>As a leader in the industry, I want to be led seamlessly through the site to arrive at valuable content with the minimum amount of clicks.</li></ol> | <br/><ul><li>The website features an interactive collapsible navigational 'stack' programmed to clearly present and quickly deliver content to and from the immediate vicinity of the very first touchpoint. The ubiquity of this feature is aimed at capturing an immediate shorthand with the user, playing to the impulses of his/her learnablility. Additionally, the cut-to-the-chase download-my-cv CTA makes this arrival the most valuable touchpoint for both user and owner</li><ul> <br/> |-->
-<!--> >| <br><ol><li>As a leader in the industry, I want to see evidence of your credibility and capability as a professional. I want to see what others have said about you or how they have reacted to you. I also want to locate sources of your credibility to see that they are legitimate and to have an idea of your influence on the industry.</li></ol><br><br> | <br/><ul><li>Every content type in every category of the CV is essentially and intentionally "over-cited" as the ambition is to let the many references and sources and data speak for itself, with links to every source,  embracing a manner of  "designed placeholding," with the most true content. The high-level paradigm is that activity is equal to content. For this reason, the everu corner of the website is "activity-centric", showcasing the owner's honest web footprint.</li><ul><br/> |-->
+    1. As a leader in the industry, I want to have a good understanding of who you are and what you are all about within a few seconds.
 
+        1. Each of the seven excerpts of the owner's narrative  is curated to feature an assertive upheld value, existing independent of the others, contained in a headline "truism" to have a clear, equal resonance at each iteration. This ensures that the owner's narrative is showcased at every category.
+        2.  The first passage was recently revised to include a short paragraph summary, and is now the only paragraph featured on mobile devices. This affords the user with the owner's "in-a-nutshell" pitch without distraction to its extended excerpts per section when on-the-go and viewing on mobile.
 
-<!--> > | <img src="documentation/RedUX_200817_Tracy_01.jpg" width="200px"><br><sub>**Recruiter:** Tracy</sub> | Recruiter <br> <br>*Tracy Letts**<br><br><sub>Asociate Lead in Design Computation Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA</sub> |-->
-<!--> > | --- | --- |-->
-<!--> > | <sub>Goals</sub> | <sub>Touchpoints</sub> |-->
-<!--> > | <br><br><ol><li> As a Recruiter, I want to find information on your skills and projects ASAP..</li></ol><br><br> | <br><ul><li>The website is designed to circulate across three main CTAs as one navigates from landing to finish. These three CTAs are: Download my CV, which is first, and appears twice more, 2) my LinkedIn and 3) my GitHub. There are two chapters dedicated solely to 1) the owner's areas of expertise and 2) the owner's proficiency with skills within such areas. Additionally, the download button as a landing greeting is a calculated effort to establish and reinforce the visual language of the CTA container and its seven identical iterations.</li></ul> <br/> |-->
-<!--> > | <ol><li>As a Recruiter, I want to understand the easiest and most reliable method of saving and sharing your profile to my team.</li></ol> | <br/><ul><li>The website's per-section CTAs follows the rule of proximity, and are positioned so as to close every chapter and open the next. The website also features three sets of quick-link button groups, emerging at introduction, at side menu, and at the final connect section. These CTA button groups include the ability to save my contact info and CV,  la touchpoints for CTAs  section  on contact information and a message form.</li><ul> <br/> |-->
-<!--> > | <br><ol><li>As a Recruiter, I want to find the best way to get in contact with you in case I want to connect..</li></ol><br><br> | <br/><ul><li>The website's per-section CTAs follows the rule of proximity, and are positioned so as to close every chapter and open the next. The website also features three sets of quick-link button groups, emerging at introduction, at side menu, and at the final connect section. These CTA button groups include the ability to save my contact info and CV,  la touchpoints for CTAs  section  on contact information and a message form.</li><ul><br/> |-->
+    2. As a leader in the industry, I want to be led seamlessly through the site to arrive at valuable content with the minimum amount of clicks.
 
+        1. The website features an interactive collapsible navigational 'stack' programmed to clearly present and quickly deliver content to and from the immediate vicinity of the very first touchpoint. The ubiquity of this feature is aimed at capturing an immediate shorthand with the user, playing to the impulses of his/her learnablility.
+       2. Additionally, the cut-to-the-chase download-my-cv CTA makes this arrival the most valuable touchpoint for both user and owner.
 
-<!--> > | <img src="documentation/RedUX_200821_Peter_01.jpg" width="200px"><br><sub>**Recruiter:** Tracy</sub> | Collaborator <br> <br>*Peter Venti**<br><br><sub>Asociate Lead in Design Computation Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA</sub> |-->
-<!--> > | --- | --- |-->
-<!--> > | <sub>Goals</sub> | <sub>Touchpoints</sub> |-->
-<!--> > | <br><br><ol><li> As a potential collaborator, I want to find your project(s) and quickly fork a repository..</li></ol><br><br> | <br><ul><li>The website dedicates a section on the owners GitHub repository, featuring snapshots of his work with data rendered as live badges, and time stamps. Not only does the project section have a CTA to fork repos, the project container itself includes various badge links to various facets of the repository.</li></ul> <br/> |-->
-<!--> > | <ol><li>As a potential collaborator, I want to find stats of your contribution footprint.</li></ol> | <br/><ul><li>The website features stats of the owner's footprint in every measurable profesional capacity including: repo contributions, commits, commit messages, project statuses (active, current, next, forthcoming), years in practice, awards and honors. Additionally, the website can be toggled to static mode to show all collapsed sections. Wayfindingin this mode, should one require it, is featured as a proprtional linear scale that shows you where you are on the  very tall page. This is designed to ensure there is always a way to safety in case a user requires it.</li><ul> <br/> |-->
-<!--> > | <br><ol><li>As a potential collaborator, I want to find the best way to get in contact with the you with any questions I may have<br><br> | <br/><ul><li>The website is designed to feature at least three ways to get in contact with the owner, providing immediate flexibility as well as a logical progression to connecting and/or researching the owner prior to connecting. The site directly offers the owner's email address in a CTA button that will open your email in any device; a CTA that will open your phone app in case you wish to proceed with a call and/or save the owner's number; a CTA that will open google maps in case you wish to have some idea of the owner's location; along with four other links to the owner's Dev account, Github account, LinkedIn, and a dedicated in-page message form that's been pre-filled with a default message which is there to help you break the ice as well as further express the delight with which the owner welcomes new connections..</li><ul><br/> |-->
+    3. As a leader in the industry, I want to see evidence of your credibility and capability as a professional. I want to see what others have said about you or how they have reacted to you. I also want to locate sources of your credibility to see that they are legitimate and to have an idea of your influence on the industry.
 
+        1. Every content type in every category of the CV is essentially and intentionally "over-cited" as the ambition is to let the many references and sources and data speak for itself, with links to every source,  embracing a manner of  "designed placeholding," with the most true content. The high-level paradigm is that activity is equal to content. For this reason, every corner of the website is "activity-centric", showcasing the owner's honest web footprint.
 
+-   #### Recruiter User Goals
 
-.
+    1. As a Recruiter, I want to find information on your skills and projects ASAP.
+
+        1. The website is designed to circulate across three main CTAs as one navigates from landing to finish. These three CTAs are: Download my CV, which is first, and appears twice more, 2) my LinkedIn and 3) my GitHub. There are two chapters dedicated solely to 1) the owner's areas of expertise and 2) the owner's proficiency with skills within such areas. Additionally, the download button as a landing greeting is a calculated effort to establish and reinforce the visual language of the CTA container and its seven identical iterations.
+
+    2. As a Recruiter, I want to understand the easiest and most reliable method of saving and sharing your profile to my team.
+
+        1. The website's per-section CTAs follows the rule of proximity, and are positioned so as to close every chapter and open the next. The website also features three sets of quick-link button groups, emerging at introduction, at side menu, and at the final connect section. These CTA button groups include the ability to save my contact info and CV,  la touchpoints for CTAs  section  on contact information and a message form.
+
+    3. As a Recruiter, I want to find the best way to get in contact with you in case I want to connect.
+        1. At the bottom of every page their is a footer which content is consistent throughout all pages.
+        2. To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address.
+        3. There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
+
+-   #### Collaborator User Goals
+
+    1. As a potential collaborator, I want to find your project(s) and quickly fork a repository.
+
+        1. The website dedicates a section on the owners GitHub repository, featuring snapshots of his work with data rendered as live badges, and time stamps. Not only does the project section have a CTA to fork repos, the project container itself includes various badge links to various facets of the repository.
+
+    2. As a potential collaborator, I want to find stats of your contribution footprint.
+
+        1. The website features stats of the owner's footprint in every measurable profesional capacity including: repo contributions, commits, commit messages, project statuses (active, current, next, forthcoming), years in practice, awards and honors. Additionally, the website can be toggled to static mode to show all collapsed sections. Wayfindingin this mode, should one require it, is featured as a proprtional linear scale that shows you where you are on the  very tall page. This is designed to ensure there is always a way to safety in case a user requires it.
+
+    3. As a potential collaborator, I want to find the best way to get in contact with the you with any questions I may have.
+        1. The website is designed to feature at least three ways to get in contact with the owner, providing immediate flexibility as well as a logical progression to connecting and/or researching the owner prior to connecting. The site directly offers the owner's email address in a CTA button that will open your email in any device; a CTA that will open your phone app in case you wish to proceed with a call and/or save the owner's number; a CTA that will open google maps in case you wish to have some idea of the owner's location; along with four other links to the owner's Dev account, Github account, LinkedIn, and a dedicated in-page message form that's been pre-filled with a default message which is there to help you break the ice as well as further express the delight with which the owner welcomes new connections.
+
 
 
 
@@ -964,47 +1001,60 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
 <!--    3. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
 <!--    4. Try to submit the form with all inputs valid and verify that a success message appears.-->
 
-## Notable Fixes
+## Notable Methods
 
-1. Scrolling to top:
-   1. Fixed the issue of
-   2. Try to submit the empty form and verify that an error message about the required fields appears
-   3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-   4. Try to submit the form with all inputs valid and verify that a success message appears.
- -  line 3414 including Adding a javascript snippet that  feature to scroll active section to top of screen 720007c0c1ebd3c06a5cc43264a24f7fff5f5630
-```
-$('.collapse').on('shown.bs.collapse', function (e) {
-            var $article = $(this).closest('.article');
-            $('html,body').animate({
-                scrollTop: $article.offset().top
-            }, 500);
-        });
-```
+1. Scroll to Top on `.collapse.show`:
+   - Having [large amounts of content](https://stackoverflow.com/questions/35992900/bootstrap-accordion-scroll-to-top-of-active-open-accordion-on-click) in a collapsed target element exposes the plugin's [most common shortcoming](https://stackoverflow.com/questions/54838108/scroll-to-the-top-of-bootstrap-accordion-when-opened): current content is shown relative to how far down you scrolled in the previous target. While a simple Javascript is a [typical fix](https://wordpress.org/support/topic/accordion-scroll-to-top-of-active-open-accordion-on-click/), I was able to implent a pure CSS alternative, one of the main benefits of transitioning flexbox.
+   - Setting boolean states `.show` to flex-direction: column and `:not(.show)` to flex-direction: column reverse pushes content up/down for or on the next toggle. This simplicity of the trick can be seen clearly when applied to animation keyframes or given transition duration.
 
-1. Uninterrupted asynchronous transitions
-   - With consideration to the dom and the data-parent functionality/requirement of the collapse feature, the doc outline has been remodeled for effective site performance. Index.html is now thoroughly structured from h1-h6. Article elements were removed to achieve a continuous section~section transition. (See commit fba0a53…) The markup now benefits from comments as well as semantic nomenclature of regions and chapter numbers.
- (commit 2ec861ca16c90ad1fa306076dcb2c234133d6733)
 
-2. Buttons over anchors
+2. Toggling Around Asynchronous Transitions
+   - To effectively attach boolean state changes to transition classes returned by Bootstrap's plugins, you have to control three classes; not two. Bootstrap's API methods are asynchronous: returning a class at the beginning of a transition but before it ends. Between start and end, a transitioning class is returned.
+   - Carefully understanding this allowed full control of the desired transition behavior afforded by the transiting trasition classes, essentially using the collapse plugin for its data-target and data-parent management only.
+   - whene element is .collapsing BS animates its height from current value to 0.
+   - Ruleset .collapsing
+   - Ruleset element skipping  .collapse
+   - Ruleset :not(.show) skipping .collapse:not(.show)
+
+    ```css
+
+        /* Important to reset the class between .collapse and .show */
+        
+        section.collapsing {
+            transition: none !important;
+            height: 100% !important;
+        }
+        
+        /* 
+         * Important not to select this state via `section.collapse`
+         * When using asynchronous transition classes as a boolean tool,
+         * the trick is to stick to a single class and toggle the manner
+         * in which you select that same in-transit class by traversing `:not`
+         * 
+         * Traversing via `.collapse.show` will invariably set rules for the
+         * millisecond `.show` enters an element right when `.collapse` is
+         * just about to be removed and vice versa. 
+         * What you will see is a flicker to the to/from state between... to/from.
+         */
+        
+        section:not(.show) {
+            /*  Default styles */
+        }
+        
+        section.show {
+            /* Active styles */
+        }
+        
+        
+    ```
+1. Toggling around asynchronous transitions and Animation Fill Mode - The holy grail
+
+3. Buttons over anchors
    - Anchor elements with an href property to a collapsed section id modified the browser URL. This made the single-page index.html cumbersome to navigate using the browser's back button as each toggle on a tab in the accordion is rendered as a new page, caching a back-history at every click. Wrapping each tab section in a button element with a data-target attribute (instead of href) linked to a collapsed section id appears to fix this problem. (commit acc00e9a1e9d020f6831b2ce5f82be08b73883f3)
 
-<!--1. Clip-path on Safari:-->
-<!--    1. Go to the "Contact Us" page-->
-<!--    2. Try to submit the empty form and verify that an error message about the required fields appears-->
-<!--    3. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
-<!--    4. Try to submit the form with all inputs valid and verify that a success message appears.-->
 
-<!--1. Scrolling to top:-->
-<!--   1. Go to the "Contact Us" page-->
-<!--   2. Try to submit the empty form and verify that an error message about the required fields appears-->
-<!--   3. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
-<!--   4. Try to submit the form with all inputs valid and verify that a success message appears.-->
 
-<!--1. Margin-left on safari:-->
-<!--   1. Go to the "Contact Us" page-->
-<!--   2. Try to submit the empty form and verify that an error message about the required fields appears-->
-<!--   3. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
-<!--   4. Try to submit the form with all inputs valid and verify that a success message appears.-->
+
 
 <!--In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.-->
 
@@ -1024,7 +1074,23 @@ $('.collapse').on('shown.bs.collapse', function (e) {
 
 - For the most part, the type of classes assigned to elements in index.html are controlled in style.css and only helper classes such as lh-1, .align-middle from libraries are used. Never using classes that set a family of properties other than the .nav-pills variety for scrollspy. If required, only helpers with a single scope/purpse i.e. text-right. Effort was made to keep this to a minimum, typically warranting dedicated rulesets for elements requiring three or more heavy-lifting helper classes. Helper classes that are considered "heavy-lifting" are classes that set box model display properties and dimensions. However, this is not always achieved as in some cases, minor elements using heavy lifting helper classes were not deemed to fully require dedicated rulesets in style.css. Decision was made relative to the scope of what is already controlled in style.css.
 
-- In order to keep the markup clean and avoid the nested trifecta of 'container-fluid -> row -> col-11' before arriving at semantic html-sectioned elements; the utilities that achieve the wrapper's responsive behavior are now applied to the html itself, removing three levels of div-wraps.
+- In order to keep the markup clean and avoid the nested trifecta of 'container-fluid -> row -> col-11' before arriving at semantic html-sectioned elements; the utilities that achieve the wrapper's responsive behavior are now applied to the html itself, removing three levels of div-wraps. This radically tidied the HTML markup ensuring that the largest structures of the site are semantically sectioned. This provides the ability to quickly set a new stack width for various applications by simply declaring a new value out of twelve without sacrifice to any site functionality.
+
+    ```css
+        
+        :root {
+             /* Desired width variable (out of 12) */
+            --of-twelve: 11;
+        
+            /* Resulting width property as percentage */
+            --width: calc(var(--of-twelve) / 12 * 100%);
+        }
+        
+        :root > * {
+            width: var(--width);
+        }
+        
+    ```
 
 - Given the semantic clarity achieved in the article-stack, consideration will be given to the removal of the Introduction `<article>` from the collapsible stack; its potential, logical (and semantic) location being within the main body `<header>`.
 
@@ -1076,4 +1142,6 @@ In addition, if it is not obvious, you should also describe how to run your code
 ## Acknowledgements
 
 - The CSS rulesets and comment style strictly follow Nicolas Gallagher's [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css). <!--(@necolas)-->
-- headingsMap https://github.com/dzc34/headingsMap
+- The site's document outline was inspired by (and generated with the help of) [headingsMap](https://github.com/dzc34/headingsMap)'s Chrome plugin.
+- The site's favicon was generated via [Real Favicon Generator.net](https://realfavicongenerator.net/) following Philippe Bernard's [comprehensive summary on favicons](https://css-tricks.com/favicon-quiz/).
+- 
