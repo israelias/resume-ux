@@ -1144,4 +1144,9 @@ In addition, if it is not obvious, you should also describe how to run your code
 - The CSS rulesets and comment style strictly follow Nicolas Gallagher's [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css). <!--(@necolas)-->
 - The site's document outline was inspired by (and generated with the help of) [headingsMap](https://github.com/dzc34/headingsMap)'s Chrome plugin.
 - The site's favicon was generated via [Real Favicon Generator.net](https://realfavicongenerator.net/) following Philippe Bernard's [comprehensive summary on favicons](https://css-tricks.com/favicon-quiz/).
-- 
+- [Ashfaq Ahmed](https://codeconvey.com/)'s [time functions](https://codeconvey.com/pure-css-accordion-menu/) and playful, component-based approach to CSS rulesets were a benchmark for its sincere clarity and attention to detail.
+- Quackit's [comprehensive list of CSS3 properties](https://www.quackit.com/css/css3/properties/), definitions, and usage examples helped to sharpen tools utilized in the project, and develop nuanced workflows with a learned and sophisticated shorthand.
+- Damien L. Gilliams' tutorial on [how to embed LinkedIn recommendations ](https://www.damosdesigns.com/LinkedinRecommendationsOnWebsite/) takes care of a whole section in the project, and is a great lesson on appropriation.
+- GitHub's  progress bar styles and language colors were appropriated in the project by observing the HTML of its repository page.
+- Tutors at Code Institute for the critiques and patience.
+- Mentor Aaron Sinnott
