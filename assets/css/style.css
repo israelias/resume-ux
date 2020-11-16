@@ -104,57 +104,6 @@
     --prompt: 0.05s;
     --early: 0s;
 
-    /* Animation name variables */
-
-    --load-down: load-down;
-    --load-up: load-up;
-    --fade-in: fade-in;
-
-    /* Transition property variables */
-
-    --elem: height;
-    --trans-elem-all: all;
-    --trans-elem: var(--elem);
-
-    /* Animation Shorthand variables */
-    /* Name, Duration, Time Function, Delay, Iteration Count, Direction, Fill mode, Play state */
-
-    /*animation: load-down 0.55s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
-    --fleet-down-prompt-glide-anim: var(--load-down) var(--fleeting) var(--glide) var(--prompt) 1 normal forwards running;
-
-    /*animation: load-up 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
-    --dash-up-early-glide-anim: var(--load-up) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
-
-    /*animation: load-up 0.55s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
-    --fleet-up-prompt-glide-anim: var(--load-up) var(--fleeting) var(--glide) var(--prompt) 1 normal forwards running;
-
-    /*animation: load-down 0.75s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
-    --dash-down-early-glide-anim: var(--load-down) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
-
-    /*animation: load-down 0.55s 0.s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
-    --fleet-down-early-glide-anim: var(--load-down) var(--fleeting) var(--glide) var(--early) 1 normal forwards running;
-
-    /*animation: load-up 0.75s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955) */
-    --dash-up-prompt-glide-anim: var(--load-down) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
-
-    /* Transition Shorthand variables */
-    /* Transition Property, Duration, Timing Function, Delay */
-
-    /*transition: all 0.3s 0.36s cubic-bezier(0.455, 0.03, 0.515, 0.955);*/
-    --flash-all-late-glide-trans: var(--trans-elem-all) var(--flashing) var(--glide) var(--late);
-
-    /*transition: all 0.3s 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;*/
-    --flash-all-flash-glide-trans: var(--trans-elem-all) var(--flashing) var(--glide) var(--flashing);
-
-    /*transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);*/
-    --bust-all-early-zip-trans: var(--trans-elem-all) var(--bustling) var(--zip) var(--early);
-
-    /*transition: all 0.3s 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);*/
-    --flash-all-short-glide-trans: var(--trans-elem-all) var(--flashing) var(--glide) var(--short);
-
-    /*transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);*/
-    --bust-all-early-swoop-trans: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
-
     /* Desired width variable (out of 12) */
     --of-twelve: 11;
 
@@ -203,7 +152,7 @@
 }
 
 /* ==========================================================================
-   Type configs
+   Type configs @prefixed
    ========================================================================== */
 
 body {
@@ -211,8 +160,10 @@ body {
     /*scroll-behavior: smooth;*/
 
     text-rendering: optimizeLegibility;
-    font-kerning: normal;
-    font-variant-ligatures: common-ligatures;
+    -webkit-font-kerning: normal;
+            font-kerning: normal;
+    -webkit-font-variant-ligatures: common-ligatures;
+            font-variant-ligatures: common-ligatures;
     color: var(--deep-1);
 }
 
@@ -220,11 +171,13 @@ p, small {
     font-family: attribute-text, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-feature-settings: 'c2sc';
+    -webkit-font-feature-settings: 'c2sc';
+            font-feature-settings: 'c2sc';
 
     text-shadow: var(--white) 0 .3px 0, #D4D6D6 0 -.3px 0;
     -webkit-font-smoothing: antialiased;
 }
+
 p {
     color: #262626;
 }
@@ -284,29 +237,41 @@ ion-icon {
 }
 
 /* ==========================================================================
-   Headings
+   Headings @prefixed
    ========================================================================== */
 
 /* Splash landing heading */
 
 h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0 auto;
     padding: 5rem 1rem 1rem;
     margin-bottom: .5rem;
 
     font-family: attribute-mono, sans-serif;
     font-weight: 300 !important;
-    font-feature-settings: 'c2sc';
+    -webkit-font-feature-settings: 'c2sc';
+            font-feature-settings: 'c2sc';
 }
 
 /* Splash landing sub-heading  */
 
 h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0 auto;
     padding-bottom: 1.5rem;
 
@@ -327,8 +292,12 @@ h3 {
 /* Section lead heading */
 
 h4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 
     padding: 5rem 1rem 1rem;
     margin-bottom: .5rem;
@@ -367,7 +336,7 @@ h6 {
 }
 
 /* ==========================================================================
-   Layout configs
+   Layout configs @prefixed
    ========================================================================== */
 
 .root-body {
@@ -385,9 +354,16 @@ h6 {
 /* This is how the stack contracts from its center axis as opposed to pulling from the top or bottom */
 
 .root-body > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .body-main {
@@ -415,7 +391,9 @@ h6 {
 @media (max-width: 767.98px) {
     .body-main {
         position: static;
-        flex: 1 0 auto;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
         min-height: calc(100vh - 7.75rem);
     }
 }
@@ -447,9 +425,18 @@ h6 {
     left: 0;
     z-index: 1030;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
     margin-top: auto;
     padding-left: var(--margin);
@@ -466,7 +453,8 @@ h6 {
         height: 40vh;
     }
     .body-footer {
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
         height: 3rem;
         position: static;
         padding-left: 1rem;
@@ -476,7 +464,7 @@ h6 {
 }
 
 /* ==========================================================================
-   Article header button
+   Article header button @prefixed
    ========================================================================== */
 
 /**
@@ -516,9 +504,13 @@ h6 {
 
 .article-header {
     position: relative;
-
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     width: 100%;
     margin-bottom: 0;
@@ -535,8 +527,12 @@ h6 {
  */
 
 .header-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     height: 3rem;
     overflow: hidden;
@@ -592,8 +588,12 @@ h6 {
  */
 
 .header-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     padding-top: .55rem;
     padding-right: .125rem;
@@ -629,15 +629,9 @@ h6 {
     white-space: nowrap;
 }
 
-/* TODO select header text, display only relevant titles */
+/* Supporting header text only visible on desktop/lg width. */
 
-@media (max-width: 575.98px) {
-    article header .header-text {
-        display: none;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 991.98px) {
+@media (max-width: 991.98px) {
     .header-text {
         display: none;
     }
@@ -1125,6 +1119,12 @@ article > header:before {
     article > header:before {
         left: calc(var(--margin) * -1 + 1vw);
     }
+
+    /* Adjust positioning for .body-nav.show event. */
+
+    .body-nav.show ~ .body-main article > header:before {
+        left: calc(var(--margin) * -1);
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -1150,6 +1150,12 @@ article > header:after {
 @media (min-width: 992px) {
     article > header:after {
         right: calc(var(--margin) * -1 + 1vw);
+    }
+
+    /* Adjust positioning for .body-nav.show event. */
+
+    .body-nav.show ~ .body-main article > header:after {
+        right: calc(var(--margin) * -1);
     }
 }
 
@@ -4111,8 +4117,10 @@ form .connect-cta input {
     display: none;
 }
 
-.cover-banner {
-    /*padding-top: 6rem;*/
+@media (max-width: 767.98px) {
+    #target-zero {
+        height: 40vh;
+    }
 }
 
 @media (min-width: 740px) {
@@ -4120,6 +4128,11 @@ form .connect-cta input {
         font-size: 2rem;
         line-height: 2rem;
     }
+}
+
+.cover-banner {
+    display: flex;
+    flex-direction: column;
 }
 
 .cover-title,
@@ -4183,6 +4196,89 @@ form .connect-cta input {
 
 .banner-cta .value i {
     color: var(--deep-4);
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .cover-text {
+        margin-right: auto;
+        margin-left: 0;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        padding-top: calc(8vh - 3rem);
+    }
+
+    .cover-title {
+        padding-top: calc(8vh - 1rem);
+    }
+
+    .cover-name {
+        padding-top: calc(8vh - 1rem);
+        padding-bottom: 3rem;
+        padding-left: 2rem;
+    }
+
+    .banner-text {
+        position: absolute;
+        top: calc(2rem + 5vh);
+        right: 12vw;
+        margin-left: auto;
+        margin-right: 0;
+        padding-left: 2rem;
+        color: var(--deep-1);
+        transition: all .3s var(--glide) .3s;
+    }
+
+    .banner-text:before {
+        display: block;
+        position: absolute;
+        content: "";
+        top: calc(5vw - 1rem);
+        border-bottom: 2px solid var(--deep-2);
+        width: 58vw;
+        margin-right: 77vw;
+    }
+
+    .banner-cta {
+        width: 58vw;
+    }
+
+    .banner-top, .banner-bottom {
+        color: var(--deep-1);
+    }
+
+}
+
+@media (max-width: 991.98px) and (orientation: landscape) {
+    .banner-top {
+        flex-direction: row;
+        margin-bottom: 0;
+        line-height: 1;
+        justify-content: space-around;
+    }
+
+    .banner-bottom {
+        flex-direction: row;
+        margin-top: 0;
+        line-height: 1;
+        justify-content: space-around;
+    }
+
+    .banner-middle {
+        position: absolute;
+        display: none;
+        text-align: left;
+        font-style: normal;
+        padding-right: 1.5rem;
+        margin-top: -40rem;
+        padding-top: 0;
+        padding-bottom: 600px;
+        opacity: 0;
+    }
+
+    .banner-pseudo {
+        display: flex;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -5406,12 +5502,12 @@ blockquote, q {
     position: relative;
     text-align: center;
 
-    animation: var(--load-up) 1s var(--glide) var(--early) 1 normal forwards running;
-    -webkit-animation: var(--load-up) 1s var(--glide) var(--early) 1 normal forwards running;
+    animation: load-up 1s var(--glide) var(--early) 1 normal forwards running;
+    -webkit-animation: load-up 1s var(--glide) var(--early) 1 normal forwards running;
 
-    -webkit-transition: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
-    -o-transition: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
-    transition: var(--trans-elem-all) var(--bustling) var(--swoop) var(--early);
+    -webkit-transition: all var(--bustling) var(--swoop) var(--early);
+    -o-transition: all var(--bustling) var(--swoop) var(--early);
+    transition: all var(--bustling) var(--swoop) var(--early);
 }
 
 article {
@@ -5420,11 +5516,14 @@ article {
     /*animation: var(--dash-down-early-glide-anim);*/
     /*-webkit-animation: var(--dash-down-early-glide-anim);*/
 
-    -webkit-transition: var(--flash-all-late-glide-trans);
-    -o-transition: var(--flash-all-late-glide-trans);
-    transition: var(--flash-all-late-glide-trans);
+    -webkit-transition: all var(--flashing) var(--glide) var(--late);
+    -o-transition: all var(--flashing) var(--glide) var(--late);
+    transition: all var(--flashing) var(--glide) var(--late);
 }
 
+.article-header {
+    position: relative;
+}
 
 @-webkit-keyframes article {
     0% {
@@ -5449,27 +5548,10 @@ article {
 
 .body-header,
 .body-footer {
-    -webkit-animation: var(--fade-in) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
-    animation: var(--fade-in) var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+    -webkit-animation: fade-in var(--dashing) var(--glide) var(--early) 1 normal forwards running;
+    animation: fade-in var(--dashing) var(--glide) var(--early) 1 normal forwards running;
 }
 
-
-@-webkit-keyframes load-down {
-    0% {
-        top: 400px;
-    }
-    100% {
-        top: 0;
-    }
-}
-@keyframes load-down {
-    0% {
-        top: 400px;
-    }
-    100% {
-        top: 0;
-    }
-}
 
 @-webkit-keyframes load-up {
     0% {
@@ -5513,9 +5595,9 @@ article {
      -webkit-animation: root var(--dashing) var(--glide) var(--early) 1 normal forwards running;
     animation: root var(--dashing) var(--glide) var(--early) 1 normal forwards running;
 
-    -webkit-transition: var(--flash-all-flash-glide-trans);
-    -o-transition: var(--flash-all-flash-glide-trans);
-    transition: var(--flash-all-flash-glide-trans);
+    -webkit-transition: all var(--flashing) var(--glide) var(--flashing);
+    -o-transition: all var(--flashing) var(--glide) var(--flashing);
+    transition: all var(--flashing) var(--glide) var(--flashing);
 }
 
 @-webkit-keyframes root {
