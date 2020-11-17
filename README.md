@@ -7,21 +7,20 @@
 
 <!--![](documentation/RedUX_200826_0413.png)-->
 
-CV-JS is a comprehensive and systematic means for navigating and featuring content in a curriculum vitae.  
-The project is for Milestone 1 User-centric Front-end Devlopment as part of my coursework at [Code Institute](https://codeinstitute.net).  
-This documentation includes UX research, which was approached and is approached as
-Taking it a step further through extensive developer research. Synergistically, I approached the design challenge as both owner and user to fundamentally capitalize on the owner's (my) unique candidacy in the dev community.
+Resume RedUX is a comprehensive and systematic means for navigating and featuring content in a curriculum vitae. The project features an interactive navigation design of collapsible accordion stack,  flexible static mode a The project is developed as part of the user-centric front-end coursework (MS1) at [Code Institute](https://codeinstitute.net).
 
-The result is a web resume that is:
-1. Custom designed and built by the owner, contrary to the trend in the industry of using static dashboard templates for stats/efficiency
-2. Isn't supplying content that overplays the owner's experience in the tech industry; but instead allows data to speak for itself by showcasing the owner's "activity" in opportune moments
-   - "Add styling to revised navbar for home.html" -Joem. Last commit 29 hours ago. See this project in progess" (GitHub actions)
-   - "Soon to come" (Placeholder for forthcoming milestone project)
-3. Integrates the owner's nuanced stack as a designer and the nuanced workflow that this comes with. (Software/prototype integration UX to dev hand off; owner as developer's "super user")
-4. Still meets the criteria for what constitutes a modern web resume as seen in these examples
-5. Simple and responsive (learning from previous) creating a "card" template for more interactive features in later releases; with a clear idea of its moonshot design and realistic feasibility through high-fi UX prototypes (playing up to owner's strengths)
-6. A website that is an honest snapshot of the owner's progress; new "feed" for returning visitors
-7. A clear indicator of the owner's online reach and footprint along with links/clouds of owner's frontier.
+<!--The project showcases -->
+
+<!--The result is a web resume that is:-->
+<!--1. Custom designed and built by the owner, contrary to the trend in the industry of using static dashboard templates for stats/efficiency-->
+<!--2. Isn't supplying content that overplays the owner's experience in the tech industry; but instead allows data to speak for itself by showcasing the owner's "activity" in opportune moments-->
+<!--   - "Add styling to revised navbar for home.html" -Joem. Last commit 29 hours ago. See this project in progess" (GitHub actions)-->
+<!--   - "Soon to come" (Placeholder for forthcoming milestone project)-->
+<!--3. Integrates the owner's nuanced stack as a designer and the nuanced workflow that this comes with. (Software/prototype integration UX to dev hand off; owner as developer's "super user")-->
+<!--4. Still meets the criteria for what constitutes a modern web resume as seen in these examples-->
+<!--5. Simple and responsive (learning from previous) creating a "card" template for more interactive features in later releases; with a clear idea of its moonshot design and realistic feasibility through high-fi UX prototypes (playing up to owner's strengths)-->
+<!--6. A website that is an honest snapshot of the owner's progress; new "feed" for returning visitors-->
+<!--7. A clear indicator of the owner's online reach and footprint along with links/clouds of owner's frontier.-->
 
 [View the live website here.](https://israelias.github.io/resume-redux/) A work in progress.
 
@@ -59,17 +58,15 @@ The result is a web resume that is:
 
 ## 1.0 Strategy
 
-- The main goals of the site are:
-  - To establish a personal and professional brand for the owner
-  - Attract and retain a following in the developer community
-  - Attract recruiter reader software and analytics
-  - Be up to a standard that is competitve with UX designed responsive web resumes
-  - Stand out to [Code Institute](https://codeinstitute.org/)'s qualification partners and potential employers
+The high-level objective of the project is __to stand out__. The web resume is for a junior developer breaking into tech, and the project is itself an exercise to showcase his candidacy as a fastidious, proficient and unique developer.
+
+- Supporting Goals:
+  - To establish a personal and professional brand for the owner.
+  - Attract and retain a following in the developer community.
+  - Be up to a standard that is competitve with UX designed responsive web resumes.
+  - Stand out to [Code Institute](https://codeinstitute.org/)'s qualification partners and potential employers.
 - The website is built for:
   - A young professional designer and architect (buildings) presently breaking into the tech industry
-
-- Their goals and needs are:
-	- In addition to above (as the site is the owner is the business is the consumer), the ultimate goal is to transform a CV into an interactive, attractive and customisable experience that reflects the candidate's proficiency in the manner in which the content itself is presented.
 
 ### 1.1 Research
 
@@ -109,11 +106,9 @@ The result is a web resume that is:
 
 Three target user profiles have been assembled from user research. Each profile represents a collection of expectations, objectives, compelling experiences, peeves and emotional triggers of a curated user group. Key attributes of each persona are sourced from articles, social media, news and comments, developer feeds and LinkedIn on the outset subject of what x user group looks for in a candidate's resume/portfolio. Further documentation on the subject data are loosely footnoted where quotations are paraphrased or directly cited. For the purpose of automating virtual use cases, empathy and journey maps, these personas -- following an analysis of theirs and the owner's motives -- will serve as the narratives reviewed for establishing scope upon which further development of the project is defined.
 
-- See [User Stories](#13-user-stories) for complete persona profiles and defined user goals.
 
-- See [User Testing](#user-testing) for task-specific descriptions of how the project meets goals defined in this plane.
-
-
+*See [User Stories](#13-user-stories) for complete persona profiles and defined user goals.*
+*See [User Testing](#user-testing) for task-specific descriptions of how the project meets goals defined in this plane.*
 
 - [User Persona Ideation Board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1621.png)
 
@@ -137,12 +132,13 @@ Three target user profiles have been assembled from user research. Each profile 
 #### Key Takeaways From Research
 
 - Increase "activity" or evidence of activity
-- Progress bars do not give the user anything. Instead, show evidence of experience. Show integrity.
-- Stats or progress bars should be relative to something measurable.
+- Progress bars must be measured relative to something, as "CSS 100%" does not communicate anything, do not give the user anything.
+- Show measurable stats that have supporting evidence.
+- Show evidence of experience and progress as badge of integrity.
 - Give clear understanding of owner's nuanced tech stack.
 - Evidence of dev community activity in social media (dev.to, Twitter, etc.)
 - Avoid scenarios where a user may get lost.
-- No more than two clicks until user sees what they're looking.
+- No more than two clicks until user finds what they're looking for, or encounters what the owner wishes them to see.
 
 ### 1.3 User Stories
 
@@ -199,14 +195,12 @@ The following tables define user goals in the context of scenarios assigned to t
 
 ### 1.4 High Level Paradigms
 
-The defining criteria from user research can be narrowed down to two guiding principles that radically and reliably shape the development of the project.
+The defining criteria from [user research](#11-research) can be narrowed down to two guiding principles to radically and reliably shape the development of the project.
 
-- Owner's Key Principle
-  - Portraying Honesty and Integrity
-
-- Key To User's Triggers
-  - Showing Activity at Every Possible Opportunity
-
+1. Owner's Key Principle
+   - Portraying Honesty and Integrity
+2. Key To User's Triggers
+   - Showing Activity at Every Possible Opportunity
 
 #### Standing Out
 
@@ -226,7 +220,7 @@ In order to achieve the goal of standing out to the three target users, the foll
     >| id    | Specific Features             | Importance | Viability | Score |
     >| ----- | ------------------------------------------- |:----------:|:---------:|:---------:|
     >| A     | Create a descriptive landing page about the owner to establish his online presence            |      5      |     5      |     ▶️      |
-    >| B     | Feature owner's scop Feature owner's scope of expertise in the tech stack and the design stack (specialization)e of expertise in the tech stack and the design stack (specialization)          |      4      |     5      |     ▶️      |
+    >| B     | Feature owner's scope of expertise in the tech stack and the design stack (specialization)          |      4      |     5      |     ▶️      |
     >| C     | Represent breadth of owner's proficiency in tools and technologies (asset coverage)         |      5      |      5     |     ▶️      |
     >| D     | Represent depth of owner's current use of and experience with tools and technologies (verifiable badges)         |      5      |     4      |     ▶️      |
     >| E     | Showcase samples of owner's projects with links to its repo (tech) and its complete portfolio (design)         |      5      |      3     |     ⬆️      |
@@ -272,13 +266,10 @@ There is a difference between how one imagines something will be used and how it
 
 - Contribution Footprint `==` Content
 
-  - [ ] Whenever there is a dearth of content, show stats.
-  - [ ] As gathered from User Research, it's all about activity; so show it.
-  - [ ] We all know the owner is always 'committing', posting on Slack, working towards a Milestone project, or deep in a module.
-    - Find a way to represent this in the website!
-  - [ ] The website should never "go to sleep" or get buried under no activity
-  - [ ] Take advantage of leaving easter eggs to attract return visits.
-    - Think of them like designed error messages.
+  - [ ] Find a way to showcase stats as content.
+  - [ ] As gathered from [User Research](#11-research), it's all about activity; so show it.
+  - [ ] Find a way of representing the owner's development and in-progress contribution in lieu of "finished" portfolio pieces.
+  - [ ] The website should never "go to sleep" or get buried under no activity. Similar to time-stamped entries, establish a manner of communicating states -- current, previous, future -- to vistors.
 
 ### 2.2 Functional Requirements
 
@@ -321,18 +312,12 @@ The variety of content/media required to meet the needs of the user and the owne
 
 ## 3.0 Structure
 
-<!--Providing structure to the scope, information is organized along a parent category which contain two discrete sub-categories to feature: 1) text-based content and  2) image-based content.-->
-<!--The site info is structured....-->
-<!--The elements consistently...-->
-<!--learnable and intuitive......-->
-<!--in order for the user to understand easily how to navigate the site for the very first time..-->
-
 ### 3.1 Organization of Functionality and Content
 
 #### Defining Structure and Behavior
 
-- A user will navigate the content and features intuitively via a visible stack ("hub") of collapsed elements ("spokes") containing sub-sections of information.
-- A user finds a location from a central home where all sections are visible "stacked."
+- A user will navigate the content and features intuitively via a visible stack ("hub") of collapsed elements containing sub-sections of information ("spokes").
+- A user finds a location from a central home where all sections are visibly "stacked."
 - A user goes to the next section upon arrival at the "tail" of a current section.
 
 #### Creating Meaningful Relationships Between Elements, Content and Information
@@ -344,7 +329,7 @@ The variety of content/media required to meet the needs of the user and the owne
 #### Communicating Functionality and Interactivity
 
 - Information is organized in a linear sequence at the hub stack.
-- The order sequence is a direct response to the user research implemented at strategy plane.
+- The order sequence is a direct response to the user research implemented at [strategy plane](#10-strategy) .
 
 ### 3.2 Interaction Design
 
@@ -358,38 +343,37 @@ The variety of content/media required to meet the needs of the user and the owne
 
 - Non-Conventional Conventions
     - The site applies the collapse function to the main content as opposed to its conventional application in side navigational/supplemental material.
-    - This stray from convention added value to the website by offering an interactivity that is at once learnable, familiar, and unique.
-    - The project's index.html is structured so content can be easily toggled to display [a static version]() of the website with all sections shown, offering added flexibility.
-    - These articles are designed to accomplish the same functionality with the same appearance in interactive and static modes.
+    - This stray from convention adds value to the website by offering an interactivity that is at once learnable, familiar, and unique.
+    - The project's index.html is structured so content can be easily toggled to display [a static version](#the-master-switch-to-the-static-site) of the website with all sections shown, offering added flexibility.
+    - Sections are designed to accomplish the same functionality with the same appearance in interactive and static modes.
 
 - Colors and Themes
     - The stylistic rendering of element containers immediately establish a language through which learnability, state changes and sectional differentials are communicated.
-    - Toggling from the website's interactive theme to its static theme as well as its landscape theme feature detail-level adjustments to convey system-wide changes, namely [adjusting the shadow blur](). This small but specific adjustment adds value to the website by utilizing nuances of its identity to make contact with the user and further reinforce its brand expectations, parameters and outcomes.
+    - Toggling from the website's interactive theme to its static theme as well as its [landscape theme](#dashboard-static-landscape-mode) feature detail-level adjustments to convey system-wide changes, namely [adjusting the shadow blur](). This small but specific adjustment adds value to the website by utilizing nuances of its identity to make contact with the user and further reinforce its brand expectations, parameters and outcomes.
 
 - Transitions
-    - Highly customized and systematic animation transitions are conceived to be the website's global touchpoint. The singularity and ubiquity of this application is to reinforce idiosyncratic conventions by way of the convention itself, engendering an enhanced feature out of a user's familiarity to a known function.
+    - Highly customized and systematic animation transitions are conceived as the website's global touchpoint. The singularity and ubiquity of this application is to reinforce idiosyncratic conventions by way of the convention itself, engendering an enhanced feature out of a user's familiarity to a known function.
 
 - Labels and Terminology
-    - Nomenclature and terminology are hierarchically built and defined to reflect the content of each (2) child sections under each (1) parent node tab. The site's opinionated primary section titles are selected to adequately represent its content and explicitly convey the owner's awareness of narrative.
+    - Nomenclature and terminology are hierarchically built and defined to reflect the content of each (2) child section under each (1) parent node tab. The site's opinionated [primary section titles]() are selected to adequately represent its content and explicitly convey the owner's awareness of narrative.
 
 - Consistent Imagery
-    - Variable per-section [media content]() (in which list-groups of CV-related activities are contignatuained), per-section i [con-animation]() , and per-section [CTAs]() achieve consistency by application of a singular CSS ruleset. These container styles only offer specificity to sections by application of [signature colors]() .
+    - Variable per-section [media content]() (in which list-groups of CV-related activities are contained), per-section [icon-animation]() , and per-section [CTAs]() achieve consistency by application of a singular CSS ruleset. These container styles only offer specificity to sections by application of [signature colors]() .
 
 #### Visibility
-<!--Make sure content is visible wherever possible-->
 
 - Wayfinding
   - The website's navigation is simultaneously its content frame, which uniquely takes advantage of an effective rule of proximity: having elements easily accessible (as all parent categories are visible at any given time) and having important elements such as CTAs appear at the same place at any given time.
-  - The site's side menu pagination feature toggles on when in [static mode](), which, with opportunistic custom rulesets attached to [Scrollspy]()'s activated elements, ensures that users always know where they are.
-  - Given the portrait-centric nature of the website's section frames, which are controlled by a height property, particular attention is given to its landscape orientation. Viewing the site on a screen with a width greater than its height will automatically render the site in static mode and open the side menu.
+  - The site's side menu pagination feature toggles on when in [landscape mode](#dashboard-static-landscape-mode), which, with opportunistic custom rulesets attached to [Scrollspy]()'s activated elements, ensures that users always know where they are.
+  - Given the portrait-centric nature of the website's section frames, which are [controlled by a height property]() , particular attention is given to its landscape orientation. Viewing the site on a screen with a width greater than its height will [automatically render the site in static mode and open the side menu](#dashboard-static-landscape-mode) .
 
 - Discoverability
-  - Overflow is one of the website's most controlled properties, as it affords content-hinting as tool to trigger a user's impulse to discover. As the site applies global rules to section boundaries, invariable glimpses of *previous* and *next* content work to further elicit learned behavior from a user.
+  - Overflow is one of the website's most controlled properties, as it affords content-hinting as a tool to trigger a user's impulse to discover. As the site applies global rules to section boundaries, invariable glimpses of *previous* and *next* content work to further elicit learned behavior from a user.
 
 #### Learnability
 
 - Strengthening a Sense of Place
-    - The main accordion functions as a high-level pagination that indicates the current live page the website is showing. At the same time, the ability to see all other head sections at once makes the use of the accordion more intuitive (once you open one, you know how to open the rest)
+    - The main stack functions as a high-level pagination that indicates the current live page the website is showing. At the same time, the ability to see all other head sections at once makes the use of the stack more intuitive (once you open one, you know how to open the rest).
 
 - Setting Correct Expectations
     - As all header elements of collapsed sections adopt the same button appearance, the expectation is that immediate sections following should function in the same manner. The site's format does not waver from delivering this expectation; and progressively takes advantage of user opportunities afforded by a reliable outcome.
@@ -399,18 +383,17 @@ The variety of content/media required to meet the needs of the user and the owne
 The website offers micro changes to afford users the knowledge of what has previously happened, is happening and will happen. The website also adopts system-wide rules that respond to both user-controlled and automatic state changes.
 
 - Micro State Changes
-  - Variable color changes attributed to a section's [signature color.]()
-  - CTA button hover and active states
-  - Side menu pseudo element hover and active states
+  - Variable color changes attributed to a section's [signature color.](#52-color-scheme)
+  - Custom styles are applied to CTA buttons' hover and active states.
+  - Interactive page "mapping" in the side menu work in tandem with Scrollspy to style link elements' hover and active states.
 
 - Macro State Changes
-  - Default Interactive Mode
+  - [Default Interactive Mode](#interactive-collapse-feature)
     - All collapsible elements have a dedicated open and close icon to indicate distinct section states.
-  - Static Mode
-    - In addition to the understanding that collapsed elements are no longer hidden, the website adjusts the blur for all shadow properties to establish the rules for when static mode is automatically applied.
-  - Landscape Mode
-    - Static mode is triggered when the width of the browser is greater than its height to ensure content is, at the very least, *visible* no matter the browser or device settings. The small container style adjustment established for Static Mode further communicates this system-wide change to the user.
-
+  - [Static Mode](#the-master-switch-to-the-static-site)
+    - In addition to the understanding that collapsed elements are no longer hidden, the website adjusts the blur for all shadow properties to establish the rules and visual cues for when static mode is automatically applied.
+  - [Landscape Mode](#dashboard-static-landscape-mode)
+    - Static mode is triggered when the width of the browser is greater than its height to ensure content is, at the very least, *visible* no matter the browser or device settings. The style adjustments established for Static Mode work to further communicate this system-wide change to the user.
 
 ### 3.3 Information Architecture
 
@@ -422,19 +405,10 @@ The website offers micro changes to afford users the knowledge of what has previ
   - The site visually functions on the front end as [hub-and-spoke model]() , with the stack of articles being the hub, and its collapsed child sections being direct spokes. Herein, the stack is understood as a central home as one cannot navigate between spokes.
 
 - Optional Static Mode: The Nested List Expanded
-  - The spokes are rendered to expand mode when static mode is toggled, visually un-nesting content in favor of a linear path with a logical conclusion. The ability to navigate with a side menu is made evident by this mode.
+  - The spokes are rendered to expand when static mode is toggled, visually un-nesting content in favor of a linear path with a logical conclusion. The ability to navigate with a side menu is made evident by this mode.
 
 - Landscape Orientation: The Dashboard Experience
   - The vertical challenge given by landscape orientation (or any screen with a width greater than its height) exposes a unique opportunity to have the side menu and the fully expanded content work to render a dashboard configuration with now horizontally-inclined content. Herein, the side menu functions as a document outline with at-a-glance info and data visualization enabled by Scrollspy events occurring in the adjacent body.
-
-<!--#### Efficiently Moving Through Content-->
-
-<!--- The-->
-
-<!--#### Be Easily Educated and Informed-->
-
-<!--- The-->
-
 
 #### Accommodating Growth and Change
 
@@ -451,10 +425,10 @@ The website offers micro changes to afford users the knowledge of what has previ
 
 #### Headings Map
 
-- The headings map of index.html, originated from a sectioning exercise, serves the key element that became:
-  - a guiding principle for semantic HTML;
-  - a direct reflection of the experienced hierarchy and order of content;
-  - a represented feature of the side menu and serves as the interactive dashboard for landscape mode.
+- Originated from a sectioning excercise, the headings map of index.html achieves several responsibilities:
+    - a guiding principle for semantic HTML;
+    - a direct reflection of the experienced hierarchy and order of content;
+    - a represented feature of the side menu and serves as the interactive dashboard for landscape mode.
 
     > ###### H1 The Curriculum Vitae of Joem Elias Sanez
     >> ###### H2 (developed for the web)
@@ -473,8 +447,8 @@ The website offers micro changes to afford users the knowledge of what has previ
     > > > > > ###### H5 Recent Activity
     > > > ###### H3 Specialization
     > > > > ###### H4 All-rounder
+    > > > > > ###### H5 Industry
     > > > > > ###### H5 Expertise
-    > > > > > ###### H6 Expertise
     > > > ###### H3 Proficiency
     > > > > ###### H4 "Building and bridging skills"
     > > > > > ###### H5 Adaptability
@@ -514,8 +488,7 @@ The website takes advantage of HTML5 semantic sectioning elements to bring clari
   - A primary `<section>` element follows as the immediate and only sibling if each `<article>`'s `<header>`, completing the trifecta of outer-most structures that define index.html.
 
 
-    ```
-    
+    ```html
     <article id="element-one">
         <header id="control-one" ... >   
             <!-- Controls visibility of first section -->
@@ -524,27 +497,13 @@ The website takes advantage of HTML5 semantic sectioning elements to bring clari
     </article>
     ```
 
-
-
 ## 4.0 Skeleton
-
-<!--Giving form to the functions established in structure...-->
-<!--Information is represented as pairs of written content and media content, both supporting a section in the category.  -->
-<!--A user navigates information from the parent stack and arrives at features from the hub.-->
-
-<!--- Allows *immediate* interaction -- first-time learning-->
-<!--- Rapidly establish value in the users mind-->
-<!--- Lead user towards continuing the experience-->
-<!--- Introduce specific content at the most relevant and appropriate points in the experience-->
-<!--- Add immediate value with each click-->
-<!--- Add positivity to the overall experience-->
-
 
 ### 4.1 Features and Usefulness
 
 #### Progressive Disclosure
 
-- Information is revealed over time and across space within the delimited region of a consistent page type.
+- Information is revealed over time and across space within the delimited region of a consistent frame type -- the collapsible stack.
 
 #### Narrative Grouping, Order and Hierarchy
 
@@ -555,7 +514,7 @@ The website takes advantage of HTML5 semantic sectioning elements to bring clari
 
 #### Singularity of Feature
 
-- The all-encompassing and singular nature of the navigation design is to support a user-friendly interaction that is simultaneously unified and delimited.
+- The all-encompassing and singular nature of the [navigation design](#42-navigation-design) is to support a user-friendly interaction that is simultaneously unified and delimited.
   - Simple in its complexity.
   - Repetitive motion to promote increase in usability.
   - Gives the user easy decisions that do not over-complicate things.
@@ -567,96 +526,63 @@ The website takes advantage of HTML5 semantic sectioning elements to bring clari
 
 #### The Resume Stack
 
-- Intuitive Navigation and Completion of Tasks
-    - x
-- Placement, Order, Hierarchy, Priorities
-    - x
 - Navigational Benefits
-    - The rendering of the accordion hub as **pagination** controls offers clear visibility of the Information Architecture
-    - It also offers a thorough sense of depth and breadth without ever losing sight of the start, middle and end.
-- The tabs as literal tabs and the stack as a literal stack
-- This gives people what they want and where they want it
-- It is offered in a visual format that users can (and want to) access)
-- Usability improves when similar parts are expressed in similar ways
-- No surprises for user. Content may differ, but general shape and perception remains consistent
+
+  - The collapsible stack is a portal for viewing content and posits a system-wide sense of scale that is decidedly manageable. Herein, content, context and order play large roles in defining a sense of place as the collapsible frame manages the delivery of items based on how and what the user sees *previous* and *next*. Together with the option to [see everything at once](#the-master-switch-to-the-static-site), the flexibility of the website to accommodate larger system changes is founded in the consistency of its local patterns and sequences. As sections are only identifiably different by color and icon, global rules can be set with minimal local adjustments.
+
+- Intuitive Navigation and Completion of Tasks
+    - Consistency of transitions and repetition of sequences are designed to build rapport with a user's intuition, and develop a shorthand with the known, desired and expected outcome. This ensures that people get what they want and where and when they want it. There are no surprises for the user outside of the global state changes.
+
+- Global Pagination
+  - The rendering of the stack as **pagination** controls offers clear visibility of the website's architectural sequence and layout.
+  - It also offers a thorough sense of depth and breadth without ever losing sight of the start, middle and end.
 
 #### Pagination Document Outline
 
-#### Representational Icons
+- The unique opportunity to customize pagination items on the side menu's document outline was exposed upon development of the landscape mode, which is the static mode with the menu toggled open. This dashboard configuration activates scrollspy in the side menu, which assists in assigning a sense of place to the user otherwise understood in interactive mode.
 
-- Clear meaning
-- Familiar objects
+#### Metaphors: Deploying a Rocket
 
-#### Reduce Cognitive Friction
+- Visual metaphors are utilized to provide shortcuts for users on variable devices as well as reinforce desirable associations with regard to the owner's candidacy. Representational icons for journey, mission associated with rocket-deployment support the sub-narrative along the website's linear path to completion. As the rocket symbol has come to be synonymous with "deployment" in programming, the opportunity to extend this association to a larger iconic narrative adds a unique layer to the site's navigation.
+    - The side menu outline's section titles collapse to icons on mobile screens.
+    - The following relationships are reinforced throughout the project as icons and written text.
 
-- Ensure navigation elements are visible and easily findable
-- Ensure they don't require time to decode
-- Differentiate between navigational elements with **colour, icons and text**
+        | Literal                        | Metaphor       |
+        | ------------------------------ | -------------- |
+        | Introduction / Quick Bio and Recent Activity                    | "i" symbol     |
+        | Specialization / Industry Knowledge          | light bulb         |
+        | Proficiency / Coverage of Skills                      | meteor   |
+        | Experience / Education and Work Background   | astronaut |
+        | Examples / Tech Repo Samples                   | rocket            |
+        | References / Recommendations and Awards                         | star           |
+        | Connect / Contact Details and Message Form                  | satellite          |
 
-#### Consistent
-
-- Same interactions and behaviors
-- Don't rearrange the order
-- Don't move expected elements to a different location
-
-#### Metaphors
-
-- Visual metaphors are utilized to provide shortcuts for users on variable devices as well as reinforce desirable associations with regard to the owner's candidacy.
-
-- The nav outline sections titles collapse to icons on mobile screens.
-- The following relationships are reinforced throughout the project as icons and written text.
-
->| Literal                        | Metaphor       |
->| ------------------------------ | -------------- |
->| Introduction                     | "i" symbol     |
->| Specialization          | light bulb         |
->| Proficiency                      | meteor   |
->| Experience a product understandable | astronaut |
->| Examples                    | rocket            |
->| References                         | star           |
->| Connect                   | satellite          |
->| Thorough                       | list           |
->| Environmentally Friendly       | earth          |
->| As little design as possible   | dot            |
 
 
 ### 4.3 Information Design
 
 - [ID - Schematic](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1637.png)
 
->###### Arrangement of the elements that contain the information
-Good Info design should be invisible...
-- Easy to complete **forms**
-- Strong **instructions**
-- Strong **educational materials**
-- Strongly represented **scientific data**
-- No dangerous manufacturing Uis
-- Everything is **relevant**
+<!-->###### Arrangement of the elements that contain the information-->
+<!--Good Info design should be invisible...-->
+<!--- Easy to complete **forms**-->
+<!--- Strong **instructions**-->
+<!--- Strong **educational materials**-->
+<!--- Strongly represented **scientific data**-->
+<!--- No dangerous manufacturing Uis-->
+<!--- Everything is **relevant**-->
 
 
 #### Context and Order
 
 - The project uses **categorical ordering** typical of CVs, and selective **time ordering** when duration and sequence of events are paramount (i.e. education and employment histories).
 
-- Parent categories follow a top-down order that supports the procedural course and narrative of the website.
-
-  1. Introduction
-  1. Specialization
-  1. Proficiency
-  1. Experience
-  1. Examples
-  1. References
-  1. Connect
-
-
-
-Which icons will we use? Which are best to represent our needs?
+- The seven parent categories follow a top-down order that supports the procedural course and narrative of the website. Each parent section contains a row with a `col-5` and `col-7`, which contain each of the two sub-sections. The first column is text content, and the second column contains media content, followed by that category's dedicated CTA. This pattern is consistent across the seven parent categories. Each sub-section renders full-width `col-12` on tablet screens and smaller.
 
 ### 4.4 Interface Design
 
 - [Interface Design Board - Schematic Page Anatomy](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1639.png)
 - [Interface Design Board - Schematic Page Anatomy](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1639.png)
-
 
 #### Schematic Wireframes
 
@@ -698,82 +624,48 @@ Mockups commenced in September 2020..
 
 ## 5.0 Surface
 
-The product will look like..
-T
-
-- What can the user do?
-- How will the user interact with the site?
-- What effects will be on the site?
-- What can the user click on?
-- Where can the user go?
-- What is the final version of the info appearing on the screen?
-
-### 5.1 Visual Language
-
-Neumorphic styles...
-
-#### Economy
-
-The most important elements are easily recognized
-
-#### Readability
-
-> Legible
->
-> Font contrast
->
-> Consistent patterns
->
-
-Provides information and context
-
-- color
-- layout
-- fonts
-- images
-- order/sequence
-- identity
-
-
 ### 5.2 Color Scheme
 
 - [Color Palette](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_20116_0746.png)
 
-Given the movement that occurs on the screen upon section transitions, the site's overall color and peripheral default color states are decidedly neutral, spanning a spectrum of off-whites; a range of neutral greys; either of which afford the project its most stylistic reading in four gradients.
+Given the high degree of [movement](#54-movement) that occurs on the screen upon section transitions, the site's overall background "white-space" and peripheral default color states are decidedly neutral, spanning a spectrum of off-whites; a range of neutral greys; either of which afford the most stylistic reading of the project to its neumorphic gradient-and-shadow pairings.
 
-- Whites
-    - --white: #FAFAFA;
-    - --pearl: #F4F4F4;
-    - --powder: #F5F4F2;
-    - --paper: #F2F1EF;
-- Greys
-  - --deep-1: #4f4f4f;
-  - --deep-2: #707070;
-  - --deep-3: #95989A;
-  - --deep-4: #B0b0b0;
-- Gradients
-  - --gradient-1: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
-  - --gradient-2: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2));
-  - --gradient-3: linear-gradient(145deg, rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0.2));
-  - --gradient-4: linear-gradient(180deg, rgba(250, 250, 250, .7), rgba(0, 0, 0, .1));
+- The off-whites in this schematic [color palette board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_20116_0746.png) relatively illustrate the proportion of white-space-to-color per section. The signature off-white background is `#f2f1ef` and is the value of custom property name `--paper`. The complete range of off-whites, from lightest to darkest, and the property names they have been assigned for this project are:
+    - `--white: #fafafa`
+    - `--pearl: #f4f4f4`
+    - `--powder: #f5f4f2`
+    - `--paper: #f2f1ef`
 
-Each section is assigned a bold accent signature color, which it carrier throughout the project in two tones: 1) a deep, rich, tone with a waxed matte finish 2) and a faded high-saturation highlight with a diffused backlit glow.
+- A deep `#a4a4a4` is assigned as the default dark color for all text while slightly opinionated text styles, icon highlights, border colors, including various state changes, are taken from a range of aptly named deep values.
+  - `--deep-1: #4f4f4f`
+  - `--deep-2: #707070`
+  - `--deep-3: #95989A`
+  - `--deep-4: #B0b0b0`
 
-- Signature blends, in pairs:
-  - ![](documentation/obsidian.png) --obsidian: #2E2C2E; --raisin: #3E223D;
-  - ![](documentation/slate.png) --slate: #929181; --grey: #B7B1A8;
-  - ![](documentation/ruby.png) --ruby: #89413D; --red: #B84A30;
-  - ![](documentation/denim.png) --denim: #37455C; --blue: #1D49B8;
-  - ![](documentation/canary.png) --canary: #D27511; --yellow: #B8A922;
-  - ![](documentation/moss.png) --moss: #213128; --green: #234D3E;
+- Various linear gradients and box shadow properties are assigned to global containers throughout the project. The neumorphic container styles are achieved by pairing shadow and gradient properties with carefully set x and y offsets and `deg` rotations. A great deal of the website's visual identity can be attributed to the four flagship pairings of these two properties, which give the website its material, neumorphic appeal. Gradients are declared as custom properties at `:root` while box-shadows are declared at each scope. The custom properties at the box shadow's `blur` value [changes per system-wide mode](#consistency-and-predictability). This small adjustment is to utilize nuances of the project's identity to make communicate state-wide changes to the user and further reinforce its brand expectations, parameters and outcomes.
+
+```css
+  .inset-container {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+    box-shadow: inset -5px -8px var(--blur-md) 0 rgba(255, 255, 255, 0.5),
+                inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
+  }
+```
+
+Each section is assigned a bold accent "signature color", which is carried throughout the project in two tones:
+ 1. A deep, rich, tone with a waxed matte finish.
+ 2. A faded high-saturation highlight with a diffused backlit glow.
+- Each pair of signature blends, are eye-drop selections from the following swatches. At a very small scale, tiny highlights in each swatch produce a faded/diffused version of the larger, richer tone. The swatches are taken from the owner's design work, and are given names based on their resemblence to more nuanced color representations and associations. With the exception of icons, colors are the only properties that are unique to each section. They are chosen as they complement overlaid gradients and strengthen the project's bold yet subdued materiality.
+
+  - ![](documentation/obsidian.png) `--obsidian: #2E2C2E; --raisin: #3E223D;`
+  - ![](documentation/slate.png) `--slate: #929181; --grey: #B7B1A8;`
+  - ![](documentation/ruby.png) `--ruby: #89413D; --red: #B84A30;`
+  - ![](documentation/denim.png) `--denim: #37455C; --blue: #1D49B8;`
+  - ![](documentation/canary.png) `--canary: #D27511; --yellow: #B8A922;`
+  - ![](documentation/moss.png) `--moss: #213128; --green: #234D3E;`
 
 
 ### 5.3 Typography
-
-<!--- Should be visually distinct-->
-<!--- Indicate diferent information-->
-<!--- Should be consistent-->
-<!--- Good UX smells like value.-->
 
 - Typography
   - [Viktor Nübel](https://viktornuebel.medium.com/how-scripts-helped-to-design-a-typeface-for-coding-9af5f28d742a)'s [FF Attribute](https://www.fontshop.com/superfamilies/ff-attribute) font family is the stylistic feature font of the project's main body, including [FF Attribute Mono](https://www.fontshop.com/families/ff-attribute-mono) and [FF Attribute Text](https://www.fontshop.com/families/ff-attribute-text); while [Vasily Biryukov](http://luc.devroye.org/fonts-51517.html)'s opinionated take on the classic [FF DIN](https://en.wikipedia.org/wiki/FF_DIN) family with [DIN 2014](https://fonts.adobe.com/fonts/din-2014) is featured in section headlines.
@@ -792,7 +684,6 @@ Custom Timing Function Variables
 
 - `--zip` is a typically `linear` progression with a forceful and surprise bounce: a consistent speed with an interrupted end.
   - [Preview](https://cubic-bezier.com/#1,1.4,.41,1.01) `cubic-bezier(1, 1.4, 0.41, 1.01)`
-
 
 - `--swoop` is an `ease-in-out` with a late and steep progression: an extra slow start with a rapid progression before a relaxed end.
   - [Preview ](https://cubic-bezier.com/#1,0,.41,1.01) `cubic-bezier(1, 0, 0.41, 1.01)`
@@ -831,19 +722,11 @@ Custom Timing Function Variables
 
 ### Download me at arrival
   - The website features a call to action download button upon landing on the site that is styled in the same fashion as all forthcoming CTAs. The intention is twofold: 1) to provide the the shortest clickable distance between arrival and achieving the singular most valuable touchpoint 2) to establish and reinforce the visual language of the CTA container in its seven identical iterations.
-- 
-
-- 
-
-
-- The input's label element contains icons that swap visibility on toggle of ':checked'.
-
-<!--For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.-->
-
-<!--In addition, you may also use this section to discuss plans for additional features to be implemented in the future:-->
 
 ## Features Left to Implement
-- Another feature idea
+
+- Activating the message form element.
+  - The form element in the "Connect" section does not presently have full functionality. This is to be added upon acquiring skills to enable this feature.
 
 # Technologies
 
@@ -894,14 +777,6 @@ Custom Timing Function Variables
    - Adobe XD is the user experience design tool and workspace used to mock up the project from low fidelity wireframes to high fidelity prototypes. XD's templates along with its plugin [Whiteboard](https://xd.adobe.com/ideas/perspectives/leadership-insights/new-whiteboard-plugin-adobe-xd/) were used for diagramming mind maps, user journeys and site maps.
 
 # Testing
-
-## Code Testing
-
-The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services continue to be used to validate the single html page (index.html) and the css URI of the project (/assets/style.css) to ensure no errors, alerts or flags pertaining to html and css syntax.
-
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Findex.html)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=)
-
 
 ## User Testing
 
@@ -958,17 +833,7 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
 
 <!--For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:-->
 
-<!-- Animation fill property -->
 
-<!--- root-body-->
-<!--  - body-header-->
-<!--  - body-nav-->
-<!--  - body-main-->
-<!--    - main-article-->
-<!--      - article-section-->
-<!--        - outer-body-->
-<!--          - left inner-body-->
-<!--          - right inner-body-->
 
 <!--1. Contact form:-->
 <!--   1. Go to the "Contact Us" page-->
@@ -995,11 +860,6 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
 <!--   4. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
 <!--   5. Try to submit the form with all inputs valid and verify that a success message appears.-->
 
-<!--1. Hacking the .collapse.show event:-->
-<!--    1. Go to the "Contact Us" page-->
-<!--    2. Try to submit the empty form and verify that an error message about the required fields appears-->
-<!--    3. Try to submit the form with an invalid email address and verify that a relevant error message appears-->
-<!--    4. Try to submit the form with all inputs valid and verify that a success message appears.-->
 
 ## Notable Methods
 
@@ -1047,52 +907,136 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
         
         
     ```
-1. Toggling around asynchronous transitions and Animation Fill Mode - The holy grail
 
-3. Buttons over anchors
-   - Anchor elements with an href property to a collapsed section id modified the browser URL. This made the single-page index.html cumbersome to navigate using the browser's back button as each toggle on a tab in the accordion is rendered as a new page, caching a back-history at every click. Wrapping each tab section in a button element with a data-target attribute (instead of href) linked to a collapsed section id appears to fix this problem. (commit acc00e9a1e9d020f6831b2ce5f82be08b73883f3)
-
-
-
-
-
-<!--In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.-->
-
-<!--You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.-->
-
-<!--If this section grows too long, you may want to split it off into a separate file and link to it from here.-->
 
 ## Documentation Notes
 
-- Component-based approach to rulesets in style.css
+1. In order to keep the HTML markup clean and avoid the nested trifecta of `container-fluid` -> `row` -> `col-11` wrapper `<div>`s before arriving at semantically-sectioned elements; the utilities that achieve the wrapper's responsive behavior are applied to the HTML itself, removing three levels of wrapper `<div>`s. This ensures that the largest structures of the site are semantically sectioned as well as provide the ability to quickly set a new width to the main content for various applications by simply declaring a new value out of twelve without sacrifice to any site functionality.
 
-- Animations have animation-fill-property set to forwards, meaning the animation applies the styles at keyframe 100% to the element. (The default is none, which means typically, animation keyframe styles come and go; without accountability to property values before or after they are called). The fill property is particulary essential for all animations attached to impermanent/state/pseudo class selectors controlling boolean states (.show, :checked) as such elements need to hold set values of either/or for the duration of the class's transit. As a result of this feature, keyframes rulesets are equally determinstic as the rulesets to which they serve. In some cases, state properties are only assigned at keyframes 100% property and not repeated at the class ruleset that calls that keyframe. Widely accepting that the responsibility of keyframes as vital. To that end, For this project, in style.css, they are omitted when they are not needed so as to minimize repetition of calls to state properties.
+     ```css
+         
+         :root {
+              /* Desired width variable (out of 12) */
+             --of-twelve: 11;
+         
+             /* Resulting width property as percentage */
+             --width: calc(var(--of-twelve) / 12 * 100%);
+         }
+         
+         :root > * {
+             width: var(--width);
+         }
+         
+     ```
 
-  - For example, not setting the animation fill property for .collapse.show will allow .collapse to trigger its hidden state between .collapsing transitions by bootstrap. resulting in a quick flash. To program aroud that flash, the alternative is to explicitly provide a ruleset for the returned class variety as well as the order in wich the plugin returns such classes i.e.  .collapse and :not(.show), .collapsing:not(.show).
 
-- Buttons in nav outline, some elements are duplicates: one representing an href a and a button data target. Serving only and are visible on for state changes or media queries.
+2. Style blocks in style.css are approached with component-based style declarations. A dedicated block with sub-blocks of rulesets are given to each feature, function or scope. Herein, all `@media` queries specific to a ruleset are configured *immediately* following its default or "parent" ruleset. This approach assigns "components" responsibility for how to accommodate media queries and state changes as opposed to the opposite, where state changes or media queries would be separate "parent" rule blocks with "component" reconfigurations affixed to the end of a stylesheet. The component-based approach was used in order to more efficiently track global state changes while developing each "component", essentially rendering every `@media` query declaration as a sub-block of styles native to a specific component's behavior.
 
-- For the most part, the type of classes assigned to elements in index.html are controlled in style.css and only helper classes such as lh-1, .align-middle from libraries are used. Never using classes that set a family of properties other than the .nav-pills variety for scrollspy. If required, only helpers with a single scope/purpse i.e. text-right. Effort was made to keep this to a minimum, typically warranting dedicated rulesets for elements requiring three or more heavy-lifting helper classes. Helper classes that are considered "heavy-lifting" are classes that set box model display properties and dimensions. However, this is not always achieved as in some cases, minor elements using heavy lifting helper classes were not deemed to fully require dedicated rulesets in style.css. Decision was made relative to the scope of what is already controlled in style.css.
+3. With effect to point #2 above, [Bootstrap 5's grid tiers](https://v5.getbootstrap.com/docs/5.0/layout/breakpoints/) and their effective breakpoints in `min-width` and `max-width` queries are called __as required__ (need-based) per syle block or "component" ruleset in style.css.  These queries range from targeting single breakpoints; targeting extra small screens only; targeting small screens and larger; to targeting between breakpoint ranges.
 
-- In order to keep the markup clean and avoid the nested trifecta of 'container-fluid -> row -> col-11' before arriving at semantic html-sectioned elements; the utilities that achieve the wrapper's responsive behavior are now applied to the html itself, removing three levels of div-wraps. This radically tidied the HTML markup ensuring that the largest structures of the site are semantically sectioned. This provides the ability to quickly set a new stack width for various applications by simply declaring a new value out of twelve without sacrifice to any site functionality.
+4. With effect to points #2 and #3 above, `@media (max-width: 991.98px) (orientation: landscape)` sets out the boolean style declarations for the project's [automatic landscape mode](). This query targets medium devices (tablets, less than 992px) that are viewed in landscape orientation. This query equally targets any browser window (less than 992px wide) with a width greater than its height. As the project showcases this as one of three flagship modes, an additional style block is dedicated to this media/orientation query to accommodate various global boolean overrides. As this mode must account for *both* the transition from [interactive/collapsible]() mode *and* the transition from [static/expanded ]() mode to effectively "flip" states, the query/orientation ruleset has to thus always include the default boolean selectors and the activated boolean selectors.
+
+5. With effect to point #2 above and to the complex boolean properties of the landscape mode described in point #4, custom properties that acquire new values based on boolean states are declared at the parent class and/or the parent scope, extending the component-based approach to custom property values. Similar to the powerful property declaration at `:root` as described in point #1 above, over a dozen more responsive properties follow the same logic across scales and scopes in style.css. These variables are described and annotated as required in comment blocks within style.css. Below is an example of one of over a dozen usages of component-based rulesets, per-scope custom property declarations, and complex boolean checks and balances. In this instance, the landscape query as mentioned in point #4 above, has to cancel out the default state *and* the toggled state to prevent unanticipated boolean state combinations. Note that this approach to CSS styles for complex boolean states is consistent in style.css and, at the moment, accomplishes desired functions without JavaScript as of yet. The approach for `:checked` states as shown below is the same approach taken for `.show` and `:not(.show)` states and how they respond to global boolean system changes.
+
 
     ```css
-        
-        :root {
-             /* Desired width variable (out of 12) */
-            --of-twelve: 11;
-        
-            /* Resulting width property as percentage */
-            --width: calc(var(--of-twelve) / 12 * 100%);
+    
+    /* Declare default state and action indicators for '.toggle-container' scope. */
+    
+    .toggle-container {
+        --current-mode: "interactive/";
+        --current-state: "collapsible";
+        --current-action: "expand";
+        --current-scope: "all";
+    }
+    
+    /* Select '.toggle-container' via ':checked' to set values in toggled state. */
+    
+    #toggle-all:checked + label .toggle-container {
+        --current-mode: "static/";
+        --current-state: "expanded";
+        --current-action: "collapse";
+        --current-scope: "back";
+    }
+    
+    /* Select '.toggle-container' directly and via ':checked' to set values 
+     * for landscape mode. The query is itself the boolean selector that 
+     * overrides previous states.
+     */
+    
+    @media (max-width: 991.98px) and (orientation: landscape) {
+        .toggle-container,
+        #toggle-all:checked + label .toggle-container {
+            --current-mode: "dashboard/";
+            --current-state: "expanded";
+            --current-action: "landscape";
+            --current-scope: "auto";
         }
-        
-        :root > * {
-            width: var(--width);
-        }
-        
+    }
+    
+    /* The state indicator ruleset (snippet) */
+    
+    #toggle-all + label .toggle-container:after {
+        content: var(--current-mode) "\a" var(--current-state);
+    }    
+    
+    /* The action indicator ruleset (snippet) */
+    
+    #toggle-all + label .toggle-container:before {
+        content: var(--current-action) "\a" var(--current-scope);
+    }
+    
     ```
 
-- Given the semantic clarity achieved in the article-stack, consideration will be given to the removal of the Introduction `<article>` from the collapsible stack; its potential, logical (and semantic) location being within the main body `<header>`.
+
+6. Animations have `animation-fill-property` set to `forwards`, which means all properties assigned at `@keyframe { 100% }` is given to the animated element at the end and long after the animation has concluded. The default is none, which means typically, animation keyframe styles come and go; without accountability to property values before or after they are called. Thus, the fill property and the keyframe values are particularly essential for all animations attached to impermanent/state/pseudo class selectors controlling boolean states (`.show`, `:checked`, etc.) as such elements need to hold *set* values of *either/or* for the duration of the class's transit. As a result of this feature, CSS keyframe sets in style.css are equally determinstic as the rulesets to which they are called. In most cases with heavy-lifting flagship animation styles, state properties are __only assigned__ at keyframes' 0%/100% mark and not repeated at the parent ruleset that calls the animation with that keyframe. As such, style.css is written to widely accept the notion that keyframes hold a vital responsibility. To that end, note that properties controlled by keyframes are omitted in parent rulesets when they are not needed so as to minimize repetition of state properties.
+
+7. The `<button>` element with a `data-target` attribute is used as the control element for collapsible sections. This was chosen to avoid the url changes and, consequently, indeterminable browser "back" functionality the would come with the alternative `<a>` element with an `href` attribute. This decision was further upheld by the requirement of having separate `<a>` elements (without collapse functionality) for side menu navigation and Scrollspy events in [static/expanded](#interactive-collapse-feature) and [dashboard/expanded](#dashboard-static-landscape-mode) modes. As a result, `<button>`s in the side menu outline are paired with `<a>` elements; swapping visibility with as required by the global state: if collapse functionality is off, buttons are hidden and anchors are shown, and vice versa. Note that this is the reason for duplicate link items the body's nav of index.html.
+
+8. Following a similar logic described in point #7, wherever each of two boolean states are represented as icon or text (i.e. open and close icon), both elements occupy a container in a parent control element, and swap visibilities upon toggling the given boolean state. This is controlled in style.css. Note that this is the reason for icon/text dualities in key elements of index.html.
+
+9. For the most part, classes assigned to elements in index.html are controlled in style.css and only helper classes such as `lh-1`, `.align-middle`, etc. from MDBootstrap libraries are used. With the exception of `.nav-pills` class which are linked to the Scrollspy plugin, framework classes that control a broad pre-set of family properties are not used. Those heavy-lifting framework classes such as `.badge` or `.card` have been typically appropriated with custom styles as required and as noted in style.css. Otherwise, only helper classes with a single scope i.e. `.text-right` are used. Effort was made to keep helper class usage to a minimum, typically warranting dedicated rulesets for elements requiring three or more heavy-lifting helper classes. However, note that this rule is not always achieved and some elements still benefit from more than three helper classes i.e. `d-flex flex-column justify-content-center`. In most of these cases, elements are "minor" and thus not deemed to fully require dedicated rulesets in style.css. The decision is made relative to the scope of what is already controlled in style.css.
+
+10. CSS class names reflect semantic HTML sectioning elements to which they are applied. They follows a parent-child structure. For example, the root's `<body>` has the `.root-body` class, the body's `<header>` `<main>` and `<nav>` are assigned `.body-header`, `.body-main`, `.body-nav` classes, respectively. Classes for the main element's seven `<article>`s and those article's child `<header>` and `<section>` are thus named `.main-article`, `.article-header`, and `.article-section`, respectively. This convention was chosen for the clarity of its relationship to the structure of index.html. Previously, rulesets were directly attached to HTML elements via CSS element selectors. In order to have a more independent and flexible stylesheet, element selectors are now only used in the [pseudo-rail-transition ]() ruleset. While the element selector `section.show:before` is synonymous with the class selector `.article-section.show:before`, the former is used for instances of pseudo-rail elements for the simple advantage of code and semantic clarity: the distinction that the pseudo-rails are a different set of components more attached and dependent to the element structure of index.html.
+
+11. The checkbox `<input>` `<label>` that toggles the site to static/interactive mode is strategically placed in the DOM in order to elicit behavior to and from immediate siblings `<main>` and `<nav>` via `:checked` selector. As the project relies heavily on CSS sibling selectors to control boolean states, the checkbox can only be where it currently is. However, in future versions of the project with more advanced languages, there is potential thus place this control element within a more semantically appropriate parent such as the body's `<header>`. Additionally, animated icon buttons are nested in the `<input>`'s `<label>`, which effectively renders the checkbox input into a custom toggle button. The `<input>` element is thus `.visually-hidden` by default.
+
+12. Given the semantic clarity achieved in the article-stack, consideration was given to the removal of the landing section from the collapsible stack; its potential, logical (and semantic) location being within the main body `<header>`. However, the ability to hide the landing section inside a `<header>` upon toggling the collapsed sections within `<main>`, as is currently featured, would be prevented (without CSS ability to control nested, out-of-scope elements), and not yet immediately possible without JavaScript. This is a potential area of improvement in later revisions.
+
+13. Large blocks of single declarations in style.css are formatted in single-lines. This slight deviation from the standard ruleset format helps to manage and clarify various declarations of signature colors per section. As a section's signature color is the only distinct property to vary from an otherwise global and consistent style, such declarations are decidedly *single* declarations per scope of many scopes; conveying less meaning in a standard-format ruleset, and more meaning in the direct context of *all* single declarations of a scope. For this reason, signature color declarations for a scope are grouped in a single block, and formatted in single lines. See two examples below, which occurs in twelve iterations in style.css and/or where the same code clarity is made effective. See [Idiomatic CSS](https://github.com/necolas/idiomatic-css) for the CSS patterns adopted in the project.
+```css
+    
+    /* Single-line-format style declarations of one feature's color differentials 
+     * for seven sections. 
+     */
+    
+    .link-one.nav-link:hover { color: var(--raisin); }
+    .link-two.nav-link:hover { color: var(--grey); }
+    .link-three.nav-link:hover { color: var(--red); }
+    .link-four.nav-link:hover { color: var(--blue); }
+    .link-five.nav-link:hover { color: var(--canary); }
+    .link-six.nav-link:hover { color: var(--green); }
+    .link-seven.nav-link:hover { color: var(--yellow); }
+    
+    /* Single-line-format style declarations of one section's signature colors
+     * for various type properties. 
+     */
+    
+    #target-four h4 { background-color: var(--denim); }
+    #target-four b { color: var(--denim); }
+    #target-four a { color: var(--blue); }
+    #target-four p::selection { background: var(--blue); }
+    #target-four p::-moz-selection { background: var(--blue); }
+    
+```
+
+## Code Testing
+
+The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services continue to be used to validate the single html page (index.html) and the css URI of the project (/assets/style.css) to ensure no errors, alerts or flags pertaining to html and css syntax.
+
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Findex.html)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=)
+
 
 ## Miscellaneous
 
@@ -1105,7 +1049,6 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
   - iPhone 11 Pro
   - MacBook Pro 15"
   - iPad Pro 12.9"
-- User Testing
 
 ## Known Bugs
 
@@ -1115,38 +1058,41 @@ The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services contin
 
 # Deployment
 
-- The website uses GitHub Pages to deploy index.html with its singular style.css stylesheet.
-  - This is achieved by simply activating the Pages feature on the settings of this repository.
+The project uses GitHub Pages to deploy index.html from the root directory of the project's repository. This is achieved via the following steps.
 
-- 
-  This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+1. Logging in to GitHub and accessing the [GitHub Repository](https://github.com/israelias/resume-redux) for this project.
+2. Accessing "Settings" via its tab button, located at the end (right) of the repository's menu tabs.
+3. Scrolling down to the sixth section of the "Settings" page, to "GitHub Pages"
+4. Beneath "Source", selecting the dropdown defaultly set to "None" and choosing "Master Branch".
+5. Waiting for the page to refresh and finding a note above "Source" to appear and indicate:
+    > "Your site is published at *https://username.github.io/repository-name/*"
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
+Code is locally run via WebStorm as described in [Programs and Software ](#programs-and-software)
 
 # Credits
 
-<!--## Documentation-->
+## Code
 
-<!--## Content-->
-<!--- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)-->
+- Damien L. Gilliams' tutorial on [how to embed LinkedIn recommendations](https://www.damosdesigns.com/LinkedinRecommendationsOnWebsite/) takes care of a whole section in the project, and is a great lesson on appropriation. Directly following Mr. Gilliams' tutorial, the style block for `#target-six`'s Recommendations section in style.css are only slightly modified from the tutorial. This style block includes Mr. Gilliams' original comments.  Equally, the code in index.html for the Recommendations section is taken from the owner's public LinkedIn profile, with adjustments per Mr. Gilliams' tutorial. One adjustment for the project was to wrap each recommendation item in a `<figure>` element, both for semantic clarity and for application of some of the project's signature styles such as a gradient and a border radius.
+
+- Taking Damien L Gilliams' LinkedIn CSS styles a steph further, the list of awards featured in `#target-six`'s Awards section in index.html applies Mr. Gilliams' appropriation style to the "Accomplishments" section of the owner's public LinkedIn profile. Code for this extensive `<ul>` was only slightly modified for margins. The CSS rulesets extracted from this exercise are added to the style block following the Recommendations style block and Mr. Gilliams's notes in style.css.
+
+- GitHub's  progress bar styles and language colors were appropriated in the project by inspecting the HTML of the project's repository page, and using the colors it assigns for languages. [MDBootstrap's Progress bar](https://mdbootstrap.com/docs/standard/components/progress/) class was then utilized to show these percentages.
 
 ## Content and Media
+
 - All written content and media outside of iconography and typography are conceived by the owner or retrieved from the owner's public profiles.
 
 ## Acknowledgements
 
-- The CSS rulesets and comment style strictly follow Nicolas Gallagher's [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css). <!--(@necolas)-->
+- The CSS rulesets and comment style follow guides and patterns from Nicolas Gallagher's [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css). <!--(@necolas)-->
 - The site's document outline was inspired by (and generated with the help of) [headingsMap](https://github.com/dzc34/headingsMap)'s Chrome plugin.
+- The potential of multi-layered box shadow properties was inspired by and founded on [Adrian Bece's tutorial on Neumorphism](https://css-tricks.com/neumorphism-and-css/).
+- [Shadow Generator](https://neumorphic.design) was used to customize inset and outset neumorphic shadow containers.
 - The site's favicon was generated via [Real Favicon Generator.net](https://realfavicongenerator.net/) following Philippe Bernard's [comprehensive summary on favicons](https://css-tricks.com/favicon-quiz/).
 - [Ashfaq Ahmed](https://codeconvey.com/)'s [time functions](https://codeconvey.com/pure-css-accordion-menu/) and playful, component-based approach to CSS rulesets were a benchmark for its sincere clarity and attention to detail.
 - Quackit's [comprehensive list of CSS3 properties](https://www.quackit.com/css/css3/properties/), definitions, and usage examples helped to sharpen tools utilized in the project, and develop nuanced workflows with a learned and sophisticated shorthand.
-- Damien L. Gilliams' tutorial on [how to embed LinkedIn recommendations ](https://www.damosdesigns.com/LinkedinRecommendationsOnWebsite/) takes care of a whole section in the project, and is a great lesson on appropriation.
-- GitHub's  progress bar styles and language colors were appropriated in the project by observing the HTML of its repository page.
-- Tutors at Code Institute for the critiques and patience.
-- Mentor Aaron Sinnott
+- The development of this README.md takes precedent from various templates and samples throughout Code Institute's course. The development of the UX section and Jesse Garret's Five Planes of UX equally take direct inspiration from Code Institute's course.
+- The Slack community at Code Institute, namely the senior leads, for being generous and quick to offer endless assistance and advice.
+- Tutor Support at Code Institute for offering invaluable technical support.
+- My mentor Aaron Sinnott for his support, time investment and for helping to push this project to be the best that it can be.

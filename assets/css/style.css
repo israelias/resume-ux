@@ -3287,7 +3287,7 @@ details[open] .open,
 
 
 /* ==========================================================================
-   MASTER SHADOW CONTAINER STYLES
+   Master shadow container styles
    ========================================================================== */
 
 /*!
@@ -4220,12 +4220,11 @@ form .connect-cta input {
 
     .banner-text {
         position: absolute;
-        top: calc(2rem + 5vh);
-        right: 12vw;
+        top: calc(2rem + 5vh + 3rem);
+        right: 5vw;
         margin-left: auto;
         margin-right: 0;
         padding-left: 2rem;
-        color: var(--deep-1);
         transition: all .3s var(--glide) .3s;
     }
 
@@ -4249,7 +4248,7 @@ form .connect-cta input {
 
 }
 
-@media (max-width: 991.98px) and (orientation: landscape) {
+@media (orientation: landscape) {
     .banner-top {
         flex-direction: row;
         margin-bottom: 0;
@@ -4919,7 +4918,7 @@ summary {
 
 /* Style summary "read more" icon return transition */
 
-details > summary #readmore {
+details > summary .read-more-icon {
     position: relative;
 
     -webkit-animation: appear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
@@ -4932,7 +4931,7 @@ details > summary #readmore {
 
 /* Style active summary "read more" icon active transition */
 
-details[open] #readmore {
+details[open] .read-more-icon {
     position: relative;
 
     -webkit-animation: disappear-225 var(--flashing) var(--swoop) var(--early) 1 normal forwards running;
@@ -4945,7 +4944,7 @@ details[open] #readmore {
 
 /* Icon configs */
 
-#readmore {
+.read-more-icon {
     color: black;
     font-size: 32px;
 }
@@ -5487,7 +5486,7 @@ blockquote, q {
    ========================================================================== */
 
 /* CREDIT (helper tool) https://cubic-bezier.com/#.23,-0.09,.18,1.25 */
-/* CREDIT (inspiration) timing functions are modeled after: https://codeconvey.com/pure-css-accordion-menu/ */
+/* CREDIT (inspiration) specific timing functions are inspired by: https://codeconvey.com/pure-css-accordion-menu/ */
 /* Reference: understanding the timing function https://www.quackit.com/css/css3/properties/css_animation-timing-function.cfm */
 /* Reference: the mathematical function http://morrow.github.io/css-reference/html/partial/timing-function.html */
 /* In cubic-bezier(x1, y1, x2, y2), x is time, y is progression; x(time) cannot go below 0 or over 1, but y(progression) can */
@@ -5512,17 +5511,13 @@ blockquote, q {
 
 article {
     position: relative;
-    animation: article .75s var(--glide) 0s ;
-    /*animation: var(--dash-down-early-glide-anim);*/
-    /*-webkit-animation: var(--dash-down-early-glide-anim);*/
+    animation: article .75s var(--glide) 0s;
+    animation: article .75s var(--glide) 0s;
+    -webkit-animation: article .75s var(--glide) 0s;
 
     -webkit-transition: all var(--flashing) var(--glide) var(--late);
     -o-transition: all var(--flashing) var(--glide) var(--late);
     transition: all var(--flashing) var(--glide) var(--late);
-}
-
-.article-header {
-    position: relative;
 }
 
 @-webkit-keyframes article {
@@ -5544,12 +5539,6 @@ article {
         height: auto;
         top: 0;
     }
-}
-
-.body-header,
-.body-footer {
-    -webkit-animation: fade-in var(--dashing) var(--glide) var(--early) 1 normal forwards running;
-    animation: fade-in var(--dashing) var(--glide) var(--early) 1 normal forwards running;
 }
 
 

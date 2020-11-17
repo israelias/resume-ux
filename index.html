@@ -34,7 +34,7 @@
     <!-- start EXPAND All TOGGLE -->
     <input type="checkbox" id="toggle-all" class="invisible">
     <label for="toggle-all">
-        <div class="toggle-container d-flex">
+        <span class="toggle-container d-flex">
             <span class="menu-icon d-flex d-sm-none position-relative align-self-center pb-4">
                  <ion-icon id="hideswap" name="radio-button-off"
                           class="hide-swap d-flex position-absolute float-left">
@@ -45,7 +45,7 @@
                     <span class="sr-only">Collapse All</span>
                 </ion-icon>
             </span>
-        </div>
+        </span>
     </label>
     <!-- close expand all toggle-->
 
@@ -62,7 +62,7 @@
                         aria-controls="nav-outline"
                         aria-expanded="false"
                         aria-label="Toggle side menu">
-                    <div class="toggle-container d-flex">
+                    <span class="toggle-container d-flex">
                         <span class="menu-icon d-flex align-self-center pb-4">
                             <ion-icon id="showmenu" name="close-outline"
                                       class="see-more d-flex position-absolute float-left">
@@ -73,7 +73,7 @@
                                 <span class="sr-only">Show Menu</span>
                             </ion-icon>
                         </span>
-                    </div>
+                    </span>
                 </button>
                 <!-- start LOGO -->
                 <a class="navbar-brand" href="index.html" role="button">
@@ -83,9 +83,10 @@
         </nav><!-- close nav main -->
     </header><!-- close header main -->
 
-    <!-- start NAV OUTLINE -->
+    <!-- start SIDE MENU NAV -->
     <nav class="body-nav collapse" id="nav-outline">
         <div class="outset-container-2">
+            <!-- start NAV DOCUMENT OUTLINE -->
             <ol class="nav nav-pills menu-sidebar list-h1 nav-content">
                 <li class="nav-item item-zero h1-00 outline-item">
                     <a class="nav-link link-zero" href="#target-zero">
@@ -119,7 +120,7 @@
                                             <ul class="nav nav-one list-h5">
                                                 <li class="nav-item item-one h5-02">
                                                     <a class="nav-link link-one" href="#sectionZero-1">
-                                                        Outbound Links
+                                                        Profile Summary
                                                     </a>
                                                 </li>
                                                 <li class="nav-item item-one h5-02">
@@ -153,7 +154,7 @@
                                             <ul class="nav nav-two list-h5">
                                                 <li class="nav-item item-two h5-11">
                                                     <a class="nav-link link-two" id="#sectionOne-1">
-                                                        Tech Stack
+                                                        Industry Knowledge
                                                     </a>
                                                 </li>
                                                 <li class="nav-item item-two h5-12">
@@ -187,7 +188,7 @@
                                             <ul class="nav nav-three list-h5">
                                                 <li class="nav-item item-three h5-21">
                                                     <a class="nav-link link-three" href="#sectionTwo-1">
-                                                        Strengths
+                                                        Skills
                                                     </a>
                                                 </li>
                                                 <li class="nav-item item-three h5-22">
@@ -296,7 +297,7 @@
                                                 </li>
                                                 <li class="nav-item item-six">
                                                     <a class="nav-link h5-52 link-six" href="#sectionFive-2">
-                                                        Accomplishments
+                                                        Awards
                                                     </a>
                                                 </li>
                                             </ul>
@@ -342,7 +343,8 @@
                     </ul>
                 </li>
             </ol>
-            <!-- start 0.1 SOCIAL LINKS -->
+            <!-- close nav document outline -->
+            <!-- start NAV MENU SOCIAL LINKS -->
             <ul class="nav-links activity-cta connect-cta links-content nav-content">
                 <li class="inset-container outline-item d-flex">
                     <a class="btn outset-container-2 flex-fill" href="https://www.linkedin.com/in/joem-elias-sanez/"
@@ -393,19 +395,21 @@
                         </span>
                     </a>
                 </li>
-            </ul><!-- close 0.1 social links -->
+            </ul>
+            <!-- close nav menu social links -->
         </div>
-        <!-- /Contact CTA -->
     </nav>
-    <!-- close nav outline -->
+    <!-- close side menu nav -->
 
+    <!-- start MAIN CONTENT -->
     <main class="body-main" id="resumeStack">
 
-        <!-- start SPLASH BANNER -->
-        <section class="main-section show" id="target-zero"
-                 aria-labelledby="splashLanding"
+        <!-- start 0.0 SPLASH BANNER -->
+        <section class="main-section show"
+                 id="target-zero"
                  data-parent="#resumeStack">
             <div class="cover-banner pl-2 pr-2">
+                <!-- start LANDING HEADING -->
                 <h1 class="cover-text lh-1 h3">
                     <span class="cover-title text-lowercase">
                         The curriculum vitae
@@ -413,7 +417,8 @@
                     <span class="cover-name">
                         of Joem Elias Sanez
                     </span>
-                </h1>
+                </h1><!-- close landing heading -->
+                <!-- start LANDING SUBHEADING -->
                 <h2 class="banner-text h6">
                     <span class="banner-top pr-2">
                         <span class="text-right">(dev</span>
@@ -427,7 +432,8 @@
                         <span class="text-left ml-2 pr-2">the </span>
                         <span class="text-left ml-4">web)</span>
                     </span>
-                </h2>
+                </h2><!-- close landing subheading -->
+                <!-- start LANDING CTA -->
                 <div class="banner-cta activity-cta mt-2 mb-3 pl-0 inset-container">
                     <div id="band-li" class="d-flex flex-row align-items-stretch">
                         <span class="outset-container-2 contact-text flex-fill mr-2 text-muted justify-content-between align-middle">
@@ -444,12 +450,12 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div><!-- close landing cta -->
         </section><!-- close splash banner -->
 
-        <!-- start 0.0 (Introduction: Social Links & Recent Activity) -->
+        <!-- start 1.0 (Introduction: Social Links & Recent Activity) -->
         <article class="main-article" id="element-one">
-            <!-- start 0.0 HEADER BUTTON -->
+            <!-- start 1.0 HEADER BUTTON -->
             <header class="article-header" id="control-one">
                 <h3 class="header-title">
                     <button class="collapsed"
@@ -463,7 +469,7 @@
                                 INTRODUCTION
                             </span>
                             <span class="header-text">
-                                About and recent activity
+                                Profile summary and recent activity
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
@@ -476,13 +482,13 @@
                         </span>
                     </button>
                 </h3>
-            </header><!-- close 0.0 header button -->
-            <!-- start 0.0 SECTION -->
+            </header><!-- close 1.0 header button -->
+            <!-- start 1.0 SECTION -->
             <section class="article-section collapse"
                      id="target-one"
                      aria-labelledby="control-one"
                      data-parent="#resumeStack">
-                <!-- start 0.0 SPREAD -->
+                <!-- start 1.0 SPREAD -->
                 <div class="spread row">
                     <!-- start PAGE-LEFT TEXT -->
                     <div class="outer-body col-12 col-md-7 col-xl-6 col-xxl-5">
@@ -490,7 +496,7 @@
                              Joem Elias Sanez is an architect and full stack developer based in Manila.
                             <i class="section-icon fas fa-info-circle" aria-hidden="true"></i>
                         </h4>
-                        <!-- start 0.1 SUB-SECTION -->
+                        <!-- start 1.1 SUB-SECTION -->
                         <section id="sectionZero-1" class="left inner-body landing-subheading">
                             <p class="lh-2 mt-3 mb-3">
                                 I'm currently <b>enrolled</b> in a <a
@@ -503,7 +509,7 @@
                                 <b>architecture</b>, keen <b>client services</b> ability
                                 and a logical, responsive <b>working style</b>.
                             </p>
-                            <!-- start 0.1 SOCIAL LINKS -->
+                            <!-- start 1.1 SOCIAL LINKS -->
                             <ul class="inset-container row row-cols-5 social-links">
                                 <li class="list-inline-item">
                                     <a class="btn outset-container-2" href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank">
@@ -545,13 +551,13 @@
                                     </span>
                                     </a>
                                 </li>
-                            </ul><!-- close 0.1 social links -->
-                        </section><!-- close 0.1 sub-section -->
+                            </ul><!-- close 1.1 social links -->
+                        </section><!-- close 1.1 sub-section -->
                     </div><!-- close page-left text -->
 
                     <!-- start PAGE-RIGHT MEDIA -->
                     <div class="outer-body col-12 col-md-5 col-xl-6 col-xxl-7">
-                        <!-- start 0.2 SUB-SECTION -->
+                        <!-- start 1.2 SUB-SECTION -->
                         <section id="sectionZero-2" class="right inner-body row justify-content-center pt-2">
                             <!-- PROFILE IMAGE -->
                             <div class="image-container d-none d-md-flex">
@@ -560,7 +566,7 @@
                             <h5 class="d-none d-md-block">
                                 Recent Activity
                             </h5>
-                            <!--start 0.2 LIST GROUP -->
+                            <!--start 1.2 LIST GROUP -->
                             <ul id="vertical-scroller" class="recent-activity-cta d-none d-md-flex justify-content-center">
                                 <!-- start SCROLL ITEM (MS1) -->
                                 <li id="scroll-one" class="recent-activity project-item active w-100">
@@ -778,16 +784,16 @@
                                         </div>
                                     </div><!-- close activity cta -->
                                 </li><!-- close scroll item 3 -->
-                            </ul><!--close 0.2 list group-->
-                        </section><!-- close 0.2 sub-section -->
+                            </ul><!--close 1.2 list group-->
+                        </section><!-- close 1.2 sub-section -->
                     </div><!-- close page-right media -->
-                </div><!-- close 0.0 spread -->
-            </section><!-- close 0.0 section -->
-        </article><!-- close 0.0 -->
+                </div><!-- close 1.0 spread -->
+            </section><!-- close 1.0 section -->
+        </article><!-- close 1.0 -->
 
-        <!-- 1.0 (Specialization: Assets & Expertise) -->
+        <!-- 2.0 (Specialization: Assets & Expertise) -->
         <article class="main-article" id="element-two">
-            <!-- start 1.0 HEADER BUTTON -->
+            <!-- start 2.0 HEADER BUTTON -->
             <header class="article-header" id="control-two">
                 <h3 class="header-title">
                     <button class="collapsed" type="button"
@@ -800,7 +806,7 @@
                                 SPECIALIZATION
                             </span>
                             <span class="header-text">
-                                Specialization and expertise
+                                Industry knowledge and expertise
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
@@ -813,21 +819,21 @@
                         </span>
                     </button>
                 </h3>
-            </header><!-- close 1.0 header button -->
-            <!-- start 1.0 SECTION -->
+            </header><!-- close 2.0 header button -->
+            <!-- start 2.0 SECTION -->
             <section class="article-section collapse"
                      id="target-two"
                      aria-labelledby="control-two"
                      data-parent="#resumeStack">
-                <!-- start 1.0 SPREAD -->
+                <!-- start 2.0 SPREAD -->
                 <div class="spread row">
-                    <!-- start 1.0 PAGE-LEFT TEXT -->
+                    <!-- start 2.0 PAGE-LEFT TEXT -->
                     <div class="outer-body col-12 col-lg-7">
                         <h4 class="inset-item">
                             As a super-user of design software, I bring a unique voice to the tech stack.
                             <i class="section-icon fas fa-lightbulb" aria-hidden="true"></i>
                         </h4>
-                        <!-- start 1.1 SUB-SECTION -->
+                        <!-- start 2.1 SUB-SECTION -->
                         <section id="sectionOne-1" class="left inner-body">
                             <h5>
                                 Strength: "All-rounder"
@@ -862,17 +868,17 @@
                                     Last updated <time datetime="2020-10-29">29 October 2020</time>
                                 </small>
                             </footer>
-                        </section><!-- close 1.1 sub-section -->
-                    </div><!-- close 1.0 page-left text -->
+                        </section><!-- close 2.1 sub-section -->
+                    </div><!-- close 2.0 page-left text -->
 
-                    <!-- start 1.0 PAGE-RIGHT MEDIA -->
+                    <!-- start 2.0 PAGE-RIGHT MEDIA -->
                     <div class="outer-body col-12 col-lg-5">
-                        <!-- start 1.2 SUB-SECTION -->
+                        <!-- start 2.2 SUB-SECTION -->
                         <section id="sectionOne-2" class="right inner-body media-content">
                             <h5>
                                 Expertise
                             </h5>
-                            <!-- start 1.2 LIST GROUP -->
+                            <!-- start 2.2 LIST GROUP -->
                             <ul class="specialization-activity">
                                 <!-- start SPECIALIZATION ITEM (BACKEND DEV) -->
                                 <li class="detail-item inset-item">
@@ -1063,8 +1069,8 @@
                                         </ul >
                                     </aside><!-- close employ stats -->
                                 </li><!-- close specialization item (doc) -->
-                            </ul><!-- close 1.2 list group -->
-                            <!-- start 1.2 CTA -->
+                            </ul><!-- close 2.2 list group -->
+                            <!-- start 2.2 CTA -->
                             <div class="activity-cta inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
                                     <span class="outset-container-2 flex-fill">
@@ -1080,16 +1086,16 @@
                                         </span>
                                     </a>
                                 </div>
-                            </div><!-- close 1.2 CTA -->
-                        </section><!-- close 1.2 sub-section -->
-                    </div><!-- close 1.0 page-right media -->
-                </div><!-- close 1.0 spread -->
-            </section><!-- close 1.0 section -->
-        </article><!-- close 1.0 -->
+                            </div><!-- close 2.2 CTA -->
+                        </section><!-- close 2.2 sub-section -->
+                    </div><!-- close 2.0 page-right media -->
+                </div><!-- close 2.0 spread -->
+            </section><!-- close 2.0 section -->
+        </article><!-- close 2.0 -->
 
-        <!-- 2.0 (Proficiency: Skills & Coverage) -->
+        <!-- 3.0 (Proficiency: Skills & Coverage) -->
         <article class="main-article" id="element-three">
-            <!-- start 2.0 HEADER -->
+            <!-- start 3.0 HEADER -->
             <header class="article-header" id="control-three">
                 <h3 class="header-title">
                     <button class="collapsed" type="button"
@@ -1115,22 +1121,22 @@
                         </span>
                     </button>
                 </h3>
-            </header><!-- close 2.0 header -->
-            <!-- start 2.0 SECTION -->
+            </header><!-- close 3.0 header -->
+            <!-- start 3.0 SECTION -->
             <section class="article-section collapse"
                      id="target-three"
                      aria-labelledby="control-three"
                      data-parent="#resumeStack">
-                <!-- start 2.0 SPREAD -->
+                <!-- start 3.0 SPREAD -->
                 <div class="spread row">
-                    <!-- start 2.0 PAGE-LEFT TEXT -->
+                    <!-- start 3.0 PAGE-LEFT TEXT -->
                     <div class="outer-body col-12 col-lg-7">
                         <h4 class="inset-item">
                             I’m committed to building and bridging skills honed through my experience and
                             dedication to design and tech.
                             <i class="section-icon fas fa-meteor" aria-hidden="true"></i>
                         </h4>
-                        <!-- start 2.1 SUB-SECTION -->
+                        <!-- start 3.1 SUB-SECTION -->
                         <section id="sectionTwo-1" class="left inner-body">
                             <h5>
                                 Top Strength: "Adaptability"
@@ -1160,17 +1166,17 @@
                                     Last updated 24 September 2020
                                 </small>
                             </footer>
-                        </section><!-- close 2.1 sub-section -->
-                    </div><!-- close 2.0 page-left text -->
+                        </section><!-- close 3.1 sub-section -->
+                    </div><!-- close 3.0 page-left text -->
 
-                    <!-- start 2.0 PAGE-RIGHT MEDIA -->
+                    <!-- start 3.0 PAGE-RIGHT MEDIA -->
                     <div class="outer-body col-12 col-lg-5">
-                        <!-- start 2.2 SUB-SECTION -->
+                        <!-- start 3.2 SUB-SECTION -->
                         <section id="sectionTwo-2" class="right inner-body media-content">
                             <h5>
                                 Coverage
                             </h5>
-                            <!-- start 2.2 LIST GROUP -->
+                            <!-- start 3.2 LIST GROUP -->
                             <ul class="proficiency-activity">
                                 <!-- start PROFICIENCY ITEM (HTML) -->
                                 <li class="detail-item inset-item">
@@ -1533,8 +1539,8 @@
                                     </aside><!-- close proficiency stats -->
 
                                 </li><!-- close proficiency item (adobe suite) -->
-                            </ul><!-- close 2.2 list group -->
-                            <!-- start 2.2 CTA -->
+                            </ul><!-- close 3.2 list group -->
+                            <!-- start 3.2 CTA -->
                             <div class="activity-cta inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
                                     <span class="outset-container-2 flex-fill">
@@ -1553,16 +1559,16 @@
                                         </span>
                                     </button>
                                 </div>
-                            </div><!-- close 2.2 CTA -->
-                        </section><!-- close 2.2 sub-section -->
-                    </div><!-- close 2.0 page-right media -->
-                </div><!-- close 2.0 spread -->
-            </section><!-- close 2.0 section -->
-        </article><!-- close 2.0 -->
+                            </div><!-- close 3.2 CTA -->
+                        </section><!-- close 3.2 sub-section -->
+                    </div><!-- close 3.0 page-right media -->
+                </div><!-- close 3.0 spread -->
+            </section><!-- close 3.0 section -->
+        </article><!-- close 3.0 -->
 
-        <!-- 3.0 (Experience: Education & Employment) -->
+        <!-- 4.0 (Experience: Education & Employment) -->
         <article class="main-article" id="element-four">
-            <!-- start 3.0 HEADER -->
+            <!-- start 4.0 HEADER -->
             <header class="article-header" id="control-four">
                 <h3 class="header-title">
                     <button class="collapsed" type="button"
@@ -1588,21 +1594,21 @@
                             </span>
                     </button>
                 </h3>
-            </header><!-- close 3.0 header -->
-            <!-- start 3.0 SECTION -->
+            </header><!-- close 4.0 header -->
+            <!-- start 4.0 SECTION -->
             <section class="article-section collapse"
                      id="target-four"
                      aria-labelledby="control-four"
                      data-parent="#resumeStack">
-                <!-- start 3.0 SPREAD -->
+                <!-- start 4.0 SPREAD -->
                 <div class="spread row">
-                    <!-- start 3.0 PAGE-LEFT TEXT -->
+                    <!-- start 4.0 PAGE-LEFT TEXT -->
                     <div class="outer-body col-12 col-lg-7">
                         <h4 class="inset-item">
                             I bring keen dexterity and constructive values to the modern collaborative environment.
                             <i class="section-icon fas fa-user-astronaut" aria-hidden="true"></i>
                         </h4>
-                        <!-- start 3.1 SUB-SECTION -->
+                        <!-- start 4.1 SUB-SECTION -->
                         <section id="sectionThree-1" class="left inner-body">
                             <h5>
                                 Strength: "Mobility"
@@ -1671,17 +1677,17 @@
                                     Last updated 24 September 2020
                                 </small>
                             </footer>
-                        </section><!-- close 3.1 sub-section -->
-                    </div><!-- close 3.0 page-left text -->
+                        </section><!-- close 4.1 sub-section -->
+                    </div><!-- close 4.0 page-left text -->
 
-                    <!-- start 3.0 PAGE-RIGHT MEDIA -->
+                    <!-- start 4.0 PAGE-RIGHT MEDIA -->
                     <div class="outer-body col-12 col-lg-5">
-                        <!-- start 3.2 SUB-SECTION -->
+                        <!-- start 4.2 SUB-SECTION -->
                         <section id="sectionThree-2" class="right inner-body media-content">
                             <h5>
                                 Education
                             </h5>
-                            <!-- start 3.2 LIST GROUP -->
+                            <!-- start 4.2 LIST GROUP -->
                             <ul class="experience-activity current">
                                 <!-- start EDUCATION ITEM (CI) -->
                                 <li class="detail-item inset-item">
@@ -1841,8 +1847,8 @@
                                         </ul >
                                     </aside><!-- close edu stats -->
                                 </li><!-- close education item (otis) -->
-                            </ul><!-- close 3.2 list group -->
-                            <!-- start 3.2 CTA -->
+                            </ul><!-- close 4.2 list group -->
+                            <!-- start 4.2 CTA -->
                             <div class="activity-cta mt-2 inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
                                     <span class="outset-container-2 flex-fill">
@@ -1861,12 +1867,12 @@
                                         </span>
                                     </button>
                                 </div>
-                            </div><!-- close 3.2 CTA -->
+                            </div><!-- close 4.2 CTA -->
 
                             <h5 class="text-left pt-5">
                                 Employment
                             </h5>
-                            <!-- start 3.3 LIST GROUP -->
+                            <!-- start 4.3 LIST GROUP -->
                             <ul class="experience-activity">
                                 <!-- start EMPLOYMENT ITEM (FP) -->
                                 <li class="detail-item inset-item">
@@ -2000,8 +2006,8 @@
                                         </ul >
                                     </aside><!-- close employ stats -->
                                 </li><!-- close employment item (gea) -->
-                            </ul><!-- close 3.3 list group -->
-                            <!-- start 3.3 CTA -->
+                            </ul><!-- close 4.3 list group -->
+                            <!-- start 4.3 CTA -->
                             <div class="activity-cta inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
                                     <span class="outset-container-2 flex-fill">
@@ -2020,16 +2026,16 @@
                                         </span>
                                     </button>
                                 </div>
-                            </div><!-- close 3.3 CTA -->
-                        </section><!-- close 3.2 sub-section -->
-                    </div><!-- close 3.0 page-right media -->
-                </div><!-- close 3.0 spread -->
-            </section><!-- close 3.0 section -->
-        </article><!-- close 3.0 -->
+                            </div><!-- close 4.3 CTA -->
+                        </section><!-- close 4.2 sub-section -->
+                    </div><!-- close 4.0 page-right media -->
+                </div><!-- close 4.0 spread -->
+            </section><!-- close 4.0 section -->
+        </article><!-- close 4.0 -->
 
-        <!-- 4.0 (EXAMPLES: Techo Repo & Design Folio) -->
+        <!-- 5.0 (EXAMPLES: Techo Repo & Design Folio) -->
         <article class="main-article" id="element-five">
-            <!-- start 4.0 HEADER -->
+            <!-- start 5.0 HEADER -->
             <header class="article-header" id="control-five">
                 <h3 class="header-title">
                     <button class="collapsed" type="button"
@@ -2042,7 +2048,7 @@
                                 EXAMPLES
                             </span>
                             <span class="header-text">
-                                Tech repo and design folio
+                                Tech repo work samples
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
@@ -2055,22 +2061,22 @@
                         </span>
                     </button>
                 </h3>
-            </header><!-- close 4.0 header button -->
-            <!-- start 4.0 SECTION -->
+            </header><!-- close 5.0 header button -->
+            <!-- start 5.0 SECTION -->
             <section class="article-section collapse"
                      id="target-five"
                      aria-labelledby="control-five"
                      data-parent="#resumeStack">
-                <!-- start 4.0 SPREAD -->
+                <!-- start 5.0 SPREAD -->
                 <div class="spread row">
-                    <!-- start 4.0 PAGE-LEFT TEXT -->
+                    <!-- start 5.0 PAGE-LEFT TEXT -->
                     <div class="outer-body col-12 col-lg-6">
                         <h4 class="inset-item">
                             I believe mastering default settings is the key to
                             innovating effective alternatives.
                             <i class="section-icon fas fa-rocket" aria-hidden="true"></i>
                         </h4>
-                        <!-- start 4.1 SUB-SECTION -->
+                        <!-- start 5.1 SUB-SECTION -->
                         <section id="sectionFour-1" class="left inner-body">
                             <h5>
                                 Most lauded for: “Documentation style”
@@ -2108,7 +2114,7 @@
                                     Last updated 24 September 2020
                                 </small>
                             </footer>
-                             <!-- start 4.1 CTA -->
+                             <!-- start 5.1 CTA -->
                             <div class="activity-cta inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
                                     <span class="outset-container-2 flex-fill">
@@ -2124,18 +2130,18 @@
                                         </span>
                                     </a>
                                 </div>
-                            </div><!-- close 4.1 CTA -->
-                        </section><!-- close 4.1 sub-section -->
-                    </div><!-- close 4.0 page-left text -->
+                            </div><!-- close 5.1 CTA -->
+                        </section><!-- close 5.1 sub-section -->
+                    </div><!-- close 5.0 page-left text -->
 
-                    <!-- start 4.0 PAGE-right MEDIA -->
+                    <!-- start 5.0 PAGE-right MEDIA -->
                     <div class="outer-body col-12 col-lg-6">
-                        <!-- start 4.2 SUB-SECTION -->
+                        <!-- start 5.2 SUB-SECTION -->
                         <section id="sectionFour-2" class="right inner-body media-content">
                             <h5>
                                 Tech Repo
                             </h5>
-                            <!-- start 4.2 LIST GROUP -->
+                            <!-- start 5.2 LIST GROUP -->
                             <ul class="repo-activity">
 
                                 <!-- start PROJECT ITEM (MS1) -->
@@ -2690,9 +2696,9 @@
                                     </div><!-- close project language stats -->
                                 </li><!-- close project item (ms4) -->
 
-                            </ul><!-- close 4.2 list group -->
+                            </ul><!-- close 5.2 list group -->
 
-                            <!-- start 4.2 CTA -->
+                            <!-- start 5.2 CTA -->
                             <div class="activity-cta inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
                                     <span class="outset-container-2 flex-fill">
@@ -2708,17 +2714,17 @@
                                         </span>
                                     </a>
                                 </div>
-                            </div><!-- close 4.2 CTA -->
+                            </div><!-- close 5.2 CTA -->
 
-                        </section><!-- close 4.2 sub-section -->
-                    </div><!-- close 4.0 page-right media -->
-                </div><!-- close 4.0 spread -->
-            </section><!-- close 4.0 section -->
-        </article><!-- close 4.0 -->
+                        </section><!-- close 5.2 sub-section -->
+                    </div><!-- close 5.0 page-right media -->
+                </div><!-- close 5.0 spread -->
+            </section><!-- close 5.0 section -->
+        </article><!-- close 5.0 -->
 
-        <!-- 5.0 (References: Recommendations & Awards) -->
+        <!-- 6.0 (References: Recommendations & Awards) -->
         <article class="main-article" id="element-six">
-            <!-- start 5.0 HEADER -->
+            <!-- start 6.0 HEADER -->
             <header class="article-header" id="control-six">
                 <h3 class="header-title">
                     <button class="collapsed" type="button"
@@ -2731,7 +2737,7 @@
                                 REFERENCES
                             </span>
                             <span class="header-text">
-                                Accomplishments and recommendations
+                                Recommendations and awards
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
@@ -2744,22 +2750,22 @@
                         </span>
                     </button>
                 </h3>
-            </header><!-- close 5.0 header -->
-            <!-- start 5.0 SECTION -->
+            </header><!-- close 6.0 header -->
+            <!-- start 6.0 SECTION -->
             <section class="article-section collapse"
                      id="target-six"
                      aria-labelledby="control-six"
                      data-parent="#resumeStack">
-                <!-- start 5.0 SPREAD -->
+                <!-- start 6.0 SPREAD -->
                 <div class="spread row">
-                    <!-- start 5.0 PAGE-LEFT TEXT -->
+                    <!-- start 6.0 PAGE-LEFT TEXT -->
                     <div class="outer-body col-12 col-lg-7">
                         <h4 class="inset-item">
                             I have been lauded for the completeness that I dedicate to every aspect of every project.
                             <i class="section-icon fas fa-star" aria-hidden="true"></i>
                         </h4>
                         <!-- LinkedIn Section CREDIT -->
-                        <!-- start 5.1 SUB-SECTION -->
+                        <!-- start 6.1 SUB-SECTION -->
                         <section id="sectionFive-1" class="left inner-body">
                             <h5>
                                 Recommendations
@@ -2976,17 +2982,17 @@
                                 </div>
                             </figure>
                             <!-- /Recommendation Item -->
-                        </section><!-- close 5.1 sub section -->
-                    </div><!-- close 5.0 page-left text -->
+                        </section><!-- close 6.1 sub section -->
+                    </div><!-- close 6.0 page-left text -->
 
-                    <!-- start 5.0 PAGE-RIGHT MEDIA -->
+                    <!-- start 6.0 PAGE-RIGHT MEDIA -->
                     <div class="outer-body col-12 col-lg-5">
-                        <!-- start 5.2 SUB-SECTION -->
+                        <!-- start 6.2 SUB-SECTION -->
                         <section id="sectionFive-2" class="right inner-body media-content break-words">
                             <h5 id="honors-title" class="pv-accomplishments-block__title t-bold t-14">
                                 Honors &amp; Awards
                             </h5>
-                            <!-- start 5.2 LIST-GROUP -->
+                            <!-- start 6.2 LIST-GROUP -->
                             <ul class="accomplishments-activity">
                                 <li class="pv-accomplishment-entity">
                                     <div class="pv-accomplishments-block__expand awards-icon"><i class="fas fa-award fa-lg" aria-hidden="true"></i></div>
@@ -3225,9 +3231,9 @@
                                     <p class="pv-accomplishment-entity__description t-14"><span class="visually-hidden">honor description</span>Reviewed by Designer-In-Residence Eva Maddox of Perkins + Will | Eva Maddox Branded Environments
                                     </p>
                                 </li>
-                            </ul><!-- close 5.2 list-group -->
+                            </ul><!-- close 6.2 list-group -->
 
-                            <!-- start 5.2 CTA -->
+                            <!-- start 6.2 CTA -->
                             <div class="activity-cta inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
                                     <span class="outset-container-2 flex-fill">
@@ -3243,17 +3249,17 @@
                                         </span>
                                     </a>
                                 </div>
-                            </div><!-- close 5.2 CTA -->
+                            </div><!-- close 6.2 CTA -->
 
-                        </section><!-- close 5.2 sub-section -->
-                    </div><!-- close 5.0 page-right media -->
-                </div><!-- close 5.0 spread -->
-            </section><!-- close 5.0 section -->
-        </article><!-- close 5.0 -->
+                        </section><!-- close 6.2 sub-section -->
+                    </div><!-- close 6.0 page-right media -->
+                </div><!-- close 6.0 spread -->
+            </section><!-- close 6.0 section -->
+        </article><!-- close 6.0 -->
 
-        <!-- 6.0 (Connect: Contact Info & Message Form) -->
+        <!-- 7.0 (Connect: Contact Info & Message Form) -->
         <article class="main-article" id="article-seven">
-            <!-- start 6.0 HEADER -->
+            <!-- start 7.0 HEADER -->
             <header class="article-header" id="control-seven">
                 <h3 class="header-title">
                     <button class="collapsed" type="button"
@@ -3266,7 +3272,7 @@
                                 CONNECT
                             </span>
                             <span class="header-text">
-                                Contact and message form
+                                Contact details and message form
                             </span>
                         </span>
                         <span class="header-icon justify-self-end">
@@ -3279,27 +3285,27 @@
                         </span>
                     </button>
                 </h3>
-            </header><!-- close 6.0 header -->
-            <!-- start 6.0 SECTION -->
+            </header><!-- close 7.0 header -->
+            <!-- start 7.0 SECTION -->
             <section class="article-section collapse"
                      id="target-seven"
                      aria-labelledby="control-seven"
                      data-parent="#resumeStack">
-                <!-- start 6.0 SPREAD -->
+                <!-- start 7.0 SPREAD -->
                 <div class="spread row">
-                    <!-- start 6.0 PAGE-LEFT TEXT -->
+                    <!-- start 7.0 PAGE-LEFT TEXT -->
                     <div class="outer-body col-12 col-lg-6">
-                        <!-- start 6.0 TEXT CONTENT -->
+                        <!-- start 7.0 TEXT CONTENT -->
                         <h4 class="inset-item">
                             I am always keen to collaborate with good people on innovative ideas.
                             <i class="section-icon fas fa-satellite-dish" aria-hidden="true"></i>
                         </h4>
-                        <!-- start 6.1 SUB-SECTION -->
+                        <!-- start 7.1 SUB-SECTION -->
                         <section id="sectionSix-1" class="left inner-body">
                             <h5>
                                 Contact
                             </h5>
-                            <!-- Contact CTA -->
+                            <!-- start 7.1 CTA LIST GROUP -->
                             <ul class="address activity-cta mt-2 inset-container">
                                 <li class="d-flex flex-row align-items-stretch">
                                     <span class="outset-container-2 contact-text flex-fill mr-2 text-muted justify-content-between">
@@ -3334,26 +3340,20 @@
                                         </span>
                                     </a>
                                 </li>
-                            </ul>
-                            <!-- /Contact CTA -->
-                            <footer class="d-none">
-                                <small class="text-muted">
-                                    Last updated 3 mins ago
-                                </small>
-                            </footer>
-                        </section><!-- close 6.1 sub-section -->
-                    </div><!-- close 6.0 page-left text -->
+                            </ul><!-- close 7.1 cta list group -->
+                        </section><!-- close 7.1 sub-section -->
+                    </div><!-- close 7.0 page-left text -->
 
-                    <!-- start 6.0 PAGE-RIGHT MEDIA -->
+                    <!-- start 7.0 PAGE-RIGHT MEDIA -->
                     <div class="outer-body col-12 col-lg-6">
-                        <!-- start 6.2 SUB-SECTION -->
+                        <!-- start 7.2 SUB-SECTION -->
                         <section id="sectionSix-2" class="right inner-body media-content">
                             <h5 class="text-right">
                                 Drop me a line!
                             </h5>
-                            <!-- start 6.2 FORM ELEMENT -->
+                            <!-- start 7.2 FORM ELEMENT -->
                             <form id="message-form" class="message-form-group inset-container" method="post" action="#" onsubmit="return false">
-                                <!-- start 6.2 FORM GROUP -->
+                                <!-- start 7.2 FORM GROUP -->
                                 <div class="form-group connect-cta">
 
                                     <!-- Form Name -->
@@ -3377,7 +3377,7 @@
 
                                     <!-- Form Text Area -->
                                     <div class="d-flex pt-2">
-                                        <label aria-hidden="true" class="d-none" for="message"></label>
+                                        <label for="message"></label>
                                         <textarea class="form-control outset-container-2"
                                                   id="message"
                                                   name="message" rows="6"
@@ -3395,19 +3395,18 @@
                                         </button>
                                     </div><!-- /Form Button -->
 
-                                </div><!-- close 6.2 form group -->
-                            </form><!-- close 6.2 form element -->
-                        </section><!-- close 6.2 sub-section -->
-                    </div><!-- close 6.0 page-right media -->
-                </div><!-- close 6.0 spread -->
-            </section><!-- close 6.0 section -->
-        </article><!-- close 6.0 -->
+                                </div><!-- close 7.2 form group -->
+                            </form><!-- close 7.2 form element -->
+                        </section><!-- close 7.2 sub-section -->
+                    </div><!-- close 7.0 page-right media -->
+                </div><!-- close 7.0 spread -->
+            </section><!-- close 7.0 section -->
+        </article><!-- close 7.0 -->
     </main><!-- close main stack -->
 
     <!-- start FOOTER CONTAINER -->
     <footer class="body-footer">
-        <!-- Footer Item -->
-
+        <!-- start GITHUB FOOTER ITEM -->
         <div class="text-sm-center justify-content-center mr-auto text-md-left">
             <span class="d-inline-block text-center">
                 <ion-icon class="align-middle" name="logo-github"></ion-icon>
@@ -3417,7 +3416,8 @@
                     @israelias
                 </a>
             </p>
-        </div><!-- /footer item -->
+        </div><!-- close github footer item -->
+        <!--start AUTHOR FOOTER ITEM-->
         <div class="text-sm-center justify-content-center ml-auto text-md-right">
             <h6 class="d-inline-block text-center">
                 © <span class="d-none d-lg-inline-block">Designed and Built by</span>
@@ -3427,13 +3427,10 @@
                     Joem Elias Sanez
                 </a>
             </p>
-        </div><!-- /footer item -->
-    </footer><!-- /footer main -->
+        </div><!-- close author footer item -->
+    </footer><!-- close footer container -->
 
-    <!--OPT 1 Bootstrap Alpha-->
-    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>-->
-
-    <!-- OPT 2 MDB -->
+    <!-- MDBootstrap -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
     <!-- ionicons -->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
