@@ -73,11 +73,11 @@ The high-level objective of the project is __to stand out__. The web resume is f
 
 #### 1.1 Research
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1619.png" alt="Oly-Track Logo">
-</p>
+<!--<p align="center">-->
+<!--    <img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1619.png" alt="Oly-Track Logo">-->
+<!--</p>-->
 
-Supplementary color #1, ![#323232](https://placehold.it/15/323232/000000?text=+)
+<!--Supplementary color #1, ![#323232](https://placehold.it/15/323232/000000?text=+)-->
 
 - [UX Research Board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1619.png)
 
@@ -256,8 +256,11 @@ In order to achieve the goal of standing out to the three target users, the foll
 
 [Back to top](#table-of-contents)
 
-### 2.0 Scope
+___
 
+### 2.0 Scope
+___
+___
 <!--The minimum requirements for an MVP are...  -->
 <!--New experiences over time are...-->
 <!--The mvp up front that are in line with strategy goals are..-->
@@ -322,7 +325,11 @@ The variety of content/media required to meet the needs of the user and the owne
 
 [Back to top](#table-of-contents)
 
+___
+
 ### 3.0 Structure
+___
+___
 
 #### 3.1 Organization of Functionality and Content
 
@@ -511,7 +518,12 @@ The website takes advantage of HTML5 semantic sectioning elements to bring clari
 
 [Back to top](#table-of-contents)
 
+___
+
 ### 4.0 Skeleton
+
+___
+___
 
 #### 4.1 Features and Usefulness
 
@@ -626,7 +638,12 @@ Mockups commenced in September 2020..
 
 [Back to top](#table-of-contents)
 
+___
+
 ### 5.0 Surface
+
+___
+___
 
 #### 5.2 Color Scheme
 
@@ -694,7 +711,10 @@ Custom Timing Function Variables
 
 [Back to top](#table-of-contents)
 
+___
+
 ## Features
+___
 
 ### Existing Features
 
