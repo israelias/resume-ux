@@ -48,6 +48,16 @@
     --deep-3: #95989A;
     --deep-4: #B0b0b0;
 
+    /* External link colors */
+
+    --link-linkedin: #EAB1A5;
+    --link-github: #97A792;
+    --link-dev: #a48297;
+    --link-folio: #EEC034;
+    --cta-download: #83B8DD;
+    --cta-email: #A0B6CC;
+    --cta-call: #A0B6CC;
+
     /* Signature radii */
 
     --radius-1: .75rem;
@@ -167,7 +177,7 @@ body {
     color: var(--deep-1);
 }
 
-p, small {
+p, small, .footer-item a {
     font-family: attribute-text, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -339,18 +349,6 @@ h6 {
    Layout configs @prefixed
    ========================================================================== */
 
-.root-body {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*flex: 1;*/
-    /*top: 0;*/
-    /*bottom: 0;*/
-    /*padding-bottom: 3rem;*/
-    /*min-height: 100%;*/
-
-    /*justify-content: center !important;*/
-}
-
 /* This is how the stack contracts from its center axis as opposed to pulling from the top or bottom */
 
 .root-body > * {
@@ -441,17 +439,148 @@ h6 {
     margin-top: auto;
     padding-left: var(--margin);
     padding-right: var(--margin);
+
+    transition: all .75s var(--glide) 0s;
 }
 
-.body-footer h6 {
+#toggle-all:checked ~ .body-footer {
+    position: static;
+    padding-bottom: 1rem;
+}
+
+.body-nav.show ~ .body-footer {
+    flex-direction: row-reverse;
+    width: var(--vw-navwidth) !important;
+    padding-left: calc(var(--padding) + .5rem);
+    color: var(--deep-1);
+    transition: all .75s var(--glide) 0s;
+}
+
+.footer-right,
+.footer-left,
+.footer-item {
+    transition: all .1s var(--glide) 0s;
+}
+
+.footer-text,
+.footer-copyright,
+.footer-author {
+    transition: all .75s var(--glide) var(--early);
+}
+
+.body-nav.show ~ .body-footer .footer-left .footer-item:first-child,
+.body-nav.show ~ .body-footer .footer-left .footer-item:nth-child(2) {
+    margin-left: calc(25vw / 6);
+}
+
+.body-nav.show ~ .body-footer .footer-right {
+    margin: 0;
+}
+
+.body-nav.show ~ .body-footer .footer-text,
+.body-nav.show ~ .body-footer .footer-text.text-label,
+.body-nav.show ~ .body-footer .footer-copyright {
+    display: none;
+}
+
+.footer-left,
+.footer-right {
+    text-align: center;
+    justify-content: center;
+}
+
+.footer-text.text-label {
+    display: none;
+}
+
+.footer-left {
+    margin-right: auto;
+}
+
+.footer-right {
+    margin-left: auto;
+}
+
+.footer-item {
     display: inline-block;
-    font-size: .75rem;
+
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-right: 0;
+
+    text-align: center;
+}
+
+.footer-icon.filled-icon {
+    display: none;
+}
+
+.footer-item:nth-child(2) {
+    margin-left: calc(100vw / 5.25);
+}
+
+@media (min-width: 992px) {
+    .body-nav.show ~ .body-footer .footer-left .footer-item:first-child,
+    .body-nav.show ~ .body-footer .footer-left .footer-item:nth-child(2) {
+        margin-left: calc(25vw / 5 + 3vh);
+    }
+
+    .footer-text.text-label {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 991.98px) and (orientation: landscape) {
+    .body-footer,
+    #toggle-all:checked ~ .body-footer {
+        position: fixed;
+        flex-direction: row-reverse;
+        width: var(--vw-navwidth) !important;
+        padding-left: calc(var(--padding) + .5rem);
+        padding-bottom: 0;
+        color: var(--deep-1);
+    }
+
+    .footer-left .footer-item:first-child,
+    .footer-left .footer-item:nth-child(2) {
+        margin-left: 2rem;
+    }
+
+    .footer-text,
+    .footer-copyright {
+        display: none;
+    }
+
+    .footer-author {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .footer-right {
+        margin: 0;
+    }
+
+    .footer-icon.outline-icon {
+        display: none;
+    }
+
+    .footer-icon,
+    .footer-icon.filled-icon {
+        display: inline-block;
+        color: var(--deep-2);
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .body-nav.show ~ .body-footer .footer-right .footer-item {
+        display: none;
+    }
 }
 
 @media (max-width: 767.98px) {
     #target-zero {
         height: 40vh;
     }
+
     .body-footer {
         -ms-flex-negative: 0;
             flex-shrink: 0;
@@ -460,6 +589,19 @@ h6 {
         padding-left: 1rem;
         padding-right: 1rem;
         padding-bottom: 44px;
+    }
+
+    .footer-item:nth-child(2){
+        display: none;
+    }
+
+    .body-nav.show ~ .body-footer {
+        flex-direction: row;
+        margin-left: 25vw;
+        transition: all .75s var(--glide) 0s;
+    }
+    .body-nav.show ~ .body-footer .footer-right {
+        margin-right: 0;
     }
 }
 
@@ -730,7 +872,7 @@ h6 {
 
 /* Set flex behavior of first column (appears first, or left) */
 
-.outer-body:first-child {
+.outer-first {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -739,15 +881,9 @@ h6 {
     margin-top: .5rem;
 }
 
-/* Set flex behavior of second column (appears second, or right) */
-
-.outer-body:nth-child(2) {
-
-}
-
 @media (min-width: 768px) {
-    .outer-body:first-child,
-    .outer-body:nth-child(2) {
+    .outer-first,
+    .outer-second {
         margin-top: 1rem;
     }
 }
@@ -786,9 +922,10 @@ h6 {
 /* Child sub sections @prefixed
    ========================================================================== */
 
-/* Set flex behavior and typical presentation of section.left and section.right */
+/* Set flex behavior and typical presentation of section.inner-left and section.inner-right */
 
 .inner-body {
+    overflow: hidden;
     padding: 1rem 1rem;
 
     background: var(--gradient-1);
@@ -801,9 +938,9 @@ h6 {
             0 -6px var(--blur-sm) rgba(0, 0, 0, 0.3);
 }
 
-/* Set flex behavior and typical presentation of section.left */
+/* Set flex behavior and typical presentation of section.inner-left */
 
-.inner-body.left {
+.inner-left {
     -webkit-box-flex: 1;
         -ms-flex: 1 100%;
             flex: 1 100%;
@@ -812,9 +949,9 @@ h6 {
     border-radius: var(--radius-5);
 }
 
-/* Set flex model for section.left except for introduction section. */
+/* Set flex model for section.inner-left except for introduction section. */
 
-.article-section:not(#target-one) .inner-body.left {
+.article-section:not(#target-one) .inner-left {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -830,13 +967,13 @@ h6 {
 /* Push the last element down (footer element or cta element) for
  * sections except for the recommendation section */
 
-.article-section:not(#target-six) .inner-body.left > :last-child {
+.article-section:not(#target-six) .inner-left > :last-child {
     margin-top: auto;
 }
 
-/* Set flex behavior and typical presentation of section.right */
+/* Set flex behavior and typical presentation of section.inner-right */
 
-.inner-body.right {
+.inner-body.inner-right {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
@@ -908,7 +1045,7 @@ section.collapsing:after,
 article > header:before,
 article > header:after,
 .header-title:after,
-section.right:after {
+section.inner-right:after {
     position: absolute;
     display: block;
     content: "";
@@ -1077,7 +1214,7 @@ section.collapsing:after {
  * to simulate connection to the vertical pseudo-rails
  *
  * 1. <header> : pseudo left/right to hide rails beyond
- * 2. section.right : pseudo bottom horizontal
+ * 2. section.inner-right : pseudo bottom horizontal
  * 3. .header-title : pseudo top horizontal
  */
 
@@ -1171,14 +1308,14 @@ article > header:after {
 
 /* Style top and bottom pseudo-horizontals  */
 
-section.right:after,
+section.inner-right:after,
 .header-title:after {
     height: .5rem;
 }
 
 /* Position bottom pseudo-horizontal */
 
-section.right:after {
+section.inner-right:after {
     z-index: 5;
     bottom: 1.36rem;
     left: calc(var(--margin) / 2 * -1 + .5rem);
@@ -1198,7 +1335,7 @@ section.right:after {
 }
 
 @media (max-width: 575.98px) {
-    section.right:after {
+    section.inner-right:after {
         left: calc(var(--margin) / 2 * -1 + .875rem);
         right: calc(var(--margin) / 2 * -1 + .875rem);
     }
@@ -1211,20 +1348,90 @@ section.right:after {
 
 /* CREDIT https://stackoverflow.com/questions/43186015/css-hide-scroll-bar-but-have-element-scrollable */
 
+html {
+    /*overflow: auto;*/
+    --scrollbar: 1px;
+    --scrolltrack: 2px;
+    --scrollhandle: 2px;
+}
+
+#toggle-all:checked ~ .body-main {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    --scrollbar: 3px;
+    --scrolltrack: 2.5px;
+    --scrollhandle: 2.5px;
+}
+
+@media (max-width: 991.98px) and (orientation: landscape) {
+    html {
+        --scrollbar: 3px;
+        --scrolltrack: 2.5px;
+        --scrollhandle: 2.5px;
+    }
+}
+
+body {
+    /*position: absolute;*/
+    /*top: 20px;*/
+    /*left: 20px;*/
+    /*bottom: 20px;*/
+    /*right: 20px;*/
+    /*padding: 30px;*/
+    /*overflow-y: scroll;*/
+    /*overflow-y: hidden;*/
+    /*overflow-x: hidden;*/
+}
+
+/* Let's get this party started */
 ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
+    width: var(--scrollbar);
 }
 
+/* Track */
 ::-webkit-scrollbar-track {
-    width: 0px;
-    background: transparent;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: var(--scrolltrack);
+    border-radius: var(--scrolltrack);
 }
 
+/* Handle */
 ::-webkit-scrollbar-thumb {
-    width: 0px;
-    background: transparent;
+    -webkit-border-radius: var(--scrollhandle);
+    border-radius: var(--scrollhandle);
+    background: rgba(255,0,0,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4);
+}
+
+
+
+html {
+  /*margin-left: calc(100vw - 100%);*/
+}
+
+/* make scrollbar transparent */
+
+::-webkit-scrollbar {
+    /*width: 0px;*/
+    /*width: 3px;*/
+    /*right: calc(var(--margin) * -1);*/
+    /*background: transparent;*/
+    /*background: var(--gradient-1);*/
+}
+
+/*::-webkit-scrollbar-track {*/
+/*    width: 0px;*/
+/*    background: transparent;*/
+/*}*/
+
+/*::-webkit-scrollbar-thumb {*/
+/*    width: 0px;*/
+/*    background: transparent;*/
+/*}*/
 
 
 /* ==========================================================================
@@ -1416,8 +1623,8 @@ section.right:after {
  * Transition variables for mobile.
  *
  * 1. Decrease base rem scale for xs screens.
- * 2. Only feature media content on xs screens (section.left).
- * 3. Only feature select written content on xs screens (section.right).
+ * 2. Only feature media content on xs screens (section.inner-left).
+ * 3. Only feature select written content on xs screens (section.inner-right).
 */
 
 @media (max-width: 575.98px) {
@@ -1440,8 +1647,8 @@ section.right:after {
 /*
  * Transition variables for landscape-mobile to tablet screens.
  *
- * 1. Only feature media content on sm-md screens (section.left).
- * 2. Only feature select written content on sm-md screens (section.right).
+ * 1. Only feature media content on sm-md screens (section.inner-left).
+ * 2. Only feature select written content on sm-md screens (section.inner-right).
 */
 
 @media (min-width: 576px) and (max-width: 991.98px) {
@@ -1450,11 +1657,8 @@ section.right:after {
         width: 100% !important;
     }
 
-    #target-one .outer-body:first-child {
-        width: 100%;
-    }
-
-    #target-one .outer-body:nth-child(2) {
+    #target-one .outer-first,
+    #target-one .outer-second {
         width: 100%;
     }
 }
@@ -1462,20 +1666,49 @@ section.right:after {
 /*
  * Transition variables for portrait-mobile and tablet screens.
  *
- * 1. Only feature media content on xs-sm-md devices (section.right) by default.
+ * 1. Only feature media content on xs-sm-md devices (section.inner-right) by default.
  * 2. Show all content on toggle of expand-all.
 */
 
 @media (max-width: 991.98px) {
-    [data-parent="#resumeStack"]:not(#target-one) .outer-body:first-child,
-    [data-parent="#resumeStack"]:not(#target-one) .left {
+    [data-parent="#resumeStack"]:not(#target-one) .outer-first {
         display: none;
     }
 
     #toggle-all:checked ~ main .header-text,
-    #toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-one) .outer-body:first-child,
-    #toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-one) .left {
-        display: flex;
+    #toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-one) .outer-first {
+        display: block;
+    }
+
+    /* Hide one of two CTAs that references a section not featured at this
+     * media query.
+     * ID selectors are required to control the following.
+     * IDs have been assigned to two `.activity-cta` containers in the second
+     * section of the fourth article.
+     */
+
+    #four-two-cta-1 {
+        display: none !important;
+    }
+
+    /* Move the relevant CTA to the bottom of the list at this media query. */
+
+    #four-two-cta-2 {
+        -webkit-box-ordinal-group: 6 !important;
+        -ms-flex-order: 5 !important;
+            order: 5 !important;
+    }
+
+    /* Return to to default order when expand-all is :checked */
+
+    #toggle-all:checked ~ .body-main #four-two-cta-1 {
+        display: block !important;
+    }
+
+    #four-two-cta-2 {
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: 0;
+            order: 0;
     }
 }
 
@@ -1718,17 +1951,50 @@ section.right:after {
  * will be selected by this id for code efficiency and clarity.
  */
 
+input[type="checkbox"] {
+    position: absolute!important;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* Position and style the label for the checkbox */
 
+input[type="checkbox"],
 [for="toggle-all"] {
     position: fixed;
     top: 1rem;
     left: 49%;
     right: 49%;
-    /*z-index: 1030;*/
     z-index: 100;
 
     cursor: pointer;
+    tab-index: 0;
+}
+
+#checkbox-toggle {
+    nav-index: 2;
+    atsc-nav-index: 2;
+    nav-right: #id;
+    atsc-nav-right: #id;
+    nav-left: #nav-button;
+    atsc-nav-left: #nav-button;
+}
+
+#nav-button {
+    nav-index: 1;
+     atsc-nav-index: 1;
+    nav-right: #checkbox-toggle;
+    atsc-nav-right: #checkbox-toggle;
+    /*nav-left: #b4;*/
+    /*nav-down: #b2;*/
+    /*nav-up:#b4;*/
 }
 
 /*
@@ -1775,6 +2041,10 @@ section.right:after {
     }
     #toggle-all:checked ~ main .header-text {
         width: 100%;
+    }
+
+    #toggle-all + label .toggle-container .menu-icon {
+        visibility: hidden;
     }
 }
 
@@ -1948,6 +2218,20 @@ section.right:after {
  * 2. Declare properties for scope.
  */
 
+.nav-outer-body {
+    overflow: scroll;
+    padding-bottom: 3.5rem;
+}
+
+.nav-outer-body > :first-child {
+    max-height: calc(100vh - 45vh);
+}
+
+.nav-outer-body > :nth-child(2) {
+    max-height: calc(100vh - 55vh - 1rem);
+    margin-bottom: 3.5rem;
+}
+
 .nav-content {
     --navlink-height: 1.05rem;
     --navlink-offset: calc(var(--navlink-height) - 1rem);
@@ -1957,6 +2241,8 @@ section.right:after {
     --navitem-right: -50%;
 
     width: 100%;
+    /*max-height: 55vh;*/
+    overflow-y: scroll;
 
     background-color: #fff;
     background: var(--pearl) !important;
@@ -2440,14 +2726,15 @@ ul.nav {
 
 /* Select the div elements (the page-left, and page-right col-* variety) to wrap full width between lg and xl */
 /* ALT option: (min-width: 992px) and (max-width: 1199.98px) */
+/*(min-width: 1200px) and (max-width: 1399.98px)*/
 
-@media (min-width: 1200px) and (max-width: 1399.98px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
     nav.body-nav.show ~ .body-main .spread > div  {
         width: 100%;
 
-        -webkit-transition: all var(--flashing) var(--zip) var(--early);
-             -o-transition: all var(--flashing) var(--zip) var(--early);
-                transition: all var(--flashing) var(--zip) var(--early);
+        -webkit-transition: all .3s var(--zip) var(--early);
+             -o-transition: all .3s var(--zip) var(--early);
+                transition: all .3s var(--zip) var(--early);
     }
 }
 
@@ -2613,7 +2900,8 @@ ul.nav {
  * '--mainwidth' to respond to, and is in a fixed-position header.
  */
 
-.body-header {
+.body-header,
+.body-footer {
     --vw-width: calc(var(--of-twelve) / 12 * 100vw);
     --vw-offset: calc((12 - var(--of-twelve)) / 12 * 100vw);
 
@@ -3012,6 +3300,26 @@ ul.nav {
     }
 }
 
+/* Nav icon button mobile adjustments */
+
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 2px;
+
+    }
+
+    .icon-button {
+        font-size: 30px !important;
+    }
+
+    input[type="checkbox"],
+    [for="toggle-all"] {
+        top: 1.1rem;
+    }
+}
+
 /* Nav Checkbox toggle switch  @prefixed
    ========================================================================== */
 
@@ -3273,12 +3581,14 @@ ul.nav {
 }
 
 /* Hide .closed when section is expanded */
+
 details[open] .closed,
 [data-toggle="collapse"][aria-expanded="true"] .closed {
     display: none;
 }
 
 /* Show .open when section is expanded */
+
 details[open] .open,
 [data-toggle="collapse"][aria-expanded="true"] .open {
     display: block;
@@ -3384,7 +3694,8 @@ details[open] .open,
 .inset-container-6 {
     overflow: hidden;
 
-    border-radius: 100%;
+    border-radius: 50%;
+    background: var(--gradient-2);
 
     -webkit-box-shadow:
             inset 0 3.3px var(--blur-sm) #B0B2B5,
@@ -3406,10 +3717,24 @@ details[open] .open,
 
 /* Style general cta button icons */
 
-.fa, .fab, .fal, .far, .fas {
+.social-icon,
+.icon-link,
+.link-icon {
     text-shadow: #fff 0 1px 0;
     -webkit-font-smoothing: antialiased;
     line-height: 1;
+}
+
+/* Increase shadow y-offset for icons in side menu */
+
+.nav-links .social-icon {
+    text-shadow: #fff 0 2px 0;
+}
+
+/* Change base shade for navigation-section icons */
+
+.nav-content .link-icon {
+    text-shadow: #aaa 0 2px 0;
 }
 
 /* Social links/button style variables
@@ -3425,19 +3750,14 @@ details[open] .open,
     list-style: none;
 }
 
-.social-links li .fas,
-.social-links li .fab,
-.social-links li .far,
-.social-links li .fa,
-.social-links li .fa-sm,
-.social-links li .fa-lg,
-.social-links li a i {
+.social-links li .social-icon {
     z-index: 8;
     border-radius: 50%;
     padding: .6rem;
 
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
+    color: #4f4f4f;
 
     text-align: center;
     text-shadow:
@@ -3457,11 +3777,6 @@ details[open] .open,
     width: 20%;
     padding: 0;
     margin: 0;
-}
-
-.social-links li a:hover,
-.social-links li a:focus {
-    color: #F2F1EF;
 }
 
 .social-links .btn {
@@ -3508,11 +3823,7 @@ details[open] .open,
         padding: .2rem;
     }
 
-    .social-links .fa,
-    .social-links .fab,
-    .social-links .fal,
-    .social-links .far,
-    .social-links .fas {
+    .social-icon {
         font-size: .5rem;
     }
 }
@@ -3522,7 +3833,8 @@ details[open] .open,
 
 /* Style side menu lnk icon */
 
-.link-icon {
+.link-icon,
+.social-icon {
     font-size: 1.5rem;
 }
 
@@ -3541,6 +3853,7 @@ details[open] .open,
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 1rem;
     padding: .75rem !important;
     border-radius: .6rem;
 
@@ -3557,7 +3870,8 @@ details[open] .open,
     padding: .35rem;
 }
 
-.nav-links .inset-inner > span:first-child {
+.nav-links .link-icon,
+.nav-links .social-icon {
     padding: .675rem;
 }
 
@@ -3574,11 +3888,17 @@ details[open] .open,
         border: 2px solid var(--paper);
     }
 
-    .nav-links .inset-inner > span:first-child {
+    .nav-links .link-icon,
+    .nav-links .social-icon {
         padding: .675rem;
-        font-size: .875rem;
+        font-size: .875rem !important;
         color: var(--grey);
     }
+
+    .nav-links .social-icon {
+        /*color: #A0B6CC;*/
+    }
+
     .nav-links > * {
         max-width: 100%;
     }
@@ -3586,7 +3906,38 @@ details[open] .open,
         max-width: 50%;
     }
 }
+/* 1 and 2 alt  Intro, i */
+/*999486*/
+/*B4AE9F*/
 
+/* 2 alt Specialization. lightbulb  */
+
+/* 3 red alt proficiency, meteor */
+/* D5685D */
+
+/* 4 blue alt experience, astronaut DOWNLOAD */
+
+/* 5 orange alt examples, rocket  GITHUB*/
+
+/* 6 green alt references, star LINKEDIN */
+/*    green and */
+
+/* 7 black / yellow alt, connect, satellite DEV */
+/* black and yellow*/
+
+
+.icon-linkedin { color: var(--link-linkedin); }
+.icon-github { color: var(--link-github); }
+.icon-dev { color: var(--link-dev); }
+.icon-portfolio { color: var(--link-folio); }
+
+
+
+.icon-download { color: var(--cta-download); }
+.icon-email { color: var(--cta-email); }
+.icon-call { color: var(--cta-call); }
+
+/*929181*/
 /* Header toggle box shadow */
 /* BS styles */
 
@@ -3603,7 +3954,10 @@ details[open] .open,
 /* CTA BUTTON/LINKS STYLE VARIABLES
    ========================================================================== */
 
+/* Make the CTA container inflexible relative to its sibling media lists. */
+
 .activity-cta {
+    flex: 0 0 auto !important;
     padding-left: 0;
 }
 
@@ -3627,7 +3981,8 @@ details[open] .open,
 }
 
 .activity-cta i {
-    color: #A0B6CC;
+    /*color: var(--cta-call);*/
+    /*color: #A0B6CC;*/
 }
 
 .activity-cta .btn {
@@ -3662,6 +4017,7 @@ details[open] .open,
             3px -8px var(--blur-sm) rgba(180, 180, 180, .7),
             -3px 6px var(--blur-sm) rgba(250, 250, 250, .4);
 }
+
 
 /* Style global 'pressed' state of CTA buttons */
 
@@ -3707,6 +4063,15 @@ details[open] .open,
     .activity-cta .fas {
         font-size: .5rem;
     }
+}
+
+/* Prevent the cta container from accommodating white space wrapping
+ * Otherwise, the cta-text will respond to variable text lengths and will
+ * vary in line heights per screen size.
+ */
+
+.activity-cta small {
+    white-space: nowrap;
 }
 
 /* Attach arrow to CTA text description */
@@ -3975,11 +4340,67 @@ form .connect-cta input {
 #vertical-scroller .activity-cta {
     max-height: var(--cta-height);
     font-size: .8125rem;
+    text-align: left;
 }
 
 #vertical-scroller .activity-cta .btn {
     width: 2.5rem;
     height: 2.5rem;
+
+    border-color: transparent !important;
+}
+
+/* Style hover states of CTA buttons in scroll items. */
+
+#vertical-scroller .btn:hover .scroll-icon {
+    color: var(--paper);
+}
+
+#vertical-scroller .activity-cta .btn:hover,
+#vertical-scroller .activity-cta .btn:focus {
+    background: transparent !important;
+}
+
+#vertical-scroller .language-item {
+    font-size: .8125rem;
+}
+
+#vertical-scroller .text-cta {
+    font-size: .8125rem;
+    font-weight: 400;
+}
+
+/* Make a little room for when side menu is toggled. */
+
+#vertical-scroller .text-cta-show {
+    display: none;
+}
+
+.body-nav.show ~ .body-main #vertical-scroller .text-cta-hide {
+    display: none;
+}
+
+.body-nav.show ~ .body-main #vertical-scroller .text-cta-show {
+    display: inline-block;
+}
+
+.body-nav.show ~ .body-main #vertical-scroller .activity-cta > div {
+    justify-content: flex-end !important;
+}
+
+#vertical-scroller .activity-cta small:after {
+    margin-left: 1rem;
+}
+
+/* Adjustments to the scroller's CTA icon */
+
+.scroll-icon {
+    font-size: 1rem;
+}
+
+#vertical-scroller .activity-cta > div:hover {
+    text-align: right;
+    justify-content: flex-end;
 }
 
 /* Scroller event @prefixed
@@ -4198,56 +4619,6 @@ form .connect-cta input {
     color: var(--deep-4);
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .cover-text {
-        margin-right: auto;
-        margin-left: 0;
-        flex-wrap: wrap;
-        flex-direction: row;
-
-        padding-top: calc(8vh - 3rem);
-    }
-
-    .cover-title {
-        padding-top: calc(8vh - 1rem);
-    }
-
-    .cover-name {
-        padding-top: calc(8vh - 1rem);
-        padding-bottom: 3rem;
-        padding-left: 2rem;
-    }
-
-    .banner-text {
-        position: absolute;
-        top: calc(2rem + 5vh + 3rem);
-        right: 5vw;
-        margin-left: auto;
-        margin-right: 0;
-        padding-left: 2rem;
-        transition: all .3s var(--glide) .3s;
-    }
-
-    .banner-text:before {
-        display: block;
-        position: absolute;
-        content: "";
-        top: calc(5vw - 1rem);
-        border-bottom: 2px solid var(--deep-2);
-        width: 58vw;
-        margin-right: 77vw;
-    }
-
-    .banner-cta {
-        width: 58vw;
-    }
-
-    .banner-top, .banner-bottom {
-        color: var(--deep-1);
-    }
-
-}
-
 @media (orientation: landscape) {
     .banner-top {
         flex-direction: row;
@@ -4302,7 +4673,7 @@ form .connect-cta input {
 
 /* Hide profile photo and vertical scroller until medium screens
  * Important not to set display to none as the vertical pseudo rails rely
- * on section.right */
+ * on section.inner-right */
 
 @media (max-width: 767.98px) {
     #target-one .outer-body:nth-child(2),
@@ -4311,37 +4682,64 @@ form .connect-cta input {
         margin: 0;
         border: 0;
         background: none;
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
 }
 
-.landing-s ubheading p {
-    font-family: "Halyard Micro", monospace;
-    font-size: .875rem;
+/*@media (max-width: 767.98px) {*/
+/*    #target-one .outer-body.outer-second,*/
+/*    #target-one .outer-body.outer-second .inner-body.inner-right,*/
+/*    #target-one .outer-body:nth-child(2) .inner-body*/
+/*    #target-one .outer-body:nth-child(2) {*/
+/*        padding: 0;*/
+/*        margin: 0;*/
+/*        border: 0;*/
+/*        background: none;*/
+/*        -webkit-box-shadow: none;*/
+/*                box-shadow: none;*/
+/*    }*/
+/*}*/
+
+#target-one a { color: var(--denim); }
+
+#target-one p {
+    /*font-family: "Halyard Micro", monospace;*/
+    /*font-size: .875rem;*/
     font-weight: 300;
-    color: #707070;
-    text-shadow: #FAFAFA 0 1px 0, #D4D6D6 0 -1px 0;
+    /*color: #707070;*/
+    /*text-shadow: #FAFAFA 0 .5px 0, #D4D6D6 0 -.5px 0;*/
     -webkit-font-smoothing: antialiased;
 }
 
-.landing-subheading p b:nth-of-type(2) {
-    color: #F26041;
-    text-shadow: #FAA490 0 1px 0;
+#target-one p b:nth-of-type(2) {
+    /*color: #F26041;*/
+    color: var(--raisin);
+    text-shadow:var(--slate) 0 .5px 0;
 }
 
-.landing-subheading p b:nth-of-type(1) {
-    color: #187FE5;
-    text-shadow: #affbff 0 1px 0;
+#target-one p b:nth-of-type(1) {
+    /*color: #187FE5;*/
+    color: var(--ruby);
+    text-shadow: var(--red)0 .5px 0;
 }
 
-.landing-subheading p b:nth-of-type(3) {
-    color: #51d2bf;
-    text-shadow: #afffb3 0 1px 0;
+#target-one p b:nth-of-type(3) {
+    /*color: #51d2bf;*/
+    color: var(--denim);
+    text-shadow: var(--blue) 0 .5px 0;
 }
 
-.landing-subheading p b:nth-of-type(4) {
-    color: #8E0089;
-    text-shadow: #ffb3fe 0 1px 0;
+#target-one p b:nth-of-type(4) {
+    /*color: #8E0089;*/
+    color: var(--canary);
+    text-shadow: var(--yellow) 0 .5px 0;
+}
+
+#target-one p b:nth-of-type(5) {
+    /*color: #8E0089;*/
+    color: var(--moss);
+    text-shadow: var(--green) 0 .5px 0;
 }
 
 .image-container {
@@ -4371,8 +4769,8 @@ form .connect-cta input {
    Media box section
    ========================================================================== */
 
-/* Make section.right a flex container, turning h5, ul and .activity-cta into flex items */
-/* applies to section.right */
+/* Make section.inner-right a flex container, turning h5, ul and .activity-cta into flex items */
+/* applies to section.inner-right */
 
 .media-content {
     display: -webkit-box;
@@ -4513,7 +4911,7 @@ form .connect-cta input {
             align-items: center;
 }
 
-section.right > ul > li h6 {
+section.inner-right > ul > li h6 {
     font-weight: 500;
     -webkit-font-feature-settings: 'smcp', 'c2sc';
             font-feature-settings: 'smcp', 'c2sc';
@@ -4844,6 +5242,14 @@ section.right > ul > li h6 {
     color: #e9ecef !important;
 }
 
+/* Set transparent hover states for the parent element.
+ * This ensures that only the badge is highlighted, not the icon.
+ */
+
+.data-repo:hover {
+    background-color: transparent;
+}
+
 /* Remove text label when side menu is active. */
 
 .body-nav.show ~ .body-main .data-stats {
@@ -5140,16 +5546,16 @@ details[open] .read-more-icon {
 
 /* Configure first sub section to accommodate <summary> dropdown overflow */
 
-#target-six .left {
+#target-six .inner-left {
     overflow: scroll;
 }
 
 @media (min-width: 992px) {
-    #target-six .outer-body:first-child {
+    #target-six .outer-first {
         overflow: visible;
     }
 
-    #target-six .left {
+    #target-six .inner-left {
         overflow: visible;
     }
 }
@@ -5332,51 +5738,110 @@ blockquote, q {
 }
 
 /* ==========================================================================
+   Brand/logo and CTA button hover colors
+   ========================================================================== */
+
+/* Styles icons at intro section when button is pressed. */
+
+.btn:active .social-icon { color: #4f4f4f !important; }
+
+/* Styles pressed and hover states for menu/nav icons and containers */
+
+[class*="icon"].btn:active { background-color: transparent !important; }
+.nav-links .btn:hover .social-icon { color: var(--paper) !important; }
+
+/* Apply feedback colors for linkedin button links at side menu */
+
+.btn.icon-linkedin:hover { background-color: var(--link-linkedin); }
+.btn.icon-linkedin:focus { background-color: var(--link-linkedin); }
+
+/* Apply feedback colors for Github button links at side menu */
+
+.btn.icon-github:hover { background-color: var(--link-github); }
+.btn.icon-github:focus { background-color: var(--link-github); }
+
+
+/* Apply feedback colors for Dev button links at side menu */
+
+.btn.icon-dev:hover { background-color: var(--link-dev); }
+.btn.icon-dev:focus { background-color: var(--link-dev); }
+
+/* Apply feedback colors for CTA buttons at side menu */
+
+.btn.icon-download:hover { background-color: var(--cta-download); }
+.btn.icon-download:focus { background-color: var(--cta-download); }
+.btn.icon-email:hover { background-color: var(--cta-email); }
+.btn.icon-email:focus { background-color: var(--cta-email); }
+.btn.icon-call:hover { background-color: var(--cta-call); }
+.btn.icon-call:focus { background-color: var(--cta-call); }
+
+/* Follow same logic for buttons at intro section */
+
+.btn:hover .social-linkedin { color: var(--link-linkedin); }
+.btn:focus .social-linkedin { color: var(--link-linkedin); }
+.btn.social-linkedin:active { background-color: var(--link-linkedin) }
+
+.btn:hover .social-github { color: var(--link-github); }
+.btn:focus .social-github { color: var(--link-github); }
+.btn.social-github:active { background-color: var(--link-github) }
+
+.btn:hover .social-dev { color: var(--link-dev); }
+.btn:focus .social-dev { color: var(--link-dev); }
+.btn.social-dev:active { background-color: var(--link-dev) }
+
+.btn:hover .social-portfolio { color: var(--link-folio); }
+.btn:focus .social-portfolio { color: var(--link-folio); }
+.btn.social-portfolio:active { background-color: var(--link-folio) }
+
+.btn:hover .social-download { color: var(--cta-download); }
+.btn:focus .social-download { color: var(--cta-download); }
+.btn.social-download:active { background-color: var(--cta-download) }
+
+
+/* ==========================================================================
    Local section color variables
    ========================================================================== */
 
-::selection { background: var(--yellow); }
-::-moz-selection { background: var(--yellow) }
+::selection { background: var(--matte); }
+::-moz-selection { background: var(--matte) }
 
 #target-one h4 { background-color: var(--matte); }
-/*#target-one b { color: var(--matte); }*/
-/*#target-one a { color: var(--matte); }*/
+#target-one b { color: var(--denim); }
+/*#target-one a { color: var(--denim); }*/
 
 #target-two h4 { background-color: var(--slate); }
-#target-two b { color: var(--slate); }
-#target-two a { color: var(--grey); }
-#target-two p::selection { background: var(--grey); }
-#target-two p::-moz-selection { background: var(--grey); }
+#target-two b { color: #817567; }
+#target-two a { color: #817567; }
 
 #target-three h4 { background-color: var(--ruby); }
 #target-three b { color: var(--ruby); }
 #target-three a { color: var(--red); }
-#target-three p::selection { background: var(--red); }
-#target-three p::-moz-selection { background: var(--red); }
 
 #target-four h4 { background-color: var(--denim); }
 #target-four b { color: var(--denim); }
 #target-four a { color: var(--blue); }
-#target-four p::selection { background: var(--blue); }
-#target-four p::-moz-selection { background: var(--blue); }
 
 #target-five h4 { background-color: var(--canary); }
 #target-five b { color: var(--canary); }
 #target-five a { color: var(--yellow); }
-#target-five p::selection { background: var(--yellow); }
-#target-five p::-moz-selection { background: var(--yellow); }
 
 #target-six h4 { background-color: var(--moss); }
 #target-six b { color: var(--moss); }
 #target-six a { color: var(--green); }
-#target-six p::selection { background: var(--green); }
-#target-six p::-moz-selection { background: var(--green); }
 
 #target-seven h4 { background-color: var(--obsidian); }
 #target-seven b { color: var(--obsidian); }
 #target-seven a { color: var(--raisin); }
-#target-seven p::selection { background: var(--raisin); }
-#target-seven p::-moz-selection { background: var(--raisin); }
+
+.icon-one { color: var(--obsidian) }
+.icon-two { color: var(--slate) }
+.icon-three { color: var(--red) }
+.icon-four { color: var(--blue) }
+.icon-five { color: var(--yellow) }
+.icon-six { color: var(--green) }
+.icon-seven { color: var(--raisin) }
+
+.icon-link { color: var(--link-github) }
 
 /* ==========================================================================
    Nav outline and pagination color variables

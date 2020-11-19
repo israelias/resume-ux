@@ -8,8 +8,8 @@
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
 
     <!-- ionicons -->
-    <!--<script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>-->
-    <!--<script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>-->
+    <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
 
     <!-- MDBootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/site.webmanifest">
+    <!--<link rel="manifest" href="assets/images/site.webmanifest">-->
     <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#2d2d2d">
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <meta name="msapplication-TileColor" content="#a7a7a7">
@@ -31,18 +31,22 @@
 </head>
 <body class="root-body" id="bodyMain" data-spy="scroll" data-target="#nav-outline" data-offset="5">
 
+<!--aria-checked="false" class="sr-only-focusable"-->
+<!--           aria-labelledby="check-toggle"-->
     <!-- start EXPAND All TOGGLE -->
-    <input type="checkbox" id="toggle-all" class="invisible">
-    <label for="toggle-all">
+    <input type="checkbox" id="toggle-all" aria-labelledby="checkbox-toggle" aria-describedby="hideswap"
+           class="visually-hidden">
+    <label for="toggle-all" id="checkbox-toggle" aria-label="Toggle expand all" role="button">
         <span class="toggle-container d-flex">
-            <span class="menu-icon d-flex d-sm-none position-relative align-self-center pb-4">
-                 <ion-icon id="hideswap" name="radio-button-off"
-                          class="hide-swap d-flex position-absolute float-left">
-                    <span class="sr-only">Expand All</span>
+            <!--<span class="sr-only-focusable sr-status" id="checkbox-status">-->
+            <!--    Toggle expand all-->
+            <!--</span>-->
+            <span class="menu-icon position-relative align-self-center pb-4">
+                 <ion-icon aria-label="Toggle Static Mode" id="hideswap" name="radio-button-off"
+                          class="icon-button hide-swap d-flex position-absolute float-left">
                 </ion-icon>
-                <ion-icon id="showswap" name="radio-button-on"
-                          class="show-swap d-flex position-absolute float-left">
-                    <span class="sr-only">Collapse All</span>
+                <ion-icon aria-label="Toggle Interactive Mode" id="showswap" name="radio-button-on"
+                          class="icon-button show-swap d-flex position-absolute float-left">
                 </ion-icon>
             </span>
         </span>
@@ -77,7 +81,8 @@
                 </button>
                 <!-- start LOGO -->
                 <a class="navbar-brand" href="index.html" role="button">
-                    <span class="d-none d-sm-inline">/</span>CV<span class="d-none d-sm-inline">-JS</span>
+                    <span class="d-none d-sm-inline" aria-hidden="true">/</span>CV<span class="d-none d-sm-inline">-JS
+                </span>
                 </a><!--close logo -->
             </div>
         </nav><!-- close nav main -->
@@ -85,7 +90,7 @@
 
     <!-- start SIDE MENU NAV -->
     <nav class="body-nav collapse" id="nav-outline">
-        <div class="outset-container-2">
+        <div class="nav-outer-body outset-container-2">
             <!-- start NAV DOCUMENT OUTLINE -->
             <ol class="nav nav-pills menu-sidebar list-h1 nav-content">
                 <li class="nav-item item-zero h1-00 outline-item">
@@ -94,21 +99,21 @@
                     </a>
                     <ul class="nav list-h2">
                         <li class="nav-item item-zero h2-00">
-                            <a class="nav-link link-zero" href="#splash-banner">
+                            <a class="nav-link link-zero visually-hidden" href="#zero-two">
                                 (developed for the web)
                             </a>
                             <ul class="nav list-h3">
                                 <li class="nav-item item-one h3-00">
                                     <a class="nav-link link-one" href="#element-one">
                                         <span class="link-text">Introduction</span>
-                                        <i class="link-icon fas fa-info-circle">
+                                        <i class="link-icon icon-one fas fa-info-circle">
                                             <span class="sr-only">Introduction</span>
                                         </i>
                                     </a>
                                     <button class="nav-link link-one collapsed" type="button" data-toggle="collapse"
                                        data-target="#target-one" aria-controls="target-one" aria-expanded="false">
                                         <span class="link-text">Introduction</span>
-                                        <i class="link-icon fas fa-info-circle">
+                                        <i class="link-icon icon-one fas fa-info-circle">
                                             <span class="sr-only">Introduction</span>
                                         </i>
                                     </button>
@@ -119,12 +124,12 @@
                                             </a>
                                             <ul class="nav nav-one list-h5">
                                                 <li class="nav-item item-one h5-02">
-                                                    <a class="nav-link link-one" href="#sectionZero-1">
+                                                    <a class="nav-link link-one" href="#one-one">
                                                         Profile Summary
                                                     </a>
                                                 </li>
                                                 <li class="nav-item item-one h5-02">
-                                                    <a class="nav-link link-one" href="#sectionZero-2">
+                                                    <a class="nav-link link-one" href="#one-two">
                                                         Recent Activity
                                                     </a>
                                                 </li>
@@ -135,14 +140,14 @@
                                 <li class="nav-item item-two h3-10">
                                     <a class="nav-link link-two" href="#element-two">
                                         <span class="link-text">Specialization</span>
-                                        <i class="link-icon fas fa-lightbulb">
+                                        <i class="link-icon icon-two fas fa-lightbulb">
                                             <span class="sr-only">Specialization</span>
                                         </i>
                                     </a>
                                     <button class="nav-link link-two collapsed" type="button" data-toggle="collapse"
                                        data-target="#target-two" aria-controls="target-two" aria-expanded="false">
                                         <span class="link-text">Specialization</span>
-                                        <i class="link-icon fas fa-lightbulb">
+                                        <i class="link-icon icon-two fas fa-lightbulb">
                                             <span class="sr-only">Specialization</span>
                                         </i>
                                     </button>
@@ -153,12 +158,12 @@
                                             </a>
                                             <ul class="nav nav-two list-h5">
                                                 <li class="nav-item item-two h5-11">
-                                                    <a class="nav-link link-two" id="#sectionOne-1">
+                                                    <a class="nav-link link-two" id="#two-one">
                                                         Industry Knowledge
                                                     </a>
                                                 </li>
                                                 <li class="nav-item item-two h5-12">
-                                                    <a class="nav-link link-two" id="#sectionOne-2">
+                                                    <a class="nav-link link-two" id="#two-two">
                                                         Expertise
                                                     </a>
                                                 </li>
@@ -169,14 +174,14 @@
                                 <li class="nav-item item-three h3-20">
                                     <a class="nav-link link-three" href="#element-three">
                                         <span class="link-text">Proficiency</span>
-                                        <i class="link-icon fas fa-meteor">
+                                        <i class="link-icon icon-three fas fa-meteor">
                                             <span class="sr-only">Proficiency</span>
                                         </i>
                                     </a>
                                     <button class="nav-link link-three collapsed" type="button" data-toggle="collapse"
                                        data-target="#target-three" aria-controls="target-three" aria-expanded="false">
                                         <span class="link-text">Proficiency</span>
-                                        <i class="link-icon fas fa-meteor">
+                                        <i class="link-icon icon-three fas fa-meteor">
                                             <span class="sr-only">Proficiency</span>
                                         </i>
                                     </button>
@@ -187,12 +192,12 @@
                                             </a>
                                             <ul class="nav nav-three list-h5">
                                                 <li class="nav-item item-three h5-21">
-                                                    <a class="nav-link link-three" href="#sectionTwo-1">
+                                                    <a class="nav-link link-three" href="#three-one">
                                                         Skills
                                                     </a>
                                                 </li>
                                                 <li class="nav-item item-three h5-22">
-                                                    <a class="nav-link link-three" href="#sectionTwo-2">
+                                                    <a class="nav-link link-three" href="#three-two">
                                                         Coverage
                                                     </a>
                                                 </li>
@@ -203,14 +208,14 @@
                                 <li class="nav-item item-four h3-30">
                                     <a class="nav-link link-four" href="#element-four">
                                         <span class="link-text">Experience</span>
-                                        <i class="link-icon fas fa-user-astronaut">
+                                        <i class="link-icon icon-four fas fa-user-astronaut">
                                             <span class="sr-only">Experience</span>
                                         </i>
                                     </a>
                                     <button class="nav-link link-four collapsed" type="button" data-toggle="collapse"
                                        data-target="#target-four" aria-controls="target-four" aria-expanded="false">
                                         <span class="link-text">Experience</span>
-                                        <i class="link-icon fas fa-user-astronaut">
+                                        <i class="link-icon icon-four fas fa-user-astronaut">
                                             <span class="sr-only">Experience</span>
                                         </i>
                                     </button>
@@ -221,12 +226,12 @@
                                             </a>
                                             <ul class="nav nav-four list-h5">
                                                 <li class="nav-item item-four h5-31">
-                                                    <a class="nav-link link-four" href="#sectionThree-1">
+                                                    <a class="nav-link link-four" href="#four-one">
                                                         Background
                                                     </a>
                                                 </li>
                                                 <li class="nav-item item-four">
-                                                    <a class="nav-link h5-32 link-four" href="#sectionThree-2">
+                                                    <a class="nav-link h5-32 link-four" href="#four-two">
                                                         <span class="d-none d-lg-block">Education & Employment</span>
                                                         <span class="d-lg-none">Affiliations</span>
                                                     </a>
@@ -238,14 +243,14 @@
                                 <li class="nav-item item-five h3-40">
                                     <a class="nav-link link-five" href="#element-five">
                                         <span class="link-text">Examples</span>
-                                        <i class="link-icon fas fa-rocket">
+                                        <i class="link-icon icon-five fas fa-rocket">
                                             <span class="sr-only">Examples</span>
                                         </i>
                                     </a>
                                     <button class="nav-link link-five collapsed" type="button" data-toggle="collapse"
                                        data-target="#target-five" aria-controls="target-five" aria-expanded="false">
                                         <span class="link-text">Examples</span>
-                                        <i class="link-icon fas fa-rocket">
+                                        <i class="link-icon icon-five fas fa-rocket">
                                             <span class="sr-only">Examples</span>
                                         </i>
                                     </button>
@@ -256,13 +261,13 @@
                                             </a>
                                             <ul class="nav nav-five list-h5">
                                                 <li class="nav-item item-five h5-41">
-                                                    <a class="nav-link link-five" href="#sectionFour-1">
+                                                    <a class="nav-link link-five" href="#five-one">
                                                         Working Style
                                                     </a>
                                                 </li>
                                                 <li class="nav-item item-five disabled">
                                                     <a class="nav-link link-five h5-42 link-five disabled"
-                                                       href="#sectionFour-2">
+                                                       href="#five-two">
                                                         Tech Repo
                                                     </a>
                                                 </li>
@@ -273,14 +278,14 @@
                                 <li class="nav-item item-five h3-50">
                                     <a class="nav-link link-six" href="#element-six">
                                         <span class="link-text">References</span>
-                                        <i class="link-icon fas fa-star">
+                                        <i class="link-icon icon-six fas fa-star">
                                             <span class="sr-only">References</span>
                                         </i>
                                     </a>
                                     <button class="nav-link link-six collapsed" type="button" data-toggle="collapse"
                                        data-target="#target-six" aria-controls="target-six" aria-expanded="false">
                                         <span class="link-text">References</span>
-                                        <i class="link-icon fas fa-star">
+                                        <i class="link-icon icon-six fas fa-star">
                                             <span class="sr-only">References</span>
                                         </i>
                                     </button>
@@ -291,12 +296,12 @@
                                             </a>
                                             <ul class="nav nav-six list-h5">
                                                 <li class="nav-item item-six h5-51">
-                                                    <a class="nav-link link-six" href="#sectionFive-1">
+                                                    <a class="nav-link link-six" href="#six-one">
                                                         Recommendations
                                                     </a>
                                                 </li>
                                                 <li class="nav-item item-six">
-                                                    <a class="nav-link h5-52 link-six" href="#sectionFive-2">
+                                                    <a class="nav-link h5-52 link-six" href="#six-two">
                                                         Awards
                                                     </a>
                                                 </li>
@@ -307,14 +312,14 @@
                                 <li class="nav-item item-seven h3-60">
                                     <a class="nav-link link-seven" href="#element-seven">
                                         <span class="link-text">Connect</span>
-                                        <i class="link-icon fas fa-satellite-dish">
+                                        <i class="link-icon icon-seven fas fa-satellite-dish">
                                             <span class="sr-only">Connect</span>
                                         </i>
                                     </a>
                                     <button class="nav-link link-seven collapsed" type="button" data-toggle="collapse"
                                        data-target="#target-seven" aria-controls="target-seven" aria-expanded="false">
                                         <span class="link-text">Connect</span>
-                                        <i class="link-icon fas fa-satellite-dish">
+                                        <i class="link-icon icon-seven fas fa-satellite-dish">
                                             <span class="sr-only">Connect</span>
                                         </i>
                                     </button>
@@ -325,12 +330,12 @@
                                             </a>
                                             <ul class="nav nav-seven list-h5">
                                                 <li class="nav-item item-seven h5-61">
-                                                    <a class="nav-link link-seven" href="#sectionSix-1">
+                                                    <a class="nav-link link-seven" href="#seven-one">
                                                         Contact Info
                                                     </a>
                                                 </li>
                                                 <li class="nav-item item-seven">
-                                                    <a class="nav-link h5-62 link-seven" href="#sectionSix-2">
+                                                    <a class="nav-link h5-62 link-seven" href="#seven-two">
                                                         Message Form
                                                     </a>
                                                 </li>
@@ -347,51 +352,58 @@
             <!-- start NAV MENU SOCIAL LINKS -->
             <ul class="nav-links activity-cta connect-cta links-content nav-content">
                 <li class="inset-container outline-item d-flex">
-                    <a class="btn outset-container-2 flex-fill" href="https://www.linkedin.com/in/joem-elias-sanez/"
+                    <a class="btn icon-linkedin outset-container-2 flex-fill"
+                       href="https://www.linkedin.com/in/joem-elias-sanez/"
                        target="_blank">
                         <span class="inset-inner">
-                            <span class="fab fa-linkedin-in"></span>
-                            <span class="sr-only">LinkedIn</span>
+                            <i class="social-icon icon-linkedin fab fa-linkedin-in">
+                                <span class="sr-only">See my LinkedIn</span>
+                            </i>
                         </span>
                     </a>
                 </li>
                 <li class="inset-container outline-item d-flex">
-                    <a class="btn outset-container-2 flex-fill" href="https://github.com/israelias" target="_blank">
+                    <a class="btn icon-github outset-container-2 flex-fill" href="https://github.com/israelias" target="_blank">
                         <span class="inset-inner">
-                            <span class="fab fa-github"></span>
-                            <span class="sr-only">GitHub</span>
+                            <i class="social-icon icon-github fab fa-github">
+                                <span class="sr-only">See my GitHub profile</span>
+                            </i>
+                        </span>
+                    </a>
+                </li>
+                <li class="inset-container outline-item d-none d-sm-flex">
+                    <a class="btn icon-dev outset-container-2 flex-fill" href="https://dev.to/israelias" target="_blank">
+                        <span class="social-inner">
+                            <i class="social-icon icon-dev fab fa-dev">
+                                <span class="sr-only">See my Dev profile</span>
+                            </i>
+                        </span>
+                    </a>
+                </li>
+                <li class="inset-container outline-item d-none d-sm-flex">
+                    <a class="btn icon-download outset-container-2 flex-fill" href="assets/images/SANEZ_CV_2020.pdf" target="_blank">
+                        <span class="inset-inner">
+                            <i class="social-icon cta-icon icon-download fa fa-download">
+                                <span class="sr-only">Download my CV</span>
+                            </i>
                         </span>
                     </a>
                 </li>
                 <li class="inset-container outline-item d-flex">
-                    <a class="btn outset-container-2 flex-fill" href="https://dev.to/israelias" target="_blank">
+                    <a class="btn icon-email outset-container-2 flex-fill" href="mailto:israelias.js@gmail.com" target="_blank">
                         <span class="inset-inner">
-                            <span class="fab fa-dev"></span>
-                            <span class="sr-only">Dev</span>
+                            <i class="social-icon cta-icon icon-email fas fa-envelope">
+                                <span class="sr-only">Send me an Email</span>
+                            </i>
                         </span>
                     </a>
                 </li>
                 <li class="inset-container outline-item d-flex">
-                    <a class="btn outset-container-2 flex-fill" href="assets/images/SANEZ_CV_2020.pdf" target="_blank">
+                    <a class="btn icon-call outset-container-2 flex-fill" href="tel:+63-945-994-5975" target="_blank">
                         <span class="inset-inner">
-                            <span class="fa fa-download"></span>
-                            <span class="sr-only">Download CV</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="inset-container outline-item d-flex">
-                    <a class="btn outset-container-2 flex-fill" href="mailto:israelias.js@gmail.com" target="_blank">
-                        <span class="inset-inner">
-                            <span class="fas fa-envelope"></span>
-                            <span class="sr-only">Email</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="inset-container outline-item d-flex">
-                    <a class="btn outset-container-2 flex-fill" href="tel:+63-945-994-5975" target="_blank">
-                        <span class="inset-inner">
-                            <span class="fas fa-phone"></span>
-                            <span class="sr-only">Call me</span>
+                            <i class="social-icon cta-icon icon-call fas fa-phone">
+                                <span class="sr-only">Give me a call</span>
+                            </i>
                         </span>
                     </a>
                 </li>
@@ -410,7 +422,7 @@
                  data-parent="#resumeStack">
             <div class="cover-banner pl-2 pr-2">
                 <!-- start LANDING HEADING -->
-                <h1 class="cover-text lh-1 h3">
+                <h1 class="cover-text lh-1 h3" id="zero-one">
                     <span class="cover-title text-lowercase">
                         The curriculum vitae
                     </span>
@@ -419,7 +431,7 @@
                     </span>
                 </h1><!-- close landing heading -->
                 <!-- start LANDING SUBHEADING -->
-                <h2 class="banner-text h6">
+                <h2 class="banner-text h6" id="zero-two">
                     <span class="banner-top pr-2">
                         <span class="text-right">(dev</span>
                         <span class="text-right">el</span>
@@ -434,7 +446,7 @@
                     </span>
                 </h2><!-- close landing subheading -->
                 <!-- start LANDING CTA -->
-                <div class="banner-cta activity-cta mt-2 mb-3 pl-0 inset-container">
+                <div class="banner-cta activity-cta mt-2 mb-3 pl-0 inset-container" id="zero-three">
                     <div id="band-li" class="d-flex flex-row align-items-stretch">
                         <span class="outset-container-2 contact-text flex-fill mr-2 text-muted justify-content-between align-middle">
                             <span class="value">
@@ -444,7 +456,9 @@
                         </span>
                         <a class="outset-container-2 btn" href="assets/images/SANEZ_CV_2020.pdf" target="_blank">
                             <span class="inset-inner">
-                                <i class="fas fa-download"></i>
+                                <!--<i class="fas fa-eye"></i>-->
+                                <!--<i class="fas fa-cloud-download-alt"></i>-->
+                                <ion-icon name="open-outline"></ion-icon>
                                 <span class="sr-only">Download my CV</span>
                             </span>
                         </a>
@@ -491,13 +505,13 @@
                 <!-- start 1.0 SPREAD -->
                 <div class="spread row">
                     <!-- start PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-md-7 col-xl-6 col-xxl-5">
+                    <div class="outer-body outer-first lg-hide col-12 col-md-7 col-xl-6 col-xxl-5">
                         <h4 class="inset-item">
                              Joem Elias Sanez is an architect and full stack developer based in Manila.
                             <i class="section-icon fas fa-info-circle" aria-hidden="true"></i>
                         </h4>
                         <!-- start 1.1 SUB-SECTION -->
-                        <section id="sectionZero-1" class="left inner-body landing-subheading">
+                        <section id="one-one" class="inner-body inner-left">
                             <p class="lh-2 mt-3 mb-3">
                                 I'm currently <b>enrolled</b> in a <a
                                     href="https://codeinstitute.net/full-stack-software-development-diploma/"
@@ -512,43 +526,53 @@
                             <!-- start 1.1 SOCIAL LINKS -->
                             <ul class="inset-container row row-cols-5 social-links">
                                 <li class="list-inline-item">
-                                    <a class="btn outset-container-2" href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank">
-                                    <span class="inset-inner">
-                                        <span class="fab fa-linkedin-in"></span>
-                                        <span class="sr-only">LinkedIn</span>
-                                    </span>
+                                    <a class="btn social-linkedin outset-container-2"
+                                       href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank">
+                                        <span class="inset-inner">
+                                            <i class="social-icon social-linkedin fab fa-linkedin">
+                                                <span class="sr-only">LinkedIn</span>
+                                            </i>
+                                        </span>
                                     </a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a class="btn outset-container-2" href="https://github.com/israelias" target="_blank">
-                                    <span class="inset-inner">
-                                        <span class="fab fa-github"></span>
-                                        <span class="sr-only">GitHub</span>
-                                    </span>
+                                    <a class="btn social-github outset-container-2" href="https://github.com/israelias"
+                                       target="_blank">
+                                        <span class="inset-inner">
+                                            <i class="social-icon social-github fab fa-github">
+                                                <span class="sr-only">GitHub</span>
+                                            </i>
+                                        </span>
                                     </a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a class="btn outset-container-2" href="https://dev.to/israelias" target="_blank">
-                                    <span class="inset-inner">
-                                        <span class="fab fa-dev fa-sm"></span>
-                                        <span class="sr-only">Dev</span>
-                                    </span>
+                                    <a class="btn social-dev outset-container-2" href="https://dev.to/israelias"
+                                       target="_blank">
+                                        <span class="inset-inner">
+                                            <i class="social-icon social-dev fab fa-dev">
+                                                <span class="sr-only">Dev</span>
+                                            </i>
+                                        </span>
                                     </a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a class="btn outset-container-2" href="https://joemelias.com" target="_blank">
-                                    <span class="inset-inner">
-                                        <span class="fas fa-globe"></span>
-                                        <span class="sr-only">Portfolio</span>
-                                    </span>
+                                    <a class="btn social-portfolio outset-container-2" href="https://joemelias.com"
+                                       target="_blank">
+                                        <span class="inset-inner">
+                                            <i class="social-icon social-portfolio fas fa-globe">
+                                                <span class="sr-only">Architecture Portfolio</span>
+                                            </i>
+                                        </span>
                                     </a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a class="btn outset-container-2" href="assets/images/SANEZ_CV_2020.pdf" target="_blank">
+                                    <a class="btn social-download outset-container-2"
+                                       href="assets/images/SANEZ_CV_2020.pdf" target="_blank">
                                     <span class="inset-inner">
-                                        <span class="fa fa-download"></span>
-                                        <span class="sr-only">Download CV</span>
-                                    </span>
+                                            <i class="social-icon social-download fa fa-download">
+                                                <span class="sr-only">Open PDF of CV</span>
+                                            </i>
+                                        </span>
                                     </a>
                                 </li>
                             </ul><!-- close 1.1 social links -->
@@ -556,9 +580,9 @@
                     </div><!-- close page-left text -->
 
                     <!-- start PAGE-RIGHT MEDIA -->
-                    <div class="outer-body col-12 col-md-5 col-xl-6 col-xxl-7">
+                    <div class="outer-body outer-second col-12 col-md-5 col-xl-6 col-xxl-7">
                         <!-- start 1.2 SUB-SECTION -->
-                        <section id="sectionZero-2" class="right inner-body row justify-content-center pt-2">
+                        <section id="one-two" class="inner-body inner-right row justify-content-center pt-2">
                             <!-- PROFILE IMAGE -->
                             <div class="image-container d-none d-md-flex">
                                 <img src="assets/images/joem_elias_sanez_thumbnail.png" alt="Joem Elias Sanez">
@@ -688,10 +712,11 @@
                                         <!-- /project text -->
                                     </div>
                                     <!-- start PROJECT CTA -->
-                                    <div class="activity-cta text-right pr-0 bg-transparent">
-                                        <div class="d-flex w-100 justify-content-end align-items-center">
+                                    <div class="activity-cta pr-0 bg-transparent">
+                                        <div class="d-flex w-100 pt-2 justify-content-around align-items-center">
                                             <small class="mr-3 text-cta">
-                                                See what I'm currently working on
+                                                <span class="text-cta-hide">See what I'm currently working on</span>
+                                                <span class="text-cta-show">See some work</span>
                                             </small>
                                             <span class="inset-container-6">
                                                 <button
@@ -701,7 +726,10 @@
                                                         data-target="#target-five"
                                                         aria-expanded="false"
                                                         aria-controls="target-five">
-                                                    <i class="fas fa-chevron-circle-down"></i>
+                                                    <ion-icon class="scroll-icon icon-five"
+                                                              name="rocket"
+                                                              aria-hidden="true">
+                                                    </ion-icon>
                                                 </button>
                                             </span>
                                         </div>
@@ -731,10 +759,10 @@
                                     </div>
                                     <!-- close activity item -->
                                     <!-- start ACTIVITY CTA -->
-                                    <div class="activity-cta text-right pr-0 bg-transparent">
-                                        <div class="d-flex w-100 justify-content-end align-items-center">
+                                    <div class="activity-cta pr-0 bg-transparent">
+                                        <div class="d-flex w-100 pt-2 justify-content-around align-items-center">
                                             <small class="mr-3 text-cta">
-                                                Read more from my colleagues
+                                                Read more <span class="text-cta-hide">from my colleagues</span>
                                             </small>
                                             <span class="inset-container-6">
                                                 <button
@@ -743,7 +771,10 @@
                                                         data-toggle="collapse"
                                                         data-target="#target-six"
                                                         aria-controls="target-six">
-                                                    <i class="fas fa-chevron-circle-down"></i>
+                                                    <ion-icon class="scroll-icon icon-six"
+                                                              name="star"
+                                                              aria-hidden="true">
+                                                    </ion-icon>
                                                 </button>
                                             </span>
                                         </div>
@@ -770,17 +801,24 @@
                                         </div>
                                     </div><!-- close activity item -->
                                     <!-- start ACTIVITY CTA -->
-                                    <div class="text-right pr-0 bg-transparent">
-                                        <div class="d-flex flex-row align-items-center justify-content-end">
-                                            <small class="mr-3 text-cta">
-                                                Follow me on GitHub
-                                            </small>
-                                            <a class="btn inset-container-6" href="https://github.com/israelias"
-                                               target="_blank">
-                                                <span class="inset-inner">
-                                                    <i class="fab fa-github" aria-hidden="true"></i>
-                                                </span>
-                                            </a>
+                                    <div class="activity-cta pr-0 bg-transparent">
+                                        <div class="d-flex w-100 pt-2 align-items-center justify-content-around">
+                                            <span>
+                                                <small class="mr-3 text-cta">
+                                                    <span class="text-cta-hide">Follow me on GitHub</span>
+                                                    <span class="text-cta-show mr-3">My GitHub</span>
+                                                </small>
+                                            </span>
+                                            <span class="inset-container-6">
+                                                <a class="btn"
+                                                   href="https://github.com/israelias"
+                                                   target="_blank">
+                                                    <ion-icon class="scroll-icon icon-link"
+                                                              name="logo-github"
+                                                              aria-hidden="true">
+                                                    </ion-icon>
+                                                </a>
+                                            </span>
                                         </div>
                                     </div><!-- close activity cta -->
                                 </li><!-- close scroll item 3 -->
@@ -828,13 +866,13 @@
                 <!-- start 2.0 SPREAD -->
                 <div class="spread row">
                     <!-- start 2.0 PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-lg-7">
+                    <div class="outer-body outer-first col-12 col-lg-7">
                         <h4 class="inset-item">
                             As a super-user of design software, I bring a unique voice to the tech stack.
                             <i class="section-icon fas fa-lightbulb" aria-hidden="true"></i>
                         </h4>
                         <!-- start 2.1 SUB-SECTION -->
-                        <section id="sectionOne-1" class="left inner-body">
+                        <section id="two-one" class="inner-body inner-left">
                             <h5>
                                 Strength: "All-rounder"
                             </h5>
@@ -872,9 +910,9 @@
                     </div><!-- close 2.0 page-left text -->
 
                     <!-- start 2.0 PAGE-RIGHT MEDIA -->
-                    <div class="outer-body col-12 col-lg-5">
+                    <div class="outer-body outer-second col-12 col-lg-5">
                         <!-- start 2.2 SUB-SECTION -->
-                        <section id="sectionOne-2" class="right inner-body media-content">
+                        <section id="two-two" class="inner-body inner-right media-content">
                             <h5>
                                 Expertise
                             </h5>
@@ -1075,13 +1113,13 @@
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
                                     <span class="outset-container-2 flex-fill">
                                         <small class="mr-3 text-right">
-                                            See my LinkedIn
+                                            Save a copy of my CV
                                         </small>
                                      </span>
                                     <a class="outset-container-2 btn"
-                                       href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank">
+                                       href="assets/images/SANEZ_CV_2020.pdf" download>
                                         <span class="inset-inner">
-                                            <i class="fab fa-linkedin-in"></i>
+                                            <i class="icon-download fab fa-linkedin-in"></i>
                                             <span class="sr-only">LinkedIn</span>
                                         </span>
                                     </a>
@@ -1130,14 +1168,14 @@
                 <!-- start 3.0 SPREAD -->
                 <div class="spread row">
                     <!-- start 3.0 PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-lg-7">
+                    <div class="outer-body outer-first col-12 col-lg-7">
                         <h4 class="inset-item">
                             I’m committed to building and bridging skills honed through my experience and
                             dedication to design and tech.
                             <i class="section-icon fas fa-meteor" aria-hidden="true"></i>
                         </h4>
                         <!-- start 3.1 SUB-SECTION -->
-                        <section id="sectionTwo-1" class="left inner-body">
+                        <section id="three-one" class="inner-body inner-left">
                             <h5>
                                 Top Strength: "Adaptability"
                             </h5>
@@ -1170,9 +1208,9 @@
                     </div><!-- close 3.0 page-left text -->
 
                     <!-- start 3.0 PAGE-RIGHT MEDIA -->
-                    <div class="outer-body col-12 col-lg-5">
+                    <div class="outer-body outer-second col-12 col-lg-5">
                         <!-- start 3.2 SUB-SECTION -->
-                        <section id="sectionTwo-2" class="right inner-body media-content">
+                        <section id="three-two" class="inner-body inner-right media-content">
                             <h5>
                                 Coverage
                             </h5>
@@ -1554,7 +1592,7 @@
                                             data-target="#target-seven"
                                             aria-controls="target-seven">
                                         <span class="inset-inner">
-                                            <i class="fas fa-arrow-circle-down"></i>
+                                            <i class="icon-seven fas fa-arrow-circle-down"></i>
                                             <span class="sr-only">To Connect section</span>
                                         </span>
                                     </button>
@@ -1603,13 +1641,13 @@
                 <!-- start 4.0 SPREAD -->
                 <div class="spread row">
                     <!-- start 4.0 PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-lg-7">
+                    <div class="outer-body outer-first col-12 col-lg-7">
                         <h4 class="inset-item">
                             I bring keen dexterity and constructive values to the modern collaborative environment.
                             <i class="section-icon fas fa-user-astronaut" aria-hidden="true"></i>
                         </h4>
                         <!-- start 4.1 SUB-SECTION -->
-                        <section id="sectionThree-1" class="left inner-body">
+                        <section id="four-one" class="inner-body inner-left">
                             <h5>
                                 Strength: "Mobility"
                             </h5>
@@ -1681,9 +1719,9 @@
                     </div><!-- close 4.0 page-left text -->
 
                     <!-- start 4.0 PAGE-RIGHT MEDIA -->
-                    <div class="outer-body col-12 col-lg-5">
+                    <div class="outer-body outer-second col-12 col-lg-5">
                         <!-- start 4.2 SUB-SECTION -->
-                        <section id="sectionThree-2" class="right inner-body media-content">
+                        <section id="four-two" class="inner-body inner-right media-content">
                             <h5>
                                 Education
                             </h5>
@@ -1849,7 +1887,7 @@
                                 </li><!-- close education item (otis) -->
                             </ul><!-- close 4.2 list group -->
                             <!-- start 4.2 CTA -->
-                            <div class="activity-cta mt-2 inset-container">
+                            <div id="four-two-cta-1" class="activity-cta mt-2 inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
                                     <span class="outset-container-2 flex-fill">
                                         <small class="mr-3 text-right">
@@ -2008,7 +2046,7 @@
                                 </li><!-- close employment item (gea) -->
                             </ul><!-- close 4.3 list group -->
                             <!-- start 4.3 CTA -->
-                            <div class="activity-cta inset-container">
+                            <div id="four-two-cta-2" class="activity-cta inset-container">
                                 <div class="d-flex flex-row align-items-stretch justify-content-end">
                                     <span class="outset-container-2 flex-fill">
                                         <small class="mr-3 text-right">
@@ -2021,7 +2059,7 @@
                                             data-target="#target-six"
                                             aria-controls="target-six">
                                         <span class="inset-inner">
-                                            <i class="fas fa-arrow-circle-down"></i>
+                                            <i class="icon-six fas fa-arrow-circle-down"></i>
                                             <span class="sr-only">To References section</span>
                                         </span>
                                     </button>
@@ -2070,14 +2108,14 @@
                 <!-- start 5.0 SPREAD -->
                 <div class="spread row">
                     <!-- start 5.0 PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-lg-6">
+                    <div class="outer-body outer-first col-12 col-lg-6">
                         <h4 class="inset-item">
                             I believe mastering default settings is the key to
                             innovating effective alternatives.
                             <i class="section-icon fas fa-rocket" aria-hidden="true"></i>
                         </h4>
                         <!-- start 5.1 SUB-SECTION -->
-                        <section id="sectionFour-1" class="left inner-body">
+                        <section id="five-one" class="inner-body inner-left">
                             <h5>
                                 Most lauded for: “Documentation style”
                             </h5>
@@ -2125,7 +2163,7 @@
                                     <a class="outset-container-2 btn"
                                        href="https://github.com/israelias" target="_blank">
                                         <span class="inset-inner">
-                                            <i class="fas fa-globe" ></i>
+                                            <i class="icon-portfolio fas fa-globe" ></i>
                                             <span class="sr-only">Architecture Portfolio</span>
                                         </span>
                                     </a>
@@ -2135,9 +2173,9 @@
                     </div><!-- close 5.0 page-left text -->
 
                     <!-- start 5.0 PAGE-right MEDIA -->
-                    <div class="outer-body col-12 col-lg-6">
+                    <div class="outer-body outer-second col-12 col-lg-6">
                         <!-- start 5.2 SUB-SECTION -->
-                        <section id="sectionFour-2" class="right inner-body media-content">
+                        <section id="five-two" class="inner-body inner-right media-content">
                             <h5>
                                 Tech Repo
                             </h5>
@@ -2709,7 +2747,7 @@
                                     <a class="outset-container-2 btn"
                                        href="https://github.com/israelias" target="_blank">
                                         <span class="inset-inner">
-                                            <i class="fab fa-github" ></i>
+                                            <i class="icon-github fab fa-github"></i>
                                             <span class="sr-only">GitHub</span>
                                         </span>
                                     </a>
@@ -2759,14 +2797,14 @@
                 <!-- start 6.0 SPREAD -->
                 <div class="spread row">
                     <!-- start 6.0 PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-lg-7">
+                    <div class="outer-body outer-first col-12 col-lg-7">
                         <h4 class="inset-item">
                             I have been lauded for the completeness that I dedicate to every aspect of every project.
                             <i class="section-icon fas fa-star" aria-hidden="true"></i>
                         </h4>
                         <!-- LinkedIn Section CREDIT -->
                         <!-- start 6.1 SUB-SECTION -->
-                        <section id="sectionFive-1" class="left inner-body">
+                        <section id="six-one" class="inner-body inner-left">
                             <h5>
                                 Recommendations
                             </h5>
@@ -2800,10 +2838,19 @@
                                         </p>
                                         <details>
                                             <summary class="read-more">
-                                                <span class="closed read-text ml-auto">Read more</span>
-                                                <span class="open read-text ml-auto">Read less</span>
+                                                <span class="closed read-text ml-auto"
+                                                      aria-label="Open to read more">
+                                                    Read more
+                                                </span>
+                                                <span class="open read-text ml-auto"
+                                                      aria-label="Close to read less">
+                                                    Read less
+                                                </span>
                                                 <span class="pr-2">
-                                                    <ion-icon id="readmore" name="add" class="read-more-icon"></ion-icon>
+                                                    <ion-icon id="readmore" name="add"
+                                                              class="read-more-icon"
+                                                              aria-hidden="true">
+                                                    </ion-icon>
                                                 </span>
                                             </summary>
                                             <div class="summary-content outset-container-2">
@@ -2854,10 +2901,19 @@
                                         </p>
                                         <details>
                                             <summary class="read-more">
-                                                <span class="closed read-text ml-auto">Read more</span>
-                                                <span class="open read-text ml-auto">Read less</span>
+                                                <span class="closed read-text ml-auto"
+                                                      aria-label="Open to read more">
+                                                    Read more
+                                                </span>
+                                                <span class="open read-text ml-auto"
+                                                      aria-label="Close to read less">
+                                                    Read less
+                                                </span>
                                                 <span class="pr-2">
-                                                    <ion-icon id="readmore" name="add" class="read-more-icon"></ion-icon>
+                                                    <ion-icon id="readmore" name="add"
+                                                              class="read-more-icon"
+                                                              aria-hidden="true">
+                                                    </ion-icon>
                                                 </span>
                                             </summary>
                                             <div class="summary-content outset-container-2">
@@ -2916,10 +2972,19 @@
                                         </p>
                                         <details>
                                             <summary class="read-more">
-                                                <span class="closed read-text ml-auto">Read more</span>
-                                                <span class="open read-text ml-auto">Read less</span>
+                                                <span class="closed read-text ml-auto"
+                                                      aria-label="Open to read more">
+                                                    Read more
+                                                </span>
+                                                <span class="open read-text ml-auto"
+                                                      aria-label="Close to read less">
+                                                    Read less
+                                                </span>
                                                 <span class="pr-2">
-                                                    <ion-icon id="readmore" name="add" class="read-more-icon"></ion-icon>
+                                                    <ion-icon id="readmore" name="add"
+                                                              class="read-more-icon"
+                                                              aria-hidden="true">
+                                                    </ion-icon>
                                                 </span>
                                             </summary>
                                             <div class="summary-content outset-container-2">
@@ -2986,9 +3051,9 @@
                     </div><!-- close 6.0 page-left text -->
 
                     <!-- start 6.0 PAGE-RIGHT MEDIA -->
-                    <div class="outer-body col-12 col-lg-5">
+                    <div class="outer-body outer-second col-12 col-lg-5">
                         <!-- start 6.2 SUB-SECTION -->
-                        <section id="sectionFive-2" class="right inner-body media-content break-words">
+                        <section id="six-two" class="inner-body inner-right media-content break-words">
                             <h5 id="honors-title" class="pv-accomplishments-block__title t-bold t-14">
                                 Honors &amp; Awards
                             </h5>
@@ -3244,7 +3309,7 @@
                                     <a class="outset-container-2 btn"
                                        href="https://www.linkedin.com/in/joem-elias-sanez/" target="_blank">
                                         <span class="inset-inner">
-                                            <i class="fab fa-linkedin-in"></i>
+                                            <i class="icon-linkedin fab fa-linkedin-in"></i>
                                             <span class="sr-only">LinkedIn</span>
                                         </span>
                                     </a>
@@ -3294,14 +3359,14 @@
                 <!-- start 7.0 SPREAD -->
                 <div class="spread row">
                     <!-- start 7.0 PAGE-LEFT TEXT -->
-                    <div class="outer-body col-12 col-lg-6">
+                    <div class="outer-body outer-first col-12 col-lg-6">
                         <!-- start 7.0 TEXT CONTENT -->
-                        <h4 class="inset-item">
+                        <h4 class="inset-item lg-hide">
                             I am always keen to collaborate with good people on innovative ideas.
                             <i class="section-icon fas fa-satellite-dish" aria-hidden="true"></i>
                         </h4>
                         <!-- start 7.1 SUB-SECTION -->
-                        <section id="sectionSix-1" class="left inner-body">
+                        <section id="seven-one" class="inner-body inner-left">
                             <h5>
                                 Contact
                             </h5>
@@ -3313,7 +3378,7 @@
                                     </span>
                                     <a class="outset-container-2 btn" href="mailto:israelias.js@gmail.com" target="_blank">
                                         <span class="inset-inner">
-                                            <i class="fas fa-envelope"></i>
+                                            <i class="icon-call fas fa-envelope"></i>
                                             <span class="sr-only">Email</span>
                                         </span>
                                     </a>
@@ -3324,7 +3389,7 @@
                                     </span>
                                     <a class="outset-container-2 btn" href="tel:+63-945-994-5975">
                                         <span class="inset-inner">
-                                            <i class="fas fa-phone"></i>
+                                            <i class="icon-call fas fa-phone"></i>
                                             <span class="sr-only">Phone</span>
                                         </span>
                                     </a>
@@ -3335,7 +3400,7 @@
                                     </span>
                                     <a class="outset-container-2 btn" href="https://goo.gl/maps/n4umybjkAX5u2zQ88" target="_blank">
                                         <span class="inset-inner">
-                                            <i class="fas fa-map-marker-alt"></i>
+                                            <i class="icon-call fas fa-map-marker-alt"></i>
                                             <span class="sr-only">Google map location</span>
                                         </span>
                                     </a>
@@ -3345,14 +3410,18 @@
                     </div><!-- close 7.0 page-left text -->
 
                     <!-- start 7.0 PAGE-RIGHT MEDIA -->
-                    <div class="outer-body col-12 col-lg-6">
+                    <div class="outer-body outer-second col-12 col-lg-6">
                         <!-- start 7.2 SUB-SECTION -->
-                        <section id="sectionSix-2" class="right inner-body media-content">
+                        <section id="seven-two" class="inner-body inner-right media-content">
                             <h5 class="text-right">
                                 Drop me a line!
                             </h5>
                             <!-- start 7.2 FORM ELEMENT -->
-                            <form id="message-form" class="message-form-group inset-container" method="post" action="#" onsubmit="return false">
+                            <form class="message-form-group inset-container"
+                                  id="message-form"
+                                  method="post"
+                                  action="#"
+                                  onsubmit="return false">
                                 <!-- start 7.2 FORM GROUP -->
                                 <div class="form-group connect-cta">
 
@@ -3407,32 +3476,57 @@
     <!-- start FOOTER CONTAINER -->
     <footer class="body-footer">
         <!-- start GITHUB FOOTER ITEM -->
-        <div class="text-sm-center justify-content-center mr-auto text-md-left">
-            <span class="d-inline-block text-center">
-                <ion-icon class="align-middle" name="logo-github"></ion-icon>
-            </span>
-            <p class="d-inline-block text-center">
-                <a class="text-dark align-middle small" href="https://github.com/israelias" target="_blank">
-                    @israelias
+        <div class="footer-left text-sm-center text-md-left">
+            <span class="footer-item">
+                <a class="text-dark align-middle small"
+                   href="https://github.com/israelias"
+                   target="_blank"
+                   aria-label="Github profile">
+                    <ion-icon class="footer-icon align-middle"
+                              name="logo-github"
+                              aria-hidden="true">
+                    </ion-icon>
+                    <span class="footer-text">
+                        @israelias
+                    </span>
                 </a>
-            </p>
+            </span>
+            <span class="footer-item">
+                <a class="text-dark align-middle small"
+                   href="tel:+63-945-994-5975"
+                   target="_blank"
+                   aria-label="Telephone number">
+                    <ion-icon class="footer-icon outline-icon align-middle"
+                              name="call-outline"
+                              aria-hidden="true">
+                    </ion-icon>
+                    <ion-icon class="footer-icon filled-icon align-middle"
+                              name="call"
+                              aria-hidden="true">
+                    </ion-icon>
+                    <span class="footer-text">
+                        +63 945 994 5975
+                    </span>
+                </a>
+            </span>
         </div><!-- close github footer item -->
         <!--start AUTHOR FOOTER ITEM-->
-        <div class="text-sm-center justify-content-center ml-auto text-md-right">
-            <h6 class="d-inline-block text-center">
-                © <span class="d-none d-lg-inline-block">Designed and Built by</span>
-            </h6>
-            <p class="d-inline-block text-center">
-                <a class="text-dark" href="#">
-                    Joem Elias Sanez
+        <div class="footer-right">
+            <span class="footer-item">
+                <a class="text-dark small">
+                    <span class="footer-copyright">©</span> <span
+                        class="footer-text text-label">Designed
+                    and Built
+                    by</span>
+                    <span class="footer-author">
+                        Joem Elias Sanez
+                    </span>
                 </a>
-            </p>
+            </span>
         </div><!-- close author footer item -->
     </footer><!-- close footer container -->
 
     <!-- MDBootstrap -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
-    <!-- ionicons -->
-    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 </body>
 </html>
