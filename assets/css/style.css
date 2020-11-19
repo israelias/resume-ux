@@ -253,44 +253,45 @@ ion-icon {
 /* Splash landing heading */
 
 h1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 0 auto;
-    padding: 5rem 1rem 1rem;
-    margin-bottom: .5rem;
+    /*display: -webkit-box;*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+    /*-webkit-box-orient: vertical;*/
+    /*-webkit-box-direction: normal;*/
+    /*    -ms-flex-direction: column;*/
+    /*        flex-direction: column;*/
+    /*-webkit-box-pack: center;*/
+    /*    -ms-flex-pack: center;*/
+    /*        justify-content: center;*/
+    /*margin: 0 auto;*/
+    /*padding: 5rem 1rem 1rem;*/
+    /*margin-bottom: .5rem;*/
 
-    font-family: attribute-mono, sans-serif;
-    font-weight: 300 !important;
-    -webkit-font-feature-settings: 'c2sc';
-            font-feature-settings: 'c2sc';
+    /*font-family: attribute-mono, sans-serif;*/
+    /*font-weight: 300 !important;*/
+    /*-webkit-font-feature-settings: 'c2sc';*/
+    /*        font-feature-settings: 'c2sc';*/
 }
 
 /* Splash landing sub-heading  */
 
 h2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 0 auto;
-    padding-bottom: 1.5rem;
+    /*display: -webkit-box;*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+    /*-webkit-box-pack: center;*/
+    /*    -ms-flex-pack: center;*/
+    /*        justify-content: center;*/
+    /*margin: 0 auto;*/
+    /*padding-bottom: 1.5rem;*/
 
-    text-transform: lowercase;
+    /*text-transform: lowercase;*/
 
-    font-family: attribute-mono, sans-serif;
-    font-style: normal;
+    /*!*font-family: "Source Code Pro", sans-serif;*!*/
+    /*font-style: normal;*/
 
-    color: #A4a4a4;
+    /*!*color: #A4a4a4;*!*/
+    /*color: #4f4f4f;*/
 }
 
 /* Header button headings */
@@ -441,6 +442,7 @@ h6 {
     padding-right: var(--margin);
 
     transition: all .75s var(--glide) 0s;
+
 }
 
 #toggle-all:checked ~ .body-footer {
@@ -1400,7 +1402,8 @@ body {
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: var(--scrollhandle);
     border-radius: var(--scrollhandle);
-    background: rgba(255,0,0,0.8);
+    /*background: rgba(255,0,0,0.8);*/
+    background: #fff200;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 ::-webkit-scrollbar-thumb:window-inactive {
@@ -2895,7 +2898,7 @@ ul.nav {
  * position will be animated.
  *
  * This is manually synced with the side menu '.body-nav' transitions.
- * This extends the '--of-twelve' value re-declared at the previews '.body-*' scope
+ * This extends the '--of-twelve' value re-declared at the previous '.body-*' scope
  * but sets width properties to viewport-width units as the button has no sibling like
  * '--mainwidth' to respond to, and is in a fixed-position header.
  */
@@ -4550,14 +4553,186 @@ form .connect-cta input {
         line-height: 2rem;
     }
 }
-
-.cover-banner {
-    display: flex;
-    flex-direction: column;
+h2 {
+    font-family: Monotalic, sans-serif;
 }
 
+/* Box model container to set the limits of the landing section.
+ * Contains the `.ribboneto-trial` scope and the landing  CTA
+ * as separate siblings.
+ */
+
+.cover-banner {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* The Landing section scope. A container with the site's
+ * h1, h2, and contact a contact card.
+ *
+ * Text contained in headings are styled to accomplish design/
+ * typography specifications where the semantic structure and
+ * relative meaning of such headings are not affected.
+ * Reserved for malleability of typographic features.
+ * Headingss are thus given a reboot at the beginning of style.css
+ * to wrap the consistest heading text they present throughout the
+ * site.
+ *
+ *
+ * The '.ribboneto-trial` scope features a landing summary section
+ * styled as the header of a printed CV. Content and type
+ * configurations are taken from the owner's CV pdf, which is
+ * accessible via the CTA link following this scope section.
+ *
+ * Ribboneto allows <h1> and <h2> to function as columns.
+ * <h1> is a full-width row containing the owner's name.
+ * <h2> is a col-8 that shares a row with `.cover-title` class.
+ * <h2> conveys the CV's sub-heading: "CV and Work Samples Developed
+ * for The Web"
+ * This subheading is split into two "phrase spans" with distinct
+ * typographic styles.
+ *
+ * The `.cover-title` class is a col-4 that shares a row with <h2>
+ * Cover-title is a landing "stamp", conceived as prescriptive, stats
+ * typically printed on the top of candidate CVs, and is a rendered
+ * in the doc outline as the supporting sub-text of the overall site.
+ * With these elements, and the CTA container in the next scope,
+ * the landing page runs as a self-sufficient banner, holding the most
+ * important info and content for the owner's and a user's objective --
+ * info and CV -- while simultaenously offering immediate invitation.
+ * This scope is to accomplish an overwhilming assertion that content
+ * within the collapsed sections complete a thorough and most valuable
+ * curriculum vitae (developed for the web, of course.)
+ */
+
+.ribboneto-trial {
+    /* Not necesrally to call the --of-twelve property here from :root,
+     * But helpful both for clarity, flexibility (in case we want to
+     * conceive an entirely different window square footage for the
+     * landing page relative to its nested article) and, importantly,
+     * just in case the machine fails to retrieve the value at root.
+     *
+     */
+
+    --of-twelve: 11;
+    --ribwidth: calc(var(--of-twelve) / 12 * 100vw);
+    --riboffset: calc((12 - var(--of-twelve)) / 12 * 100vw);
+    --ribs-lh: 1.2535;
+    --ribs-margin: calc(var(--riboffset) / 2 * -1);
+
+    /*-66% is the trick for small sc*/
+
+    --ribspace: 2px;
+    --h1-height: 3rem;
+    --h1-top-pad: 3vh;
+    --h2-top-pad: 2vh;
+    /*--ribbon-datum: calc(100vh - 75% - var(--h1-height) - var(--h2-top-pad) - var(--h1-top-pad));*/
+    --ribbon-datum: calc(100vh - 88vh + var(--h2-top-pad));
+
+    flex-direction: row;
+    justify-content: start;
+    margin-left: var(--ribs-margin);
+    margin-right: var(--ribs-margin);
+}
+
+/*.body-nav.show ~ .body-main .ribboneto-trial {*/
+/*    --ribs-margin: -66.66%;*/
+/*    flex-direction: column;*/
+/*}*/
+
+.ribboneto-trial a {
+    color: var(--deep-1);
+}
+
+/* Establishes type configs for two features texts in the
+ * ribbon.
+ */
+
+.ribbon-fist {
+    font-family: Monotalic, sans-serif;
+    font-feature-settings: 'c2sc', 'smcp';
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* Styles array of candidate info. */
+
+.ribbon-extended {
+    font-size: .875rem;
+    line-height: 1rem;
+}
+
+/* Complete styling of a linear certificate, */
+
+.ribbon-fragment {
+    min-height: calc(2em + var(--ribspace)*1);
+    border-top: thin solid var(--raisin);
+
+    display: flex;
+    align-items: center;
+    padding: .5em 0;
+
+    /*font-size: 10px;*/
+    /*line-height: 1.2555;*/
+
+    font-size: 11px;
+    line-height: var(--ribs-lh);
+}
+
+/* Utilizes minimal ribbon attributes (border and spacing)
+ * for decorative purposes.
+ */
+
+.ribbon-unravel {
+    border-top: thin solid var(--raisin);
+    font-size: 11px;
+    line-height: 1.2535;
+}
+
+/* Main heading styles.
+ *
+ * CREDIT (slightly modified) How to "highlight" text.
+ *     https://medium.com/@codingdudecom/highlight-text-css-97331a5b71b5
+ *
+ * Includes highlighted text and  "highlighted as pseudo :before element.
+ */
+
+.ribbon-highlight {
+    position:relative;
+    margin:0.1em;
+    color: #4f4f4f;
+    text-transform: uppercase;
+    font-family: Monotalic, sans-serif;
+    font-weight: 300;
+    /*width: 66vw;*/
+    white-space: nowrap;
+    text-align: left;
+}
+
+.ribbon-highlight:before{
+    content:"";
+    z-index:-1;
+    left:-0.5em;
+    top:0.1em;
+    border-width:0.5em;
+    border-style:solid;
+    border-color: #fff200;
+    position:absolute;
+    /*width:100%;*/
+    width: 66.66%;
+    border-left: none;
+    border-right: none;
+    /*border-left-color:transparent;*/
+    /*border-right-color:transparent;*/
+    border-top-color: transparent;
+}
+
+/* Flex containers within the h2 scope. */
+
 .cover-title,
-.cover-name,
+.banner-text,
 .banner-top,
 .banner-bottom {
     display: -webkit-box;
@@ -4565,9 +4740,44 @@ form .connect-cta input {
     display: flex;
 }
 
+.cover-datum {
+    /*padding-top: var(--ribdatum);*/
+    /*padding-top: var(--ribbon-datum);*/
+    padding-top: 2vh;
+}
+
+/*
+ * Decorative element styles.
+ *
+ * The `.banner-text` class is contained in <h2>'s `.cover-title`
+ * This controls the positioning of characters that make up the second
+ * half of the <h2> subtitle.
+ *
+ * Banner-text assigns flex behavior elements carefully segmented in
+ * multiple <span>s.
+ * Banner-text's immediate children are the `.banner-top`, `.banner-middle`
+ * and `.banner-bottom`; each of which contain syllables wrapped in spans
+ * that hold the desired result.
+ */
+
+.banner-text {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+
+    text-transform: lowercase;
+
+    font-family: Monotalic, sans-serif;
+    font-style: normal;
+
+    color: var(--raisin);
+    font-size: .875rem;
+}
+
 .banner-top {
     line-height: .875rem;
-    color: #a4a4a4;
     -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
@@ -4594,22 +4804,103 @@ form .connect-cta input {
 
 .banner-middle {
     opacity: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     position: absolute;
-    text-align: left;
     font-style: italic;
     padding-right: 1.5rem;
     margin-top: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 0;
     opacity: 1;
+    line-height: var(--ribs-lh);
+    font-size: .765rem;
+}
+
+/* Helper container for duplicate "ed" in "developed"
+ * See index.html.
+*/
+
+.banner-pseudo {
+    line-height: var(--ribs-lh);
+    font-size: .875rem;
+}
+
+/* Hover styles for decoration figure.
+ * The styled typography, which is "constricted" in gesture,
+ * expands in a straight line when hovered, and at certain
+ * media queries.
+ */
+
+.banner-text:hover .banner-top,
+.banner-text:hover .banner-bottom {
+    flex-direction: row;
+    margin-bottom: 0;
+    line-height: 1;
+    justify-content: space-around;
+}
+
+.banner-text:hover .banner-middle {
+    display: none;
+}
+
+.banner-text:hover .string-head,
+.banner-text:hover .string-tail {
+    padding-bottom: 2rem;
+    margin-top: auto;
+}
+
+.banner-text:hover .ribbon-fragment,
+.banner-text:hover .ribbon-unravel {
+    border-top: none;
+    border-bottom: thin solid var(--raisin);
+}
+
+/* Controls dual parentheses enclosing banner-text. */
+
+.string-head,
+.string-tail {
+    position: absolute;
+    display: inline-block;
+    font-family: attribute-mono, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--raisin);
+}
+
+.string-head {
+    padding-top: -.3rem;
+    margin-left: -2vw;
+    padding-right: .25rem;
+}
+
+.string-tail {
+    padding-bottom: -.3rem ;
+    margin-right: -2vw;
+    padding-left: .25rem;
 }
 
 .banner-pseudo {
     display: none;
 }
+
+/*.banner-text {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    left: 0;*/
+/*    margin-right: 25vw;*/
+/*    margin-left: 25vw;*/
+/*    !*margin-top:calc(100vh - 92vh);*!*/
+/*    padding-top: calc(var(--ribbon-datum) - 2rem);*/
+/*}*/
+
+/*
+ * Download CTA at landing.
+ *
+ * The CTA to download the owner's CV is displayed
+ * via the flaship structure and classes used throughout
+ * the project.
+ * Variable adjustments are made as required.
+ * */
 
 .banner-cta .value {
     font-family: attribute-mono, sans-serif;
@@ -4618,6 +4909,8 @@ form .connect-cta input {
 .banner-cta .value i {
     color: var(--deep-4);
 }
+
+/* Styles to unfold the banner at landscape dashboard query. */
 
 @media (orientation: landscape) {
     .banner-top {
@@ -4652,6 +4945,23 @@ form .connect-cta input {
 }
 
 @media (max-width: 575.98px) {
+    .ribboneto-trial,
+    .banner-cta {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .ribbon-highlight:before{
+        /*width:100%;*/
+    }
+
+    .cover-title.title-sub {
+        width: 100% !important;
+    }
+
+    .cover-title.title-profile {
+        width: 100% !important;
+        flex: 0;
+    }
     .banner-cta .value {
         font-size: .725rem;
         margin-bottom: 1rem;
@@ -4664,6 +4974,11 @@ form .connect-cta input {
     .banner-cta .contact-text,
     .banner-cta .btn {
         height: 40px;
+    }
+    .ribbon-fragment,
+    .ribon-extende {
+        font-size: 10px;
+        line-height: 1.2555;
     }
 }
 
