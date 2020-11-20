@@ -177,7 +177,7 @@ body {
     color: var(--deep-1);
 }
 
-p, small, .footer-item a {
+p, small, .footer-item {
     font-family: attribute-text, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -250,48 +250,10 @@ ion-icon {
    Headings @prefixed
    ========================================================================== */
 
-/* Splash landing heading */
+/* Landing headings. See `.ribboneto-trial` class */
 
-h1 {
-    /*display: -webkit-box;*/
-    /*display: -ms-flexbox;*/
-    /*display: flex;*/
-    /*-webkit-box-orient: vertical;*/
-    /*-webkit-box-direction: normal;*/
-    /*    -ms-flex-direction: column;*/
-    /*        flex-direction: column;*/
-    /*-webkit-box-pack: center;*/
-    /*    -ms-flex-pack: center;*/
-    /*        justify-content: center;*/
-    /*margin: 0 auto;*/
-    /*padding: 5rem 1rem 1rem;*/
-    /*margin-bottom: .5rem;*/
-
-    /*font-family: attribute-mono, sans-serif;*/
-    /*font-weight: 300 !important;*/
-    /*-webkit-font-feature-settings: 'c2sc';*/
-    /*        font-feature-settings: 'c2sc';*/
-}
-
-/* Splash landing sub-heading  */
-
-h2 {
-    /*display: -webkit-box;*/
-    /*display: -ms-flexbox;*/
-    /*display: flex;*/
-    /*-webkit-box-pack: center;*/
-    /*    -ms-flex-pack: center;*/
-    /*        justify-content: center;*/
-    /*margin: 0 auto;*/
-    /*padding-bottom: 1.5rem;*/
-
-    /*text-transform: lowercase;*/
-
-    /*!*font-family: "Source Code Pro", sans-serif;*!*/
-    /*font-style: normal;*/
-
-    /*!*color: #A4a4a4;*!*/
-    /*color: #4f4f4f;*/
+h1, h2 {
+    font-family: monotalic, sans-serif;
 }
 
 /* Header button headings */
@@ -350,7 +312,11 @@ h6 {
    Layout configs @prefixed
    ========================================================================== */
 
-/* This is how the stack contracts from its center axis as opposed to pulling from the top or bottom */
+/* Note:
+ *
+ * This is how the stack contracts from its center axis as opposed to pulling
+ * from the top or bottom
+ */
 
 .root-body > * {
     display: -webkit-box;
@@ -402,208 +368,61 @@ h6 {
     padding-left: calc(var(--gutter-x) / 2);
 }
 
-/* Absolutely positioned elements in the dom will always go above everything even if it's position fixed */
-/* https://stackoverflow.com/questions/13071429/how-to-position-main-content-below-header-and-footer-in-css */
-
-.body-header {
-    position: absolute;
-    z-index: 99;
-}
-
-.body-header .navbar-light {
-    background: var(--paper,#F2F1EF);
-}
-
-/* Footer
+/* ==========================================================================
+   Toggle-all checkbox button
    ========================================================================== */
 
-.body-footer {
+/**
+ * The global switch that toggles 'expand everything' mode.
+ *
+ * This features the ability to expand all that is not currently
+ * shown/expanded, rendering index.html into a single-page static site with
+ * seven discrete sections.
+ *
+ * Controlled by a fixed-position checkbox input element.
+ * The checkbox is placed outside of the body header in order to elicit
+ * behavior to and from immediate sibling elements via ':checked' selector.
+ *
+ * The input element is positioned for screen-reader accessibility.
+ * The label element contains styles to indicate the toggle states.
+ *
+ * Element 'input[type="checkbox"]' is assigned the identifier '#toggle-all' and
+ * will be selected by this id for code efficiency and clarity.
+ *
+ * Scopes from here on contain variable adjustments for the #toggle-all states.
+ */
+
+input[type="checkbox"] {
+    position: absolute!important;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Position and style the label for the checkbox */
+
+input[type="checkbox"],
+[for="toggle-all"] {
     position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1030;
+    top: 1rem;
+    left: 49%;
+    right: 49%;
+    z-index: 100;
 
-    display: -webkit-box;
-
-    display: -ms-flexbox;
-
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-
-    margin-top: auto;
-    padding-left: var(--margin);
-    padding-right: var(--margin);
-
-    transition: all .75s var(--glide) 0s;
-
+    cursor: pointer;
+    tab-index: 0;
 }
 
-#toggle-all:checked ~ .body-footer {
-    position: static;
-    padding-bottom: 1rem;
-}
-
-.body-nav.show ~ .body-footer {
-    flex-direction: row-reverse;
-    width: var(--vw-navwidth) !important;
-    padding-left: calc(var(--padding) + .5rem);
-    color: var(--deep-1);
-    transition: all .75s var(--glide) 0s;
-}
-
-.footer-right,
-.footer-left,
-.footer-item {
-    transition: all .1s var(--glide) 0s;
-}
-
-.footer-text,
-.footer-copyright,
-.footer-author {
-    transition: all .75s var(--glide) var(--early);
-}
-
-.body-nav.show ~ .body-footer .footer-left .footer-item:first-child,
-.body-nav.show ~ .body-footer .footer-left .footer-item:nth-child(2) {
-    margin-left: calc(25vw / 6);
-}
-
-.body-nav.show ~ .body-footer .footer-right {
-    margin: 0;
-}
-
-.body-nav.show ~ .body-footer .footer-text,
-.body-nav.show ~ .body-footer .footer-text.text-label,
-.body-nav.show ~ .body-footer .footer-copyright {
-    display: none;
-}
-
-.footer-left,
-.footer-right {
-    text-align: center;
-    justify-content: center;
-}
-
-.footer-text.text-label {
-    display: none;
-}
-
-.footer-left {
-    margin-right: auto;
-}
-
-.footer-right {
-    margin-left: auto;
-}
-
-.footer-item {
-    display: inline-block;
-
-    margin-top: 0;
-    margin-bottom: 1rem;
-    margin-right: 0;
-
-    text-align: center;
-}
-
-.footer-icon.filled-icon {
-    display: none;
-}
-
-.footer-item:nth-child(2) {
-    margin-left: calc(100vw / 5.25);
-}
-
-@media (min-width: 992px) {
-    .body-nav.show ~ .body-footer .footer-left .footer-item:first-child,
-    .body-nav.show ~ .body-footer .footer-left .footer-item:nth-child(2) {
-        margin-left: calc(25vw / 5 + 3vh);
-    }
-
-    .footer-text.text-label {
-        display: inline-block;
-    }
-}
-
-@media (max-width: 991.98px) and (orientation: landscape) {
-    .body-footer,
-    #toggle-all:checked ~ .body-footer {
-        position: fixed;
-        flex-direction: row-reverse;
-        width: var(--vw-navwidth) !important;
-        padding-left: calc(var(--padding) + .5rem);
-        padding-bottom: 0;
-        color: var(--deep-1);
-    }
-
-    .footer-left .footer-item:first-child,
-    .footer-left .footer-item:nth-child(2) {
-        margin-left: 2rem;
-    }
-
-    .footer-text,
-    .footer-copyright {
-        display: none;
-    }
-
-    .footer-author {
-        font-size: 1.2rem;
-        font-weight: 500;
-    }
-    .footer-right {
-        margin: 0;
-    }
-
-    .footer-icon.outline-icon {
-        display: none;
-    }
-
-    .footer-icon,
-    .footer-icon.filled-icon {
-        display: inline-block;
-        color: var(--deep-2);
-    }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .body-nav.show ~ .body-footer .footer-right .footer-item {
-        display: none;
-    }
-}
-
-@media (max-width: 767.98px) {
-    #target-zero {
-        height: 40vh;
-    }
-
-    .body-footer {
-        -ms-flex-negative: 0;
-            flex-shrink: 0;
-        height: 3rem;
-        position: static;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 44px;
-    }
-
-    .footer-item:nth-child(2){
-        display: none;
-    }
-
-    .body-nav.show ~ .body-footer {
-        flex-direction: row;
-        margin-left: 25vw;
-        transition: all .75s var(--glide) 0s;
-    }
-    .body-nav.show ~ .body-footer .footer-right {
-        margin-right: 0;
+@media (max-width: 575.98px) {
+    input[type="checkbox"],
+    [for="toggle-all"] {
+        top: 1.1rem;
     }
 }
 
@@ -627,7 +446,7 @@ h6 {
  *
  * <header id="control-one">
  *     <h3 class="header-title">
- *         <button class="collapsed" data-toggle="collapse" data-target="#target-one" aria-expanded="false">
+ *         <button data-toggle="collapse" data-target="#target-one" aria-expanded="false">
  *             <span class="header-content">
  *                 <span class="header-name">
  *                     INTRODUCTION
@@ -636,9 +455,9 @@ h6 {
  *                     About and recent activity
  *                 </span>
  *             </span>
- *             <span class="header-icon justify-self-end">
- *                 <ion-icon name="code-working-outline" class="closed"></ion-icon>
- *                 <ion-icon name="code-slash-outline" class="open"></ion-icon>
+ *             <span class="header-icon">
+ *                 <ion-icon class="closed"></ion-icon>
+ *                 <ion-icon class="open"></ion-icon>
  *             </span>
  *         </button>
  *     </h3>
@@ -830,16 +649,16 @@ h6 {
 /*!
  * Typical section division.
  *
- * The '.spread' class is used to select the global parent element of column pairs in each collapsed section.
+ * These classes control parent columns in each collapsed section.
  * Attached as an additive helper to the bs '.row' class.
  *
  * Example HTML:
  *
  * <section class="collapse">
  *     <div class="spread row">
- *         <div class="outer-body col-12 col-lg-7" ... >
+ *         <div class="outer-body outer-first" ... >
  *             <section class="inner-body left" ... >
- *         <div class="outer-body col-12 col-lg-5" ... >
+ *         <div class="outer-body outer-second" ... >
  *             <section class="inner-body right" ... >
  *     </div>
  * </section>
@@ -1003,7 +822,6 @@ h6 {
  * calc(var(--margin) * -1) == -4.16%
  * calc(var(--margin) / 2 * -1) == -2.08%
  */
-/* BUG: PSEUDOS are funky on Safari */
 
 article {
     --outlines: var(--raisin);
@@ -1025,14 +843,6 @@ section.collapsing {
     -webkit-clip-path: inset(-1.5rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
             clip-path: inset(-1.5rem calc(var(--margin) * -1) 0 calc(var(--margin) * -1));
 }
-
-/* TODO animate toggle in to be a horizontal line */
-/* TODO fix onshow animations */
-/* TODO fix margins for lg */
-/* TODO streamline the mobile experience like the md experience */
-/* TODO design the nav to be like a calling card */
-/* TODO change the href when toggle is on */
-
 
 article:before,
 article:after,
@@ -1238,7 +1048,6 @@ article > header:after {
     height: 2.875rem;
 
     background: var(--paper);
-    /*border: 1px dashed red;*/
 }
 
 /* Style left pseudo-concealer */
@@ -1438,7 +1247,7 @@ html {
 
 
 /* ==========================================================================
-   Master Collapse functions and animations @prefixed
+   Master collapsible section boolean states
    ========================================================================== */
 
 /*
@@ -1512,7 +1321,6 @@ html {
  */
 
 [data-parent="#resumeStack"] {
-    /* todo from vmax */
     --height: calc(100vh - 21rem - 8rem);
     overflow: auto;
 }
@@ -1620,99 +1428,6 @@ html {
             flex .1s var(--swoop) 0s,
             -webkit-box-flex .1s var(--swoop) 0s,
             -ms-flex .1s var(--swoop) 0s;
-}
-
-/*
- * Transition variables for mobile.
- *
- * 1. Decrease base rem scale for xs screens.
- * 2. Only feature media content on xs screens (section.inner-left).
- * 3. Only feature select written content on xs screens (section.inner-right).
-*/
-
-@media (max-width: 575.98px) {
-    :root {
-        font-size: .938rem;
-    }
-
-    .article-section:not(#target-one) {
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
-    }
-
-    [data-parent="#resumeStack"] {
-        --height: calc(100vh - 21rem - 6rem);
-        /*--height: 60vh;*/
-        overflow: scroll;
-    }
-}
-
-/*
- * Transition variables for landscape-mobile to tablet screens.
- *
- * 1. Only feature media content on sm-md screens (section.inner-left).
- * 2. Only feature select written content on sm-md screens (section.inner-right).
-*/
-
-@media (min-width: 576px) and (max-width: 991.98px) {
-    .main-article {
-        flex: 0 0 auto !important;
-        width: 100% !important;
-    }
-
-    #target-one .outer-first,
-    #target-one .outer-second {
-        width: 100%;
-    }
-}
-
-/*
- * Transition variables for portrait-mobile and tablet screens.
- *
- * 1. Only feature media content on xs-sm-md devices (section.inner-right) by default.
- * 2. Show all content on toggle of expand-all.
-*/
-
-@media (max-width: 991.98px) {
-    [data-parent="#resumeStack"]:not(#target-one) .outer-first {
-        display: none;
-    }
-
-    #toggle-all:checked ~ main .header-text,
-    #toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-one) .outer-first {
-        display: block;
-    }
-
-    /* Hide one of two CTAs that references a section not featured at this
-     * media query.
-     * ID selectors are required to control the following.
-     * IDs have been assigned to two `.activity-cta` containers in the second
-     * section of the fourth article.
-     */
-
-    #four-two-cta-1 {
-        display: none !important;
-    }
-
-    /* Move the relevant CTA to the bottom of the list at this media query. */
-
-    #four-two-cta-2 {
-        -webkit-box-ordinal-group: 6 !important;
-        -ms-flex-order: 5 !important;
-            order: 5 !important;
-    }
-
-    /* Return to to default order when expand-all is :checked */
-
-    #toggle-all:checked ~ .body-main #four-two-cta-1 {
-        display: block !important;
-    }
-
-    #four-two-cta-2 {
-        -webkit-box-ordinal-group: 0;
-        -ms-flex-order: 0;
-            order: 0;
-    }
 }
 
 /* Show event animation keyframes */
@@ -1933,72 +1648,8 @@ html {
 }
 
 /* ==========================================================================
-   Toggle-all checkbox button @prefixed
+   Outer Structure configs for :checked state
    ========================================================================== */
-
-/**
- * The global switch that toggles 'expand everything' mode.
- *
- * This features the ability to expand all that is not currently
- * shown/expanded, rendering index.html into a single-page static site with
- * seven discrete sections.
- *
- * Controlled by a fixed-position checkbox input element.
- * The checkbox is placed outside of the body header in order to elicit
- * behavior to and from immediate sibling elements via ':checked' selector.
- *
- * The input element is visually-hidden by default.
- * The input's label element contains icons that swap visibility on toggle of ':checked'.
- *
- * Element 'input[type="checkbox"]' is assigned the identifier '#toggle-all' and
- * will be selected by this id for code efficiency and clarity.
- */
-
-input[type="checkbox"] {
-    position: absolute!important;
-    height: 1px;
-    width: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(1px 1px 1px 1px);
-    clip: rect(1px,1px,1px,1px);
-    white-space: nowrap;
-    border: 0;
-}
-
-/* Position and style the label for the checkbox */
-
-input[type="checkbox"],
-[for="toggle-all"] {
-    position: fixed;
-    top: 1rem;
-    left: 49%;
-    right: 49%;
-    z-index: 100;
-
-    cursor: pointer;
-    tab-index: 0;
-}
-
-#checkbox-toggle {
-    nav-index: 2;
-    atsc-nav-index: 2;
-    nav-right: #id;
-    atsc-nav-right: #id;
-    nav-left: #nav-button;
-    atsc-nav-left: #nav-button;
-}
-
-#nav-button {
-    nav-index: 1;
-     atsc-nav-index: 1;
-    nav-right: #checkbox-toggle;
-    atsc-nav-right: #checkbox-toggle;
-    /*nav-left: #b4;*/
-    /*nav-down: #b2;*/
-    /*nav-up:#b4;*/
-}
 
 /*
  * The static website.
@@ -2039,12 +1690,12 @@ input[type="checkbox"],
         overflow-x: hidden;
     }
 
-    #toggle-all:checked ~ main .header-content {
-        flex-wrap: wrap;
-    }
-    #toggle-all:checked ~ main .header-text {
-        width: 100%;
-    }
+    /*#toggle-all:checked ~ main .header-content {*/
+    /*    flex-wrap: wrap;*/
+    /*}*/
+    /*#toggle-all:checked ~ main .header-text {*/
+    /*    width: 100%;*/
+    /*}*/
 
     #toggle-all + label .toggle-container .menu-icon {
         visibility: hidden;
@@ -2098,8 +1749,150 @@ input[type="checkbox"],
 }
 
 /* ==========================================================================
-   Side menu navigation
+   Inner Structure configs for global events
    ========================================================================== */
+
+/*
+ * Transition variables for mobile.
+ *
+ * 1. Decrease base rem scale for xs screens.
+ * 2. Only feature media content on xs screens (section.inner-left).
+ * 3. Only feature select written content on xs screens (section.inner-right).
+*/
+
+@media (max-width: 575.98px) {
+    :root {
+        font-size: .938rem;
+    }
+
+    /*.article-section:not(#target-one) {*/
+    /*    -webkit-overflow-scrolling: touch;*/
+    /*    scroll-behavior: smooth;*/
+    /*}*/
+
+    [data-parent="#resumeStack"] {
+        --height: calc(100vh - 21rem - 6rem);
+        /*--height: 60vh;*/
+        overflow: scroll;
+    }
+}
+
+/*
+ * Transition variables for landscape-mobile to tablet screens.
+ *
+ * 1. Only feature media content on sm-md screens (section.inner-left).
+ * 2. Only feature select written content on sm-md screens (section.inner-right).
+*/
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .main-article {
+        flex: 0 0 auto !important;
+        width: 100% !important;
+    }
+
+    #target-one .outer-first,
+    #target-one .outer-second {
+        width: 100%;
+    }
+}
+
+/*
+ * Transition variables for portrait-mobile and tablet screens.
+ *
+ * 1. Only feature media content on xs-sm-md devices (section.inner-right) by default.
+ * 2. Show all content on toggle of expand-all.
+*/
+
+@media (max-width: 991.98px) {
+    [data-parent="#resumeStack"]:not(#target-one) .outer-first {
+        display: none;
+    }
+     #toggle-all:checked ~ main .header-content {
+        flex-wrap: wrap;
+    }
+
+    #toggle-all:checked ~ main .header-text,
+    #toggle-all:checked ~ main [data-parent="#resumeStack"]:not(#target-one) .outer-first {
+        display: block;
+    }
+
+    /* Hide one of two CTAs that references a section not featured at this
+     * media query.
+     * ID selectors are required to control the following.
+     * IDs have been assigned to two `.activity-cta` containers in the second
+     * section of the fourth article.
+     */
+
+    #four-two-cta-1 {
+        display: none !important;
+    }
+
+    /* Move the relevant CTA to the bottom of the list at this media query. */
+
+    #four-two-cta-2 {
+        -webkit-box-ordinal-group: 6 !important;
+        -ms-flex-order: 5 !important;
+            order: 5 !important;
+    }
+
+    /* Return to to default order when expand-all is :checked */
+
+    #toggle-all:checked ~ .body-main #four-two-cta-1 {
+        display: block !important;
+    }
+
+    #four-two-cta-2 {
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: 0;
+            order: 0;
+    }
+}
+
+/* ==========================================================================
+   Body nav configs
+   ========================================================================== */
+
+/*
+ * The body's nav container.
+ *
+ * This styles the body's main <nav> element.
+ * Features `.nav-outline` scrollspy navigation, and `.nav-links` dashboard.
+ *
+ * Assigned element id="nav-outline" that targets <body> to enable
+ * scrollspy feature.
+ */
+
+.body-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    margin-top: 5rem;
+    padding-right: .75rem;
+    padding-left: .75rem;
+
+    background: var(--powder);
+
+    font-family: din-2014, sans-serif;
+}
+
+.body-nav {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+}
+
+.body-nav > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    flex: 1;
+
+    width: 100%;
+}
 
 /**
  * Nav > ol is a direct representation of the website's headings map,
@@ -2113,105 +1906,51 @@ input[type="checkbox"],
  * and direct class styling.
  */
 
-/* Side menu and toggle-all checkbox
-   ========================================================================== */
+/* Set column flex direction to all lists in nav outline */
 
-/* Disable link functionality for nav outline lists beyond level h3 by default */
-
-.list-h4 {
-    pointer-events: none;
-    cursor: default;
-
-    opacity: .5;
+.body-nav ol.nav,
+.body-nav ul.nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
-/* If checked, enable link functionality for level h3 outline lists */
-
-#toggle-all:checked + label ~ nav .list-h4  {
-    opacity:1;
-    pointer-events: auto;
-    cursor: pointer;
+ul.nav {
+    padding-left: .2rem;
 }
 
-/* The html markup for h3 headings in nav outline includes two tags with the
- * same section title.
+.body-nav button {
+    border: none;
+}
+
+/*
+ * Nav outer body wrapper
  *
- * 1. One is a control element for a collapsed section.
- * 2. The other targets the given section when the site is static.
- *
- * As their target and link functions are not interchangeable, one is simply
- * hidden until the other is shown. Visibility is applied on an as-need basis.
- * i.e. control elements are disabled/hidden when toggle-all is ':checked'.
+ * This controls the container within `.body-nav`, which contains two separate
+ * divs with the `.nav-content` class.
+ * One is the doc outline `menu-sidebar` and the other is the `nav-links`
+ * quick navigation.
  */
 
-/* Disable and hide non-control-element level h3 <a> tags by default. */
-
-.list-h3 [href^="#element"] {
-    display: none;
+.nav-outer-body {
+    height: calc(100vh - 8rem);
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
 }
 
-/* If checked, disable and hide control-element level h3 <a> or <button>
- * duplicates of non-control-element h3 <a> tags.
- */
-
-#toggle-all:checked ~ nav .list-h3 [data-toggle="collapse"] {
-    display: none;
+.nav-outer-body > * {
+    flex: 1 1 initial;
 }
 
-/* If checked, enable and show non-control-element level h3 <a> tags */
-
-#toggle-all:checked ~ nav .list-h3 [href^="#element"] {
-    display: block;
-}
-
-/* Adjust visibility of list items for tablet and mobile devices */
-
-@media (max-width: 991.98px) {
-    .link-zero,
-    .list-h4 [href^="#target"],
-    .list-h5 > :first-child {
-        visibility: hidden;
-        width: 0;
-        height: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    .list-h5 > :nth-child(2) {
-        visibility: visible;
-    }
-}
-
-/* Adjust visibility of list items for mobile portrait devices */
-
-@media (max-width: 575.98px) {
-    ul.list-h2,
-    ul.list-h3 {
-        padding-left: 0 !important;
-    }
-
-    .list-h5 .nav-link {
-        visibility: hidden;
-    }
-
-    .list-h4 [href^="#target"],
-    .list-h5 .nav-link:nth-child(2) {
-        display: none;
-    }
-
-    .link-text {
-        display: none;
-    }
-}
-
-/* Side menu and scroll spy and feedback
+/* Nav menu and scroll spy and feedback
    ========================================================================== */
 
 /*
  * The top level list of nav outline.
  *
- * This styles the container for the ordered list of headings, which contains
- * lists nested to the level of their heading hierarchy.
+ * `.nav-content` styles the container for the ordered list of headings, which
+ * contains lists nested to the level of their heading hierarchy.
  *
  * Must be assigned with Bootstrap's '.nav-pills' and 'menu-sidebar' classes
  * for effective scrollspy '.active' styles.
@@ -2220,20 +1959,6 @@ input[type="checkbox"],
  * 1. Configure box model and presentation.
  * 2. Declare properties for scope.
  */
-
-.nav-outer-body {
-    overflow: scroll;
-    padding-bottom: 3.5rem;
-}
-
-.nav-outer-body > :first-child {
-    max-height: calc(100vh - 45vh);
-}
-
-.nav-outer-body > :nth-child(2) {
-    max-height: calc(100vh - 55vh - 1rem);
-    margin-bottom: 3.5rem;
-}
 
 .nav-content {
     --navlink-height: 1.05rem;
@@ -2244,8 +1969,7 @@ input[type="checkbox"],
     --navitem-right: -50%;
 
     width: 100%;
-    /*max-height: 55vh;*/
-    overflow-y: scroll;
+    margin-left: 0;
 
     background-color: #fff;
     background: var(--pearl) !important;
@@ -2273,7 +1997,7 @@ input[type="checkbox"],
     }
 }
 
-/* Adjust scrope propert values for xs screens */
+/* Adjust scope property values for xs screens */
 
 @media (max-width: 575.98px) {
     .nav-content {
@@ -2281,25 +2005,6 @@ input[type="checkbox"],
         --navlist-height: calc(var(--navlink-height) * 3 - var(--navlink-offset));
         --navitem-right: -5%;
     }
-}
-
-/* Set column flex direction to all lists in nav outline */
-
-.body-nav ol.nav,
-.body-nav ul.nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-
-
-ul.nav {
-    padding-left: .2rem;
-}
-
-.body-nav button {
-    border: none;
 }
 
 /*
@@ -2314,7 +2019,6 @@ ul.nav {
 
     width: 100%;
     padding: 1rem 1rem 1rem;
-    /*margin-bottom: .5rem;*/
     border-radius: var(--radius-2);
     border: 1px solid var(--grey) !important;
     background: var(--white);
@@ -2539,17 +2243,109 @@ ul.nav {
  * border widths when given scrollspy's '.active' class in nav outline
  */
 
-/* :not(.link-zero) TODO disable link zero*/
 
 .nav-pills.menu-sidebar .nav-link.active:before {
     border-top-width: 2px;
     border-top-color: var(--blue);
 }
 
-/* Side menu and main body
+/* Nav outline display configs for global events
    ========================================================================== */
 
-/* SIDE MENU ANIMATION CONFIGS
+/* Visibility of items in the nav outline should be synced with visibility
+ * of content it alludes to.
+ *
+ * Disable link functionality for nav outline lists beyond level h3 by default.
+ *
+ */
+
+.list-h4 {
+    pointer-events: none;
+    cursor: default;
+
+    opacity: .5;
+}
+
+/* If checked, enable link functionality for level h3 outline lists */
+
+#toggle-all:checked + label ~ nav .list-h4  {
+    opacity:1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* The html markup for h3 headings in nav outline includes two tags with the
+ * same section title.
+ *
+ * 1. One is a control element for a collapsed section.
+ * 2. The other targets the given section when the site is static.
+ *
+ * As their target and link functions are not interchangeable, one is simply
+ * hidden until the other is shown. Visibility is applied on an as-need basis.
+ * i.e. control elements are disabled/hidden when toggle-all is ':checked'.
+ */
+
+/* Disable and hide non-control-element level h3 <a> tags by default. */
+
+.list-h3 [href^="#element"] {
+    display: none;
+}
+
+/* If checked, disable and hide control-element level h3 <a> or <button>
+ * duplicates of non-control-element h3 <a> tags.
+ */
+
+#toggle-all:checked ~ nav .list-h3 [data-toggle="collapse"] {
+    display: none;
+}
+
+/* If checked, enable and show non-control-element level h3 <a> tags */
+
+#toggle-all:checked ~ nav .list-h3 [href^="#element"] {
+    display: block;
+}
+
+/* Adjust visibility of list items for tablet and mobile devices */
+
+@media (max-width: 991.98px) {
+    .link-zero,
+    .list-h4 [href^="#target"],
+    .list-h5 > :first-child {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .list-h5 > :nth-child(2) {
+        visibility: visible;
+    }
+}
+
+/* Adjust visibility of list items for mobile portrait devices */
+
+@media (max-width: 575.98px) {
+    ul.list-h2,
+    ul.list-h3 {
+        padding-left: 0 !important;
+    }
+
+    .list-h5 .nav-link {
+        visibility: hidden;
+    }
+
+    .list-h4 [href^="#target"],
+    .list-h5 .nav-link:nth-child(2) {
+        display: none;
+    }
+
+    .link-text {
+        display: none;
+    }
+}
+
+/* Body nav animation configs
    ========================================================================== */
 
 /**
@@ -2622,48 +2418,6 @@ ul.nav {
 
     /* Start/end margin property for animation keyframes */
     --mainstart: 0;
-}
-
-/*
- * The body nav container.
- *
- * This styles the body's main <nav> element.
- *
- * Assigned element id="nav-outline" that targets <body> to enable
- * scrollspy feature.
- */
-
-.body-nav {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-
-    margin-top: 5rem;
-    padding-right: .75rem;
-    padding-left: .75rem;
-
-    background: var(--powder);
-    overflow: auto;
-
-    font-family: din-2014, sans-serif;
-}
-
-.body-nav {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: flex-start;
-}
-
-.body-nav > * {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: center;
-    flex: 1;
-
-    width: 100%;
 }
 
 /*
@@ -2886,6 +2640,64 @@ ul.nav {
 }
 
 /* ==========================================================================
+   Body header configs
+   ========================================================================== */
+
+/*
+ * The body's header container.
+ *
+ * This sets minor properties for the body's header.
+ * The body's header is a wrapper for the nav components from Bootstrap, namely
+ * `.navbar-brand` and the `.navbar-toggler` classes.
+ * '.navbar-brand` is a home link.
+ * `.navbar-toggler` is the menu button that toggles `.body-nav`
+ */
+
+/* Absolutely position the body's header in order to go above all elements in
+ * the dom.
+ * This is necessary as the nav element inside header is `position-fixed`.
+ */
+
+.body-header {
+    position: absolute;
+    z-index: 99;
+}
+
+.body-header .navbar-light {
+    background: var(--paper,#F2F1EF);
+}
+
+/* Remove the default box shadow assigned to Bootstrap's `.navbar` class. */
+
+.navbar {
+    box-shadow: none;
+}
+
+/* Body header configs for global events
+   ========================================================================== */
+
+/* If :checked, add the default Bootstrap shadow to `.navbar`. */
+
+#toggle-all:checked ~ .body-header .navbar {
+    -webkit-box-shadow: 0 10px 20px 0 rgba(0,0,0,.05);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.05) !important;
+}
+
+/* Nav icon button mobile adjustments */
+
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+
+    .icon-button {
+        font-size: 30px !important;
+    }
+}
+
+/* ==========================================================================
    Navigation icon and container transitions @prefixed
    ========================================================================== */
 
@@ -2993,7 +2805,7 @@ ul.nav {
     }
 }
 
-/* Nav icons
+/* Nav icon indicators.
    ========================================================================== */
 
 /* Style ion-icons for menu nav and checkbox toggle */
@@ -3084,7 +2896,9 @@ ul.nav {
 
     white-space: pre-wrap;
 
-    transition: all .3s var(--glide) 0s;
+    -webkit-transition: all .3s var(--glide) 0s;
+         -o-transition: all .3s var(--glide) 0s;
+            transition: all .3s var(--glide) 0s;
 }
 
 /* Style toggled state of state indicator.
@@ -3303,32 +3117,15 @@ ul.nav {
     }
 }
 
-/* Nav icon button mobile adjustments */
-
-@media (max-width: 575.98px) {
-    .navbar-brand {
-        font-size: 1.5rem;
-        font-weight: 400;
-        letter-spacing: 2px;
-
-    }
-
-    .icon-button {
-        font-size: 30px !important;
-    }
-
-    input[type="checkbox"],
-    [for="toggle-all"] {
-        top: 1.1rem;
-    }
-}
-
 /* Nav Checkbox toggle switch  @prefixed
    ========================================================================== */
 
 /* Set :not(checked)/:checked animation for icon in container.
  * This applies custom animation to two opposing icons that appear/disappear
  * on toggle of its parent input/label control element.
+ *
+ * Icon is for mobile display only, as checkbox state is displayed by the
+ * pseudo state indicators from 576px and up.
  */
 
 /* When checked, animate the 'on' radio button icon in. */
@@ -3471,17 +3268,320 @@ ul.nav {
     }
 }
 
-/* Master dashboard state/landscape mode styles
+/* ==========================================================================
+   Body footer configs
+   ========================================================================== */
+
+/* The body's footer contains link elements that are styled to directly respond
+ * to the the global events.
+ *
+ * Moves to "occupy" the region of the body nav when menu is on, and when
+ * landscape mode is toggled.
+ */
+
+/* Style default container and styles to footer and elements within it. */
+
+.body-footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+
+    margin-top: auto;
+    padding-left: var(--margin);
+    padding-right: var(--margin);
+
+    transition: all .75s var(--glide) 0s;
+}
+
+/* Declare transition styles to the footer items. */
+
+.footer-right,
+.footer-left,
+.footer-item {
+    transition: all .1s var(--glide) 0s;
+}
+
+.footer-text,
+.footer-copyright,
+.footer-author {
+    transition: all .75s var(--glide) var(--early);
+}
+
+.footer-left,
+.footer-right {
+    text-align: center;
+    justify-content: center;
+}
+
+.footer-text.text-label {
+    display: none;
+}
+
+.footer-left {
+    margin-right: auto;
+}
+
+.footer-right {
+    margin-left: auto;
+}
+
+.footer-item {
+    display: inline-block;
+
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-right: 0;
+
+    text-align: center;
+}
+
+.footer-icon.filled-icon {
+    display: none;
+}
+
+.footer-item:nth-child(2) {
+    margin-left: calc(100vw / 5.25);
+}
+
+.footer-author {
+    position: relative;
+    font-family: monotalic, sans-serif;
+    text-transform: uppercase;
+}
+
+/* This extends the styling frin the `.ribboneto` scope.
+ * Sets a "highlighter" positioned over author name as in landing section.
+ *
+ * Border color to be applied as response to global events.
+ */
+
+.footer-author:after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+
+    left: -0.5em;
+    top: 0.1em;
+    /*border-bottom: 0.5em solid #fff200;*/
+
+    width: 100%;
+}
+
+/* Footer :checked and .show events
+   ========================================================================== */
+
+/* If :checked, and when body-nav.show, highlight the footer-author element. */
+
+.body-nav.show ~ .body-footer .footer-author:after,
+#toggle-all:checked ~ .body-footer .footer-author:after {
+    border-bottom: 0.5em solid #fff200;
+}
+
+/* If :checked, push the footer down to the bottom of the body. */
+
+#toggle-all:checked ~ .body-footer {
+    position: static;
+    padding-bottom: 1rem;
+}
+
+/* If :checked, highlight the footer-author element. */
+
+#toggle-all:checked ~ .body-footer .footer-author:after {
+    border-bottom: 0.5em solid #fff200;
+}
+
+/* Bring the copyright element to the left when nav is shown
+ * This is done by flipping the flex direction.
+ */
+
+.body-nav.show ~ .body-footer {
+    flex-direction: row-reverse;
+    width: var(--vw-navwidth) !important;
+    padding-left: calc(var(--padding) + .5rem);
+
+    color: var(--deep-1);
+    transition: all .75s var(--glide) 0s;
+}
+
+/* Push elements accordingly when nav is shown. */
+
+.body-nav.show ~ .body-footer .footer-left .footer-item:first-child,
+.body-nav.show ~ .body-footer .footer-left .footer-item:nth-child(2) {
+    margin-left: calc(25vw / 6);
+}
+
+.body-nav.show ~ .body-footer .footer-right {
+    margin: 0;
+}
+
+.body-nav.show ~ .body-footer .footer-text,
+.body-nav.show ~ .body-footer .footer-text.text-label,
+.body-nav.show ~ .body-footer .footer-copyright {
+    display: none;
+}
+
+/* Add margin to the body-nav for the footer to "occupy" when menu is shown. */
+
+.body-nav.show .nav-outer-body {
+    margin-bottom: 3.5rem;
+    transition: all .75s var(--glide) 0s;
+}
+
+/* Swap hide the outline icon when nav is shown. */
+
+.body-nav.show ~ .body-footer .footer-icon.outline-icon {
+    display: none;
+}
+
+/* Show the filled icon when nav is shown, and change to deeper color. */
+
+.body-nav.show ~ .body-footer .footer-icon,
+.body-nav.show ~ .body-footer .footer-icon.filled-icon {
+    display: inline-block;
+    color: var(--deep-2);
+}
+
+/* Render bolder author name when nav is shown. */
+
+.body-nav.show ~ .body-footer .footer-author {
+    font-weight: 500;
+}
+
+/* Footer configs for global events
+   ========================================================================== */
+
+@media (min-width: 1200px) {
+    .body-nav.show ~ .body-footer .footer-left .footer-item:first-child,
+    .body-nav.show ~ .body-footer .footer-left .footer-item:nth-child(2) {
+        margin-left: calc(25vw / 5 + 3vh);
+    }
+
+    .footer-text.text-label {
+        display: inline-block;
+    }
+}
+
+/* Regardless of all states, bring the footer to the nav region at landscape. */
+
+@media (max-width: 991.98px) and (orientation: landscape) {
+    .body-footer,
+    .body-nav.show ~ .body-footer,
+    #toggle-all:not(checked) ~ .body-footer,
+    #toggle-all:checked ~ .body-footer {
+        position: fixed;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+        width: var(--vw-navwidth) !important;
+        padding-left: calc(var(--padding) + .5rem);
+        padding-bottom: 0;
+        color: var(--deep-1);
+    }
+
+    .footer-left .footer-item:first-child,
+    .footer-left .footer-item:nth-child(2) {
+        margin-left: 2rem;
+    }
+
+    .footer-text,
+    .footer-copyright {
+        display: none;
+    }
+
+    .footer-author {
+        font-weight: 500;
+    }
+
+    /*.body-nav.show ~ .body-footer .footer-author:after,*/
+    /*#toggle-all:checked ~ .body-footer .footer-author:after,*/
+    .footer-author:after {
+        border-bottom: 0.5em solid #fff200;
+    }
+
+    .footer-right {
+        margin: 0;
+    }
+
+    .footer-icon.outline-icon {
+        display: none;
+    }
+
+    .footer-icon,
+    .footer-icon.filled-icon {
+        display: inline-block;
+        color: var(--deep-2);
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .body-nav.show ~ .body-footer .footer-right .footer-item {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #target-zero {
+        height: 40vh;
+    }
+
+    .body-footer {
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        height: 3rem;
+        /*position: static;*/
+        padding-left: 1rem;
+        padding-right: 1rem;
+        /*padding-bottom: 44px;*/
+
+        /* Test option */
+
+        position: -webkit-sticky;
+        position: sticky;
+        padding-bottom: .2rem;
+        padding-top: 8rem;
+    }
+
+    .footer-item:nth-child(2){
+        display: none;
+    }
+
+    .body-nav.show ~ .body-footer {
+        flex-direction: row;
+        margin-left: 25vw;
+        transition: all .75s var(--glide) 0s;
+    }
+    .body-nav.show ~ .body-footer .footer-right {
+        margin-right: 0;
+    }
+}
+
+/* ==========================================================================
+   Master dashboard state/landscape mode styles
    ========================================================================== */
 
 /*
  * On tablet screens and lower, when viewport width is larger than height,
  * force side menu to show, and trigger expand all static state.
  *
- * Declaires box shadow blur properties to the same values declared when
+ * Declares box shadow blur properties to the same values declared when
  * #toggle-all is :checked.
- * This calls the nav.show and the collapse.show animations for its
- * opposite/collapse selectors, preventing calls to local boolean states.
+ * This calls the `nav.show` and the `collapse.show` animations via its
+ * default/collapse selectors, preventing calls to local boolean states.
  * This selects miscellaneous elements previously set when #toggle-all is :checked
  * to appear in the same manner but traversing a non-boolean selector, as
  * the media query is itself the boolean selector.
@@ -3571,11 +3671,16 @@ ul.nav {
 }
 
 /* ==========================================================================
-   GLOBAL BUTTON ICON FUNCTIONS
+   Icon button boolean configs
    ========================================================================== */
 
-/* Swap the visibility of icon pairs upon toggle of expand/collapse */
-/* .open and .closed classes added to either of two ion-icons in each header */
+/* Swap the visibility of icon pairs upon toggle of expand/collapse.
+ * The `.open` and `.closed` classes are added to either of two ion-icons in
+ * each article's header.
+ *
+ * This boolean class is also added to the custom icon in the summary/details
+ * scope.
+ */
 
 /* Render .open to be hidden by default  */
 
@@ -3600,17 +3705,54 @@ details[open] .open,
 
 
 /* ==========================================================================
-   Master shadow container styles
+   Master container styles
    ========================================================================== */
 
-/*!
+/**
  * Neumorphic style to box model.
  *
- * This immediately drops an element into an inset within an otherwise flat canvas.
+ * These classes achieve the global aesthetic of containers in the project.
  *
  * CREDIT: (assistance) (https://css-tricks.com/neumorphism-and-css/)
  * CREDIT: (assistance) Shadow generator https://neumorphic.design/
  *
+ */
+
+/* The `headline-content` class is attached to h4 elements.
+ * Renders a headline that is a signature for each article-section
+ */
+
+.headline-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+
+    padding: 5rem 1rem 1rem;
+    margin-bottom: .5rem;
+    border-radius: var(--radius-2);
+
+    font-family: din-2014, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: calc(1.0625rem + 1.5vw);
+    line-height: calc(1.6875rem + 1vw);
+
+    color: var(--white);
+    text-shadow: #fff 0 .5px 0, #D7D7D6 0 -.5px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * General inset wrapper.
+ *
+ * This immediately drops an element into an inset within an otherwise flat
+ * canvas.
+ *
+ * Applied generously to elements across scales.
  */
 
 .inset-container {
@@ -3628,12 +3770,20 @@ details[open] .open,
             inset 5px 8px var(--blur-md) 0 rgba(0, 0, 0, 0.3);
 }
 
+/* The `.inset-item` class applies signature aesthetic via its :after
+ * pseudo class.
+ */
+
 .inset-item {
     position: relative;
 
     border-radius: .6rem;
     border: none;
 }
+
+/* Attaches styles to any `inset-item`. This is used across scales and
+ * elements through the site.
+ */
 
 .inset-item:after {
     position: absolute;
@@ -3651,17 +3801,13 @@ details[open] .open,
     background: var(--gradient-2);
 }
 
-/* ==========================================================================
-   Global button/link/CTA wrappers
-   ========================================================================== */
-
-/* Neumorphic shadow inspired by (https://css-tricks.com/neumorphism-and-css/) */
-/* Shadow generator helper https://neumorphic.design/ */
-
-/* Button/link/CTA container styles
-   ========================================================================== */
-
-/* Style general .btn .cta wrapper */
+/*
+ * General outset wrapper.
+ *
+ * This immediately elevates an element from a canvas within an outset trim.
+ *
+ * Applied generously to elements across scales.
+ */
 
 .outset-container-2 {
     overflow: hidden;
@@ -3694,6 +3840,8 @@ details[open] .open,
             -0.3px -0.3px var(--blur-sm) rgba(239, 241, 245, 0.1);
 }
 
+/* Style variable icon wrapper */
+
 .inset-container-6 {
     overflow: hidden;
 
@@ -3708,6 +3856,11 @@ details[open] .open,
             inset 0 3.3px var(--blur-sm) #B0B2B5,
             inset 0 -3.3px var(--blur-sm) #FFFFFF;
 }
+
+
+/* ==========================================================================
+   Global button/link/CTA wrappers
+   ========================================================================== */
 
 /* Style general button class */
 
@@ -3743,13 +3896,18 @@ details[open] .open,
 /* Social links/button style variables
    ========================================================================== */
 
-/* Style social links list items */
+/* Style social links list items in intro section. */
 
 .social-links {
     width: 100%;
     padding-top: .5rem;
-    align-items: center;
-    justify-content: space-between;
+
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     list-style: none;
 }
 
@@ -3831,138 +3989,20 @@ details[open] .open,
     }
 }
 
-/* Side menu social links quick nav
-   ========================================================================== */
-
-/* Style side menu lnk icon */
-
-.link-icon,
-.social-icon {
-    font-size: 1.5rem;
-}
-
-@media (min-width: 576px) {
-    .link-icon {
-        display: none;
-    }
-}
-
-.body-nav > outset-container-2 {
-    padding: 0;
-}
-
-.nav-links {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 1rem;
-    padding: .75rem !important;
-    border-radius: .6rem;
-
-    background: var(--gradient-2);
-}
-
-.nav-links > * {
-    flex: 0 0 auto;
-    min-width: 33.3333%;
-    max-width: 50%;
-}
-
-.nav-links .outline-item {
-    padding: .35rem;
-}
-
-.nav-links .link-icon,
-.nav-links .social-icon {
-    padding: .675rem;
-}
-
-@media (max-width: 575.98px) {
-    .nav-links {
-        padding: 0 !important;
-    }
-    .nav-links .outline-item {
-        padding: .1rem;
-        margin-bottom: 0;
-    }
-    .nav-links .inset-inner {
-        padding: .1rem;
-        border: 2px solid var(--paper);
-    }
-
-    .nav-links .link-icon,
-    .nav-links .social-icon {
-        padding: .675rem;
-        font-size: .875rem !important;
-        color: var(--grey);
-    }
-
-    .nav-links .social-icon {
-        /*color: #A0B6CC;*/
-    }
-
-    .nav-links > * {
-        max-width: 100%;
-    }
-    #toggle-all:checked ~ .body-nav .nav-links > * {
-        max-width: 50%;
-    }
-}
-/* 1 and 2 alt  Intro, i */
-/*999486*/
-/*B4AE9F*/
-
-/* 2 alt Specialization. lightbulb  */
-
-/* 3 red alt proficiency, meteor */
-/* D5685D */
-
-/* 4 blue alt experience, astronaut DOWNLOAD */
-
-/* 5 orange alt examples, rocket  GITHUB*/
-
-/* 6 green alt references, star LINKEDIN */
-/*    green and */
-
-/* 7 black / yellow alt, connect, satellite DEV */
-/* black and yellow*/
-
-
-.icon-linkedin { color: var(--link-linkedin); }
-.icon-github { color: var(--link-github); }
-.icon-dev { color: var(--link-dev); }
-.icon-portfolio { color: var(--link-folio); }
-
-
-
-.icon-download { color: var(--cta-download); }
-.icon-email { color: var(--cta-email); }
-.icon-call { color: var(--cta-call); }
-
-/*929181*/
-/* Header toggle box shadow */
-/* BS styles */
-
-.navbar {
-    box-shadow: none;
-    /*padding-top: .5625rem;*/
-}
-
-#toggle-all:checked ~ .body-header .navbar {
-    -webkit-box-shadow: 0 10px 20px 0 rgba(0,0,0,.05);
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,.05) !important;
-}
-
-/* CTA BUTTON/LINKS STYLE VARIABLES
+/* General CTA button and link styles
    ========================================================================== */
 
 /* Make the CTA container inflexible relative to its sibling media lists. */
 
-.activity-cta {
-    flex: 0 0 auto !important;
+.activity-cta:not(.nav-links) {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 auto !important;
+            flex: 0 0 auto !important;
+
     padding-left: 0;
 }
+
+/* Adjust `.address` list in personal contact info container. */
 
 .address :not(:first-child) {
     padding-top: .625rem;
@@ -3981,11 +4021,6 @@ details[open] .open,
             justify-content: space-between;
     -ms-flex-line-pack: center;
         align-content: center;
-}
-
-.activity-cta i {
-    /*color: var(--cta-call);*/
-    /*color: #A0B6CC;*/
 }
 
 .activity-cta .btn {
@@ -4021,7 +4056,6 @@ details[open] .open,
             -3px 6px var(--blur-sm) rgba(250, 250, 250, .4);
 }
 
-
 /* Style global 'pressed' state of CTA buttons */
 
 .btn:active {
@@ -4044,7 +4078,7 @@ details[open] .open,
     border-radius: 50%;
 }
 
-/* CTA variety adjustmenmts */
+/* Ensure padding accommodates <a> and <button> inset variety */
 
 .connect-cta button > .inset-inner,
 .activity-cta button > .inset-inner,
@@ -4052,19 +4086,25 @@ details[open] .open,
     padding: .6rem;
 }
 
+/* Set size for icons inside the inner cta wrapper.
+ * This also style icons in the navigation menu.
+ *
+ * This is modified version of FontAwesome/MDB's `.fa-lg` class
+ */
+
+.icon-cta,
+.link-icon,
+.social-icon {
+    font-size: 1.33333em;
+    line-height: .75em;
+    vertical-align: -.0667em;
+}
+
 @media (max-width: 575.98px) {
     .activity-cta button > .inset-inner,
     .activity-cta a > .inset-inner {
         padding: .2rem;
         border-radius: 50%;
-    }
-
-    .activity-cta .fa,
-    .activity-cta .fab,
-    .activity-cta .fal,
-    .activity-cta .far,
-    .activity-cta .fas {
-        font-size: .5rem;
     }
 }
 
@@ -4093,7 +4133,24 @@ details[open] .open,
     text-align: right;
 }
 
-/* BUTTON/LINK ~ SHOW-EVENT TRANSITION
+/* CTA configs for global events
+   ========================================================================== */
+
+/* Accommodate legibility of cta text when system-wide widths
+ * are compromised
+ */
+
+.body-nav.show ~ .body-main .text-cta-hide {
+    display: none;
+}
+
+@media (max-width: 991.98px) and  (orientation: landscape) {
+    .text-cta-hide {
+        display: none;
+    }
+}
+
+/* CTA/Button configs for global events
    ========================================================================== */
 
 /* Highlights CTA button three seconds after section.show */
@@ -4116,8 +4173,10 @@ section.show .activity-cta .btn {
             transition: border-color 0.15s ease-in-out 3s;
 }
 
-/* BADGE/STATS ~ SHOW-EVENT TRANSITION
+/* Badge configs for global events
    ========================================================================== */
+
+/* Hide media list badge stats when section:not(.show) */
 
 section:not(.show) .data-stats {
     opacity: 0;
@@ -4126,6 +4185,8 @@ section:not(.show) .data-stats {
          -o-transition: opacity 0.3s var(--breeze) 0s;
             transition: opacity 0.3s var(--breeze) 0s;
 }
+
+/* Reveal badge on section.show event and when checkbox is :checked */
 
 #toggle-all:checked + label ~ main .data-stats,
 section.show .data-stats {
@@ -4136,20 +4197,28 @@ section.show .data-stats {
             transition: opacity 0.15s var(--breeze) .75s;
 }
 
+/* Force badge to be visible regardless at landscape query */
+
 @media (max-width: 991.98px) and  (orientation: landscape) {
     section:not(.show) .data-stats {
         opacity: 1;
     }
 }
 
-/* SECTION H4 icon SHOW EVENT TRANSITION @prefixed
+/* Headline-content configs for global events
    ========================================================================== */
 
-/* Apply global icon transitions to section h4 headlines */
-/* CREDIT (modified) inspired by on-show transitions in: https://codeconvey.com/pure-css-accordion-menu/ */
+/* Apply global icon transitions to `headline-content` h4 headlines.
+ * Moves a section's icon into its <h4> headline-content container when section
+ * is shown.
+ *
+ * CREDIT (modified) inspired by on-show transitions in:
+ *     https://codeconvey.com/pure-css-accordion-menu/
+ */
 
-/* Position icon on .show */
+/* Position icon on section.show event and when checkbox is :checked */
 
+#toggle-all:checked ~ main .section.show,
 section.show .section-icon {
     left: 260px;
 }
@@ -4199,22 +4268,110 @@ section.collapse:not(.show) .section-icon {
     background-color: var(--paper);
 }
 
-form .connect-cta input {
+/* Set height of each form input (Name, Email) */
+
+.connect-cta input {
     height: 3rem;
 }
+
+/* Style "Send" button in form element */
 
 .form-group-button {
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: 100%;
     height: 4rem;
 }
 
-.form-group-button i {
-    color: #A0B6CC;
+/* ==========================================================================
+   Quick-nav icon container
+   ========================================================================== */
+
+/* This styles a container with social links below the document outline
+ * in the side menu .
+ */
+
+/* Link icons are replaced by text titles from small screens and up. */
+
+@media (min-width: 576px) {
+    .link-icon {
+        display: none;
+    }
 }
 
+.body-nav > outset-container-2 {
+    padding: 0;
+}
+
+.nav-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+    /*padding: .75rem !important;*/
+    padding: 0;
+    border-radius: .6rem;
+
+    background: var(--gradient-2);
+}
+
+.nav-links > * {
+    flex: 0 0 auto;
+    /*min-width: 33.3333%;*/
+    min-width: 16.666667%;
+    /*max-width: 50%;*/
+}
+
+.nav-links .outline-item {
+    padding: .35rem;
+}
+
+.nav-links .link-icon,
+.nav-links .social-icon {
+    padding: .675rem;
+}
+
+/* Quick nav configs for global events
+   ========================================================================== */
+
+@media (max-width: 575.98px) {
+    .nav-links {
+        padding: 0 !important;
+    }
+    .nav-links .outline-item {
+        padding: .1rem;
+        margin-bottom: 0;
+    }
+    .nav-links .inset-inner {
+        padding: .1rem;
+        border: 2px solid var(--paper);
+    }
+
+    .nav-links .link-icon,
+    .nav-links .social-icon {
+        padding: .675rem;
+        color: var(--deep-2);
+    }
+
+    .nav-links > * {
+        /*max-width: 100%;*/
+    }
+}
+
+@media (max-width: 991.98px) and  (orientation: landscape) {
+    .nav-links > * {
+        flex: 1;
+    }
+}
+
+@media (max-width: 991.98px) and  (orientation: landscape) {
+    .nav-links > * {
+        /*max-width: 16.777% !important;*/
+    }
+}
 
 /* ==========================================================================
    Vertical scroller @prefixed
@@ -4283,7 +4440,7 @@ form .connect-cta input {
  * 2. Clear shadows inherited from li core configs
  */
 
-#vertical-scroller > li {
+#vertical-scroller .scroll-item {
     position:absolute;
     overflow: hidden;
 
@@ -4373,13 +4530,23 @@ form .connect-cta input {
     font-weight: 400;
 }
 
+#vertical-scroller .activity-cta > div:hover {
+    text-align: right;
+    justify-content: flex-end;
+}
+
+/* Adjustments to the scroller's CTA icon */
+
+.scroll-icon {
+    font-size: 1rem;
+}
+
+/* Scroller configs for global .show events
+   ========================================================================== */
+
 /* Make a little room for when side menu is toggled. */
 
 #vertical-scroller .text-cta-show {
-    display: none;
-}
-
-.body-nav.show ~ .body-main #vertical-scroller .text-cta-hide {
     display: none;
 }
 
@@ -4395,15 +4562,10 @@ form .connect-cta input {
     margin-left: 1rem;
 }
 
-/* Adjustments to the scroller's CTA icon */
-
-.scroll-icon {
-    font-size: 1rem;
-}
-
-#vertical-scroller .activity-cta > div:hover {
-    text-align: right;
-    justify-content: flex-end;
+@media (max-width: 991.98px) and  (orientation: landscape) {
+    #vertical-scroller .text-cta-show {
+        display: inline-block;
+    }
 }
 
 /* Scroller event @prefixed
@@ -4545,16 +4707,6 @@ form .connect-cta input {
     #target-zero {
         height: 40vh;
     }
-}
-
-@media (min-width: 740px) {
-    h1 {
-        font-size: 2rem;
-        line-height: 2rem;
-    }
-}
-h2 {
-    font-family: Monotalic, sans-serif;
 }
 
 /* Box model container to set the limits of the landing section.
@@ -4724,8 +4876,6 @@ h2 {
     width: 66.66%;
     border-left: none;
     border-right: none;
-    /*border-left-color:transparent;*/
-    /*border-right-color:transparent;*/
     border-top-color: transparent;
 }
 
@@ -4777,42 +4927,44 @@ h2 {
 }
 
 .banner-top {
-    line-height: .875rem;
     -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        margin-bottom: 3rem;
-        line-height: .875rem;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+    margin-bottom: 3rem;
+    line-height: .875rem;
 }
 
 .banner-bottom {
-    line-height: .9rem;
     -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        margin-top: auto;
-        line-height: .9rem;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+    margin-top: auto;
+    line-height: .9rem;
 }
 
 .banner-middle {
-    opacity: 0;
     position: absolute;
-    font-style: italic;
-    padding-right: 1.5rem;
+
     margin-top: 1.5rem;
     padding-top: 1rem;
+    padding-right: 1.5rem;
     padding-bottom: 0;
+
     opacity: 1;
     line-height: var(--ribs-lh);
+
     font-size: .765rem;
+    font-style: italic;
 }
 
 /* Helper container for duplicate "ed" in "developed"
@@ -5002,20 +5154,6 @@ h2 {
     }
 }
 
-/*@media (max-width: 767.98px) {*/
-/*    #target-one .outer-body.outer-second,*/
-/*    #target-one .outer-body.outer-second .inner-body.inner-right,*/
-/*    #target-one .outer-body:nth-child(2) .inner-body*/
-/*    #target-one .outer-body:nth-child(2) {*/
-/*        padding: 0;*/
-/*        margin: 0;*/
-/*        border: 0;*/
-/*        background: none;*/
-/*        -webkit-box-shadow: none;*/
-/*                box-shadow: none;*/
-/*    }*/
-/*}*/
-
 #target-one a { color: var(--denim); }
 
 #target-one p {
@@ -5081,7 +5219,7 @@ h2 {
 }
 
 /* ==========================================================================
-   Media box section
+   Media content container
    ========================================================================== */
 
 /* Make section.inner-right a flex container, turning h5, ul and .activity-cta into flex items */
@@ -5117,8 +5255,7 @@ h2 {
             flex: 0 0 auto;
 }
 
-/* ==========================================================================
-   <UL> LIST GROUP CONFIGS @prefixed
+/* Media list element configs
    ========================================================================== */
 
 /* Apply global flex behavior and visual language to media list-groups */
@@ -5160,7 +5297,6 @@ h2 {
     border-color: var(--paper);
 
     background: var(--powder);
-    font-family: var(--halyard-text);
 
     -webkit-box-shadow:
             0 -6.4px var(--blur-sm) rgba(0, 0, 0, 0.2),
@@ -6075,7 +6211,6 @@ blockquote, q {
 .btn.icon-github:hover { background-color: var(--link-github); }
 .btn.icon-github:focus { background-color: var(--link-github); }
 
-
 /* Apply feedback colors for Dev button links at side menu */
 
 .btn.icon-dev:hover { background-color: var(--link-dev); }
@@ -6112,6 +6247,16 @@ blockquote, q {
 .btn:focus .social-download { color: var(--cta-download); }
 .btn.social-download:active { background-color: var(--cta-download) }
 
+/* Style icon colors for external links and cta buttons */
+
+.icon-link { color: var(--link-github) }
+.icon-linkedin { color: var(--link-linkedin); }
+.icon-github { color: var(--link-github); }
+.icon-dev { color: var(--link-dev); }
+.icon-portfolio { color: var(--link-folio); }
+.icon-download { color: var(--cta-download); }
+.icon-email { color: var(--cta-email); }
+.icon-call { color: var(--cta-call); }
 
 /* ==========================================================================
    Local section color variables
@@ -6148,6 +6293,8 @@ blockquote, q {
 #target-seven b { color: var(--obsidian); }
 #target-seven a { color: var(--raisin); }
 
+/* Style icon colors for side menu icons */
+
 .icon-one { color: var(--obsidian) }
 .icon-two { color: var(--slate) }
 .icon-three { color: var(--red) }
@@ -6156,7 +6303,6 @@ blockquote, q {
 .icon-six { color: var(--green) }
 .icon-seven { color: var(--raisin) }
 
-.icon-link { color: var(--link-github) }
 
 /* ==========================================================================
    Nav outline and pagination color variables
