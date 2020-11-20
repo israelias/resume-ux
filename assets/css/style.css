@@ -3536,7 +3536,11 @@ ul.nav {
 
 @media (max-width: 767.98px) {
     #target-zero {
-        height: 40vh;
+        /*height: 40vh;*/
+        height: 100%;
+        /*padding-top: 1.5rem;*/
+        padding-bottom: 1.5rem;
+        padding-top: calc(100vh - var(--height) - 21rem - 5rem);
     }
 
     .body-footer {
@@ -3553,7 +3557,9 @@ ul.nav {
         position: -webkit-sticky;
         position: sticky;
         padding-bottom: .2rem;
-        padding-top: 8rem;
+        /*padding-top: 8rem;*/
+        margin-top: 8rem;
+        bottom: unset;
     }
 
     .footer-item:nth-child(2){
