@@ -8,14 +8,16 @@ ___
 
 ![](documentation/landing_preview.png)
 
-Resume Re: UX is a comprehensive and systematic means for navigating and featuring content in a curriculum vitae. The project features an interactive navigation design of collapsible accordion stack,  flexible static mode a The project is developed as part of the user-centric front-end coursework (MS1) at [Code Institute](https://codeinstitute.net).
+Resume Re: UX is a comprehensive and systematic means for navigating and featuring content in a curriculum vitae. The project is an *interactive collapsible* "stack" of content sections that can be toggled to fully expand in *static mode* with at-a-glance document outline visualization in a responsive dashboard side menu. The project is developed as part of the user-centric front-end coursework (MS1) at [Code Institute](https://codeinstitute.net).
+
+> *Note: The project name refers to Resume RedUX or "Resume Revived," in addition to the expanded "Resume Re: User Experience"*
 
 [Please view the live website here.](https://israelias.github.io/resume-redux/)
 
 [TOC levels=1-3]: #
 
-## Table of Contents
-- [Resume RedUX](#resume-redux)
+# Table of Contents
+- [Resume Re: UX](#resume-re-ux)
   - [UX](#ux)
     - [1.0 Strategy](#10-strategy)
     - [2.0 Scope](#20-scope)
@@ -35,7 +37,8 @@ Resume Re: UX is a comprehensive and systematic means for navigating and featuri
     - [Notable Methods](#notable-methods)
     - [Documentation Notes](#documentation-notes)
     - [Code Testing](#code-testing)
-    - [Miscellaneous](#miscellaneous)
+    - [Accessibility Testing](#accessibility-testing)
+    - [Browser Testing](#browser-testing)
     - [Known Bugs](#known-bugs)
   - [Deployment](#deployment)
   - [Credits](#credits)
@@ -240,32 +243,33 @@ ___
 <details><summary> Strategy Table </summary>
 <br>
 
-    >| id    | Specific Features             | Importance | Viability | Score |
-    >| ----- | ------------------------------------------- |:----------:|:---------:|:---------:|
-    >| A     | Create a descriptive landing page about the owner to establish his online presence            |      5      |     5      |     ▶️      |
-    >| B     | Feature owner's scope of expertise in the tech stack and the design stack (specialization)          |      4      |     5      |     ▶️      |
-    >| C     | Represent breadth of owner's proficiency in tools and technologies (asset coverage)         |      5      |      5     |     ▶️      |
-    >| D     | Represent depth of owner's current use of and experience with tools and technologies (verifiable badges)         |      5      |     4      |     ▶️      |
-    >| E     | Showcase samples of owner's projects with links to its repo (tech) and its complete portfolio (design)         |      5      |      3     |     ⬆️      |
-    >| F     | Represent owner's work history (career timeline)          |      5      |      5     |     ▶️      |
-    >| G     | Represent owner's educational background (timeline)         |      5      |     5      |     ▶️      |
-    >| H     | Showcase owner's existing awards and recognitions          |      3      |      4     |     ⬆️      |
-    >| I     | Showcase recommendations received by owner from professionals in previous experience         |      3      |      4     |     ⬆️      |
-    >| J     | Provide downloadable CV.pdf that is consistent with the web resume/owner's brand         |      4      |      3     |     ⬆️️      |
-    >| K     | Provide a contact/message form for users to directly collaborate or message/email     |      3      |      3     |     ⬆️      |
-    >| L     | Provide ability to directly call owner's mobile/Skype    |      4      |      4     |     ▶️      |
-    >| M     | Create dashboard functionality for owner                    |      2      |      1     |     ⬇️      |
-    >| N     | Create custom "hidden" cover letter page for owner to silently fill and distribute when applying to jobs           |      1      |      1     |     ⬇️      |
-    >| O     | Show owner's tech stack represented as data from GitHub  |      5      |     3      |     ⬆️      |
-    >| P     | Bookend each section with corresponding "last" activity and "next" action: "Last seen 2 hours ago" -> "Drop me a line"   |      5      |      3     |     ⬆️      |
-    >| Q     | Provide a stream of project activity retrieved from log of commit messages  |     4       |     3      |     ⬆️      |
-    >| Total |                                             |      68<sup> [a](#note-a) </sup>      |     61<sup> [b](#note-b) </sup>      |
 
-    >###### <sub>Note</sub> a: sum of importance
-    >###### <sub>Note</sub> b: Average viability `x` number of items
-    >###### ▶️ UX efforts must address this
-    >###### ⬆️ UX efforts should accommodate this
-    >###### ⬇️ Unwise use of time to address this
+>| id    | Specific Features             | Importance | Viability | Score |
+>| ----- | ------------------------------------------- |:----------:|:---------:|:---------:|
+>| A     | Create a descriptive landing page about the owner to establish his online presence            |      5      |     5      |     ▶️      |
+>| B     | Feature owner's scope of expertise in the tech stack and the design stack (specialization)          |      4      |     5      |     ▶️      |
+>| C     | Represent breadth of owner's proficiency in tools and technologies (asset coverage)         |      5      |      5     |     ▶️      |
+>| D     | Represent depth of owner's current use of and experience with tools and technologies (verifiable badges)         |      5      |     4      |     ▶️      |
+>| E     | Showcase samples of owner's projects with links to its repo (tech) and its complete portfolio (design)         |      5      |      3     |     ⬆️      |
+>| F     | Represent owner's work history (career timeline)          |      5      |      5     |     ▶️      |
+>| G     | Represent owner's educational background (timeline)         |      5      |     5      |     ▶️      |
+>| H     | Showcase owner's existing awards and recognitions          |      3      |      4     |     ⬆️      |
+>| I     | Showcase recommendations received by owner from professionals in previous experience         |      3      |      4     |     ⬆️      |
+>| J     | Provide downloadable CV.pdf that is consistent with the web resume/owner's brand         |      4      |      3     |     ⬆️️      |
+>| K     | Provide a contact/message form for users to directly collaborate or message/email     |      3      |      3     |     ⬆️      |
+>| L     | Provide ability to directly call owner's mobile/Skype    |      4      |      4     |     ▶️      |
+>| M     | Create dashboard functionality for owner                    |      2      |      1     |     ⬇️      |
+>| N     | Create custom "hidden" cover letter page for owner to silently fill and distribute when applying to jobs           |      1      |      1     |     ⬇️      |
+>| O     | Show owner's tech stack represented as data from GitHub  |      5      |     3      |     ⬆️      |
+>| P     | Bookend each section with corresponding "last" activity and "next" action: "Last seen 2 hours ago" -> "Drop me a line"   |      5      |      3     |     ⬆️      |
+>| Q     | Provide a stream of project activity retrieved from log of commit messages  |     4       |     3      |     ⬆️      |
+>| Total |                                             |      68<sup> [a](#note-a) </sup>      |     61<sup> [b](#note-b) </sup>      |
+
+>###### <sub>Note</sub> a: sum of importance
+>###### <sub>Note</sub> b: Average viability `x` number of items
+>###### ▶️ UX efforts must address this
+>###### ⬆️ UX efforts should accommodate this
+>###### ⬇️ Unwise use of time to address this
 
 <br>
 </details>
@@ -355,6 +359,11 @@ ___
 ### 3.0 Structure
 ___
 
+###### [View Schematic IA Board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1623.png)
+###### [View Schematic IxD Board - Navigational Schemas](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1625.png)
+###### [View Schematic Structure Board - Behavior, Relationships, Interactivity, ](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1626.png)
+###### [View Schematic Structure Board -  Container Stack](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1627.png)
+
 #### 3.1 Organization of Functionality and Content
 ___
 
@@ -384,10 +393,6 @@ ___
 #### 3.2 Interaction Design
 ___
 
-###### [View Schematic IA Board - Organization, Priority](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1623.png)
-###### [View Schematic IxD Board - Navigational Schemas](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1625.png)
-###### [View Schematic Structure Board - Behavior, Relationships, Interactivity, ](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1626.png)
-###### [View Schematic Structure Board -  Container Stack](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1627.png)
 
 ##### Consistency and Predictability
 ___
@@ -453,8 +458,6 @@ The website offers micro changes to afford users the knowledge of what has previ
 ___
 #### 3.3 Information Architecture
 ___
-
-[View Schematic IA Board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1623.png)
 
 ##### Navigational Schemas
 ___
