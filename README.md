@@ -1,32 +1,17 @@
 # Resume RedUX
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/israelias/resume-redux?style=flat)
 ![GitHub last commit](https://img.shields.io/github/last-commit/israelias/resume-redux?syle=flat)
-[![Documentation Status](https://readthedocs.org/projects/resume-redux/badge/?version=latest)](https://resume-redux.readthedocs.io/en/latest/?badge=latest)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4204/badge)](https://bestpractices.coreinfrastructure.org/projects/4204)
 
 
-<!--![](documentation/RedUX_200826_0413.png)-->
+![](documentation/landing_preview.png)
 
 Resume RedUX is a comprehensive and systematic means for navigating and featuring content in a curriculum vitae. The project features an interactive navigation design of collapsible accordion stack,  flexible static mode a The project is developed as part of the user-centric front-end coursework (MS1) at [Code Institute](https://codeinstitute.net).
 
-<!--The project showcases -->
-
-<!--The result is a web resume that is:-->
-<!--1. Custom designed and built by the owner, contrary to the trend in the industry of using static dashboard templates for stats/efficiency-->
-<!--2. Isn't supplying content that overplays the owner's experience in the tech industry; but instead allows data to speak for itself by showcasing the owner's "activity" in opportune moments-->
-<!--   - "Add styling to revised navbar for home.html" -Joem. Last commit 29 hours ago. See this project in progess" (GitHub actions)-->
-<!--   - "Soon to come" (Placeholder for forthcoming milestone project)-->
-<!--3. Integrates the owner's nuanced stack as a designer and the nuanced workflow that this comes with. (Software/prototype integration UX to dev hand off; owner as developer's "super user")-->
-<!--4. Still meets the criteria for what constitutes a modern web resume as seen in these examples-->
-<!--5. Simple and responsive (learning from previous) creating a "card" template for more interactive features in later releases; with a clear idea of its moonshot design and realistic feasibility through high-fi UX prototypes (playing up to owner's strengths)-->
-<!--6. A website that is an honest snapshot of the owner's progress; new "feed" for returning visitors-->
-<!--7. A clear indicator of the owner's online reach and footprint along with links/clouds of owner's frontier.-->
-
-[View the live website here.](https://israelias.github.io/resume-redux/) A work in progress.
+[View the live website here.](https://israelias.github.io/resume-redux/).
 
 [TOC levels=1-3]: #
 
-# Table of Contents
+## Table of Contents
 - [Resume RedUX](#resume-redux)
   - [UX](#ux)
     - [1.0 Strategy](#10-strategy)
@@ -72,12 +57,6 @@ The high-level objective of the project is __to stand out__. The web resume is f
   - A young professional designer and architect (buildings) presently breaking into the tech industry
 
 #### 1.1 Research
-
-<!--<p align="center">-->
-<!--    <img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1619.png" alt="Oly-Track Logo">-->
-<!--</p>-->
-
-<!--Supplementary color #1, ![#323232](https://placehold.it/15/323232/000000?text=+)-->
 
 - [UX Research Board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1619.png)
 
@@ -711,8 +690,6 @@ Custom Timing Function Variables
 
 [Back to top](#table-of-contents)
 
-___
-
 ## Features
 ___
 
@@ -727,6 +704,8 @@ ___
 #### The master switch to the static site
   -  The project features the ability to virtually turn off all functionality and visual definition attributed to the website's show and hide transition events, rendering [index.html](https://github.com/israelias/resume-redux/blob/b6bc247a4c903fc0fd56c23f2b9ac751e9af6d50/index.html) into a static single-page site discretely sectioned in seven parts. This is controlled by a checkbox `input`  element strategically placed in the DOM to be a direct sibling of the `<main>` and `<nav>` elements, each containing all content of seven sections and all list items of the side menu document outline, respectively. Traversing the general sibling selector on toggle of the input's boolean selector `:checked ~ main >  *` is the most popular and powerful selector in [style.css](https://github.com/israelias/resume-redux/blob/master/assets/css/style.css), commencing up to 30 rulesets, virtually interacting with the most elements in the DOM to showcase the project's radical flexibility and the totality of its ambition to accommodate the nuances of user experience.
 
+#### Dashboard Static Landscape Mode
+- The project features a dashboard mode, which is a version of the static/expanded state with the side menu open. In this mode, the side menu functions as a document outline with at-a-glance info and data visualization enabled by Scrollspy events occurring in the adjacent body.
 
 #### The headings map as an interactive document outline
   -  The project features a direct representation of the website's headings map, that, together with the varying permutations of returned `.show` and `:checked` classes, reels from the delightful complications of [scrollspy](https://v5.getbootstrap.com/docs/5.0/components/scrollspy/)'s fleeting `.active` class. Enabled on the `<body>`, Bootstrap's Scrollspy events are programmed in the side menu and visible only when it's useful: when 'expand all' is `:checked`.  As the side menu is a list of the website's headings, containing lists that are nested to the level of their heading hierarchy, the `.active` items invariably play a game of musical links, revealing data and returning feedback on the virtues of relative 'nestedness' and proximities.
@@ -734,8 +713,6 @@ ___
 #### Pagination events along a document track
   -  The project is programmed to elicit further, more marcro, events via Scrollspy's `.active` class in the form of a scaled linear representation of the website's height, where segments are highlighted relative to 'where' the user is. This is attributed to an absolutely positioned pseudo element with a selector that traverses an `.active` sibling. The scale to which these line segments are relative to the path that its on works to afford users a sense of place in an otherwise scaleless, immeasurable window.
 
-#### Dashboard Static Landscape Mode
-- ggg
 
 #### Recent Activity Vertical Scroller
 - The project attaches custom animation to vertically stacked, absolutely position list items that take turn scrolling into the window of a fixed frame when its parent target section is `.show` and when static mode is `:checked`. The result is an effective mini "newsfeed" reel highlighting the owner's recent activity.
@@ -753,6 +730,14 @@ ___
 
 - Activating the message form element.
   - The form element in the "Connect" section does not presently have full functionality. This is to be added upon acquiring skills to enable this feature.
+- Customized scrollbars
+  - The project currently minimizes the appearance of the scrollbar in order to avoid "content wiggling" during transitions. The addition of a custom scroll bar for the static version will be implemented in due course.
+- Search function
+  - The ability to search site-wide will be useful to navigate keywords.
+- Dark mode
+  - Adding a stylesheet for dark mode to be further flexible to the user while upholding the website's brand.
+- Backend control
+  - Adding the ability to quickly modify content via a frontend dashboard.
 
 ## Technologies
 
@@ -780,7 +765,7 @@ ___
    - Secondary and/or supporting icons, mostly for brand logos are referenced from FontAwesome's vast library of responsive, easily-adjustable icons.
    - FontAwesome icons are inserted in `<i>` elements when used as support imagery for existing text; and inserted in `<span>` elements when used as an independent feature.
 4. [Adobe Fonts:](https://fonts.adobe.com/)
-    - [Viktor Nübel](https://viktornuebel.medium.com/how-scripts-helped-to-design-a-typeface-for-coding-9af5f28d742a)'s [FF Attribute](https://www.fontshop.com/superfamilies/ff-attribute) font family is the stylistic feature font of the project's main body, including [FF Attribute Mono](https://www.fontshop.com/families/ff-attribute-mono) and [FF Attribute Text](https://www.fontshop.com/families/ff-attribute-text); while [Vasily Biryukov](http://luc.devroye.org/fonts-51517.html)'s opinionated take on the classic [FF DIN](https://en.wikipedia.org/wiki/FF_DIN) family with [DIN 2014](https://fonts.adobe.com/fonts/din-2014) is featured in section headlines. Both families are hosted from [Adobe Fonts ](https://fonts.adobe.com/) via an `@import` url to [typekit](https://blog.typekit.com/) in style.css.
+    - All font families are hosted from [Adobe Fonts ](https://fonts.adobe.com/) via an `@import` url and [typekit](https://blog.typekit.com/) in style.css.
 
 ### Plugins
 
@@ -810,30 +795,28 @@ __Senior Dev. Visitor Goals__
 
 1. _As a leader in the industry, I want to have a good understanding of who you are and what you are all about within a few seconds._
 
-    - Each of the seven excerpts of the owner's narrative  is curated to feature an assertive upheld value, existing independent of the others, contained in a headline "truism" to have a clear, equal resonance at each iteration. This ensures that the owner's narrative is showcased at every category.
-   -  The first passage was recently revised to include a short paragraph summary, and is now the only paragraph featured on mobile devices. This affords the user with the owner's "in-a-nutshell" pitch without distraction to its extended excerpts per section when on-the-go and viewing on mobile.
+    - Each of the seven excerpts of the owner's narrative  is curated to feature an assertive statement, each of which existing independent of the rest. These are rendered like journalistic headline "truisms" to have consistent resonance at each iteration. This ensures that the owner's "voice" is showcased at every category. The first passage was recently revised to include a short paragraph summary, and is now the only paragraph featured on mobile devices. This affords the user with the owner's "in-a-nutshell" pitch without distraction to its extended excerpts per section when on-the-go and viewing on mobile.
 
 2. _As a leader in the industry, I want to be led seamlessly through the site to arrive at valuable content with the minimum amount of clicks._
 
-   - The website features an interactive collapsible navigational 'stack' programmed to clearly present and quickly deliver content to and from the immediate vicinity of the very first touchpoint. The ubiquity of this feature is aimed at capturing an immediate shorthand with the user, playing to the impulses of his/her learnablility.
-   - Additionally, the cut-to-the-chase download-my-cv CTA makes this arrival the most valuable touchpoint for both user and owner.
+   - The website features an interactive collapsible navigational 'stack' programmed to clearly present and quickly deliver content to and from the immediate vicinity of a user's very first touchpoint. The ubiquity of this feature is aimed at capturing an immediate shorthand with the user, playing to the impulses of his/her learnablility. Additionally, the cut-to-the-chase "Download My CV" CTA upon landing makes the initial arrival to the site the most valuable touchpoint for both user and owner.
 
 3. _As a leader in the industry, I want to see evidence of your credibility and capability as a professional. I want to see what others have said about you or how they have reacted to you. I also want to locate sources of your credibility to see that they are legitimate and to have an idea of your influence on the industry._
 
-    - Every content type in every category of the CV is essentially and intentionally "over-cited" as the ambition is to let the many references and sources and data speak for itself, with links to every source,  embracing a manner of  "designed placeholding," with the most true content. The high-level paradigm is that activity is equal to content. For this reason, every corner of the website is "activity-centric", showcasing the owner's honest web footprint.
+    - Every content type in every category of the CV is essentially and intentionally "over-cited" as the ambition is to let the many references, sources and data speak for itself; capturing links to every source, embracing a manner of  "designed placeholding" for the most honest representation of content. The high-level paradigm is that activity is equal to content. For this reason, every corner of the website is "activity-centric" to uphold the owner's integrity, showcasing the owner's realistic web footprint.
 
 __Recruiter Visitor Goals__
 
 1. _As a Recruiter, I want to find information on your skills and projects ASAP._
 
-    - The website is designed to circulate across three main CTAs as one navigates from landing to finish. These three CTAs are: Download my CV, which is first, and appears twice more, 2) my LinkedIn and 3) my GitHub. There are two chapters dedicated solely to 1) the owner's areas of expertise and 2) the owner's proficiency with skills within such areas. Additionally, the download button as a landing greeting is a calculated effort to establish and reinforce the visual language of the CTA container and its seven identical iterations.
+    - The website is designed to circulate across three main CTAs as one navigates from the landing section to the end. These three CTAs are: Download my CV, which is first, and appears twice more, 2) owner's LinkedIn and 3) owner's GitHub. There are two chapters dedicated solely to 1) the owner's areas of expertise and 2) the owner's proficiency in skills within such areas. Additionally, the download button as a landing greeting is a calculated effort to establish and reinforce the visual language of the CTA container and its seven identical iterations.
 
 2. _As a Recruiter, I want to understand the easiest and most reliable method of saving and sharing your profile to my team._
 
-    - The website's per-section CTAs follows the rule of proximity, and are positioned so as to close every chapter and open the next. The website also features three sets of quick-link button groups, emerging at introduction, at side menu, and at the final connect section. These CTA button groups include the ability to save my contact info and CV,  la touchpoints for CTAs  section  on contact information and a message form.
+    - The website's per-section CTAs follow the rule of proximity, and are positioned so as to "close" every chapter and "open" the next. The website also features three sets of quick-link button groups, emerging at introduction, at side menu, and at the final "connect" section. These CTA button groups include the ability to save the owner's contact info and CV.
 
 3. _As a Recruiter, I want to find the best way to get in contact with you in case I want to connect._
-    - The website dedicates a whole section  on contact information and a message form, which is one of the seven main section in the collapsible "stack" that is designed so that a user never loses sight of a single one. The site's main feature is the navigational "stack" of sections, which, along with pointing a user to content, becomes the very container from which content emerges. The all-serving multi-purpose one-stop feature is designed to be accommodating to the user and showcase  an ethos of flexibility eagerness to "connect."
+    - The website dedicates a whole section  on contact information and a message form, which is one of the seven main section in the collapsible "stack" designed so that a user never loses sight of all available categories. The site's main feature is the navigational "stack" of sections, which, along with directing a user to content, becomes the very container from which content emerges. This all-serving multi-purpose feature is designed to be accommodating to the user and showcase an ethos of flexibility, and eagerness to "connect."
 
 __Collaborator Visitor Goals__
 
@@ -843,100 +826,90 @@ __Collaborator Visitor Goals__
 
 2. _As a potential collaborator, I want to find stats of your contribution footprint._
 
-    - The website features stats of the owner's footprint in every measurable profesional capacity including: repo contributions, commits, commit messages, project statuses (active, current, next, forthcoming), years in practice, awards and honors. Additionally, the website can be toggled to static mode to show all collapsed sections. Wayfindingin this mode, should one require it, is featured as a proprtional linear scale that shows you where you are on the  very tall page. This is designed to ensure there is always a way to safety in case a user requires it.
+    - The website features stats of the owner's footprint in every measurable profesional capacity including: repo contributions, commits, commit messages, project statuses (active, current, next, forthcoming), years in practice, awards and honors. Additionally, the website can be toggled to static mode to show all collapsed sections. Wayfindingin this mode, should one require it, is featured as a linear pagination scale that shows you where you are on the page. This is designed to ensure there is always a way to safety in case a user requires it.
 
 3. _As a potential collaborator, I want to find the best way to get in contact with the you with any questions I may have._
 
-    - The website is designed to feature at least three ways to get in contact with the owner, providing immediate flexibility as well as a logical progression to connecting and/or researching the owner prior to connecting. The site directly offers the owner's email address in a CTA button that will open your email in any device; a CTA that will open your phone app in case you wish to proceed with a call and/or save the owner's number; a CTA that will open google maps in case you wish to have some idea of the owner's location; along with four other links to the owner's Dev account, Github account, LinkedIn, and a dedicated in-page message form that's been pre-filled with a default message which is there to help you break the ice as well as further express the delight with which the owner welcomes new connections.
-
-
-
-
-<!--1. Relative positioning as a boolean tool:-->
-<!--   1.  * Absolute positioning as a boolean tool.-->
-<!-- *-->
-<!-- * This attaches key element positioning in nav outline to the :checked selector.-->
-<!-- * Scrollspy and pagination should only be enabled when the website is in static-->
-<!-- * expand-all state.-->
-<!-- *-->
-<!-- * As the feedback states of nav outline are given to pseudo elements absolutely-->
-<!-- * positioned relative to their parent elements; positioning absolute children-->
-<!-- * by traversing the :checked selector results in an effective on/off hack.-->
-<!-- *-->
-<!-- * Absolutely position pseudo elements of list items in nav-->
-<!-- * outline for pagination and scrollspy features only when #toggle-all-->
-<!-- * is ':checked'.-->
-
+    - The website is designed to feature at least three ways to get in contact with the owner, providing immediate flexibility as well as a logical progression to connecting and/or researching the owner prior to connecting. The site offers the owner's contact info at landing section, side menu navigation, and the final "Connect" section. These list groups feature: "mail to" links that will open a new draft email for you to start typing from your device; a CTA that will open your phone app to "make a call" in case you wish to proceed with a call and/or save the owner's number; a CTA that will open google maps in case you wish to have some idea of the owner's location; along with four other links to the owner's Dev account, Github account, LinkedIn, and a dedicated in-page message form that's been pre-filled with a default message which is there to help you break the ice as well as further express the delight with which the owner welcomes new connections.
 
 
 ### Notable Methods
 
 1. Scroll to Top on `.collapse.show`:
-   - Having [large amounts of content](https://stackoverflow.com/questions/35992900/bootstrap-accordion-scroll-to-top-of-active-open-accordion-on-click) in a collapsed target element exposes the plugin's [most common shortcoming](https://stackoverflow.com/questions/54838108/scroll-to-the-top-of-bootstrap-accordion-when-opened): current content is shown relative to how far down you scrolled in the previous target. While a simple Javascript is a [typical fix](https://wordpress.org/support/topic/accordion-scroll-to-top-of-active-open-accordion-on-click/), I was able to implent a pure CSS alternative, one of the main benefits of transitioning flexbox.
-   - Setting boolean states `.show` to flex-direction: column and `:not(.show)` to flex-direction: column reverse pushes content up/down for or on the next toggle. This simplicity of the trick can be seen clearly when applied to animation keyframes or given transition duration.
-
+   - Having [large amounts of content](https://stackoverflow.com/questions/35992900/bootstrap-accordion-scroll-to-top-of-active-open-accordion-on-click) in a collapsed target element exposes the plugin's [most common shortcoming](https://stackoverflow.com/questions/54838108/scroll-to-the-top-of-bootstrap-accordion-when-opened): current content is shown relative to how far down one has scrolled in the previous target. While a simple Javascript is a [typical fix](https://wordpress.org/support/topic/accordion-scroll-to-top-of-active-open-accordion-on-click/), I was able to implent a pure CSS alternative, one of the main benefits of transitioning flexbox.
+   - Setting the boolean class `.show` to `flex-direction: column` and, conversely,  `:not(.show)` to `flex-direction: column reverse` push content up/down for the next toggle. The simplicity and effect can be seen clearly when attached to longer-duration transition keyframes.
 
 2. Toggling Around Asynchronous Transitions
-   - To effectively attach boolean state changes to transition classes returned by Bootstrap's plugins, you have to control three classes; not two. Bootstrap's API methods are asynchronous: returning a class at the beginning of a transition but before it ends. Between start and end, a transitioning class is returned.
-   - Carefully understanding this allowed full control of the desired transition behavior afforded by the transiting trasition classes, essentially using the collapse plugin for its data-target and data-parent management only.
-   - whene element is .collapsing BS animates its height from current value to 0.
-   - Ruleset .collapsing
-   - Ruleset element skipping  .collapse
-   - Ruleset :not(.show) skipping .collapse:not(.show)
+   - To effectively attach boolean state changes to transition classes returned by Bootstrap's plugins, you have to control three classes; not two. Bootstrap's API methods are asynchronous: returning a class at the beginning of a transition but before it ends. Additionally, between start and end, a "transitioning" class is returned.
+   - Carefully understanding this allowed full control of the desired transition behavior afforded by impermanent in-transit classes. Essentially, the site only uses the collapse plugin for its `data-target` and `data-parent` management, as this provides the ability to traverse targets across the DOM.
 
-```css
+    <br>
+    <details><summary> Example CSS </summary>
+    <br>
 
-/* Important to reset the class between .collapse and .show */
+    ```css
 
-section.collapsing {
-    transition: none !important;
-    height: 100% !important;
-}
+    /* Important to reset the class between .collapse and .show */
 
-/* 
- * Important not to select this state via `section.collapse`
- * When using asynchronous transition classes as a boolean tool,
- * the trick is to stick to a single class and toggle the manner
- * in which you select that same in-transit class by traversing `:not`
- * 
- * Traversing via `.collapse.show` will invariably set rules for the
- * millisecond `.show` enters an element right when `.collapse` is
- * just about to be removed and vice versa. 
- * What you will see is a flicker to the to/from state between... to/from.
- */
+    section.collapsing {
+        transition: none !important;
+        height: 100% !important;
+    }
 
-section:not(.show) {
-    /*  Default styles */
-}
+    /* 
+     * Important not to select this state via `section.collapse`
+     * When using asynchronous transition classes as a boolean tool,
+     * the trick is to stick to a single class and toggle the manner
+     * in which you select that same in-transit class by traversing `:not`
+     * 
+     * Traversing via `.collapse.show` will invariably set rules for the
+     * millisecond `.show` enters an element right when `.collapse` is
+     * just about to be removed and vice versa. 
+     * What you will see is a flicker to the to/from state between... to/from.
+     */
 
-section.show {
-    /* Active styles */
-}
-    
-    
-```
+    section:not(.show) {
+        /*  Default styles */
+    }
 
+    section.show {
+        /* Active styles */
+    }
+
+
+    ```
+
+    <br>
+    </details>
+    <br>
 
 ### Documentation Notes
 
 1. In order to keep the HTML markup clean and avoid the nested trifecta of `container-fluid` -> `row` -> `col-11` wrapper `<div>`s before arriving at semantically-sectioned elements; the utilities that achieve the wrapper's responsive behavior are applied to the HTML itself, removing three levels of wrapper `<div>`s. This ensures that the largest structures of the site are semantically sectioned as well as provide the ability to quickly set a new width to the main content for various applications by simply declaring a new value out of twelve without sacrifice to any site functionality.
 
- ```css
-     
-     :root {
-          /* Desired width variable (out of 12) */
-         --of-twelve: 11;
-     
-         /* Resulting width property as percentage */
-         --width: calc(var(--of-twelve) / 12 * 100%);
-     }
-     
-     :root > * {
-         width: var(--width);
-     }
-     
- ```
+    <br>
+    <details><summary> Example CSS </summary>
+    <br>
 
+     ```css
+
+         :root {
+              /* Desired width variable (out of 12) */
+             --of-twelve: 11;
+
+             /* Resulting width property as percentage */
+             --width: calc(var(--of-twelve) / 12 * 100%);
+         }
+
+         :root > * {
+             width: var(--width);
+         }
+
+     ```
+
+    <br>
+    </details>
+    <br>
 
 2. Style blocks in style.css are approached with component-based style declarations. A dedicated block with sub-blocks of rulesets are given to each feature, function or scope. Herein, all `@media` queries specific to a ruleset are configured *immediately* following its default or "parent" ruleset. This approach assigns "components" responsibility for how to accommodate media queries and state changes as opposed to the opposite, where state changes or media queries would be separate "parent" rule blocks with "component" reconfigurations affixed to the end of a stylesheet. The component-based approach was used in order to more efficiently track global state changes while developing each "component", essentially rendering every `@media` query declaration as a sub-block of styles native to a specific component's behavior.
 
@@ -946,6 +919,10 @@ section.show {
 
 5. With effect to point #2 above and to the complex boolean properties of the landscape mode described in point #4, custom properties that acquire new values based on boolean states are declared at the parent class and/or the parent scope, extending the component-based approach to custom property values. Similar to the powerful property declaration at `:root` as described in point #1 above, over a dozen more responsive properties follow the same logic across scales and scopes in style.css. These variables are described and annotated as required in comment blocks within style.css. Below is an example of one of over a dozen usages of component-based rulesets, per-scope custom property declarations, and complex boolean checks and balances. In this instance, the landscape query as mentioned in point #4 above, has to cancel out the default state *and* the toggled state to prevent unanticipated boolean state combinations. Note that this approach to CSS styles for complex boolean states is consistent in style.css and, at the moment, accomplishes desired functions without JavaScript as of yet. The approach for `:checked` states as shown below is the same approach taken for `.show` and `:not(.show)` states and how they respond to global boolean system changes.
 
+
+    <br>
+    <details><summary> Example CSS </summary>
+    <br>
 
     ```css
     
@@ -996,6 +973,9 @@ section.show {
     
     ```
 
+    <br>
+    </details>
+    <br>
 
 6. Animations have `animation-fill-property` set to `forwards`, which means all properties assigned at `@keyframe { 100% }` is given to the animated element at the end and long after the animation has concluded. The default is none, which means typically, animation keyframe styles come and go; without accountability to property values before or after they are called. Thus, the fill property and the keyframe values are particularly essential for all animations attached to impermanent/state/pseudo class selectors controlling boolean states (`.show`, `:checked`, etc.) as such elements need to hold *set* values of *either/or* for the duration of the class's transit. As a result of this feature, CSS keyframe sets in style.css are equally determinstic as the rulesets to which they are called. In most cases with heavy-lifting flagship animation styles, state properties are __only assigned__ at keyframes' 0%/100% mark and not repeated at the parent ruleset that calls the animation with that keyframe. As such, style.css is written to widely accept the notion that keyframes hold a vital responsibility. To that end, note that properties controlled by keyframes are omitted in parent rulesets when they are not needed so as to minimize repetition of state properties.
 
@@ -1012,57 +992,69 @@ section.show {
 12. Given the semantic clarity achieved in the article-stack, consideration was given to the removal of the landing section from the collapsible stack; its potential, logical (and semantic) location being within the main body `<header>`. However, the ability to hide the landing section inside a `<header>` upon toggling the collapsed sections within `<main>`, as is currently featured, would be prevented (without CSS ability to control nested, out-of-scope elements), and not yet immediately possible without JavaScript. This is a potential area of improvement in later revisions.
 
 13. Large blocks of single declarations in style.css are formatted in single-lines. This slight deviation from the standard ruleset format helps to manage and clarify various declarations of signature colors per section. As a section's signature color is the only distinct property to vary from an otherwise global and consistent style, such declarations are decidedly *single* declarations per scope of many scopes; conveying less meaning in a standard-format ruleset, and more meaning in the direct context of *all* single declarations of a scope. For this reason, signature color declarations for a scope are grouped in a single block, and formatted in single lines. See two examples below, which occurs in twelve iterations in style.css and/or where the same code clarity is made effective. See [Idiomatic CSS](https://github.com/necolas/idiomatic-css) for the CSS patterns adopted in the project.
-```css
-    
-    /* Single-line-format style declarations of one feature's color differentials 
-     * for seven sections. 
-     */
-    
-    .link-one.nav-link:hover { color: var(--raisin); }
-    .link-two.nav-link:hover { color: var(--grey); }
-    .link-three.nav-link:hover { color: var(--red); }
-    .link-four.nav-link:hover { color: var(--blue); }
-    .link-five.nav-link:hover { color: var(--canary); }
-    .link-six.nav-link:hover { color: var(--green); }
-    .link-seven.nav-link:hover { color: var(--yellow); }
-    
-    /* Single-line-format style declarations of one section's signature colors
-     * for various type properties. 
-     */
-    
-    #target-four h4 { background-color: var(--denim); }
-    #target-four b { color: var(--denim); }
-    #target-four a { color: var(--blue); }
-    #target-four p::selection { background: var(--blue); }
-    #target-four p::-moz-selection { background: var(--blue); }
-    
-```
+
+    <br>
+    <details><summary> Example CSS </summary>
+    <br>
+
+    ```css
+
+        /* Single-line-format style declarations of one feature's color differentials 
+         * for seven sections. 
+         */
+
+        .link-one.nav-link:hover { color: var(--raisin); }
+        .link-two.nav-link:hover { color: var(--grey); }
+        .link-three.nav-link:hover { color: var(--red); }
+        .link-four.nav-link:hover { color: var(--blue); }
+        .link-five.nav-link:hover { color: var(--canary); }
+        .link-six.nav-link:hover { color: var(--green); }
+        .link-seven.nav-link:hover { color: var(--yellow); }
+
+        /* Single-line-format style declarations of one section's signature colors
+         * for various type properties. 
+         */
+
+        #target-four h4 { background-color: var(--denim); }
+        #target-four b { color: var(--denim); }
+        #target-four a { color: var(--blue); }
+        #target-four p::selection { background: var(--blue); }
+        #target-four p::-moz-selection { background: var(--blue); }
+
+    ```
+
+    <br>
+    </details>
+    <br>
+
 
 ### Code Testing
 
-The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services continue to be used to validate the single html page (index.html) and the css URI of the project (/assets/style.css) to ensure no errors, alerts or flags pertaining to html and css syntax.
+- The W3C Markup Validator (Nu Html Checker) and W3C CSS Validator Services continue to be used to validate the single html page (index.html) and the css URI of the project (/assets/style.css) to ensure no errors, alerts or flags pertaining to html and css syntax. Some warnings for "potential misuse of aria-label" were reviewed; the elements that remain are deemed usable and beneficial. See [Accessibility Testing](#accessibility-testing).
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Findex.html)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=)
+    -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Findex.html)
+    -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=)
 
+### Accessibility Testing
 
-### Miscellaneous
+- [ChromeVox Extension](https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) was used to ensure that screen-reader accessibility standards are met. This was done by walking through the entire project with the screen-reader plugin enabled. Various adjustments were made following these tests. Notably, positioning of the checkbox `input` and its highly styled `label` were adjusted to have egalitarian accessibility.
 
-- Throughout its development, the project is continuously tested for consistency on the following browsers:
+### Browser Testing
+
+- Throughout the development of the project, in-browser dev tools were used to test for consistency across browsers. The browsers themselves were equally used for general use-case testing. The following browsers' per-device applications were accessed with an iPhone 11 Pro, MacBook Pro 15" and iPad Pro 12.9":
   - Chrome Version: 83
   - Firefox 82
   - Opera 72
   - Safari 14
-- Throughout its development, the project is continuously tested for consistency on the following devices:
-  - iPhone 11 Pro
-  - MacBook Pro 15"
-  - iPad Pro 12.9"
 
 ### Known Bugs
 
 - Pseudo `:before` and `:after` vertical rail elements absolutely positioned to parent `section.collapse`, `section.collapsing` and `section:not(.show)`  tend to be treated as overflow on Safari as it presently lacks support for `clip-path`,  thus forcing the "top" of the rail to be hidden at the boundaries of its parent article element.
-
 - Arriving at a square aspect ratio on a Safari desktop browser has previously caused a media query loop as Safari attempts to accommodate the `@media (orientation: landscape)` query and the default media setting simultaenously. All other browsers choose the latter.
+- Constant and continuous rotation of a mobile device from portrait to landscape can cause the browser's default scrollbars to stick to a nested margin in the website.
+- Constant and continuous toggling of the checkbox along with rotation of a mobile device's orientation can cause certain elements to remain in a previous boolean state. These are primarily left and right margins. Adjustments were made to alleviate this result, and to ensure content is not affected.
+- Visibility to some elements in the sidebar are sometimes compromised when toggling into landscape from portrait on a mobile. Additional `overlow-y: scroll` properties have been set to alleviate this issue.
+- On Chrome mobile browsers, visibility of an open `.show` section sometimes remains clipped when the global checkbox is suddenly `:checked` to expand all. In this instance, the section is still scrollable within the assigned height from the previous state. Additional rulesets were applied to force certain properties like this to carry through across boolean events.
 
 [Back to top](#table-of-contents)
 
@@ -1080,13 +1072,14 @@ The project uses GitHub Pages to deploy index.html from the root directory of th
 
 Code is locally run via WebStorm as described in [Programs and Software ](#programs-and-software). Two branches.
 
-<!--To clone the repository:-->
-<!--1. Select the Repository from the Github Dashboard.-->
-<!--1. Click on the "Clone or download" green button located above and to the right of the File Structure table.-->
-<!--1. Click on the "clipboard icon" to the right of the Git URL to copy the web URL of the Clone.-->
-<!--1. Open your preferred Integrated Development Environment (IDE) and navigate to the terminal window.-->
-<!--1. Change the directory to where you want to clone the repository too. (In the case of PyCharm the directory path can be found through the "Navigate" tab).-->
-<!--1. Paste the Git URL copied from above and click "Ok". (Again in the case of PyCharm once you click "clone", Git Root mapping will be automatically set to the project Root directory).-->
+The project can be used as a means for featuring a variety of media. To clone this repository (*Exact literature is sourced from Code Institute's template*):
+
+1. Select the Repository from the Github Dashboard.
+1. Click on the "Clone or download" green button located above and to the right of the File Structure table.
+1. Click on the "clipboard icon" to the right of the Git URL to copy the web URL of the Clone.
+1. Open your preferred Integrated Development Environment (IDE) and navigate to the terminal window.
+1. Change the directory to where you want to clone the repository to.
+1. Paste the Git URL copied from above and click "Ok".
 
 [Back to top](#table-of-contents)
 
@@ -1099,6 +1092,8 @@ Code is locally run via WebStorm as described in [Programs and Software ](#progr
 - Taking Damien L Gilliams' LinkedIn CSS styles a steph further, the list of awards featured in `#target-six`'s Awards section in index.html applies Mr. Gilliams' appropriation style to the "Accomplishments" section of the owner's public LinkedIn profile. Code for this extensive `<ul>` was only slightly modified for margins. The CSS rulesets extracted from this exercise are added to the style block following the Recommendations style block and Mr. Gilliams's notes in style.css.
 
 - GitHub's  progress bar styles and language colors were appropriated in the project by inspecting the HTML of the project's repository page, and using the colors it assigns for languages. [MDBootstrap's Progress bar](https://mdbootstrap.com/docs/standard/components/progress/) class was then utilized to show these percentages.
+
+- The landing section's "highlighted text" feature uses CSS from [John Negoita's examples](https://medium.com/@codingdudecom/highlight-text-css-97331a5b71b5). Complete descriptions of customization is described in style.css.
 
 ### Content and Media
 
