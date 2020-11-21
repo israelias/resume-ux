@@ -162,7 +162,7 @@
 }
 
 /* ==========================================================================
-   Type configs @prefixed
+   Type configs
    ========================================================================== */
 
 body {
@@ -247,12 +247,13 @@ ion-icon {
 }
 
 /* ==========================================================================
-   Headings @prefixed
+   Headings
    ========================================================================== */
 
 /* Landing headings. See `.ribboneto-trial` class */
 
-h1, h2 {
+h1,
+h2 {
     font-family: monotalic, sans-serif;
 }
 
@@ -265,24 +266,11 @@ h3 {
 /* Section lead heading */
 
 h4 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-
-    padding: 5rem 1rem 1rem;
-    margin-bottom: .5rem;
-    border-radius: var(--radius-2);
-
     font-family: din-2014, sans-serif;
     font-weight: 400;
     font-style: normal;
-
     font-size: calc(1.0625rem + 1.5vw);
     line-height: calc(1.6875rem + 1vw);
-
     color: var(--white);
     text-shadow: #fff 0 .5px 0, #D7D7D6 0 -.5px 0;
     -webkit-font-smoothing: antialiased;
@@ -1771,7 +1759,7 @@ html {
     /*}*/
 
     [data-parent="#resumeStack"] {
-        --height: calc(100vh - 21rem - 6rem);
+        --height: calc(100vh - 21rem - 4rem);
         /*--height: 60vh;*/
         overflow: scroll;
     }
@@ -1875,6 +1863,7 @@ html {
     background: var(--powder);
 
     font-family: din-2014, sans-serif;
+    tab-index: 3;
 }
 
 .body-nav {
@@ -3507,8 +3496,6 @@ ul.nav {
         font-weight: 500;
     }
 
-    /*.body-nav.show ~ .body-footer .footer-author:after,*/
-    /*#toggle-all:checked ~ .body-footer .footer-author:after,*/
     .footer-author:after {
         border-bottom: 0.5em solid #fff200;
     }
@@ -3731,17 +3718,6 @@ details[open] .open,
     padding: 5rem 1rem 1rem;
     margin-bottom: .5rem;
     border-radius: var(--radius-2);
-
-    font-family: din-2014, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
-    font-size: calc(1.0625rem + 1.5vw);
-    line-height: calc(1.6875rem + 1vw);
-
-    color: var(--white);
-    text-shadow: #fff 0 .5px 0, #D7D7D6 0 -.5px 0;
-    -webkit-font-smoothing: antialiased;
 }
 
 /*
@@ -4103,6 +4079,11 @@ details[open] .open,
     .activity-cta a > .inset-inner {
         padding: .2rem;
         border-radius: 50%;
+    }
+
+    .link-icon {
+        font-size: 1.5rem;
+        line-height: var(--navlink-height);
     }
 }
 
@@ -4703,23 +4684,29 @@ section.collapse:not(.show) .section-icon {
 
 @media (max-width: 767.98px) {
     #target-zero {
-        height: 100%;
+        /*height: 100%;*/
         /*padding-bottom: 1.5rem;*/
-        /*padding-top: calc(100vh - var(--height) - 21rem - 5rem);*/
+        padding-top: calc(100vh - var(--height) - 21rem - 5rem);
     }
 }
 
+/* Banner CTA container configs */
+
 @media (min-width: 992px) and (orientation: landscape) {
     .banner-cta {
-        width: 66.66%;
+        width: 65%;
         position: absolute;
-        /*top: calc(var(--ribbon-datum) - 6rem);*/
         top: 25vh;
         left: 0;
         right: 0;
         margin-top: 50vh;
         margin-top: -25%;
-        /*padding-bottom: 3rem;*/
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .banner-cta {
+        display: none;
     }
 }
 
@@ -4774,39 +4761,16 @@ section.collapse:not(.show) .section-icon {
  */
 
 .ribboneto-trial {
-    /* Not necesrally to call the --of-twelve property here from :root,
-     * But helpful both for clarity, flexibility (in case we want to
-     * conceive an entirely different window square footage for the
-     * landing page relative to its nested article) and, importantly,
-     * just in case the machine fails to retrieve the value at root.
-     *
-     */
-
-    --of-twelve: 11;
-    --ribwidth: calc(var(--of-twelve) / 12 * 100vw);
-    --riboffset: calc((12 - var(--of-twelve)) / 12 * 100vw);
     --ribs-lh: 1.2535;
-    --ribs-margin: calc(var(--riboffset) / 2 * -1);
-
-    /*-66% is the trick for small sc*/
-
     --ribspace: 2px;
     --h1-height: 3rem;
     --h1-top-pad: 3vh;
     --h2-top-pad: 2vh;
-    /*--ribbon-datum: calc(100vh - 75% - var(--h1-height) - var(--h2-top-pad) - var(--h1-top-pad));*/
     --ribbon-datum: calc(100vh - 88vh + var(--h2-top-pad));
 
     flex-direction: row;
     justify-content: start;
-    margin-left: var(--ribs-margin);
-    margin-right: var(--ribs-margin);
 }
-
-/*.body-nav.show ~ .body-main .ribboneto-trial {*/
-/*    --ribs-margin: -66.66%;*/
-/*    flex-direction: column;*/
-/*}*/
 
 .ribboneto-trial a {
     color: var(--deep-1);
@@ -4833,18 +4797,19 @@ section.collapse:not(.show) .section-icon {
 /* Complete styling of a linear certificate, */
 
 .ribbon-fragment {
-    min-height: calc(2em + var(--ribspace)*1);
+    min-height: calc(2em + var(--ribspace) * 1);
     border-top: thin solid var(--raisin);
 
     display: flex;
     align-items: center;
     padding: .5em 0;
 
-    /*font-size: 10px;*/
-    /*line-height: 1.2555;*/
-
     font-size: 11px;
     line-height: var(--ribs-lh);
+}
+
+.ribbon-start {
+    border: none;
 }
 
 /* Utilizes minimal ribbon attributes (border and spacing)
@@ -4866,27 +4831,27 @@ section.collapse:not(.show) .section-icon {
  */
 
 .ribbon-highlight {
-    position:relative;
-    margin:0.1em;
+    position: relative;
+    margin: 0.1em;
     color: #4f4f4f;
     text-transform: uppercase;
-    font-family: Monotalic, sans-serif;
+    font-family: monotalic, sans-serif;
     font-weight: 300;
-    /*width: 66vw;*/
+
     white-space: nowrap;
     text-align: left;
 }
 
 .ribbon-highlight:before{
-    content:"";
-    z-index:-1;
-    left:-0.5em;
-    top:0.1em;
-    border-width:0.5em;
-    border-style:solid;
+    content: "";
+    z-index: -1;
+    left: -0.5em;
+    top: 0.1em;
+    border-width: 0.5em;
+    border-style: solid;
     border-color: #fff200;
-    position:absolute;
-    /*width:100%;*/
+    position: absolute;
+
     width: 66.66%;
     border-left: none;
     border-right: none;
@@ -4905,9 +4870,15 @@ section.collapse:not(.show) .section-icon {
 }
 
 .cover-datum {
-    /*padding-top: var(--ribdatum);*/
-    /*padding-top: var(--ribbon-datum);*/
     padding-top: 2vh;
+}
+
+.title-profile {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-align: left;
+    white-space: nowrap;
 }
 
 /*
@@ -4977,8 +4948,8 @@ section.collapse:not(.show) .section-icon {
     opacity: 1;
     line-height: var(--ribs-lh);
 
-    font-size: .765rem;
     font-style: italic;
+    font-size: 11px;
 }
 
 /* Helper container for duplicate "ed" in "developed"
@@ -4988,36 +4959,10 @@ section.collapse:not(.show) .section-icon {
 .banner-pseudo {
     line-height: var(--ribs-lh);
     font-size: .875rem;
-}
-
-/* Hover styles for decoration figure.
- * The styled typography, which is "constricted" in gesture,
- * expands in a straight line when hovered, and at certain
- * media queries.
- */
-
-.banner-text:hover .banner-top,
-.banner-text:hover .banner-bottom {
-    flex-direction: row;
-    margin-bottom: 0;
-    line-height: 1;
-    justify-content: space-around;
-}
-
-.banner-text:hover .banner-middle {
-    display: none;
-}
-
-.banner-text:hover .string-head,
-.banner-text:hover .string-tail {
-    padding-bottom: 2rem;
-    margin-top: auto;
-}
-
-.banner-text:hover .ribbon-fragment,
-.banner-text:hover .ribbon-unravel {
-    border-top: none;
-    border-bottom: thin solid var(--raisin);
+    font-family: monotalic, sans-serif;
+    font-size: 11px;
+    line-height: var(--ribs-lh);
+    border-top: thin solid var(--raisin);
 }
 
 /* Controls dual parentheses enclosing banner-text. */
@@ -5033,15 +4978,14 @@ section.collapse:not(.show) .section-icon {
 }
 
 .string-head {
-    padding-top: -.3rem;
+    margin-top: -.3rem;
     margin-left: -2vw;
-    padding-right: .25rem;
 }
 
 .string-tail {
+    margin-top: -.3rem;
     padding-bottom: -.3rem ;
-    margin-right: -2vw;
-    padding-left: .25rem;
+    margin-left: 1vw;
 }
 
 .banner-pseudo {
@@ -5065,9 +5009,25 @@ section.collapse:not(.show) .section-icon {
     color: var(--deep-4);
 }
 
-/* Styles to unfold the banner at landscape dashboard query. */
+.banner-cta .inset-inner {
+    background: #ddd21a;
+}
 
-@media (orientation: landscape) {
+.icon-landing {
+    color: #4f4f4f;
+}
+
+section.show .banner-cta .btn {
+    border: 2px solid #fff200;
+    outline: 0;
+    -webkit-transition: border-color 0.15s ease-in-out 3s;
+    -o-transition: border-color 0.15s ease-in-out 3s;
+    transition: border-color 0.15s ease-in-out 3s;
+}
+
+/* Styles to unfold the banner on extra wide screens. */
+
+@media (min-width: 992px) and (orientation: landscape) {
     .banner-top {
         flex-direction: row;
         margin-bottom: 0;
@@ -5099,14 +5059,17 @@ section.collapse:not(.show) .section-icon {
     }
 }
 
+@media (min-width: 1200px) {
+    .title-profile {
+        margin-left: calc(100vw - 33vw - 3rem);
+    }
+}
+
 @media (max-width: 575.98px) {
     .ribboneto-trial,
     .banner-cta {
         margin-left: 1rem;
         margin-right: 1rem;
-    }
-    .ribbon-highlight:before{
-        /*width:100%;*/
     }
 
     .cover-title.title-sub {
@@ -5117,8 +5080,9 @@ section.collapse:not(.show) .section-icon {
         width: 100% !important;
         flex: 0;
     }
+
     .banner-cta .value {
-        font-size: .725rem;
+        font-size: .875rem;
         margin-bottom: 1rem;
     }
 
@@ -5126,12 +5090,14 @@ section.collapse:not(.show) .section-icon {
         padding-top: .375rem;
         padding-bottom: .375rem;
     }
+
     .banner-cta .contact-text,
     .banner-cta .btn {
         height: 40px;
     }
+
     .ribbon-fragment,
-    .ribon-extende {
+    .ribon-extended {
         font-size: 10px;
         line-height: 1.2555;
     }
@@ -5160,40 +5126,31 @@ section.collapse:not(.show) .section-icon {
 #target-one a { color: var(--denim); }
 
 #target-one p {
-    /*font-family: "Halyard Micro", monospace;*/
-    /*font-size: .875rem;*/
     font-weight: 300;
-    /*color: #707070;*/
-    /*text-shadow: #FAFAFA 0 .5px 0, #D4D6D6 0 -.5px 0;*/
     -webkit-font-smoothing: antialiased;
 }
 
 #target-one p b:nth-of-type(2) {
-    /*color: #F26041;*/
     color: var(--raisin);
     text-shadow:var(--slate) 0 .5px 0;
 }
 
 #target-one p b:nth-of-type(1) {
-    /*color: #187FE5;*/
     color: var(--ruby);
     text-shadow: var(--red)0 .5px 0;
 }
 
 #target-one p b:nth-of-type(3) {
-    /*color: #51d2bf;*/
     color: var(--denim);
     text-shadow: var(--blue) 0 .5px 0;
 }
 
 #target-one p b:nth-of-type(4) {
-    /*color: #8E0089;*/
     color: var(--canary);
     text-shadow: var(--yellow) 0 .5px 0;
 }
 
 #target-one p b:nth-of-type(5) {
-    /*color: #8E0089;*/
     color: var(--moss);
     text-shadow: var(--green) 0 .5px 0;
 }
@@ -6403,12 +6360,19 @@ blockquote, q {
  */
 
 #control-one .header-title:hover::after { border-color: var(--white); }
+#control-one .header-title:focus::after { border-color: var(--white); }
 #control-two .header-title:hover::after { border-color: var(--grey); }
+#control-two .header-title:focus::after { border-color: var(--grey); }
 #control-three .header-title:hover::after { border-color: var(--red); }
+#control-three .header-title:focus::after { border-color: var(--red); }
 #control-four .header-title:hover::after { border-color: var(--blue); }
+#control-four .header-title:focus::after { border-color: var(--blue); }
 #control-five .header-title:hover::after { border-color: var(--canary); }
+#control-five .header-title:focus::after { border-color: var(--canary); }
 #control-six .header-title:hover::after { border-color: var(--green); }
+#control-six .header-title:focus::after { border-color: var(--green); }
 #control-seven .header-title:hover::after { border-color: var(--yellow); }
+#control-seven .header-title:focus::after { border-color: var(--yellow); }
 
 /* ==========================================================================
    Landing animation
