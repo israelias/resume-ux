@@ -59,7 +59,7 @@ The high-level objective of the project is __to stand out__. The web resume is f
 - Supporting Goals:
   - To establish a personal and professional brand for the owner.
   - Attract and retain a following in the developer community.
-  - Be up to a standard that is competitve with UX designed responsive web resumes.
+  - Be up to a standard that is competitive with UX professional responsive web resumes.
   - Stand out to [Code Institute](https://codeinstitute.org/)'s qualification partners and potential employers.
 - The website is built for:
   - A young professional designer and architect (buildings) presently breaking into the tech industry
@@ -191,7 +191,7 @@ The following tables define user goals in the context of scenarios assigned to t
 >| <img src="documentation/RedUX_200821_Peter_01.jpg" width="800px"> | Collaborator                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 >| --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 >| <sub>Name</sub>                                                                                                 | **Peter Venti**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
->| <sub>Job Title</sub>                                                                                            | **Asociate Lead in Design Computation \| Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA                                                                                                                                                                                                                                                                                                                                                                                             |
+>| <sub>Job Title</sub>                                                                                            | **Associate Lead in Design Computation \| Associate Tech Officer at Lamb Space Design**<br/>San Francisco, CA                                                                                                                                                                                                                                                                                                                                                                                             |
 >| <sub>Background</sub>                                                                                           | New Venture Development, Master of Research in Virtual Environments                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 >| <sub>Loves</sub>                                                                                                | <br/>Seeing experiments and small projects that demonstrate the range of interests you have.<br/><br/>Seeing that you contribute to open source projects shows me that you want to give back and can play well with others.<sup>[1](#note-1)<sup><br/><br/>                                                                                                                                                                                                                                              |
 >| <sub>Loathes</sub>                                                                                              | <br/>Seeing the ubiquitous percentage bars and other elements and animations on your page that don't add any value; If you do want to add some numerical value to your skills, use the number of years or projects -- at least these metrics are universally understandable. <sup>[2](#note-2)<sup><br/><br/>                                                                                                                                                                                                 |
@@ -296,7 +296,7 @@ There is a difference between how one imagines something will be used and how it
   - [ ] Find a way to showcase stats as content.
   - [ ] As gathered from [User Research](#11-research), it's all about activity; so show it.
   - [ ] Find a way of representing the owner's development and in-progress contribution in lieu of "finished" portfolio pieces.
-  - [ ] The website should never "go to sleep" or get buried under no activity. Similar to time-stamped entries, establish a manner of communicating states -- current, previous, future -- to vistors.
+  - [ ] The website should never "go to sleep" or get buried under no activity. Similar to time-stamped entries, establish a manner of communicating states -- current, previous, future -- to visitors.
 
 #### 2.2 Functional Requirements
 
@@ -339,7 +339,7 @@ The variety of content/media required to meet the needs of the user and the owne
 >| Work Samples <br/>Arch/Design Folio | <ol><li>Preview of design work with:<ol><li> image</li><li>description</li> <li>date</li><li>tech used</li><li> link</li></ol></li></ol>              | text, image             |      |
 >| Timeline<br/>Career                 | <ol><li>List of work experience with:<ol><li> position</li><li>company</li> <li>dates</li><li>description</li><li> link</li></ol></li></ol>           | text                    |      |
 >| Timeline<br/>Education              | <ol><li>List of education with:<ol><li> degree</li><li>school</li> <li>dates</li><li>description</li><li> link</li></ol></li></ol>                    | text                    |      |
->| Awards and Recognitions             | <ol><li>List of awards with:<ol><li> name</li><li>image/icon of lnstitution</li> <li>link</li></ol></li></ol>                                         | text, icon, image       |      |
+>| Awards and Recognitions             | <ol><li>List of awards with:<ol><li> name</li><li>image/icon of institution</li> <li>link</li></ol></li></ol>                                         | text, icon, image       |      |
 >| Recommendations                     | <ol><li>Excerpts from recommendations with:<ol><li> recommender</li><li>relationship</li> <li>Excerpt</li><li>image</li><li> link</li></ol></li></ol> | text, image             |      |
 >| Download CV                         | PDF version of the above                                                                                                                              | text                    |      |
 
@@ -475,7 +475,7 @@ ___
   - With consideration to the stack as a linked list of nodes, where each node-section stores the data value of two nested sub-sections and has a link or pointer to the next node-section; the opportunity to build the back-end with more complex data structures in the future forced me to attach a component-based approach to the HTML outline and the CSS rulesets.
 - Linked List Data Structure
   - The notion of traversing a linear data structure with stored values helped to section both the front and back end of the website with a high-level structure to follow.
-  - In accomodating growth and change, the site can conceivably evolve to truly adopt a nodal data structure. (I am aware that it does not actually function this way)
+  - In accommodating growth and change, the site can conceivably evolve to truly adopt a nodal data structure. (I am aware it does not actually function this way)
   - As such, the project is programmed with an ambition to be revisited with a larger arsenal of tools and knowledge of complex data structure in the foreseeable future.
   - At the very least, the resume stack is designed to accommodate additional article "nodes" which offer the immediate opportunity to grow and modify the stack to the extent that new sections are required.
   - The project's information architecture is thus conceived to accommodate change; ensuring interchangeability of content to an HTML document outline that utilizes equally semantic elements.
@@ -487,7 +487,7 @@ ___
 ##### Headings Map
 ___
 
-- Originated from a sectioning excercise, the headings map of index.html achieves several responsibilities:
+- Originated from a sectioning exercise, the headings map of index.html achieves several responsibilities:
     - a guiding principle for semantic HTML;
     - a direct reflection of the experienced hierarchy and order of content;
     - a represented feature of the side menu and serves as the interactive dashboard for landscape mode.
@@ -598,7 +598,7 @@ ___
 
 - Parent categories and child-section sub-categories establish a grouping, order and hierarchy to synergistically support the narrative objective of the owner and the task-oriented desires of the user.
   - Section tabs and sub-section content are grouped in order of importance and in order of relevant adjacent elements.
-  - High priority items established at [stategy level](#10-strategy) are the first batch of information and CTAs to appear in both the *top-down* and the *left-right* sequence.
+  - High priority items established at [strategy level](#10-strategy) are the first batch of information and CTAs to appear in both the *top-down* and the *left-right* sequence.
   - Navigation elements *move from top to bottom in order of priority* while content moves from left to right in order of per-section call-to-action.
 
 ##### Singularity of Feature
@@ -686,7 +686,7 @@ ___
 ##### Schematic Wireframes
 ___
 
-Schematic mockups commenced in September 2020 to establish relationships between disparate sections, and test the singularity of an "accordion" container. Colors became important in distinguishing sections in the per-page mockups. In focusing on the singularity of an accordion container, wireframes for "in between" media queries were deemed less important than understanding the container states at minimum and maximum frames. Included in [Procedural Wires](https://israelias.github.io/resume-redux/wireframes/schematic/Wireframes_Schematic_Mentor_Presentation_03SEP2020_Part_One.pdf) is a full deck of the UX design boards. These schematic wires simultaneously grounded the project's intent and projected the depth of criteria to meet. The project has since evolved following its schematic phase: nameley the development of the site's side menu and it's dashboard mode.
+Schematic mockups commenced in September 2020 to establish relationships between disparate sections, and test the singularity of an "accordion" container. Colors became important in distinguishing sections in the per-page mockups. In focusing on the singularity of an accordion container, wireframes for "in between" media queries were deemed less important than understanding the container states at minimum and maximum frames. Included in [Procedural Wires](https://israelias.github.io/resume-redux/wireframes/schematic/Wireframes_Schematic_Mentor_Presentation_03SEP2020_Part_One.pdf) is a full deck of the UX design boards. These schematic wires simultaneously grounded the project's intent and projected the depth of criteria to meet. The project has since evolved following its schematic phase: namely the development of the site's side menu and it's dashboard mode.
 
 <br>
 <details><summary> List of Wireframes </summary>
@@ -793,7 +793,7 @@ Given the high degree of [movement](#54-movement) that occurs on the screen upon
 Each section is assigned a bold accent "signature color", which is carried throughout the project in two tones:
  1. A deep, rich, tone with a waxed matte finish.
  2. A faded high-saturation highlight with a diffused backlit glow.
-- Each pair of signature blends, are eye-drop selections from the following swatches. At a very small scale, tiny highlights in each swatch produce a faded/diffused version of the larger, richer tone. The swatches are taken from the owner's design work, and are given names based on their resemblence to more nuanced color representations and associations. With the exception of icons, colors are the only properties that are unique to each section. They are chosen as they complement overlaid gradients and strengthen the project's bold yet subdued materiality.
+- Each pair of signature blends, are eye-drop selections from the following swatches. At a very small scale, tiny highlights in each swatch produce a faded/diffused version of the larger, richer tone. The swatches are taken from the owner's design work, and are given names based on their resemblance to more nuanced color representations and associations. With the exception of icons, colors are the only properties that are unique to each section. They are chosen as they complement overlaid gradients and strengthen the project's bold yet subdued materiality.
 
     <br>
     <details><summary> Signature Colors </summary>
@@ -853,7 +853,7 @@ ___
 #### Interactive collapse feature
 ___
 
-  - The project takes advantage of transition classes handled by Bootstrap's `data-toggle` event handler framework and its `data-target` event listener to achieve an interactive navigation system that serves as a one-stop wayfinding feature and the very vessel for display of all content navigated. Designed to be an all-encompassing ticket to content, the 'stack' is programmed to clearly present and quickly deliver content to and from the immediate vicinity of the very first touchpoint. The ubiquitous nature of the transition feature is a keyframed directive for the learnable impulse and the rewards of gaining immediate shorthand with the user and their impulses.
+  - The project takes advantage of transition classes handled by Bootstrap's `data-toggle` event handler framework and its `data-target` event listener to achieve an interactive navigation system that serves as a one-stop wayfinding feature and the very vessel for display of all content navigated. Designed to be an all-encompassing ticket to content, the 'stack' is programmed to clearly present and quickly deliver content to and from the immediate vicinity of the very first touchpoint. The ubiquitous nature of the transition feature is a *keyframed* directive towards user learnability, positioned to gain an immediate shorthand with the user and their impulses.
 
 #### Collapse transitions along rails
 ___
@@ -869,7 +869,7 @@ ___
 
 #### The headings map as an interactive document outline
 ___
-  -  The project features a direct representation of the website's headings map, that, together with the varying permutations of returned `.show` and `:checked` classes, reels from the delightful complications of [scrollspy](https://v5.getbootstrap.com/docs/5.0/components/scrollspy/)'s fleeting `.active` class. Enabled on the `<body>`, Bootstrap's Scrollspy events are programmed in the side menu and visible only when it's useful: when 'expand all' is `:checked`.  As the side menu is a list of the website's headings, containing lists that are nested to the level of their heading hierarchy, the `.active` items invariably play a game of musical links, revealing data and returning feedback on the virtues of relative 'nestedness' and proximities.
+  -  The project features a direct representation of the website's headings map, that, together with the varying permutations of returned `.show` and `:checked` classes, reels from the delightful complications of [scrollspy](https://v5.getbootstrap.com/docs/5.0/components/scrollspy/)'s fleeting `.active` class. Enabled on the `<body>`, Bootstrap's Scrollspy events are programmed in the side menu and visible only when it's useful: when 'expand all' is `:checked`.  As the side menu is a list of the website's headings, containing lists that are nested to the level of their heading hierarchy, the `.active` items invariably play a game of musical links, revealing data and returning feedback on the virtues of relative *nestedness* and *proximities.*
 
 #### Pagination events along a document track
 ___
@@ -925,16 +925,16 @@ ___
 1. [MDBootstrap 5.8.2:](https://mdbootstrap.com/docs/standard/getting-started/installation/)
     - MDBootstrap's free kit is the primary front-end framework used to do much of the heavy lifting with consideration to the plugins/components. MDBootstrap is a version of Bootstrap with optional addition components that build off of Bootstrap's framework. The compiled CSS ([mdb.min.css](https://github.com/mdbootstrap/mdb-ui-kit/blob/master/css/mdb.min.css)) link tag and JS ([mdb.min.js](https://github.com/mdbootstrap/mdb-ui-kit/blob/master/js/mdb.min.js)) script tag of MDB5's free version is currently referenced via [cdnjs](https://cdnjs.com/libraries/mdb-ui-kit).
    - The website will operate as designed, with 100% intended functionality on any framework that extends [Bootstrap](https://v5.getbootstrap.com/)'s core bundle configurations with only minor style differentials -- particularly text lineheights on lists with [nav components](https://v5.getbootstrap.com/docs/5.0/components/navs/) that utilize the [Scrollspy](https://v5.getbootstrap.com/docs/5.0/components/scrollspy/) plugin's and '.active' states; and default buttons ':hover' states. Alternate frameworks that originate and/or extend Bootstrap's core configurations which have been tested on this site include:
-     - [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) version 4 and up (popper not reqiured).
+     - [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) version 4 and up (popper not required).
      - [Material Design for Bootstrap](https://mdbootstrap.github.io/bootstrap-material-design/) version 4 and up (different from MDB).
      - [MDB](https://mdbootstrap.com/docs/standard/) version 4 and up.
    - [MDB5](https://mdbootstrap.com/docs/standard/) was ultimately chosen for how it handles Bootstrap nav components' font sizes and text line heights, as mentioned above.
    - The reason for the rather slim differential between different frameworks is that most components and elements have been highly customized in style.css.
    - MDB5's CSS with regard to button reboots were also preferred as their rulesets tended to be more closely aligned with the desired and finished result.
    - MDB5 utilizes the latest [Bootstrap 5 Alpha 2](https://v5.getbootstrap.com/) which has fewer dependencies, and [no longer depends on jQuery](https://blog.getbootstrap.com/2020/06/16/bootstrap-5-alpha/). With clear understanding of the components the website does and does not require, the decision to ride an alpha release was a conscious effort to stay up to speed with and learn from the latest tech.
-   - Outside of Bootstrap's [grid layout](https://v5.getbootstrap.com/docs/5.0/layout/grid/) and [flex utilities](https://v5.getbootstrap.com/docs/5.0/utilities/flex/) in [bootstrap-grid.scss](https://github.com/twbs/bootstrap/blob/main/scss/bootstrap-grid.scss); essential baselining of elements via [reboot.scss](https://github.com/twbs/bootstrap/blob/main/scss/bootstrap-reboot.scss); and box model essentials in [utilities.scss](https://github.com/twbs/bootstrap/blob/main/scss/bootstrap-utilities.scss); the project's synergistic appeal is resolved by the careful management of classes in [__transitions.scss](https://github.com/twbs/bootstrap/blob/main/scss/_transitions.scss) reeturned by the [collapse plugin](#plugins).
+   - Outside of Bootstrap's [grid layout](https://v5.getbootstrap.com/docs/5.0/layout/grid/) and [flex utilities](https://v5.getbootstrap.com/docs/5.0/utilities/flex/) in [bootstrap-grid.scss](https://github.com/twbs/bootstrap/blob/main/scss/bootstrap-grid.scss); essential baselining of elements via [reboot.scss](https://github.com/twbs/bootstrap/blob/main/scss/bootstrap-reboot.scss); and box model essentials in [utilities.scss](https://github.com/twbs/bootstrap/blob/main/scss/bootstrap-utilities.scss); the project's synergistic appeal is resolved by the careful management of classes in [__transitions.scss](https://github.com/twbs/bootstrap/blob/main/scss/_transitions.scss) returned by the [collapse plugin](#plugins).
 2. [ionicons 5.2.3:](https://ionicons.com/)
-    - A curated selection of [ionicons](https://ionicons.com/)'s premium designed icons are attached to index.html via JS script tag ([unpkg.com](https://unpkg.com/browse/ionicons@5.2.3/dist/)) and are featured in main navigational button icons.
+    - A curated selection of [ionicons](https://ionicons.com/)'s premium designed icons are attached to index.html's `head` as a set of differential JS script tags ([unpkg.com](https://unpkg.com/browse/ionicons@5.2.3/dist/)) and are featured in main navigational button icons.
 3. [FontAwesome 5.8.2:](https://fontawesome.com/)
    - Secondary and/or supporting icons, mostly for brand logos are referenced from FontAwesome's vast library of responsive, easily-adjustable icons.
    - FontAwesome icons are inserted in `<i>` elements when used as support imagery for existing text; and inserted in `<span>` elements when used as an independent feature.
@@ -1010,7 +1010,7 @@ ___
 
 2. _As a potential collaborator, I want to find stats of your contribution footprint._
 
-    - The website features stats of the owner's footprint in every measurable profesional capacity including: repo contributions, commits, commit messages, project statuses (active, current, next, forthcoming), years in practice, awards and honors. Additionally, the website can be toggled to static mode to show all collapsed sections. Wayfindingin this mode, should one require it, is featured as a linear pagination scale that shows you where you are on the page. This is designed to ensure there is always a way to safety in case a user requires it.
+    - The website features stats of the owner's footprint in every measurable professional capacity including: repo contributions, commits, commit messages, project statuses (active, current, next, forthcoming), years in practice, awards and honors. Additionally, the website can be toggled to static mode to show all collapsed sections. Wayfinding this mode, should one require it, is featured as a linear pagination scale that shows you where you are on the page. This is designed to ensure there is always a way to safety in case a user requires it.
 
 3. _As a potential collaborator, I want to find the best way to get in contact with the you with any questions I may have._
 
@@ -1101,7 +1101,7 @@ ___
 
 2. Style blocks in style.css are approached with component-based style declarations. A dedicated block with sub-blocks of rulesets are given to each feature, function or scope. Herein, all `@media` queries specific to a ruleset are configured *immediately* following its default or "parent" ruleset. This approach assigns "components" responsibility for how to accommodate media queries and state changes as opposed to the opposite, where state changes or media queries would be separate "parent" rule blocks with "component" reconfigurations affixed to the end of a stylesheet. The component-based approach was used in order to more efficiently track global state changes while developing each "component", essentially rendering every `@media` query declaration as a sub-block of styles native to a specific component's behavior.
 
-3. With effect to point #2 above, [Bootstrap 5's grid tiers](https://v5.getbootstrap.com/docs/5.0/layout/breakpoints/) and their effective breakpoints in `min-width` and `max-width` queries are called __as required__ (need-based) per syle block or "component" ruleset in style.css.  These queries range from targeting single breakpoints; targeting extra small screens only; targeting small screens and larger; to targeting between breakpoint ranges.
+3. With effect to point #2 above, [Bootstrap 5's grid tiers](https://v5.getbootstrap.com/docs/5.0/layout/breakpoints/) and their effective breakpoints in `min-width` and `max-width` queries are called __as required__ (need-based) per style block or "component" ruleset in style.css.  These queries range from targeting single breakpoints; targeting extra small screens only; targeting small screens and larger; to targeting between breakpoint ranges.
 
 4. With effect to points #2 and #3 above, `@media (max-width: 991.98px) (orientation: landscape)` sets out the boolean style declarations for the project's [automatic landscape mode](). This query targets medium devices (tablets, less than 992px) that are viewed in landscape orientation. This query equally targets any browser window (less than 992px wide) with a width greater than its height. As the project showcases this as one of three flagship modes, an additional style block is dedicated to this media/orientation query to accommodate various global boolean overrides. As this mode must account for *both* the transition from [interactive/collapsible]() mode *and* the transition from [static/expanded ]() mode to effectively "flip" states, the query/orientation ruleset has to thus always include the default boolean selectors and the activated boolean selectors.
 
@@ -1215,6 +1215,9 @@ ___
     </details>
     <br>
 
+14. An animation is applied to a pseudo `:before` element attached to `:root` in order to hide collective animations on page load. Note that this should eventually be replaced with a JavaScript function to change the global animation delay property relative to the browser's page load.
+
+15. "Start" and "Close" comment wrappers are used to clarify blocks throughout index.html. At top level, *start* comment-tags are __block__ level and __uppercase__; and *close* comment-tags are __inline__ and __lowercase__. Note that this is consistent throughout index.html regardless of vertical, block-level spacing. At the most nested level -- such as list-items in a sub-section -- open and close comment-tags are both block-level and each closer is preceded by a `/` character.
 
 ### Code Testing
 ___
@@ -1224,6 +1227,8 @@ ___
     -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Findex.html)
     -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=)
 
+> Note: Several parse errors are flagged on AutoPrefix properties.
+>   W3C [widely known](https://stackoverflow.com/questions/57661659/w3c-css-validation-parse-error-on-variables) to attach a parse error to every custom property/custom variable .
 
 ### Accessibility Testing
 ___

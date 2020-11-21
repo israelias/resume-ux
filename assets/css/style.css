@@ -4220,9 +4220,7 @@ section.collapse:not(.show) .section-icon {
 
 .nav-links > * {
     flex: 0 0 auto;
-    /*min-width: 33.3333%;*/
     min-width: 16.666667%;
-    /*max-width: 50%;*/
 }
 
 .nav-links .outline-item {
@@ -4591,11 +4589,13 @@ section.collapse:not(.show) .section-icon {
 }
 
 /* ==========================================================================
-   Landing banner (#target-zero)
+   Landing section (#target-zero)
    ========================================================================== */
 
-/* Custom 'onboarding' banner, disposes upon initial click  */
-/* To be organized */
+/* Custom 'onboarding' landing banner.
+ *
+ * Adjust landing section's position relative to the top of the screen.
+ */
 
 #target-zero {
     padding-top: calc(100vh - var(--height) - 21rem - 5rem);
