@@ -1,5 +1,5 @@
 /*!
- * "The Curriculum Vitae of Joem Elias Sanez (Developed For The Web)"
+ * "Joem Elias Sanez CV and Work Samples (Developed For The Web)"
  * designed and built by Joem Elias Sanez
  * as part of Milestone Project One
  * with Code Institute
@@ -129,7 +129,7 @@
     /* X dimension tolerance helper property */
     --gutter-x: 1.5rem;
 
-    /* Padding propery as half of X tolerance */
+    /* Padding property as half of X tolerance */
     --padding: calc(var(--gutter-x) / 2);
 
     /* Apply margins for typical .row in a fluid .container to :root */
@@ -166,14 +166,7 @@
    ========================================================================== */
 
 body {
-    /*-webkit-overflow-scrolling: touch;*/
-    /*scroll-behavior: smooth;*/
-
     text-rendering: optimizeLegibility;
-    -webkit-font-kerning: normal;
-            font-kerning: normal;
-    -webkit-font-variant-ligatures: common-ligatures;
-            font-variant-ligatures: common-ligatures;
     color: var(--deep-1);
 }
 
@@ -207,6 +200,7 @@ b {
 }
 
 a {
+    font-weight: 400;
     color: slategray;
 }
 
@@ -297,13 +291,14 @@ h6 {
 }
 
 /* ==========================================================================
-   Layout configs @prefixed
+   Layout configs
    ========================================================================== */
 
 /* Note:
  *
- * This is how the stack contracts from its center axis as opposed to pulling
- * from the top or bottom
+ * This is how the stack contracts from its center axis as opposed to "flexing"
+ * from the top or the bottom of a flex container. See #resumeStack transitions
+ * scope.
  */
 
 .root-body > * {
@@ -404,7 +399,6 @@ input[type="checkbox"],
     z-index: 100;
 
     cursor: pointer;
-    tab-index: 0;
 }
 
 @media (max-width: 575.98px) {
@@ -519,7 +513,7 @@ input[type="checkbox"],
 
 @media (min-width: 1200px) {
     .header-title button {
-        font-size:1.5rem
+        font-size: 1.5rem;
     }
 }
 
@@ -1145,93 +1139,31 @@ section.inner-right:after {
     }
 }
 
-/* CREDIT https://stackoverflow.com/questions/43186015/css-hide-scroll-bar-but-have-element-scrollable */
+/* ==========================================================================
+   Scrollbar and overflow configs
+   ========================================================================== */
 
-html {
-    /*overflow: auto;*/
-    --scrollbar: 1px;
-    --scrolltrack: 2px;
-    --scrollhandle: 2px;
-}
+/* Hides scrollbar.
+ *
+ * CREDIT:
+ * https://stackoverflow.com/questions/43186015/css-hide-scroll-bar-but-have-element-scrollable
+ *
+ */
 
-#toggle-all:checked ~ .body-main {
-    overflow-x: hidden;
-    overflow-y: hidden;
-
-    --scrollbar: 3px;
-    --scrolltrack: 2.5px;
-    --scrollhandle: 2.5px;
-}
-
-@media (max-width: 991.98px) and (orientation: landscape) {
-    html {
-        --scrollbar: 3px;
-        --scrolltrack: 2.5px;
-        --scrollhandle: 2.5px;
-    }
-}
-
-body {
-    /*position: absolute;*/
-    /*top: 20px;*/
-    /*left: 20px;*/
-    /*bottom: 20px;*/
-    /*right: 20px;*/
-    /*padding: 30px;*/
-    /*overflow-y: scroll;*/
-    /*overflow-y: hidden;*/
-    /*overflow-x: hidden;*/
-}
-
-/* Let's get this party started */
 ::-webkit-scrollbar {
-    width: var(--scrollbar);
+    width: 0;
+    background: transparent;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    -webkit-border-radius: var(--scrolltrack);
-    border-radius: var(--scrolltrack);
+    width: 0;
+    background: transparent;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: var(--scrollhandle);
-    border-radius: var(--scrollhandle);
-    /*background: rgba(255,0,0,0.8);*/
-    background: #fff200;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    width: 0;
+    background: transparent;
 }
-::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(255,0,0,0.4);
-}
-
-
-
-html {
-  /*margin-left: calc(100vw - 100%);*/
-}
-
-/* make scrollbar transparent */
-
-::-webkit-scrollbar {
-    /*width: 0px;*/
-    /*width: 3px;*/
-    /*right: calc(var(--margin) * -1);*/
-    /*background: transparent;*/
-    /*background: var(--gradient-1);*/
-}
-
-/*::-webkit-scrollbar-track {*/
-/*    width: 0px;*/
-/*    background: transparent;*/
-/*}*/
-
-/*::-webkit-scrollbar-thumb {*/
-/*    width: 0px;*/
-/*    background: transparent;*/
-/*}*/
 
 
 /* ==========================================================================
@@ -1309,7 +1241,7 @@ html {
  */
 
 [data-parent="#resumeStack"] {
-    --height: calc(100vh - 21rem - 8rem);
+    --height: calc(100vh - 21rem - 9rem);
     overflow: auto;
 }
 
@@ -1555,11 +1487,11 @@ html {
 /*
  * Hide event animation keyframes at xl screens.
  *
- * This modifies the column-reverse keyframe state from occuring at
- * 50% to instead occuring fully at 100% into the transition.
+ * This modifies the column-reverse keyframe state from occurring at
+ * 50% to instead occurring fully at 100% into the transition.
  *
  * The slight adjustment is a considerable and visible benefit that smooths the
- * 'stacking' transitition when content occupies a wider frame.
+ * 'stacking' transition when content occupies a wider frame.
  */
 
 @media (min-width: 1200px) {
@@ -1753,14 +1685,8 @@ html {
         font-size: .938rem;
     }
 
-    /*.article-section:not(#target-one) {*/
-    /*    -webkit-overflow-scrolling: touch;*/
-    /*    scroll-behavior: smooth;*/
-    /*}*/
-
     [data-parent="#resumeStack"] {
         --height: calc(100vh - 21rem - 4rem);
-        /*--height: 60vh;*/
         overflow: scroll;
     }
 }
@@ -2177,7 +2103,7 @@ ul.nav {
 
 /* Disable '.active' style states for parent '.link-zero' in nav outline.
  * Styles via '.nav-pills.menu-sidebar' are inherited from 'bootstrap.min.css'
- * and primarly control the '.active' state of elements within which scroll spy
+ * and primarily control the '.active' state of elements within which scroll spy
  * is enabled.
  */
 
@@ -2438,7 +2364,7 @@ ul.nav {
 }
 
 /* Slide nav out on .collapse event */
-/*.body-nav { display: none;}*/
+
 .body-nav:not(.show) {
     display: flex;
     height: 100%;
@@ -2708,6 +2634,7 @@ ul.nav {
 .body-footer {
     --vw-width: calc(var(--of-twelve) / 12 * 100vw);
     --vw-offset: calc((12 - var(--of-twelve)) / 12 * 100vw);
+    --vw-margin: calc(var(--vw-offset) / 2);
 
     /* Instantiate --vw-width to be the object property of var vw-navwidth minus twice the gutter x */
     --vw-navwidth: calc(var(--vw-width) - (var(--gutter-x) * 2));
@@ -2932,7 +2859,7 @@ ul.nav {
 /* Set values for the '.toggle-container' class when device/browser width is
  * greater than its height on tablet screens and below; set it to override
  * rules when #toggle-all is :checked.
- * This sets the action indicator and the status indicator for dahsboard mode,
+ * This sets the action indicator and the status indicator for dashboard mode,
  * expanding the pseudo line to occupy the majority of the header area, and
  * indicate the system-wide fixed-control triggered by the auto-landscape query.
  */
@@ -3044,7 +2971,6 @@ ul.nav {
     50% {
         -webkit-transform: scaleY(0);
                 transform: scaleY(0);
-        trasform: rotateX(0);
     }
     100% {
         -webkit-transform: rotateX(1.571rad);
@@ -3060,7 +2986,6 @@ ul.nav {
     50% {
         -webkit-transform: scaleY(0);
                 transform: scaleY(0);
-        trasform: rotateX(0);
     }
     100% {
         -webkit-transform: rotateX(1.571rad);
@@ -3080,7 +3005,6 @@ ul.nav {
                 transform: rotateX(1.571rad);
     }
     50% {
-        trasform: rotateX(0);
         -webkit-transform: scaleY(0);
                 transform: scaleY(0);
     }
@@ -3096,7 +3020,6 @@ ul.nav {
                 transform: rotateX(1.571rad);
     }
     50% {
-        trasform: rotateX(0);
         -webkit-transform: scaleY(0);
                 transform: scaleY(0);
     }
@@ -3181,7 +3104,6 @@ ul.nav {
                 transform: rotateZ(0);
         -webkit-transform: scaleX(1);
                 transform: scaleX(1);
-        trasform: rotateY(0);
         opacity: 1;
     }
     100% {
@@ -3201,7 +3123,6 @@ ul.nav {
                 transform: rotateZ(0);
         -webkit-transform: scaleX(1);
                 transform: scaleX(1);
-        trasform: rotateY(0);
         opacity: 1;
     }
     100% {
@@ -3230,7 +3151,6 @@ ul.nav {
     100% {
         -webkit-transform: rotateZ(0);
                 transform: rotateZ(0);
-        trasform: rotateY(0);
         -webkit-transform: scaleX(1);
                 transform: scaleX(1);
         opacity: 1;
@@ -3250,7 +3170,6 @@ ul.nav {
     100% {
         -webkit-transform: rotateZ(0);
                 transform: rotateZ(0);
-        trasform: rotateY(0);
         -webkit-transform: scaleX(1);
                 transform: scaleX(1);
         opacity: 1;
@@ -3352,7 +3271,7 @@ ul.nav {
     text-transform: uppercase;
 }
 
-/* This extends the styling frin the `.ribboneto` scope.
+/* This extends the styling from the `.ribboneto` scope.
  * Sets a "highlighter" positioned over author name as in landing section.
  *
  * Border color to be applied as response to global events.
@@ -3421,13 +3340,6 @@ ul.nav {
 .body-nav.show ~ .body-footer .footer-text.text-label,
 .body-nav.show ~ .body-footer .footer-copyright {
     display: none;
-}
-
-/* Add margin to the body-nav for the footer to "occupy" when menu is shown. */
-
-.body-nav.show .nav-outer-body {
-    margin-bottom: 3.5rem;
-    transition: all .75s var(--glide) 0s;
 }
 
 /* Swap hide the outline icon when nav is shown. */
@@ -3513,6 +3425,20 @@ ul.nav {
         display: inline-block;
         color: var(--deep-2);
     }
+
+    /* Add margin to the body-nav for the footer to "occupy". */
+
+    .nav-outer-body {
+        margin-bottom: 3.5rem;
+        transition: all .75s var(--glide) 0s;
+    }
+}
+
+@media (min-width: 768px) {
+    .body-nav.show .nav-outer-body {
+        margin-bottom: 3.5rem;
+        transition: all .75s var(--glide) 0s;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -3526,17 +3452,12 @@ ul.nav {
         -ms-flex-negative: 0;
             flex-shrink: 0;
         height: 3rem;
-        /*position: static;*/
         padding-left: 1rem;
         padding-right: 1rem;
-        /*padding-bottom: 44px;*/
-
-        /* Test option */
 
         position: -webkit-sticky;
         position: sticky;
         padding-bottom: .2rem;
-        /*padding-top: 8rem;*/
         margin-top: 8rem;
         bottom: unset;
     }
@@ -4583,7 +4504,7 @@ section.collapse:not(.show) .section-icon {
             transition: all var(--flashing) var(--zip) var(--early);
 }
 
-/* Trigger scroll one in on lanscape orientation */
+/* Trigger scroll one in on landscape orientation */
 
 @media (max-width: 991.98px) and  (orientation: landscape) {
     #scroll-one {
@@ -4676,6 +4597,10 @@ section.collapse:not(.show) .section-icon {
 /* Custom 'onboarding' banner, disposes upon initial click  */
 /* To be organized */
 
+#target-zero {
+    padding-top: calc(100vh - var(--height) - 21rem - 5rem);
+}
+
 /* Dispose splash banner content upon click any header-button */
 
 #target-zero:not(.show) {
@@ -4684,8 +4609,6 @@ section.collapse:not(.show) .section-icon {
 
 @media (max-width: 767.98px) {
     #target-zero {
-        /*height: 100%;*/
-        /*padding-bottom: 1.5rem;*/
         padding-top: calc(100vh - var(--height) - 21rem - 5rem);
     }
 }
@@ -4699,7 +4622,6 @@ section.collapse:not(.show) .section-icon {
         top: 25vh;
         left: 0;
         right: 0;
-        margin-top: 50vh;
         margin-top: -25%;
     }
 }
@@ -4729,8 +4651,8 @@ section.collapse:not(.show) .section-icon {
  * typography specifications where the semantic structure and
  * relative meaning of such headings are not affected.
  * Reserved for malleability of typographic features.
- * Headingss are thus given a reboot at the beginning of style.css
- * to wrap the consistest heading text they present throughout the
+ * Headings are thus given a reboot at the beginning of style.css
+ * to wrap the consistent heading text they present throughout the
  * site.
  *
  *
@@ -4754,8 +4676,8 @@ section.collapse:not(.show) .section-icon {
  * With these elements, and the CTA container in the next scope,
  * the landing page runs as a self-sufficient banner, holding the most
  * important info and content for the owner's and a user's objective --
- * info and CV -- while simultaenously offering immediate invitation.
- * This scope is to accomplish an overwhilming assertion that content
+ * info and CV -- while simultaneously offering immediate invitation.
+ * This scope is to accomplish an overwhelming assertion that content
  * within the collapsed sections complete a thorough and most valuable
  * curriculum vitae (developed for the web, of course.)
  */
@@ -4957,8 +4879,6 @@ section.collapse:not(.show) .section-icon {
 */
 
 .banner-pseudo {
-    line-height: var(--ribs-lh);
-    font-size: .875rem;
     font-family: monotalic, sans-serif;
     font-size: 11px;
     line-height: var(--ribs-lh);
@@ -4996,7 +4916,7 @@ section.collapse:not(.show) .section-icon {
  * Download CTA at landing.
  *
  * The CTA to download the owner's CV is displayed
- * via the flaship structure and classes used throughout
+ * via the flagship structure and classes used throughout
  * the project.
  * Variable adjustments are made as required.
  * */
@@ -5373,7 +5293,9 @@ section.inner-right > ul > li h6 {
     }
 }
 
-/* Set box model presentation for title and icon heading */
+/* Set box model presentation for title and icon heading
+ * This utilizes Bootstrap's gutter-x as a quick fix.
+ */
 
 .title-heading,
 .icon-heading {
@@ -5470,7 +5392,6 @@ section.inner-right > ul > li h6 {
 
 .proficiency-activity .icon-heading {
     font-size: 1.75rem;
-    color: var(--deep-4);
 
     color: var(--deep-2);
     text-shadow: #fff 0 .5px 0, #D7D7D6 0 -.5px 0;
@@ -5675,7 +5596,7 @@ section.inner-right > ul > li h6 {
  * coverage of a given repository.
  */
 
-/* Languange stats container */
+/* Language stats container */
 
 .language-activity {
     margin: .5rem;
@@ -5727,7 +5648,7 @@ summary::-webkit-details-marker {
 details,
 summary {
     position: relative;
-    outline: none !important
+    outline: none !important;
 }
 
 /* Hiding The disclosure widget */
@@ -5788,7 +5709,6 @@ details[open] .read-more-icon {
 .read-more .read-text {
     margin-top: .5rem;
     padding-right: 1rem;
-    padding-left: auto;
 
     font-size: .875rem;
     -webkit-font-feature-settings: 'smcp';
@@ -5881,7 +5801,6 @@ details[open] .read-more-icon {
                 transform: rotateZ(225deg);
     }
     50% {
-        trasform: rotateZ(0deg);
         -webkit-transform: scaleX(0);
                 transform: scaleX(0);
     }
@@ -5897,7 +5816,6 @@ details[open] .read-more-icon {
                 transform: rotateZ(225deg);
     }
     50% {
-        trasform: rotateZ(0deg);
         -webkit-transform: scaleX(0);
                 transform: scaleX(0);
     }
@@ -5917,7 +5835,6 @@ details[open] .read-more-icon {
     50% {
         -webkit-transform: scaleX(0);
                 transform: scaleX(0);
-                trasform: rotateZ(0deg)
     }
     100% {
         -webkit-transform: rotateZ(225deg);
@@ -5933,7 +5850,6 @@ details[open] .read-more-icon {
     50% {
         -webkit-transform: scaleX(0);
                 transform: scaleX(0);
-                trasform: rotateZ(0deg)
     }
     100% {
         -webkit-transform: rotateZ(225deg);
@@ -5993,7 +5909,7 @@ figure {
 /* Recommender image */
 
 .pv-recommendation-entity img {
-    border-radius: 50%
+    border-radius: 50%;
 }
 
 .pv-recommendation-entity__header {
@@ -6024,7 +5940,7 @@ a.pv-recommendation-entity__member {
     text-decoration: none;
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
-    border-bottom: 0px #fff;
+    border-bottom: 0 #fff;
 }
 
 /* Recommender name */
@@ -6189,27 +6105,27 @@ blockquote, q {
 
 .btn:hover .social-linkedin { color: var(--link-linkedin); }
 .btn:focus .social-linkedin { color: var(--link-linkedin); }
-.btn.social-linkedin:active { background-color: var(--link-linkedin) }
+.btn.social-linkedin:active { background-color: var(--link-linkedin); }
 
 .btn:hover .social-github { color: var(--link-github); }
 .btn:focus .social-github { color: var(--link-github); }
-.btn.social-github:active { background-color: var(--link-github) }
+.btn.social-github:active { background-color: var(--link-github); }
 
 .btn:hover .social-dev { color: var(--link-dev); }
 .btn:focus .social-dev { color: var(--link-dev); }
-.btn.social-dev:active { background-color: var(--link-dev) }
+.btn.social-dev:active { background-color: var(--link-dev); }
 
 .btn:hover .social-portfolio { color: var(--link-folio); }
 .btn:focus .social-portfolio { color: var(--link-folio); }
-.btn.social-portfolio:active { background-color: var(--link-folio) }
+.btn.social-portfolio:active { background-color: var(--link-folio); }
 
 .btn:hover .social-download { color: var(--cta-download); }
 .btn:focus .social-download { color: var(--cta-download); }
-.btn.social-download:active { background-color: var(--cta-download) }
+.btn.social-download:active { background-color: var(--cta-download); }
 
 /* Style icon colors for external links and cta buttons */
 
-.icon-link { color: var(--link-github) }
+.icon-link { color: var(--link-github); }
 .icon-linkedin { color: var(--link-linkedin); }
 .icon-github { color: var(--link-github); }
 .icon-dev { color: var(--link-dev); }
@@ -6223,7 +6139,7 @@ blockquote, q {
    ========================================================================== */
 
 ::selection { background: var(--matte); }
-::-moz-selection { background: var(--matte) }
+::-moz-selection { background: var(--matte); }
 
 #target-one h4 { background-color: var(--matte); }
 #target-one b { color: var(--denim); }
@@ -6255,13 +6171,13 @@ blockquote, q {
 
 /* Style icon colors for side menu icons */
 
-.icon-one { color: var(--obsidian) }
-.icon-two { color: var(--slate) }
-.icon-three { color: var(--red) }
-.icon-four { color: var(--blue) }
-.icon-five { color: var(--yellow) }
-.icon-six { color: var(--green) }
-.icon-seven { color: var(--raisin) }
+.icon-one { color: var(--obsidian); }
+.icon-two { color: var(--slate); }
+.icon-three { color: var(--red); }
+.icon-four { color: var(--blue); }
+.icon-five { color: var(--yellow); }
+.icon-six { color: var(--green); }
+.icon-seven { color: var(--raisin); }
 
 
 /* ==========================================================================
@@ -6405,7 +6321,6 @@ blockquote, q {
 article {
     position: relative;
     animation: article .75s var(--glide) 0s;
-    animation: article .75s var(--glide) 0s;
     -webkit-animation: article .75s var(--glide) 0s;
 
     -webkit-transition: all var(--flashing) var(--glide) var(--late);
@@ -6464,6 +6379,7 @@ article {
     100% { opacity: 1; }
 }
 
+/* Helper animation attached to root that hides global animations on page load. */
 
 :root:after {
     position: absolute;
@@ -6523,11 +6439,11 @@ article {
     100% {
         width: 0;
         height: 0;
-        border-bottom: 0rem solid var(--paper);
-        border-left: 0rem solid var(--paper);
-        border-right: 0rem solid var(--paper);
+        border-bottom: 0 solid var(--paper);
+        border-left: 0 solid var(--paper);
+        border-right: 0 solid var(--paper);
         border-bottom-left-radius: 2rem;
-        border-top: 0rem solid var(--paper);
+        border-top: 0 solid var(--paper);
         background: transparent;
     }
 }
@@ -6573,11 +6489,11 @@ article {
     100% {
         width: 0;
         height: 0;
-        border-bottom: 0rem solid var(--paper);
-        border-left: 0rem solid var(--paper);
-        border-right: 0rem solid var(--paper);
+        border-bottom: 0 solid var(--paper);
+        border-left: 0 solid var(--paper);
+        border-right: 0 solid var(--paper);
         border-bottom-left-radius: 2rem;
-        border-top: 0rem solid var(--paper);
+        border-top: 0 solid var(--paper);
         background: transparent;
     }
 }
