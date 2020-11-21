@@ -405,16 +405,16 @@ ___
 
 - Colors and Themes
     - The stylistic rendering of element containers immediately establish a language through which learnability, state changes and sectional differentials are communicated.
-    - Toggling from the website's interactive theme to its static theme as well as its [landscape theme](#dashboard-static-landscape-mode) feature detail-level adjustments to convey system-wide changes, namely [adjusting the shadow blur](). This small but specific adjustment adds value to the website by utilizing nuances of its identity to make contact with the user and further reinforce its brand expectations, parameters and outcomes.
+    - Toggling from the website's interactive theme to its static theme as well as its [landscape theme](#dashboard-static-landscape-mode) feature detail-level adjustments to convey system-wide changes, namely adjusting the shadow blur. This small but specific adjustment adds value to the website by utilizing nuances of its identity to make contact with the user and further reinforce its brand expectations, parameters and outcomes.
 
 - Transitions
     - Highly customized and systematic animation transitions are conceived as the website's global touchpoint. The singularity and ubiquity of this application is to reinforce idiosyncratic conventions by way of the convention itself, engendering an enhanced feature out of a user's familiarity to a known function.
 
 - Labels and Terminology
-    - Nomenclature and terminology are hierarchically built and defined to reflect the content of each (2) child section under each (1) parent node tab. The site's opinionated [primary section titles]() are selected to adequately represent its content and explicitly convey the owner's awareness of narrative.
+    - Nomenclature and terminology are hierarchically built and defined to reflect the content of each (2) child section under each (1) parent node tab. The site's opinionated primary section titles are selected to adequately represent its content and explicitly convey the owner's awareness of narrative.
 
 - Consistent Imagery
-    - Variable per-section [media content]() (in which list-groups of CV-related activities are contained), per-section [icon-animation]() , and per-section [CTAs]() achieve consistency by application of a singular CSS ruleset. These container styles only offer specificity to sections by application of [signature colors]() .
+    - Variable per-section media content (in which list-groups of CV-related activities are contained), per-section icon-animation , and per-section CTAs achieve consistency by application of a singular CSS ruleset. These container styles only offer specificity to sections by application of signature colors.
 
 ##### __Visibility__
 ___
@@ -822,7 +822,7 @@ ___
 
   - [Viktor Nübel](https://viktornuebel.medium.com/how-scripts-helped-to-design-a-typeface-for-coding-9af5f28d742a)'s [FF Attribute](https://www.fontshop.com/superfamilies/ff-attribute) font family is the stylistic feature font of the project's main body, including [FF Attribute Mono](https://www.fontshop.com/families/ff-attribute-mono) and [FF Attribute Text](https://www.fontshop.com/families/ff-attribute-text) for headings and paragraphs, respectively. This family was selected to complement the "development interface" of the code bracket icons.
   - [Vasily Biryukov](http://luc.devroye.org/fonts-51517.html)'s opinionated take on the classic [FF DIN](https://en.wikipedia.org/wiki/FF_DIN) family with [DIN 2014](https://fonts.adobe.com/fonts/din-2014) is featured in section headlines to achieve the modern journalistic intent of the statement.
-- Monotalic is used in the typographic decoration of the landing section. This font is conceived as a "printed CV" complement to Attribute Mono.
+- [Monotalic](https://fonts.adobe.com/fonts/monotalic) is used in the typographic decoration of the landing section. This font is conceived as a "printed CV" complement to Attribute Mono.
 
 ___
 #### 5.4 Movement
@@ -876,7 +876,7 @@ ___
 
 #### Pagination events along a document track
 ___
-  -  The project is programmed to elicit further, more marcro, events via Scrollspy's `.active` class in the form of a scaled linear representation of the website's height, where segments are highlighted relative to 'where' the user is. This is attributed to an absolutely positioned pseudo element with a selector that traverses an `.active` sibling. The scale to which these line segments are relative to the path that its on works to afford users a sense of place in an otherwise scaleless, immeasurable window.
+  -  The project is programmed to elicit further, more macro, events via Scrollspy's `.active` class in the form of a scaled linear representation of the website's height, where segments are highlighted relative to 'where' the user is. This is attributed to an absolutely positioned pseudo element with a selector that traverses an `.active` sibling. The scale to which these line segments are relative to the path that its on works to afford users a sense of place in an otherwise scaleless, immeasurable window.
 
 
 #### Recent Activity Vertical Scroller
@@ -889,12 +889,12 @@ ___
 
 #### Data Badges
 ___
-- The project features data statistics from media list items in the form of badges that are transitioned to reveal when its parent section is shown. The badges are achieved by concocting a bespoke combination of a typical BS .badge. The result is the appearance of live data for otherwise static, hardcoded attributes.
+- The project features data statistics from media list items in the form of badges that are transitioned to reveal when its parent section is shown. The badges are achieved by concocting a bespoke combination of a typical Bootstrap `.badge`. The result is the appearance of live data for otherwise static, hardcoded attributes.
 
 #### Download me at arrival
 ___
 
-  - The website features a call to action download button upon landing on the site that is styled in the same fashion as all forthcoming CTAs. The intention is twofold: 1) to provide the the shortest clickable distance between arrival and achieving the singular most valuable touchpoint 2) to establish and reinforce the visual language of the CTA container in its seven identical iterations.
+  - The website features a call to action download button upon landing on the site that is styled in the same fashion as all forthcoming CTAs. The intention is twofold: 1) to provide the shortest *clickable distance* between arrival and achieving the singular most valuable touchpoint 2) to establish and reinforce the visual language of the CTA container in its seven identical iterations.
 
 ___
 ### Features Left to Implement
@@ -1222,6 +1222,8 @@ ___
 
 15. "Start" and "Close" comment wrappers are used to clarify blocks throughout index.html. At top level, *start* comment-tags are __block__ level and __uppercase__; and *close* comment-tags are __inline__ and __lowercase__. Note that this is consistent throughout index.html regardless of vertical, block-level spacing. At the most nested level -- such as list-items in a sub-section -- open and close comment-tags are both block-level and each closer is preceded by a `/` character.
 
+>*Note: All descriptions of atypical methods can be found within style blocks in style.css.*
+
 ### Code Testing
 ___
 
@@ -1230,8 +1232,8 @@ ___
     -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Findex.html)
     -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fisraelias.github.io%2Fresume-redux%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=)
 
-> Note: Several parse errors are flagged on AutoPrefix properties.
->   W3C [widely known](https://stackoverflow.com/questions/57661659/w3c-css-validation-parse-error-on-variables) to attach a parse error to every custom property/custom variable .
+> Note: 1) Several parse errors are flagged around vendor prefixes. [AutoPrefixer](https://autoprefixer.github.io/)'s web version was used to manually add vendor prefixes without the PostCSS plugin.
+>   2) W3C is [widely known](https://stackoverflow.com/questions/57661659/w3c-css-validation-parse-error-on-variables) to attach a parse error to every custom property/custom variable.
 
 ### Accessibility Testing
 ___
@@ -1316,6 +1318,7 @@ ___
 - The site's favicon was generated via [Real Favicon Generator.net](https://realfavicongenerator.net/) following Philippe Bernard's [comprehensive summary on favicons](https://css-tricks.com/favicon-quiz/).
 - [Ashfaq Ahmed](https://codeconvey.com/)'s [time functions](https://codeconvey.com/pure-css-accordion-menu/) and playful, component-based approach to CSS rulesets were a benchmark for its sincere clarity and attention to detail.
 - Quackit's [comprehensive list of CSS3 properties](https://www.quackit.com/css/css3/properties/), definitions, and usage examples helped to sharpen tools utilized in the project, and develop nuanced workflows with a learned and sophisticated shorthand.
+- [AutoPrefixer](https://autoprefixer.github.io/)'s web version was used to manually add vendor prefixes.
 - The development of this README.md takes precedent from various templates and samples throughout Code Institute's course. The development of the UX section and Jesse Garret's Five Planes of UX equally take direct inspiration from Code Institute's course.
 - The Slack community at Code Institute, namely the senior leads, for being generous and quick to offer endless assistance and advice.
 - Tutor Support at Code Institute for offering invaluable technical support.
