@@ -1610,13 +1610,6 @@ section.inner-right:after {
         overflow-x: hidden;
     }
 
-    /*#toggle-all:checked ~ main .header-content {*/
-    /*    flex-wrap: wrap;*/
-    /*}*/
-    /*#toggle-all:checked ~ main .header-text {*/
-    /*    width: 100%;*/
-    /*}*/
-
     #toggle-all + label .toggle-container .menu-icon {
         visibility: hidden;
     }
@@ -1774,6 +1767,8 @@ section.inner-right:after {
  *
  * Assigned element id="nav-outline" that targets <body> to enable
  * scrollspy feature.
+ *
+ * Set tab index to 3 so a screen reader browses it after <main>
  */
 
 .body-nav {
@@ -4211,7 +4206,6 @@ section.collapse:not(.show) .section-icon {
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1rem;
-    /*padding: .75rem !important;*/
     padding: 0;
     border-radius: .6rem;
 
@@ -4253,21 +4247,11 @@ section.collapse:not(.show) .section-icon {
         padding: .675rem;
         color: var(--deep-2);
     }
-
-    .nav-links > * {
-        /*max-width: 100%;*/
-    }
 }
 
 @media (max-width: 991.98px) and  (orientation: landscape) {
     .nav-links > * {
         flex: 1;
-    }
-}
-
-@media (max-width: 991.98px) and  (orientation: landscape) {
-    .nav-links > * {
-        /*max-width: 16.777% !important;*/
     }
 }
 
