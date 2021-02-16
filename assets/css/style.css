@@ -4599,6 +4599,7 @@ section.collapse:not(.show) .section-icon {
  */
 
 #target-zero {
+    min-height: 55vh;
     padding-top: calc(100vh - var(--height) - 21rem - 5rem);
 }
 
@@ -4620,7 +4621,7 @@ section.collapse:not(.show) .section-icon {
     .banner-cta {
         width: 65%;
         position: absolute;
-        top: 25vh;
+        top: 35vh;
         left: 0;
         right: 0;
         margin-top: -25%;
