@@ -4599,7 +4599,7 @@ section.collapse:not(.show) .section-icon {
  */
 
 #target-zero {
-    min-height: 55vh;
+    min-height: 50vh;
     padding-top: calc(100vh - var(--height) - 21rem - 5rem);
 }
 
