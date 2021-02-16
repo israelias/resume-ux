@@ -4464,7 +4464,8 @@ section.collapse:not(.show) .section-icon {
 
 #scroll-one,
 #scroll-two,
-#scroll-three {
+#scroll-three,
+#scroll-four {
     top: var(--scroll-height);
 }
 
@@ -4475,11 +4476,11 @@ section.collapse:not(.show) .section-icon {
     -webkit-animation:
             scroll-in .75s var(--glide) 0s 1 normal forwards running,
             scroll-out .75s var(--glide) 4s 1 normal forwards running,
-            scroll-in .75s var(--glide) 12s 1 normal forwards running;
+            scroll-in .75s var(--glide) 16s 1 normal forwards running;
     animation:
             scroll-in .75s var(--glide) 0s 1 normal forwards running,
             scroll-out .75s var(--glide) 4s 1 normal forwards running,
-            scroll-in .75s var(--glide) 12s 1 normal forwards running;
+            scroll-in .75s var(--glide) 16s 1 normal forwards running;
 
     -webkit-transition: all var(--flashing) var(--zip) var(--early);
          -o-transition: all var(--flashing) var(--zip) var(--early);
@@ -4527,6 +4528,22 @@ section.collapse:not(.show) .section-icon {
     -webkit-transition: all var(--flashing) var(--zip) var(--early);
          -o-transition: all var(--flashing) var(--zip) var(--early);
             transition: all var(--flashing) var(--zip) var(--early);
+}
+
+/* Fourth scroll item */
+
+#toggle-all:checked ~ main #scroll-four,
+#target-one.show #scroll-four {
+    -webkit-animation:
+            scroll-in .75s var(--glide) 12s 1 normal forwards running,
+            scroll-out .75s var(--glide) 16s 1 normal forwards running;
+    animation:
+            scroll-in .75s var(--glide) 12s 1 normal forwards running,
+            scroll-out .75s var(--glide) 16s 1 normal forwards running;
+
+    -webkit-transition: all var(--flashing) var(--zip) var(--early);
+            -o-transition: all var(--flashing) var(--zip) var(--early);
+               transition: all var(--flashing) var(--zip) var(--early);
 }
 
 /* Scroller keyframes
