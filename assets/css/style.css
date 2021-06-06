@@ -5638,6 +5638,8 @@ section.inner-right > ul > li h6 {
 .progress-python { background-color: #3973A3; }
 .repo-javascript { color: #F1DF64; }
 .progress-javascript { background-color: #F1DF64; }
+.repo-typescript { color: #2b7489; }
+.progress-typescript { background-color: #2b7489; }
 
 /* ==========================================================================
    DETAILS/SUMMARY ELEMENT CONFIGS
