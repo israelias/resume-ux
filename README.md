@@ -18,7 +18,8 @@ Interactivity on this website is a result of a more-programmatic-than-usual and 
 
 Resume Re: UX is a comprehensive and systematic means for navigating and featuring content in a curriculum vitae. The project is an *interactive collapsible* "stack" of content sections that can be toggled to fully expand in *static mode* with at-a-glance document outline visualization in a responsive dashboard side menu. The project is developed as part of the user-centric front-end coursework (MS1) at [Code Institute](https://codeinstitute.net).
 
-> *Note: The project name refers to Resume RedUX or "Resume Revived," in addition to the expanded "Resume Re: User Experience"*
+###### *Note: The original project name, `resume-redux`, refers to Resume RedUX or "Resume Revived," in addition to the expanded "Resume Re: User Experience". It does not use `redux` and has since been renamed*
+
 
 [Please view the live website here.](https://israelias.github.io/resume-redux/)
 
