@@ -1,5 +1,9 @@
+<!-- https://www.eddymens.com/blog/how-to-make-a-markdown-link-open-in-another-tab -->
+<base target="_blank">
+
 ___
 # Resume Re: UX
+A functional approach to CSS3 selectors with applied object-orientation to HTML tag elements for core web interactivity without Javascript.
 ___
 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/israelias/resume-redux?style=flat)
@@ -8,15 +12,22 @@ ___
 
 ![](documentation/landing_preview.png)
 
+## Preamble: `CSS3({...HTML3.Elements})`
+
+Interactivity on this website is a result of a more-programmatic-than-usual and object-oriented approach to CSS3 selectors and HTML tags. No JavaScript.
+
 Resume Re: UX is a comprehensive and systematic means for navigating and featuring content in a curriculum vitae. The project is an *interactive collapsible* "stack" of content sections that can be toggled to fully expand in *static mode* with at-a-glance document outline visualization in a responsive dashboard side menu. The project is developed as part of the user-centric front-end coursework (MS1) at [Code Institute](https://codeinstitute.net).
 
 > *Note: The project name refers to Resume RedUX or "Resume Revived," in addition to the expanded "Resume Re: User Experience"*
 
 [Please view the live website here.](https://israelias.github.io/resume-redux/)
 
+<!-- Anchor for Back To Top -->
+<a name="readme-top"></a>
+
 [TOC levels=1-3]: #
 
-# Table of Contents
+## Table of Contents
 - [Resume Re: UX](#resume-re-ux)
   - [UX](#ux)
     - [1.0 Strategy](#10-strategy)
@@ -73,6 +84,15 @@ ___
 
 ###### [View UX Research Board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1619.png)
 
+<details open><summary> <em> UX Research Board </em> </summary>
+<br>
+
+[<a style="text-align:center" href="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1619.png" target="_blank"><img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1619.png"/></a>](documentation/RedUX_200901_1619.png)
+
+
+<br>
+</details>
+
 
 ##### Competitor Review
 ___
@@ -113,6 +133,15 @@ Three target user profiles have been assembled from user research. Each profile 
 *See [User Testing](#user-testing) for task-specific descriptions of how the project meets goals defined in this plane.*
 
 ###### [View User Persona Ideation Board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1621.png)
+
+<details open><summary> <em> User Persona Ideation Board </em> </summary>
+<br>
+
+[<a style="text-align:center" href="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1621.png" target="_blank"><img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1621.png"/></a>](documentation/RedUX_200901_1621.png)
+
+
+<br>
+</details>
 
 <br>
 <details><summary> User Persona Table </summary>
@@ -239,6 +268,15 @@ ___
 
 ###### [View Strategy Ideation Board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1622.png)
 
+<details open><summary> <em> Strategy Ideation Board </em> </summary>
+<br>
+
+[<a style="text-align:center" href="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1622.png" target="_blank"><img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1622.png"/></a>](documentation/RedUX_200901_1622.png)
+
+
+<br>
+</details>
+
 <br>
 <details><summary> Strategy Table </summary>
 <br>
@@ -273,9 +311,8 @@ ___
 
 <br>
 </details>
-<br>
 
-[Back to top](#table-of-contents)
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ___
 ___
@@ -349,10 +386,8 @@ The variety of content/media required to meet the needs of the user and the owne
 
 <br>
 </details>
-<br>
 
-[Back to top](#table-of-contents)
-
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ___
 ___
@@ -360,9 +395,50 @@ ___
 ___
 
 ###### [View Schematic IA Board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1623.png)
+
+<details open><summary> <em> Schematic IA Board </em> </summary>
+<br>
+
+[<a style="text-align:center" href="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1623.png" target="_blank"><img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1623.png"/></a>](documentation/RedUX_200901_1623.png)
+
+
+<br>
+</details>
+
 ###### [View Schematic IxD Board - Navigational Schemas](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1625.png)
+
+<details open><summary> <em> Schematic IxD Board - Navigational Schemas </em> </summary>
+<br>
+
+[<a style="text-align:center" href="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1625.png" target="_blank"><img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1625.png"/></a>](documentation/RedUX_200901_1625.png)
+
+
+<br>
+</details>
+
 ###### [View Schematic Structure Board - Behavior, Relationships, Interactivity, ](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1626.png)
+
+<details open><summary> <em> Schematic Structure Board - Behavior, Relationships, Interactivity </em> </summary>
+<br>
+
+[<a style="text-align:center" href="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1626.png" target="_blank"><img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1626.png"/></a>](documentation/RedUX_200901_1626.png)
+
+
+<br>
+</details>
+
 ###### [View Schematic Structure Board -  Container Stack](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1627.png)
+
+<details open><summary> <em> Schematic Structure Board -  Container Stack </em> </summary>
+<br>
+
+[<a style="text-align:center" href="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1627.png" target="_blank"><img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1627.png"/></a>](documentation/RedUX_200901_1627.png)
+
+
+<br>
+</details>
+
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 #### 3.1 Organization of Functionality and Content
 ___
@@ -578,7 +654,8 @@ The website takes advantage of HTML5 semantic sectioning elements to bring clari
     </details>
     <br>
 
-[Back to top](#table-of-contents)
+
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ___
 ___
@@ -587,6 +664,16 @@ ___
 ___
 
 ###### [View Schematic Skeleton Board -  Page Anatomy, Grid Set Out](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1630.png)
+
+<details open><summary> <em> Schematic Skeleton Board -  Page Anatomy, Grid Set Out </em> </summary>
+<br>
+
+[<a style="text-align:center" href="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1630.png" target="_blank"><img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1630.png"/></a>](documentation/RedUX_200901_1630.png)
+
+
+<br>
+</details>
+
 
 #### 4.1 Features and Usefulness
 ___
@@ -618,6 +705,15 @@ ___
 ___
 
 [View Schematic UI Board - Navigation Design](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1634.png)
+
+<details open><summary> <em> Schematic UI Board - Navigation Design </em> </summary>
+<br>
+
+[<a style="text-align:center" href="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1634.png" target="_blank"><img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1634.png"/></a>](documentation/RedUX_200901_1634.png)
+
+
+<br>
+</details>
 
 ##### The Resume Stack
 ___
@@ -672,6 +768,15 @@ ___
 
 ###### [View Schematic ID Board](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1637.png)
 
+<details open><summary> <em> Schematic ID Board </em> </summary>
+<br>
+
+[<a style="text-align:center" href="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1637.png" target="_blank"><img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1637.png"/></a>](documentation/RedUX_200901_1637.png)
+
+
+<br>
+</details>
+
 ##### Context and Order
 ___
 
@@ -684,7 +789,15 @@ ___
 ___
 
 ###### [View Schematic Interface Design Board - Page Anatomy](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1639.png)
-###### [View Schematic Interface Design Board - Page Anatomy](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1639.png)
+
+<details open><summary> <em> Schematic Interface Design Board - Page Anatomy </em> </summary>
+<br>
+
+[<a style="text-align:center" href="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1639.png" target="_blank"><img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_200901_1639.png"/></a>](documentation/RedUX_200901_1639.png)
+
+
+<br>
+</details>
 
 ##### Schematic Wireframes
 ___
@@ -731,7 +844,7 @@ Schematic mockups commenced in September 2020 to establish relationships between
 </details>
 <br>
 
-[Back to top](#table-of-contents)
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ___
 ___
@@ -742,6 +855,17 @@ ___
 ___
 
 ###### [View Color Palette](https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_20116_0746.png)
+
+<br>
+<details open><summary> <em> Color Palette </em> </summary>
+<br>
+
+[<a style="text-align:center" href="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_20116_0746.png" target="_blank"><img src="https://raw.githubusercontent.com/israelias/resume-redux/master/documentation/RedUX_20116_0746.png"/></a>](documentation/RedUX_20116_0746.png)
+
+
+<br>
+</details>
+<br>
 
 Given the high degree of [movement](#54-movement) that occurs on the screen upon section transitions, the site's overall background "white-space" and peripheral default color states are decidedly neutral, spanning a spectrum of off-whites; a range of neutral greys; either of which afford the most stylistic reading of the project to its neumorphic gradient-and-shadow pairings.
 
@@ -845,7 +969,9 @@ ___
 - `--swoop` is an `ease-in-out` with a late and steep progression: an extra slow start with a rapid progression before a relaxed end.
   - [Preview ](https://cubic-bezier.com/#1,0,.41,1.01) `cubic-bezier(1, 0, 0.41, 1.01)`
 
-[Back to top](#table-of-contents)
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
 ___
 ___
 ## Features
@@ -1259,7 +1385,7 @@ ___
 - Visibility to some elements in the sidebar are sometimes compromised when toggling into landscape from portrait on a mobile. Additional `overlow-y: scroll` properties have been set to alleviate this issue.
 - On Chrome mobile browsers, visibility of an open `.show` section sometimes remains clipped when the global checkbox is suddenly `:checked` to expand all. In this instance, the section is still scrollable within the assigned height from the previous state. Additional rulesets were applied to force certain properties like this to carry through across boolean events.
 
-[Back to top](#table-of-contents)
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ___
 ___
@@ -1286,7 +1412,7 @@ The project can be used as a means for featuring a variety of media. To clone th
 1. Change the directory to where you want to clone the repository to.
 1. Paste the Git URL copied from above and click "Ok".
 
-[Back to top](#table-of-contents)
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ___
 ___
@@ -1324,4 +1450,4 @@ ___
 - Tutor Support at Code Institute for offering invaluable technical support.
 - My mentor Aaron Sinnott for his support, time investment and for helping to push this project to be the best that it can be.
 
-[Back to top](#table-of-contents)
+<p align="right"><a href="#readme-top">back to top</a></p>
