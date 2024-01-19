@@ -21,7 +21,7 @@ Resume Re: UX is a comprehensive and systematic means for navigating and featuri
 ###### *Note: The original project name, `resume-redux`, refers to Resume RedUX or "Resume Revived," in addition to the expanded "Resume Re: User Experience". It does not use `redux` and has since been renamed*
 
 
-[Please view the live website here.](https://israelias.github.io/resume-redux/)
+[Please view the live website here.](https://israelias.github.io/resume-ux/)
 
 <!-- Anchor for Back To Top -->
 <a name="readme-top"></a>
